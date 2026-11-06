@@ -43,21 +43,28 @@ Si actualizas los datos y quieres reflejarlos en la demo:
 
 ## Publicar en Vercel
 
-El repositorio incluye `vercel.json` en la raíz, que indica a Vercel cómo
-construir el frontend (que vive en la subcarpeta `frontend/`):
-
-- `buildCommand`: `cd frontend && npm install && npm run build`
-- `outputDirectory`: `frontend/dist`
+**Clave:** se despliega SOLO la subcarpeta `frontend/`. El repo tiene varias
+carpetas (`backend/`, `bibliometrics/`, `frontend/`); si se apunta Vercel a la
+raíz, su detección automática intenta un despliegue "multiservicio" (backend +
+frontend) que NO queremos para la demo. Por eso el `vercel.json` vive dentro de
+`frontend/` y se configura el *Root Directory* en `frontend`.
 
 Pasos (una sola vez):
 
 1. Sube el repositorio a GitHub.
 2. En https://vercel.com, inicia sesión con GitHub e **Import Project**.
-3. Selecciona el repositorio. Vercel detecta `vercel.json` automáticamente; no
-   hace falta configurar variables de entorno (el modo estático ya está en
-   `.env.production`).
-4. Deploy. Vercel entrega una URL pública (`https://<proyecto>.vercel.app`) que
-   puedes compartir.
+3. Selecciona el repositorio.
+4. En **Root Directory**, pulsa **Edit** y elige la carpeta **`frontend`**.
+   Esto hace que Vercel trate el proyecto como una app Vite normal (no
+   multiservicio).
+5. El resto de ajustes (framework Vite, build `npm run build`, output `dist`) se
+   detectan solos por el `vercel.json` de `frontend/`. No hace falta configurar
+   variables de entorno (el modo estático ya está en `.env.production`).
+6. **Deploy**. Vercel entrega una URL pública (`https://<proyecto>.vercel.app`).
+
+> Si Vercel muestra un asistente de "proyecto multiservicio" y propone un
+> `vercel.json` con una sección `services`, **no lo aceptes**: significa que está
+> apuntando a la raíz. Vuelve atrás y fija el *Root Directory* en `frontend`.
 
 Cada push a la rama principal genera un nuevo despliegue automáticamente.
 
