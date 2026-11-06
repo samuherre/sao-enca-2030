@@ -1,0 +1,22 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+code {
+  background-color: #f2f2f2;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+}

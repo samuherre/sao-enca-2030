@@ -1,0 +1,36 @@
+﻿# ============================================================================
+# bibliometrics/requirements.txt — SAO ENCA 2030 (Componente B)
+# ----------------------------------------------------------------------------
+# Dependencias del pipeline bibliométrico. Separadas del backend porque el
+# procesamiento puede ejecutarse de forma independiente (structure.md §30,
+# tech.md §12). Versiones fijadas (pin) por reproducibilidad y seguridad de la
+# cadena de suministro, igual que en backend/requirements.txt.
+# No incluir secretos ni credenciales en este archivo.
+# ============================================================================
+
+# --- Extracción de texto desde PDF (piloto de ingesta de boletines) ----------
+# Elegida por conservar mejor el layout (columnas, encabezados) que pypdf, lo
+# que facilita delimitar los campos del encabezado del artículo.
+pdfplumber==0.11.4
+
+# --- Property-based testing (pruebas de propiedades del Componente B) ---------
+# Usada por los property tests del spec multi-source-bibliometria (Testing
+# Strategy del design): generadores de registros PoP sintéticos, >=100
+# iteraciones por propiedad. Pinned por reproducibilidad.
+hypothesis==6.168.2
+
+
+# --- Cliente HTTP (conector OpenAlex por API, fuente-openalex-api) -----------
+# Cliente HTTP para consultar la API pública y gratuita de OpenAlex
+# (https://api.openalex.org) en el Conector_OpenAlex_API: paginación por cursor,
+# ritmo acotado y reintentos. Para un pipeline secuencial con cursor, `requests`
+# es suficiente (no requiere concurrencia). Versión exacta fijada (pin) por
+# reproducibilidad y seguridad de la cadena de suministro (tech.md §21).
+requests==2.32.3
+
+# --- Carga de variables de entorno desde .env (pipelines) --------------------
+# Permite que los pipelines (p. ej. process_openalex_api.py) lean OPENALEX_API_KEY
+# y OPENALEX_MAILTO desde el .env local sin exportarlas en cada terminal, igual
+# que el backend (pydantic-settings). Carga SIN sobrescribir el entorno ya
+# definido. Dependencia pinada por reproducibilidad (tech.md §21).
+python-dotenv==1.0.1

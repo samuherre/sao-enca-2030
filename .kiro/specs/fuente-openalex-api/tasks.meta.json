@@ -1,0 +1,420 @@
+{
+  "pbtResults": {
+    "4.2 Property test — deduplicación básica sobre el conjunto combinado": {
+      "status": "passed",
+      "lastRunTimestamp": 1793244320012
+    },
+    "4.3 Property test — inmutabilidad de `data/raw/`": {
+      "status": "passed",
+      "lastRunTimestamp": 1793244359468
+    }
+  },
+  "executionHistory": {
+    "1.1 Añadir el cliente HTTP pinado y el placeholder de la Mailto_Cortesia": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243138642
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243148043
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243260317
+      }
+    ],
+    "2.1 Implementar la capa HTTP (Consulta, ApiConfig, paginación, reintentos)": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243138786
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243267193
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243422870
+      }
+    ],
+    "2.2 Property test — paginación recupera todos los resultados hasta el límite": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243138891
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243426600
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243751740
+      }
+    ],
+    "2.3 Property test — reintento solo ante errores transitorios": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243138994
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243427869
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243753141
+      }
+    ],
+    "3.1 Implementar la transformación, el abstract y el `article_id`": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139111
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243428860
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243754138
+      }
+    ],
+    "3.2 Property test — fuente fija y conformidad del contrato": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139209
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243777377
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243929395
+      }
+    ],
+    "3.3 Property test — no-invención de campos ausentes": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139344
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243778336
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243930799
+      }
+    ],
+    "3.4 Property test — obligatorio faltante o ambiguo marca revisión": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139470
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243779725
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243931855
+      }
+    ],
+    "3.5 Property test — año fuera de período marca revisión sin descartar": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139561
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243781178
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243933260
+      }
+    ],
+    "3.6 Property test — `article_id` determinista, reproducible y con esquema compartido": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139674
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243782126
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243934251
+      }
+    ],
+    "3.7 Property test — reconstrucción correcta del abstract desde el índice invertido": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139774
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243939658
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244198536
+      }
+    ],
+    "3.8 Property test — procedencia preservada sin invención": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139880
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243940625
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244199545
+      }
+    ],
+    "4.1 Implementar el pipeline reproducible": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243139984
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243941865
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244200630
+      }
+    ],
+    "4.2 Property test — deduplicación básica sobre el conjunto combinado": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243140089
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244205063
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244451513
+      }
+    ],
+    "4.3 Property test — inmutabilidad de `data/raw/`": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243140182
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244206575
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244452765
+      }
+    ],
+    "4.4 Property test — conservación aritmética del resumen": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243140273
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244207959
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244454149
+      }
+    ],
+    "4.5 Property test — robustez ante works malformados": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243140401
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244208799
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244455165
+      }
+    ],
+    "5.1 Escribir la guía en `docs/`": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243140493
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243148882
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243261168
+      }
+    ],
+    "6. Checkpoint — cliente, transformación y pipeline de OpenAlex por API": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243140586
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244470035
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244528237
+      }
+    ],
+    "7.1 Test de integración — OpenAlex aparece en el consolidado sin tocar servicio ni vista": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243140681
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244210156
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244456543
+      }
+    ],
+    "8.1 Correr toda la suite y dejar el estado verde": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243140777
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244533701
+      },
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244988978
+      }
+    ],
+    "1. Setup de dependencia y configuración": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243260428
+      }
+    ],
+    "5. Guía de uso del conector por API": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243261269
+      }
+    ],
+    "2. Capa HTTP del cliente de API (`openalex_api_client.py`)": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793243753241
+      }
+    ],
+    "3. Transformación `work` → contrato V1 (en `openalex_api_client.py`)": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244199632
+      }
+    ],
+    "4. Pipeline OpenAlex por API (CLI, único comando)": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244455246
+      }
+    ],
+    "7. Verificación de incorporación automática al consolidado (sin rediseño)": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244456691
+      }
+    ],
+    "8. Verificación final": [
+      {
+        "executionId": "a6472c86-4be3-45eb-8797-82ae40745f53",
+        "chatSessionId": "sess_0f041b7e-cf12-4c7f-bca2-bbeb7980e42e",
+        "timestamp": 1793244989104
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": 3,
+  "nombre": "[DEMO_DATA] Eje 5 — Generación y gestión del conocimiento",
+  "descripcion": "[DEMO_DATA] Fortalecer la investigación y la gestión del conocimiento sobre las aves y sus hábitats (estructura de ejemplo).",
+  "metas": [
+    {
+      "id": 4,
+      "descripcion": "[DEMO_DATA] Meta 5.1 — Consolidar información científica relevante para la conservación.",
+      "objetivos": [
+        {
+          "id": 3,
+          "descripcion": "[DEMO_DATA] Objetivo 5.1.1 — Organizar la información científica disponible de forma consultable.",
+          "indicadores": [
+            {
+              "id": 4,
+              "nombre": "[DEMO_DATA] Documentos organizados",
+              "descripcion": "[DEMO_DATA] Volumen de documentos sistematizados (indicador de ejemplo).",
+              "actividades": [
+                {
+                  "id": 4,
+                  "descripcion": "[DEMO_DATA] Definir una estructura de catalogación."
+                },
+                {
+                  "id": 5,
+                  "descripcion": "[DEMO_DATA] Cargar los documentos priorizados."
+                },
+                {
+                  "id": 6,
+                  "descripcion": "[DEMO_DATA] Revisar la calidad de los metadatos."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "descripcion": "[DEMO_DATA] Objetivo 5.1.2 — Identificar vacíos de conocimiento prioritarios.",
+          "indicadores": []
+        }
+      ]
+    }
+  ]
+}

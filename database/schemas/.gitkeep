@@ -1,0 +1,3 @@
+# schemas/ — vacío
+# Motor definido: PostgreSQL con SQLAlchemy (tech.md §8, §9, ADR-001).
+# Ver modelo conceptual en docs/data/conceptual-data-model.md. El esquema físico se crea en una Spec posterior.

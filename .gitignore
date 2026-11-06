@@ -1,0 +1,100 @@
+# ============================================================================
+# .gitignore — SAO ENCA 2030
+# ----------------------------------------------------------------------------
+# Exclusiones genéricas y neutrales respecto al lenguaje (structure.md §22).
+# El stack tecnológico aún no está definido (tech.md §34); este archivo se
+# ampliará cuando se seleccione lenguaje/framework.
+# ============================================================================
+
+# --- Secretos y configuración sensible (tech.md §21, §24) --------------------
+.env
+.env.*
+!.env.example
+# .env.production NO contiene secretos: solo activa el modo estático de la demo
+# (VITE_STATIC_MODE). Se versiona a propósito para que el build de Vercel lo use.
+!frontend/.env.production
+*.key
+*.pem
+credentials.json
+secrets.*
+
+# --- Datos: por defecto NO versionar datasets reales/sensibles ---------------
+# (structure.md §17.1, §23; data-and-domain.md §37). Se conservan los .gitkeep
+# y READMEs que documentan la estructura, pero no el contenido de datos.
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+data/exports/*
+# Mantener la estructura de carpetas y su documentación (structure.md §17.1,
+# §23). Hay que re-incluir las subcarpetas para que git pueda entrar en ellas
+# (no desciende en un directorio ignorado), pero volviendo a ignorar su
+# contenido para no versionar datasets reales. Solo se conservan .gitkeep y
+# READMEs que documentan la estructura.
+!data/raw/*/
+!data/interim/*/
+!data/processed/*/
+!data/external/*/
+!data/exports/*/
+data/raw/*/*
+data/interim/*/*
+data/processed/*/*
+data/external/*/*
+data/exports/*/*
+!data/**/.gitkeep
+!data/**/README.md
+!data/README.md
+
+# --- Documentos fuente de SAO (NO versionar en repo público) -----------------
+# Material original entregado por SAO (planes, informes, peticiones, boletines).
+# No debe subirse a un repositorio público: es contenido de la organización y,
+# además, pesa. La demo no lo necesita (usa el snapshot JSON del frontend).
+# Se conserva solo la documentación (.md) que explique la estructura.
+data/Avances ENCA a 2026/
+data/samples/*
+!data/samples/*.md
+!data/samples/.gitkeep
+
+# --- Modelos de IA grandes (structure.md §24) --------------------------------
+bibliometrics/models/*
+!bibliometrics/models/.gitkeep
+!bibliometrics/models/README.md
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+
+# --- Material de referencia externo pesado (no necesario para la demo) --------
+references/external/*.zip
+
+# --- Archivos temporales y generados (structure.md §25) ----------------------
+temp/
+tmp/
+cache/
+.cache/
+logs/
+*.log
+
+# --- Dependencias / entornos (genérico, se ajustará al stack) ----------------
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+dist/
+build/
+target/
+out/
+
+# --- Sistema operativo -------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editores / IDE ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp

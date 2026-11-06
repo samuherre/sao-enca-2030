@@ -1,0 +1,30 @@
+{
+  "id": 4,
+  "nombre": "Eje Prueba",
+  "descripcion": "Este eje se crea con la intención de hacer una prueba de funcionalidad.",
+  "metas": [
+    {
+      "id": 5,
+      "descripcion": "Incrementar la valoración de las aves como elemento de orgullo nacional en al menos 50 % de la población colombiana.",
+      "objetivos": [
+        {
+          "id": 5,
+          "descripcion": "Para junio 2025 los cinco sectores (agrícola, ganadero, turismo, infraestructura y energía/minería) identificados como estratégicos para la comunicación  participan en la promoción de Colombia, país de las aves a través de al menos una iniciativa o programa por sector.",
+          "indicadores": [
+            {
+              "id": 5,
+              "nombre": "indicador 1",
+              "descripcion": "# número de sectores estratégicos con una iniciativa en marcha",
+              "actividades": [
+                {
+                  "id": 7,
+                  "descripcion": "Identificar las aves-símbolo regionales y sus atributos para implementar campañas específicas"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

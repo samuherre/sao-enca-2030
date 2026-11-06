@@ -1,0 +1,12 @@
+[
+  {
+    "id": 2,
+    "descripcion": "[DEMO_DATA] Elaborar un directorio de organizaciones aliadas.",
+    "indicador_id": 2
+  },
+  {
+    "id": 3,
+    "descripcion": "[DEMO_DATA] Realizar talleres de buenas prácticas.",
+    "indicador_id": 2
+  }
+]

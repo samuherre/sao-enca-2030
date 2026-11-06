@@ -1,0 +1,515 @@
+{
+  "schema_version": "2.2",
+  "descripcion": "Catálogo de los 11 Objetos Focales de Conservación (OFC) de la ENCA 2030. Fuente: documento oficial ENCA 2030 (verificado por el equipo SAO-EAFIT). Usado por el clasificador de artículos (reglas por palabras clave, multilabel). Los términos se dividen en FUERTES (hábitat/ecosistema que define el OFC) y DÉBILES (geográficos o de contexto que no definen hábitat). Un OFC solo se asigna si coincide al menos un término fuerte; los débiles suman confianza. Editable sin tocar código. v2.1: ampliado el lexicon con sinonimos de habitat en ingles (derivados de las definiciones/habitats ya listados) para mejorar la cobertura en corpus en ingles (p. ej. OpenAlex). No se anadieron categorias ni aves nuevas. v2.2: anadidos terminos de habitat en ingles mapeables a OFC colombianos especificos (riparian, reservoir, reef, shrubland, orchard, etc.), validados uno a uno contra la frecuencia real en el corpus. Se EXCLUYERON biomas templados/boreales (woodland, steppe, boreal/temperate/deciduous forest) por no corresponder a ningun OFC de la ENCA Colombia (evita falsos positivos).",
+  "relacion_articulo_ofc": "muchos_a_muchos",
+  "ofc": [
+    {
+      "id": "OFC-01",
+      "numero": 1,
+      "nombre": "Aves de hábitats marinos, costeros y de manglar",
+      "definicion": "Aves asociadas a ambientes marinos, costeros e insulares del Caribe y Pacífico, incluyendo playas, manglares, arrecifes coralinos y praderas de pastos marinos; abarca comunidades insulares con alto endemismo.",
+      "habitats": [
+        "mar",
+        "costa",
+        "playa",
+        "manglar",
+        "arrecife coralino",
+        "pastos marinos",
+        "estuario costero",
+        "isla",
+        "zona insular"
+      ],
+      "aves_caracteristicas": [
+        "aves marinas",
+        "aves playeras",
+        "aves costeras",
+        "aves insulares"
+      ],
+      "terminos_fuertes": [
+        "marino",
+        "costero",
+        "costera",
+        "manglar",
+        "arrecife",
+        "coralino",
+        "pastos marinos",
+        "insular",
+        "playa",
+        "playera",
+        "litoral",
+        "ave marina",
+        "seabird",
+        "shorebird",
+        "mangrove",
+        "coral reef",
+        "coastal",
+        "marine",
+        "estuary",
+        "estuarine",
+        "tidal",
+        "beach",
+        "seashore",
+        "islet",
+        "intertidal",
+        "saltmarsh",
+        "reef",
+        "seabird colony",
+        "mudflat"
+      ],
+      "terminos_debiles": [
+        "Caribe",
+        "Pacífico",
+        "isla",
+        "island"
+      ]
+    },
+    {
+      "id": "OFC-02",
+      "numero": 2,
+      "nombre": "Aves de humedales interiores de agua dulce",
+      "definicion": "Aves de ecosistemas acuáticos continentales de agua dulce: estuarinos, lacustres, ribereños y palustres. Fundamentales para especies de hábitos semiacuáticos y rutas migratorias.",
+      "habitats": [
+        "humedal",
+        "ciénaga",
+        "laguna",
+        "lago",
+        "río",
+        "pantano",
+        "madrevieja",
+        "zona ribereña",
+        "palustre"
+      ],
+      "aves_caracteristicas": [
+        "aves acuáticas",
+        "aves vadeadoras",
+        "aves semiacuáticas",
+        "patos",
+        "garzas"
+      ],
+      "terminos_fuertes": [
+        "humedal",
+        "humedales",
+        "agua dulce",
+        "ciénaga",
+        "laguna",
+        "palustre",
+        "pantano",
+        "acuática",
+        "acuático",
+        "semiacuática",
+        "vadeadora",
+        "madrevieja",
+        "wetland",
+        "freshwater",
+        "marsh",
+        "lacustrine",
+        "waterbird",
+        "wetlands",
+        "swamp",
+        "lagoon",
+        "pond",
+        "floodplain",
+        "marshland",
+        "aquatic",
+        "wader",
+        "riparian",
+        "reservoir",
+        "peatland",
+        "bog",
+        "riparian forest"
+      ],
+      "terminos_debiles": [
+        "río",
+        "lago",
+        "ribereño",
+        "ribereña",
+        "riverine",
+        "Anatidae",
+        "Ardeidae",
+        "pond",
+        "lake"
+      ]
+    },
+    {
+      "id": "OFC-03",
+      "numero": 3,
+      "nombre": "Aves de sabanas y pastizales naturales",
+      "definicion": "Aves de sabanas de la Orinoquía, el Caribe y valles interandinos, incluyendo altillanura y sabanas inundables, adaptadas a marcadas temporadas de sequía e inundación.",
+      "habitats": [
+        "sabana",
+        "pastizal natural",
+        "altillanura",
+        "sabana inundable",
+        "llanura",
+        "valle interandino"
+      ],
+      "aves_caracteristicas": [
+        "aves de pastizal",
+        "aves de sabana"
+      ],
+      "terminos_fuertes": [
+        "sabana",
+        "sabanas",
+        "pastizal",
+        "pastizales",
+        "altillanura",
+        "pradera",
+        "grassland",
+        "savanna",
+        "savannah",
+        "sabana inundable",
+        "grasslands",
+        "savannas",
+        "savannahs",
+        "prairie",
+        "pampas",
+        "natural grassland"
+      ],
+      "terminos_debiles": [
+        "llanura",
+        "llanos",
+        "Orinoquía",
+        "inundable",
+        "estacional"
+      ]
+    },
+    {
+      "id": "OFC-04",
+      "numero": 4,
+      "nombre": "Aves de bosques y matorrales secos",
+      "definicion": "Aves de bosque seco tropical y matorrales de 0 a 1000 m s. n. m. en valles interandinos y el Caribe. Bioma históricamente extenso hoy muy reducido, con especies/subespecies restringidas.",
+      "habitats": [
+        "bosque seco",
+        "bosque seco tropical",
+        "matorral seco",
+        "enclave seco",
+        "valle interandino"
+      ],
+      "aves_caracteristicas": [
+        "aves de bosque seco",
+        "especies endémicas de bosque seco"
+      ],
+      "terminos_fuertes": [
+        "bosque seco",
+        "matorral seco",
+        "bosque seco tropical",
+        "enclave seco",
+        "zona seca",
+        "dry forest",
+        "tropical dry forest",
+        "scrubland",
+        "endémica de bosque seco",
+        "dry woodland",
+        "thornscrub",
+        "xeric",
+        "arid scrub",
+        "seasonally dry forest",
+        "dry scrub",
+        "shrubland",
+        "scrub",
+        "thornbush"
+      ],
+      "terminos_debiles": [
+        "aridez",
+        "árido",
+        "matorral"
+      ]
+    },
+    {
+      "id": "OFC-05",
+      "numero": 5,
+      "nombre": "Aves de bosques húmedos de tierras bajas",
+      "definicion": "Aves de bosque húmedo tropical de tierras bajas (hasta ~1000 m s. n. m.), que concentran la mayor riqueza de especies del país y numerosos endemismos.",
+      "habitats": [
+        "bosque húmedo tropical",
+        "selva de tierras bajas",
+        "selva húmeda",
+        "bosque de tierras bajas"
+      ],
+      "aves_caracteristicas": [
+        "aves de selva húmeda",
+        "aves de tierras bajas"
+      ],
+      "terminos_fuertes": [
+        "bosque húmedo",
+        "tierras bajas",
+        "selva húmeda",
+        "selva tropical",
+        "bosque húmedo tropical",
+        "tierra baja",
+        "lowland forest",
+        "rainforest",
+        "tropical rainforest",
+        "humid forest",
+        "lowland rainforest",
+        "lowland tropical forest",
+        "lowland humid forest",
+        "tropical lowland forest"
+      ],
+      "terminos_debiles": [
+        "Amazonía",
+        "Chocó biogeográfico",
+        "Chocó",
+        "Amazon",
+        "Choco"
+      ]
+    },
+    {
+      "id": "OFC-06",
+      "numero": 6,
+      "nombre": "Aves de bosques premontanos y montanos",
+      "definicion": "Aves de bosques andinos de niebla entre ~1000 y 2800 m s. n. m. Concentran la mayor cantidad de especies amenazadas del país.",
+      "habitats": [
+        "bosque premontano",
+        "bosque montano",
+        "bosque de niebla",
+        "bosque andino",
+        "selva nublada"
+      ],
+      "aves_caracteristicas": [
+        "aves de bosque andino",
+        "aves de montaña media",
+        "especies amenazadas andinas"
+      ],
+      "terminos_fuertes": [
+        "premontano",
+        "montano",
+        "bosque de niebla",
+        "bosque andino",
+        "selva nublada",
+        "montane",
+        "cloud forest",
+        "premontane",
+        "bosques montanos",
+        "bosques premontanos",
+        "montane forest",
+        "andean forest",
+        "premontane forest",
+        "foggy forest",
+        "cloud-forest"
+      ],
+      "terminos_debiles": [
+        "cordillera",
+        "andino",
+        "andina",
+        "Andes",
+        "ladera",
+        "vertiente",
+        "andean",
+        "highland forest"
+      ]
+    },
+    {
+      "id": "OFC-07",
+      "numero": 7,
+      "nombre": "Aves de alta montaña",
+      "definicion": "Aves de ecosistemas por encima de ~2800 m s. n. m.: páramos, superpáramos y bosques enanos. Funcionan como islas biológicas con especies altamente adaptadas a bajas temperaturas.",
+      "habitats": [
+        "páramo",
+        "superpáramo",
+        "bosque enano",
+        "alta montaña",
+        "frailejonal"
+      ],
+      "aves_caracteristicas": [
+        "aves de páramo",
+        "aves de alta montaña",
+        "colibríes de altura"
+      ],
+      "terminos_fuertes": [
+        "páramo",
+        "superpáramo",
+        "alta montaña",
+        "bosque enano",
+        "frailejón",
+        "frailejonal",
+        "altoandino",
+        "altoandina",
+        "paramo",
+        "high Andean",
+        "alpine",
+        "treeline",
+        "high mountain",
+        "high-andean",
+        "high andes",
+        "alpine grassland",
+        "elfin forest"
+      ],
+      "terminos_debiles": [
+        "nival",
+        "highland",
+        "msnm"
+      ]
+    },
+    {
+      "id": "OFC-08",
+      "numero": 8,
+      "nombre": "Aves en sistemas urbanos",
+      "definicion": "Aves que habitan o usan entornos construidos (ciudades), aprovechando la estructura ecológica urbana: ecoparques, quebradas y corredores de ronda.",
+      "habitats": [
+        "ciudad",
+        "zona urbana",
+        "ecoparque",
+        "parque urbano",
+        "quebrada urbana",
+        "corredor de ronda",
+        "jardín"
+      ],
+      "aves_caracteristicas": [
+        "aves urbanas",
+        "aves sinantrópicas"
+      ],
+      "terminos_fuertes": [
+        "urbano",
+        "urbana",
+        "ecoparque",
+        "parque urbano",
+        "corredor urbano",
+        "sinantrópica",
+        "urban",
+        "urban green",
+        "campus",
+        "zona verde urbana",
+        "urban area",
+        "urbanization",
+        "urbanisation",
+        "city park",
+        "urban park",
+        "urban ecosystem"
+      ],
+      "terminos_debiles": [
+        "ciudad",
+        "jardín",
+        "city",
+        "metropolitano",
+        "urbanized",
+        "town",
+        "garden",
+        "parkland"
+      ]
+    },
+    {
+      "id": "OFC-09",
+      "numero": 9,
+      "nombre": "Aves en agroecosistemas",
+      "definicion": "Aves de matrices rurales productivas: sistemas agroforestales, policultivos, pastizales ganaderos y parches de vegetación nativa en propiedades privadas.",
+      "habitats": [
+        "agroecosistema",
+        "sistema agroforestal",
+        "cultivo",
+        "policultivo",
+        "pastizal ganadero",
+        "finca",
+        "potrero",
+        "cafetal"
+      ],
+      "aves_caracteristicas": [
+        "aves de agroecosistemas",
+        "aves de zonas rurales productivas"
+      ],
+      "terminos_fuertes": [
+        "agroecosistema",
+        "agroforestal",
+        "policultivo",
+        "pastizal ganadero",
+        "cafetal",
+        "agropecuario",
+        "agroforestry",
+        "farmland",
+        "silvopastoril",
+        "plantación de café",
+        "plantación de cacao",
+        "agroecosystem",
+        "agricultural landscape",
+        "coffee plantation",
+        "shade coffee",
+        "cocoa plantation",
+        "cropland",
+        "silvopasture",
+        "orchard",
+        "vineyard",
+        "rice field",
+        "paddy",
+        "agroforest"
+      ],
+      "terminos_debiles": [
+        "cultivo",
+        "finca",
+        "potrero",
+        "café",
+        "cacao",
+        "ganadero",
+        "pasture",
+        "plantation",
+        "rural productivo",
+        "agricultural",
+        "coffee",
+        "cocoa",
+        "livestock"
+      ]
+    },
+    {
+      "id": "OFC-10",
+      "numero": 10,
+      "nombre": "Sistemas culturales asociados a la apreciación de las aves",
+      "definicion": "Objeto focal centrado en conocimientos y prácticas tradicionales de comunidades indígenas, afrocolombianas, palenqueras, raizales, campesinas y rom en torno a las aves; evalúa conservación territorial y transmisión generacional del conocimiento.",
+      "habitats": [
+        "territorio comunitario",
+        "resguardo",
+        "territorio colectivo"
+      ],
+      "aves_caracteristicas": [],
+      "terminos_fuertes": [
+        "conocimiento tradicional",
+        "etnoornitología",
+        "transmisión generacional",
+        "apreciación de aves",
+        "saberes tradicionales",
+        "traditional knowledge",
+        "ethno-ornithology",
+        "cultural practices",
+        "resguardo indígena",
+        "ethnoornithology",
+        "ethnobiology",
+        "local ecological knowledge"
+      ],
+      "terminos_debiles": [
+        "cultural",
+        "comunidad indígena",
+        "afrocolombiana",
+        "palenquera",
+        "raizal",
+        "campesina",
+        "territorio comunitario",
+        "indigenous"
+      ]
+    },
+    {
+      "id": "OFC-11",
+      "numero": 11,
+      "nombre": "Aviturismo",
+      "definicion": "Único objeto focal socioeconómico/no biológico. Evalúa el desarrollo del turismo sostenible de observación de aves: rutas de aviturismo, capacidad de guías locales e impacto económico comunitario.",
+      "habitats": [],
+      "aves_caracteristicas": [],
+      "terminos_fuertes": [
+        "aviturismo",
+        "turismo de observación",
+        "observación de aves",
+        "birdwatching",
+        "birding",
+        "ruta de aviturismo",
+        "guía de aviturismo",
+        "avitourism",
+        "bird tourism",
+        "birdwatching tourism",
+        "ecotourism birding"
+      ],
+      "terminos_debiles": [
+        "ecoturismo",
+        "turismo sostenible",
+        "guía local",
+        "impacto económico"
+      ]
+    }
+  ]
+}

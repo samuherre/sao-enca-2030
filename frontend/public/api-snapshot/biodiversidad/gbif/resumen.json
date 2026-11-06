@@ -1,0 +1,83 @@
+{
+  "fuente": "GBIF — Global Biodiversity Information Facility",
+  "fuente_url": "https://api.gbif.org/v1",
+  "grupo_taxonomico": "Aves (clase Aves, taxonKey=212)",
+  "cobertura_geografica": "Colombia (country=CO)",
+  "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
+  "origen": "almacenado",
+  "extraido_utc": "2026-10-21T18:48:51.928093+00:00",
+  "finalizado_utc": "2026-10-21T18:49:01.614127+00:00",
+  "estado": "completed",
+  "errores": [],
+  "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null.",
+  "total_registros_ocurrencia": 26753542,
+  "publicadores": [
+    {
+      "rank": 1,
+      "org_key": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+      "nombre": "Cornell Lab of Ornithology",
+      "registros_ocurrencia": 24154885
+    },
+    {
+      "rank": 2,
+      "org_key": "dc282b9d-8f3b-4197-b174-ba5272721a6f",
+      "nombre": "Red Nacional de Observadores de Aves - RNOA",
+      "registros_ocurrencia": 437712
+    },
+    {
+      "rank": 3,
+      "org_key": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+      "nombre": "iNaturalist.org",
+      "registros_ocurrencia": 302130
+    },
+    {
+      "rank": 4,
+      "org_key": "d42b7e5d-a3e5-4fc2-8b3d-105336d70898",
+      "nombre": "Empresas Públicas de Medellín E.S.P.",
+      "registros_ocurrencia": 181510
+    },
+    {
+      "rank": 5,
+      "org_key": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
+      "nombre": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
+      "registros_ocurrencia": 178767
+    }
+  ],
+  "cortes_historicos": 2,
+  "historico": [
+    {
+      "extraido_utc": "2026-10-21T17:45:51.364310+00:00",
+      "fecha": "2026-10-21",
+      "estado": "completed",
+      "total_registros_ocurrencia": 26753542,
+      "publicadores_en_ranking": 5
+    },
+    {
+      "extraido_utc": "2026-10-21T18:48:51.928093+00:00",
+      "fecha": "2026-10-21",
+      "estado": "completed",
+      "total_registros_ocurrencia": 26753542,
+      "publicadores_en_ranking": 5
+    }
+  ],
+  "exportaciones": [
+    {
+      "nombre": "national_total_arcgis.csv",
+      "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/national_total_arcgis.csv",
+      "filas": 2,
+      "modificado_utc": "2026-10-30T23:13:26.863069+00:00"
+    },
+    {
+      "nombre": "publisher_counts_arcgis.csv",
+      "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/publisher_counts_arcgis.csv",
+      "filas": 10,
+      "modificado_utc": "2026-10-30T23:13:26.865073+00:00"
+    },
+    {
+      "nombre": "run_log.csv",
+      "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/run_log.csv",
+      "filas": 1,
+      "modificado_utc": "2026-10-21T18:49:24.494673+00:00"
+    }
+  ]
+}

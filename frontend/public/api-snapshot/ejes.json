@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "[DEMO_DATA] Eje estratégico de ejemplo",
+    "descripcion": "[DEMO_DATA] Descripción de ejemplo del Eje para desarrollo."
+  },
+  {
+    "id": 2,
+    "nombre": "[DEMO_DATA] Eje 2 — Incidencia en sectores productivos",
+    "descripcion": "[DEMO_DATA] Promover buenas prácticas de conservación de aves en sectores productivos y de servicios (estructura de ejemplo)."
+  },
+  {
+    "id": 3,
+    "nombre": "[DEMO_DATA] Eje 5 — Generación y gestión del conocimiento",
+    "descripcion": "[DEMO_DATA] Fortalecer la investigación y la gestión del conocimiento sobre las aves y sus hábitats (estructura de ejemplo)."
+  },
+  {
+    "id": 4,
+    "nombre": "Eje Prueba",
+    "descripcion": "Este eje se crea con la intención de hacer una prueba de funcionalidad."
+  }
+]

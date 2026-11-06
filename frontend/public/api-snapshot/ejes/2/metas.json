@@ -1,0 +1,12 @@
+[
+  {
+    "id": 2,
+    "descripcion": "[DEMO_DATA] Meta 2.1 — Vincular organizaciones de sectores productivos a iniciativas de conservación.",
+    "eje_id": 2
+  },
+  {
+    "id": 3,
+    "descripcion": "[DEMO_DATA] Meta 2.2 — Difundir guías de buenas prácticas (sin objetivos aún, para ver el estado vacío).",
+    "eje_id": 2
+  }
+]

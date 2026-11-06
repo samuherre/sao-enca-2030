@@ -1,0 +1,21 @@
+{
+  "_comentario": "Estrategia de busqueda SAO (search-strategy.md): 5 familias de ecuaciones instanciadas en sintaxis booleana de OpenAlex (operadores en MAYUSCULA; sinonimos con OR; multilingue ES/EN/PT dentro de cada ecuacion). Propuesta V1 del Equipo_Proyecto, a validar con SAO. No es secreto; no debe vivir en data/raw/.",
+  "_periodo": "2020-2030 se aplica via filter de anio del pipeline, no como keyword.",
+  "consultas": [
+    {
+      "term": "(bird OR birds OR avian OR avifauna OR ave OR aves OR \"aves silvestres\") AND (conservation OR conservacion OR conservacao OR protection OR proteccion OR protecao OR \"threatened species\")"
+    },
+    {
+      "term": "(bird OR birds OR avian OR avifauna OR ave OR aves) AND (conservation OR conservacion OR conservacao OR protection OR \"habitat restoration\" OR \"restauracion de habitats\") AND (Colombia OR Colombian OR colombiana OR Andes OR Neotropical OR neotropico)"
+    },
+    {
+      "term": "(bird OR birds OR avian OR ave OR aves) AND (\"habitat loss\" OR \"perdida de habitat\" OR deforestation OR deforestacion OR fragmentation OR fragmentacion OR \"climate change\" OR \"cambio climatico\")"
+    },
+    {
+      "term": "(bird OR birds OR avian OR avifauna OR ave OR aves) AND (biodiversity OR biodiversidad OR biodiversidade OR \"protected areas\" OR \"areas protegidas\" OR \"ecological restoration\" OR \"restauracion ecologica\" OR \"conservation planning\")"
+    },
+    {
+      "term": "(bird OR birds OR \"bird species\" OR ave OR aves) AND (\"threatened species\" OR \"especies amenazadas\" OR \"endangered birds\" OR \"aves amenazadas\" OR \"population monitoring\" OR \"monitoreo de poblaciones\" OR \"species monitoring\")"
+    }
+  ]
+}

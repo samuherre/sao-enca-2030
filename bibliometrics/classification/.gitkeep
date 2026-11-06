@@ -1,0 +1,4 @@
+# classification/ — PENDING_VALIDATION
+# Clasificación de artículos (structure.md §11).
+# Vacío: la metodología de clasificación NO está definida (tech.md §11).
+# No asumir reglas, ML, embeddings, LLM ni relación artículo→OFC (data-and-domain.md §20).

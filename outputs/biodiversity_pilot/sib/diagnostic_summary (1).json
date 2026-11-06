@@ -1,0 +1,34 @@
+{
+  "run_at_utc": "2026-10-21T16:14:36.014707+00:00",
+  "purpose": "Diagnóstico inicial de servicios SiB Colombia",
+  "results": [
+    {
+      "service": "sib_species",
+      "url": "https://api.catalogo.biodiversidad.co/record_search/search",
+      "params": {
+        "q": "Leopardus pardalis",
+        "size": 5
+      },
+      "checked_at_utc": "2026-10-21T16:14:34.942211+00:00",
+      "http_status": 200,
+      "final_url": "https://api.catalogo.biodiversidad.co/record_search/search?q=Leopardus+pardalis&size=5",
+      "content_type": "application/json; charset=utf-8",
+      "response_type": "list",
+      "raw_file": "outputs/sib_pilot/sib_species_raw.json",
+      "items_count": 4,
+      "status": "success"
+    },
+    {
+      "service": "sib_occurrences",
+      "url": "https://api.biodiversidad.co/occurrence/search",
+      "params": {
+        "country": "CO",
+        "limit": 10
+      },
+      "checked_at_utc": "2026-10-21T16:14:35.829867+00:00",
+      "status": "error",
+      "error": "HTTPSConnectionPool(host='api.biodiversidad.co', port=443): Max retries exceeded with url: /occurrence/search?country=CO&limit=10 (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x78c71994de50>: Failed to resolve 'api.biodiversidad.co' ([Errno -2] Name or service not known)\"))"
+    }
+  ],
+  "note": "Una consulta exitosa confirma conectividad, no la completitud ni la validez científica de los datos."
+}

@@ -1,0 +1,45 @@
+{
+  "id": 2,
+  "nombre": "[DEMO_DATA] Eje 2 — Incidencia en sectores productivos",
+  "descripcion": "[DEMO_DATA] Promover buenas prácticas de conservación de aves en sectores productivos y de servicios (estructura de ejemplo).",
+  "metas": [
+    {
+      "id": 2,
+      "descripcion": "[DEMO_DATA] Meta 2.1 — Vincular organizaciones de sectores productivos a iniciativas de conservación.",
+      "objetivos": [
+        {
+          "id": 2,
+          "descripcion": "[DEMO_DATA] Objetivo 2.1.1 — Identificar y caracterizar organizaciones aliadas potenciales.",
+          "indicadores": [
+            {
+              "id": 2,
+              "nombre": "[DEMO_DATA] Organizaciones vinculadas",
+              "descripcion": "[DEMO_DATA] Número de organizaciones que adoptan buenas prácticas (indicador de ejemplo).",
+              "actividades": [
+                {
+                  "id": 2,
+                  "descripcion": "[DEMO_DATA] Elaborar un directorio de organizaciones aliadas."
+                },
+                {
+                  "id": 3,
+                  "descripcion": "[DEMO_DATA] Realizar talleres de buenas prácticas."
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "nombre": "[DEMO_DATA] Acuerdos firmados",
+              "descripcion": "[DEMO_DATA] Acuerdos de colaboración suscritos (indicador de ejemplo).",
+              "actividades": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "descripcion": "[DEMO_DATA] Meta 2.2 — Difundir guías de buenas prácticas (sin objetivos aún, para ver el estado vacío).",
+      "objetivos": []
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# ============================================================================
+# requirements-publish.txt — Dependencia OPCIONAL de publicación en ArcGIS.
+# ----------------------------------------------------------------------------
+# Los scripts de extracción/exportación (gbif_bird_counts.py,
+# gbif_bird_counts_history.py, export_for_arcgis.py) usan SOLO la biblioteca
+# estándar de Python y NO requieren este archivo.
+#
+# Este requirement se instala ÚNICAMENTE en el entorno que publica en ArcGIS
+# Online (p. ej. el runner de GitHub Actions del workflow mensual), no en el
+# entorno de desarrollo local. El paquete `arcgis` es pesado; por eso
+# publish_to_arcgis.py lo importa de forma perezosa.
+#
+# Versión sin fijar a propósito: el paquete oficial de Esri evoluciona y el
+# entorno de publicación debe resolver la compatible con su cuenta. Fijar una
+# versión concreta es una decisión a validar con SAO/Esri.
+# ============================================================================
+
+arcgis

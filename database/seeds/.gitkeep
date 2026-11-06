@@ -1,0 +1,3 @@
+# seeds/ — vacío
+# Datos iniciales mínimos (structure.md §16). Motor definido: PostgreSQL (ADR-001).
+# No usar seeds para datasets reales grandes. Datos de prueba => marcar como DEMO_DATA.

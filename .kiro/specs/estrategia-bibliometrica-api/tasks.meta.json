@@ -1,0 +1,319 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Escribir la Estrategia de Búsqueda (`search-strategy.md`, NUEVO)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331986238
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332001504
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332177778
+      }
+    ],
+    "1.2 Ampliar los criterios de inclusión/exclusión (`inclusion-exclusion-criteria.md`, ACTUALIZAR)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331986390
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332002845
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332179385
+      }
+    ],
+    "1.3 Definir la Clasificación Geográfica (`geographic-classification.md`, NUEVO)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331986546
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332004235
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332180918
+      }
+    ],
+    "1.4 Revisar el Contrato de Datos (`article-data-contract.md`, ACTUALIZAR, propuesta V1)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331986849
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332005632
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332182262
+      }
+    ],
+    "2.1 Escribir la Especificación de integración por API key (`api-key-integration.md`, NUEVO)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331987214
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332006736
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332183290
+      }
+    ],
+    "2.2 Implementar el soporte de `OPENALEX_API_KEY` en el conector (ÚNICO CAMBIO DE CÓDIGO)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331987373
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332317889
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332518662
+      }
+    ],
+    "2.3 Añadir el placeholder de `OPENALEX_API_KEY` a `.env.example`": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331987549
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332318768
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332517306
+      }
+    ],
+    "2.4 Property test — inclusión condicional del parámetro `api_key`": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331988051
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332523839
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332870825
+      }
+    ],
+    "2.5 Property test — resolución de la API key desde el entorno": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331988213
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332526689
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332872222
+      }
+    ],
+    "2.6 Property test — el valor de la API key nunca se filtra en textos": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331988654
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332526801
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332873583
+      }
+    ],
+    "3.1 Escribir la Especificación de límites y Resumen de Ejecución (`retrieval-limits.md`, NUEVO)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331989014
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332187645
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332310723
+      }
+    ],
+    "4.1 Escribir el Plan de Piloto Controlado (`pilot-plan.md`, NUEVO)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331989175
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332189047
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332312131
+      }
+    ],
+    "4.2 Escribir el listado de decisiones `PENDING_VALIDATION` (`pending-validation.md`, NUEVO)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331989338
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332190265
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332313243
+      }
+    ],
+    "4.3 Actualizar la guía de uso con `OPENALEX_API_KEY` (`consultar-openalex-api.md`, ACTUALIZAR)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331989504
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332528746
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332876139
+      }
+    ],
+    "5. Checkpoint — cambio de código y documentación": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331989666
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793333156730
+      }
+    ],
+    "6.1 Correr la suite con cliente simulado y hacer smoke del pipeline sin red real": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793331989811
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332880661
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793333152579
+      }
+    ],
+    "1. Fase 1 — Documentación de la estrategia bibliométrica": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332182538
+      }
+    ],
+    "3. Fase 3 — Especificación del límite de recuperación por corrida": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332310847
+      }
+    ],
+    "2.7 Tests de ejemplo / integración simulada del cambio de código": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332527545
+      },
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332875026
+      }
+    ],
+    "2. Fase 2 — Especificación de la integración por API key (Req 6)": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332873683
+      }
+    ],
+    "4. Fase 4 — Piloto, decisiones pendientes y guía": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793332876241
+      }
+    ],
+    "6. Verificación final": [
+      {
+        "executionId": "ef8a932f-c551-462e-ae6a-d4cedc7e7ca4",
+        "chatSessionId": "sess_06f7f2c2-b401-498e-ad6d-f6da093321a0",
+        "timestamp": 1793333152742
+      }
+    ]
+  }
+}

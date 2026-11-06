@@ -1,0 +1,2 @@
+# tests/fixtures/ — datos pequeños y controlados para pruebas (structure.md §19.4).
+# Marcar como DEMO_DATA. Nunca usar datasets reales grandes como fixtures.

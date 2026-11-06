@@ -1,0 +1,54 @@
+{
+  "source": "GBIF Occurrence API",
+  "source_base_url": "https://api.gbif.org/v1",
+  "scope": "Registros de aves (Aves, taxonKey=212) en Colombia (country=CO)",
+  "extracted_at_utc": "2026-10-21T17:35:33.349275+00:00",
+  "finished_at_utc": "2026-10-21T17:35:38.329859+00:00",
+  "query_params": {
+    "total_count": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0
+    },
+    "publisher_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "publishingOrg",
+      "facetLimit": 5
+    }
+  },
+  "total_bird_records_colombia": 26753542,
+  "publisher_ranking": [
+    {
+      "org_key": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+      "occurrence_count": 24154885,
+      "publisher_name": "Cornell Lab of Ornithology"
+    },
+    {
+      "org_key": "dc282b9d-8f3b-4197-b174-ba5272721a6f",
+      "occurrence_count": 437712,
+      "publisher_name": "Red Nacional de Observadores de Aves - RNOA"
+    },
+    {
+      "org_key": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+      "occurrence_count": 302130,
+      "publisher_name": "iNaturalist.org"
+    },
+    {
+      "org_key": "d42b7e5d-a3e5-4fc2-8b3d-105336d70898",
+      "occurrence_count": 181510,
+      "publisher_name": "Empresas Públicas de Medellín E.S.P."
+    },
+    {
+      "org_key": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
+      "occurrence_count": 178767,
+      "publisher_name": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt"
+    }
+  ],
+  "publishers_in_ranking": 5,
+  "publisher_names_resolved": 5,
+  "errors": [],
+  "status": "completed",
+  "notes": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null."
+}

@@ -1,0 +1,143 @@
+{
+  "fuente": "Boletín SAO",
+  "total_articulos": 35,
+  "por_anio": [
+    {
+      "clave": "2020",
+      "conteo": 4
+    },
+    {
+      "clave": "2021",
+      "conteo": 6
+    },
+    {
+      "clave": "2022",
+      "conteo": 7
+    },
+    {
+      "clave": "2023",
+      "conteo": 5
+    },
+    {
+      "clave": "2024",
+      "conteo": 3
+    },
+    {
+      "clave": "2025",
+      "conteo": 5
+    },
+    {
+      "clave": "2026",
+      "conteo": 5
+    }
+  ],
+  "por_volumen": [
+    {
+      "clave": "29",
+      "conteo": 4
+    },
+    {
+      "clave": "30",
+      "conteo": 6
+    },
+    {
+      "clave": "31",
+      "conteo": 7
+    },
+    {
+      "clave": "32",
+      "conteo": 5
+    },
+    {
+      "clave": "33",
+      "conteo": 3
+    },
+    {
+      "clave": "34",
+      "conteo": 5
+    },
+    {
+      "clave": "35",
+      "conteo": 5
+    }
+  ],
+  "completitud": [
+    {
+      "campo": "title",
+      "con_dato": 35,
+      "total": 35
+    },
+    {
+      "campo": "authors",
+      "con_dato": 33,
+      "total": 35
+    },
+    {
+      "campo": "abstract",
+      "con_dato": 34,
+      "total": 35
+    },
+    {
+      "campo": "keywords",
+      "con_dato": 35,
+      "total": 35
+    },
+    {
+      "campo": "doi",
+      "con_dato": 0,
+      "total": 35
+    }
+  ],
+  "pendientes_revision": 35,
+  "posibles_duplicados": 0,
+  "fecha_dataset": "2026-10-30",
+  "clasificacion_disponible": true,
+  "por_ofc": [
+    {
+      "ofc_id": "OFC-01",
+      "nombre": "Aves de hábitats marinos, costeros y de manglar",
+      "conteo": 2
+    },
+    {
+      "ofc_id": "OFC-02",
+      "nombre": "Aves de humedales interiores de agua dulce",
+      "conteo": 6
+    },
+    {
+      "ofc_id": "OFC-03",
+      "nombre": "Aves de sabanas y pastizales naturales",
+      "conteo": 2
+    },
+    {
+      "ofc_id": "OFC-05",
+      "nombre": "Aves de bosques húmedos de tierras bajas",
+      "conteo": 2
+    },
+    {
+      "ofc_id": "OFC-06",
+      "nombre": "Aves de bosques premontanos y montanos",
+      "conteo": 1
+    },
+    {
+      "ofc_id": "OFC-07",
+      "nombre": "Aves de alta montaña",
+      "conteo": 2
+    },
+    {
+      "ofc_id": "OFC-08",
+      "nombre": "Aves en sistemas urbanos",
+      "conteo": 6
+    },
+    {
+      "ofc_id": "OFC-09",
+      "nombre": "Aves en agroecosistemas",
+      "conteo": 2
+    },
+    {
+      "ofc_id": "OFC-11",
+      "nombre": "Aviturismo",
+      "conteo": 1
+    }
+  ],
+  "sin_ofc": 17
+}

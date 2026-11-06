@@ -1,0 +1,3 @@
+# data/raw/ — datos originales, INMUTABLES (structure.md §17.1).
+# Los procesos automáticos NO deben modificar estos archivos.
+# No versionar datasets reales/sensibles en Git sin autorización de SAO.

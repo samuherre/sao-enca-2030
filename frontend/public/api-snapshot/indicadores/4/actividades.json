@@ -1,0 +1,17 @@
+[
+  {
+    "id": 4,
+    "descripcion": "[DEMO_DATA] Definir una estructura de catalogación.",
+    "indicador_id": 4
+  },
+  {
+    "id": 5,
+    "descripcion": "[DEMO_DATA] Cargar los documentos priorizados.",
+    "indicador_id": 4
+  },
+  {
+    "id": 6,
+    "descripcion": "[DEMO_DATA] Revisar la calidad de los metadatos.",
+    "indicador_id": 4
+  }
+]

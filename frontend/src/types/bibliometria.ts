@@ -1,0 +1,67 @@
+// Tipos del dashboard bibliométrico (Componente B).
+//
+// Reflejan exactamente los schemas de respuesta del backend
+// (`backend/src/schemas/bibliometria.py`). El backend expone datos YA
+// PROCESADOS de la fuente Boletín SAO; no incluye clasificación OFC
+// (PENDING_VALIDATION).
+
+/** Par (clave, conteo) para distribuciones simples (p. ej. por año). */
+export interface ConteoPorClave {
+  readonly clave: string;
+  readonly conteo: number;
+}
+
+/** Completitud de un campo del contrato: cuántos registros lo tienen. */
+export interface CompletitudCampo {
+  readonly campo: string;
+  readonly con_dato: number;
+  readonly total: number;
+}
+
+/** Conteo de artículos por OFC (clasificación automática). */
+export interface ConteoOFC {
+  readonly ofc_id: string;
+  readonly nombre: string;
+  readonly conteo: number;
+}
+
+/** Resumen agregado del dataset de la fuente Boletín SAO. */
+export interface ResumenBibliometrico {
+  readonly fuente: string;
+  readonly total_articulos: number;
+  readonly por_anio: readonly ConteoPorClave[];
+  readonly por_volumen: readonly ConteoPorClave[];
+  readonly completitud: readonly CompletitudCampo[];
+  readonly pendientes_revision: number;
+  readonly posibles_duplicados: number;
+  readonly fecha_dataset: string | null;
+  readonly clasificacion_disponible: boolean;
+  readonly por_ofc: readonly ConteoOFC[];
+  readonly sin_ofc: number;
+}
+
+/** Aporte de una fuente individual al resumen consolidado. */
+export interface AporteFuente {
+  readonly fuente: string;
+  readonly total_articulos: number;
+  readonly completitud: readonly CompletitudCampo[];
+}
+
+/**
+ * Resumen agregado de TODAS las fuentes bajo `data/processed/`
+ * (unión sin exclusión, sin deduplicación entre fuentes).
+ */
+export interface ResumenConsolidado {
+  readonly alcance: string;
+  readonly total_articulos: number;
+  readonly por_anio: readonly ConteoPorClave[];
+  readonly por_volumen: readonly ConteoPorClave[];
+  readonly completitud: readonly CompletitudCampo[];
+  readonly pendientes_revision: number;
+  readonly posibles_duplicados: number;
+  readonly fechas_dataset: readonly string[];
+  readonly clasificacion_disponible: boolean;
+  readonly por_ofc: readonly ConteoOFC[];
+  readonly sin_ofc: number;
+  readonly aporte_por_fuente: readonly AporteFuente[];
+}

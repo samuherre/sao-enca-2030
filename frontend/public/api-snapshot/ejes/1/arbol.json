@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "nombre": "[DEMO_DATA] Eje estratégico de ejemplo",
+  "descripcion": "[DEMO_DATA] Descripción de ejemplo del Eje para desarrollo.",
+  "metas": [
+    {
+      "id": 1,
+      "descripcion": "[DEMO_DATA] Meta de ejemplo asociada al Eje de demostración.",
+      "objetivos": [
+        {
+          "id": 1,
+          "descripcion": "[DEMO_DATA] Objetivo SMART de ejemplo asociado a la Meta de demostración.",
+          "indicadores": [
+            {
+              "id": 1,
+              "nombre": "[DEMO_DATA] Indicador de ejemplo",
+              "descripcion": "[DEMO_DATA] Descripción de ejemplo del Indicador para desarrollo.",
+              "actividades": [
+                {
+                  "id": 1,
+                  "descripcion": "[DEMO_DATA] Actividad de ejemplo asociada al Indicador de demostración."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-10-21T16:16:16.946725+00:00",
+  "finished_at_utc": "2026-10-21T16:16:25.618168+00:00",
+  "source": "GBIF API",
+  "country_filter": "CO",
+  "taxon_filter": "Aves (taxonKey=212)",
+  "requested_limit": 20,
+  "occurrences_returned": 20,
+  "unique_species_found": 17,
+  "species_enriched": 10,
+  "species_enrichment_limit": 10,
+  "errors": [],
+  "status": "completed",
+  "note": "Muestra exploratoria; no representa el total de registros de aves de Colombia."
+}

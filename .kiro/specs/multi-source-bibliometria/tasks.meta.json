@@ -1,0 +1,673 @@
+{
+  "pbtResults": {
+    "2.4 Property test — fuente fija y conformidad del contrato": {
+      "status": "passed",
+      "lastRunTimestamp": 1793220909578
+    },
+    "2.5 Property test — obligatorio faltante/ambiguo marca revisión": {
+      "status": "passed",
+      "lastRunTimestamp": 1793220930398
+    },
+    "2.6 Property test — validación de período no descarta": {
+      "status": "passed",
+      "lastRunTimestamp": 1793220970174
+    },
+    "6.3 Property test — agregaciones bien formadas": {
+      "status": "passed",
+      "lastRunTimestamp": 1793222018248
+    },
+    "6.4 Property test — los datasets clasificados no se cuentan como fuente": {
+      "status": "passed",
+      "lastRunTimestamp": 1793222019635
+    },
+    "3.2 Property test — robustez ante registros malformados": {
+      "status": "passed",
+      "lastRunTimestamp": 1793221418615
+    },
+    "3.5 Property test — deduplicación básica dentro de la fuente": {
+      "status": "passed",
+      "lastRunTimestamp": 1793221445658
+    },
+    "3.4 Property test — inmutabilidad de `data/raw`": {
+      "status": "passed",
+      "lastRunTimestamp": 1793221494876
+    },
+    "3.3 Property test — conservación aritmética del resumen de ingesta": {
+      "status": "passed",
+      "lastRunTimestamp": 1793222020478
+    }
+  },
+  "executionHistory": {
+    "1.1 Extraer `ArticleRecord` a un módulo compartido": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219955740
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219970807
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793222368036
+      }
+    ],
+    "1.2 Extraer helpers de pipeline a `_common.py`": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219955863
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220095374
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220359729
+      }
+    ],
+    "1.3 Prueba de no-regresión del pipeline del Boletín": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219955965
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220368890
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220620884
+      }
+    ],
+    "2.1 Implementar detección de formato y extracción de registros": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219956156
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220370371
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220622248
+      }
+    ],
+    "2.2 Property test — detección de formato por extensión": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219956522
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220631801
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220825081
+      }
+    ],
+    "2.3 Property test — no-invención de campos ausentes": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219956712
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220632662
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220825867
+      }
+    ],
+    "2.4 Property test — fuente fija y conformidad del contrato": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219956819
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220830580
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221135281
+      }
+    ],
+    "2.5 Property test — obligatorio faltante/ambiguo marca revisión": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219957303
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220831500
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221136708
+      }
+    ],
+    "2.6 Property test — validación de período no descarta": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219957743
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220832894
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221137512
+      }
+    ],
+    "3.1 Implementar el pipeline reproducible": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219958144
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220628053
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220820923
+      }
+    ],
+    "3.2 Property test — robustez ante registros malformados": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219958573
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221329357
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221510270
+      }
+    ],
+    "3.3 Property test — conservación aritmética del resumen de ingesta": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219958882
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221330685
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221511659
+      }
+    ],
+    "3.4 Property test — inmutabilidad de `data/raw`": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219959378
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221332001
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221513079
+      }
+    ],
+    "3.5 Property test — deduplicación básica dentro de la fuente": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219959748
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221332875
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221514004
+      }
+    ],
+    "3.6 Tests de ejemplo / edge cases del pipeline": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219960085
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221519445
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221642677
+      }
+    ],
+    "4. Checkpoint — conector y pipeline de Scholar": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219960558
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793222355227
+      }
+    ],
+    "5.1 Añadir schemas Pydantic del consolidado": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219960999
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220096753
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220361010
+      }
+    ],
+    "5.2 Añadir tipos equivalentes en el frontend": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219961258
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220097670
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220362408
+      }
+    ],
+    "6.1 Implementar `resumen_consolidado()`": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219961426
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220371245
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220622920
+      }
+    ],
+    "6.2 Property test — el total consolidado es la suma por fuente": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219961575
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220834298
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221132573
+      }
+    ],
+    "6.3 Property test — agregaciones bien formadas": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219961692
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220835055
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221133941
+      }
+    ],
+    "6.4 Property test — los datasets clasificados no se cuentan como fuente": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219961939
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221145795
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221320003
+      }
+    ],
+    "6.5 Property test — no hay deduplicación entre fuentes": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219962073
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221147213
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221321027
+      }
+    ],
+    "6.6 Property test — extensibilidad por descubrimiento": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219962239
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221148603
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221322311
+      }
+    ],
+    "6.7 Test de ejemplo — servicio sin datasets": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219962370
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221149472
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221323283
+      }
+    ],
+    "7.1 Añadir ruta `GET /bibliometria/resumen`": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219962485
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220628991
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220822337
+      }
+    ],
+    "7.2 Tests de integración de los endpoints": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219962589
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221328266
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221515044
+      }
+    ],
+    "8. Checkpoint — backend consolidado": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219962688
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793222356055
+      }
+    ],
+    "9.1 Añadir cliente y hook del consolidado": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219962806
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220630409
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220823637
+      }
+    ],
+    "9.2 Actualizar `BibliometriaPage` al consolidado": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219962918
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221520486
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221643621
+      }
+    ],
+    "9.3 Typecheck/build del frontend": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219963033
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221647907
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221723412
+      }
+    ],
+    "10.1 Escribir la guía en `docs/`": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219963601
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220099085
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220363380
+      }
+    ],
+    "11.1 Preparar la carpeta de entrada sin datos sintéticos": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219963810
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220100061
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220364501
+      }
+    ],
+    "11.2 Correr toda la suite y dejar el estado verde": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793219964034
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221648915
+      },
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793222350489
+      }
+    ],
+    "5. Contratos de datos del resumen consolidado (backend y frontend)": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220362497
+      }
+    ],
+    "10. Guía de exportación con Publish or Perish": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793220363501
+      }
+    ],
+    "2. Conector Google Scholar (Publish or Perish → contrato V1)": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221137626
+      }
+    ],
+    "6. Servicio consolidado multi-fuente": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221323401
+      }
+    ],
+    "7. Endpoint consolidado (conservando el endpoint actual)": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221515159
+      }
+    ],
+    "3. Pipeline Google Scholar por CLI (espejo del Boletín con `_common`)": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221642838
+      }
+    ],
+    "9. Vista generalizada en el frontend": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793221723563
+      }
+    ],
+    "11. Verificación final y preparación del flujo real": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793222350652
+      }
+    ],
+    "1. Refactor compartido del contrato y helpers (sin cambiar la salida del Boletín)": [
+      {
+        "executionId": "243082af-d57b-4814-9985-686a766c192d",
+        "chatSessionId": "sess_d5989039-d581-45bf-a645-11b4f505c768",
+        "timestamp": 1793222368231
+      }
+    ]
+  }
+}

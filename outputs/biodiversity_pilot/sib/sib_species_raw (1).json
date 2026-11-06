@@ -1,0 +1,244 @@
+[
+  {
+    "_id": "56c66192f0106c67230e73be",
+    "creation_date": "2016-02-19T00:28:02.000Z",
+    "taxonRecordNameApprovedInUse": {
+      "taxonRecordName": {
+        "scientificName": {
+          "canonicalName": {
+            "simple": "Leopardus pardalis"
+          },
+          "canonicalAuthorship": {
+            "simple": " (Linnaeus, 1758)"
+          }
+        }
+      }
+    },
+    "scientificNameSimple": "Leopardus pardalis (Linnaeus, 1758)",
+    "commonNames": [
+      {
+        "language": "Español",
+        "name": "Ocelote"
+      },
+      {
+        "language": "Español",
+        "name": "Tigrillo"
+      },
+      {
+        "language": "Español",
+        "name": "Maracaya"
+      },
+      {
+        "language": "Español",
+        "name": "Gato solo"
+      },
+      {
+        "language": "Español",
+        "name": "Gato Cunaguaro"
+      },
+      {
+        "language": "Español",
+        "name": "Tigre serranero"
+      },
+      {
+        "language": "Español",
+        "name": "Tigre podenco"
+      },
+      {
+        "language": "Inglés",
+        "name": "Ocelot"
+      }
+    ],
+    "threatStatusValue": "Preocupación menor (LC)"
+  },
+  {
+    "_id": "59aec14f1582a31515e97be0",
+    "creation_date": "2017-09-05T15:22:55.000Z",
+    "taxonRecordNameApprovedInUse": {
+      "taxonRecordName": {
+        "scientificName": {
+          "canonicalName": {
+            "simple": "Leopardus pardalis"
+          },
+          "canonicalAuthorship": {
+            "simple": " (Linnaeus, 1758)"
+          }
+        }
+      }
+    },
+    "scientificNameSimple": "Leopardus pardalis (Linnaeus, 1758)",
+    "commonNames": [
+      {
+        "language": "Español",
+        "name": "Ocelote"
+      },
+      {
+        "language": "Español",
+        "name": "Tigrillo"
+      },
+      {
+        "language": "Español",
+        "name": "Maracaya"
+      },
+      {
+        "language": "Español",
+        "name": "Gato solo"
+      },
+      {
+        "language": "Español",
+        "name": "Gato cunaguaro"
+      },
+      {
+        "language": "Español",
+        "name": "Tigre podenco"
+      },
+      {
+        "language": "Español",
+        "name": "Tigre serranero"
+      },
+      {
+        "language": "Inglés",
+        "name": "Ocelot"
+      }
+    ],
+    "imageInfo": {
+      "mainImage": "http://upload.wikimedia.org/wikipedia/commons/2/28/Ocelot.jpg",
+      "thumbnailImage": "http://upload.wikimedia.org/wikipedia/commons/2/28/Ocelot.jpg",
+      "source": "http://commons.wikimedia.org/wiki/File:Ocelot.jpg",
+      "rightsHolder": "Tom Smylie",
+      "license": "Public Domain"
+    }
+  },
+  {
+    "_id": "59c7550b5f369343442f777d",
+    "creation_date": "2017-09-24T06:47:39.000Z",
+    "taxonRecordNameApprovedInUse": {
+      "taxonRecordName": {
+        "scientificName": {
+          "canonicalName": {
+            "simple": "Puma yagouaroundi"
+          },
+          "canonicalAuthorship": {
+            "simple": ""
+          }
+        }
+      }
+    },
+    "scientificNameSimple": "Puma yagouaroundi",
+    "commonNames": [
+      {
+        "language": "Inglés",
+        "name": "Jaguarundi"
+      },
+      {
+        "language": "German",
+        "name": "Wieselkatze"
+      },
+      {
+        "language": "Inglés",
+        "name": "Eyra Cat"
+      },
+      {
+        "language": "French",
+        "name": "Jaguarundi"
+      },
+      {
+        "language": "Italian",
+        "name": "Jaguarondi"
+      },
+      {
+        "language": "Español",
+        "name": "Tigrillo"
+      },
+      {
+        "language": "Español",
+        "name": "Yaguarundí"
+      },
+      {
+        "language": "Español",
+        "name": "Onza"
+      },
+      {
+        "language": "Español",
+        "name": "León brenero"
+      },
+      {
+        "language": "Español",
+        "name": "Gato colorado"
+      },
+      {
+        "language": "Español",
+        "name": "Leoncillo"
+      },
+      {
+        "language": "Español",
+        "name": "Gato moro"
+      }
+    ],
+    "threatStatusValue": "Preocupación menor (LC)",
+    "imageInfo": {
+      "mainImage": "https://inaturalist-open-data.s3.amazonaws.com/photos/83401845/original.jpg",
+      "thumbnailImage": "https://inaturalist-open-data.s3.amazonaws.com/photos/83401845/original.jpg",
+      "source": "",
+      "rightsHolder": "gabriel_arroyo",
+      "license": "CC BY-NC"
+    }
+  },
+  {
+    "_id": "59de63555f36934344301540",
+    "creation_date": "2017-10-11T18:30:45.000Z",
+    "taxonRecordNameApprovedInUse": {
+      "taxonRecordName": {
+        "scientificName": {
+          "canonicalName": {
+            "simple": "Leopardus wiedii"
+          },
+          "canonicalAuthorship": {
+            "simple": " (Schinz, 1821)"
+          }
+        }
+      }
+    },
+    "scientificNameSimple": "Leopardus wiedii (Schinz, 1821)",
+    "commonNames": [
+      {
+        "language": "Español",
+        "name": "Margay"
+      },
+      {
+        "language": "Español",
+        "name": "Caucel"
+      },
+      {
+        "language": "Español",
+        "name": "Gato montés"
+      },
+      {
+        "language": "Español",
+        "name": "Tigrillo"
+      },
+      {
+        "name": "Aiáite,Guatioao, Watyáo"
+      },
+      {
+        "name": "Watyáo"
+      },
+      {
+        "language": "Español",
+        "name": "Cocoromalo"
+      },
+      {
+        "language": "Inglés",
+        "name": "Tree Ocelot"
+      }
+    ],
+    "threatStatusValue": "Casi amenazado (NT)",
+    "imageInfo": {
+      "mainImage": "http://upload.wikimedia.org/wikipedia/commons/3/32/Margaykat_Leopardus_wiedii.jpg",
+      "thumbnailImage": "http://upload.wikimedia.org/wikipedia/commons/3/32/Margaykat_Leopardus_wiedii.jpg",
+      "source": "http://commons.wikimedia.org/wiki/File:Margaykat_Leopardus_wiedii.jpg",
+      "rightsHolder": "Malene Thyssen (User Malene)",
+      "license": "GNU Free Documentation License"
+    }
+  }
+]

@@ -1,0 +1,30 @@
+# ============================================================================
+# backend/requirements.txt — SAO ENCA 2030
+# ----------------------------------------------------------------------------
+# Dependencias confirmadas del backend (tech.md §3–§10, §22, §39; ADR-001).
+# Stack: Python 3.12+ / FastAPI / Pydantic / SQLAlchemy / Alembic / PostgreSQL.
+# Versiones fijadas (pin) por reproducibilidad y seguridad de la cadena de
+# suministro. Actualizar mediante cambios versionados y revisados.
+# No incluir secretos ni credenciales en este archivo.
+# ============================================================================
+
+# --- API / Backend -----------------------------------------------------------
+fastapi==0.115.6
+uvicorn==0.34.0
+
+# --- Validación / Configuración ----------------------------------------------
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# --- Acceso a datos / ORM ----------------------------------------------------
+sqlalchemy==2.0.36
+
+# --- Migraciones -------------------------------------------------------------
+alembic==1.14.0
+
+# --- Driver PostgreSQL -------------------------------------------------------
+psycopg[binary]==3.2.3
+
+# --- Pruebas (pytest) --------------------------------------------------------
+pytest==8.3.4
+httpx==0.28.1
