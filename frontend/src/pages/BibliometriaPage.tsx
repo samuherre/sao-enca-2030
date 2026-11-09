@@ -292,9 +292,6 @@ export function BibliometriaPage() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "1rem" }}>
             <MetricCard label="Artículos" value={data.total_articulos} />
             <MetricCard label="Fuentes" value={data.aporte_por_fuente.length} />
-            <MetricCard label="Pendientes de revisión" value={data.pendientes_revision} />
-            <MetricCard label="Posibles duplicados" value={data.posibles_duplicados} />
-            <MetricCard label="Volúmenes" value={data.por_volumen.length} />
           </div>
 
           <BarsCard title="Artículos por año" data={data.por_anio} />
