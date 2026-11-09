@@ -18,11 +18,18 @@ export function useResumenBibliometrico(): AsyncDataState<ResumenBibliometrico> 
   return useAsyncData<ResumenBibliometrico>(loader);
 }
 
-/** Carga el resumen CONSOLIDADO de todas las fuentes procesadas. */
-export function useResumenConsolidado(): AsyncDataState<ResumenConsolidado> {
+/**
+ * Carga el resumen CONSOLIDADO de todas las fuentes procesadas.
+ *
+ * @param anio Año de publicación por el que filtrar todo el resumen. `null` o
+ *   ausente = todos los años. Al cambiar de año se recarga automáticamente.
+ */
+export function useResumenConsolidado(
+  anio: number | null = null,
+): AsyncDataState<ResumenConsolidado> {
   const loader = useCallback(
-    ({ signal }: { signal: AbortSignal }) => obtenerResumenConsolidado({ signal }),
-    [],
+    ({ signal }: { signal: AbortSignal }) => obtenerResumenConsolidado({ anio, signal }),
+    [anio],
   );
   return useAsyncData<ResumenConsolidado>(loader);
 }

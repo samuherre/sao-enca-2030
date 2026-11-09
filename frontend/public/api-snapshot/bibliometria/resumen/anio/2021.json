@@ -1,0 +1,1483 @@
+{
+  "alcance": "consolidado",
+  "total_articulos": 3779,
+  "por_anio": [
+    {
+      "clave": "2021",
+      "conteo": 3779
+    }
+  ],
+  "por_volumen": [
+    {
+      "clave": "0",
+      "conteo": 111
+    },
+    {
+      "clave": "1",
+      "conteo": 28
+    },
+    {
+      "clave": "01",
+      "conteo": 1
+    },
+    {
+      "clave": "2",
+      "conteo": 27
+    },
+    {
+      "clave": "3",
+      "conteo": 49
+    },
+    {
+      "clave": "03",
+      "conteo": 1
+    },
+    {
+      "clave": "4",
+      "conteo": 42
+    },
+    {
+      "clave": "04",
+      "conteo": 2
+    },
+    {
+      "clave": "5",
+      "conteo": 58
+    },
+    {
+      "clave": "6",
+      "conteo": 36
+    },
+    {
+      "clave": "7",
+      "conteo": 58
+    },
+    {
+      "clave": "8",
+      "conteo": 51
+    },
+    {
+      "clave": "9",
+      "conteo": 135
+    },
+    {
+      "clave": "10",
+      "conteo": 86
+    },
+    {
+      "clave": "11",
+      "conteo": 133
+    },
+    {
+      "clave": "12",
+      "conteo": 135
+    },
+    {
+      "clave": "13",
+      "conteo": 139
+    },
+    {
+      "clave": "14",
+      "conteo": 52
+    },
+    {
+      "clave": "15",
+      "conteo": 28
+    },
+    {
+      "clave": "16",
+      "conteo": 67
+    },
+    {
+      "clave": "17",
+      "conteo": 20
+    },
+    {
+      "clave": "18",
+      "conteo": 27
+    },
+    {
+      "clave": "19",
+      "conteo": 39
+    },
+    {
+      "clave": "20",
+      "conteo": 31
+    },
+    {
+      "clave": "21",
+      "conteo": 27
+    },
+    {
+      "clave": "22",
+      "conteo": 41
+    },
+    {
+      "clave": "23",
+      "conteo": 22
+    },
+    {
+      "clave": "24",
+      "conteo": 34
+    },
+    {
+      "clave": "25",
+      "conteo": 28
+    },
+    {
+      "clave": "26",
+      "conteo": 27
+    },
+    {
+      "clave": "27",
+      "conteo": 64
+    },
+    {
+      "clave": "28",
+      "conteo": 51
+    },
+    {
+      "clave": "29",
+      "conteo": 38
+    },
+    {
+      "clave": "30",
+      "conteo": 68
+    },
+    {
+      "clave": "31",
+      "conteo": 38
+    },
+    {
+      "clave": "32",
+      "conteo": 37
+    },
+    {
+      "clave": "33",
+      "conteo": 10
+    },
+    {
+      "clave": "34",
+      "conteo": 13
+    },
+    {
+      "clave": "35",
+      "conteo": 25
+    },
+    {
+      "clave": "36",
+      "conteo": 42
+    },
+    {
+      "clave": "37",
+      "conteo": 8
+    },
+    {
+      "clave": "38",
+      "conteo": 11
+    },
+    {
+      "clave": "39",
+      "conteo": 5
+    },
+    {
+      "clave": "40",
+      "conteo": 11
+    },
+    {
+      "clave": "41",
+      "conteo": 25
+    },
+    {
+      "clave": "42",
+      "conteo": 7
+    },
+    {
+      "clave": "43",
+      "conteo": 10
+    },
+    {
+      "clave": "44",
+      "conteo": 21
+    },
+    {
+      "clave": "45",
+      "conteo": 9
+    },
+    {
+      "clave": "46",
+      "conteo": 13
+    },
+    {
+      "clave": "47",
+      "conteo": 5
+    },
+    {
+      "clave": "48",
+      "conteo": 13
+    },
+    {
+      "clave": "49",
+      "conteo": 8
+    },
+    {
+      "clave": "50",
+      "conteo": 12
+    },
+    {
+      "clave": "51",
+      "conteo": 12
+    },
+    {
+      "clave": "52",
+      "conteo": 18
+    },
+    {
+      "clave": "53",
+      "conteo": 17
+    },
+    {
+      "clave": "54",
+      "conteo": 7
+    },
+    {
+      "clave": "55",
+      "conteo": 17
+    },
+    {
+      "clave": "56",
+      "conteo": 12
+    },
+    {
+      "clave": "57",
+      "conteo": 5
+    },
+    {
+      "clave": "58",
+      "conteo": 20
+    },
+    {
+      "clave": "59",
+      "conteo": 14
+    },
+    {
+      "clave": "60",
+      "conteo": 4
+    },
+    {
+      "clave": "61",
+      "conteo": 17
+    },
+    {
+      "clave": "62",
+      "conteo": 4
+    },
+    {
+      "clave": "63",
+      "conteo": 1
+    },
+    {
+      "clave": "64",
+      "conteo": 8
+    },
+    {
+      "clave": "65",
+      "conteo": 3
+    },
+    {
+      "clave": "66",
+      "conteo": 11
+    },
+    {
+      "clave": "67",
+      "conteo": 7
+    },
+    {
+      "clave": "68",
+      "conteo": 11
+    },
+    {
+      "clave": "69",
+      "conteo": 16
+    },
+    {
+      "clave": "70",
+      "conteo": 8
+    },
+    {
+      "clave": "71",
+      "conteo": 8
+    },
+    {
+      "clave": "72",
+      "conteo": 7
+    },
+    {
+      "clave": "73",
+      "conteo": 1
+    },
+    {
+      "clave": "74",
+      "conteo": 5
+    },
+    {
+      "clave": "75",
+      "conteo": 5
+    },
+    {
+      "clave": "76",
+      "conteo": 1
+    },
+    {
+      "clave": "77",
+      "conteo": 5
+    },
+    {
+      "clave": "78",
+      "conteo": 2
+    },
+    {
+      "clave": "79",
+      "conteo": 3
+    },
+    {
+      "clave": "80",
+      "conteo": 1
+    },
+    {
+      "clave": "82",
+      "conteo": 3
+    },
+    {
+      "clave": "83",
+      "conteo": 5
+    },
+    {
+      "clave": "84",
+      "conteo": 6
+    },
+    {
+      "clave": "85",
+      "conteo": 3
+    },
+    {
+      "clave": "86",
+      "conteo": 1
+    },
+    {
+      "clave": "87",
+      "conteo": 2
+    },
+    {
+      "clave": "89",
+      "conteo": 1
+    },
+    {
+      "clave": "90",
+      "conteo": 9
+    },
+    {
+      "clave": "91",
+      "conteo": 2
+    },
+    {
+      "clave": "92",
+      "conteo": 17
+    },
+    {
+      "clave": "93",
+      "conteo": 5
+    },
+    {
+      "clave": "94",
+      "conteo": 2
+    },
+    {
+      "clave": "95",
+      "conteo": 4
+    },
+    {
+      "clave": "96",
+      "conteo": 16
+    },
+    {
+      "clave": "97",
+      "conteo": 4
+    },
+    {
+      "clave": "98",
+      "conteo": 3
+    },
+    {
+      "clave": "99",
+      "conteo": 7
+    },
+    {
+      "clave": "100",
+      "conteo": 2
+    },
+    {
+      "clave": "101",
+      "conteo": 3
+    },
+    {
+      "clave": "102",
+      "conteo": 4
+    },
+    {
+      "clave": "103",
+      "conteo": 3
+    },
+    {
+      "clave": "104",
+      "conteo": 4
+    },
+    {
+      "clave": "105",
+      "conteo": 1
+    },
+    {
+      "clave": "106",
+      "conteo": 1
+    },
+    {
+      "clave": "107",
+      "conteo": 5
+    },
+    {
+      "clave": "108",
+      "conteo": 4
+    },
+    {
+      "clave": "109",
+      "conteo": 3
+    },
+    {
+      "clave": "110",
+      "conteo": 3
+    },
+    {
+      "clave": "111",
+      "conteo": 4
+    },
+    {
+      "clave": "112",
+      "conteo": 4
+    },
+    {
+      "clave": "113",
+      "conteo": 1
+    },
+    {
+      "clave": "114",
+      "conteo": 1
+    },
+    {
+      "clave": "115",
+      "conteo": 1
+    },
+    {
+      "clave": "116",
+      "conteo": 1
+    },
+    {
+      "clave": "117",
+      "conteo": 2
+    },
+    {
+      "clave": "118",
+      "conteo": 19
+    },
+    {
+      "clave": "120",
+      "conteo": 6
+    },
+    {
+      "clave": "121",
+      "conteo": 8
+    },
+    {
+      "clave": "122",
+      "conteo": 1
+    },
+    {
+      "clave": "123",
+      "conteo": 18
+    },
+    {
+      "clave": "124",
+      "conteo": 6
+    },
+    {
+      "clave": "125",
+      "conteo": 3
+    },
+    {
+      "clave": "126",
+      "conteo": 1
+    },
+    {
+      "clave": "127",
+      "conteo": 6
+    },
+    {
+      "clave": "128",
+      "conteo": 2
+    },
+    {
+      "clave": "129",
+      "conteo": 9
+    },
+    {
+      "clave": "130",
+      "conteo": 4
+    },
+    {
+      "clave": "131",
+      "conteo": 2
+    },
+    {
+      "clave": "132",
+      "conteo": 6
+    },
+    {
+      "clave": "133",
+      "conteo": 5
+    },
+    {
+      "clave": "134",
+      "conteo": 2
+    },
+    {
+      "clave": "135",
+      "conteo": 1
+    },
+    {
+      "clave": "138",
+      "conteo": 15
+    },
+    {
+      "clave": "139",
+      "conteo": 2
+    },
+    {
+      "clave": "140",
+      "conteo": 1
+    },
+    {
+      "clave": "141",
+      "conteo": 7
+    },
+    {
+      "clave": "146",
+      "conteo": 1
+    },
+    {
+      "clave": "147",
+      "conteo": 1
+    },
+    {
+      "clave": "150",
+      "conteo": 4
+    },
+    {
+      "clave": "151",
+      "conteo": 1
+    },
+    {
+      "clave": "154",
+      "conteo": 1
+    },
+    {
+      "clave": "155",
+      "conteo": 2
+    },
+    {
+      "clave": "158",
+      "conteo": 2
+    },
+    {
+      "clave": "159",
+      "conteo": 1
+    },
+    {
+      "clave": "160",
+      "conteo": 1
+    },
+    {
+      "clave": "161",
+      "conteo": 2
+    },
+    {
+      "clave": "162",
+      "conteo": 8
+    },
+    {
+      "clave": "163",
+      "conteo": 6
+    },
+    {
+      "clave": "164",
+      "conteo": 2
+    },
+    {
+      "clave": "165",
+      "conteo": 2
+    },
+    {
+      "clave": "166",
+      "conteo": 1
+    },
+    {
+      "clave": "167",
+      "conteo": 1
+    },
+    {
+      "clave": "168",
+      "conteo": 1
+    },
+    {
+      "clave": "169",
+      "conteo": 2
+    },
+    {
+      "clave": "170",
+      "conteo": 1
+    },
+    {
+      "clave": "172",
+      "conteo": 3
+    },
+    {
+      "clave": "177",
+      "conteo": 1
+    },
+    {
+      "clave": "179",
+      "conteo": 1
+    },
+    {
+      "clave": "180",
+      "conteo": 1
+    },
+    {
+      "clave": "181",
+      "conteo": 1
+    },
+    {
+      "clave": "182",
+      "conteo": 2
+    },
+    {
+      "clave": "184",
+      "conteo": 2
+    },
+    {
+      "clave": "189",
+      "conteo": 2
+    },
+    {
+      "clave": "190",
+      "conteo": 1
+    },
+    {
+      "clave": "191",
+      "conteo": 1
+    },
+    {
+      "clave": "193",
+      "conteo": 3
+    },
+    {
+      "clave": "194",
+      "conteo": 1
+    },
+    {
+      "clave": "195",
+      "conteo": 5
+    },
+    {
+      "clave": "196",
+      "conteo": 1
+    },
+    {
+      "clave": "197",
+      "conteo": 1
+    },
+    {
+      "clave": "198",
+      "conteo": 1
+    },
+    {
+      "clave": "200",
+      "conteo": 1
+    },
+    {
+      "clave": "201",
+      "conteo": 2
+    },
+    {
+      "clave": "203",
+      "conteo": 2
+    },
+    {
+      "clave": "204",
+      "conteo": 1
+    },
+    {
+      "clave": "205",
+      "conteo": 2
+    },
+    {
+      "clave": "207",
+      "conteo": 2
+    },
+    {
+      "clave": "208",
+      "conteo": 1
+    },
+    {
+      "clave": "209",
+      "conteo": 1
+    },
+    {
+      "clave": "210",
+      "conteo": 1
+    },
+    {
+      "clave": "211",
+      "conteo": 2
+    },
+    {
+      "clave": "214",
+      "conteo": 2
+    },
+    {
+      "clave": "217",
+      "conteo": 2
+    },
+    {
+      "clave": "220",
+      "conteo": 1
+    },
+    {
+      "clave": "222",
+      "conteo": 1
+    },
+    {
+      "clave": "224",
+      "conteo": 8
+    },
+    {
+      "clave": "226",
+      "conteo": 1
+    },
+    {
+      "clave": "228",
+      "conteo": 1
+    },
+    {
+      "clave": "233",
+      "conteo": 1
+    },
+    {
+      "clave": "245",
+      "conteo": 1
+    },
+    {
+      "clave": "252",
+      "conteo": 1
+    },
+    {
+      "clave": "254",
+      "conteo": 3
+    },
+    {
+      "clave": "255",
+      "conteo": 6
+    },
+    {
+      "clave": "256",
+      "conteo": 8
+    },
+    {
+      "clave": "257",
+      "conteo": 9
+    },
+    {
+      "clave": "258",
+      "conteo": 2
+    },
+    {
+      "clave": "259",
+      "conteo": 1
+    },
+    {
+      "clave": "260",
+      "conteo": 2
+    },
+    {
+      "clave": "261",
+      "conteo": 5
+    },
+    {
+      "clave": "262",
+      "conteo": 1
+    },
+    {
+      "clave": "263",
+      "conteo": 4
+    },
+    {
+      "clave": "264",
+      "conteo": 2
+    },
+    {
+      "clave": "265",
+      "conteo": 4
+    },
+    {
+      "clave": "267",
+      "conteo": 2
+    },
+    {
+      "clave": "269",
+      "conteo": 1
+    },
+    {
+      "clave": "282",
+      "conteo": 1
+    },
+    {
+      "clave": "283",
+      "conteo": 1
+    },
+    {
+      "clave": "284",
+      "conteo": 2
+    },
+    {
+      "clave": "286",
+      "conteo": 1
+    },
+    {
+      "clave": "287",
+      "conteo": 1
+    },
+    {
+      "clave": "288",
+      "conteo": 15
+    },
+    {
+      "clave": "290",
+      "conteo": 1
+    },
+    {
+      "clave": "291",
+      "conteo": 1
+    },
+    {
+      "clave": "292",
+      "conteo": 1
+    },
+    {
+      "clave": "295",
+      "conteo": 1
+    },
+    {
+      "clave": "296",
+      "conteo": 1
+    },
+    {
+      "clave": "297",
+      "conteo": 1
+    },
+    {
+      "clave": "299",
+      "conteo": 1
+    },
+    {
+      "clave": "300",
+      "conteo": 1
+    },
+    {
+      "clave": "301",
+      "conteo": 1
+    },
+    {
+      "clave": "302",
+      "conteo": 1
+    },
+    {
+      "clave": "305",
+      "conteo": 1
+    },
+    {
+      "clave": "314",
+      "conteo": 1
+    },
+    {
+      "clave": "315",
+      "conteo": 1
+    },
+    {
+      "clave": "316",
+      "conteo": 1
+    },
+    {
+      "clave": "319",
+      "conteo": 2
+    },
+    {
+      "clave": "321",
+      "conteo": 1
+    },
+    {
+      "clave": "322",
+      "conteo": 1
+    },
+    {
+      "clave": "323",
+      "conteo": 1
+    },
+    {
+      "clave": "324",
+      "conteo": 2
+    },
+    {
+      "clave": "325",
+      "conteo": 2
+    },
+    {
+      "clave": "326",
+      "conteo": 2
+    },
+    {
+      "clave": "327",
+      "conteo": 1
+    },
+    {
+      "clave": "328",
+      "conteo": 1
+    },
+    {
+      "clave": "333",
+      "conteo": 1
+    },
+    {
+      "clave": "360",
+      "conteo": 1
+    },
+    {
+      "clave": "371",
+      "conteo": 2
+    },
+    {
+      "clave": "372",
+      "conteo": 1
+    },
+    {
+      "clave": "376",
+      "conteo": 3
+    },
+    {
+      "clave": "409",
+      "conteo": 1
+    },
+    {
+      "clave": "426",
+      "conteo": 1
+    },
+    {
+      "clave": "444",
+      "conteo": 1
+    },
+    {
+      "clave": "458",
+      "conteo": 1
+    },
+    {
+      "clave": "459",
+      "conteo": 1
+    },
+    {
+      "clave": "463",
+      "conteo": 1
+    },
+    {
+      "clave": "483",
+      "conteo": 1
+    },
+    {
+      "clave": "496",
+      "conteo": 1
+    },
+    {
+      "clave": "497",
+      "conteo": 2
+    },
+    {
+      "clave": "498",
+      "conteo": 1
+    },
+    {
+      "clave": "502",
+      "conteo": 1
+    },
+    {
+      "clave": "503",
+      "conteo": 1
+    },
+    {
+      "clave": "508",
+      "conteo": 1
+    },
+    {
+      "clave": "511",
+      "conteo": 1
+    },
+    {
+      "clave": "534",
+      "conteo": 1
+    },
+    {
+      "clave": "563",
+      "conteo": 1
+    },
+    {
+      "clave": "589",
+      "conteo": 2
+    },
+    {
+      "clave": "590",
+      "conteo": 1
+    },
+    {
+      "clave": "591",
+      "conteo": 2
+    },
+    {
+      "clave": "592",
+      "conteo": 3
+    },
+    {
+      "clave": "594",
+      "conteo": 1
+    },
+    {
+      "clave": "595",
+      "conteo": 2
+    },
+    {
+      "clave": "596",
+      "conteo": 2
+    },
+    {
+      "clave": "599",
+      "conteo": 1
+    },
+    {
+      "clave": "600",
+      "conteo": 1
+    },
+    {
+      "clave": "601",
+      "conteo": 2
+    },
+    {
+      "clave": "677",
+      "conteo": 1
+    },
+    {
+      "clave": "723",
+      "conteo": 1
+    },
+    {
+      "clave": "728",
+      "conteo": 1
+    },
+    {
+      "clave": "736",
+      "conteo": 3
+    },
+    {
+      "clave": "743",
+      "conteo": 2
+    },
+    {
+      "clave": "755",
+      "conteo": 1
+    },
+    {
+      "clave": "762",
+      "conteo": 1
+    },
+    {
+      "clave": "763",
+      "conteo": 1
+    },
+    {
+      "clave": "768",
+      "conteo": 1
+    },
+    {
+      "clave": "770",
+      "conteo": 1
+    },
+    {
+      "clave": "776",
+      "conteo": 1
+    },
+    {
+      "clave": "779",
+      "conteo": 1
+    },
+    {
+      "clave": "780",
+      "conteo": 1
+    },
+    {
+      "clave": "782",
+      "conteo": 1
+    },
+    {
+      "clave": "784",
+      "conteo": 1
+    },
+    {
+      "clave": "788",
+      "conteo": 1
+    },
+    {
+      "clave": "790",
+      "conteo": 1
+    },
+    {
+      "clave": "793",
+      "conteo": 1
+    },
+    {
+      "clave": "795",
+      "conteo": 4
+    },
+    {
+      "clave": "796",
+      "conteo": 2
+    },
+    {
+      "clave": "798",
+      "conteo": 1
+    },
+    {
+      "clave": "804",
+      "conteo": 1
+    },
+    {
+      "clave": "805",
+      "conteo": 1
+    },
+    {
+      "clave": "806",
+      "conteo": 4
+    },
+    {
+      "clave": "810",
+      "conteo": 1
+    },
+    {
+      "clave": "812",
+      "conteo": 2
+    },
+    {
+      "clave": "817",
+      "conteo": 1
+    },
+    {
+      "clave": "842",
+      "conteo": 4
+    },
+    {
+      "clave": "846",
+      "conteo": 1
+    },
+    {
+      "clave": "848",
+      "conteo": 2
+    },
+    {
+      "clave": "886",
+      "conteo": 1
+    },
+    {
+      "clave": "895",
+      "conteo": 1
+    },
+    {
+      "clave": "913",
+      "conteo": 1
+    },
+    {
+      "clave": "918",
+      "conteo": 1
+    },
+    {
+      "clave": "940",
+      "conteo": 1
+    },
+    {
+      "clave": "1063",
+      "conteo": 1
+    },
+    {
+      "clave": "1189",
+      "conteo": 1
+    },
+    {
+      "clave": "1285",
+      "conteo": 1
+    },
+    {
+      "clave": "1768",
+      "conteo": 1
+    },
+    {
+      "clave": "1863",
+      "conteo": 1
+    },
+    {
+      "clave": "2020",
+      "conteo": 1
+    },
+    {
+      "clave": "2021",
+      "conteo": 11
+    },
+    {
+      "clave": "2022",
+      "conteo": 10
+    },
+    {
+      "clave": "(2021:Mar)",
+      "conteo": 1
+    },
+    {
+      "clave": "18.2",
+      "conteo": 1
+    },
+    {
+      "clave": "40a",
+      "conteo": 1
+    },
+    {
+      "clave": "6(72)",
+      "conteo": 1
+    },
+    {
+      "clave": "VI",
+      "conteo": 1
+    }
+  ],
+  "completitud": [
+    {
+      "campo": "title",
+      "con_dato": 3777,
+      "total": 3779
+    },
+    {
+      "campo": "authors",
+      "con_dato": 3724,
+      "total": 3779
+    },
+    {
+      "campo": "abstract",
+      "con_dato": 3402,
+      "total": 3779
+    },
+    {
+      "campo": "keywords",
+      "con_dato": 2789,
+      "total": 3779
+    },
+    {
+      "campo": "doi",
+      "con_dato": 3490,
+      "total": 3779
+    }
+  ],
+  "pendientes_revision": 3779,
+  "posibles_duplicados": 1052,
+  "fechas_dataset": [
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-28",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30",
+    "2026-10-30"
+  ],
+  "anios_disponibles": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+  ],
+  "anio_seleccionado": 2021,
+  "clasificacion_disponible": true,
+  "por_ofc": [
+    {
+      "ofc_id": "OFC-01",
+      "nombre": "Aves de hábitats marinos, costeros y de manglar",
+      "conteo": 231
+    },
+    {
+      "ofc_id": "OFC-02",
+      "nombre": "Aves de humedales interiores de agua dulce",
+      "conteo": 440
+    },
+    {
+      "ofc_id": "OFC-03",
+      "nombre": "Aves de sabanas y pastizales naturales",
+      "conteo": 149
+    },
+    {
+      "ofc_id": "OFC-04",
+      "nombre": "Aves de bosques y matorrales secos",
+      "conteo": 52
+    },
+    {
+      "ofc_id": "OFC-05",
+      "nombre": "Aves de bosques húmedos de tierras bajas",
+      "conteo": 64
+    },
+    {
+      "ofc_id": "OFC-06",
+      "nombre": "Aves de bosques premontanos y montanos",
+      "conteo": 85
+    },
+    {
+      "ofc_id": "OFC-07",
+      "nombre": "Aves de alta montaña",
+      "conteo": 62
+    },
+    {
+      "ofc_id": "OFC-08",
+      "nombre": "Aves en sistemas urbanos",
+      "conteo": 271
+    },
+    {
+      "ofc_id": "OFC-09",
+      "nombre": "Aves en agroecosistemas",
+      "conteo": 166
+    },
+    {
+      "ofc_id": "OFC-10",
+      "nombre": "Sistemas culturales asociados a la apreciación de las aves",
+      "conteo": 10
+    },
+    {
+      "ofc_id": "OFC-11",
+      "nombre": "Aviturismo",
+      "conteo": 49
+    }
+  ],
+  "sin_ofc": 1593,
+  "aporte_por_fuente": [
+    {
+      "fuente": "Boletín SAO",
+      "total_articulos": 6,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 6,
+          "total": 6
+        },
+        {
+          "campo": "authors",
+          "con_dato": 6,
+          "total": 6
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 6,
+          "total": 6
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 6,
+          "total": 6
+        },
+        {
+          "campo": "doi",
+          "con_dato": 0,
+          "total": 6
+        }
+      ]
+    },
+    {
+      "fuente": "Google Scholar",
+      "total_articulos": 34,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 34,
+          "total": 34
+        },
+        {
+          "campo": "authors",
+          "con_dato": 34,
+          "total": 34
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 33,
+          "total": 34
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 0,
+          "total": 34
+        },
+        {
+          "campo": "doi",
+          "con_dato": 8,
+          "total": 34
+        }
+      ]
+    },
+    {
+      "fuente": "OpenAlex",
+      "total_articulos": 3739,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 3737,
+          "total": 3739
+        },
+        {
+          "campo": "authors",
+          "con_dato": 3684,
+          "total": 3739
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 3363,
+          "total": 3739
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 2783,
+          "total": 3739
+        },
+        {
+          "campo": "doi",
+          "con_dato": 3482,
+          "total": 3739
+        }
+      ]
+    }
+  ]
+}

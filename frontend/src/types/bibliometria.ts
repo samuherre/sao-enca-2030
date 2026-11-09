@@ -60,6 +60,10 @@ export interface ResumenConsolidado {
   readonly pendientes_revision: number;
   readonly posibles_duplicados: number;
   readonly fechas_dataset: readonly string[];
+  // Años disponibles para el desplegable (siempre el conjunto completo) y el
+  // año por el que se filtró el resumen (null = "Todos").
+  readonly anios_disponibles: readonly number[];
+  readonly anio_seleccionado: number | null;
   readonly clasificacion_disponible: boolean;
   readonly por_ofc: readonly ConteoOFC[];
   readonly sin_ofc: number;

@@ -33,7 +33,7 @@ router = APIRouter(tags=["Bibliometría"])
     summary="Resumen consolidado de todas las fuentes bibliométricas",
 )
 def resumen_consolidado() -> ResumenConsolidado:
-    """Devuelve el resumen CONSOLIDADO de todas las fuentes procesadas.
+    """Devuelve el resumen CONSOLIDADO de todas las fuentes procesadas (todos los años).
 
     Descubre las fuentes bajo ``data/processed/`` y agrega el conjunto completo:
     total de artículos, distribución por año y por volumen, completitud de
@@ -41,12 +41,37 @@ def resumen_consolidado() -> ResumenConsolidado:
     fuente. La distribución por OFC solo aparece si existe un dataset
     clasificado (``PENDING_VALIDATION``).
 
+    ``anios_disponibles`` lista todos los años del conjunto para el desplegable
+    del frontend; ``anio_seleccionado`` es ``None`` (este endpoint no filtra).
+
     A diferencia del resumen del Boletín, no lanza 404: sin datasets responde un
     resumen vacío coherente (200) para que el frontend muestre un estado vacío
     honesto (Req 8.3).
     """
     servicio = BibliometriaService()
     return servicio.resumen_consolidado()
+
+
+@router.get(
+    "/bibliometria/resumen/anio/{anio}",
+    response_model=ResumenConsolidado,
+    summary="Resumen consolidado filtrado por un año de publicación",
+)
+def resumen_consolidado_por_anio(anio: int) -> ResumenConsolidado:
+    """Igual que :func:`resumen_consolidado`, pero filtrando TODO por ``anio``.
+
+    Todas las agregaciones (total, por volumen, completitud, OFC y aporte por
+    fuente) se calculan solo sobre los artículos cuyo ``publication_year`` es
+    ``anio``. ``anios_disponibles`` sigue listando todos los años del conjunto
+    completo, de modo que el desplegable del frontend pueda ofrecer cambiar de
+    año u "Todos" sin perder las opciones.
+
+    Se modela como ruta de recurso (``/anio/{anio}``) en vez de query string
+    para que la demo estática de Vercel —que sirve archivos JSON por ruta fija—
+    pueda ofrecer el mismo filtro sin un backend en vivo.
+    """
+    servicio = BibliometriaService()
+    return servicio.resumen_consolidado(anio=anio)
 
 
 @router.get(

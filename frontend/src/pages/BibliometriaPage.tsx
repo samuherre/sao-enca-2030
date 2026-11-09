@@ -15,6 +15,7 @@
 // Los gráficos usan Recharts. Los estados de carga/error/vacío reutilizan los
 // componentes compartidos (LoadingIndicator, ErrorBanner, EmptyState).
 
+import { useState } from "react";
 import {
   Bar,
   BarChart,
@@ -29,6 +30,50 @@ import {
 import { EmptyState, ErrorBanner, LoadingIndicator } from "../components";
 import { useResumenConsolidado } from "../hooks";
 import type { ResumenConsolidado } from "../types";
+
+/** Valor del desplegable que representa "todos los años" (sin filtro). */
+const TODOS_LOS_ANIOS = "todos";
+
+/** Desplegable para filtrar el dashboard por año de publicación. */
+function FiltroAnio({
+  anios,
+  valor,
+  onChange,
+}: {
+  anios: readonly number[];
+  valor: number | null;
+  onChange: (anio: number | null) => void;
+}) {
+  if (anios.length === 0) {
+    return null;
+  }
+  return (
+    <label style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+      <span style={{ fontSize: "0.9rem", color: "#456" }}>Año:</span>
+      <select
+        value={valor == null ? TODOS_LOS_ANIOS : String(valor)}
+        onChange={(e) =>
+          onChange(e.target.value === TODOS_LOS_ANIOS ? null : Number(e.target.value))
+        }
+        style={{
+          padding: "0.35rem 0.5rem",
+          borderRadius: "0.4rem",
+          border: "1px solid #c5d6cb",
+          backgroundColor: "#fff",
+          color: "#1f5c3a",
+          fontSize: "0.9rem",
+        }}
+      >
+        <option value={TODOS_LOS_ANIOS}>Todos</option>
+        {anios.map((a) => (
+          <option key={a} value={String(a)}>
+            {a}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
 
 /** Tarjeta de métrica individual (número grande + etiqueta). */
 function MetricCard({ label, value }: { label: string; value: string | number }) {
@@ -258,7 +303,10 @@ function AportePorFuenteSection({
 
 /** Página del dashboard bibliométrico consolidado. */
 export function BibliometriaPage() {
-  const { loading, data, error, reload } = useResumenConsolidado();
+  // Año seleccionado para el filtro (null = "Todos"). Al cambiarlo, el hook
+  // recarga el resumen ya filtrado desde el backend/snapshot.
+  const [anio, setAnio] = useState<number | null>(null);
+  const { loading, data, error, reload } = useResumenConsolidado(anio);
 
   if (loading) {
     return <LoadingIndicator message="Cargando dashboard bibliométrico…" />;
@@ -281,9 +329,24 @@ export function BibliometriaPage() {
         está pendiente de validación con SAO.
       </p>
 
+      <div style={{ margin: "0.75rem 0" }}>
+        <FiltroAnio anios={data.anios_disponibles} valor={anio} onChange={setAnio} />
+        {anio != null && (
+          <span style={{ marginLeft: "0.75rem", fontSize: "0.85rem", color: "#567" }}>
+            Mostrando resultados del año <strong>{anio}</strong>.
+          </span>
+        )}
+      </div>
+
       {data.total_articulos === 0 ? (
         <>
-          <EmptyState message="Aún no hay artículos procesados en ninguna fuente. Ejecuta los pipelines de ingesta para generar los datasets procesados." />
+          <EmptyState
+            message={
+              anio != null
+                ? `No hay artículos del año ${anio} en ninguna fuente.`
+                : "Aún no hay artículos procesados en ninguna fuente. Ejecuta los pipelines de ingesta para generar los datasets procesados."
+            }
+          />
           <AportePorFuenteSection aporte={data.aporte_por_fuente} />
         </>
       ) : (

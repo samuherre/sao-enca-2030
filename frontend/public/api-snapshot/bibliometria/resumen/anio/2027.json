@@ -1,0 +1,163 @@
+{
+  "alcance": "consolidado",
+  "total_articulos": 1,
+  "por_anio": [
+    {
+      "clave": "2027",
+      "conteo": 1
+    }
+  ],
+  "por_volumen": [
+    {
+      "clave": "0",
+      "conteo": 1
+    }
+  ],
+  "completitud": [
+    {
+      "campo": "title",
+      "con_dato": 1,
+      "total": 1
+    },
+    {
+      "campo": "authors",
+      "con_dato": 1,
+      "total": 1
+    },
+    {
+      "campo": "abstract",
+      "con_dato": 1,
+      "total": 1
+    },
+    {
+      "campo": "keywords",
+      "con_dato": 0,
+      "total": 1
+    },
+    {
+      "campo": "doi",
+      "con_dato": 0,
+      "total": 1
+    }
+  ],
+  "pendientes_revision": 1,
+  "posibles_duplicados": 0,
+  "fechas_dataset": [
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-28",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30",
+    "2026-10-30"
+  ],
+  "anios_disponibles": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+  ],
+  "anio_seleccionado": 2027,
+  "clasificacion_disponible": false,
+  "por_ofc": [],
+  "sin_ofc": 0,
+  "aporte_por_fuente": [
+    {
+      "fuente": "Boletín SAO",
+      "total_articulos": 0,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "authors",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "doi",
+          "con_dato": 0,
+          "total": 0
+        }
+      ]
+    },
+    {
+      "fuente": "Google Scholar",
+      "total_articulos": 1,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 1,
+          "total": 1
+        },
+        {
+          "campo": "authors",
+          "con_dato": 1,
+          "total": 1
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 1,
+          "total": 1
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 0,
+          "total": 1
+        },
+        {
+          "campo": "doi",
+          "con_dato": 0,
+          "total": 1
+        }
+      ]
+    },
+    {
+      "fuente": "OpenAlex",
+      "total_articulos": 0,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "authors",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "doi",
+          "con_dato": 0,
+          "total": 0
+        }
+      ]
+    }
+  ]
+}

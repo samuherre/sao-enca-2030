@@ -102,6 +102,13 @@ class ResumenConsolidado(SchemaBase):
     posibles_duplicados: int
     # Una fecha por fuente que tenga dataset fechado; vacío si ninguna la aporta.
     fechas_dataset: list[str]
+    # Filtro por año de publicación. ``anios_disponibles`` SIEMPRE lista todos
+    # los años presentes en el conjunto completo (para poblar el desplegable),
+    # con independencia del filtro aplicado. ``anio_seleccionado`` es el año por
+    # el que se filtró el resto del resumen, o ``None`` cuando el resumen abarca
+    # todos los años ("Todos").
+    anios_disponibles: list[int] = []
+    anio_seleccionado: int | None = None
     # Clasificación por OFC (automática, sujeta a revisión).
     clasificacion_disponible: bool = False
     por_ofc: list[ConteoOFC] = []

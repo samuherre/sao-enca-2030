@@ -183,6 +183,31 @@ def _clave_volumen(item: tuple[str, int]) -> tuple[int, object]:
     return (1, clave)
 
 
+# Rango de años considerado PLAUSIBLE para ofrecer como opción de filtro. El
+# periodo de inclusión del proyecto es 2020–2030 (steering Componente B §2),
+# pero el consolidado puede contener artículos de otras fuentes con años
+# distintos; se usa un rango amplio y conservador para no descartar años reales
+# y, a la vez, excluir sentinelas erróneos como 0.
+_ANIO_MIN_PLAUSIBLE = 1900
+_ANIO_MAX_PLAUSIBLE = 2100
+
+
+def _es_anio_plausible(valor: object) -> bool:
+    """True si ``valor`` es un año de publicación real (no un sentinela 0/None).
+
+    No modifica ni inventa datos: solo decide si un año merece aparecer como
+    opción en el desplegable de filtro. Un ``publication_year`` ausente, 0 o
+    fuera del rango razonable se considera metadata no fiable y no genera opción.
+    """
+    if valor is None:
+        return False
+    try:
+        anio = int(valor)
+    except (TypeError, ValueError):
+        return False
+    return _ANIO_MIN_PLAUSIBLE <= anio <= _ANIO_MAX_PLAUSIBLE
+
+
 def _completitud(registros: list[dict]) -> list[CompletitudCampo]:
     """Completitud por campo sobre un conjunto de registros."""
     total = len(registros)
@@ -272,7 +297,7 @@ class BibliometriaService:
             sin_ofc=sin_ofc,
         )
 
-    def resumen_consolidado(self) -> ResumenConsolidado:
+    def resumen_consolidado(self, anio: int | None = None) -> ResumenConsolidado:
         """Calcula el resumen CONSOLIDADO de todas las fuentes procesadas.
 
         Descubre las subcarpetas bajo ``data/processed/``, agrupa los registros
@@ -282,6 +307,13 @@ class BibliometriaService:
         agrega total, distribución por año y por volumen, completitud,
         pendientes de revisión, posibles duplicados y el aporte por fuente
         (Req 6, 7).
+
+        :param anio: si se indica, TODAS las agregaciones (total, OFC,
+            completitud, aporte por fuente, etc.) se calculan SOLO sobre los
+            artículos de ese año de publicación. ``None`` = todos los años.
+            La lista ``anios_disponibles`` se calcula siempre sobre el conjunto
+            completo (sin filtrar), de modo que el desplegable del frontend
+            ofrezca todos los años aunque ya se haya filtrado por uno.
 
         Las carpetas/archivos ``*_clasificado`` NO aportan artículos al total:
         solo alimentan la distribución por OFC (Req 6.7). Si no existe ningún
@@ -325,6 +357,36 @@ class BibliometriaService:
                 por_fuente[fuente].append(r)
                 combinados.append(r)
 
+        # --- 2b) Años disponibles (SIEMPRE sobre el conjunto completo) -------
+        # Se calcula antes de aplicar el filtro para que el desplegable del
+        # frontend liste todos los años aunque ya se haya seleccionado uno.
+        # Solo se ofrecen años PLAUSIBLES como opción de filtro: un
+        # ``publication_year`` de 0 (o fuera de un rango razonable) es metadata
+        # ausente/errónea del origen, no un año real, y no debe aparecer como
+        # opción en el desplegable. Esos artículos NO se inventan ni se
+        # descartan: siguen contando en el total de "Todos"; solo no generan una
+        # opción de año espuria.
+        anios_disponibles = sorted(
+            {
+                int(r["publication_year"])
+                for r in combinados
+                if _es_anio_plausible(r.get("publication_year"))
+            }
+        )
+
+        # --- 2c) Filtro por año (si se indicó) -------------------------------
+        # Afecta a TODAS las agregaciones: se filtran tanto el conjunto
+        # combinado como el desglose por fuente antes de contar nada.
+        if anio is not None:
+            combinados = [r for r in combinados if r.get("publication_year") == anio]
+            por_fuente = defaultdict(
+                list,
+                {
+                    fuente: [r for r in registros if r.get("publication_year") == anio]
+                    for fuente, registros in por_fuente.items()
+                },
+            )
+
         # --- 3) Agregaciones sobre el conjunto combinado ---------------------
         por_anio = Counter(
             str(r["publication_year"]) for r in combinados if r.get("publication_year")
@@ -359,6 +421,14 @@ class BibliometriaService:
             clasificados, _fechas_clasif = _acumular_json(carpeta)
             if not clasificados:
                 continue
+            # Coherencia con el filtro por año: la distribución por OFC se
+            # calcula solo sobre los artículos del año seleccionado.
+            if anio is not None:
+                clasificados = [
+                    r for r in clasificados if r.get("publication_year") == anio
+                ]
+                if not clasificados:
+                    continue
             clasificacion_disponible = True
             for r in clasificados:
                 ofcs = r.get("ofcs") or []
@@ -385,6 +455,8 @@ class BibliometriaService:
             pendientes_revision=pendientes,
             posibles_duplicados=duplicados,
             fechas_dataset=sorted(fechas_dataset),
+            anios_disponibles=anios_disponibles,
+            anio_seleccionado=anio,
             clasificacion_disponible=clasificacion_disponible,
             por_ofc=por_ofc,
             sin_ofc=sin_ofc,

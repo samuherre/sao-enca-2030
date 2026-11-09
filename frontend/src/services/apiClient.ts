@@ -192,12 +192,23 @@ export function obtenerResumenBibliometrico(
 /**
  * Obtiene el resumen CONSOLIDADO de todas las fuentes procesadas
  * (unión sin exclusión, sin deduplicación entre fuentes).
- * `GET /bibliometria/resumen` → 200 | 404 (si no hay datasets).
+ *
+ * Con `anio` filtra TODO el resumen por ese año de publicación; sin `anio`
+ * devuelve todos los años. El filtro usa una RUTA DE RECURSO
+ * (`/bibliometria/resumen/anio/{anio}`) en lugar de query string, de modo que
+ * la demo estática de Vercel —que sirve un `.json` por ruta fija— ofrezca el
+ * mismo filtro sin backend en vivo.
+ *
+ * `GET /bibliometria/resumen` | `/bibliometria/resumen/anio/{anio}` → 200.
  */
 export function obtenerResumenConsolidado(
-  opts: CallOptions = {},
+  opts: CallOptions & { readonly anio?: number | null } = {},
 ): Promise<ResumenConsolidado> {
-  return request<ResumenConsolidado>("/bibliometria/resumen", {
+  const path =
+    opts.anio != null
+      ? `/bibliometria/resumen/anio/${opts.anio}`
+      : "/bibliometria/resumen";
+  return request<ResumenConsolidado>(path, {
     signal: opts.signal,
   });
 }

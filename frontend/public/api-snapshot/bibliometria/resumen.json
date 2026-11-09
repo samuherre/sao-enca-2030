@@ -2975,6 +2975,17 @@
     "2026-10-30",
     "2026-10-30"
   ],
+  "anios_disponibles": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+  ],
+  "anio_seleccionado": null,
   "clasificacion_disponible": true,
   "por_ofc": [
     {

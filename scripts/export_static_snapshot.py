@@ -24,6 +24,7 @@ El mapeo ruta -> archivo replica la estructura de rutas de la API:
     GET /objetivos/{id}/indicadores          -> objetivos/{id}/indicadores.json
     GET /indicadores/{id}/actividades        -> indicadores/{id}/actividades.json
     GET /bibliometria/resumen                -> bibliometria/resumen.json
+    GET /bibliometria/resumen/anio/{anio}    -> bibliometria/resumen/anio/{anio}.json
     GET /bibliometria/boletin-sao/resumen    -> bibliometria/boletin-sao/resumen.json
     GET /biodiversidad/gbif/resumen          -> biodiversidad/gbif/resumen.json
 
@@ -112,10 +113,26 @@ def export_hierarchy() -> None:
 
 
 def export_bibliometria() -> None:
-    """Congela los resúmenes bibliométricos (sin base de datos)."""
+    """Congela los resúmenes bibliométricos (sin base de datos).
+
+    Además del consolidado de "todos los años", genera un archivo por cada año
+    disponible (``bibliometria/resumen/anio/{anio}.json``) para que el filtro
+    por año del dashboard funcione en la demo estática, donde no hay backend que
+    atienda el filtro en vivo. Los años se toman de ``anios_disponibles`` del
+    propio consolidado, de modo que el snapshot cubra exactamente los años que
+    el frontend ofrecerá en el desplegable.
+    """
     consolidado = fetch("/bibliometria/resumen")
     if consolidado is not None:
         write_json("bibliometria/resumen.json", consolidado)
+        # Una variante congelada por cada año disponible (filtro del dashboard).
+        anios = []
+        if isinstance(consolidado, dict):
+            anios = consolidado.get("anios_disponibles") or []
+        for anio in anios:
+            por_anio = fetch(f"/bibliometria/resumen/anio/{anio}")
+            if por_anio is not None:
+                write_json(f"bibliometria/resumen/anio/{anio}.json", por_anio)
 
     boletin = fetch("/bibliometria/boletin-sao/resumen")
     if boletin is not None:
