@@ -13,6 +13,12 @@
       "conteo": 1
     }
   ],
+  "por_idioma": [
+    {
+      "clave": "Otros",
+      "conteo": 1
+    }
+  ],
   "completitud": [
     {
       "campo": "title",

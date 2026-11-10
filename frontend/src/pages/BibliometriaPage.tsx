@@ -535,6 +535,7 @@ export function BibliometriaPage() {
           <BarsCard title="Artículos por año" data={data.por_anio} />
           <OFCCard resumen={data} />
           <RevistasCard data={data.por_revista} />
+          <BarsCard title="Artículos por idioma" data={data.por_idioma} />
           <CompletitudTable completitud={data.completitud} />
           <AportePorFuenteSection aporte={data.aporte_por_fuente} />
         </>

@@ -70,6 +70,8 @@ export interface ResumenConsolidado {
   readonly por_anio: readonly ConteoPorClave[];
   // Distribución por revista: top de revistas con más artículos + "Otros".
   readonly por_revista: readonly ConteoPorClave[];
+  // Distribución por idioma: inglés/español/portugués/francés + "Otros".
+  readonly por_idioma: readonly ConteoPorClave[];
   readonly completitud: readonly CompletitudCampo[];
   readonly pendientes_revision: number;
   readonly posibles_duplicados: number;

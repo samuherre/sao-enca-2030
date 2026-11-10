@@ -125,6 +125,9 @@ class ResumenConsolidado(SchemaBase):
     # Distribución por revista: las revistas con más artículos y el resto bajo
     # "Otros" (reemplaza la antigua distribución por volumen en el consolidado).
     por_revista: list[ConteoPorClave]
+    # Distribución por idioma: inglés/español/portugués/francés + "Otros"
+    # (incluye sin idioma y códigos ambiguos). Refleja el campo del dato.
+    por_idioma: list[ConteoPorClave]
     completitud: list[CompletitudCampo]
     pendientes_revision: int
     posibles_duplicados: int

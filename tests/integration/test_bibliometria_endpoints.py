@@ -48,6 +48,7 @@ _BOLETIN_DEMO = [
         "publication_year": 2021,
         "volume": "31",
         "journal": "Ornitología Colombiana",
+        "language": "es",
         "inclusion_status": "INCLUIDO",
         "is_duplicate": False,
     },
@@ -61,6 +62,7 @@ _BOLETIN_DEMO = [
         "publication_year": 2022,
         "volume": "32",
         "journal": "Ornitología Colombiana",
+        "language": "en",
         "inclusion_status": "PENDIENTE_REVISIÓN",
         "is_duplicate": False,
     },
@@ -138,6 +140,11 @@ def test_resumen_consolidado_con_datasets_cumple_shape(client, tmp_path, monkeyp
     por_revista = {d["clave"]: d["conteo"] for d in body["por_revista"]}
     assert por_revista == {"Ornitología Colombiana": 2, "Biological Conservation": 1}
 
+    # --- Distribución por idioma: 1 es (A), 1 en (B), 1 sin idioma (C) -------
+    # A es español, B inglés; C (Scholar) no trae idioma -> cae en "Otros".
+    por_idioma = {d["clave"]: d["conteo"] for d in body["por_idioma"]}
+    assert por_idioma == {"Español": 1, "Inglés": 1, "Otros": 1}
+
     # --- Completitud por campo sobre el conjunto combinado (Req 6.2) --------
     completitud = {c["campo"]: c for c in body["completitud"]}
     assert set(completitud) == {"title", "authors", "abstract", "keywords", "doi"}
@@ -193,6 +200,7 @@ def test_resumen_consolidado_sin_datasets_estado_vacio(client, tmp_path, monkeyp
     assert body["total_articulos"] == 0
     assert body["por_anio"] == []
     assert body["por_revista"] == []
+    assert body["por_idioma"] == []
     assert body["pendientes_revision"] == 0
     assert body["posibles_duplicados"] == 0
     assert body["fechas_dataset"] == []

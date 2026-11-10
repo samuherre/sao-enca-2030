@@ -306,6 +306,50 @@ _TOP_REVISTAS = 30
 _ETIQUETA_OTRAS_REVISTAS = "Otros"
 
 
+# Idiomas que se muestran individualmente en la distribución por idioma; el
+# resto (incluidos valores ambiguos o poco frecuentes) se agrupa en "Otros".
+# Mapea el código ISO del dato (``language``) a una etiqueta legible. El orden
+# define el de las barras; "Otros" se añade al final.
+_IDIOMAS_PRINCIPALES: list[tuple[str, str]] = [
+    ("en", "Inglés"),
+    ("es", "Español"),
+    ("pt", "Portugués"),
+    ("fr", "Francés"),
+]
+_ETIQUETA_OTROS_IDIOMAS = "Otros"
+
+
+def _por_idioma(registros: list[dict]) -> list[ConteoPorClave]:
+    """Distribución por idioma: los principales + "Otros".
+
+    Cuenta los artículos por el código ``language`` (normalizado a minúsculas).
+    Muestra los idiomas de ``_IDIOMAS_PRINCIPALES`` con etiqueta legible y
+    agrupa en "Otros" todo lo demás: otros idiomas, códigos ambiguos (p. ej.
+    "es/en") y los artículos SIN idioma declarado. No se infiere el idioma de
+    un artículo que no lo trae (no se inventa).
+    """
+    principales = {codigo for codigo, _ in _IDIOMAS_PRINCIPALES}
+    conteo: Counter = Counter()
+    otros = 0
+    for r in registros:
+        lang = r.get("language")
+        codigo = str(lang).strip().lower() if lang else ""
+        if codigo in principales:
+            conteo[codigo] += 1
+        else:
+            # Incluye sin idioma, ambiguos y poco frecuentes.
+            otros += 1
+
+    resultado = [
+        ConteoPorClave(clave=etiqueta, conteo=conteo[codigo])
+        for codigo, etiqueta in _IDIOMAS_PRINCIPALES
+        if conteo[codigo] > 0
+    ]
+    if otros > 0:
+        resultado.append(ConteoPorClave(clave=_ETIQUETA_OTROS_IDIOMAS, conteo=otros))
+    return resultado
+
+
 def _top_por_revista(registros: list[dict]) -> list[ConteoPorClave]:
     """Distribución por revista: top ``_TOP_REVISTAS`` + "Otros".
 
@@ -521,6 +565,8 @@ class BibliometriaService:
         # nombre de revista se refleja TAL CUAL viene del dato (puede incluir
         # repositorios como GBIF/bioRxiv/Zenodo); no se normaliza ni se inventa.
         por_revista = _top_por_revista(combinados)
+        # Distribución por idioma: inglés/español/portugués/francés + "Otros".
+        por_idioma = _por_idioma(combinados)
         pendientes = sum(
             1 for r in combinados if r.get("inclusion_status") == "PENDIENTE_REVISIÓN"
         )
@@ -601,6 +647,7 @@ class BibliometriaService:
                 ConteoPorClave(clave=k, conteo=v) for k, v in sorted(por_anio.items())
             ],
             por_revista=por_revista,
+            por_idioma=por_idioma,
             completitud=_completitud(combinados),
             pendientes_revision=pendientes,
             posibles_duplicados=duplicados,

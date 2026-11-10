@@ -70,6 +70,31 @@ def test_sin_filtro_abarca_todos_los_anios() -> None:
     assert r.anios_disponibles == [2020, 2022, 2023]
 
 
+def test_por_idioma_principales_mas_otros() -> None:
+    """Idioma: inglés/español/portugués/francés individuales; el resto en 'Otros'.
+
+    'Otros' agrupa idiomas no principales, códigos ambiguos y los artículos sin
+    idioma declarado (no se infiere el idioma que no viene).
+    """
+    registros = (
+        [{"source": "OpenAlex", "publication_year": 2021, "language": "en"}] * 5
+        + [{"source": "OpenAlex", "publication_year": 2021, "language": "ES"}] * 3  # mayúsculas
+        + [{"source": "OpenAlex", "publication_year": 2021, "language": "pt"}] * 2
+        + [{"source": "OpenAlex", "publication_year": 2021, "language": "fr"}] * 1
+        + [{"source": "OpenAlex", "publication_year": 2021, "language": "ru"}] * 2   # otro idioma
+        + [{"source": "OpenAlex", "publication_year": 2021, "language": "es/en"}] * 1  # ambiguo
+        + [{"source": "OpenAlex", "publication_year": 2021, "language": None}] * 4   # sin idioma
+    )
+    r = _resumen({"openalex": registros}, anio=None)
+    por = {d.clave: d.conteo for d in r.por_idioma}
+    assert por["Inglés"] == 5
+    assert por["Español"] == 3  # normaliza mayúsculas
+    assert por["Portugués"] == 2
+    assert por["Francés"] == 1
+    # Otros = ru(2) + es/en(1) + sin idioma(4) = 7.
+    assert por["Otros"] == 7
+
+
 def test_por_revista_top_30_mas_otros() -> None:
     """La distribución por revista muestra el top 30 y agrupa el resto en 'Otros'.
 

@@ -133,6 +133,28 @@
       "conteo": 2351
     }
   ],
+  "por_idioma": [
+    {
+      "clave": "Inglés",
+      "conteo": 2063
+    },
+    {
+      "clave": "Español",
+      "conteo": 220
+    },
+    {
+      "clave": "Portugués",
+      "conteo": 98
+    },
+    {
+      "clave": "Francés",
+      "conteo": 5
+    },
+    {
+      "clave": "Otros",
+      "conteo": 754
+    }
+  ],
   "completitud": [
     {
       "campo": "title",
