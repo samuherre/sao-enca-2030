@@ -30,6 +30,7 @@ from backend.src.schemas.bibliometria import (
     CompletitudCampo,
     ConteoOFC,
     ConteoPorClave,
+    DescripcionOFC,
     ResumenBibliometrico,
     ResumenConsolidado,
 )
@@ -65,6 +66,44 @@ def _ultimo_clasificado() -> Path | None:
         return None
     candidatos = sorted(_CLASIFICADO_DIR.glob("boletin_sao_clasificado_*.json"))
     return candidatos[-1] if candidatos else None
+
+
+# Texto introductorio oficial de los OFC, tomado LITERALMENTE del documento
+# ENCA 2030 de SAO (sección "Objetos focales de conservación"). Se expone al
+# público en el dashboard para que cualquier visitante entienda qué es un OFC.
+# No es texto inventado: es la definición de la fuente oficial.
+_OFC_DESCRIPCION = (
+    "Los objetos focales son indicadores que nos ayudan a identificar los "
+    "avances que vayamos logrando cada año en términos de la conservación de "
+    "especies y ecosistemas. Son comparables con los valores objetos de "
+    "conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 "
+    "objetos focales representativos de la avifauna residente y migratoria y de "
+    "los distintos hábitats que ellas utilizan."
+)
+
+
+def _catalogo_ofc() -> list[dict]:
+    """Catálogo público de los 11 OFC: número, id, nombre y definición.
+
+    Se lee del mismo ``ofc_catalog.json`` que usa el clasificador (fuente única
+    de verdad, verificada contra el documento ENCA 2030). Solo expone los campos
+    descriptivos (no los términos del clasificador). Si el catálogo no existe,
+    devuelve lista vacía sin inventar datos.
+    """
+    if not _OFC_CATALOG.exists():
+        return []
+    data = json.loads(_OFC_CATALOG.read_text(encoding="utf-8"))
+    catalogo: list[dict] = []
+    for o in data.get("ofc", []):
+        catalogo.append(
+            {
+                "ofc_id": o["id"],
+                "numero": o.get("numero"),
+                "nombre": o["nombre"],
+                "definicion": o.get("definicion", ""),
+            }
+        )
+    return catalogo
 
 
 def _nombres_ofc() -> dict[str, str]:
@@ -460,5 +499,7 @@ class BibliometriaService:
             clasificacion_disponible=clasificacion_disponible,
             por_ofc=por_ofc,
             sin_ofc=sin_ofc,
+            ofc_descripcion=_OFC_DESCRIPCION,
+            catalogo_ofc=[DescripcionOFC(**o) for o in _catalogo_ofc()],
             aporte_por_fuente=aporte_por_fuente,
         )

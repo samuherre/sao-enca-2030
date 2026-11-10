@@ -1401,6 +1401,75 @@
     }
   ],
   "sin_ofc": 1375,
+  "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
+  "catalogo_ofc": [
+    {
+      "ofc_id": "OFC-01",
+      "numero": 1,
+      "nombre": "Aves de hábitats marinos, costeros y de manglar",
+      "definicion": "Aves asociadas a ambientes marinos, costeros e insulares del Caribe y Pacífico, incluyendo playas, manglares, arrecifes coralinos y praderas de pastos marinos; abarca comunidades insulares con alto endemismo."
+    },
+    {
+      "ofc_id": "OFC-02",
+      "numero": 2,
+      "nombre": "Aves de humedales interiores de agua dulce",
+      "definicion": "Aves de ecosistemas acuáticos continentales de agua dulce: estuarinos, lacustres, ribereños y palustres. Fundamentales para especies de hábitos semiacuáticos y rutas migratorias."
+    },
+    {
+      "ofc_id": "OFC-03",
+      "numero": 3,
+      "nombre": "Aves de sabanas y pastizales naturales",
+      "definicion": "Aves de sabanas de la Orinoquía, el Caribe y valles interandinos, incluyendo altillanura y sabanas inundables, adaptadas a marcadas temporadas de sequía e inundación."
+    },
+    {
+      "ofc_id": "OFC-04",
+      "numero": 4,
+      "nombre": "Aves de bosques y matorrales secos",
+      "definicion": "Aves de bosque seco tropical y matorrales de 0 a 1000 m s. n. m. en valles interandinos y el Caribe. Bioma históricamente extenso hoy muy reducido, con especies/subespecies restringidas."
+    },
+    {
+      "ofc_id": "OFC-05",
+      "numero": 5,
+      "nombre": "Aves de bosques húmedos de tierras bajas",
+      "definicion": "Aves de bosque húmedo tropical de tierras bajas (hasta ~1000 m s. n. m.), que concentran la mayor riqueza de especies del país y numerosos endemismos."
+    },
+    {
+      "ofc_id": "OFC-06",
+      "numero": 6,
+      "nombre": "Aves de bosques premontanos y montanos",
+      "definicion": "Aves de bosques andinos de niebla entre ~1000 y 2800 m s. n. m. Concentran la mayor cantidad de especies amenazadas del país."
+    },
+    {
+      "ofc_id": "OFC-07",
+      "numero": 7,
+      "nombre": "Aves de alta montaña",
+      "definicion": "Aves de ecosistemas por encima de ~2800 m s. n. m.: páramos, superpáramos y bosques enanos. Funcionan como islas biológicas con especies altamente adaptadas a bajas temperaturas."
+    },
+    {
+      "ofc_id": "OFC-08",
+      "numero": 8,
+      "nombre": "Aves en sistemas urbanos",
+      "definicion": "Aves que habitan o usan entornos construidos (ciudades), aprovechando la estructura ecológica urbana: ecoparques, quebradas y corredores de ronda."
+    },
+    {
+      "ofc_id": "OFC-09",
+      "numero": 9,
+      "nombre": "Aves en agroecosistemas",
+      "definicion": "Aves de matrices rurales productivas: sistemas agroforestales, policultivos, pastizales ganaderos y parches de vegetación nativa en propiedades privadas."
+    },
+    {
+      "ofc_id": "OFC-10",
+      "numero": 10,
+      "nombre": "Sistemas culturales asociados a la apreciación de las aves",
+      "definicion": "Objeto focal centrado en conocimientos y prácticas tradicionales de comunidades indígenas, afrocolombianas, palenqueras, raizales, campesinas y rom en torno a las aves; evalúa conservación territorial y transmisión generacional del conocimiento."
+    },
+    {
+      "ofc_id": "OFC-11",
+      "numero": 11,
+      "nombre": "Aviturismo",
+      "definicion": "Único objeto focal socioeconómico/no biológico. Evalúa el desarrollo del turismo sostenible de observación de aves: rutas de aviturismo, capacidad de guías locales e impacto económico comunitario."
+    }
+  ],
   "aporte_por_fuente": [
     {
       "fuente": "Boletín SAO",

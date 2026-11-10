@@ -25,6 +25,14 @@ export interface ConteoOFC {
   readonly conteo: number;
 }
 
+/** Ficha descriptiva pública de un OFC (catálogo oficial ENCA 2030). */
+export interface DescripcionOFC {
+  readonly ofc_id: string;
+  readonly numero: number | null;
+  readonly nombre: string;
+  readonly definicion: string;
+}
+
 /** Resumen agregado del dataset de la fuente Boletín SAO. */
 export interface ResumenBibliometrico {
   readonly fuente: string;
@@ -67,5 +75,8 @@ export interface ResumenConsolidado {
   readonly clasificacion_disponible: boolean;
   readonly por_ofc: readonly ConteoOFC[];
   readonly sin_ofc: number;
+  // Explicación pública de los OFC (texto oficial ENCA + catálogo de los 11).
+  readonly ofc_descripcion: string;
+  readonly catalogo_ofc: readonly DescripcionOFC[];
   readonly aporte_por_fuente: readonly AporteFuente[];
 }

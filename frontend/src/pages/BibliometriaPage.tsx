@@ -119,12 +119,69 @@ function BarsCard({
   );
 }
 
+/**
+ * Explicación pública de qué son los OFC (Objetos Focales de Conservación).
+ *
+ * Muestra el texto oficial de la ENCA y la lista de los 11 OFC con su
+ * definición, en un desplegable para no saturar la vista. Pensado para que
+ * cualquier visitante del sitio público entienda el término sin conocerlo de
+ * antemano. El contenido proviene del backend (catálogo oficial ENCA 2030);
+ * si no viene, el componente no se renderiza.
+ */
+function ExplicacionOFC({
+  descripcion,
+  catalogo,
+}: {
+  descripcion: string;
+  catalogo: ResumenConsolidado["catalogo_ofc"];
+}) {
+  if (!descripcion && catalogo.length === 0) {
+    return null;
+  }
+  return (
+    <details
+      style={{
+        margin: "0.5rem 0 1rem",
+        padding: "0.75rem 1rem",
+        border: "1px solid #d7e3dc",
+        borderRadius: "0.5rem",
+        backgroundColor: "#f7faf8",
+      }}
+    >
+      <summary style={{ cursor: "pointer", fontWeight: 600, color: "#1f5c3a" }}>
+        ¿Qué son los OFC (Objetos Focales de Conservación)?
+      </summary>
+      {descripcion && (
+        <p style={{ color: "#445", fontSize: "0.9rem", marginTop: "0.75rem" }}>
+          {descripcion}
+        </p>
+      )}
+      {catalogo.length > 0 && (
+        <ol style={{ margin: "0.5rem 0 0", paddingLeft: "1.25rem", color: "#334" }}>
+          {catalogo.map((o) => (
+            <li key={o.ofc_id} style={{ marginBottom: "0.4rem", fontSize: "0.9rem" }}>
+              <strong>{o.nombre}</strong>
+              {o.definicion ? (
+                <span style={{ color: "#667" }}> — {o.definicion}</span>
+              ) : null}
+            </li>
+          ))}
+        </ol>
+      )}
+    </details>
+  );
+}
+
 /** Gráfico de barras horizontales para la distribución por OFC. */
 function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
   if (!resumen.clasificacion_disponible) {
     return (
       <section style={{ marginTop: "1.5rem" }}>
         <h3 style={{ marginBottom: "0.5rem" }}>Distribución por OFC</h3>
+        <ExplicacionOFC
+          descripcion={resumen.ofc_descripcion}
+          catalogo={resumen.catalogo_ofc}
+        />
         <p style={{ color: "#666" }}>
           Aún no hay un dataset clasificado. Ejecuta el pipeline de clasificación por OFC.
         </p>
@@ -147,6 +204,10 @@ function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
         Clasificación <strong>automática</strong> (reglas por palabras clave), sujeta a revisión
         humana. {resumen.sin_ofc} artículo(s) sin OFC asignado.
       </p>
+      <ExplicacionOFC
+        descripcion={resumen.ofc_descripcion}
+        catalogo={resumen.catalogo_ofc}
+      />
       <div style={{ width: "100%", height: alto }}>
         <ResponsiveContainer>
           <BarChart

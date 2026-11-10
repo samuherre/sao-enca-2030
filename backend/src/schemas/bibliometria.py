@@ -37,6 +37,20 @@ class ConteoOFC(SchemaBase):
     conteo: int
 
 
+class DescripcionOFC(SchemaBase):
+    """Ficha descriptiva pública de un OFC (número, nombre y definición).
+
+    Proviene del catálogo oficial ENCA 2030; sirve para explicar al público del
+    dashboard qué representa cada Objeto Focal de Conservación. No incluye los
+    términos internos del clasificador.
+    """
+
+    ofc_id: str
+    numero: int | None = None
+    nombre: str
+    definicion: str = ""
+
+
 class ResumenBibliometrico(SchemaBase):
     """Resumen agregado del dataset de la fuente Boletín SAO.
 
@@ -113,5 +127,9 @@ class ResumenConsolidado(SchemaBase):
     clasificacion_disponible: bool = False
     por_ofc: list[ConteoOFC] = []
     sin_ofc: int = 0
+    # Explicación pública de los OFC (texto oficial ENCA + catálogo de los 11).
+    # Permite que el dashboard explique qué son los OFC a cualquier visitante.
+    ofc_descripcion: str = ""
+    catalogo_ofc: list[DescripcionOFC] = []
     # Desglose del aporte de cada fuente al consolidado.
     aporte_por_fuente: list[AporteFuente] = []

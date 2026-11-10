@@ -70,6 +70,20 @@ def test_sin_filtro_abarca_todos_los_anios() -> None:
     assert r.anios_disponibles == [2020, 2022, 2023]
 
 
+def test_resumen_incluye_explicacion_publica_de_ofc() -> None:
+    """El consolidado trae el texto oficial y el catálogo de los 11 OFC.
+
+    Permite que el dashboard explique al público qué son los OFC. El contenido
+    proviene del catálogo oficial ENCA 2030 (no inventado).
+    """
+    r = _resumen(_DATASET, anio=None)
+    assert "objetos focales" in r.ofc_descripcion.lower()
+    assert len(r.catalogo_ofc) == 11
+    primero = r.catalogo_ofc[0]
+    assert primero.ofc_id == "OFC-01"
+    assert primero.nombre and primero.definicion
+
+
 def test_filtro_anio_recorta_el_total() -> None:
     r = _resumen(_DATASET, anio=2020)
     assert r.total_articulos == 2
