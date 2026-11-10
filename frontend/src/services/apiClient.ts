@@ -32,12 +32,30 @@ import type {
   ResumenConsolidado,
   ResumenGBIF,
 } from "../types";
+import { API_URL, STATIC_MODE, STATIC_SNAPSHOT_BASE } from "../config";
 import { request } from "./http";
 
 /** Opciones comunes de solo lectura para cualquier operación del cliente. */
 interface CallOptions {
   /** Señal externa para cancelar la petición (p. ej. al desmontar un componente). */
   readonly signal?: AbortSignal;
+}
+
+/**
+ * URL de descarga del CSV consolidado de artículos (título, enlace y metadatos).
+ *
+ * Con `anio` descarga solo ese año; sin él, todos. Funciona en los dos modos:
+ * - API en vivo: apunta al endpoint del backend (`${API_URL}/bibliometria/...`).
+ * - Demo estática (Vercel): apunta al archivo CSV congelado en el snapshot.
+ * Se usa como `href` de un enlace de descarga (no pasa por `request()`, que es
+ * solo para JSON).
+ */
+export function urlDescargaConsolidadoCsv(anio?: number | null): string {
+  const ruta =
+    anio != null
+      ? `/bibliometria/export/anio/${anio}.csv`
+      : "/bibliometria/export.csv";
+  return STATIC_MODE ? `${STATIC_SNAPSHOT_BASE}${ruta}` : `${API_URL}${ruta}`;
 }
 
 // --- Ejes -------------------------------------------------------------------

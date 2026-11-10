@@ -60,11 +60,33 @@ def fetch(path: str) -> object | None:
         return None
 
 
+def fetch_text(path: str) -> str | None:
+    """Pide una ruta GET y devuelve el cuerpo como TEXTO (p. ej. CSV), o None."""
+    url = f"{API_BASE}{path}"
+    try:
+        with urllib.request.urlopen(url, timeout=30) as resp:
+            return resp.read().decode("utf-8")
+    except urllib.error.HTTPError as exc:
+        print(f"  [{exc.code}] {path}")
+        return None
+    except Exception as exc:  # noqa: BLE001 - script de utilidad, reporta y sigue
+        print(f"  [ERROR] {path}: {exc}")
+        return None
+
+
 def write_json(rel_path: str, data: object) -> None:
     """Escribe ``data`` como JSON en OUT_DIR/rel_path (crea carpetas)."""
     dest = OUT_DIR / rel_path
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  -> {rel_path}")
+
+
+def write_text(rel_path: str, contenido: str) -> None:
+    """Escribe ``contenido`` tal cual (texto) en OUT_DIR/rel_path (crea carpetas)."""
+    dest = OUT_DIR / rel_path
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(contenido, encoding="utf-8")
     print(f"  -> {rel_path}")
 
 
@@ -133,6 +155,15 @@ def export_bibliometria() -> None:
             por_anio = fetch(f"/bibliometria/resumen/anio/{anio}")
             if por_anio is not None:
                 write_json(f"bibliometria/resumen/anio/{anio}.json", por_anio)
+
+        # CSV descargable del consolidado (todos + uno por año) para la demo.
+        csv_todos = fetch_text("/bibliometria/export.csv")
+        if csv_todos is not None:
+            write_text("bibliometria/export.csv", csv_todos)
+        for anio in anios:
+            csv_anio = fetch_text(f"/bibliometria/export/anio/{anio}.csv")
+            if csv_anio is not None:
+                write_text(f"bibliometria/export/anio/{anio}.csv", csv_anio)
 
     boletin = fetch("/bibliometria/boletin-sao/resumen")
     if boletin is not None:

@@ -29,6 +29,7 @@ export {
   // Bibliometría (Componente B)
   obtenerResumenBibliometrico,
   obtenerResumenConsolidado,
+  urlDescargaConsolidadoCsv,
   // Biodiversidad (Datos de GBIF)
   obtenerResumenGbif,
   consultarGbifEnVivo,

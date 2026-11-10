@@ -31,6 +31,7 @@ import {
 
 import { EmptyState, ErrorBanner, LoadingIndicator } from "../components";
 import { useResumenConsolidado } from "../hooks";
+import { urlDescargaConsolidadoCsv } from "../services";
 import type { ResumenConsolidado } from "../types";
 
 /** Valor del desplegable que representa "todos los años" (sin filtro). */
@@ -574,12 +575,40 @@ export function BibliometriaPage() {
         está pendiente de validación con SAO.
       </p>
 
-      <div style={{ margin: "0.75rem 0" }}>
+      <div
+        style={{
+          margin: "0.75rem 0",
+          display: "flex",
+          alignItems: "center",
+          gap: "0.75rem",
+          flexWrap: "wrap",
+        }}
+      >
         <FiltroAnio anios={data.anios_disponibles} valor={anio} onChange={setAnio} />
         {anio != null && (
-          <span style={{ marginLeft: "0.75rem", fontSize: "0.85rem", color: "#567" }}>
+          <span style={{ fontSize: "0.85rem", color: "#567" }}>
             Mostrando resultados del año <strong>{anio}</strong>.
           </span>
+        )}
+        {data.total_articulos > 0 && (
+          <a
+            href={urlDescargaConsolidadoCsv(anio)}
+            download
+            style={{
+              marginLeft: "auto",
+              padding: "0.4rem 0.8rem",
+              borderRadius: "0.4rem",
+              border: "1px solid #2f8f5b",
+              backgroundColor: "#2f8f5b",
+              color: "#fff",
+              fontSize: "0.85rem",
+              textDecoration: "none",
+              fontWeight: 600,
+            }}
+            title="Descarga un CSV con título, enlace y metadatos básicos de cada artículo"
+          >
+            ⬇ Descargar CSV {anio != null ? `(${anio})` : "(todos)"}
+          </a>
         )}
       </div>
 

@@ -17,12 +17,24 @@ Hay dos lecturas:
 """
 
 from fastapi import APIRouter
+from fastapi.responses import Response
 
 from backend.src.schemas.bibliometria import (
     ResumenBibliometrico,
     ResumenConsolidado,
 )
 from backend.src.services.bibliometria_service import BibliometriaService
+
+
+def _csv_response(contenido: str, nombre_archivo: str) -> Response:
+    """Envuelve un CSV en una respuesta descargable (UTF-8 con BOM para Excel)."""
+    # BOM para que Excel abra bien los acentos (títulos en español/portugués).
+    cuerpo = "\ufeff" + contenido
+    return Response(
+        content=cuerpo,
+        media_type="text/csv; charset=utf-8",
+        headers={"Content-Disposition": f'attachment; filename="{nombre_archivo}"'},
+    )
 
 router = APIRouter(tags=["Bibliometría"])
 
@@ -72,6 +84,38 @@ def resumen_consolidado_por_anio(anio: int) -> ResumenConsolidado:
     """
     servicio = BibliometriaService()
     return servicio.resumen_consolidado(anio=anio)
+
+
+@router.get(
+    "/bibliometria/export.csv",
+    summary="Descarga CSV del consolidado (título, enlace y metadatos básicos)",
+    response_class=Response,
+)
+def exportar_consolidado_csv() -> Response:
+    """Descarga el conjunto consolidado como CSV (una fila por artículo).
+
+    Incluye al menos título y enlace de cada artículo (Req pedido por SAO), más
+    año, fuente, revista y DOI. Refleja el dato tal cual; no inventa valores.
+    """
+    servicio = BibliometriaService()
+    contenido = servicio.exportar_consolidado_csv()
+    return _csv_response(contenido, "articulos_sao_todos.csv")
+
+
+@router.get(
+    "/bibliometria/export/anio/{anio}.csv",
+    summary="Descarga CSV del consolidado filtrado por un año",
+    response_class=Response,
+)
+def exportar_consolidado_csv_por_anio(anio: int) -> Response:
+    """Como :func:`exportar_consolidado_csv`, pero solo los artículos de ``anio``.
+
+    Ruta de recurso (``/anio/{anio}.csv``) por coherencia con el resumen y para
+    que la demo estática pueda servir el archivo por ruta fija.
+    """
+    servicio = BibliometriaService()
+    contenido = servicio.exportar_consolidado_csv(anio=anio)
+    return _csv_response(contenido, f"articulos_sao_{anio}.csv")
 
 
 @router.get(

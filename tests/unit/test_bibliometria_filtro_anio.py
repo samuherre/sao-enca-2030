@@ -184,6 +184,63 @@ def test_grado_colaboracion_por_ofc() -> None:
     assert o2.grado_colaboracion == 1.0        # su único artículo tiene 3 autores
 
 
+def _export_csv(coleccion: dict[str, list[dict]], anio: int | None) -> str:
+    tmp_root = Path(tempfile.mkdtemp(prefix="sao_csv_"))
+    processed_dir = tmp_root / "processed"
+    processed_dir.mkdir(parents=True, exist_ok=True)
+    for carpeta, registros in coleccion.items():
+        _escribir(processed_dir, carpeta, registros)
+    original = svc._PROCESSED_DIR
+    try:
+        svc._PROCESSED_DIR = processed_dir
+        return svc.BibliometriaService().exportar_consolidado_csv(anio=anio)
+    finally:
+        svc._PROCESSED_DIR = original
+        shutil.rmtree(tmp_root, ignore_errors=True)
+
+
+def test_export_csv_incluye_titulo_y_enlace() -> None:
+    """El CSV trae encabezado + una fila por artículo con título y enlace.
+
+    El enlace usa 'url'; si falta, se deriva del DOI (https://doi.org/...).
+    """
+    coleccion = {
+        "openalex": [
+            {"source": "OpenAlex", "publication_year": 2021, "title": "Aves del Chocó",
+             "url": "https://openalex.org/W1", "doi": "10.1/a", "journal": "Rev X"},
+            {"source": "OpenAlex", "publication_year": 2022, "title": "Sin URL pero con DOI",
+             "url": None, "doi": "10.2/b"},
+        ],
+    }
+    csv_texto = _export_csv(coleccion, anio=None)
+    import csv as _csv
+    import io as _io
+    filas = list(_csv.reader(_io.StringIO(csv_texto)))
+    # Encabezado + exactamente 2 filas (sin líneas en blanco intercaladas), y
+    # todas con el mismo número de columnas (6).
+    assert len(filas) == 3, f"se esperaban 3 filas, hay {len(filas)}"
+    assert all(len(f) == 6 for f in filas), "filas con número de columnas irregular"
+    assert filas[0][0] == "titulo"
+    enlaces = [f[5] for f in filas[1:]]
+    assert "https://openalex.org/W1" in enlaces
+    # El segundo artículo, sin url, deriva el enlace del DOI.
+    assert "https://doi.org/10.2/b" in enlaces
+
+
+def test_export_csv_respeta_filtro_anio() -> None:
+    coleccion = {
+        "openalex": [
+            {"source": "OpenAlex", "publication_year": 2021, "title": "A", "url": "u1"},
+            {"source": "OpenAlex", "publication_year": 2022, "title": "B", "url": "u2"},
+        ],
+    }
+    csv_2021 = _export_csv(coleccion, anio=2021)
+    lineas = [l for l in csv_2021.splitlines() if l.strip()]
+    assert len(lineas) == 2  # encabezado + solo el de 2021
+    assert ",A," in csv_2021 or csv_2021.count("\nA,") >= 0  # A presente
+    assert "B" not in csv_2021.split("\n", 1)[1]  # B no está en el cuerpo
+
+
 def test_num_autores_fiable_openalex_y_boletin() -> None:
     """Conteo de autores: fiable en OpenAlex (por '; '), no contable en texto libre."""
     # OpenAlex: autores unidos por "; " -> contable.

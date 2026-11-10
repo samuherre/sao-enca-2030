@@ -19,6 +19,8 @@ Decisiones (steering bibliometrics.md, tech.md §12, structure.md §30):
 
 from __future__ import annotations
 
+import csv
+import io
 import json
 import re
 from collections import Counter, defaultdict
@@ -390,6 +392,54 @@ def _completitud(registros: list[dict]) -> list[CompletitudCampo]:
     ]
 
 
+# Campos del CSV de descarga, en orden. Se eligen los útiles para que SAO
+# pueda ubicar cada artículo (título + enlace como mínimo, Req de Julián) sin
+# volcar el dataset interno completo. El enlace se resuelve a una URL navegable.
+_CAMPOS_EXPORT: list[tuple[str, str]] = [
+    ("titulo", "title"),
+    ("anio", "publication_year"),
+    ("fuente", "source"),
+    ("revista", "journal"),
+    ("doi", "doi"),
+    ("enlace", "url"),
+]
+
+
+def _url_desde_doi(doi: object) -> str | None:
+    """URL navegable a partir de un DOI, o ``None`` si no hay DOI utilizable.
+
+    Acepta el DOI crudo ("10.x/...") o ya como URL ("https://doi.org/10.x/...").
+    No inventa: si no hay DOI, devuelve ``None``.
+    """
+    if not doi or not isinstance(doi, str):
+        return None
+    d = doi.strip()
+    if not d:
+        return None
+    if d.startswith("http://") or d.startswith("https://"):
+        return d
+    return f"https://doi.org/{d}"
+
+
+def _combinar_registros_fuente(anio: int | None) -> list[dict]:
+    """Combina los registros de TODAS las fuentes (no clasificadas) de
+    ``data/processed/``, con la MISMA lógica que el resumen consolidado:
+    unión sin exclusión y deduplicación por ``article_id`` dentro de cada fuente.
+
+    Si ``anio`` no es ``None``, filtra por ``publication_year == anio``. No toca
+    las carpetas ``*_clasificado`` (esas no aportan artículos al conjunto).
+    """
+    combinados: list[dict] = []
+    for carpeta in _carpetas_procesadas():
+        if _es_carpeta_clasificado(carpeta):
+            continue
+        registros, _fechas = _acumular_json(carpeta)
+        combinados.extend(registros)
+    if anio is not None:
+        combinados = [r for r in combinados if r.get("publication_year") == anio]
+    return combinados
+
+
 class BibliometriaService:
     """Casos de uso de lectura del dataset bibliométrico procesado."""
 
@@ -661,3 +711,43 @@ class BibliometriaService:
             catalogo_ofc=[DescripcionOFC(**o) for o in _catalogo_ofc()],
             aporte_por_fuente=aporte_por_fuente,
         )
+
+    def exportar_consolidado_csv(self, anio: int | None = None) -> str:
+        """Genera un CSV descargable del conjunto consolidado de artículos.
+
+        Una fila por artículo (unión sin exclusión, deduplicado por fuente como
+        el resumen). Incluye los campos de ``_CAMPOS_EXPORT`` —título y enlace
+        como mínimo (Req pedido por SAO)— reflejados tal cual del dato; un campo
+        ausente queda vacío (no se inventa). El ``enlace`` usa ``url`` y, si
+        falta, construye la URL del DOI (``https://doi.org/<doi>``) para que SAO
+        pueda llegar al artículo.
+
+        :param anio: si se indica, exporta solo los artículos de ese año
+            (coherente con el filtro del dashboard). ``None`` = todos.
+        :returns: el contenido del CSV como texto (UTF-8 con BOM lo añade el
+            endpoint; aquí se devuelve el texto plano con encabezado).
+        """
+        registros = _combinar_registros_fuente(anio)
+        # Orden estable y legible: por año desc. y luego título.
+        registros.sort(
+            key=lambda r: (
+                -(r.get("publication_year") or 0),
+                str(r.get("title") or "").lower(),
+            )
+        )
+
+        buffer = io.StringIO()
+        # lineterminator="\n": sin esto, csv.writer usa "\r\n" y, al servirse o
+        # reabrirse el texto, aparece una línea en blanco entre cada fila.
+        writer = csv.writer(buffer, lineterminator="\n")
+        writer.writerow([encabezado for encabezado, _campo in _CAMPOS_EXPORT])
+        for r in registros:
+            fila = []
+            for _encabezado, campo in _CAMPOS_EXPORT:
+                if campo == "url":
+                    valor = r.get("url") or _url_desde_doi(r.get("doi"))
+                else:
+                    valor = r.get(campo)
+                fila.append("" if valor is None else str(valor))
+            writer.writerow(fila)
+        return buffer.getvalue()
