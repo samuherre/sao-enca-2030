@@ -20,7 +20,9 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  ComposedChart,
   Legend,
+  Line,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -113,6 +115,74 @@ function BarsCard({
             <Tooltip />
             <Bar dataKey="conteo" name="Artículos" fill="#2f8f5b" radius={[4, 4, 0, 0]} />
           </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Gráfico "Artículos por año" con barras (conteo anual) + línea de ACUMULADO.
+ *
+ * Las barras muestran los artículos de cada año y la línea la suma corrida
+ * (2020, 2020+2021, …), en un segundo eje Y a la derecha para que ambas escalas
+ * se lean bien. El acumulado se deriva de los mismos datos por año (orden
+ * cronológico ascendente); no añade datos nuevos.
+ *
+ * Nota: con un año seleccionado en el filtro hay un solo punto, así que el
+ * acumulado coincide con el conteo de ese año (la línea no aporta y se omite).
+ */
+function AnioAcumuladoCard({
+  data,
+}: {
+  data: readonly { clave: string; conteo: number }[];
+}) {
+  // Orden cronológico ascendente por el año (clave numérica).
+  const ordenado = [...data].sort((a, b) => Number(a.clave) - Number(b.clave));
+  let suma = 0;
+  const chart = ordenado.map((d) => {
+    suma += d.conteo;
+    return { clave: d.clave, conteo: d.conteo, acumulado: suma };
+  });
+  const mostrarAcumulado = chart.length > 1;
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.5rem" }}>Artículos por año</h3>
+      <div style={{ width: "100%", height: 280 }}>
+        <ResponsiveContainer>
+          <ComposedChart data={chart} margin={{ top: 8, right: 16, bottom: 8, left: 0 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis dataKey="clave" />
+            <YAxis yAxisId="left" allowDecimals={false} />
+            {mostrarAcumulado && (
+              <YAxis
+                yAxisId="right"
+                orientation="right"
+                allowDecimals={false}
+                stroke="#1f5c3a"
+              />
+            )}
+            <Tooltip />
+            <Legend />
+            <Bar
+              yAxisId="left"
+              dataKey="conteo"
+              name="Artículos del año"
+              fill="#2f8f5b"
+              radius={[4, 4, 0, 0]}
+            />
+            {mostrarAcumulado && (
+              <Line
+                yAxisId="right"
+                type="monotone"
+                dataKey="acumulado"
+                name="Acumulado"
+                stroke="#1f5c3a"
+                strokeWidth={2}
+                dot={{ r: 3 }}
+              />
+            )}
+          </ComposedChart>
         </ResponsiveContainer>
       </div>
     </section>
@@ -532,7 +602,7 @@ export function BibliometriaPage() {
             <MetricCard label="Fuentes" value={data.aporte_por_fuente.length} />
           </div>
 
-          <BarsCard title="Artículos por año" data={data.por_anio} />
+          <AnioAcumuladoCard data={data.por_anio} />
           <OFCCard resumen={data} />
           <RevistasCard data={data.por_revista} />
           <BarsCard title="Artículos por idioma" data={data.por_idioma} />
