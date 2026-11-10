@@ -241,6 +241,54 @@ def test_export_csv_respeta_filtro_anio() -> None:
     assert "B" not in csv_2021.split("\n", 1)[1]  # B no está en el cuerpo
 
 
+def test_articulos_de_ofc_lista_y_total() -> None:
+    """``articulos_de_ofc`` devuelve los artículos de ese OFC con total y límite.
+
+    Multilabel: un artículo en varios OFC aparece en cada uno. El enlace usa url
+    o, si falta, el DOI. El total refleja el conteo real aunque se limite la lista.
+    """
+    clasificados = [
+        {"source": "OpenAlex", "publication_year": 2021, "title": "Marino A",
+         "ofcs": ["OFC-01"], "url": "u-a", "article_id": "a1"},
+        {"source": "OpenAlex", "publication_year": 2022, "title": "Marino y humedal",
+         "ofcs": ["OFC-01", "OFC-02"], "doi": "10.9/x", "article_id": "a2"},
+        {"source": "OpenAlex", "publication_year": 2020, "title": "Solo humedal",
+         "ofcs": ["OFC-02"], "url": "u-c", "article_id": "a3"},
+    ]
+    tmp_root = Path(tempfile.mkdtemp(prefix="sao_ofclist_"))
+    processed_dir = tmp_root / "processed"
+    processed_dir.mkdir(parents=True, exist_ok=True)
+    carpeta = processed_dir / "openalex_clasificado"
+    carpeta.mkdir(parents=True, exist_ok=True)
+    (carpeta / "openalex_clasificado_2024-01-01.json").write_text(
+        json.dumps(clasificados, ensure_ascii=False), encoding="utf-8"
+    )
+    original = svc._PROCESSED_DIR
+    try:
+        svc._PROCESSED_DIR = processed_dir
+        servicio = svc.BibliometriaService()
+        ofc1 = servicio.articulos_de_ofc("OFC-01")
+        ofc2 = servicio.articulos_de_ofc("OFC-02")
+        limitado = servicio.articulos_de_ofc("OFC-01", limite=1)
+    finally:
+        svc._PROCESSED_DIR = original
+        shutil.rmtree(tmp_root, ignore_errors=True)
+
+    # OFC-01: a1 y a2.
+    assert ofc1.total == 2
+    titulos1 = {i.titulo for i in ofc1.items}
+    assert titulos1 == {"Marino A", "Marino y humedal"}
+    # El artículo sin url usa el DOI como enlace.
+    enlaces1 = {i.enlace for i in ofc1.items}
+    assert "https://doi.org/10.9/x" in enlaces1
+    # OFC-02: a2 y a3 (multilabel: a2 aparece en ambos OFC).
+    assert ofc2.total == 2
+    # Límite: total sigue siendo 2 pero items trae 1.
+    assert limitado.total == 2
+    assert limitado.mostrados == 1
+    assert len(limitado.items) == 1
+
+
 def test_num_autores_fiable_openalex_y_boletin() -> None:
     """Conteo de autores: fiable en OpenAlex (por '; '), no contable en texto libre."""
     # OpenAlex: autores unidos por "; " -> contable.

@@ -1,0 +1,608 @@
+{
+  "ofc_id": "OFC-06",
+  "nombre": "Aves de bosques premontanos y montanos",
+  "total": 431,
+  "mostrados": 100,
+  "items": [
+    {
+      "titulo": "A review of climate and landscape change effects on forest birds in a temperate mountain range",
+      "anio": 2026,
+      "revista": "Ibis",
+      "enlace": "https://doi.org/10.1111/ibi.70061"
+    },
+    {
+      "titulo": "A Spatial and Taxonomic Dataset of Avian Biodiversity Across the Guatemalan Avian Route Consortium: A 2026 Citizen-Science and Field Survey Profile",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.21500599"
+    },
+    {
+      "titulo": "Abundance and occupancy trends of sooty grouse in western Oregon: determining best modeling practices by comparing observed and simulated data",
+      "anio": 2026,
+      "revista": "Wildlife Biology",
+      "enlace": "https://doi.org/10.1002/wlb3.01534"
+    },
+    {
+      "titulo": "Adjacent Forests Enhance Spontaneous Revegetation and Phylogenetic Similarity on Mountainous Roadside Slopes: Implications for Ecological Restoration and Forest Edge Management",
+      "anio": 2026,
+      "revista": "Ecology and Evolution",
+      "enlace": "https://doi.org/10.1002/ece3.73233"
+    },
+    {
+      "titulo": "Advances in evolutionary research of Bromeliaceae: revisiting traits, adaptations, and species limits in the ecological and geographic spaces",
+      "anio": 2026,
+      "revista": "Botanical Journal of the Linnean Society",
+      "enlace": "https://doi.org/10.1093/botlinnean/boag017"
+    },
+    {
+      "titulo": "Biodiversidad asociada al proyecto PARAMUNO P1: Monitoreo comunitario en Quindío, Boyacá, Cauca y Valle del Cauca durante 2024",
+      "anio": 2026,
+      "revista": "SiB Colombia - GBIF Colombia",
+      "enlace": "https://doi.org/10.15472/wiekcl"
+    },
+    {
+      "titulo": "BIOGEOGRAPHY AND LANDSCAPE PREDICTORS OF SPECIES RICHNESS IN NICARAGUAN DRY FOREST BIRDS",
+      "anio": 2026,
+      "revista": "Ornitología Neotropical",
+      "enlace": "https://doi.org/10.58843/ornneo.v37i1.1407"
+    },
+    {
+      "titulo": "Bird diversity in three apparent disturbance conditions and a Montane Mesophilic Forest",
+      "anio": 2026,
+      "revista": "Figshare",
+      "enlace": "https://doi.org/10.6084/m9.figshare.34135770"
+    },
+    {
+      "titulo": "Bird Survey of the Vazhachal Forest Division-2026, Western Ghats, Kerala, India",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.18820982"
+    },
+    {
+      "titulo": "Bryophyte Use in Bird Nests Varies with Nesting Location in a Tropical Montane Forest",
+      "anio": 2026,
+      "revista": "Diversity",
+      "enlace": "https://doi.org/10.3390/d18080463"
+    },
+    {
+      "titulo": "Caminar en el bosque de niebla: un encuentro vital entre la naturaleza y nuestra responsabilidad",
+      "anio": 2026,
+      "revista": "Herreriana",
+      "enlace": "https://doi.org/10.29057/h.v8i2.16412"
+    },
+    {
+      "titulo": "Caracterización biológica de fauna y flora de la zona de bosque altoandino y subpáramo,finca el campamento, vereda Llano grande municipio de Sotaquirá-Boyacá, Colombia.",
+      "anio": 2026,
+      "revista": "CIENCIA EN DESARROLLO",
+      "enlace": "https://revistas.uptc.edu.co/index.php/ciencia_en_desarrollo/article/view/21083"
+    },
+    {
+      "titulo": "Climate drove taxonomic, functional, and phylogenetic bird diversity in an elevational gradient in eastern Brazil",
+      "anio": 2026,
+      "revista": "Biodiversity and Conservation",
+      "enlace": "https://doi.org/10.1007/s10531-026-03330-y"
+    },
+    {
+      "titulo": "Climate-driven asymmetric range shifts of montane birds along a subtropical elevational gradient in China",
+      "anio": 2026,
+      "revista": "Biological Conservation",
+      "enlace": "https://doi.org/10.1016/j.biocon.2026.112135"
+    },
+    {
+      "titulo": "Dinámica espaciotemporal de la estructura y conectividad del paisaje para el hábitat del Loro Coroniazul (Hapalopsittaca fuertesi) en un paisaje andino fragmentado.",
+      "anio": 2026,
+      "revista": "Repositorio Institucional (Pontificia Universidad Javeriana)",
+      "enlace": "http://hdl.handle.net/10554/74189"
+    },
+    {
+      "titulo": "Distribution of the endemic Uluguru Bushshrike Malaconotus alius and Loveridge’s Sunbird Cinnyris loveridgei in the Uluguru Nature Forest Reserve, Tanzania",
+      "anio": 2026,
+      "revista": "Ostrich",
+      "enlace": "https://doi.org/10.2989/00306525.2026.2644887"
+    },
+    {
+      "titulo": "Divergence in wing‐whirring, vocalizations and morphology supports species status for the Santa Marta Guan ( Penelope colombiana )",
+      "anio": 2026,
+      "revista": "Ibis",
+      "enlace": "https://doi.org/10.1111/ibi.70118"
+    },
+    {
+      "titulo": "Drivers of biodiversity across Central European forest reserves: reserve size, landscape context and habitat structure",
+      "anio": 2026,
+      "revista": "Biodiversity and Conservation",
+      "enlace": "https://doi.org/10.1007/s10531-026-03486-7"
+    },
+    {
+      "titulo": "Ensemble species distribution modelling of climate change impacts on the distribution of Pinus krempfii in Vietnam from the Last Glacial Maximum to 2070",
+      "anio": 2026,
+      "revista": "Nature Conservation",
+      "enlace": "https://doi.org/10.3897/natureconservation.66.206478"
+    },
+    {
+      "titulo": "Filling distributional gaps for birds in a complex Andean landscape: insights from the northern East Andes of Colombia",
+      "anio": 2026,
+      "revista": "Bulletin of the British Ornithologists Club",
+      "enlace": "https://doi.org/10.25226/bboc.v146i1.2026.a3"
+    },
+    {
+      "titulo": "First record of albinism in white-tailed deer Odocoileus virginianus in South America recorded in the Ecuadorian Andes",
+      "anio": 2026,
+      "revista": "Therya notes",
+      "enlace": "https://doi.org/10.12933/therya_notes-25-238"
+    },
+    {
+      "titulo": "Foraging behavior, not prey identity, facilitates niche packing in a tropical montane avifauna",
+      "anio": 2026,
+      "revista": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "enlace": "https://doi.org/10.64898/2026.06.06.730573"
+    },
+    {
+      "titulo": "Gallery Forests as Refugia and Corridors for Dung Beetles Facing Climate Change in the Brazilian Cerrado",
+      "anio": 2026,
+      "revista": "Journal of Biogeography",
+      "enlace": "https://doi.org/10.1111/jbi.70370"
+    },
+    {
+      "titulo": "Genetic erosion and projected habitat loss in the protected Alpine moth Actias isabellae galliaegloria (Lepidoptera: Saturniidae)",
+      "anio": 2026,
+      "revista": "Insect Conservation and Diversity",
+      "enlace": "https://doi.org/10.1111/icad.70151"
+    },
+    {
+      "titulo": "Geographic and Climatic Niche Ranges of Bryophytes in the Páramos of Boyacá, Colombia",
+      "anio": 2026,
+      "revista": "The Botanical Review",
+      "enlace": "https://doi.org/10.1007/s12229-026-09331-4"
+    },
+    {
+      "titulo": "Habitantes sigilosas de los Andes. Guía fotográfica de la diversidad de aves presente en los bosques de Polylepis del Ecuador",
+      "anio": 2026,
+      "revista": "Bosques Latitud Cero",
+      "enlace": "https://doi.org/10.54753/blc.v16i1.2634"
+    },
+    {
+      "titulo": "Habitat transformation reshapes diversity and community structure of amphibians and reptiles in the Eastern Andes",
+      "anio": 2026,
+      "revista": "Herpetozoa",
+      "enlace": "https://doi.org/10.3897/herpetozoa.39.e171614"
+    },
+    {
+      "titulo": "Hakalau’s moving castle: How climate change and restoration are shifting an island fortress for forest birds",
+      "anio": 2026,
+      "revista": "Global Ecology and Conservation",
+      "enlace": "https://doi.org/10.1016/j.gecco.2026.e04094"
+    },
+    {
+      "titulo": "Hotspots in Cold Climates: Mapping and Evaluating the Conservation of Winter Biodiversity Across the United States",
+      "anio": 2026,
+      "revista": "Diversity and Distributions",
+      "enlace": "https://doi.org/10.1111/ddi.70194"
+    },
+    {
+      "titulo": "Identifying hotspots of faunal data deficiency to direct urgent research and monitoring",
+      "anio": 2026,
+      "revista": "Conservation Biology",
+      "enlace": "https://doi.org/10.1111/cobi.70341"
+    },
+    {
+      "titulo": "Impact of Anthropogenic Activities on Biodiversity and Ecosystem Services in the Lachay National Reserve, Peru: A Qualitative Literature Review (2019–2025)",
+      "anio": 2026,
+      "revista": "LACCEI International Multi-Conference for Engineering, Education and Technology (LACCEI)",
+      "enlace": "https://doi.org/10.18687/laccei2026.1.1.2232"
+    },
+    {
+      "titulo": "Impact of Climate Change on Species Distribution, Migration Patterns, and Reproductive Behavior in Wildlife",
+      "anio": 2026,
+      "revista": "International Journal of Drug Delivery Technology",
+      "enlace": "https://doi.org/10.25258/ijddt.16.15s.25"
+    },
+    {
+      "titulo": "IMPACTO DEL CAMBIO CLIMÁTICO EN LA BIODIVERSIDAD: UN CASO DE ESTUDIO EN LA DISTRIBUCIÓN DEL QUETZAL RESPLANDECIENTE",
+      "anio": 2026,
+      "revista": "Congreso Nacional de Ciencia y Tecnología – APANAC",
+      "enlace": "https://doi.org/10.33412/apanac.2025.32"
+    },
+    {
+      "titulo": "Impacts of outdoor recreation on mammals and birds in mountain landscapes: A systematic review of the past two decades and directions for future research",
+      "anio": 2026,
+      "revista": "Journal of Outdoor Recreation and Tourism",
+      "enlace": "https://doi.org/10.1016/j.jort.2026.101089"
+    },
+    {
+      "titulo": "Incomplete Data on Diversity of Elusive Aquatic Plants and Better Studied Birds Hinders Protection of Vulnerable Ecosystems of the Northern Pamir-Alai",
+      "anio": 2026,
+      "revista": "Biology Bulletin",
+      "enlace": "https://doi.org/10.1134/s1062359026602557"
+    },
+    {
+      "titulo": "Indo-Burma Biodiversity Hotspot and Climate Change",
+      "anio": 2026,
+      "revista": "Apple Academic Press eBooks",
+      "enlace": "https://doi.org/10.1201/9781998511112-11"
+    },
+    {
+      "titulo": "Integrating α and β diversity in conservation planning",
+      "anio": 2026,
+      "revista": "Conservation Biology",
+      "enlace": "https://doi.org/10.1111/cobi.70243"
+    },
+    {
+      "titulo": "Microendemismo, vulnerabilidad y conservación",
+      "anio": 2026,
+      "revista": "Biología y Sociedad",
+      "enlace": "https://doi.org/10.29105/bys9.18-276"
+    },
+    {
+      "titulo": "Mountain Grasslands as a Stopover Habitat for Red-Backed Shrikes Lanius collurio in the Pyrenees",
+      "anio": 2026,
+      "revista": "Ardea",
+      "enlace": "https://doi.org/10.5253/arde.2025.a18"
+    },
+    {
+      "titulo": "Multi-phase migration models for Nearctic-Neotropical migrant birds can inform conservation planning",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.18664600"
+    },
+    {
+      "titulo": "Multi-phase migration models for Nearctic–Neotropical migrant birds can inform conservation planning",
+      "anio": 2026,
+      "revista": "Ornithological Applications",
+      "enlace": "https://doi.org/10.1093/ornithapp/duag030"
+    },
+    {
+      "titulo": "Non-Native Conifer Plantations Restructure Multitaxon Biodiversity in an Andean Cloud-Forest Landscape",
+      "anio": 2026,
+      "revista": "Tropical Conservation Science",
+      "enlace": "https://doi.org/10.1177/19400829261488524"
+    },
+    {
+      "titulo": "Not all crickets are equal: selective shrike predation highlights the conservation value of diverse arthropod communities to grassland birds",
+      "anio": 2026,
+      "revista": "Ibis",
+      "enlace": "https://doi.org/10.1111/ibi.70113"
+    },
+    {
+      "titulo": "Nota sobre la avifauna del municipio de Xochicoatlán, Hidalgo, México",
+      "anio": 2026,
+      "revista": "Revista Bio Ciencias",
+      "enlace": "https://doi.org/10.15741/revbio.13.e1706"
+    },
+    {
+      "titulo": "On the identification of areas of endemism in the Neotropical montane cloud forests: A comparative review",
+      "anio": 2026,
+      "revista": "Frontiers of Biogeography",
+      "enlace": "https://doi.org/10.21425/fob.19.174469"
+    },
+    {
+      "titulo": "Passiflora agudeloi (Passifloraceae, subgenus Decaloba): A new endemic species from cloud forests in the Central Cordillera of the Colombian Andes",
+      "anio": 2026,
+      "revista": "PhytoKeys",
+      "enlace": "https://doi.org/10.3897/phytokeys.271.175046"
+    },
+    {
+      "titulo": "Patterns of Specialization and Faunal Connectivity in the Biomes of the Chimborazo Reserve, Ecuador: A Multivariate Analysis of High-Andean Fauna",
+      "anio": 2026,
+      "revista": "Ecologies",
+      "enlace": "https://doi.org/10.3390/ecologies7030086"
+    },
+    {
+      "titulo": "Recent record and distributional update of Nyctiphrynus ocellatus (Tschudi, 1844) (Aves, Caprimulgidae) in southeastern Ecuador",
+      "anio": 2026,
+      "revista": "Check List",
+      "enlace": "https://doi.org/10.15560/22.5.1050"
+    },
+    {
+      "titulo": "Seasonal Elevational Migration Shapes Temperate Bird Community in the Gyirong Valley, Central Himalayas",
+      "anio": 2026,
+      "revista": "Biology",
+      "enlace": "https://doi.org/10.3390/biology15020138"
+    },
+    {
+      "titulo": "Shifting baselines in amphibian conservation: Historic survey uncovers the disease-driven collapse of a once mega-diverse community",
+      "anio": 2026,
+      "revista": "Biodiversity and Conservation",
+      "enlace": "https://doi.org/10.1007/s10531-026-03354-4"
+    },
+    {
+      "titulo": "Simplified, Portable and Cost‐Efficient Airborne eDNA Metabarcoding to Expand Tropical Biodiversity Assessments",
+      "anio": 2026,
+      "revista": "Environmental DNA",
+      "enlace": "https://doi.org/10.1002/edn3.70289"
+    },
+    {
+      "titulo": "SUMMARY FIELD REPORTS MAMMALS OBSERVED IN THE CROWN JEWEL OF TANAH PAPUA (VOGELKOP)",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.21806550"
+    },
+    {
+      "titulo": "The use of bird perches and artificial bat roosts to overcome dispersal and establishment limitation in bracken-dominated deforested areas",
+      "anio": 2026,
+      "revista": "Digitalen Hochschulbibliothek Sachsen-Anhalt (Universitäts- und Landesbibliothek Sachsen-Anhalt)",
+      "enlace": "https://doi.org/10.25673/122652"
+    },
+    {
+      "titulo": "The use of bird perches and artificial bat roosts to overcome dispersal and establishment limitation in bracken-dominated deforested areas",
+      "anio": 2026,
+      "revista": "Global Ecology and Conservation",
+      "enlace": "https://doi.org/10.1016/j.gecco.2026.e04064"
+    },
+    {
+      "titulo": "Trichostigma guacharense (Petiveriaceae) a new species from the Colombian Andes, and a key for the species of the genus",
+      "anio": 2026,
+      "revista": "Brittonia",
+      "enlace": "https://doi.org/10.1007/s12228-026-09895-w"
+    },
+    {
+      "titulo": "Turismo y conservación de bosques altoandinos: dinámicas socioecológicas en Áreas bajo protección privada en Colombia",
+      "anio": 2026,
+      "revista": "PASOS Revista de Turismo y Patrimonio Cultural",
+      "enlace": "https://doi.org/10.25145/j.pasos.2026.24.064"
+    },
+    {
+      "titulo": "Underestimation of avian diversity in the Tumbesian hotspot: Sampling gaps and conservation challenges",
+      "anio": 2026,
+      "revista": "Conservation Science and Practice",
+      "enlace": "https://doi.org/10.1111/csp2.70401"
+    },
+    {
+      "titulo": "Unstructured community science data reveal constriction of breeding distribution for a common montane bird across the Fennoscandian peninsula",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.32942/x2gm2x"
+    },
+    {
+      "titulo": "A new species of Brachycephalus (Anura: Brachycephalidae) from Serra do Quiriri, northeastern Santa Catarina state, southern Brazil, with a review of the diagnosis among species of the B. pernix group and proposed conservation measures",
+      "anio": 2025,
+      "revista": "PLoS ONE",
+      "enlace": "https://doi.org/10.1371/journal.pone.0334746"
+    },
+    {
+      "titulo": "A new species of Miconia (Melastomataceae) with domatia from the Andean Cordilleras of Colombia",
+      "anio": 2025,
+      "revista": "Brittonia",
+      "enlace": "https://doi.org/10.1007/s12228-025-09829-y"
+    },
+    {
+      "titulo": "A new species of Tinamus (Aves: Tinamiformes) from the western Amazon, Brazil",
+      "anio": 2025,
+      "revista": "Zootaxa",
+      "enlace": "https://doi.org/10.11646/zootaxa.5725.2.6"
+    },
+    {
+      "titulo": "A Review Analysis on Climate Impacts, Migration Patterns, Habitat Loss, and Hunting on Avian Diversity in Pakistan",
+      "anio": 2025,
+      "revista": "MARKHOR (The Journal of Zoology)",
+      "enlace": "https://doi.org/10.54393/mjz.v6i4.185"
+    },
+    {
+      "titulo": "Analyses of the avifauna and bird populations of the island of Onekotan, Great Kuril Islands",
+      "anio": 2025,
+      "revista": "Зоологический журнал",
+      "enlace": "https://doi.org/10.7868/s3034545625040036"
+    },
+    {
+      "titulo": "Analysis of Climate Change Impacts on Andean Forests Using Potential Distribution Models (2010-2069)",
+      "anio": 2025,
+      "revista": "Cuadernos de Investigación Geográfica",
+      "enlace": "https://doi.org/10.18172/cig.6341"
+    },
+    {
+      "titulo": "Análisis de modelos de distribución potencial en formaciones forestales de la cordilla de los Andes (Sudamérica) / Analysis of potential distribution patterns in forest formations of the Andes Mountains (South America)",
+      "anio": 2025,
+      "revista": "Ería",
+      "enlace": "https://doi.org/10.17811/er.45.2025.85-108"
+    },
+    {
+      "titulo": "Assessing Connectivity Thresholds Under Habitat Loss Scenarios for Threatened Amphibians and Squamate Reptiles in the Eastern Brazilian Amazon",
+      "anio": 2025,
+      "revista": "Ecology and Evolution",
+      "enlace": "https://doi.org/10.1002/ece3.71741"
+    },
+    {
+      "titulo": "Associations between elevation, introduced red squirrels, and boreal bird distributions on Newfoundland",
+      "anio": 2025,
+      "revista": "Journal of Field Ornithology",
+      "enlace": "https://doi.org/10.5751/jfo-00626-960106"
+    },
+    {
+      "titulo": "Aves de la vertiente oriental de las sierras de Ambato (Catamarca, Argentina): distribución altitudinal y consideraciones biogeográficas",
+      "anio": 2025,
+      "revista": "El Hornero",
+      "enlace": "https://doi.org/10.56178/eh.v40i2.1520"
+    },
+    {
+      "titulo": "Avifauna en gradiente de invasión de Ulex europaeus: Teusacá - 2025",
+      "anio": 2025,
+      "revista": "SiB Colombia - GBIF Colombia",
+      "enlace": "https://doi.org/10.15472/nhjgcs"
+    },
+    {
+      "titulo": "Avifauna of cloud forest riparian corridors in a degraded landscape in eastern Mexico",
+      "anio": 2025,
+      "revista": "Revista Mexicana de Biodiversidad",
+      "enlace": "https://doi.org/10.22201/ib.20078706e.2025.96.5529"
+    },
+    {
+      "titulo": "Avifauna: monitoreo como indicador de restauración con núcleo de estacas y plántulas en Zapatoca (Santander, Colombia).",
+      "anio": 2025,
+      "revista": "Acta Biológica Colombiana",
+      "enlace": "https://doi.org/10.15446/abc.v30n1.112755"
+    },
+    {
+      "titulo": "Biodiversidad de las lagunas del Parque Nacional Natural Puracé: Composición taxonómica y estados de conservación",
+      "anio": 2025,
+      "revista": "Acta Biológica Colombiana",
+      "enlace": "https://doi.org/10.15446/abc.v30n2.116978"
+    },
+    {
+      "titulo": "Biodiversity potential and scientific basis for conservation in the Song Hinh - Tay Hoa area, Dak Lak province, Vietnam",
+      "anio": 2025,
+      "revista": "Vietnam Journal of Earth Sciences",
+      "enlace": "https://doi.org/10.15625/2615-9783/23669"
+    },
+    {
+      "titulo": "Biogeography and evolution of the vertebrate fauna in campo rupestre, a megadiverse Neotropical montane open ecosystem",
+      "anio": 2025,
+      "revista": "Biological Journal of the Linnean Society",
+      "enlace": "https://doi.org/10.1093/biolinnean/blaf032"
+    },
+    {
+      "titulo": "Bird and mammal richness in Andean forests of Riosucio, Caldas",
+      "anio": 2025,
+      "revista": "Universidad Industrial de Santander",
+      "enlace": "https://noesis.uis.edu.co/handle/20.500.14071/45410"
+    },
+    {
+      "titulo": "Birds of the Tropical Andes",
+      "anio": 2025,
+      "revista": "Princeton University Press eBooks",
+      "enlace": "https://doi.org/10.1515/9780691260952"
+    },
+    {
+      "titulo": "Bryophytes of the Serra dos Órgãos National Park: Endemism and Conservation in the Atlantic Forest",
+      "anio": 2025,
+      "revista": "Plants",
+      "enlace": "https://doi.org/10.3390/plants14152419"
+    },
+    {
+      "titulo": "Changes in functional traits and resources reduce the specialization of hummingbirds in fragmented landscapes",
+      "anio": 2025,
+      "revista": "Global Ecology and Conservation",
+      "enlace": "https://doi.org/10.1016/j.gecco.2025.e03469"
+    },
+    {
+      "titulo": "China’s mountain biodiversity and conservation status",
+      "anio": 2025,
+      "revista": "Geography and sustainability",
+      "enlace": "https://doi.org/10.1016/j.geosus.2025.100360"
+    },
+    {
+      "titulo": "Climate Change and Avian Vulnerability: A Review of Effects on Migration, Breeding, Physiology and Conservation",
+      "anio": 2025,
+      "revista": "International Journal of Environment and Climate Change",
+      "enlace": "https://doi.org/10.9734/ijecc/2025/v15i125195"
+    },
+    {
+      "titulo": "Climatic and Edaphic Drivers of Soil Organic Carbon and Pyrogenic Carbon Stocks Across Elevation and Disturbance Gradients in Colombian Andean Forests",
+      "anio": 2025,
+      "revista": "Global Change Biology",
+      "enlace": "https://doi.org/10.1111/gcb.70135"
+    },
+    {
+      "titulo": "Climatic variation affects seasonal survival of an alpine bird species",
+      "anio": 2025,
+      "revista": "Wildlife Biology",
+      "enlace": "https://doi.org/10.1002/wlb3.01386"
+    },
+    {
+      "titulo": "COMPARACIÓN GEOGRÁFICA Y TEMPORAL DE LA AVIFAUNA DE LA SERRANÍA DE LA PAZ EN SANTANDER, COLOMBIA",
+      "anio": 2025,
+      "revista": "Acta Biológica Colombiana",
+      "enlace": "https://doi.org/10.15446/abc.v30n1.111354"
+    },
+    {
+      "titulo": "Cumulative Environmental Impacts of Wind Power Complex Construction in Mountain Forests: An Ecological Restoration Perspective Through Avian Diversity",
+      "anio": 2025,
+      "revista": "Environments",
+      "enlace": "https://doi.org/10.3390/environments12090296"
+    },
+    {
+      "titulo": "Data Deficiency",
+      "anio": 2025,
+      "revista": "NOVA (University of Newcastle Australia)",
+      "enlace": "https://doi.org/10.71862/7mx5-ep96"
+    },
+    {
+      "titulo": "Diet of the great horned owl Bubo virginianus nigrescens in an Andean forest remnant, northern Ecuador and a review of the subspecies' dietary patterns",
+      "anio": 2025,
+      "revista": "Food Webs",
+      "enlace": "https://doi.org/10.1016/j.fooweb.2025.e00432"
+    },
+    {
+      "titulo": "Differences in bird and bat traits, seed-dispersal interactions and functions between tropical montane forest and bracken-dominated areas",
+      "anio": 2025,
+      "revista": "Frontiers in Ecology and Evolution",
+      "enlace": "https://doi.org/10.3389/fevo.2025.1567678"
+    },
+    {
+      "titulo": "Distribution Patterns and Habitat Preferences of Five Globally Threatened and Endemic Montane Orthoptera (Parnassiana and Oropodisma)",
+      "anio": 2025,
+      "revista": "Ecologies",
+      "enlace": "https://doi.org/10.3390/ecologies6010005"
+    },
+    {
+      "titulo": "Diversidad de Aves en Bosques Nublados del Sector Las Naranjas - Palma Central, Jaén, Perú",
+      "anio": 2025,
+      "revista": "Ciencia Latina Revista Científica Multidisciplinar",
+      "enlace": "https://doi.org/10.37811/cl_rcm.v9i1.16467"
+    },
+    {
+      "titulo": "Drivers of Carbon Stocks in Forest Soils at Varying Elevations in the Northwest Andes of Colombia",
+      "anio": 2025,
+      "revista": "Ecosystems",
+      "enlace": "https://doi.org/10.1007/s10021-025-01012-4"
+    },
+    {
+      "titulo": "Ecological Assessment for a Restoration Project in an Andean Forest, Santander, Colombia.",
+      "anio": 2025,
+      "revista": "Repositorio CES",
+      "enlace": "https://hdl.handle.net/10946/9066"
+    },
+    {
+      "titulo": "Effects of landscape heterogeneity on bird communities in temperate, boreal, and montane forests – a review",
+      "anio": 2025,
+      "revista": "Journal of Avian Biology",
+      "enlace": "https://doi.org/10.1002/jav.03458"
+    },
+    {
+      "titulo": "Endemic Species of Butterflies: Importance of Protected Areas in Tropical Montane Endemism Conservation",
+      "anio": 2025,
+      "revista": "Diversity",
+      "enlace": "https://doi.org/10.3390/d17080536"
+    },
+    {
+      "titulo": "Entre el mutualismo y el comensalismo: relaciones potenciales entre dantas de montaña y tres especies de aves en un bosque nublado de la cordillera Central de los Andes colombianos",
+      "anio": 2025,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://doi.org/10.59517/oc.e614"
+    },
+    {
+      "titulo": "Ephemeral Speciation in a New Guinean Honeyeater Complex ( Aves : Melidectes )",
+      "anio": 2025,
+      "revista": "Molecular Ecology",
+      "enlace": "https://doi.org/10.1111/mec.17760"
+    },
+    {
+      "titulo": "Evaluación de la vulnerabilidad de la biodiversidad y los recursos naturales al cambio climático en Ecuador",
+      "anio": 2025,
+      "revista": "Research Society and Development",
+      "enlace": "https://doi.org/10.33448/rsd-v14i7.49243"
+    },
+    {
+      "titulo": "Fauna de bosques con Ceroxylon quindiuense (Arecaceae) y su alrededores en una región de los Andes centrales colombianos.",
+      "anio": 2025,
+      "revista": "Acta Biológica Colombiana",
+      "enlace": "https://doi.org/10.15446/abc.v30n2.112659"
+    },
+    {
+      "titulo": "Feeding Specialisation Shapes Avian Functional Diversity Along a Tropical Rainforest Elevational Gradient",
+      "anio": 2025,
+      "revista": "Journal of Biogeography",
+      "enlace": "https://doi.org/10.1111/jbi.15103"
+    },
+    {
+      "titulo": "Global Conservation Prioritisation Approach Provides Credible Results at a Regional Scale",
+      "anio": 2025,
+      "revista": "Diversity and Distributions",
+      "enlace": "https://doi.org/10.1111/ddi.13969"
+    },
+    {
+      "titulo": "Grassland Bird Species Decline With Colonial‐Era Landscape Change in a Tropical Montane Ecosystem",
+      "anio": 2025,
+      "revista": "Global Change Biology",
+      "enlace": "https://doi.org/10.1111/gcb.70358"
+    }
+  ]
+}

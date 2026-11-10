@@ -165,6 +165,19 @@ def export_bibliometria() -> None:
             if csv_anio is not None:
                 write_text(f"bibliometria/export/anio/{anio}.csv", csv_anio)
 
+        # Por cada OFC presente: listado JSON (acotado) + CSV completo, para
+        # que el clic en la barra funcione en la demo estática.
+        ofcs = []
+        if isinstance(consolidado, dict):
+            ofcs = [o.get("ofc_id") for o in (consolidado.get("por_ofc") or []) if o.get("ofc_id")]
+        for ofc_id in ofcs:
+            lista = fetch(f"/bibliometria/ofc/{ofc_id}/articulos")
+            if lista is not None:
+                write_json(f"bibliometria/ofc/{ofc_id}/articulos.json", lista)
+            csv_ofc = fetch_text(f"/bibliometria/ofc/{ofc_id}/export.csv")
+            if csv_ofc is not None:
+                write_text(f"bibliometria/ofc/{ofc_id}/export.csv", csv_ofc)
+
     boletin = fetch("/bibliometria/boletin-sao/resumen")
     if boletin is not None:
         write_json("bibliometria/boletin-sao/resumen.json", boletin)

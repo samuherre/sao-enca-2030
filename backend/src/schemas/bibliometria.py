@@ -49,6 +49,34 @@ class ConteoOFC(SchemaBase):
     gc_articulos_sin_autoria: int = 0
 
 
+class ArticuloItem(SchemaBase):
+    """Artículo individual para listar "detrás de" una barra (p. ej. un OFC).
+
+    Campos mínimos para mostrar y enlazar cada artículo; reflejan el dato tal
+    cual (un campo ausente queda en ``None``/vacío, no se inventa).
+    """
+
+    titulo: str
+    anio: int | None = None
+    revista: str | None = None
+    enlace: str | None = None
+
+
+class ArticulosOFC(SchemaBase):
+    """Listado (acotado) de los artículos clasificados en un OFC.
+
+    ``total`` es el número real de artículos del OFC; ``items`` puede venir
+    recortado a ``mostrados`` elementos para no volcar miles en el navegador
+    (la descarga del CSV trae todos).
+    """
+
+    ofc_id: str
+    nombre: str
+    total: int
+    mostrados: int
+    items: list[ArticuloItem] = []
+
+
 class DescripcionOFC(SchemaBase):
     """Ficha descriptiva pública de un OFC (número, nombre y definición).
 

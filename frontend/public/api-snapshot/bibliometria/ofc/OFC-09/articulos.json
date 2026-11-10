@@ -1,0 +1,608 @@
+{
+  "ofc_id": "OFC-09",
+  "nombre": "Aves en agroecosistemas",
+  "total": 1139,
+  "mostrados": 100,
+  "items": [
+    {
+      "titulo": "A Drone Survey of a Feral Population of Emu, Dromaius novaehollandiae (Latham, 1790), on Rēkohu / Wharekauri / Chatham Island, Chatham Islands",
+      "anio": 2026,
+      "revista": "New Zealand Journal of Zoology",
+      "enlace": "https://doi.org/10.1002/njz2.70011"
+    },
+    {
+      "titulo": "A multi-spatial scale evaluation of avian communities and avian control of coffee berry borer (Hypothenemus hampei) infestation in Yoro, Honduras",
+      "anio": 2026,
+      "revista": "ScholarWorks@UMassAmherst (University of Massachusetts Amherst)",
+      "enlace": "https://hdl.handle.net/20.500.14394/58355"
+    },
+    {
+      "titulo": "Agricultural landscapes supporting conservation planning: Spatial prioritization of conservation areas for farmland birds",
+      "anio": 2026,
+      "revista": "Ecological Modelling",
+      "enlace": "https://doi.org/10.1016/j.ecolmodel.2026.111636"
+    },
+    {
+      "titulo": "Agriculture, Ecosystem Functions, and Services in the Congo Basin",
+      "anio": 2026,
+      "revista": "Springer eBooks",
+      "enlace": "https://doi.org/10.1007/978-1-0716-5512-2_12"
+    },
+    {
+      "titulo": "Agroecología y aves en las Yungas de Argentina: evaluando composición trófica y uso de perchas artificiales para rapaces",
+      "anio": 2026,
+      "revista": "Acta Zoológica Lilloana",
+      "enlace": "https://doi.org/10.30550/j.azl/2369"
+    },
+    {
+      "titulo": "Altitudinal and seasonal dynamics of bird diversity in the southern foothills of the Daba Mountains, China",
+      "anio": 2026,
+      "revista": "Ethology Ecology & Evolution",
+      "enlace": "https://doi.org/10.1080/03949370.2026.2642306"
+    },
+    {
+      "titulo": "Altitudinal and seasonal dynamics of bird diversity in the southern foothills of the Daba Mountains, China",
+      "anio": 2026,
+      "revista": "Figshare",
+      "enlace": "https://doi.org/10.6084/m9.figshare.31975346"
+    },
+    {
+      "titulo": "Analysis of Human–Wildlife Conflict in Buffer Villages Surrounding Bogani Nani Wartabone National Park",
+      "anio": 2026,
+      "revista": "JURNAL PIJAR MIPA",
+      "enlace": "https://doi.org/10.29303/jpm.v21i1.10964"
+    },
+    {
+      "titulo": "Análisis del impacto de la restauración ecológica en la Orinoquía colombiana ante el cambio climático",
+      "anio": 2026,
+      "revista": "Institutional Repository of the National University Open and Distance UNAD (Universidad Nacional Abierta y a Distancia)",
+      "enlace": "https://repository.unad.edu.co/handle/10596/80567"
+    },
+    {
+      "titulo": "Arroyo Canal Candelaria: biodiversidad y condición ecológica en un paisaje agrícola",
+      "anio": 2026,
+      "revista": "Revista Estudios Ambientales - Environmental Studies Journal",
+      "enlace": "https://doi.org/10.47069/estudios-ambientales.v14i1.3269"
+    },
+    {
+      "titulo": "Assessing the effectiveness of riparian buffers in protecting biodiversity: a meta-analysis",
+      "anio": 2026,
+      "revista": "Nature Communications",
+      "enlace": "https://doi.org/10.1038/s41467-026-70191-y"
+    },
+    {
+      "titulo": "Autumn-Winter Bird Richness and Diversity in Mango (Mangifera indica L.) Crops in Escuinapa, Sinaloa, and Their Contribution to Sustainable Development Goal fifteen",
+      "anio": 2026,
+      "revista": "Agro Productividad",
+      "enlace": "https://doi.org/10.32854/sdzwz578"
+    },
+    {
+      "titulo": "Avian diversity in vineyards – Circannual effects of landscape structure and management practices in viticultural regions",
+      "anio": 2026,
+      "revista": "OPUS Publication Server of the University of Stuttgart (University of Stuttgart)",
+      "enlace": "https://doi.org/10.82549/opus4-2668"
+    },
+    {
+      "titulo": "Avian ecology: Conceptual foundations, diversity patterns, anthropogenic impacts, and conservation challenges in Indian and global contexts",
+      "anio": 2026,
+      "revista": "International Journal of Fauna and Biological Studies",
+      "enlace": "https://doi.org/10.22271/23940522.2026.v13.i2a.1177"
+    },
+    {
+      "titulo": "Avian Ecosystem Services: Ecological Roles and Contribution to Ecosystem Functioning",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.22809051"
+    },
+    {
+      "titulo": "Avian responses to newly established small-scale photovoltaic installations in intensively managed farmland",
+      "anio": 2026,
+      "revista": "Environmental and Sustainability Indicators",
+      "enlace": "https://doi.org/10.1016/j.indic.2026.101422"
+    },
+    {
+      "titulo": "Avifaunal diversity in agroecosystems: a case study from Uttar Pradesh, India",
+      "anio": 2026,
+      "revista": "Journal of Threatened Taxa",
+      "enlace": "https://doi.org/10.11609/jott.9973.18.5.28900-28910"
+    },
+    {
+      "titulo": "Biodiversity and multifunctionality in Amazonian cacao agroforests",
+      "anio": 2026,
+      "revista": "University of Vienna",
+      "enlace": "https://doi.org/10.25365/thesis.81335"
+    },
+    {
+      "titulo": "Biodiversity in Mexican Shade Coffee Agroecosystems: A Systematic Review of Patterns, Knowledge Gaps, and Conservation Implications",
+      "anio": 2026,
+      "revista": "Conservation",
+      "enlace": "https://doi.org/10.3390/conservation6030114"
+    },
+    {
+      "titulo": "Biodiversity of Amarumatena Tourism Hamlet: Potential for Local Wisdom-Based Educational Tourism on Ambon Island",
+      "anio": 2026,
+      "revista": "Bioscientist Jurnal Ilmiah Biologi",
+      "enlace": "https://doi.org/10.33394/bioscientist.v14i1.19227"
+    },
+    {
+      "titulo": "Biodiversity Profile Of Avian Fauna In An Agro-Ecosystem Of Faisalabad",
+      "anio": 2026,
+      "revista": "Annual Methodological Archive Research Review",
+      "enlace": "https://www.amresearchjournal.com/index.php/Journal/article/view/2414"
+    },
+    {
+      "titulo": "Biological corridors are crucial habitat features that boost biodiversity in agroecological systems of Argentina",
+      "anio": 2026,
+      "revista": "Ecological Solutions and Evidence",
+      "enlace": "https://doi.org/10.1002/2688-8319.70192"
+    },
+    {
+      "titulo": "Biotechnological Approaches to Biodiversity Conservation and Environmental Management",
+      "anio": 2026,
+      "revista": "International Journal For Multidisciplinary Research",
+      "enlace": "https://doi.org/10.36948/ijfmr.2026.v08i05.90643"
+    },
+    {
+      "titulo": "Bird and mammal diversity in agricultural landscapes and adjacent natural vegetation of the Brazilian Atlantic Forest: a systematic map",
+      "anio": 2026,
+      "revista": "Environmental Evidence",
+      "enlace": "https://doi.org/10.1186/s13750-026-00390-z"
+    },
+    {
+      "titulo": "Bird assemblages along a forest-degradation gradient in Neotropical seasonally dry forests",
+      "anio": 2026,
+      "revista": "Frontiers in Ecology and Evolution",
+      "enlace": "https://doi.org/10.3389/fevo.2026.1897766"
+    },
+    {
+      "titulo": "Bird Biodiversity and Pest Control in Agroecosystems: A Multi-Trophic Approach",
+      "anio": 2026,
+      "revista": "Ardeola",
+      "enlace": "https://doi.org/10.13157/arla.73.2.2026.rp1"
+    },
+    {
+      "titulo": "Bird biodiversity in vegetation along unpaved rural roads in Central European farmland",
+      "anio": 2026,
+      "revista": "Transportation Research Part D Transport and Environment",
+      "enlace": "https://doi.org/10.1016/j.trd.2026.105303"
+    },
+    {
+      "titulo": "Bird communities in a restored Mediterranean wetland: a 10-year annotated checklist from the Geloi Plain (southern Sicily, Italy)",
+      "anio": 2026,
+      "revista": "BIODIVERSITY JOURNAL",
+      "enlace": "https://doi.org/10.31396/biodiv.jour.2026.17.2.163.196"
+    },
+    {
+      "titulo": "Bird community assembly in utility-scale solar farms of agricultural landscapes",
+      "anio": 2026,
+      "revista": "Biological Conservation",
+      "enlace": "https://doi.org/10.1016/j.biocon.2026.112025"
+    },
+    {
+      "titulo": "Bird community assembly in utility-scale solar farms of transformed landscapes",
+      "anio": 2026,
+      "revista": "SSRN Electronic Journal",
+      "enlace": "https://doi.org/10.2139/ssrn.6208343"
+    },
+    {
+      "titulo": "Bird community composition across a land use gradient in the eastern Democratic Republic of Congo",
+      "anio": 2026,
+      "revista": "Ostrich",
+      "enlace": "https://doi.org/10.2989/00306525.2026.2620763"
+    },
+    {
+      "titulo": "Bird Community Responses to Edge Areas in Sengon (Paraserianthes falcataria) Plantation in Kediri, Indonesia",
+      "anio": 2026,
+      "revista": "Jurnal Pengelolaan Sumberdaya Alam dan Lingkungan (Journal of Natural Resources and Environmental Management)",
+      "enlace": "https://doi.org/10.29244/jpsl.16.4.524"
+    },
+    {
+      "titulo": "Bird community structure and seasonal dynamics in a forest ecosystem of West Bengal, India",
+      "anio": 2026,
+      "revista": "Ornis Hungarica",
+      "enlace": "https://doi.org/10.2478/orhu-2026-0024"
+    },
+    {
+      "titulo": "Bird Community Structure in the South Kainakary and Pallithode Agroecosystems of Central Kerala",
+      "anio": 2026,
+      "revista": "Journal of chemical health risks",
+      "enlace": "https://jchr.org/index.php/JCHR/article/view/12389"
+    },
+    {
+      "titulo": "Bird diversity and biocultural value in coffee agroecosystems of Orosi, Costa Rica: implications for conservation and the development of birdwatching",
+      "anio": 2026,
+      "revista": "Investigative News in Education (Universidad de Costa Rica)",
+      "enlace": "https://zeledonia.com/articulo/6a8ff455c32a95f7bbb05caf"
+    },
+    {
+      "titulo": "Bird diversity and conservation status in KHDTK Wanadipa research forest, Universitas Diponegoro, Semarang: Ecological buffer implications for Mount Ungaran",
+      "anio": 2026,
+      "revista": "Jurnal BIOMA",
+      "enlace": "https://doi.org/10.21009/bioma.v22i1.66678"
+    },
+    {
+      "titulo": "Bird species diversity in rice fields in Northern Nigeria",
+      "anio": 2026,
+      "revista": "Science World Journal",
+      "enlace": "https://doi.org/10.4314/swj.v21i1.30"
+    },
+    {
+      "titulo": "Birds and bats differ in pest control pathways in fruit orchards: Intraguild and direct predation",
+      "anio": 2026,
+      "revista": "Journal of Applied Ecology",
+      "enlace": "https://doi.org/10.1111/1365-2664.70566"
+    },
+    {
+      "titulo": "Birds and Vegetation of Shade Coffee Plantations in Chikmagalur, Central Western Ghats, India",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.20603877"
+    },
+    {
+      "titulo": "Birds on Farms Middle Hut Road Aggregated Bird Survey results 2020-26",
+      "anio": 2026,
+      "revista": "University of Melbourne data repository",
+      "enlace": "https://doi.org/10.26188/33581137"
+    },
+    {
+      "titulo": "Bird’s-eye views",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.33612/diss.1473725354"
+    },
+    {
+      "titulo": "Cacay ( Caryodendron orinocense ) plantations filter bird functional traits and decrease diversity in the Colombian Orinoquía",
+      "anio": 2026,
+      "revista": "Ornithological Applications",
+      "enlace": "https://doi.org/10.1093/ornithapp/duag085"
+    },
+    {
+      "titulo": "Cafezais em sistemas agroflorestais: habitat e alimento para aves",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.47328/ufvbbt.2026.571"
+    },
+    {
+      "titulo": "Cambio climático y su efecto en la sanidad vegetal y economía del café: estudio bibliométrico",
+      "anio": 2026,
+      "revista": "Revista Científica Ciencia y Método",
+      "enlace": "https://doi.org/10.55813/gaea/rcym/v4/n1/149"
+    },
+    {
+      "titulo": "Can Automated Monitoring Enable State-Dependent Conservation?",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.5194/wbf2026-777"
+    },
+    {
+      "titulo": "China’s solar expansion policy reduces bird diversity",
+      "anio": 2026,
+      "revista": "Science",
+      "enlace": "https://doi.org/10.1126/science.aee0747"
+    },
+    {
+      "titulo": "Ciudad Universitaria Tulancingo, un refugio urbano de aves",
+      "anio": 2026,
+      "revista": "Boletín de Ciencias Agropecuarias del ICAP",
+      "enlace": "https://doi.org/10.29057/icap.v12i23.15787"
+    },
+    {
+      "titulo": "Comparison of Passive Acoustic Monitoring and Visual Surveys on Birds at Irvine Prairie",
+      "anio": 2026,
+      "revista": "UNI ScholarWorks (University of Northern Iowa)",
+      "enlace": "https://scholarworks.uni.edu/surp/2026/all/6"
+    },
+    {
+      "titulo": "Complementary but not equivalent: a preliminary assessment of bird communities in rice paddies and floodplain wetlands of the Colombian Caribbean",
+      "anio": 2026,
+      "revista": "ACTA ZOOLÓGICA MEXICANA (N S )",
+      "enlace": "https://doi.org/10.21829/azm.2026.4212838"
+    },
+    {
+      "titulo": "Complex Interactions in Meadow Bird Conservation: Field and Landscape Dynamics, Shaped by People",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.33612/diss.1484131049"
+    },
+    {
+      "titulo": "Conservation Value of Sudanese Savannah Land Use Systems for Birds in the Lagdo Area, North Cameroon",
+      "anio": 2026,
+      "revista": "Environmental Management",
+      "enlace": "https://doi.org/10.1007/s00267-026-02557-3"
+    },
+    {
+      "titulo": "Conserving grassland birds: The role of pasture improvement in the high plains of the Colombian llanos",
+      "anio": 2026,
+      "revista": "CGSPace A Repository of Agricultural Research Outputs (Consultative Group for International Agricultural Research)",
+      "enlace": "https://hdl.handle.net/10568/185610"
+    },
+    {
+      "titulo": "Corrigendum to “Organic farming and nature conservation measures promote breeding bird diversity in the open agricultural landscape: Results from a long-term study in Germany” [Glob. Ecol. Conserv. 71 (2026) e04459]",
+      "anio": 2026,
+      "revista": "Global Ecology and Conservation",
+      "enlace": "https://doi.org/10.1016/j.gecco.2026.e04491"
+    },
+    {
+      "titulo": "Crop species and climate shape amphibian communities and conservation significance of coffee agroforests in the Western Ghats",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.32942/x20q17"
+    },
+    {
+      "titulo": "Cross-ecosystem linkages between freshwater insects and riparian birds across the USA",
+      "anio": 2026,
+      "revista": "Nature Ecology & Evolution",
+      "enlace": "https://doi.org/10.1038/s41559-026-03041-1"
+    },
+    {
+      "titulo": "Data from: Distinct bird assemblages in shade coffee agroforestry suggest complementary conservation value in southern Ecuador mosaics",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.20643188"
+    },
+    {
+      "titulo": "Data from: Forest cover drives bird occupancy across guilds and habitats in a Colombian coffee farming landscape",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.19600417"
+    },
+    {
+      "titulo": "Data from: Land sparing outperforms land sharing across an elevational gradient in tropical cattle-farming landscapes",
+      "anio": 2026,
+      "revista": "DRYAD",
+      "enlace": "https://doi.org/10.5061/dryad.fttdz095g"
+    },
+    {
+      "titulo": "Developing an evidence-based method to assess the impact of local development on moorland fringe bird populations",
+      "anio": 2026,
+      "revista": "e-space (Manchester Metropolitan University)",
+      "enlace": "https://e-space.mmu.ac.uk/619952/1/Chris_harrison_corrected_PhD%20thesis_0997855_2.pdf"
+    },
+    {
+      "titulo": "Diversidad y estructura florística en sistemas agroforestales de cacao (Theobroma cacao) en cinco ecorregiones de Colombia",
+      "anio": 2026,
+      "revista": "Revista de Biología Tropical",
+      "enlace": "https://doi.org/10.15517/q8khh806"
+    },
+    {
+      "titulo": "DIVERSIDADE DE AVES EM FRAGMENTOS DE VEGETAÇÃO NATIVA EM PAISAGEM AGRÍCOLA NO CERRADO MATO-GROSSENSE",
+      "anio": 2026,
+      "revista": "Biodiversidade",
+      "enlace": "https://periodicoscientificos.ufmt.br/ojs/index.php/biodiversidade/article/view/21698"
+    },
+    {
+      "titulo": "Diversity and Ecological Importance of Pollinating Insects in Agricultural Ecosystems",
+      "anio": 2026,
+      "revista": "`Cadernos de Pós-Graduação em Direito Político e Econômico",
+      "enlace": "https://ceapress.org/index.php/cpgdpe/article/view/315"
+    },
+    {
+      "titulo": "DiVert : A Global Database of Land Use and Management Effects on Local Vertebrate Abundance and Diversity",
+      "anio": 2026,
+      "revista": "Global Ecology and Biogeography",
+      "enlace": "https://doi.org/10.1111/geb.70261"
+    },
+    {
+      "titulo": "Dominant functional group explains global bird diversity responses to farmland abandonment",
+      "anio": 2026,
+      "revista": "Proceedings of the National Academy of Sciences",
+      "enlace": "https://doi.org/10.1073/pnas.2530120123"
+    },
+    {
+      "titulo": "Drivers of bird community structure in an agricultural landscape within a Mexican biosphere reserve",
+      "anio": 2026,
+      "revista": "Ornithology Research",
+      "enlace": "https://doi.org/10.1007/s43388-026-00296-x"
+    },
+    {
+      "titulo": "Ecomorphological Traits of Bird Communities Along Urbanization Gradient in A Tropical Peri-Urban Landscape of Bogor, Indonesia",
+      "anio": 2026,
+      "revista": "Jurnal Pengelolaan Sumberdaya Alam dan Lingkungan (Journal of Natural Resources and Environmental Management)",
+      "enlace": "https://doi.org/10.29244/jpsl.16.4.437"
+    },
+    {
+      "titulo": "Effects of Highway Construction on Landscape Patterns, Ecosystem Service Value, Habitat Connectivity and Their Associations in Zhejiang, China",
+      "anio": 2026,
+      "revista": "Forests",
+      "enlace": "https://doi.org/10.3390/f17030338"
+    },
+    {
+      "titulo": "Effects of landscape context on avian specialist response to increased surface temperature in protected areas",
+      "anio": 2026,
+      "revista": "Conservation Biology",
+      "enlace": "https://doi.org/10.1111/cobi.70230"
+    },
+    {
+      "titulo": "Effects of landscape structure on taxonomic and functional diversity in a bird community in the Topocoro reservoir influence area, Santander, through time*",
+      "anio": 2026,
+      "revista": "Universidad Industrial de Santander",
+      "enlace": "https://noesis.uis.edu.co/handle/20.500.14071/47243"
+    },
+    {
+      "titulo": "Effects of Land‐Use Intensification on Floral Resources, Bird Assemblages and Bird‐Flower Interaction Networks in the Western Ghats, India",
+      "anio": 2026,
+      "revista": "Biotropica",
+      "enlace": "https://doi.org/10.1111/btp.70262"
+    },
+    {
+      "titulo": "Effects of pesticide use and farming practices on rice production and bird conservation",
+      "anio": 2026,
+      "revista": "Agriculture Ecosystems & Environment",
+      "enlace": "https://doi.org/10.1016/j.agee.2026.110739"
+    },
+    {
+      "titulo": "El aporte de diversos agroecosistemas a la conservación de las aves en los Andes tropicales, Colombia",
+      "anio": 2026,
+      "revista": "Repositorio Universidad de Caldas",
+      "enlace": "https://repositorio.ucaldas.edu.co/handle/ucaldas/27544"
+    },
+    {
+      "titulo": "Enemy mitigation in farmlands: Intensive agriculture impacts avian nesting and subsequent ectoparasite infestation",
+      "anio": 2026,
+      "revista": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "enlace": "https://doi.org/10.64898/2026.02.02.703377"
+    },
+    {
+      "titulo": "Energy and heterogeneity shape bird taxonomic and functional gamma-diversity patterns across landscapes in Finland",
+      "anio": 2026,
+      "revista": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "enlace": "https://doi.org/10.64898/2026.04.13.717752"
+    },
+    {
+      "titulo": "Especies Amenazadas: El Caso de las Magnolias",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.21410366"
+    },
+    {
+      "titulo": "Ethno-ornithology and local ecological knowledge of birds in the agroforestry landscapes of Kalibawang, Central Java, Indonesia",
+      "anio": 2026,
+      "revista": "Asian Journal of Ethnobiology",
+      "enlace": "https://doi.org/10.13057/asianjethnobiol/y080219"
+    },
+    {
+      "titulo": "European Migratory Birds Face Increasing Problems in Ghana",
+      "anio": 2026,
+      "revista": "Ardea",
+      "enlace": "https://doi.org/10.5253/arde.2026.a6"
+    },
+    {
+      "titulo": "Evaluación de la avifauna asociada a cercas vivas en la zonaaltoandina, Nariño",
+      "anio": 2026,
+      "revista": "Caldasia",
+      "enlace": "https://doi.org/10.15446/caldasia.v48.117269"
+    },
+    {
+      "titulo": "Evaluating interactive effects of the Conservation Reserve Program and wind energy infrastructure on grassland bird abundance in the United States",
+      "anio": 2026,
+      "revista": "Royal Society Open Science",
+      "enlace": "https://doi.org/10.1098/rsos.250964"
+    },
+    {
+      "titulo": "EXPLORING THE DIVERSITY, ECOLOGICAL ROLES AND CONSERVATION OF BUTTERFLIES",
+      "anio": 2026,
+      "revista": "The Research of Medical Science Review",
+      "enlace": "https://medicalsciencereview.com/index.php/Journal/article/view/3279"
+    },
+    {
+      "titulo": "Extreme weather and unintended consequences in climate adaptation interventions for biodiversity",
+      "anio": 2026,
+      "revista": "Queensland University of Technology",
+      "enlace": "https://doi.org/10.5204/thesis.eprints.263542"
+    },
+    {
+      "titulo": "Farmland birds in boreal forest clear-cuts: species traits, source areas and conservation value",
+      "anio": 2026,
+      "revista": "Journal für Ornithologie",
+      "enlace": "https://doi.org/10.1007/s10336-026-02377-6"
+    },
+    {
+      "titulo": "Farmland game bird responses to land use and landscape structure: towards conservation-focused management recommendations",
+      "anio": 2026,
+      "revista": "SSRN Electronic Journal",
+      "enlace": "https://doi.org/10.2139/ssrn.7314682"
+    },
+    {
+      "titulo": "Food Sovereignty and Agroecology in Conflict Zones: Building Resilience Amidst Crisis",
+      "anio": 2026,
+      "revista": "Food and Energy Security",
+      "enlace": "https://doi.org/10.1002/fes3.70296"
+    },
+    {
+      "titulo": "Forest cover drives bird occupancy across guilds and habitats in a Colombian coffee‐farming landscape",
+      "anio": 2026,
+      "revista": "Journal of Applied Ecology",
+      "enlace": "https://doi.org/10.1111/1365-2664.70414"
+    },
+    {
+      "titulo": "Forests and Climate Change",
+      "anio": 2026,
+      "revista": "Springer eBooks",
+      "enlace": "https://doi.org/10.1007/978-3-032-04331-3_9"
+    },
+    {
+      "titulo": "Future Urban and Rural Built-Up Land Change and Implications for Biodiversity in China",
+      "anio": 2026,
+      "revista": "ISPRS International Journal of Geo-Information",
+      "enlace": "https://doi.org/10.3390/ijgi15070314"
+    },
+    {
+      "titulo": "Growing appetite for açaí is damaging bird diversity in the Amazon",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.66709/news-321214"
+    },
+    {
+      "titulo": "Habitat model for the woodlark in wood pastures of the Jura mountains in Neuchâtel",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.15303340"
+    },
+    {
+      "titulo": "Habitat selection of a declining steppe-bird stresses the conservation value of fallows and non-intensive orchards",
+      "anio": 2026,
+      "revista": "Agriculture Ecosystems & Environment",
+      "enlace": "https://doi.org/10.1016/j.agee.2026.110508"
+    },
+    {
+      "titulo": "Habitat structure and landscape context influence vocalising vertebrates in oil palm plantations",
+      "anio": 2026,
+      "revista": "Biodiversity and Conservation",
+      "enlace": "https://doi.org/10.1007/s10531-026-03259-2"
+    },
+    {
+      "titulo": "Habitat Structure Outweighs Monastic Legacy in Shaping Bird Assemblages",
+      "anio": 2026,
+      "revista": "Animals",
+      "enlace": "https://doi.org/10.3390/ani16101534"
+    },
+    {
+      "titulo": "Habitat transformation reshapes diversity and community structure of amphibians and reptiles in the Eastern Andes",
+      "anio": 2026,
+      "revista": "Herpetozoa",
+      "enlace": "https://doi.org/10.3897/herpetozoa.39.e171614"
+    },
+    {
+      "titulo": "Heterogeneous orchard configurations support abundant breeding bird populations and diverse communities in intensive apple orchards",
+      "anio": 2026,
+      "revista": "Agriculture Ecosystems & Environment",
+      "enlace": "https://doi.org/10.1016/j.agee.2026.110599"
+    },
+    {
+      "titulo": "Historical land cover composition and recent land cover change drive disproportionate range exposure across Australian species",
+      "anio": 2026,
+      "revista": "Biological Conservation",
+      "enlace": "https://doi.org/10.1016/j.biocon.2026.111889"
+    },
+    {
+      "titulo": "Identifying Potential OECM Sites for Endangered Birds to Achieve the '30 by 30' Target in South Korea: Integrating Ecological Value and Socio-Economic Costs",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.5194/egusphere-egu26-10520"
+    },
+    {
+      "titulo": "Improving efficiency in conservation planning by modeling species‐specific responses to threat abatement",
+      "anio": 2026,
+      "revista": "Conservation Biology",
+      "enlace": "https://doi.org/10.1111/cobi.70344"
+    },
+    {
+      "titulo": "iNaturalist as a Tool to Improve Agroecological Biodiversity Knowledge: An Ecuadorian Case Study",
+      "anio": 2026,
+      "revista": "Citizen Science Theory and Practice",
+      "enlace": "https://doi.org/10.5334/cstp.819"
+    },
+    {
+      "titulo": "Influence of Forest Proximity on Species Composition and Diversity of Avifauna in Buffer Zones",
+      "anio": 2026,
+      "revista": "Proceedings of International Forestry and Environment Symposium",
+      "enlace": "https://doi.org/10.31357/fesympo.v30.8930"
+    },
+    {
+      "titulo": "Influence of mowing timing on the breeding success of an endangered ground-nesting migratory bird, Whinchat (Saxicola rubetra)",
+      "anio": 2026,
+      "revista": "European Journal of Wildlife Research",
+      "enlace": "https://doi.org/10.1007/s10344-025-02045-9"
+    }
+  ]
+}

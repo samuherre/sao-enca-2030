@@ -30,6 +30,23 @@ export interface ConteoOFC {
   readonly gc_articulos_sin_autoria: number;
 }
 
+/** Artículo individual para listar "detrás de" una barra (p. ej. un OFC). */
+export interface ArticuloItem {
+  readonly titulo: string;
+  readonly anio: number | null;
+  readonly revista: string | null;
+  readonly enlace: string | null;
+}
+
+/** Listado (acotado) de los artículos clasificados en un OFC. */
+export interface ArticulosOFC {
+  readonly ofc_id: string;
+  readonly nombre: string;
+  readonly total: number;
+  readonly mostrados: number;
+  readonly items: readonly ArticuloItem[];
+}
+
 /** Ficha descriptiva pública de un OFC (catálogo oficial ENCA 2030). */
 export interface DescripcionOFC {
   readonly ofc_id: string;

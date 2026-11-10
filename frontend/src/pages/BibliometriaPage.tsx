@@ -15,7 +15,7 @@
 // Los gráficos usan Recharts. Los estados de carga/error/vacío reutilizan los
 // componentes compartidos (LoadingIndicator, ErrorBanner, EmptyState).
 
-import { useState, type CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import {
   Bar,
   BarChart,
@@ -31,8 +31,12 @@ import {
 
 import { EmptyState, ErrorBanner, LoadingIndicator } from "../components";
 import { useResumenConsolidado } from "../hooks";
-import { urlDescargaConsolidadoCsv } from "../services";
-import type { ResumenConsolidado } from "../types";
+import {
+  obtenerArticulosDeOfc,
+  urlDescargaArticulosOfcCsv,
+  urlDescargaConsolidadoCsv,
+} from "../services";
+import type { ArticulosOFC, ResumenConsolidado } from "../types";
 
 /** Valor del desplegable que representa "todos los años" (sin filtro). */
 const TODOS_LOS_ANIOS = "todos";
@@ -343,6 +347,11 @@ function ExplicacionOFC({
 
 /** Gráfico de barras horizontales para la distribución por OFC. */
 function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
+  // OFC seleccionado para ver sus artículos (null = ninguno).
+  const [ofcSel, setOfcSel] = useState<string | null>(null);
+  const onSeleccionarOfc = (ofc: string) =>
+    setOfcSel((actual) => (actual === ofc ? null : ofc));
+
   if (!resumen.clasificacion_disponible) {
     return (
       <section style={{ marginTop: "1.5rem" }}>
@@ -377,6 +386,9 @@ function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
         descripcion={resumen.ofc_descripcion}
         catalogo={resumen.catalogo_ofc}
       />
+      <p style={{ color: "#567", fontSize: "0.82rem", margin: "0 0 0.25rem" }}>
+        Haz clic en una barra para ver los artículos de ese OFC.
+      </p>
       <div style={{ width: "100%", height: alto }}>
         <ResponsiveContainer>
           <BarChart
@@ -394,12 +406,127 @@ function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
               }
             />
             <Legend />
-            <Bar dataKey="conteo" name="Artículos" fill="#2f8f5b" radius={[0, 4, 4, 0]} />
+            <Bar
+              dataKey="conteo"
+              name="Artículos"
+              fill="#2f8f5b"
+              radius={[0, 4, 4, 0]}
+              cursor="pointer"
+              onClick={(payload: unknown) => {
+                const ofc = (payload as { ofc?: string } | undefined)?.ofc;
+                if (ofc) onSeleccionarOfc(ofc);
+              }}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>
+      {ofcSel && <ArticulosOfcPanel ofcId={ofcSel} onCerrar={() => setOfcSel(null)} />}
       <GradoColaboracionTable por_ofc={resumen.por_ofc} />
     </section>
+  );
+}
+
+/**
+ * Panel con los artículos "detrás de" un OFC: lista acotada (título enlazado +
+ * año/revista) y botón para descargar el CSV completo de ese OFC. Se carga al
+ * hacer clic en la barra; mientras carga muestra un indicador. Pensado para
+ * mapear al patrón de ArcGIS (pop-up con registros + descarga).
+ */
+function ArticulosOfcPanel({
+  ofcId,
+  onCerrar,
+}: {
+  ofcId: string;
+  onCerrar: () => void;
+}) {
+  const [data, setData] = useState<ArticulosOFC | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let activo = true;
+    setData(null);
+    setError(null);
+    obtenerArticulosDeOfc(ofcId)
+      .then((res) => {
+        if (activo) setData(res);
+      })
+      .catch(() => {
+        if (activo) setError("No se pudieron cargar los artículos de este OFC.");
+      });
+    return () => {
+      activo = false;
+    };
+  }, [ofcId]);
+
+  return (
+    <div
+      style={{
+        marginTop: "1rem",
+        padding: "0.75rem 1rem",
+        border: "1px solid #c5d6cb",
+        borderRadius: "0.5rem",
+        backgroundColor: "#fbfdfc",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap" }}>
+        <h4 style={{ margin: 0 }}>
+          Artículos de {data ? `${data.nombre} (${data.ofc_id})` : ofcId}
+        </h4>
+        <button
+          type="button"
+          onClick={onCerrar}
+          style={{
+            marginLeft: "auto",
+            padding: "0.25rem 0.6rem",
+            borderRadius: "0.4rem",
+            border: "1px solid #c5d6cb",
+            backgroundColor: "#fff",
+            cursor: "pointer",
+            fontSize: "0.8rem",
+          }}
+        >
+          Cerrar ✕
+        </button>
+      </div>
+
+      {error && <ErrorBanner error={error} />}
+      {!data && !error && <LoadingIndicator message="Cargando artículos…" />}
+
+      {data && (
+        <>
+          <p style={{ color: "#567", fontSize: "0.85rem", margin: "0.5rem 0" }}>
+            {data.total} artículo(s) en este OFC.
+            {data.mostrados < data.total
+              ? ` Mostrando los primeros ${data.mostrados}; descarga el CSV para ver todos.`
+              : ""}
+            <a
+              href={urlDescargaArticulosOfcCsv(data.ofc_id)}
+              download
+              style={{ marginLeft: "0.5rem", color: "#1f5c3a", fontWeight: 600 }}
+            >
+              ⬇ Descargar CSV de este OFC
+            </a>
+          </p>
+          <ol style={{ margin: 0, paddingLeft: "1.25rem" }}>
+            {data.items.map((a, i) => (
+              <li key={i} style={{ marginBottom: "0.35rem", fontSize: "0.9rem" }}>
+                {a.enlace ? (
+                  <a href={a.enlace} target="_blank" rel="noopener noreferrer">
+                    {a.titulo}
+                  </a>
+                ) : (
+                  <span>{a.titulo}</span>
+                )}
+                <span style={{ color: "#789" }}>
+                  {a.anio ? ` · ${a.anio}` : ""}
+                  {a.revista ? ` · ${a.revista}` : ""}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </>
+      )}
+    </div>
   );
 }
 
@@ -467,134 +594,6 @@ function GradoColaboracionTable({
 }
 
 /** Tabla de completitud de metadata (campo → con dato / total). */
-function CompletitudTable({
-  completitud,
-}: {
-  completitud: ResumenConsolidado["completitud"];
-}) {
-  return (
-    <section style={{ marginTop: "1.5rem" }}>
-      <h3 style={{ marginBottom: "0.5rem" }}>Completitud de metadata</h3>
-      <table style={{ borderCollapse: "collapse", width: "100%", maxWidth: 480 }}>
-        <thead>
-          <tr>
-            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
-              Campo
-            </th>
-            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
-              Con dato
-            </th>
-            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
-              %
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {completitud.map((c) => {
-            const pct = c.total > 0 ? Math.round((100 * c.con_dato) / c.total) : 0;
-            return (
-              <tr key={c.campo}>
-                <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{c.campo}</td>
-                <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
-                  {c.con_dato} / {c.total}
-                </td>
-                <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
-                  {pct}%
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </section>
-  );
-}
-
-/**
- * Sección "Aporte por fuente" (información complementaria).
- *
- * Indica, por cada fuente con dataset procesado, cuántos artículos aporta al
- * total consolidado y su completitud global de metadata. NO fragmenta el
- * análisis por fuente: es un desglose complementario del conjunto.
- */
-function AportePorFuenteSection({
-  aporte,
-}: {
-  aporte: ResumenConsolidado["aporte_por_fuente"];
-}) {
-  return (
-    <section style={{ marginTop: "1.5rem" }}>
-      <h3 style={{ marginBottom: "0.25rem" }}>Aporte por fuente</h3>
-      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
-        Información complementaria: cuánto aporta cada fuente al conjunto consolidado. El análisis
-        sigue siendo único; no se separa por fuente.
-      </p>
-      {aporte.length === 0 ? (
-        <EmptyState message="Aún no hay fuentes con dataset procesado." />
-      ) : (
-        <table style={{ borderCollapse: "collapse", width: "100%", maxWidth: 480 }}>
-          <thead>
-            <tr>
-              <th
-                style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}
-              >
-                Fuente
-              </th>
-              <th
-                style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}
-              >
-                Artículos
-              </th>
-              <th
-                style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}
-              >
-                Completitud
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {aporte.map((f) => {
-              // Completitud global de la fuente: promedio de % por campo.
-              const pct =
-                f.completitud.length > 0
-                  ? Math.round(
-                      f.completitud.reduce(
-                        (acc, c) => acc + (c.total > 0 ? (100 * c.con_dato) / c.total : 0),
-                        0,
-                      ) / f.completitud.length,
-                    )
-                  : 0;
-              return (
-                <tr key={f.fuente}>
-                  <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{f.fuente}</td>
-                  <td
-                    style={{
-                      padding: "0.4rem",
-                      textAlign: "right",
-                      borderBottom: "1px solid #eee",
-                    }}
-                  >
-                    {f.total_articulos}
-                  </td>
-                  <td
-                    style={{
-                      padding: "0.4rem",
-                      textAlign: "right",
-                      borderBottom: "1px solid #eee",
-                    }}
-                  >
-                    {pct}%
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      )}
-    </section>
-  );
-}
-
 /** Página del dashboard bibliométrico consolidado. */
 export function BibliometriaPage() {
   // Año seleccionado para el filtro (null = "Todos"). Al cambiarlo, el hook
@@ -663,16 +662,13 @@ export function BibliometriaPage() {
       </div>
 
       {data.total_articulos === 0 ? (
-        <>
-          <EmptyState
-            message={
-              anio != null
-                ? `No hay artículos del año ${anio} en ninguna fuente.`
-                : "Aún no hay artículos procesados en ninguna fuente. Ejecuta los pipelines de ingesta para generar los datasets procesados."
-            }
-          />
-          <AportePorFuenteSection aporte={data.aporte_por_fuente} />
-        </>
+        <EmptyState
+          message={
+            anio != null
+              ? `No hay artículos del año ${anio} en ninguna fuente.`
+              : "Aún no hay artículos procesados en ninguna fuente. Ejecuta los pipelines de ingesta para generar los datasets procesados."
+          }
+        />
       ) : (
         <>
           {/* Métricas resumen sobre el conjunto consolidado */}
@@ -685,8 +681,6 @@ export function BibliometriaPage() {
           <OFCCard resumen={data} />
           <RevistasCard data={data.por_revista} />
           <BarsCard title="Artículos por idioma" data={data.por_idioma} />
-          <CompletitudTable completitud={data.completitud} />
-          <AportePorFuenteSection aporte={data.aporte_por_fuente} />
         </>
       )}
     </div>

@@ -20,10 +20,15 @@ from fastapi import APIRouter
 from fastapi.responses import Response
 
 from backend.src.schemas.bibliometria import (
+    ArticulosOFC,
     ResumenBibliometrico,
     ResumenConsolidado,
 )
 from backend.src.services.bibliometria_service import BibliometriaService
+
+# Máximo de artículos que se devuelven en el listado JSON por OFC (para no
+# volcar miles en el navegador). La descarga CSV sí trae todos.
+_LIMITE_LISTA_OFC = 100
 
 
 def _csv_response(contenido: str, nombre_archivo: str) -> Response:
@@ -116,6 +121,34 @@ def exportar_consolidado_csv_por_anio(anio: int) -> Response:
     servicio = BibliometriaService()
     contenido = servicio.exportar_consolidado_csv(anio=anio)
     return _csv_response(contenido, f"articulos_sao_{anio}.csv")
+
+
+@router.get(
+    "/bibliometria/ofc/{ofc_id}/articulos",
+    response_model=ArticulosOFC,
+    summary="Artículos clasificados en un OFC (listado acotado para la vista)",
+)
+def articulos_de_ofc(ofc_id: str) -> ArticulosOFC:
+    """Lista los artículos de un OFC para ver "detrás de" la barra del dashboard.
+
+    Devuelve el total real del OFC y una lista acotada (``_LIMITE_LISTA_OFC``)
+    con título, año, revista y enlace de cada artículo. Para el conjunto completo
+    se usa la descarga CSV (``/bibliometria/ofc/{ofc_id}/export.csv``).
+    """
+    servicio = BibliometriaService()
+    return servicio.articulos_de_ofc(ofc_id, limite=_LIMITE_LISTA_OFC)
+
+
+@router.get(
+    "/bibliometria/ofc/{ofc_id}/export.csv",
+    summary="Descarga CSV de todos los artículos de un OFC",
+    response_class=Response,
+)
+def exportar_articulos_ofc_csv(ofc_id: str) -> Response:
+    """Descarga el conjunto COMPLETO de artículos de un OFC como CSV."""
+    servicio = BibliometriaService()
+    contenido = servicio.exportar_articulos_ofc_csv(ofc_id)
+    return _csv_response(contenido, f"articulos_{ofc_id}.csv")
 
 
 @router.get(

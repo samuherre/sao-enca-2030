@@ -1,0 +1,608 @@
+{
+  "ofc_id": "OFC-10",
+  "nombre": "Sistemas culturales asociados a la apreciación de las aves",
+  "total": 141,
+  "mostrados": 100,
+  "items": [
+    {
+      "titulo": "Aves del proyecto Yaire - Región del medio Río Caquetá",
+      "anio": 2026,
+      "revista": "SiB Colombia - GBIF Colombia",
+      "enlace": "https://doi.org/10.15472/x5axhj"
+    },
+    {
+      "titulo": "Avian diversity and ethnoornithology in Pawukon - a 19th-Century Javanese manuscript : informing contemporary conservation of vulnerable species",
+      "anio": 2026,
+      "revista": "Journal of Ethnobiology and Ethnomedicine",
+      "enlace": "https://doi.org/10.1186/s13002-026-00858-9"
+    },
+    {
+      "titulo": "Avian ecology: Conceptual foundations, diversity patterns, anthropogenic impacts, and conservation challenges in Indian and global contexts",
+      "anio": 2026,
+      "revista": "International Journal of Fauna and Biological Studies",
+      "enlace": "https://doi.org/10.22271/23940522.2026.v13.i2a.1177"
+    },
+    {
+      "titulo": "Avifauna en el Resguardo Indigena de origen colonial Cañamomo Lomaprieta",
+      "anio": 2026,
+      "revista": "The Catalogue of Life",
+      "enlace": "https://doi.org/10.48580/dfggw"
+    },
+    {
+      "titulo": "Biodiversidade e ecoacústica na Amazônia brasileira: padrões ecológicos e conservação em sistemas manejados de várzea",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://doi.org/10.61818/ted25137"
+    },
+    {
+      "titulo": "Biodiversity Crisis in North-East India and efforts for it's conservation",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.23000659"
+    },
+    {
+      "titulo": "CAPÍTULO 4 - ETNOORNITOLOGIA DOS SERTÕES: UMA REVISÃO PRELIMINAR SOBRE AVES EXPLORADAS POR POVOS DA CAATINGA E DO CERRADO BRASILEIRO",
+      "anio": 2026,
+      "revista": "Wissen Editora eBooks",
+      "enlace": "https://doi.org/10.52832/wed.197.1132"
+    },
+    {
+      "titulo": "Climate Change in the Southern Cone from the Mid‑Nineteenth Century to 1950",
+      "anio": 2026,
+      "revista": "Bielefeld University Press eBooks",
+      "enlace": "https://doi.org/10.14361/9783839470152-181"
+    },
+    {
+      "titulo": "Community Knowledge of the Role of Birds and Insects in Agriculture in Ambagarh Chowki",
+      "anio": 2026,
+      "revista": "International Journal For Multidisciplinary Research",
+      "enlace": "https://doi.org/10.36948/ijfmr.2026.v08i01.66889"
+    },
+    {
+      "titulo": "Conocimiento tradicional y uso de vertebrados silvestres en comunidades totonacas de la región Norte Nororiental de Puebla, México",
+      "anio": 2026,
+      "revista": "ETNOBIOLOGÍA",
+      "enlace": "https://doi.org/10.51438/etnobiolv24n1a7"
+    },
+    {
+      "titulo": "Conocimientos y usos locales de la fauna silvestre en La Dorada (Caldas, Colombia)",
+      "anio": 2026,
+      "revista": "Revista Mutis",
+      "enlace": "https://doi.org/10.21789/22561498.2197"
+    },
+    {
+      "titulo": "DEFORESTATION, FLOODS, AND LOSS: AN ECOCRITICAL ANALYSIS OF SUFIA HUMAYUN’S FICTION",
+      "anio": 2026,
+      "revista": "International Premier Journal of Languages & Literature",
+      "enlace": "https://ipjll.com/ipjll/index.php/journal/article/view/337"
+    },
+    {
+      "titulo": "Ecocritical Perspectives in Cho. Dharman's Sogavanam: A Tamil Literary Theoretical Approach",
+      "anio": 2026,
+      "revista": "International Research Journal of Tamil",
+      "enlace": "https://irjt.iorpress.org/index.php/irjt/article/view/2623"
+    },
+    {
+      "titulo": "Ethno-ornithology and local ecological knowledge of birds in the agroforestry landscapes of Kalibawang, Central Java, Indonesia",
+      "anio": 2026,
+      "revista": "Asian Journal of Ethnobiology",
+      "enlace": "https://doi.org/10.13057/asianjethnobiol/y080219"
+    },
+    {
+      "titulo": "Folk songs related to birds and animals in Shekhawati region, Rajasthan",
+      "anio": 2026,
+      "revista": "International Journal of Multidisciplinary Research and Development",
+      "enlace": "https://doi.org/10.66856/ijmrd.2026.13.4.13399"
+    },
+    {
+      "titulo": "Food Sovereignty and Agroecology in Conflict Zones: Building Resilience Amidst Crisis",
+      "anio": 2026,
+      "revista": "Food and Energy Security",
+      "enlace": "https://doi.org/10.1002/fes3.70296"
+    },
+    {
+      "titulo": "From the banks of the Cuiabá river to the Skies of the Pantanal: oral tradition and knowledge of birds",
+      "anio": 2026,
+      "revista": "Cadernos Cajuína",
+      "enlace": "https://doi.org/10.52641/cadcajv11i1.1856"
+    },
+    {
+      "titulo": "Indigenous People Rituals and Conservation of Threatened Bird Species Among Ethnic Groups, in Cross River State, Nigeria",
+      "anio": 2026,
+      "revista": "Afrischolar Discovery",
+      "enlace": "https://doi.org/10.60787/jete.vol9no1.699-710"
+    },
+    {
+      "titulo": "Integration of Local Ecological Knowledge in Bird-of-Paradise Conservation Strategy: A Case Study in the Tabi and Saireri Traditional Areas",
+      "anio": 2026,
+      "revista": "Prisma Sains Jurnal Pengkajian Ilmu dan Pembelajaran Matematika dan IPA IKIP Mataram",
+      "enlace": "https://doi.org/10.33394/j-ps.v14i2.19335"
+    },
+    {
+      "titulo": "La avifauna del norte de Bolívar, Colombia: diversidad, distribución y conservación.",
+      "anio": 2026,
+      "revista": "Biblioteca Digital Universidad de Cartagena",
+      "enlace": "https://hdl.handle.net/11227/22125"
+    },
+    {
+      "titulo": "La Gobernabilidad de la Biodiversidad en Colombia: ¿TLC o CDB, quién controla el campo?",
+      "anio": 2026,
+      "revista": "Revista Ciencias Sociales",
+      "enlace": "https://revistadigital.uce.edu.ec/index.php/CSOCIALES/article/view/9786"
+    },
+    {
+      "titulo": "Nurturing biocultural memory during crisis: a methodological approach and its influence on wetland birds and community conservation in Chile",
+      "anio": 2026,
+      "revista": "Ecology and Society",
+      "enlace": "https://doi.org/10.5751/es-17432-310320"
+    },
+    {
+      "titulo": "O O Perfil dos Condutores de Turismo da Área de Proteção Ambiental Delta do Parnaíba: Percepções sobre o Birdwatching e a Conservação",
+      "anio": 2026,
+      "revista": "Dialnet (Universidad de la Rioja)",
+      "enlace": "https://dialnet.unirioja.es/servlet/oaiart?codigo=10792350"
+    },
+    {
+      "titulo": "O PERFIL DOS CONDUTORES DE TURISMO DA ÁREA DE PROTEÇÃO AMBIENTAL DELTA DO PARNAÍBA: PERCEPÇÕES SOBRE O BIRDWATCHING E A CONSERVAÇÃO",
+      "anio": 2026,
+      "revista": "Anais Brasileiros de Estudos Turísticos - ABET",
+      "enlace": "https://periodicos.ufjf.br/index.php/abet/article/view/51577"
+    },
+    {
+      "titulo": "Safeguarding Mallee Birds - Condition States Map",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.21307077"
+    },
+    {
+      "titulo": "Safeguarding Mallee Birds - Mallee Birds Habitat Suitability Maps",
+      "anio": 2026,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.21306721"
+    },
+    {
+      "titulo": "Wild bird captivity in the Brazilian semiarid region: practices, conflicts, and species richness in a protected area buffer zone",
+      "anio": 2026,
+      "revista": "Journal of Ethnobiology and Ethnomedicine",
+      "enlace": "https://doi.org/10.1186/s13002-026-00857-w"
+    },
+    {
+      "titulo": "(sin título)",
+      "anio": 2025,
+      "revista": "International journal of applied research",
+      "enlace": "https://doi.org/10.22271/allresearch.2025.v11.i7.b"
+    },
+    {
+      "titulo": "Análisis de Percepción del Cambio Climático de la Comuna Kichwa Puyupungo",
+      "anio": 2025,
+      "revista": "Ciencia Latina Revista Científica Multidisciplinar",
+      "enlace": "https://doi.org/10.37811/cl_rcm.v9i1.16124"
+    },
+    {
+      "titulo": "Community-Based Bird Conservation Practices in Rural Rajasthan: A Case Study from Jalore",
+      "anio": 2025,
+      "revista": "International Journal on Science and Technology",
+      "enlace": "https://doi.org/10.71097/ijsat.v16.i2.5965"
+    },
+    {
+      "titulo": "Ecogubernamentalidad, áreas de conservación y autonomía indigena. Perspectiva Quillasinga en la laguna de La Cocha, Colombia",
+      "anio": 2025,
+      "revista": "Bitácora Urbano Territorial",
+      "enlace": "https://doi.org/10.15446/bitacora.v34n3.113556"
+    },
+    {
+      "titulo": "Ethno-ornithology, Hunting and Conservation of Wild Birds in Kashmir Himalayas, India",
+      "anio": 2025,
+      "revista": "Human Ecology",
+      "enlace": "https://doi.org/10.1007/s10745-025-00590-0"
+    },
+    {
+      "titulo": "ETHNOZOOLOGY- FAUNAL DIVERSITY IN FOLKLORES OF SHEKHAWATI, RAJASTHAN",
+      "anio": 2025,
+      "revista": "International Journal of Research -GRANTHAALAYAH",
+      "enlace": "https://doi.org/10.29121/granthaalayah.v12.i12.2024.5871"
+    },
+    {
+      "titulo": "Evaluación florística y ecológica del ecosistema altoandino Sachapata Nuñoa, Puno- Perú para su conservación",
+      "anio": 2025,
+      "revista": "Revista Alfa",
+      "enlace": "https://doi.org/10.33996/revistaalfa.v9i26.371"
+    },
+    {
+      "titulo": "Faith and Feathers: How Seventh‐Day Adventism Shapes Traditional Knowledge of the Vanate (Raggiana Bird of Paradise) along the Kokoda Track",
+      "anio": 2025,
+      "revista": "Ecological Management & Restoration",
+      "enlace": "https://doi.org/10.1111/emr.70008"
+    },
+    {
+      "titulo": "Interactions Between People and Birds of Prey in Semi-Arid Regions of Brazil: Ethno-Ornithology and Conservation",
+      "anio": 2025,
+      "revista": "Birds",
+      "enlace": "https://doi.org/10.3390/birds6030035"
+    },
+    {
+      "titulo": "Ley de origen y determinaciones normativas del Estado nación - Contrastes en la gestión del territorio Biocultural Colombia desde el enfoque indígena",
+      "anio": 2025,
+      "revista": "Revista Interamericana de Investigación Educación y Pedagogía RIIEP",
+      "enlace": "https://doi.org/10.15332/25005421.10763"
+    },
+    {
+      "titulo": "Medicinal and food uses of wildlife in rural communities in the Yucatan Peninsula, Mexico",
+      "anio": 2025,
+      "revista": null,
+      "enlace": "https://doi.org/10.52756/bhietm.2025.v04.010"
+    },
+    {
+      "titulo": "Review Understanding Ethno-Ornithology - Birds of the Residents?",
+      "anio": 2025,
+      "revista": "Acta Scientiarum Animal Sciences",
+      "enlace": "https://doi.org/10.4025/actascianimsci.v47i1.70971"
+    },
+    {
+      "titulo": "The Effects of Remoteness and Forest Cover on Bird Knowledge in Two Language Communities of Myanmar",
+      "anio": 2025,
+      "revista": "Journal of Ethnobiology",
+      "enlace": "https://doi.org/10.1177/02780771251368557"
+    },
+    {
+      "titulo": "The Role of the Traditional Knowledge of the ‘Bawalis’ in the Conservation of the Sundarbans Mangrove",
+      "anio": 2025,
+      "revista": "SSRN Electronic Journal",
+      "enlace": "https://doi.org/10.2139/ssrn.5435516"
+    },
+    {
+      "titulo": "Thengimo Hills: Biodiversity & Ethnoecology of a Tribal Forest Landscape in Dumka, Jharkhand, India (2025)",
+      "anio": 2025,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.17495381"
+    },
+    {
+      "titulo": "Traditional agroforestry systems in Europe revisited: a systematic review",
+      "anio": 2025,
+      "revista": "Agroforestry Systems",
+      "enlace": "https://doi.org/10.1007/s10457-025-01335-0"
+    },
+    {
+      "titulo": "Uso de grabadoras de sonido para documentar la diversidad biocultural de la Avifauna de las Tierras Altas Colectivas Emberá de Balsa, Darién, Panamá",
+      "anio": 2025,
+      "revista": "Tecnociencia",
+      "enlace": "https://doi.org/10.48204/j.tecno.v27n2.a7672"
+    },
+    {
+      "titulo": "Uso de la fauna silvestre por comunidades rurales en la Ciénaga de Ayapel, Colombia",
+      "anio": 2025,
+      "revista": "Dialnet (Universidad de la Rioja)",
+      "enlace": "https://dialnet.unirioja.es/servlet/oaiart?codigo=10561991"
+    },
+    {
+      "titulo": "Uso e comércio de aves silvestres como pets em um ecótono piauiense: Etnoornitologia e conservação",
+      "anio": 2025,
+      "revista": "Revista Semiárido De Visu",
+      "enlace": "https://doi.org/10.31416/rsdv.v13i3.1626"
+    },
+    {
+      "titulo": "Wildlife Use by Rural Communities in the Ayapel Wetland, Colombia",
+      "anio": 2025,
+      "revista": "Intropica",
+      "enlace": "https://doi.org/10.21676/23897864.6494"
+    },
+    {
+      "titulo": "Agrobiodiversidade em quintais agroflorestais indígenas Tikuna no município de Benjamim Constant - AM, fronteira Brasil-Peru-Colômbia",
+      "anio": 2024,
+      "revista": "Contribuciones a las Ciencias Sociales",
+      "enlace": "https://doi.org/10.55905/revconv.17n.8-175"
+    },
+    {
+      "titulo": "Archaeology and ethnobiology of Late Holocene bird remains from the northern Oregon coast",
+      "anio": 2024,
+      "revista": "International Journal of Osteoarchaeology",
+      "enlace": "https://doi.org/10.1002/oa.3330"
+    },
+    {
+      "titulo": "Assessing the cognitive salience of wild fauna in the Barranca de Metztitlán Biosphere Reserve, Mexico",
+      "anio": 2024,
+      "revista": "Ethnobiology and Conservation",
+      "enlace": "http://dx.doi.org/10.15451/ec2024-07-13.17-1-17"
+    },
+    {
+      "titulo": "Aves medicinais como opção terapêutica na Região Serrana de Jaguarari, Bahia, Nordeste do Brasil",
+      "anio": 2024,
+      "revista": "Revista Ouricuri",
+      "enlace": "https://doi.org/10.59360/ouricuri.vol14.iedicao-especial-02.a22501"
+    },
+    {
+      "titulo": "Birds as sacred ‘children of god’, beholders of spirit and symbols of twinhood: Human–bird interaction among the Nuer in western Ethiopia",
+      "anio": 2024,
+      "revista": "People and Nature",
+      "enlace": "https://doi.org/10.1002/pan3.10719"
+    },
+    {
+      "titulo": "Commons are cared for: Coexistence between humans and wild birds on the island of Kihnu, Estonia",
+      "anio": 2024,
+      "revista": "People and Nature",
+      "enlace": "https://doi.org/10.1002/pan3.10669"
+    },
+    {
+      "titulo": "CONTRIBUIÇÕES AO TURISMO DE OBSERVAÇÃO DE AVES",
+      "anio": 2024,
+      "revista": "Revista de Estudos Interdisciplinares",
+      "enlace": "https://doi.org/10.56579/rei.v6i5.1167"
+    },
+    {
+      "titulo": "Cultural Heritage Practices and Identity: Global, Regional, National and Local Perspectives. Colombia as a Case Study",
+      "anio": 2024,
+      "revista": "Springer eBooks",
+      "enlace": "https://doi.org/10.1007/978-3-031-72123-6_19"
+    },
+    {
+      "titulo": "Ecological restoration of Quercus humboldtii, through seedlings, for reforestation in intervened areas in the Nasa de Quichaya Resguardo, Silvia-Cauca",
+      "anio": 2024,
+      "revista": "Repositorio Institucional FULL",
+      "enlace": "https://hdl.handle.net/11371/8489"
+    },
+    {
+      "titulo": "Educomunicación para la preservación de la Amazonía. Estudio de caso Grupo Comunicarte, Colombia",
+      "anio": 2024,
+      "revista": "Revista Española de Desarrollo y Cooperación",
+      "enlace": "https://doi.org/10.5209/redc.94974"
+    },
+    {
+      "titulo": "Estudos etnoornitológicos: uma análise bibliométrica na base de dados Web of Science",
+      "anio": 2024,
+      "revista": "Contribuciones a las Ciencias Sociales",
+      "enlace": "http://dx.doi.org/10.55905/revconv.17n.7-260"
+    },
+    {
+      "titulo": "Ethno-Ornithology: Exploring the Intersection between Human Culture and Avian Science",
+      "anio": 2024,
+      "revista": "Human Ecology",
+      "enlace": "https://doi.org/10.1007/s10745-024-00535-z"
+    },
+    {
+      "titulo": "Etnobiología y cambio climático en humedales marinos del sur de Chile",
+      "anio": 2024,
+      "revista": "Letras Verdes Revista Latinoamericana de Estudios Socioambientales",
+      "enlace": "https://doi.org/10.17141/letrasverdes.36.2024.6122"
+    },
+    {
+      "titulo": "Etnobotánica de las cactáceas andinas de Boyacá-Colombia: contribución a su conservación y saberes tradicionales",
+      "anio": 2024,
+      "revista": "Revista U D C A Actualidad & Divulgación Científica",
+      "enlace": "https://doi.org/10.31910/rudca.v27.n2.2024.2712"
+    },
+    {
+      "titulo": "Exploring the Ecological Significance of Endemic Wildlife: A Critical Analysis of Their Role in Ecosystem Dynamics",
+      "anio": 2024,
+      "revista": "UTTAR PRADESH JOURNAL OF ZOOLOGY",
+      "enlace": "http://dx.doi.org/10.56557/upjoz/2024/v45i94027"
+    },
+    {
+      "titulo": "Hunting activity in the Cerrado of Maranhão: techniques and associated sociocultural factors",
+      "anio": 2024,
+      "revista": "Ethnobiology and Conservation",
+      "enlace": "http://dx.doi.org/10.15451/ec2024-08-13.26-1-14"
+    },
+    {
+      "titulo": "Impactos sobre a avifauna migratória na perspectiva de pescadores no extremo norte do Piauí",
+      "anio": 2024,
+      "revista": "Gaia Scientia",
+      "enlace": "http://dx.doi.org/10.22478/ufpb.1981-1268.2023v17n4.69115"
+    },
+    {
+      "titulo": "Imperilled birds and First Peoples’ land and sea Country in Australia",
+      "anio": 2024,
+      "revista": "Figshare",
+      "enlace": "https://figshare.com/articles/dataset/Imperilled_birds_and_First_Peoples_land_and_sea_Country_in_Australia/24970561"
+    },
+    {
+      "titulo": "LEVANTAMENTO DA AVIFAUNA COM BASE NO ETNOCONHECIMENTO EM CANGUARETAMA, RIO GRANDE DO NORTE, BRASIL",
+      "anio": 2024,
+      "revista": "Editora Científica Digital eBooks",
+      "enlace": "http://dx.doi.org/10.37885/240717018"
+    },
+    {
+      "titulo": "MAN-BIRD INTERACTION: ETHNO-ORNITHOLOGY OF OFFA, KWARA STATE, NIGERIA.",
+      "anio": 2024,
+      "revista": "Nigerian Journal of Animal Production",
+      "enlace": "https://njap.org.ng/index.php/njap/article/view/6177"
+    },
+    {
+      "titulo": "The impact of trading and poaching on bird populations in India",
+      "anio": 2024,
+      "revista": "INTERNATIONAL JOURNAL OF AGRICULTURAL SCIENCES",
+      "enlace": "https://doi.org/10.15740/has/ijas/20/raaealses-2024/64-77"
+    },
+    {
+      "titulo": "The socio-ecology of wildlife conservation on private land",
+      "anio": 2024,
+      "revista": "University of Tasmania",
+      "enlace": "https://doi.org/10.25959/28880861"
+    },
+    {
+      "titulo": "The Uniqueness of Megapodius reinwardt and the Wisdom of the Local Community as Tourism Attraction and Conservation at Moyo Island",
+      "anio": 2024,
+      "revista": "JURNAL BIOLOGI TROPIS",
+      "enlace": "http://dx.doi.org/10.29303/jbt.v24i2.7003"
+    },
+    {
+      "titulo": "Traditional knowledge on living fences in Andean linear plantations of southwestern Colombia",
+      "anio": 2024,
+      "revista": "Research Square",
+      "enlace": "http://dx.doi.org/10.21203/rs.3.rs-4921857/v1"
+    },
+    {
+      "titulo": "Unveiling Social Dynamics in People's Perception of Raptors to Guide Effective Conservation Strategies",
+      "anio": 2024,
+      "revista": "Journal of Ethnobiology",
+      "enlace": "https://doi.org/10.1177/02780771241250117"
+    },
+    {
+      "titulo": "Uso y conocimiento de las aves en tres localidades en el municipio de Huejutla de Reyes, Hidalgo, México.",
+      "anio": 2024,
+      "revista": "REVISTA INTERNACIONAL SOCIO-INNOVA-TEC DEL ALTIPLANO (REISITAL)",
+      "enlace": "https://reisital.org.mx/index.php/reisital/article/view/43"
+    },
+    {
+      "titulo": "Adaptación al cambio climático en sistemas de producción agrícola a pequeña escala en el contexto regional, nacional y mundial",
+      "anio": 2023,
+      "revista": "Luna Azul",
+      "enlace": "https://doi.org/10.17151/luaz.2023.57.4"
+    },
+    {
+      "titulo": "BIRDS, DREAM-FLYING, AVIAN METAPHORS AND ROCK ART",
+      "anio": 2023,
+      "revista": "Rock Art Research",
+      "enlace": "https://rockartresearch.com/index.php/rock/article/view/254"
+    },
+    {
+      "titulo": "Community Validation of Threatened Species in Coastal Wetland Areas of Negros Occidental, Philippines",
+      "anio": 2023,
+      "revista": "Journal of Environmental Science and Management",
+      "enlace": "https://doi.org/10.47125/jesam/2023_1/04"
+    },
+    {
+      "titulo": "Conocimiento morfo-anatómico de las aves por mayas yucatecos",
+      "anio": 2023,
+      "revista": "Huitzil Revista Mexicana de Ornitología",
+      "enlace": "http://dx.doi.org/10.28947/hrmo.2022.24.1.720"
+    },
+    {
+      "titulo": "Conocimiento morfo-anatómico de las aves por mayas yucatecos",
+      "anio": 2023,
+      "revista": "Huitzil Revista Mexicana de Ornitología",
+      "enlace": "https://doi.org/10.28947/hrmo.2023.24.1.720"
+    },
+    {
+      "titulo": "Decolonizing bird knowledge: More-than-Western bird–human relations",
+      "anio": 2023,
+      "revista": "Ornithological Applications",
+      "enlace": "https://doi.org/10.1093/ornithapp/duad053"
+    },
+    {
+      "titulo": "Doing Conservation Differently: Toward a Diverse Conservations Inventory",
+      "anio": 2023,
+      "revista": "Ethnobiology Letters",
+      "enlace": "https://doi.org/10.14237/ebl.14.2.2023.1835"
+    },
+    {
+      "titulo": "Ecological impacts of poultry waste on urban raptors: conflicts, diseases, and climate change implications amidst pandemic threats",
+      "anio": 2023,
+      "revista": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "enlace": "https://doi.org/10.1101/2023.07.13.546415"
+    },
+    {
+      "titulo": "Ethno-Ornithological Study of Cinegetic Avifauna in the Jaguarari Mountain Region, Bahia, Brazil: Food Practices and Conservation",
+      "anio": 2023,
+      "revista": "Revista de Gestão Social e Ambiental",
+      "enlace": "http://dx.doi.org/10.24857/rgsa.v18n3-030"
+    },
+    {
+      "titulo": "Food taboos and animal conservation: a systematic review on how cultural expressions influence interaction with wildlife species",
+      "anio": 2023,
+      "revista": "Journal of Ethnobiology and Ethnomedicine",
+      "enlace": "https://doi.org/10.1186/s13002-023-00600-9"
+    },
+    {
+      "titulo": "Indigenous Peoples: Traditional knowledges, climate change, and health",
+      "anio": 2023,
+      "revista": "PLOS Global Public Health",
+      "enlace": "https://doi.org/10.1371/journal.pgph.0002474"
+    },
+    {
+      "titulo": "Indigenous traditional knowledge for protection of crops from wild animals and birds",
+      "anio": 2023,
+      "revista": "Indian Journal of Traditional Knowledge",
+      "enlace": "http://dx.doi.org/10.56042/ijtk.v22i4.7240"
+    },
+    {
+      "titulo": "Key information for forest policy decision-making - Does current reporting on forests and forestry reflect forest discourses?",
+      "anio": 2023,
+      "revista": "iForest - Biogeosciences and Forestry",
+      "enlace": "https://doi.org/10.3832/ifor4457-016"
+    },
+    {
+      "titulo": "Local Territorial Practices Inform Co-Production of a Rewilding Project in the Chilean Andes",
+      "anio": 2023,
+      "revista": "Sustainability",
+      "enlace": "https://doi.org/10.3390/su15075966"
+    },
+    {
+      "titulo": "Modeling population extirpation rates of white‐bellied and giant pangolins in Benin using validated local ecological knowledge",
+      "anio": 2023,
+      "revista": "Conservation Science and Practice",
+      "enlace": "https://doi.org/10.1111/csp2.12986"
+    },
+    {
+      "titulo": "Superstitions of Amazonian Indigenous people about some birds",
+      "anio": 2023,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.18164824"
+    },
+    {
+      "titulo": "UNA APROXIMACIÓN A LA NOMENCLATURA TRADICIONAL DE LAS AVES COMUNES DE XALITLA, GUERRERO, MÉXICO:",
+      "anio": 2023,
+      "revista": "ETNOBIOLOGÍA",
+      "enlace": "https://revistaetnobiologia.mx/index.php/etno/article/view/486"
+    },
+    {
+      "titulo": "USO DE FAUNA SILVESTRE POR COMUNIDADES CAMPESINAS EN PLATO, MAGDALENA, REGIÓN CARIBE COLOMBIANA",
+      "anio": 2023,
+      "revista": "Acta Biológica Colombiana",
+      "enlace": "https://doi.org/10.15446/abc.v28n1.94140"
+    },
+    {
+      "titulo": "Variation in the bird-name lexicon in Qaqet (East New Britain Province, Papua New Guinea)",
+      "anio": 2023,
+      "revista": "Asia-Pacific Language Variation",
+      "enlace": "http://dx.doi.org/10.1075/aplv.00018.fry"
+    },
+    {
+      "titulo": "\"Cómo me convertí en etnobotánica\" una entrevista con la Editora Asociada de ERA Dra. Narel Paniagua-Zambrana",
+      "anio": 2022,
+      "revista": "Ethnobotany Research and Applications",
+      "enlace": "https://doi.org/10.32859/era.23.10.1-94"
+    },
+    {
+      "titulo": "\"How I became an ethnobotanist\" an interview with ERA Associate Editor Dr. Narel Paniagua Zambrana",
+      "anio": 2022,
+      "revista": "Ethnobotany Research and Applications",
+      "enlace": "https://doi.org/10.32859/era.23.1.1-92"
+    },
+    {
+      "titulo": "Analysis of human and avian interaction and conflict-a review",
+      "anio": 2022,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://doi.org/10.5281/zenodo.6026539"
+    },
+    {
+      "titulo": "Assessment of the Current State of In Situ Conservation and Use of Sweet Potato (Ipomoea batatas L.) in Colombia",
+      "anio": 2022,
+      "revista": "Culture Agriculture Food and Environment",
+      "enlace": "https://doi.org/10.1111/cuag.12293"
+    },
+    {
+      "titulo": "Banco sonoro participativo, construido a partir de la etno ornitología, asociado a las aves presentes en las comunidades indígenas aledañas al casco urbano de Mitú, Vaupés",
+      "anio": 2022,
+      "revista": "Revista de Investigaciones Agroempresariales",
+      "enlace": "https://doi.org/10.23850/25004468.5400"
+    },
+    {
+      "titulo": "Banco sonoro participativo, construido a partir de la etno ornitología, asociado a las aves presentes en las comunidades indígenas aledañas al casco urbano de Mitú, Vaupés.",
+      "anio": 2022,
+      "revista": "Revista de Investigaciones Agroempresariales",
+      "enlace": "http://dx.doi.org/10.23850/25004468.4807"
+    },
+    {
+      "titulo": "Bird conservation status and cultural values in Indigenous Mexican communities: towards a bioculturally informed conservation policy",
+      "anio": 2022,
+      "revista": "Journal of Ethnobiology and Ethnomedicine",
+      "enlace": "https://doi.org/10.1186/s13002-022-00567-z"
+    },
+    {
+      "titulo": "Escuchando a los abuelos: transdisciplina, aves y gente para cultivar la memoria biocultural",
+      "anio": 2022,
+      "revista": "Revista Latinoamericana de Ciencias Sociales Niñez y Juventud",
+      "enlace": "https://doi.org/10.11600/rlcsnj.20.2.4861"
+    }
+  ]
+}

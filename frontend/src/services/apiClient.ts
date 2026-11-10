@@ -28,6 +28,7 @@ import type {
   MetaCreate,
   Objetivo,
   ObjetivoCreate,
+  ArticulosOFC,
   ResumenBibliometrico,
   ResumenConsolidado,
   ResumenGBIF,
@@ -55,6 +56,12 @@ export function urlDescargaConsolidadoCsv(anio?: number | null): string {
     anio != null
       ? `/bibliometria/export/anio/${anio}.csv`
       : "/bibliometria/export.csv";
+  return STATIC_MODE ? `${STATIC_SNAPSHOT_BASE}${ruta}` : `${API_URL}${ruta}`;
+}
+
+/** URL de descarga del CSV con TODOS los artículos de un OFC. */
+export function urlDescargaArticulosOfcCsv(ofcId: string): string {
+  const ruta = `/bibliometria/ofc/${ofcId}/export.csv`;
   return STATIC_MODE ? `${STATIC_SNAPSHOT_BASE}${ruta}` : `${API_URL}${ruta}`;
 }
 
@@ -227,6 +234,20 @@ export function obtenerResumenConsolidado(
       ? `/bibliometria/resumen/anio/${opts.anio}`
       : "/bibliometria/resumen";
   return request<ResumenConsolidado>(path, {
+    signal: opts.signal,
+  });
+}
+
+/**
+ * Lista (acotada) de los artículos clasificados en un OFC, para ver "detrás de"
+ * la barra del dashboard. Trae el total real y hasta N artículos con título y
+ * enlace. `GET /bibliometria/ofc/{ofcId}/articulos` → 200.
+ */
+export function obtenerArticulosDeOfc(
+  ofcId: string,
+  opts: CallOptions = {},
+): Promise<ArticulosOFC> {
+  return request<ArticulosOFC>(`/bibliometria/ofc/${ofcId}/articulos`, {
     signal: opts.signal,
   });
 }

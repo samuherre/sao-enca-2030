@@ -29,6 +29,8 @@ from pathlib import Path
 from backend.src.domain.exceptions import NotFoundError
 from backend.src.schemas.bibliometria import (
     AporteFuente,
+    ArticuloItem,
+    ArticulosOFC,
     CompletitudCampo,
     ConteoOFC,
     ConteoPorClave,
@@ -440,6 +442,42 @@ def _combinar_registros_fuente(anio: int | None) -> list[dict]:
     return combinados
 
 
+def _registros_clasificados_de_ofc(ofc_id: str, anio: int | None) -> list[dict]:
+    """Devuelve los artículos clasificados en ``ofc_id`` (multilabel), deduplicados.
+
+    Recorre las carpetas ``*_clasificado`` de ``data/processed/`` y selecciona los
+    registros cuyo campo ``ofcs`` contiene ``ofc_id``. Deduplica por ``article_id``
+    (gana la corrida más reciente, como el resto del servicio). Si ``anio`` no es
+    ``None``, filtra por ``publication_year``. No inventa datos: refleja lo que el
+    dataset clasificado contiene.
+    """
+    por_id: dict[str, dict] = {}
+    sin_id: list[dict] = []
+    for carpeta in _carpetas_procesadas():
+        if not _es_carpeta_clasificado(carpeta):
+            continue
+        clasificados, _fechas = _acumular_json(carpeta)
+        for r in clasificados:
+            if ofc_id not in (r.get("ofcs") or []):
+                continue
+            if anio is not None and r.get("publication_year") != anio:
+                continue
+            aid = r.get("article_id")
+            if aid:
+                por_id[aid] = r  # el más reciente gana (acumulación ya ordenada)
+            else:
+                sin_id.append(r)
+    registros = list(por_id.values()) + sin_id
+    # Orden legible: por año desc. y luego título.
+    registros.sort(
+        key=lambda r: (
+            -(r.get("publication_year") or 0),
+            str(r.get("title") or "").lower(),
+        )
+    )
+    return registros
+
+
 class BibliometriaService:
     """Casos de uso de lectura del dataset bibliométrico procesado."""
 
@@ -739,6 +777,57 @@ class BibliometriaService:
         buffer = io.StringIO()
         # lineterminator="\n": sin esto, csv.writer usa "\r\n" y, al servirse o
         # reabrirse el texto, aparece una línea en blanco entre cada fila.
+        writer = csv.writer(buffer, lineterminator="\n")
+        writer.writerow([encabezado for encabezado, _campo in _CAMPOS_EXPORT])
+        for r in registros:
+            fila = []
+            for _encabezado, campo in _CAMPOS_EXPORT:
+                if campo == "url":
+                    valor = r.get("url") or _url_desde_doi(r.get("doi"))
+                else:
+                    valor = r.get(campo)
+                fila.append("" if valor is None else str(valor))
+            writer.writerow(fila)
+        return buffer.getvalue()
+
+    def articulos_de_ofc(
+        self, ofc_id: str, anio: int | None = None, limite: int | None = None
+    ) -> ArticulosOFC:
+        """Lista los artículos clasificados en un OFC (para "ver detrás de la barra").
+
+        Devuelve el nombre del OFC, el total de artículos de ese OFC y una lista
+        acotada (``limite``) con los campos para mostrar/enlazar: título, año,
+        revista y enlace (url o, si falta, el DOI). ``total`` es el conteo real
+        aunque ``items`` venga recortado, para que el frontend sepa cuántos hay.
+
+        :param ofc_id: identificador del OFC (p. ej. "OFC-01").
+        :param anio: filtro opcional por año de publicación.
+        :param limite: máximo de artículos en ``items`` (None = todos).
+        """
+        registros = _registros_clasificados_de_ofc(ofc_id, anio)
+        total = len(registros)
+        seleccion = registros if limite is None else registros[:limite]
+        items = [
+            ArticuloItem(
+                titulo=r.get("title") or "(sin título)",
+                anio=r.get("publication_year"),
+                revista=r.get("journal"),
+                enlace=r.get("url") or _url_desde_doi(r.get("doi")),
+            )
+            for r in seleccion
+        ]
+        return ArticulosOFC(
+            ofc_id=ofc_id,
+            nombre=_nombres_ofc().get(ofc_id, ofc_id),
+            total=total,
+            mostrados=len(items),
+            items=items,
+        )
+
+    def exportar_articulos_ofc_csv(self, ofc_id: str, anio: int | None = None) -> str:
+        """CSV descargable con TODOS los artículos de un OFC (título + enlace...)."""
+        registros = _registros_clasificados_de_ofc(ofc_id, anio)
+        buffer = io.StringIO()
         writer = csv.writer(buffer, lineterminator="\n")
         writer.writerow([encabezado for encabezado, _campo in _CAMPOS_EXPORT])
         for r in registros:
