@@ -7,838 +7,130 @@
       "conteo": 3120
     }
   ],
-  "por_volumen": [
+  "por_revista": [
     {
-      "clave": "0",
-      "conteo": 31
+      "clave": "Global Biodiversity Information Facility",
+      "conteo": 180
     },
     {
-      "clave": "1",
-      "conteo": 7
+      "clave": "Zenodo (CERN European Organization for Nuclear Research)",
+      "conteo": 164
     },
     {
-      "clave": "2",
-      "conteo": 21
+      "clave": "bioRxiv (Cold Spring Harbor Laboratory)",
+      "conteo": 62
     },
     {
-      "clave": "02",
-      "conteo": 1
+      "clave": "Figshare",
+      "conteo": 60
     },
     {
-      "clave": "3",
-      "conteo": 19
+      "clave": "SSRN Electronic Journal",
+      "conteo": 39
     },
     {
-      "clave": "03",
-      "conteo": 1
+      "clave": "ICPSR Data Holdings",
+      "conteo": 30
     },
     {
-      "clave": "4",
-      "conteo": 24
+      "clave": "Ecology and Evolution",
+      "conteo": 30
     },
     {
-      "clave": "5",
-      "conteo": 23
+      "clave": "Research Square",
+      "conteo": 27
     },
     {
-      "clave": "05",
-      "conteo": 1
-    },
-    {
-      "clave": "6",
-      "conteo": 22
-    },
-    {
-      "clave": "06",
-      "conteo": 1
-    },
-    {
-      "clave": "7",
-      "conteo": 33
-    },
-    {
-      "clave": "8",
-      "conteo": 36
-    },
-    {
-      "clave": "08",
-      "conteo": 1
-    },
-    {
-      "clave": "9",
-      "conteo": 35
-    },
-    {
-      "clave": "10",
-      "conteo": 18
-    },
-    {
-      "clave": "11",
-      "conteo": 16
-    },
-    {
-      "clave": "12",
+      "clave": "Biological Conservation",
       "conteo": 26
     },
     {
-      "clave": "13",
-      "conteo": 42
+      "clave": "SiB Colombia - GBIF Colombia",
+      "conteo": 25
     },
     {
-      "clave": "14",
-      "conteo": 36
-    },
-    {
-      "clave": "15",
-      "conteo": 33
-    },
-    {
-      "clave": "16",
-      "conteo": 81
-    },
-    {
-      "clave": "17",
-      "conteo": 30
-    },
-    {
-      "clave": "18",
-      "conteo": 35
-    },
-    {
-      "clave": "19",
-      "conteo": 18
-    },
-    {
-      "clave": "20",
-      "conteo": 6
-    },
-    {
-      "clave": "21",
-      "conteo": 37
-    },
-    {
-      "clave": "22",
-      "conteo": 16
-    },
-    {
-      "clave": "23",
-      "conteo": 4
-    },
-    {
-      "clave": "24",
-      "conteo": 18
-    },
-    {
-      "clave": "25",
-      "conteo": 7
-    },
-    {
-      "clave": "26",
-      "conteo": 17
-    },
-    {
-      "clave": "27",
-      "conteo": 17
-    },
-    {
-      "clave": "28",
-      "conteo": 2
-    },
-    {
-      "clave": "29",
-      "conteo": 23
-    },
-    {
-      "clave": "30",
-      "conteo": 8
-    },
-    {
-      "clave": "31",
-      "conteo": 12
-    },
-    {
-      "clave": "32",
+      "clave": "Biodiversity and Conservation",
       "conteo": 22
     },
     {
-      "clave": "33",
-      "conteo": 3
+      "clave": "DRYAD",
+      "conteo": 19
     },
     {
-      "clave": "34",
-      "conteo": 30
+      "clave": "Conservation Biology",
+      "conteo": 18
     },
     {
-      "clave": "35",
-      "conteo": 42
-    },
-    {
-      "clave": "36",
-      "conteo": 31
-    },
-    {
-      "clave": "37",
-      "conteo": 7
-    },
-    {
-      "clave": "38",
-      "conteo": 6
-    },
-    {
-      "clave": "39",
-      "conteo": 4
-    },
-    {
-      "clave": "40",
-      "conteo": 13
-    },
-    {
-      "clave": "41",
-      "conteo": 16
-    },
-    {
-      "clave": "42",
-      "conteo": 1
-    },
-    {
-      "clave": "43",
-      "conteo": 1
-    },
-    {
-      "clave": "44",
-      "conteo": 1
-    },
-    {
-      "clave": "45",
-      "conteo": 3
-    },
-    {
-      "clave": "46",
-      "conteo": 2
-    },
-    {
-      "clave": "47",
-      "conteo": 6
-    },
-    {
-      "clave": "48",
-      "conteo": 11
-    },
-    {
-      "clave": "49",
-      "conteo": 2
-    },
-    {
-      "clave": "50",
-      "conteo": 5
-    },
-    {
-      "clave": "51",
-      "conteo": 4
-    },
-    {
-      "clave": "52",
-      "conteo": 3
-    },
-    {
-      "clave": "53",
+      "clave": "Global Ecology and Conservation",
       "conteo": 17
     },
     {
-      "clave": "54",
-      "conteo": 1
+      "clave": "Scientific Reports",
+      "conteo": 17
     },
     {
-      "clave": "55",
-      "conteo": 3
+      "clave": "Animals",
+      "conteo": 16
     },
     {
-      "clave": "56",
-      "conteo": 3
+      "clave": "Wetlands: ecology, conservation and management",
+      "conteo": 15
     },
     {
-      "clave": "57",
-      "conteo": 4
+      "clave": "Ornithology Research",
+      "conteo": 15
     },
     {
-      "clave": "58",
-      "conteo": 7
-    },
-    {
-      "clave": "59",
-      "conteo": 2
-    },
-    {
-      "clave": "60",
-      "conteo": 2
-    },
-    {
-      "clave": "61",
-      "conteo": 5
-    },
-    {
-      "clave": "62",
-      "conteo": 4
-    },
-    {
-      "clave": "63",
+      "clave": "PLoS ONE",
       "conteo": 14
     },
     {
-      "clave": "64",
-      "conteo": 3
+      "clave": "Journal of Applied Ecology",
+      "conteo": 14
     },
     {
-      "clave": "66",
-      "conteo": 11
-    },
-    {
-      "clave": "67",
-      "conteo": 7
-    },
-    {
-      "clave": "68",
-      "conteo": 2
-    },
-    {
-      "clave": "69",
-      "conteo": 7
-    },
-    {
-      "clave": "70",
-      "conteo": 3
-    },
-    {
-      "clave": "71",
-      "conteo": 5
-    },
-    {
-      "clave": "72",
-      "conteo": 5
-    },
-    {
-      "clave": "73",
-      "conteo": 10
-    },
-    {
-      "clave": "74",
-      "conteo": 4
-    },
-    {
-      "clave": "75",
-      "conteo": 2
-    },
-    {
-      "clave": "76",
-      "conteo": 11
-    },
-    {
-      "clave": "78",
-      "conteo": 1
-    },
-    {
-      "clave": "79",
-      "conteo": 1
-    },
-    {
-      "clave": "80",
-      "conteo": 4
-    },
-    {
-      "clave": "83",
-      "conteo": 2
-    },
-    {
-      "clave": "86",
-      "conteo": 1
-    },
-    {
-      "clave": "89",
-      "conteo": 3
-    },
-    {
-      "clave": "90",
-      "conteo": 4
-    },
-    {
-      "clave": "91",
-      "conteo": 4
-    },
-    {
-      "clave": "92",
-      "conteo": 3
-    },
-    {
-      "clave": "93",
-      "conteo": 3
-    },
-    {
-      "clave": "94",
-      "conteo": 4
-    },
-    {
-      "clave": "95",
-      "conteo": 5
-    },
-    {
-      "clave": "96",
-      "conteo": 3
-    },
-    {
-      "clave": "97",
-      "conteo": 11
-    },
-    {
-      "clave": "98",
-      "conteo": 1
-    },
-    {
-      "clave": "99",
-      "conteo": 2
-    },
-    {
-      "clave": "100",
-      "conteo": 1
-    },
-    {
-      "clave": "101",
-      "conteo": 2
-    },
-    {
-      "clave": "102",
-      "conteo": 1
-    },
-    {
-      "clave": "103",
-      "conteo": 1
-    },
-    {
-      "clave": "106",
-      "conteo": 1
-    },
-    {
-      "clave": "107",
-      "conteo": 7
-    },
-    {
-      "clave": "113",
-      "conteo": 1
-    },
-    {
-      "clave": "114",
-      "conteo": 2
-    },
-    {
-      "clave": "116",
-      "conteo": 3
-    },
-    {
-      "clave": "120",
-      "conteo": 2
-    },
-    {
-      "clave": "122",
-      "conteo": 2
-    },
-    {
-      "clave": "123",
-      "conteo": 6
-    },
-    {
-      "clave": "126",
-      "conteo": 2
-    },
-    {
-      "clave": "127",
-      "conteo": 1
-    },
-    {
-      "clave": "128",
-      "conteo": 7
-    },
-    {
-      "clave": "129",
-      "conteo": 1
-    },
-    {
-      "clave": "130",
-      "conteo": 1
-    },
-    {
-      "clave": "134",
-      "conteo": 1
-    },
-    {
-      "clave": "136",
-      "conteo": 1
-    },
-    {
-      "clave": "138",
-      "conteo": 3
-    },
-    {
-      "clave": "143",
-      "conteo": 1
-    },
-    {
-      "clave": "145",
-      "conteo": 1
-    },
-    {
-      "clave": "146",
-      "conteo": 4
-    },
-    {
-      "clave": "148",
-      "conteo": 1
-    },
-    {
-      "clave": "150",
-      "conteo": 1
-    },
-    {
-      "clave": "153",
-      "conteo": 1
-    },
-    {
-      "clave": "154",
-      "conteo": 1
-    },
-    {
-      "clave": "155",
-      "conteo": 2
-    },
-    {
-      "clave": "159",
-      "conteo": 1
-    },
-    {
-      "clave": "160",
-      "conteo": 1
-    },
-    {
-      "clave": "161",
-      "conteo": 1
-    },
-    {
-      "clave": "167",
-      "conteo": 5
-    },
-    {
-      "clave": "168",
-      "conteo": 6
-    },
-    {
-      "clave": "177",
-      "conteo": 1
-    },
-    {
-      "clave": "182",
-      "conteo": 1
-    },
-    {
-      "clave": "183",
-      "conteo": 1
-    },
-    {
-      "clave": "187",
-      "conteo": 3
-    },
-    {
-      "clave": "189",
-      "conteo": 1
-    },
-    {
-      "clave": "190",
-      "conteo": 4
-    },
-    {
-      "clave": "191",
-      "conteo": 3
-    },
-    {
-      "clave": "197",
-      "conteo": 1
-    },
-    {
-      "clave": "198",
-      "conteo": 3
-    },
-    {
-      "clave": "208",
-      "conteo": 2
-    },
-    {
-      "clave": "211",
-      "conteo": 1
-    },
-    {
-      "clave": "229",
-      "conteo": 1
-    },
-    {
-      "clave": "237",
-      "conteo": 1
-    },
-    {
-      "clave": "242",
-      "conteo": 1
-    },
-    {
-      "clave": "251",
-      "conteo": 2
-    },
-    {
-      "clave": "255",
-      "conteo": 1
-    },
-    {
-      "clave": "271",
-      "conteo": 1
-    },
-    {
-      "clave": "273",
-      "conteo": 1
-    },
-    {
-      "clave": "274",
-      "conteo": 1
-    },
-    {
-      "clave": "276",
-      "conteo": 2
-    },
-    {
-      "clave": "277",
-      "conteo": 2
-    },
-    {
-      "clave": "280",
-      "conteo": 1
-    },
-    {
-      "clave": "287",
-      "conteo": 1
-    },
-    {
-      "clave": "290",
-      "conteo": 1
-    },
-    {
-      "clave": "293",
-      "conteo": 7
-    },
-    {
-      "clave": "297",
-      "conteo": 1
-    },
-    {
-      "clave": "308",
-      "conteo": 1
-    },
-    {
-      "clave": "314",
-      "conteo": 1
-    },
-    {
-      "clave": "315",
-      "conteo": 2
-    },
-    {
-      "clave": "316",
-      "conteo": 3
-    },
-    {
-      "clave": "317",
-      "conteo": 3
-    },
-    {
-      "clave": "318",
-      "conteo": 2
-    },
-    {
-      "clave": "319",
-      "conteo": 4
-    },
-    {
-      "clave": "320",
-      "conteo": 1
-    },
-    {
-      "clave": "321",
-      "conteo": 3
-    },
-    {
-      "clave": "322",
-      "conteo": 4
-    },
-    {
-      "clave": "323",
-      "conteo": 1
-    },
-    {
-      "clave": "324",
-      "conteo": 3
-    },
-    {
-      "clave": "330",
-      "conteo": 2
-    },
-    {
-      "clave": "340",
-      "conteo": 1
-    },
-    {
-      "clave": "346",
-      "conteo": 1
-    },
-    {
-      "clave": "348",
-      "conteo": 1
-    },
-    {
-      "clave": "381",
-      "conteo": 1
-    },
-    {
-      "clave": "391",
-      "conteo": 1
-    },
-    {
-      "clave": "392",
-      "conteo": 1
-    },
-    {
-      "clave": "393",
-      "conteo": 2
-    },
-    {
-      "clave": "394",
-      "conteo": 1
-    },
-    {
-      "clave": "400",
-      "conteo": 1
-    },
-    {
-      "clave": "404",
-      "conteo": 1
-    },
-    {
-      "clave": "408",
-      "conteo": 1
-    },
-    {
-      "clave": "411",
-      "conteo": 2
-    },
-    {
-      "clave": "412",
-      "conteo": 1
-    },
-    {
-      "clave": "414",
-      "conteo": 3
-    },
-    {
-      "clave": "419",
-      "conteo": 1
-    },
-    {
-      "clave": "519",
-      "conteo": 1
-    },
-    {
-      "clave": "521",
-      "conteo": 1
-    },
-    {
-      "clave": "533",
-      "conteo": 1
-    },
-    {
-      "clave": "568",
-      "conteo": 1
-    },
-    {
-      "clave": "607",
-      "conteo": 1
-    },
-    {
-      "clave": "608",
-      "conteo": 1
-    },
-    {
-      "clave": "613",
-      "conteo": 1
-    },
-    {
-      "clave": "620",
-      "conteo": 2
-    },
-    {
-      "clave": "653",
-      "conteo": 1
-    },
-    {
-      "clave": "671",
-      "conteo": 1
-    },
-    {
-      "clave": "701",
-      "conteo": 1
-    },
-    {
-      "clave": "715",
-      "conteo": 1
-    },
-    {
-      "clave": "1027",
-      "conteo": 1
-    },
-    {
-      "clave": "1269",
-      "conteo": 1
-    },
-    {
-      "clave": "1272",
-      "conteo": 1
-    },
-    {
-      "clave": "1277",
-      "conteo": 1
-    },
-    {
-      "clave": "1281",
-      "conteo": 1
-    },
-    {
-      "clave": "1622",
-      "conteo": 1
-    },
-    {
-      "clave": "1657",
-      "conteo": 1
-    },
-    {
-      "clave": "2026",
+      "clave": "Ornitología colombiana",
       "conteo": 13
     },
     {
-      "clave": "3410",
-      "conteo": 1
+      "clave": "Ecological Indicators",
+      "conteo": 12
     },
     {
-      "clave": "5889",
-      "conteo": 1
+      "clave": "Ornithological Applications",
+      "conteo": 12
     },
     {
-      "clave": "4/2",
-      "conteo": 1
+      "clave": "The Catalogue of Life",
+      "conteo": 12
     },
     {
-      "clave": "Special",
-      "conteo": 1
+      "clave": "Journal of Threatened Taxa",
+      "conteo": 12
+    },
+    {
+      "clave": "Ibis",
+      "conteo": 11
+    },
+    {
+      "clave": "Bird Conservation International",
+      "conteo": 11
+    },
+    {
+      "clave": "Conservation Science and Practice",
+      "conteo": 11
+    },
+    {
+      "clave": "Avian Conservation and Ecology",
+      "conteo": 10
+    },
+    {
+      "clave": "Springer eBooks",
+      "conteo": 10
+    },
+    {
+      "clave": "Otros",
+      "conteo": 1710
     }
   ],
   "completitud": [

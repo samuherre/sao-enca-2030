@@ -49,7 +49,7 @@ def test_resumen_consolidado_sin_datasets_es_vacio_coherente() -> None:
     # Total y distribuciones vacías.
     assert resumen.total_articulos == 0
     assert resumen.por_anio == []
-    assert resumen.por_volumen == []
+    assert resumen.por_revista == []
 
     # Completitud: un entry por campo, todos en cero (no es lista vacía; el
     # servicio reporta cada campo con con_dato=0 y total=0).
@@ -93,7 +93,7 @@ def test_resumen_consolidado_directorio_inexistente_es_vacio_coherente() -> None
     assert resumen.alcance == "consolidado"
     assert resumen.total_articulos == 0
     assert resumen.por_anio == []
-    assert resumen.por_volumen == []
+    assert resumen.por_revista == []
     assert resumen.aporte_por_fuente == []
     assert resumen.fechas_dataset == []
     assert resumen.clasificacion_disponible is False

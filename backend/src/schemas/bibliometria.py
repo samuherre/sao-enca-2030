@@ -110,7 +110,9 @@ class ResumenConsolidado(SchemaBase):
     alcance: str = "consolidado"
     total_articulos: int
     por_anio: list[ConteoPorClave]
-    por_volumen: list[ConteoPorClave]
+    # Distribución por revista: las revistas con más artículos y el resto bajo
+    # "Otros" (reemplaza la antigua distribución por volumen en el consolidado).
+    por_revista: list[ConteoPorClave]
     completitud: list[CompletitudCampo]
     pendientes_revision: int
     posibles_duplicados: int

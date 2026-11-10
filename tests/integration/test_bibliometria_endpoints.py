@@ -47,6 +47,7 @@ _BOLETIN_DEMO = [
         "doi": "10.0000/demo-a",
         "publication_year": 2021,
         "volume": "31",
+        "journal": "Ornitología Colombiana",
         "inclusion_status": "INCLUIDO",
         "is_duplicate": False,
     },
@@ -59,6 +60,7 @@ _BOLETIN_DEMO = [
         "doi": None,
         "publication_year": 2022,
         "volume": "32",
+        "journal": "Ornitología Colombiana",
         "inclusion_status": "PENDIENTE_REVISIÓN",
         "is_duplicate": False,
     },
@@ -74,6 +76,7 @@ _SCHOLAR_DEMO = [
         "doi": "10.0000/demo-c",
         "publication_year": 2021,
         "volume": "5",
+        "journal": "Biological Conservation",
         "inclusion_status": "INCLUIDO",
         "is_duplicate": True,
     },
@@ -129,9 +132,11 @@ def test_resumen_consolidado_con_datasets_cumple_shape(client, tmp_path, monkeyp
     por_anio = {d["clave"]: d["conteo"] for d in body["por_anio"]}
     assert por_anio == {"2021": 2, "2022": 1}
 
-    # --- Distribución por volumen (Req 6.2): 31, 32, 5 ----------------------
-    por_volumen = {d["clave"]: d["conteo"] for d in body["por_volumen"]}
-    assert por_volumen == {"31": 1, "32": 1, "5": 1}
+    # --- Distribución por revista (top + "Otros"): 2 en Ornitología ---------
+    # Colombiana (A + B), 1 en Biological Conservation (C). Con solo 2 revistas
+    # distintas no hay remanente, así que no aparece la barra "Otros".
+    por_revista = {d["clave"]: d["conteo"] for d in body["por_revista"]}
+    assert por_revista == {"Ornitología Colombiana": 2, "Biological Conservation": 1}
 
     # --- Completitud por campo sobre el conjunto combinado (Req 6.2) --------
     completitud = {c["campo"]: c for c in body["completitud"]}
@@ -187,7 +192,7 @@ def test_resumen_consolidado_sin_datasets_estado_vacio(client, tmp_path, monkeyp
     assert body["alcance"] == "consolidado"
     assert body["total_articulos"] == 0
     assert body["por_anio"] == []
-    assert body["por_volumen"] == []
+    assert body["por_revista"] == []
     assert body["pendientes_revision"] == 0
     assert body["posibles_duplicados"] == 0
     assert body["fechas_dataset"] == []

@@ -63,7 +63,8 @@ export interface ResumenConsolidado {
   readonly alcance: string;
   readonly total_articulos: number;
   readonly por_anio: readonly ConteoPorClave[];
-  readonly por_volumen: readonly ConteoPorClave[];
+  // Distribución por revista: top de revistas con más artículos + "Otros".
+  readonly por_revista: readonly ConteoPorClave[];
   readonly completitud: readonly CompletitudCampo[];
   readonly pendientes_revision: number;
   readonly posibles_duplicados: number;

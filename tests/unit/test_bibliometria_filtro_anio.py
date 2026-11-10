@@ -7,7 +7,7 @@ prueba con datasets SINTÉTICOS (datos de prueba, no reales) y se comprueba que:
 
 - ``anios_disponibles`` SIEMPRE lista todos los años del conjunto, con o sin
   filtro aplicado (para poblar el desplegable del frontend).
-- Con ``anio``, todas las agregaciones (total, por_volumen, completitud,
+- Con ``anio``, todas las agregaciones (total, por_revista, completitud,
   aporte_por_fuente, OFC) se calculan solo sobre los artículos de ese año.
 - Sin ``anio`` (``None``), el resumen abarca todos los años y
   ``anio_seleccionado`` es ``None``.
@@ -68,6 +68,41 @@ def test_sin_filtro_abarca_todos_los_anios() -> None:
     assert r.total_articulos == 5
     assert r.anio_seleccionado is None
     assert r.anios_disponibles == [2020, 2022, 2023]
+
+
+def test_por_revista_top_30_mas_otros() -> None:
+    """La distribución por revista muestra el top 30 y agrupa el resto en 'Otros'.
+
+    Se generan 35 revistas con conteos decrecientes; deben aparecer las 30 con
+    más artículos más una barra 'Otros' con la suma de las 5 restantes. Los
+    registros sin revista no se cuentan ni se inventan.
+    """
+    registros = []
+    # 35 revistas: la revista i tiene (40 - i) artículos (conteos decrecientes).
+    for i in range(1, 36):
+        for _ in range(40 - i):
+            registros.append(
+                {"source": "OpenAlex", "publication_year": 2021, "journal": f"Revista {i:02d}"}
+            )
+    # Dos registros sin revista: no deben contarse.
+    registros.append({"source": "OpenAlex", "publication_year": 2021, "journal": None})
+    registros.append({"source": "OpenAlex", "publication_year": 2021})
+
+    r = _resumen({"openalex": registros}, anio=None)
+    por_revista = r.por_revista
+
+    # 30 revistas individuales + 1 barra "Otros".
+    assert len(por_revista) == 31
+    assert por_revista[-1].clave == "Otros"
+    # Las 30 primeras son las de mayor conteo (Revista 01..30), ordenadas desc.
+    claves_top = [c.clave for c in por_revista[:30]]
+    assert claves_top[0] == "Revista 01"  # la de más artículos
+    assert "Revista 31" not in claves_top  # cae en "Otros"
+    # "Otros" = suma de las revistas 31..35 = (9+8+7+6+5) = 35.
+    assert por_revista[-1].conteo == 35
+    # Ninguna barra cuenta los 2 registros sin revista.
+    total_contado = sum(c.conteo for c in por_revista)
+    assert total_contado == sum(40 - i for i in range(1, 36))
 
 
 def test_resumen_incluye_explicacion_publica_de_ofc() -> None:

@@ -247,6 +247,40 @@ def _es_anio_plausible(valor: object) -> bool:
     return _ANIO_MIN_PLAUSIBLE <= anio <= _ANIO_MAX_PLAUSIBLE
 
 
+# Número de revistas con más artículos que se muestran individualmente en la
+# distribución por revista; el resto se agrupa bajo "Otros".
+_TOP_REVISTAS = 30
+# Etiqueta del grupo agregado (el resto de revistas fuera del top).
+_ETIQUETA_OTRAS_REVISTAS = "Otros"
+
+
+def _top_por_revista(registros: list[dict]) -> list[ConteoPorClave]:
+    """Distribución por revista: top ``_TOP_REVISTAS`` + "Otros".
+
+    Cuenta los artículos por el campo ``journal`` (reflejado tal cual; los
+    registros sin revista no se cuentan ni se inventan). Devuelve las revistas
+    con más artículos, ordenadas de mayor a menor, y agrega todo lo demás en una
+    única entrada "Otros" al final (solo si hay remanente). Así la gráfica
+    resume miles de revistas sin perder la cola larga.
+    """
+    conteo: Counter = Counter()
+    for r in registros:
+        journal = r.get("journal")
+        if journal:
+            conteo[str(journal).strip()] += 1
+
+    top = conteo.most_common(_TOP_REVISTAS)
+    resultado = [ConteoPorClave(clave=nombre, conteo=n) for nombre, n in top]
+
+    # Agrupar el resto (revistas fuera del top) bajo "Otros".
+    resto = sum(conteo.values()) - sum(n for _, n in top)
+    if resto > 0:
+        resultado.append(
+            ConteoPorClave(clave=_ETIQUETA_OTRAS_REVISTAS, conteo=resto)
+        )
+    return resultado
+
+
 def _completitud(registros: list[dict]) -> list[CompletitudCampo]:
     """Completitud por campo sobre un conjunto de registros."""
     total = len(registros)
@@ -430,7 +464,11 @@ class BibliometriaService:
         por_anio = Counter(
             str(r["publication_year"]) for r in combinados if r.get("publication_year")
         )
-        por_volumen = Counter(str(r["volume"]) for r in combinados if r.get("volume"))
+        # Distribución por revista: las ``_TOP_REVISTAS`` con más artículos y el
+        # resto agrupado en "Otros" (Req de visualización pedido por SAO). El
+        # nombre de revista se refleja TAL CUAL viene del dato (puede incluir
+        # repositorios como GBIF/bioRxiv/Zenodo); no se normaliza ni se inventa.
+        por_revista = _top_por_revista(combinados)
         pendientes = sum(
             1 for r in combinados if r.get("inclusion_status") == "PENDIENTE_REVISIÓN"
         )
@@ -486,10 +524,7 @@ class BibliometriaService:
             por_anio=[
                 ConteoPorClave(clave=k, conteo=v) for k, v in sorted(por_anio.items())
             ],
-            por_volumen=[
-                ConteoPorClave(clave=k, conteo=v)
-                for k, v in sorted(por_volumen.items(), key=_clave_volumen)
-            ],
+            por_revista=por_revista,
             completitud=_completitud(combinados),
             pendientes_revision=pendientes,
             posibles_duplicados=duplicados,

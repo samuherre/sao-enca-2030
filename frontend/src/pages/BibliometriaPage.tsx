@@ -120,6 +120,56 @@ function BarsCard({
 }
 
 /**
+ * Distribución por revista: barras HORIZONTALES con el nombre de la revista.
+ *
+ * Se usa layout horizontal (nombre en el eje Y) porque los nombres de revista
+ * son largos y no caben legibles en el eje X. Muestra el top de revistas que
+ * envía el backend y una barra final "Otros" que agrupa el resto. Los nombres
+ * se muestran tal cual vienen del dato (pueden incluir repositorios).
+ */
+function RevistasCard({
+  data,
+}: {
+  data: readonly { clave: string; conteo: number }[];
+}) {
+  if (data.length === 0) {
+    return (
+      <section style={{ marginTop: "1.5rem" }}>
+        <h3 style={{ marginBottom: "0.5rem" }}>Artículos por revista</h3>
+        <p style={{ color: "#666" }}>No hay información de revista en el conjunto actual.</p>
+      </section>
+    );
+  }
+  const chart = data.map((d) => ({ revista: d.clave, conteo: d.conteo }));
+  const alto = Math.max(260, chart.length * 26);
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Artículos por revista</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Revistas con más publicaciones; el resto se agrupa en “Otros”. El nombre se muestra tal
+        como viene de la fuente (puede incluir repositorios como GBIF, bioRxiv o Zenodo).
+      </p>
+      <div style={{ width: "100%", height: alto }}>
+        <ResponsiveContainer>
+          <BarChart
+            layout="vertical"
+            data={chart}
+            margin={{ top: 8, right: 24, bottom: 8, left: 8 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis type="number" allowDecimals={false} />
+            <YAxis type="category" dataKey="revista" width={240} tick={{ fontSize: 11 }} />
+            <Tooltip formatter={(value: number) => [`${value} artículos`, "Conteo"]} />
+            <Legend />
+            <Bar dataKey="conteo" name="Artículos" fill="#2f8f5b" radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </section>
+  );
+}
+
+/**
  * Explicación pública de qué son los OFC (Objetos Focales de Conservación).
  *
  * Muestra el texto oficial de la ENCA y la lista de los 11 OFC con su
@@ -420,7 +470,7 @@ export function BibliometriaPage() {
 
           <BarsCard title="Artículos por año" data={data.por_anio} />
           <OFCCard resumen={data} />
-          <BarsCard title="Artículos por volumen" data={data.por_volumen} />
+          <RevistasCard data={data.por_revista} />
           <CompletitudTable completitud={data.completitud} />
           <AportePorFuenteSection aporte={data.aporte_por_fuente} />
         </>
