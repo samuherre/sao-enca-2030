@@ -151,8 +151,12 @@
       "conteo": 14
     },
     {
-      "clave": "Otros",
-      "conteo": 309
+      "clave": "Otros idiomas",
+      "conteo": 43
+    },
+    {
+      "clave": "Sin idioma declarado",
+      "conteo": 266
     }
   ],
   "completitud": [

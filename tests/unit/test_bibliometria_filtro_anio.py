@@ -91,8 +91,10 @@ def test_por_idioma_principales_mas_otros() -> None:
     assert por["Español"] == 3  # normaliza mayúsculas
     assert por["Portugués"] == 2
     assert por["Francés"] == 1
-    # Otros = ru(2) + es/en(1) + sin idioma(4) = 7.
-    assert por["Otros"] == 7
+    # "Otros idiomas" = ru(2) + es/en(1) = 3 (idiomas reales no principales).
+    assert por["Otros idiomas"] == 3
+    # "Sin idioma declarado" = los 4 sin dato (separados de otros idiomas).
+    assert por["Sin idioma declarado"] == 4
 
 
 def test_por_revista_top_30_mas_otros() -> None:

@@ -320,37 +320,51 @@ _IDIOMAS_PRINCIPALES: list[tuple[str, str]] = [
     ("pt", "Portugués"),
     ("fr", "Francés"),
 ]
-_ETIQUETA_OTROS_IDIOMAS = "Otros"
+# "Otros idiomas": idiomas reales distintos de los principales (alemán, ruso…).
+_ETIQUETA_OTROS_IDIOMAS = "Otros idiomas"
+# "Sin idioma declarado": el artículo llegó sin el dato de idioma. Se separa de
+# "Otros idiomas" para no confundir ausencia de dato con un idioma real.
+_ETIQUETA_SIN_IDIOMA = "Sin idioma declarado"
 
 
 def _por_idioma(registros: list[dict]) -> list[ConteoPorClave]:
-    """Distribución por idioma: los principales + "Otros".
+    """Distribución por idioma: principales + "Otros idiomas" + "Sin idioma declarado".
 
-    Cuenta los artículos por el código ``language`` (normalizado a minúsculas).
-    Muestra los idiomas de ``_IDIOMAS_PRINCIPALES`` con etiqueta legible y
-    agrupa en "Otros" todo lo demás: otros idiomas, códigos ambiguos (p. ej.
-    "es/en") y los artículos SIN idioma declarado. No se infiere el idioma de
-    un artículo que no lo trae (no se inventa).
+    Cuenta por el código ``language`` (normalizado a minúsculas). Muestra los
+    idiomas de ``_IDIOMAS_PRINCIPALES`` con etiqueta legible, agrupa los demás
+    idiomas reales (incluidos códigos ambiguos como "es/en") en "Otros idiomas",
+    y cuenta aparte los artículos SIN idioma declarado. Separar ausencia de dato
+    de "otro idioma" evita inflar "Otros" y confundir al lector. No se infiere el
+    idioma de un artículo que no lo trae (no se inventa).
     """
     principales = {codigo for codigo, _ in _IDIOMAS_PRINCIPALES}
     conteo: Counter = Counter()
-    otros = 0
+    otros_idiomas = 0
+    sin_idioma = 0
     for r in registros:
         lang = r.get("language")
         codigo = str(lang).strip().lower() if lang else ""
-        if codigo in principales:
+        if not codigo:
+            sin_idioma += 1
+        elif codigo in principales:
             conteo[codigo] += 1
         else:
-            # Incluye sin idioma, ambiguos y poco frecuentes.
-            otros += 1
+            # Idioma real distinto de los principales (alemán, ruso, etc.).
+            otros_idiomas += 1
 
     resultado = [
         ConteoPorClave(clave=etiqueta, conteo=conteo[codigo])
         for codigo, etiqueta in _IDIOMAS_PRINCIPALES
         if conteo[codigo] > 0
     ]
-    if otros > 0:
-        resultado.append(ConteoPorClave(clave=_ETIQUETA_OTROS_IDIOMAS, conteo=otros))
+    if otros_idiomas > 0:
+        resultado.append(
+            ConteoPorClave(clave=_ETIQUETA_OTROS_IDIOMAS, conteo=otros_idiomas)
+        )
+    if sin_idioma > 0:
+        resultado.append(
+            ConteoPorClave(clave=_ETIQUETA_SIN_IDIOMA, conteo=sin_idioma)
+        )
     return resultado
 
 

@@ -141,9 +141,9 @@ def test_resumen_consolidado_con_datasets_cumple_shape(client, tmp_path, monkeyp
     assert por_revista == {"Ornitología Colombiana": 2, "Biological Conservation": 1}
 
     # --- Distribución por idioma: 1 es (A), 1 en (B), 1 sin idioma (C) -------
-    # A es español, B inglés; C (Scholar) no trae idioma -> cae en "Otros".
+    # A es español, B inglés; C (Scholar) no trae idioma -> "Sin idioma declarado".
     por_idioma = {d["clave"]: d["conteo"] for d in body["por_idioma"]}
-    assert por_idioma == {"Español": 1, "Inglés": 1, "Otros": 1}
+    assert por_idioma == {"Español": 1, "Inglés": 1, "Sin idioma declarado": 1}
 
     # --- Completitud por campo sobre el conjunto combinado (Req 6.2) --------
     completitud = {c["campo"]: c for c in body["completitud"]}
