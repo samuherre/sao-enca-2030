@@ -241,6 +241,54 @@ function RevistasCard({
 }
 
 /**
+ * Explicación pública de bajo qué criterios se seleccionan los artículos.
+ *
+ * Julián (SAO) pidió que estos criterios estén siempre visibles para quien
+ * consulte el dashboard, para evitar confusiones sobre qué incluye el análisis.
+ * El dashboard NO filtra: solo consolida lo que ya se trajo en la ingesta; los
+ * criterios son de esa etapa. Son una propuesta del equipo a validar con SAO
+ * (no un criterio oficial de SAO), y así se declara.
+ */
+function CriteriosSeleccion() {
+  return (
+    <details
+      style={{
+        margin: "0.5rem 0 0",
+        padding: "0.75rem 1rem",
+        border: "1px solid #d7e3dc",
+        borderRadius: "0.5rem",
+        backgroundColor: "#f7faf8",
+      }}
+    >
+      <summary style={{ cursor: "pointer", fontWeight: 600, color: "#1f5c3a" }}>
+        ¿Bajo qué criterios se seleccionan los artículos?
+      </summary>
+      <p style={{ color: "#445", fontSize: "0.9rem", marginTop: "0.75rem", marginBottom: "0.5rem" }}>
+        El dashboard no filtra: consolida todo lo recuperado en la ingesta. Los artículos se
+        seleccionan por estos tres criterios:
+      </p>
+      <ol style={{ margin: 0, paddingLeft: "1.25rem", color: "#334", fontSize: "0.9rem" }}>
+        <li style={{ marginBottom: "0.4rem" }}>
+          <strong>Fuente:</strong> OpenAlex (API y Publish or Perish) y Boletín SAO.
+        </li>
+        <li style={{ marginBottom: "0.4rem" }}>
+          <strong>Términos de búsqueda:</strong> ecuaciones booleanas multilingües (ES/EN/PT) que
+          cruzan términos de aves (bird, aves, avifauna…) con conservación, amenazas y biodiversidad
+          (conservation, habitat loss, threatened species, protected areas…). Alcance internacional,
+          con énfasis —no exclusivo— en Colombia.
+        </li>
+        <li style={{ marginBottom: "0.4rem" }}>
+          <strong>Período:</strong> 2020–2030.
+        </li>
+      </ol>
+      <p style={{ color: "#8a6d1f", fontSize: "0.82rem", marginTop: "0.5rem", marginBottom: 0 }}>
+        Estos criterios de búsqueda son una propuesta del equipo, pendiente de validación con SAO.
+      </p>
+    </details>
+  );
+}
+
+/**
  * Explicación pública de qué son los OFC (Objetos Focales de Conservación).
  *
  * Muestra el texto oficial de la ENCA y la lista de los 11 OFC con su
@@ -574,6 +622,8 @@ export function BibliometriaPage() {
         {fechas.length > 0 ? ` (datasets: ${fechas.join(", ")})` : ""}. La clasificación por OFC
         está pendiente de validación con SAO.
       </p>
+
+      <CriteriosSeleccion />
 
       <div
         style={{
