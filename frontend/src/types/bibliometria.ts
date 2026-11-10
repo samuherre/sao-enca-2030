@@ -18,11 +18,16 @@ export interface CompletitudCampo {
   readonly total: number;
 }
 
-/** Conteo de artículos por OFC (clasificación automática). */
+/** Conteo de artículos por OFC (clasificación automática) + Grado de Colaboración. */
 export interface ConteoOFC {
   readonly ofc_id: string;
   readonly nombre: string;
   readonly conteo: number;
+  // Grado de Colaboración de Subramanyam (1983), en [0, 1]; null si no hay base.
+  readonly grado_colaboracion: number | null;
+  // Artículos usados en el GC (con autoría contable) y los excluidos sin ella.
+  readonly gc_articulos_contables: number;
+  readonly gc_articulos_sin_autoria: number;
 }
 
 /** Ficha descriptiva pública de un OFC (catálogo oficial ENCA 2030). */

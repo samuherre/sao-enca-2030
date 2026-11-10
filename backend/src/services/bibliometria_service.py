@@ -247,6 +247,58 @@ def _es_anio_plausible(valor: object) -> bool:
     return _ANIO_MIN_PLAUSIBLE <= anio <= _ANIO_MAX_PLAUSIBLE
 
 
+# Fuentes cuyo campo ``authors`` viene como lista de autores separada de forma
+# FIABLE por "; " (p. ej. OpenAlex une ``authorships`` con ese separador). Para
+# otras fuentes (p. ej. Boletín SAO) el texto de autores es libre y separar
+# nombres no es confiable, por lo que no se cuenta (no se inventa un conteo).
+_FUENTES_AUTORIA_FIABLE = {"OpenAlex"}
+# Separador explícito con el que esas fuentes unen los nombres de autor.
+_SEP_AUTORES_FIABLE = ";"
+
+
+def _calcular_gc(n: int, f1: int) -> float | None:
+    """Grado de Colaboración de Subramanyam (1983): ``GC = 1 - f1/N``.
+
+    :param n: N = número de artículos con autoría contable (del OFC).
+    :param f1: f1 = de esos, cuántos son de un solo autor.
+    :returns: GC en [0, 1] redondeado a 2 decimales, o ``None`` si ``n == 0``
+        (sin artículos contables no hay métrica; no se inventa un 0).
+
+    GC = 0 → toda la producción es de autor único; GC → 1 → predomina la
+    coautoría. Solo se calcula sobre artículos con autoría contable de forma
+    fiable (ver :func:`_num_autores_fiable`).
+    """
+    if n <= 0:
+        return None
+    return round(1 - (f1 / n), 2)
+
+
+def _num_autores_fiable(registro: dict) -> int | None:
+    """Número de autores del artículo, SOLO si el conteo es fiable.
+
+    Devuelve un entero cuando la autoría es contable sin adivinar:
+    - Si ``authors_list`` es una lista no vacía, usa su longitud (ya desglosada).
+    - Si la fuente une autores por "; " de forma fiable (p. ej. OpenAlex), parte
+      el string ``authors`` por ese separador y cuenta los nombres no vacíos.
+    En cualquier otro caso devuelve ``None`` (autoría no contable de forma
+    confiable: texto libre, separadores ambiguos o sin autores). No se inventa.
+    """
+    al = registro.get("authors_list")
+    if isinstance(al, list):
+        nombres = [str(x).strip() for x in al if str(x).strip()]
+        if nombres:
+            return len(nombres)
+
+    fuente = registro.get("source")
+    authors = registro.get("authors")
+    if fuente in _FUENTES_AUTORIA_FIABLE and isinstance(authors, str) and authors.strip():
+        nombres = [n.strip() for n in authors.split(_SEP_AUTORES_FIABLE) if n.strip()]
+        if nombres:
+            return len(nombres)
+
+    return None
+
+
 # Número de revistas con más artículos que se muestran individualmente en la
 # distribución por revista; el resto se agrupa bajo "Otros".
 _TOP_REVISTAS = 30
@@ -490,6 +542,14 @@ class BibliometriaService:
         sin_ofc = 0
         nombres = _nombres_ofc()
         dist: Counter = Counter()
+        # Grado de Colaboración (Subramanyam 1983) por OFC. Para cada OFC
+        # acumulamos, SOLO sobre artículos con autoría contable de forma fiable:
+        #   gc_n[ofc]  = N  (artículos del OFC con autoría contable)
+        #   gc_f1[ofc] = f1 (de esos, cuántos son de un solo autor)
+        #   gc_excluidos[ofc] = artículos del OFC sin autoría contable (transparencia)
+        gc_n: Counter = Counter()
+        gc_f1: Counter = Counter()
+        gc_excluidos: Counter = Counter()
         for carpeta in carpetas_clasificado:
             # Modelo ACUMULATIVO: se combinan TODOS los datasets clasificados de
             # la carpeta, deduplicando por article_id (el más reciente gana), de
@@ -511,11 +571,27 @@ class BibliometriaService:
                 ofcs = r.get("ofcs") or []
                 if not ofcs:
                     sin_ofc += 1
+                # Autoría del artículo para el GC (una sola vez por artículo).
+                num_aut = _num_autores_fiable(r)
                 for ofc_id in ofcs:
                     dist[ofc_id] += 1
+                    # El artículo cuenta en cada OFC al que pertenece (multilabel).
+                    if num_aut is None:
+                        gc_excluidos[ofc_id] += 1
+                    else:
+                        gc_n[ofc_id] += 1
+                        if num_aut <= 1:
+                            gc_f1[ofc_id] += 1
         if clasificacion_disponible:
             por_ofc = [
-                ConteoOFC(ofc_id=ofc_id, nombre=nombres.get(ofc_id, ofc_id), conteo=n)
+                ConteoOFC(
+                    ofc_id=ofc_id,
+                    nombre=nombres.get(ofc_id, ofc_id),
+                    conteo=n,
+                    grado_colaboracion=_calcular_gc(gc_n[ofc_id], gc_f1[ofc_id]),
+                    gc_articulos_contables=gc_n[ofc_id],
+                    gc_articulos_sin_autoria=gc_excluidos[ofc_id],
+                )
                 for ofc_id, n in sorted(dist.items())
             ]
 

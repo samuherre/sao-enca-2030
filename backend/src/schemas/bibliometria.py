@@ -30,11 +30,23 @@ class CompletitudCampo(SchemaBase):
 
 
 class ConteoOFC(SchemaBase):
-    """Conteo de artículos asignados a un OFC (clasificación automática)."""
+    """Conteo de artículos asignados a un OFC (clasificación automática).
+
+    Incluye el Grado de Colaboración (GC) de Subramanyam (1983) del OFC:
+    ``GC = 1 - f1/N`` sobre los artículos con autoría contable de forma fiable
+    (ver servicio). ``grado_colaboracion`` es ``None`` cuando no hay artículos
+    con autoría contable en el OFC (no se inventa un valor).
+    """
 
     ofc_id: str
     nombre: str
     conteo: int
+    # Grado de Colaboración (Subramanyam 1983), en [0, 1]; None si no hay base.
+    grado_colaboracion: float | None = None
+    # Artículos del OFC con autoría contable (N usado en el GC) y los excluidos
+    # por no tener autoría contable de forma fiable (transparencia del alcance).
+    gc_articulos_contables: int = 0
+    gc_articulos_sin_autoria: int = 0
 
 
 class DescripcionOFC(SchemaBase):

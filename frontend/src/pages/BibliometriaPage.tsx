@@ -15,7 +15,7 @@
 // Los gráficos usan Recharts. Los estados de carga/error/vacío reutilizan los
 // componentes compartidos (LoadingIndicator, ErrorBanner, EmptyState).
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import {
   Bar,
   BarChart,
@@ -279,7 +279,71 @@ function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
           </BarChart>
         </ResponsiveContainer>
       </div>
+      <GradoColaboracionTable por_ofc={resumen.por_ofc} />
     </section>
+  );
+}
+
+/**
+ * Tabla del Grado de Colaboración (GC) de Subramanyam (1983) por OFC.
+ *
+ * GC = 1 − f1/N: proporción de la producción de cada OFC hecha en coautoría
+ * (0 = todo de autor único; cercano a 1 = predomina la colaboración). Se calcula
+ * solo sobre artículos con autoría contable de forma fiable; la columna "Base"
+ * indica cuántos artículos entraron en el cálculo y, entre paréntesis, cuántos
+ * quedaron fuera por no tener autoría contable. Un GC "—" significa que el OFC
+ * no tiene artículos con autoría contable.
+ */
+function GradoColaboracionTable({
+  por_ofc,
+}: {
+  por_ofc: ResumenConsolidado["por_ofc"];
+}) {
+  const th: CSSProperties = {
+    textAlign: "left",
+    padding: "0.4rem",
+    borderBottom: "2px solid #ccc",
+  };
+  const thR: CSSProperties = { ...th, textAlign: "right" };
+  const td: CSSProperties = { padding: "0.4rem", borderBottom: "1px solid #eee" };
+  const tdR: CSSProperties = { ...td, textAlign: "right" };
+  return (
+    <div style={{ marginTop: "1rem" }}>
+      <h4 style={{ margin: "0 0 0.25rem" }}>Grado de Colaboración por OFC</h4>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Índice de Subramanyam (1983): <code>GC = 1 − f₁/N</code>, donde f₁ son los artículos de
+        un solo autor y N los artículos del OFC con autoría contable. 0 = producción individual;
+        cerca de 1 = predomina la coautoría. Se calcula solo donde la autoría es contable de forma
+        fiable (p. ej. OpenAlex); el paréntesis en “Base” son los artículos sin autoría contable.
+      </p>
+      <table style={{ borderCollapse: "collapse", width: "100%", maxWidth: 560 }}>
+        <thead>
+          <tr>
+            <th style={th}>OFC</th>
+            <th style={thR}>Artículos</th>
+            <th style={thR}>GC</th>
+            <th style={thR}>Base (N)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {por_ofc.map((o) => (
+            <tr key={o.ofc_id}>
+              <td style={td} title={o.nombre}>
+                {o.ofc_id}
+              </td>
+              <td style={tdR}>{o.conteo}</td>
+              <td style={tdR}>
+                {o.grado_colaboracion == null ? "—" : o.grado_colaboracion.toFixed(2)}
+              </td>
+              <td style={tdR}>
+                {o.gc_articulos_contables}
+                {o.gc_articulos_sin_autoria > 0 ? ` (+${o.gc_articulos_sin_autoria})` : ""}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

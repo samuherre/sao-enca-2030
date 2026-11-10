@@ -187,57 +187,90 @@
     {
       "ofc_id": "OFC-01",
       "nombre": "Aves de hábitats marinos, costeros y de manglar",
-      "conteo": 234
+      "conteo": 234,
+      "grado_colaboracion": 0.84,
+      "gc_articulos_contables": 231,
+      "gc_articulos_sin_autoria": 3
     },
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 343
+      "conteo": 343,
+      "grado_colaboracion": 0.82,
+      "gc_articulos_contables": 340,
+      "gc_articulos_sin_autoria": 3
     },
     {
       "ofc_id": "OFC-03",
       "nombre": "Aves de sabanas y pastizales naturales",
-      "conteo": 116
+      "conteo": 116,
+      "grado_colaboracion": 0.88,
+      "gc_articulos_contables": 112,
+      "gc_articulos_sin_autoria": 4
     },
     {
       "ofc_id": "OFC-04",
       "nombre": "Aves de bosques y matorrales secos",
-      "conteo": 45
+      "conteo": 45,
+      "grado_colaboracion": 0.82,
+      "gc_articulos_contables": 45,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-05",
       "nombre": "Aves de bosques húmedos de tierras bajas",
-      "conteo": 45
+      "conteo": 45,
+      "grado_colaboracion": 0.76,
+      "gc_articulos_contables": 45,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-06",
       "nombre": "Aves de bosques premontanos y montanos",
-      "conteo": 51
+      "conteo": 51,
+      "grado_colaboracion": 0.84,
+      "gc_articulos_contables": 50,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-07",
       "nombre": "Aves de alta montaña",
-      "conteo": 48
+      "conteo": 48,
+      "grado_colaboracion": 0.77,
+      "gc_articulos_contables": 47,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-08",
       "nombre": "Aves en sistemas urbanos",
-      "conteo": 218
+      "conteo": 218,
+      "grado_colaboracion": 0.74,
+      "gc_articulos_contables": 213,
+      "gc_articulos_sin_autoria": 5
     },
     {
       "ofc_id": "OFC-09",
       "nombre": "Aves en agroecosistemas",
-      "conteo": 144
+      "conteo": 144,
+      "grado_colaboracion": 0.81,
+      "gc_articulos_contables": 144,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-10",
       "nombre": "Sistemas culturales asociados a la apreciación de las aves",
-      "conteo": 18
+      "conteo": 18,
+      "grado_colaboracion": 0.72,
+      "gc_articulos_contables": 18,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-11",
       "nombre": "Aviturismo",
-      "conteo": 51
+      "conteo": 51,
+      "grado_colaboracion": 0.72,
+      "gc_articulos_contables": 50,
+      "gc_articulos_sin_autoria": 1
     }
   ],
   "sin_ofc": 1375,

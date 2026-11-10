@@ -105,6 +105,91 @@ def test_por_revista_top_30_mas_otros() -> None:
     assert total_contado == sum(40 - i for i in range(1, 36))
 
 
+def _resumen_con_clasificado(clasificados: list[dict]):
+    """Como ``_resumen`` pero añade una carpeta ``*_clasificado`` para el GC/OFC."""
+    tmp_root = Path(tempfile.mkdtemp(prefix="sao_gc_"))
+    processed_dir = tmp_root / "processed"
+    processed_dir.mkdir(parents=True, exist_ok=True)
+    # Una fuente mínima (para que el consolidado no sea vacío) + la clasificada.
+    _escribir(processed_dir, "openalex", clasificados)
+    carpeta = processed_dir / "openalex_clasificado"
+    carpeta.mkdir(parents=True, exist_ok=True)
+    (carpeta / "openalex_clasificado_2024-01-01.json").write_text(
+        json.dumps(clasificados, ensure_ascii=False), encoding="utf-8"
+    )
+    original = svc._PROCESSED_DIR
+    try:
+        svc._PROCESSED_DIR = processed_dir
+        return svc.BibliometriaService().resumen_consolidado(anio=None)
+    finally:
+        svc._PROCESSED_DIR = original
+        shutil.rmtree(tmp_root, ignore_errors=True)
+
+
+def test_grado_colaboracion_por_ofc() -> None:
+    """El GC por OFC usa f1/N solo sobre artículos con autoría contable.
+
+    OFC-01: 3 artículos contables, 1 de un solo autor -> GC = 1 - 1/3 = 0.67.
+    Un cuarto artículo de OFC-01 sin autoría contable NO entra en N, pero sí
+    se reporta como excluido. OFC-02 (multilabel) hereda sus artículos.
+    """
+    clasificados = [
+        {"source": "OpenAlex", "publication_year": 2021, "ofcs": ["OFC-01"],
+         "authors": "A; B"},                       # 2 autores
+        {"source": "OpenAlex", "publication_year": 2021, "ofcs": ["OFC-01", "OFC-02"],
+         "authors": "A; B; C"},                     # 3 autores
+        {"source": "OpenAlex", "publication_year": 2021, "ofcs": ["OFC-01"],
+         "authors": "A"},                           # 1 autor
+        {"source": "Boletín SAO", "publication_year": 2021, "ofcs": ["OFC-01"],
+         "authors": "A, B y C"},                     # texto libre -> no contable
+    ]
+    r = _resumen_con_clasificado(clasificados)
+    por = {o.ofc_id: o for o in r.por_ofc}
+
+    assert "OFC-01" in por
+    o1 = por["OFC-01"]
+    assert o1.conteo == 4                      # 4 artículos clasificados en OFC-01
+    assert o1.gc_articulos_contables == 3      # solo 3 con autoría contable
+    assert o1.gc_articulos_sin_autoria == 1    # el de Boletín (texto libre)
+    assert o1.grado_colaboracion == 0.67       # 1 - 1/3
+
+    o2 = por["OFC-02"]
+    assert o2.conteo == 1
+    assert o2.gc_articulos_contables == 1
+    assert o2.grado_colaboracion == 1.0        # su único artículo tiene 3 autores
+
+
+def test_num_autores_fiable_openalex_y_boletin() -> None:
+    """Conteo de autores: fiable en OpenAlex (por '; '), no contable en texto libre."""
+    # OpenAlex: autores unidos por "; " -> contable.
+    assert svc._num_autores_fiable(
+        {"source": "OpenAlex", "authors": "Ana Pérez; Juan Gómez; Luis Díaz"}
+    ) == 3
+    assert svc._num_autores_fiable({"source": "OpenAlex", "authors": "Ana Pérez"}) == 1
+    # authors_list explícita -> se usa su longitud, sea cual sea la fuente.
+    assert svc._num_autores_fiable(
+        {"source": "Boletín SAO", "authors_list": ["A", "B"]}
+    ) == 2
+    # Boletín con texto libre (sin "; ") -> no contable de forma fiable.
+    assert svc._num_autores_fiable(
+        {"source": "Boletín SAO", "authors": "Ana Pérez, Juan Gómez y Luis Díaz"}
+    ) is None
+    # Sin autores -> None.
+    assert svc._num_autores_fiable({"source": "OpenAlex", "authors": None}) is None
+
+
+def test_calcular_gc_formula_subramanyam() -> None:
+    """GC = 1 - f1/N, con None cuando no hay base."""
+    # 10 artículos, 2 de un solo autor -> GC = 1 - 2/10 = 0.8.
+    assert svc._calcular_gc(10, 2) == 0.8
+    # Todos de un solo autor -> GC = 0.
+    assert svc._calcular_gc(5, 5) == 0.0
+    # Ninguno de un solo autor -> GC = 1.
+    assert svc._calcular_gc(4, 0) == 1.0
+    # Sin base -> None (no se inventa 0).
+    assert svc._calcular_gc(0, 0) is None
+
+
 def test_resumen_incluye_explicacion_publica_de_ofc() -> None:
     """El consolidado trae el texto oficial y el catálogo de los 11 OFC.
 

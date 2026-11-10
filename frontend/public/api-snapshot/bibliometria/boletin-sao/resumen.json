@@ -96,47 +96,74 @@
     {
       "ofc_id": "OFC-01",
       "nombre": "Aves de hábitats marinos, costeros y de manglar",
-      "conteo": 2
+      "conteo": 2,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 6
+      "conteo": 6,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-03",
       "nombre": "Aves de sabanas y pastizales naturales",
-      "conteo": 2
+      "conteo": 2,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-05",
       "nombre": "Aves de bosques húmedos de tierras bajas",
-      "conteo": 2
+      "conteo": 2,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-06",
       "nombre": "Aves de bosques premontanos y montanos",
-      "conteo": 1
+      "conteo": 1,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-07",
       "nombre": "Aves de alta montaña",
-      "conteo": 2
+      "conteo": 2,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-08",
       "nombre": "Aves en sistemas urbanos",
-      "conteo": 6
+      "conteo": 6,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-09",
       "nombre": "Aves en agroecosistemas",
-      "conteo": 2
+      "conteo": 2,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-11",
       "nombre": "Aviturismo",
-      "conteo": 1
+      "conteo": 1,
+      "grado_colaboracion": null,
+      "gc_articulos_contables": 0,
+      "gc_articulos_sin_autoria": 0
     }
   ],
   "sin_ofc": 17
