@@ -42,6 +42,21 @@ function formatoMillones(valor: number | null | undefined): string {
   return `${new Intl.NumberFormat("es-CO", { maximumFractionDigits: 2 }).format(millones)} M`;
 }
 
+/**
+ * Formato compacto para marcas de eje que abarcan varios órdenes de magnitud
+ * (escala logarítmica): usa M para millones y K para miles. P. ej. 1 000 000 →
+ * "1 M", 100 000 → "100 K". Evita el confuso "0,1 M" de la escala lineal.
+ */
+function formatoCompacto(valor: number | null | undefined): string {
+  if (valor === null || valor === undefined) return "—";
+  const abs = Math.abs(valor);
+  const fmt = (n: number) =>
+    new Intl.NumberFormat("es-CO", { maximumFractionDigits: 1 }).format(n);
+  if (abs >= 1_000_000) return `${fmt(valor / 1_000_000)} M`;
+  if (abs >= 1_000) return `${fmt(valor / 1_000)} K`;
+  return fmt(valor);
+}
+
 /** Formatea un timestamp ISO UTC a fecha/hora legible, o "no disponible". */
 function formatoFechaHora(iso: string | null | undefined): string {
   if (!iso) return "no disponible";
@@ -88,27 +103,6 @@ function MetricCard({
   );
 }
 
-/** Etiqueta de origen del dato (almacenado vs en vivo), siempre visible. */
-function OrigenBadge({ origen }: { origen: ResumenGBIF["origen"] }) {
-  const enVivo = origen === "en_vivo";
-  return (
-    <span
-      style={{
-        display: "inline-block",
-        padding: "0.15rem 0.6rem",
-        borderRadius: "999px",
-        fontSize: "0.75rem",
-        fontWeight: 700,
-        color: enVivo ? "#1f4e5c" : "#5a4a1f",
-        backgroundColor: enVivo ? "#e2f0f4" : "#faf3df",
-        border: `1px solid ${enVivo ? "#b9dbe4" : "#ecdcae"}`,
-      }}
-    >
-      {enVivo ? "Consulta en vivo" : "Datos almacenados"}
-    </span>
-  );
-}
-
 /** Tabla + gráfico del ranking de publicadores. */
 function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
   if (resumen.publicadores.length === 0) {
@@ -120,17 +114,33 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
     );
   }
 
-  const data = resumen.publicadores.map((p) => ({
-    etiqueta: p.nombre ?? p.org_key,
-    registros: p.registros_ocurrencia,
-  }));
-  const alto = Math.max(220, data.length * 46);
+  const data = resumen.publicadores
+    // En escala logarítmica un valor <= 0 no es representable; se excluye (no se
+    // inventa un mínimo). En la práctica GBIF solo devuelve conteos positivos.
+    .filter((p) => p.registros_ocurrencia > 0)
+    .map((p) => ({
+      etiqueta: p.nombre ?? p.org_key,
+      registros: p.registros_ocurrencia,
+    }));
+  const alto = Math.max(220, data.length * 40);
+
+  // Dominio del eje logarítmico: de la menor potencia de 10 por debajo del
+  // mínimo a la mayor por encima del máximo, para que cada barra sea visible
+  // aunque un publicador concentre casi todos los registros.
+  const valores = data.map((d) => d.registros);
+  const minimo = valores.length > 0 ? Math.min(...valores) : 1;
+  const maximo = valores.length > 0 ? Math.max(...valores) : 1;
+  const dominioInferior = Math.pow(10, Math.floor(Math.log10(minimo)));
+  const dominioSuperior = Math.pow(10, Math.ceil(Math.log10(maximo)));
 
   return (
     <section style={{ marginTop: "1.5rem" }}>
       <h3 style={{ marginBottom: "0.25rem" }}>Principales publicadores</h3>
       <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
-        Organizaciones que aportan más registros de ocurrencia de aves de Colombia a GBIF.
+        Organizaciones que aportan más registros de ocurrencia de aves de Colombia a GBIF. El eje usa
+        una <strong>escala logarítmica</strong>: cada marca representa diez veces más registros que la
+        anterior, de modo que se aprecie la contribución de cada publicador aunque uno concentre la
+        mayoría. Las cifras exactas están en la tabla inferior.
       </p>
 
       <div style={{ width: "100%", height: alto }}>
@@ -141,8 +151,14 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
             margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
-            <XAxis type="number" tickFormatter={(v: number) => formatoMillones(v)} />
-            <YAxis type="category" dataKey="etiqueta" width={200} tick={{ fontSize: 12 }} />
+            <XAxis
+              type="number"
+              scale="log"
+              domain={[dominioInferior, dominioSuperior]}
+              allowDataOverflow
+              tickFormatter={(v: number) => formatoCompacto(v)}
+            />
+            <YAxis type="category" dataKey="etiqueta" width={200} tick={{ fontSize: 11 }} />
             <Tooltip
               formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
             />
@@ -319,21 +335,61 @@ function LimitacionesCard() {
           esos datos, y no se inventan.
         </li>
         <li>
-          <strong>Histórico:</strong> requiere varios cortes (idealmente mensuales) para comparar; la
-          serie refleja variaciones de lo reportado por GBIF, no cambios poblacionales.
-        </li>
-        <li>
-          <strong>ArcGIS:</strong> solo se preparan CSV locales; la publicación a SAO está pendiente
-          de permisos y configuración.
+          <strong>Es un borrador:</strong> esta vista muestra el contenido de forma preliminar; la
+          versión definitiva de estos datos se publicará en ArcGIS.
         </li>
       </ul>
     </section>
   );
 }
 
-/** Cabecera: fuente, alcance y estado de la última ejecución. */
+/**
+ * Bloque colapsable con información de ADMINISTRACIÓN (no de usuario final):
+ * histórico de ejecuciones de la consulta y archivos CSV preparados para ArcGIS.
+ * Viene cerrado por defecto; el usuario de SAO no necesita verlo para entender
+ * las cifras, pero se mantiene accesible por trazabilidad y uso interno.
+ */
+function DetallesTecnicos({ resumen }: { resumen: ResumenGBIF }) {
+  return (
+    <details
+      style={{
+        marginTop: "1.5rem",
+        padding: "0.5rem 1rem",
+        border: `1px solid ${BORDE}`,
+        borderRadius: "0.5rem",
+        backgroundColor: "#fbfdfc",
+      }}
+    >
+      <summary style={{ cursor: "pointer", fontWeight: 600, color: "#567" }}>
+        Detalles técnicos (uso interno)
+      </summary>
+      <p style={{ color: "#789", fontSize: "0.8rem", marginTop: "0.5rem" }}>
+        Información de administración del piloto: no es necesaria para interpretar las cifras de
+        arriba. Útil para el equipo que mantiene la actualización de datos.
+      </p>
+
+      {/* Estado de la última ejecución (antes en la cabecera; es dato operativo). */}
+      <p style={{ color: "#567", fontSize: "0.85rem" }}>
+        Estado de la última actualización: <strong>{resumen.estado}</strong>
+        {resumen.errores.length > 0 ? (
+          <span style={{ color: "#8a1f1f" }}> — avisos: {resumen.errores.join("; ")}</span>
+        ) : null}
+      </p>
+
+      <HistoricoCard resumen={resumen} />
+      <ExportacionesCard resumen={resumen} />
+    </details>
+  );
+}
+
+/**
+ * Cabecera orientada al usuario de SAO: fuente, grupo taxonómico, cobertura y
+ * fecha de actualización en lenguaje llano. Los detalles operativos (estado de
+ * la ejecución, errores de la consulta, hora exacta de extracción) NO se
+ * muestran aquí: son información de administración y viven en "Detalles
+ * técnicos" al pie de la vista.
+ */
 function CabeceraResumen({ resumen }: { resumen: ResumenGBIF }) {
-  const conErrores = resumen.estado !== "completed";
   return (
     <section
       style={{
@@ -344,15 +400,10 @@ function CabeceraResumen({ resumen }: { resumen: ResumenGBIF }) {
         marginTop: "1rem",
       }}
     >
-      <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem" }}>
-        <div>
-          <div style={{ fontSize: "0.8rem", color: "#789", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-            Fuente
-          </div>
-          <div style={{ fontWeight: 700, color: VERDE_OSCURO }}>{resumen.fuente}</div>
-        </div>
-        <OrigenBadge origen={resumen.origen} />
+      <div style={{ fontSize: "0.8rem", color: "#789", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+        Fuente
       </div>
+      <div style={{ fontWeight: 700, color: VERDE_OSCURO }}>{resumen.fuente}</div>
 
       <dl
         style={{
@@ -371,22 +422,10 @@ function CabeceraResumen({ resumen }: { resumen: ResumenGBIF }) {
           <dd style={{ margin: 0 }}>{resumen.cobertura_geografica}</dd>
         </div>
         <div>
-          <dt style={{ fontSize: "0.75rem", color: "#789" }}>Última extracción</dt>
+          <dt style={{ fontSize: "0.75rem", color: "#789" }}>Datos actualizados a</dt>
           <dd style={{ margin: 0 }}>{formatoFechaHora(resumen.extraido_utc)}</dd>
         </div>
-        <div>
-          <dt style={{ fontSize: "0.75rem", color: "#789" }}>Estado</dt>
-          <dd style={{ margin: 0, color: conErrores ? "#8a1f1f" : "#1f5c3a", fontWeight: 600 }}>
-            {resumen.estado}
-          </dd>
-        </div>
       </dl>
-
-      {resumen.errores.length > 0 ? (
-        <p style={{ marginTop: "0.5rem", color: "#8a1f1f", fontSize: "0.85rem" }}>
-          Avisos de la consulta: {resumen.errores.join("; ")}
-        </p>
-      ) : null}
     </section>
   );
 }
@@ -477,14 +516,21 @@ export function BiodiversidadPage() {
           value={formatoMillones(resumen.total_registros_ocurrencia)}
           hint="Equivalente aproximado del total"
         />
-        <MetricCard label="Publicadores en el ranking" value={resumen.publicadores.length} />
-        <MetricCard label="Cortes históricos" value={resumen.cortes_historicos} />
+        <MetricCard
+          label="Publicadores principales"
+          value={resumen.publicadores.length}
+          hint="Organizaciones que más aportan (ver gráfico)"
+        />
       </div>
 
       <PublicadoresCard resumen={resumen} />
-      <HistoricoCard resumen={resumen} />
-      <ExportacionesCard resumen={resumen} />
       <LimitacionesCard />
+
+      {/* Información de administración, no de valor para el usuario de SAO:
+          el histórico de ejecuciones y los archivos CSV preparados para ArcGIS.
+          Se oculta en un bloque colapsable para no saturar la vista, pero se
+          conserva (trazabilidad) y queda a mano para uso interno. */}
+      <DetallesTecnicos resumen={resumen} />
     </div>
   );
 }

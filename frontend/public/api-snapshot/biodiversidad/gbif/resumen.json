@@ -5,18 +5,18 @@
   "cobertura_geografica": "Colombia (country=CO)",
   "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
   "origen": "almacenado",
-  "extraido_utc": "2026-10-21T18:48:51.928093+00:00",
-  "finalizado_utc": "2026-10-21T18:49:01.614127+00:00",
+  "extraido_utc": "2026-11-16T23:42:19.529354+00:00",
+  "finalizado_utc": "2026-11-16T23:42:31.084053+00:00",
   "estado": "completed",
   "errores": [],
   "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null.",
-  "total_registros_ocurrencia": 26753542,
+  "total_registros_ocurrencia": 20091344,
   "publicadores": [
     {
       "rank": 1,
       "org_key": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
       "nombre": "Cornell Lab of Ornithology",
-      "registros_ocurrencia": 24154885
+      "registros_ocurrencia": 17476440
     },
     {
       "rank": 2,
@@ -28,7 +28,7 @@
       "rank": 3,
       "org_key": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
       "nombre": "iNaturalist.org",
-      "registros_ocurrencia": 302130
+      "registros_ocurrencia": 307858
     },
     {
       "rank": 4,
@@ -41,9 +41,69 @@
       "org_key": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
       "nombre": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
       "registros_ocurrencia": 178767
+    },
+    {
+      "rank": 6,
+      "org_key": "d5ef14a1-5177-4547-9ce2-46d84a4214eb",
+      "nombre": "Ecopetrol S.A.",
+      "registros_ocurrencia": 171312
+    },
+    {
+      "rank": 7,
+      "org_key": "e70c4151-0d1a-414d-b70e-e87ac1e812b7",
+      "nombre": "Secretaría Distrital de Ambiente",
+      "registros_ocurrencia": 92695
+    },
+    {
+      "rank": 8,
+      "org_key": "1d8b951a-3a02-40ab-aa7a-f37dc0009abf",
+      "nombre": "Secretaría de Medio Ambiente del Distrito de Medellín",
+      "registros_ocurrencia": 72693
+    },
+    {
+      "rank": 9,
+      "org_key": "ab13adb9-ce23-444d-87c9-ce41f03ef2b3",
+      "nombre": "Parques Nacionales Naturales de Colombia",
+      "registros_ocurrencia": 56904
+    },
+    {
+      "rank": 10,
+      "org_key": "bad9baef-be05-4410-83c8-31060a9bafb7",
+      "nombre": "Área Metropolitana del Valle de Aburrá",
+      "registros_ocurrencia": 43321
+    },
+    {
+      "rank": 11,
+      "org_key": "567cdb5e-5bb3-42e1-ae07-ffa6fc60b56e",
+      "nombre": "Asociación SELVA: Investigación para la Conservación en el Neotrópico",
+      "registros_ocurrencia": 40255
+    },
+    {
+      "rank": 12,
+      "org_key": "1f00d75c-f6fc-4224-a595-975e82d7689c",
+      "nombre": "Xeno-canto Foundation for Nature Sounds",
+      "registros_ocurrencia": 35248
+    },
+    {
+      "rank": 13,
+      "org_key": "a2f1c6f5-88de-4fc5-891a-336259f32f4e",
+      "nombre": "Asociación para el estudio y conservación de las aves acuáticas en Colombia - Calidris",
+      "registros_ocurrencia": 34826
+    },
+    {
+      "rank": 14,
+      "org_key": "04ce62dd-30ec-4d98-8b30-b09cafc3ac38",
+      "nombre": "Isagen S.A. E.S.P.",
+      "registros_ocurrencia": 34661
+    },
+    {
+      "rank": 15,
+      "org_key": "dbc07e15-c05b-4781-9ec3-59d331a9a4d8",
+      "nombre": "Parex Resources Colombia - AG Sucursal",
+      "registros_ocurrencia": 32175
     }
   ],
-  "cortes_historicos": 2,
+  "cortes_historicos": 3,
   "historico": [
     {
       "extraido_utc": "2026-10-21T17:45:51.364310+00:00",
@@ -58,6 +118,13 @@
       "estado": "completed",
       "total_registros_ocurrencia": 26753542,
       "publicadores_en_ranking": 5
+    },
+    {
+      "extraido_utc": "2026-11-16T23:42:19.529354+00:00",
+      "fecha": "2026-11-16",
+      "estado": "completed",
+      "total_registros_ocurrencia": 20091344,
+      "publicadores_en_ranking": 15
     }
   ],
   "exportaciones": [

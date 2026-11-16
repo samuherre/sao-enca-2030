@@ -215,7 +215,7 @@ class BiodiversidadService:
             exportaciones=_listar_exportaciones(),
         )
 
-    def consulta_en_vivo(self, facet_limit: int = 5) -> ResumenGBIF:
+    def consulta_en_vivo(self, facet_limit: int = 15) -> ResumenGBIF:
         """Consulta GBIF AHORA (reutiliza ``run``) SIN escribir archivos.
 
         Serializa las consultas con un lock en proceso. El resultado se marca

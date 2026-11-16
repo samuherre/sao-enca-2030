@@ -4,7 +4,7 @@ Fase 2 — Histórico mensual de cifras agregadas de AVES en Colombia (GBIF).
 
 Qué hace:
   1. Ejecuta el recolector de Fase 1 (reutiliza `gbif_bird_counts.run`), con los
-     MISMOS filtros acordados: country=CO, taxonKey=212, total nacional + top 5
+     MISMOS filtros acordados: country=CO, taxonKey=212, total nacional + top 15
      de publicadores. No descarga ocurrencias individuales.
   2. Guarda el *snapshot* de cada corte en un archivo propio con marca de tiempo
      UTC (reutiliza `gbif_bird_counts.write_outputs`), sin sobrescribir cortes
@@ -30,7 +30,7 @@ por departamento.
 
 Uso:
     python scripts/biodiversity_pilot/gbif_bird_counts_history.py
-    python scripts/biodiversity_pilot/gbif_bird_counts_history.py --facet-limit 5
+    python scripts/biodiversity_pilot/gbif_bird_counts_history.py --facet-limit 15
     python scripts/biodiversity_pilot/gbif_bird_counts_history.py --dry-run
 """
 
@@ -190,8 +190,8 @@ def main(argv: list[str] | None = None) -> int:
             "Colombia en GBIF (total + top publicadores)."
         )
     )
-    parser.add_argument("--facet-limit", type=int, default=5,
-                        help="Nº de publicadores del ranking (acordado: 5).")
+    parser.add_argument("--facet-limit", type=int, default=15,
+                        help="Nº de publicadores del ranking (por defecto 15).")
     parser.add_argument("--timeout", type=int, default=gbc.DEFAULT_TIMEOUT,
                         help=f"Timeout por consulta (s). Def. {gbc.DEFAULT_TIMEOUT}.")
     parser.add_argument("--no-resolve-names", action="store_true",
