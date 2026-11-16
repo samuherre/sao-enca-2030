@@ -65,6 +65,24 @@ function formatoFechaHora(iso: string | null | undefined): string {
   return `${fecha.toLocaleString("es-CO", { dateStyle: "medium", timeStyle: "short" })} (hora local)`;
 }
 
+/**
+ * Enlace al portal web de GBIF con las ocurrencias de ESE publicador, aplicando
+ * los MISMOS filtros que usan nuestras cifras: Colombia (country=CO) y aves
+ * (taxon_key=212). Así el usuario llega a la misma población de registros que
+ * resume la tabla, no a un listado genérico.
+ *
+ * El portal web usa parámetros en snake_case (country, taxon_key,
+ * publishing_org), distintos de los camelCase de la API REST.
+ */
+function urlGbifPublicador(orgKey: string): string {
+  const params = new URLSearchParams({
+    country: "CO",
+    taxon_key: "212",
+    publishing_org: orgKey,
+  });
+  return `https://www.gbif.org/occurrence/search?${params.toString()}`;
+}
+
 // --- Paleta coherente con el resto del frontend -----------------------------
 
 const VERDE = "#2f8f5b";
@@ -167,6 +185,11 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
         </ResponsiveContainer>
       </div>
 
+      <p style={{ color: "#789", fontSize: "0.8rem", marginBottom: "0.25rem" }}>
+        El nombre de cada publicador enlaza a GBIF, con el filtro de aves de Colombia ya aplicado
+        (se abre en una pestaña nueva).
+      </p>
+
       <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
         <thead>
           <tr>
@@ -184,7 +207,17 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
             <tr key={p.org_key}>
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{p.rank}</td>
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
-                {p.nombre ?? <em style={{ color: "#888" }}>nombre no disponible ({p.org_key})</em>}
+                <a
+                  href={urlGbifPublicador(p.org_key)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ver en GBIF las ocurrencias de aves de Colombia de este publicador"
+                  style={{ color: VERDE_OSCURO, textDecoration: "underline" }}
+                >
+                  {p.nombre ?? (
+                    <em style={{ color: "#888" }}>nombre no disponible ({p.org_key})</em>
+                  )}
+                </a>
               </td>
               <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
                 {formatoEntero(p.registros_ocurrencia)}
