@@ -175,6 +175,9 @@ _DEPARTAMENTO_CANONICO = {
     "san andres providencia y santa catalina": (
         "Archipiélago de San Andrés, Providencia y Santa Catalina"
     ),
+    "san andrés providencia y santa catalina": (
+        "Archipiélago de San Andrés, Providencia y Santa Catalina"
+    ),
     "archipiélago de san andrés, providencia y santa catalina": (
         "Archipiélago de San Andrés, Providencia y Santa Catalina"
     ),
@@ -231,6 +234,92 @@ def fetch_department_facet(
         for nombre, occ in sorted(acumulado.items(), key=lambda kv: kv[1], reverse=True)
     ]
     return ranking, params
+
+
+# Las SEIS regiones de la ENCA (data-and-domain.md §10) coinciden con las
+# regiones naturales de Colombia.
+REGIONES_ENCA = ("Andina", "Caribe", "Pacífico", "Orinoquía", "Amazonía", "Insular")
+
+# Asignación departamento -> región ENCA PREDOMINANTE (una región por
+# departamento). Criterio: región natural predominante del departamento según la
+# división geográfica estándar de Colombia.
+#
+# IMPORTANTE (product.md §15, data-and-domain.md §2): esto es una PROPUESTA del
+# equipo, NO un mapeo oficial de SAO. Varios departamentos son fronterizos y
+# admiten más de una región (p. ej. Antioquia tiene costa Caribe y vertiente
+# Pacífica; Cauca/Nariño/Valle son andino-pacíficos); aquí se asigna la
+# predominante. La UI lo etiqueta como "propuesta, pendiente de confirmación de
+# SAO". El nombre del departamento es el canónico (ver _DEPARTAMENTO_CANONICO).
+_REGION_POR_DEPARTAMENTO = {
+    # --- Andina ---
+    "Antioquia": "Andina",
+    "Caldas": "Andina",
+    "Cundinamarca": "Andina",
+    "Risaralda": "Andina",
+    "Quindío": "Andina",
+    "Tolima": "Andina",
+    "Santander": "Andina",
+    "Norte de Santander": "Andina",
+    "Boyacá": "Andina",
+    "Huila": "Andina",
+    "Bogotá, D.C.": "Andina",
+    # --- Caribe ---
+    "Atlántico": "Caribe",
+    "Bolívar": "Caribe",
+    "Cesar": "Caribe",
+    "Córdoba": "Caribe",
+    "La Guajira": "Caribe",
+    "Magdalena": "Caribe",
+    "Sucre": "Caribe",
+    # --- Pacífico ---
+    "Chocó": "Pacífico",
+    "Valle del Cauca": "Pacífico",
+    "Cauca": "Pacífico",
+    "Nariño": "Pacífico",
+    # --- Orinoquía ---
+    "Arauca": "Orinoquía",
+    "Casanare": "Orinoquía",
+    "Meta": "Orinoquía",
+    "Vichada": "Orinoquía",
+    # --- Amazonía ---
+    "Amazonas": "Amazonía",
+    "Caquetá": "Amazonía",
+    "Guainía": "Amazonía",
+    "Guaviare": "Amazonía",
+    "Putumayo": "Amazonía",
+    "Vaupés": "Amazonía",
+    # --- Insular ---
+    "Archipiélago de San Andrés, Providencia y Santa Catalina": "Insular",
+}
+
+
+def agrupar_por_region(
+    department_ranking: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """Agrupa el ranking de departamentos en las regiones ENCA (predominante).
+
+    Devuelve (ranking_region, departamentos_sin_region). Un departamento no
+    contemplado en el mapeo NO se asigna a ninguna región (se reporta aparte, no
+    se inventa su pertenencia). Las regiones sin registros no aparecen.
+    """
+    acumulado: dict[str, int] = {}
+    sin_region: list[str] = []
+    for fila in department_ranking:
+        nombre = fila.get("departamento")
+        occ = fila.get("occurrence_count")
+        if not isinstance(nombre, str) or not isinstance(occ, int):
+            continue
+        region = _REGION_POR_DEPARTAMENTO.get(nombre)
+        if region is None:
+            sin_region.append(nombre)
+            continue
+        acumulado[region] = acumulado.get(region, 0) + occ
+
+    ranking = [
+        {"region": region, "occurrence_count": occ}
+        for region, occ in sorted(acumulado.items(), key=lambda kv: kv[1], reverse=True)
+    ]
+    return ranking, sin_region
 
 
 def resolve_publisher_name(org_key: str, timeout: int) -> str | None:
@@ -320,6 +409,10 @@ def run(
         except GbifError as error:
             errors.append(f"department_facet: {error}")
 
+    # Agregación por región ENCA (predominante) a partir del ranking de
+    # departamentos. Es un cálculo local, no otra consulta a GBIF.
+    region_ranking, departments_without_region = agrupar_por_region(department_ranking)
+
     names_resolved = 0
     if resolve_names:
         for row in ranking:
@@ -352,6 +445,13 @@ def run(
         "publisher_names_resolved": names_resolved,
         "department_ranking": department_ranking,
         "departments_in_ranking": len(department_ranking),
+        "region_ranking": region_ranking,
+        "regions_in_ranking": len(region_ranking),
+        "departments_without_region": departments_without_region,
+        "region_mapping_note": (
+            "Agrupación por región ENCA usando la región predominante de cada "
+            "departamento. Propuesta del equipo, pendiente de confirmación por SAO."
+        ),
         "errors": errors,
         "status": status,
         "notes": (

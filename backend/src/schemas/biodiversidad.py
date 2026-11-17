@@ -52,6 +52,20 @@ class DepartamentoGBIF(SchemaBase):
     registros_ocurrencia: int
 
 
+class RegionGBIF(SchemaBase):
+    """Conteo de registros de aves agrupado por región geográfica de la ENCA.
+
+    La región se obtiene agregando los departamentos según su región ENCA
+    PREDOMINANTE. Es una propuesta del equipo (una región por departamento),
+    pendiente de confirmación por SAO; no es un mapeo oficial. Los departamentos
+    sin región asignada no se cuentan aquí (no se inventa su pertenencia).
+    """
+
+    rank: int
+    region: str
+    registros_ocurrencia: int
+
+
 class CorteHistoricoGBIF(SchemaBase):
     """Un corte del histórico de cifras agregadas (snapshot con su fecha).
 
@@ -109,6 +123,10 @@ class ResumenGBIF(SchemaBase):
     # Desglose por departamento (campo stateProvince de GBIF, canonizado). Puede
     # venir vacío si el corte almacenado es anterior a esta funcionalidad.
     departamentos: list[DepartamentoGBIF] = []
+
+    # Agrupación por región ENCA (predominante). Propuesta del equipo, pendiente
+    # de confirmación por SAO. Puede venir vacía en cortes antiguos.
+    regiones: list[RegionGBIF] = []
 
     # Contexto del histórico y de las exportaciones disponibles.
     cortes_historicos: int = 0

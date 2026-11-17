@@ -5,8 +5,8 @@
   "cobertura_geografica": "Colombia (country=CO)",
   "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
   "origen": "almacenado",
-  "extraido_utc": "2026-11-17T00:09:13.983903+00:00",
-  "finalizado_utc": "2026-11-17T00:09:26.830849+00:00",
+  "extraido_utc": "2026-11-17T00:21:09.627732+00:00",
+  "finalizado_utc": "2026-11-17T00:21:20.933164+00:00",
   "estado": "completed",
   "errores": [],
   "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null. El desglose por departamento usa el campo stateProvince (texto libre de GBIF); las variantes de un mismo departamento se suman tras canonizar el nombre. Los registros sin departamento no aparecen, por lo que la suma por departamento puede ser menor que el total nacional.",
@@ -266,16 +266,43 @@
     },
     {
       "rank": 33,
-      "departamento": "San Andrés Providencia y Santa Catalina",
-      "registros_ocurrencia": 38259
-    },
-    {
-      "rank": 34,
       "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
-      "registros_ocurrencia": 9177
+      "registros_ocurrencia": 47436
     }
   ],
-  "cortes_historicos": 4,
+  "regiones": [
+    {
+      "rank": 1,
+      "region": "Andina",
+      "registros_ocurrencia": 11017305
+    },
+    {
+      "rank": 2,
+      "region": "Pacífico",
+      "registros_ocurrencia": 3193714
+    },
+    {
+      "rank": 3,
+      "region": "Caribe",
+      "registros_ocurrencia": 2512043
+    },
+    {
+      "rank": 4,
+      "region": "Orinoquía",
+      "registros_ocurrencia": 1842827
+    },
+    {
+      "rank": 5,
+      "region": "Amazonía",
+      "registros_ocurrencia": 1258620
+    },
+    {
+      "rank": 6,
+      "region": "Insular",
+      "registros_ocurrencia": 47436
+    }
+  ],
+  "cortes_historicos": 6,
   "historico": [
     {
       "extraido_utc": "2026-10-21T17:45:51.364310+00:00",
@@ -300,6 +327,20 @@
     },
     {
       "extraido_utc": "2026-11-17T00:09:13.983903+00:00",
+      "fecha": "2026-11-17",
+      "estado": "completed",
+      "total_registros_ocurrencia": 20091344,
+      "publicadores_en_ranking": 15
+    },
+    {
+      "extraido_utc": "2026-11-17T00:20:33.219465+00:00",
+      "fecha": "2026-11-17",
+      "estado": "completed",
+      "total_registros_ocurrencia": 20091344,
+      "publicadores_en_ranking": 15
+    },
+    {
+      "extraido_utc": "2026-11-17T00:21:09.627732+00:00",
       "fecha": "2026-11-17",
       "estado": "completed",
       "total_registros_ocurrencia": 20091344,

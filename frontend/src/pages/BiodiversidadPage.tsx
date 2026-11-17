@@ -318,27 +318,90 @@ function DepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
         </tbody>
       </table>
 
-      {/* Regiones geográficas de la ENCA: pedido por SAO, pero NO se puede
-          derivar todavía. No existe un mapeo validado departamento -> región
-          ENCA (data-and-domain.md marca la granularidad regional como
-          PENDING_VALIDATION). No se inventa la agrupación. */}
+      <RegionesBloque resumen={resumen} />
+    </section>
+  );
+}
+
+/**
+ * Desglose por región geográfica de la ENCA, agregando los departamentos por su
+ * región PREDOMINANTE. Es una propuesta del equipo (una región por
+ * departamento), etiquetada como pendiente de confirmación de SAO: la geografía
+ * de los departamentos fronterizos admite más de una región.
+ */
+function RegionesBloque({ resumen }: { resumen: ResumenGBIF }) {
+  const regiones = resumen.regiones;
+
+  return (
+    <div style={{ marginTop: "1.25rem" }}>
+      <h4 style={{ marginBottom: "0.25rem" }}>Por región geográfica de la ENCA</h4>
       <p
         style={{
-          marginTop: "0.75rem",
-          padding: "0.75rem 1rem",
+          padding: "0.6rem 0.9rem",
           backgroundColor: "#faf3df",
           border: "1px solid #ecdcae",
           borderRadius: "0.375rem",
           color: "#5a4a1f",
-          fontSize: "0.85rem",
+          fontSize: "0.82rem",
+          marginTop: 0,
         }}
       >
-        <strong>Por región geográfica de la ENCA:</strong> pendiente de validación. Agrupar estos
-        departamentos en las regiones de la ENCA (Andina, Caribe, Insular, Orinoquía, Pacífico,
-        Amazonía) requiere que SAO confirme a qué región pertenece cada departamento. No se muestra
-        una agrupación inventada.
+        <strong>Propuesta, pendiente de confirmación de SAO.</strong> Cada departamento se asigna a
+        su región <strong>predominante</strong> (una región por departamento). Algunos departamentos
+        son fronterizos y admiten más de una región; SAO puede ajustar la asignación.
       </p>
-    </section>
+
+      {regiones.length === 0 ? (
+        <p style={{ color: "#666", fontSize: "0.85rem" }}>
+          Este corte no incluye la agrupación por región. Se generará en la próxima actualización.
+        </p>
+      ) : (
+        <>
+          <div style={{ width: "100%", height: Math.max(200, regiones.length * 40) }}>
+            <ResponsiveContainer>
+              <BarChart
+                layout="vertical"
+                data={regiones.map((r) => ({ etiqueta: r.region, registros: r.registros_ocurrencia }))}
+                margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+                <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+                <YAxis type="category" dataKey="etiqueta" width={120} tick={{ fontSize: 12 }} />
+                <Tooltip
+                  formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
+                />
+                <Bar dataKey="registros" name="Registros" fill={VERDE_OSCURO} radius={[0, 4, 4, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+
+          <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
+            <thead>
+              <tr>
+                <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>#</th>
+                <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                  Región ENCA
+                </th>
+                <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                  Registros de ocurrencia
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {regiones.map((r) => (
+                <tr key={r.region}>
+                  <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{r.rank}</td>
+                  <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{r.region}</td>
+                  <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                    {formatoEntero(r.registros_ocurrencia)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      )}
+    </div>
   );
 }
 
@@ -476,9 +539,9 @@ function LimitacionesCard() {
           individuo puede tener muchos registros.
         </li>
         <li>
-          <strong>Con desglose por departamento</strong> (campo de ubicación de GBIF), pero{" "}
-          <strong>sin</strong> desglose por especie ni año, y sin agrupación por región de la ENCA
-          (requiere validación de SAO). No se inventan datos ausentes.
+          <strong>Con desglose por departamento y por región de la ENCA</strong> (esta última es una
+          propuesta por región predominante, pendiente de confirmación de SAO). <strong>Sin</strong>{" "}
+          desglose por especie ni año. No se inventan datos ausentes.
         </li>
         <li>
           <strong>Es un borrador:</strong> esta vista muestra el contenido de forma preliminar; la

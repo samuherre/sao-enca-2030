@@ -20,6 +20,13 @@ export interface DepartamentoGBIF {
   readonly registros_ocurrencia: number;
 }
 
+/** Conteo de registros de aves agrupado por región ENCA (predominante). */
+export interface RegionGBIF {
+  readonly rank: number;
+  readonly region: string;
+  readonly registros_ocurrencia: number;
+}
+
 /** Un corte del histórico de cifras agregadas (snapshot con su fecha). */
 export interface CorteHistoricoGBIF {
   readonly extraido_utc: string;
@@ -58,6 +65,7 @@ export interface ResumenGBIF {
   readonly total_registros_ocurrencia: number | null;
   readonly publicadores: readonly PublicadorGBIF[];
   readonly departamentos: readonly DepartamentoGBIF[];
+  readonly regiones: readonly RegionGBIF[];
 
   readonly cortes_historicos: number;
   readonly historico: readonly CorteHistoricoGBIF[];

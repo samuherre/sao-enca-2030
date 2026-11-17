@@ -42,6 +42,7 @@ export type {
 export type {
   PublicadorGBIF,
   DepartamentoGBIF,
+  RegionGBIF,
   CorteHistoricoGBIF,
   ArchivoExportacion,
   OrigenGBIF,

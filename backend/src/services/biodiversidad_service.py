@@ -39,6 +39,7 @@ from backend.src.schemas.biodiversidad import (
     CorteHistoricoGBIF,
     DepartamentoGBIF,
     PublicadorGBIF,
+    RegionGBIF,
     ResumenGBIF,
 )
 
@@ -146,6 +147,25 @@ def _departamentos_desde_report(report: dict[str, Any]) -> list[DepartamentoGBIF
     return salida
 
 
+def _regiones_desde_report(report: dict[str, Any]) -> list[RegionGBIF]:
+    """Convierte ``region_ranking`` del report al contrato de la API."""
+    salida: list[RegionGBIF] = []
+    for pos, reg in enumerate(report.get("region_ranking", []) or [], start=1):
+        nombre = reg.get("region")
+        occ = reg.get("occurrence_count")
+        if not isinstance(nombre, str) or not isinstance(occ, int):
+            # Entrada malformada: se omite, no se inventa.
+            continue
+        salida.append(
+            RegionGBIF(
+                rank=pos,
+                region=nombre,
+                registros_ocurrencia=occ,
+            )
+        )
+    return salida
+
+
 def _leer_historico() -> list[CorteHistoricoGBIF]:
     """Lee el histórico consolidado de total nacional (si existe)."""
     if not _NATIONAL_TOTAL_HISTORY.exists():
@@ -231,6 +251,7 @@ class BiodiversidadService:
             total_registros_ocurrencia=report.get("total_bird_records_colombia"),
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
+            regiones=_regiones_desde_report(report),
             cortes_historicos=len(historico),
             historico=historico,
             exportaciones=_listar_exportaciones(),
@@ -273,6 +294,7 @@ class BiodiversidadService:
             total_registros_ocurrencia=report.get("total_bird_records_colombia"),
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
+            regiones=_regiones_desde_report(report),
             cortes_historicos=len(historico),
             historico=historico,
             exportaciones=_listar_exportaciones(),
