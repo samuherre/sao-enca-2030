@@ -29,6 +29,16 @@ export interface TaxonGBIF {
   readonly registros_ocurrencia: number;
 }
 
+/** Conteo de registros por tipo (basisOfRecord de GBIF). */
+export interface TipoRegistroGBIF {
+  readonly rank: number;
+  /** Código del vocabulario de GBIF (p. ej. "HUMAN_OBSERVATION"). */
+  readonly codigo: string;
+  /** Etiqueta en español; si el código no está contemplado, es el propio código. */
+  readonly etiqueta: string;
+  readonly registros_ocurrencia: number;
+}
+
 /** Conteo de registros de aves por año de evento (serie temporal). */
 export interface AnioGBIF {
   readonly anio: number;
@@ -92,6 +102,7 @@ export interface ResumenGBIF {
   readonly departamentos: readonly DepartamentoGBIF[];
   readonly municipios: readonly MunicipioGBIF[];
   readonly anios: readonly AnioGBIF[];
+  readonly tipos_registro: readonly TipoRegistroGBIF[];
   readonly regiones: readonly RegionGBIF[];
   readonly ordenes: readonly TaxonGBIF[];
   readonly familias: readonly TaxonGBIF[];

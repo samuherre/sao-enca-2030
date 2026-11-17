@@ -66,6 +66,21 @@ class TaxonGBIF(SchemaBase):
     registros_ocurrencia: int
 
 
+class TipoRegistroGBIF(SchemaBase):
+    """Conteo de registros por TIPO (basisOfRecord de GBIF).
+
+    ``codigo`` es el valor del vocabulario controlado de GBIF (p. ej.
+    ``HUMAN_OBSERVATION``); ``etiqueta`` es su traducción a español. Ninguno se
+    inventa: si GBIF trae un código no contemplado, la etiqueta es el propio
+    código.
+    """
+
+    rank: int
+    codigo: str
+    etiqueta: str
+    registros_ocurrencia: int
+
+
 class AnioGBIF(SchemaBase):
     """Conteo de registros de aves por año de evento (serie temporal).
 
@@ -175,6 +190,9 @@ class ResumenGBIF(SchemaBase):
     # Serie temporal: registros por año de evento. Puede venir vacía en cortes
     # anteriores a esta funcionalidad.
     anios: list[AnioGBIF] = []
+
+    # Registros por tipo (basisOfRecord). Puede venir vacío en cortes antiguos.
+    tipos_registro: list[TipoRegistroGBIF] = []
 
     # Desglose taxonómico: top órdenes y top familias. Pueden venir vacíos en
     # cortes anteriores a esta funcionalidad.

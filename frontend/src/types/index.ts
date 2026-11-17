@@ -44,6 +44,7 @@ export type {
   DepartamentoGBIF,
   MunicipioGBIF,
   AnioGBIF,
+  TipoRegistroGBIF,
   RegionGBIF,
   TaxonGBIF,
   CorteHistoricoGBIF,

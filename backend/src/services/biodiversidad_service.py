@@ -44,6 +44,7 @@ from backend.src.schemas.biodiversidad import (
     RegionGBIF,
     ResumenGBIF,
     TaxonGBIF,
+    TipoRegistroGBIF,
 )
 
 # --- Identificación de la fuente y el alcance (constantes del piloto) --------
@@ -144,6 +145,27 @@ def _departamentos_desde_report(report: dict[str, Any]) -> list[DepartamentoGBIF
             DepartamentoGBIF(
                 rank=pos,
                 departamento=nombre,
+                registros_ocurrencia=occ,
+            )
+        )
+    return salida
+
+
+def _tipos_registro_desde_report(report: dict[str, Any]) -> list[TipoRegistroGBIF]:
+    """Convierte ``basis_of_record_ranking`` del report al contrato de la API."""
+    salida: list[TipoRegistroGBIF] = []
+    for pos, tipo in enumerate(report.get("basis_of_record_ranking", []) or [], start=1):
+        codigo = tipo.get("basis_of_record")
+        etiqueta = tipo.get("etiqueta")
+        occ = tipo.get("occurrence_count")
+        if not isinstance(codigo, str) or not isinstance(occ, int):
+            # Entrada malformada: se omite, no se inventa.
+            continue
+        salida.append(
+            TipoRegistroGBIF(
+                rank=pos,
+                codigo=codigo,
+                etiqueta=etiqueta if isinstance(etiqueta, str) and etiqueta else codigo,
                 registros_ocurrencia=occ,
             )
         )
@@ -309,6 +331,7 @@ class BiodiversidadService:
             departamentos=_departamentos_desde_report(report),
             municipios=_municipios_desde_report(report),
             anios=_anios_desde_report(report),
+            tipos_registro=_tipos_registro_desde_report(report),
             regiones=_regiones_desde_report(report),
             ordenes=_taxones_desde_report(report, "order_ranking"),
             familias=_taxones_desde_report(report, "family_ranking"),
@@ -356,6 +379,7 @@ class BiodiversidadService:
             departamentos=_departamentos_desde_report(report),
             municipios=_municipios_desde_report(report),
             anios=_anios_desde_report(report),
+            tipos_registro=_tipos_registro_desde_report(report),
             regiones=_regiones_desde_report(report),
             ordenes=_taxones_desde_report(report, "order_ranking"),
             familias=_taxones_desde_report(report, "family_ranking"),

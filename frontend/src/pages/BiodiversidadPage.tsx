@@ -432,6 +432,83 @@ function RegionesBloque({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/** Gráfico + tabla de registros por tipo (basisOfRecord). */
+function TipoRegistroCard({ resumen }: { resumen: ResumenGBIF }) {
+  const tipos = resumen.tipos_registro;
+
+  if (tipos.length === 0) {
+    return (
+      <section style={{ marginTop: "1.5rem" }}>
+        <h3 style={{ marginBottom: "0.5rem" }}>Tipo de registro</h3>
+        <p style={{ color: "#666" }}>
+          Este corte no incluye el desglose por tipo de registro. Se generará en la próxima
+          actualización.
+        </p>
+      </section>
+    );
+  }
+
+  const data = tipos.map((t) => ({ etiqueta: t.etiqueta, registros: t.registros_ocurrencia }));
+  const alto = Math.max(200, data.length * 40);
+
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Tipo de registro</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Naturaleza del registro según GBIF: observación de una persona, observación automática
+        (sensor/cámara), espécimen de museo preservado, etc. La inmensa mayoría son observaciones, no
+        especímenes físicos.
+      </p>
+
+      <div style={{ width: "100%", height: alto }}>
+        <ResponsiveContainer>
+          <BarChart
+            layout="vertical"
+            data={data}
+            margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+            <YAxis type="category" dataKey="etiqueta" width={220} tick={{ fontSize: 11 }} />
+            <Tooltip
+              formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
+            />
+            <Bar dataKey="registros" name="Registros" fill={VERDE} radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
+        <thead>
+          <tr>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>#</th>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Tipo de registro
+            </th>
+            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Registros de ocurrencia
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {tipos.map((t) => (
+            <tr key={t.codigo}>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{t.rank}</td>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
+                {t.etiqueta}{" "}
+                <span style={{ color: "#aaa", fontSize: "0.75rem" }}>({t.codigo})</span>
+              </td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                {formatoEntero(t.registros_ocurrencia)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  );
+}
+
 /** Serie temporal de registros por año de evento. */
 function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
   // Año desde el cual mostrar: GBIF tiene registros desde el s. XVIII, pero con
@@ -1172,6 +1249,7 @@ export function BiodiversidadPage() {
       </div>
 
       <PublicadoresCard resumen={resumen} />
+      <TipoRegistroCard resumen={resumen} />
       <DepartamentosCard resumen={resumen} />
       <MunicipiosCard resumen={resumen} />
       <AniosCard resumen={resumen} />

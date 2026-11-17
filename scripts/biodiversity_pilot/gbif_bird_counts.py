@@ -188,6 +188,62 @@ def fetch_year_facet(
     return [{"anio": a, "occurrence_count": n} for a, n in pares], params
 
 
+# Traducción del vocabulario CONTROLADO de GBIF para basisOfRecord (tipo de
+# registro) a etiquetas en español. Es un enum fijo de GBIF, no texto libre; si
+# apareciera un código no contemplado se conserva el original (no se inventa).
+_BASIS_OF_RECORD_ES = {
+    "HUMAN_OBSERVATION": "Observación humana",
+    "MACHINE_OBSERVATION": "Observación automática (sensor/cámara)",
+    "PRESERVED_SPECIMEN": "Espécimen preservado",
+    "FOSSIL_SPECIMEN": "Espécimen fósil",
+    "LIVING_SPECIMEN": "Espécimen vivo",
+    "MATERIAL_SAMPLE": "Muestra de material",
+    "MATERIAL_CITATION": "Cita de material",
+    "OCCURRENCE": "Ocurrencia (sin especificar)",
+}
+
+
+def fetch_basis_of_record_facet(
+    facet_limit: int, timeout: int
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Registros por TIPO (faceta basisOfRecord) con sus conteos.
+
+    Devuelve el código original de GBIF y su etiqueta en español. Entradas
+    malformadas se omiten (no se inventan).
+    """
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": "basisOfRecord",
+        "facetLimit": facet_limit,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    if not isinstance(payload, dict):
+        raise GbifError("Respuesta inesperada al solicitar facetas de tipo de registro.")
+
+    facets = payload.get("facets") or []
+    if not facets:
+        return [], params
+
+    counts = facets[0].get("counts") or []
+    ranking: list[dict[str, Any]] = []
+    for item in counts:
+        codigo = item.get("name")
+        occ = item.get("count")
+        if not isinstance(codigo, str) or not isinstance(occ, int):
+            continue
+        ranking.append(
+            {
+                "basis_of_record": codigo,
+                "etiqueta": _BASIS_OF_RECORD_ES.get(codigo, codigo),
+                "occurrence_count": occ,
+            }
+        )
+    ranking.sort(key=lambda r: r["occurrence_count"], reverse=True)
+    return ranking, params
+
+
 # Normalización de nombres de departamento (campo stateProvince de GBIF).
 #
 # GBIF expone ``stateProvince`` como TEXTO LIBRE: el mismo departamento llega con
@@ -561,6 +617,7 @@ def run(
     municipality_facet_limit: int = 300,
     municipality_top: int = 25,
     year_facet_limit: int = 300,
+    basis_facet_limit: int = 20,
 ) -> dict[str, Any]:
     started_at = datetime.now(timezone.utc)
     errors: list[str] = []
@@ -613,6 +670,17 @@ def run(
         except GbifError as error:
             errors.append(f"year_facet: {error}")
 
+    # Tipo de registro (observación, espécimen preservado, etc.).
+    basis_ranking: list[dict[str, Any]] = []
+    basis_params: dict[str, Any] = {}
+    if basis_facet_limit > 0:
+        try:
+            basis_ranking, basis_params = fetch_basis_of_record_facet(
+                basis_facet_limit, timeout
+            )
+        except GbifError as error:
+            errors.append(f"basis_of_record_facet: {error}")
+
     # Desglose taxonómico: top órdenes y top familias. GBIF devuelve claves; los
     # nombres se resuelven luego contra /species/{key}.
     order_ranking: list[dict[str, Any]] = []
@@ -664,6 +732,7 @@ def run(
             "department_facet": department_params,
             "municipality_facet": municipality_params,
             "year_facet": year_params,
+            "basis_of_record_facet": basis_params,
             "order_facet": order_params,
             "family_facet": family_params,
         },
@@ -680,6 +749,8 @@ def run(
         "municipalities_in_ranking": len(municipality_ranking),
         "year_ranking": year_ranking,
         "years_in_ranking": len(year_ranking),
+        "basis_of_record_ranking": basis_ranking,
+        "basis_of_record_in_ranking": len(basis_ranking),
         "order_ranking": order_ranking,
         "orders_in_ranking": len(order_ranking),
         "family_ranking": family_ranking,
