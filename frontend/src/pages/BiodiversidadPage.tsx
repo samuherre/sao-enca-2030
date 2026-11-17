@@ -11,7 +11,7 @@
 // EXTRACCIÓN, no la de observación biológica. La UI lo dice explícitamente y no
 // inventa cifras ausentes.
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import {
   Bar,
   BarChart,
@@ -81,6 +81,33 @@ function urlGbifPublicador(orgKey: string): string {
     publishing_org: orgKey,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
+}
+
+/**
+ * Enlace a la VISTA DE MAPA de GBIF (mapa de calor de densidad de ocurrencias),
+ * con los filtros que el portal aplica de forma fiable desde la URL: país y,
+ * opcionalmente, publicador. La pestaña "MAP" del portal muestra el mapa de
+ * calor hexagonal de GBIF.
+ *
+ * El filtro taxonómico NO se pone como `taxon_key` numérico: el portal lo
+ * interpreta como nombre científico (bug conocido). Cuando se quiere acotar por
+ * un orden/familia concreto se usa `urlGbifMapaTaxon` (página del taxón, que
+ * trae su propio mapa).
+ */
+function urlGbifMapaPublicador(orgKey: string | null): string {
+  const params = new URLSearchParams({ country: "CO" });
+  if (orgKey) params.set("publishing_org", orgKey);
+  return `https://www.gbif.org/occurrence/map?${params.toString()}`;
+}
+
+/**
+ * Enlace al MAPA de un grupo taxonómico (orden o familia) en la página del
+ * taxón de GBIF, que incluye su propio mapa de calor de ocurrencias. Se usa la
+ * clave del backbone (taxonKey), que aquí SÍ es la vía correcta (no es el portal
+ * de búsqueda por texto, sino la ficha del taxón).
+ */
+function urlGbifMapaTaxon(taxonKey: string): string {
+  return `https://www.gbif.org/species/${encodeURIComponent(taxonKey)}`;
 }
 
 // --- Paleta coherente con el resto del frontend -----------------------------
@@ -488,6 +515,140 @@ function TaxonCard({
   );
 }
 
+/**
+ * Mapa de calor de registros de GBIF (Opción B: enlace al mapa oficial de GBIF,
+ * no un mapa embebido). Dos selectores: categoría taxonómica (todas las aves,
+ * un orden o una familia) y procedencia/publicador (todos, eBird, iNaturalist…).
+ *
+ * Decisión de diseño (el destino del producto es ArcGIS): NO se construye un
+ * mapa propio con Leaflet, que habría que rehacer en ArcGIS. Se enlaza al mapa
+ * de calor que GBIF ya ofrece con esos filtros, y el mapa definitivo se montará
+ * con las herramientas nativas de ArcGIS a partir de estos mismos filtros.
+ */
+function MapaCard({ resumen }: { resumen: ResumenGBIF }) {
+  // Opciones taxonómicas: todas las aves + los órdenes y familias disponibles.
+  const opcionesTaxon = [
+    { clave: "212", etiqueta: "Todas las aves (Aves)" },
+    ...resumen.ordenes.map((o) => ({
+      clave: o.taxon_key,
+      etiqueta: `Orden: ${o.nombre ?? o.taxon_key}`,
+    })),
+    ...resumen.familias.map((f) => ({
+      clave: f.taxon_key,
+      etiqueta: `Familia: ${f.nombre ?? f.taxon_key}`,
+    })),
+  ];
+
+  const [taxonKey, setTaxonKey] = useState<string>("212");
+  const [orgKey, setOrgKey] = useState<string>(""); // "" = todos los publicadores
+
+  // Si hay un taxón concreto seleccionado (distinto de "todas las aves"), el
+  // enlace fiable es la página del taxón (trae su mapa). Si es "todas las aves",
+  // se usa el mapa del portal, que además puede filtrarse por publicador.
+  const esTodasLasAves = taxonKey === "212";
+  const enlace = esTodasLasAves
+    ? urlGbifMapaPublicador(orgKey || null)
+    : urlGbifMapaTaxon(taxonKey);
+
+  const selectStyle: CSSProperties = {
+    padding: "0.4rem 0.6rem",
+    border: `1px solid ${BORDE}`,
+    borderRadius: "0.375rem",
+    fontSize: "0.9rem",
+    minWidth: "220px",
+  };
+
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Mapa de registros (GBIF)</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        El mapa de calor de las ocurrencias de aves lo ofrece directamente GBIF. Elige la categoría
+        taxonómica y la procedencia, y abre el mapa de GBIF ya filtrado (en una pestaña nueva).
+      </p>
+
+      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "flex-end" }}>
+        <label style={{ display: "flex", flexDirection: "column", gap: "0.2rem", fontSize: "0.8rem", color: "#567" }}>
+          Categoría taxonómica
+          <select
+            value={taxonKey}
+            onChange={(e) => setTaxonKey(e.target.value)}
+            style={selectStyle}
+          >
+            {opcionesTaxon.map((o) => (
+              <option key={o.clave} value={o.clave}>
+                {o.etiqueta}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label style={{ display: "flex", flexDirection: "column", gap: "0.2rem", fontSize: "0.8rem", color: "#567" }}>
+          Procedencia (publicador)
+          <select
+            value={orgKey}
+            onChange={(e) => setOrgKey(e.target.value)}
+            disabled={!esTodasLasAves}
+            title={
+              esTodasLasAves
+                ? undefined
+                : "El filtro por publicador aplica al mapa general de aves; para un orden/familia concreto se abre la ficha del taxón en GBIF."
+            }
+            style={{ ...selectStyle, opacity: esTodasLasAves ? 1 : 0.5 }}
+          >
+            <option value="">Todas las fuentes</option>
+            {resumen.publicadores.map((p) => (
+              <option key={p.org_key} value={p.org_key}>
+                {p.nombre ?? p.org_key}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <a
+          href={enlace}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            padding: "0.5rem 1.1rem",
+            borderRadius: "0.375rem",
+            backgroundColor: VERDE,
+            color: "#fff",
+            fontWeight: 600,
+            textDecoration: "none",
+          }}
+        >
+          Abrir mapa en GBIF ↗
+        </a>
+      </div>
+
+      <p style={{ color: "#789", fontSize: "0.78rem", marginTop: "0.5rem" }}>
+        El filtro por procedencia se combina con el mapa de todas las aves; al elegir un orden o
+        familia concretos se abre la ficha de ese taxón en GBIF, que incluye su propio mapa.
+      </p>
+
+      {/* Nota de migración a ArcGIS: el mapa de calor definitivo del sitio de
+          SAO se montará con la capa nativa de ArcGIS Online, usando estos mismos
+          filtros (taxón + publicador + país). No se construye un mapa propio que
+          habría que rehacer. */}
+      <p
+        style={{
+          marginTop: "0.5rem",
+          padding: "0.6rem 0.9rem",
+          backgroundColor: FONDO_SUAVE,
+          border: `1px solid ${BORDE}`,
+          borderRadius: "0.375rem",
+          color: "#456",
+          fontSize: "0.8rem",
+        }}
+      >
+        <strong>Nota (demo):</strong> en el sitio definitivo de SAO el mapa de calor se integrará con
+        las herramientas de mapas de <strong>ArcGIS</strong>, usando estos mismos filtros. Aquí se
+        enlaza al mapa de GBIF para no duplicar trabajo que luego se rehace en ArcGIS.
+      </p>
+    </section>
+  );
+}
+
 /** Sección de desglose taxonómico: órdenes y familias de aves. */
 function TaxonomiaCard({ resumen }: { resumen: ResumenGBIF }) {
   if (resumen.ordenes.length === 0 && resumen.familias.length === 0) {
@@ -848,6 +1009,7 @@ export function BiodiversidadPage() {
       <PublicadoresCard resumen={resumen} />
       <DepartamentosCard resumen={resumen} />
       <TaxonomiaCard resumen={resumen} />
+      <MapaCard resumen={resumen} />
       <LimitacionesCard />
 
       {/* Información de administración, no de valor para el usuario de SAO:
