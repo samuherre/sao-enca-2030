@@ -322,9 +322,9 @@ _IDIOMAS_PRINCIPALES: list[tuple[str, str]] = [
 ]
 # "Otros idiomas": idiomas reales distintos de los principales (alemán, ruso…).
 _ETIQUETA_OTROS_IDIOMAS = "Otros idiomas"
-# "Sin idioma declarado": el artículo llegó sin el dato de idioma. Se separa de
-# "Otros idiomas" para no confundir ausencia de dato con un idioma real.
-_ETIQUETA_SIN_IDIOMA = "Sin idioma declarado"
+# "Sin idioma identificado": el artículo llegó sin el dato de idioma. Se separa
+# de "Otros idiomas" para no confundir ausencia de dato con un idioma real.
+_ETIQUETA_SIN_IDIOMA = "Sin idioma identificado"
 
 
 def _por_idioma(registros: list[dict]) -> list[ConteoPorClave]:
