@@ -1,0 +1,8 @@
+﻿snapshot_date,rank,basis_of_record,etiqueta,occurrence_count
+2026-11-17,1,HUMAN_OBSERVATION,Observación humana,19515527
+2026-11-17,2,MACHINE_OBSERVATION,Observación automática (sensor/cámara),340069
+2026-11-17,3,PRESERVED_SPECIMEN,Espécimen preservado,227053
+2026-11-17,4,MATERIAL_SAMPLE,Muestra de material,8120
+2026-11-17,5,MATERIAL_CITATION,Cita de material,386
+2026-11-17,6,OCCURRENCE,Ocurrencia (sin especificar),182
+2026-11-17,7,FOSSIL_SPECIMEN,Espécimen fósil,7
