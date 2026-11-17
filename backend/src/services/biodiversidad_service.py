@@ -38,6 +38,7 @@ from backend.src.schemas.biodiversidad import (
     ArchivoExportacion,
     CorteHistoricoGBIF,
     DepartamentoGBIF,
+    MunicipioGBIF,
     PublicadorGBIF,
     RegionGBIF,
     ResumenGBIF,
@@ -142,6 +143,26 @@ def _departamentos_desde_report(report: dict[str, Any]) -> list[DepartamentoGBIF
             DepartamentoGBIF(
                 rank=pos,
                 departamento=nombre,
+                registros_ocurrencia=occ,
+            )
+        )
+    return salida
+
+
+def _municipios_desde_report(report: dict[str, Any]) -> list[MunicipioGBIF]:
+    """Convierte ``municipality_ranking`` del report al contrato de la API."""
+    salida: list[MunicipioGBIF] = []
+    for pos, muni in enumerate(report.get("municipality_ranking", []) or [], start=1):
+        gid = muni.get("gadm_gid")
+        occ = muni.get("occurrence_count")
+        if not isinstance(gid, str) or not isinstance(occ, int):
+            # Entrada malformada: se omite, no se inventa.
+            continue
+        salida.append(
+            MunicipioGBIF(
+                rank=pos,
+                gadm_gid=gid,
+                nombre=muni.get("name"),  # None si GBIF no lo resolvió
                 registros_ocurrencia=occ,
             )
         )
@@ -272,6 +293,7 @@ class BiodiversidadService:
             total_registros_ocurrencia=report.get("total_bird_records_colombia"),
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
+            municipios=_municipios_desde_report(report),
             regiones=_regiones_desde_report(report),
             ordenes=_taxones_desde_report(report, "order_ranking"),
             familias=_taxones_desde_report(report, "family_ranking"),
@@ -317,6 +339,7 @@ class BiodiversidadService:
             total_registros_ocurrencia=report.get("total_bird_records_colombia"),
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
+            municipios=_municipios_desde_report(report),
             regiones=_regiones_desde_report(report),
             ordenes=_taxones_desde_report(report, "order_ranking"),
             familias=_taxones_desde_report(report, "family_ranking"),

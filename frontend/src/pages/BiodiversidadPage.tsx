@@ -432,6 +432,114 @@ function RegionesBloque({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/** Gráfico + tabla de registros por municipio (top de GADM nivel 2). */
+function MunicipiosCard({ resumen }: { resumen: ResumenGBIF }) {
+  const municipios = resumen.municipios;
+
+  if (municipios.length === 0) {
+    return (
+      <section style={{ marginTop: "1.5rem" }}>
+        <h3 style={{ marginBottom: "0.5rem" }}>Registros por municipio</h3>
+        <p style={{ color: "#666" }}>
+          Este corte no incluye el desglose por municipio. Se generará en la próxima actualización.
+        </p>
+      </section>
+    );
+  }
+
+  const data = municipios.map((m) => ({
+    etiqueta: m.nombre ?? m.gadm_gid,
+    registros: m.registros_ocurrencia,
+  }));
+  const alto = Math.max(260, data.length * 24);
+
+  const conMas = municipios[0];
+  const conMenos = municipios[municipios.length - 1];
+
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Registros por municipio</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Municipios de Colombia con más registros de ocurrencia de aves, según la ubicación GADM de
+        GBIF. Se muestran los {municipios.length} con mayor número de registros; no es el listado de
+        todos los municipios del país.
+      </p>
+
+      <p style={{ color: "#456", fontSize: "0.85rem", margin: "0 0 0.5rem" }}>
+        En este ranking, el municipio con <strong>más</strong> registros es{" "}
+        <strong>{conMas.nombre ?? conMas.gadm_gid}</strong> ({formatoEntero(conMas.registros_ocurrencia)})
+        y el de <strong>menos</strong> es{" "}
+        <strong>{conMenos.nombre ?? conMenos.gadm_gid}</strong> (
+        {formatoEntero(conMenos.registros_ocurrencia)}).
+      </p>
+
+      <div style={{ width: "100%", height: alto }}>
+        <ResponsiveContainer>
+          <BarChart
+            layout="vertical"
+            data={data}
+            margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+            <YAxis type="category" dataKey="etiqueta" width={160} tick={{ fontSize: 11 }} />
+            <Tooltip
+              formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
+            />
+            <Bar dataKey="registros" name="Registros" fill={VERDE} radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
+        <thead>
+          <tr>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>#</th>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Municipio
+            </th>
+            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Registros de ocurrencia
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {municipios.map((m) => (
+            <tr key={m.gadm_gid}>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{m.rank}</td>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
+                {m.nombre ?? <em style={{ color: "#888" }}>sin nombre ({m.gadm_gid})</em>}
+              </td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                {formatoEntero(m.registros_ocurrencia)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Nota de migración: el "cruce con el mapa de municipios" lo hace ArcGIS
+          uniendo estos conteos con una capa de municipios por el código GADM
+          (gadm_gid). No se dibuja aquí un mapa propio. */}
+      <p
+        style={{
+          marginTop: "0.5rem",
+          padding: "0.6rem 0.9rem",
+          backgroundColor: FONDO_SUAVE,
+          border: `1px solid ${BORDE}`,
+          borderRadius: "0.375rem",
+          color: "#456",
+          fontSize: "0.8rem",
+        }}
+      >
+        <strong>Nota (demo):</strong> el cruce con el mapa de municipios se hará en{" "}
+        <strong>ArcGIS</strong>, uniendo estos conteos con una capa de municipios por su código GADM.
+        Aquí se muestran las cifras; el mapa coroplético se monta con las herramientas de ArcGIS.
+      </p>
+    </section>
+  );
+}
+
 /** Gráfico + tabla de registros por grupo taxonómico (orden o familia). */
 function TaxonCard({
   titulo,
@@ -812,10 +920,10 @@ function LimitacionesCard() {
           individuo puede tener muchos registros.
         </li>
         <li>
-          <strong>Con desglose por departamento, región de la ENCA</strong> (propuesta por región
-          predominante, pendiente de confirmación de SAO) <strong>y por grupo taxonómico</strong>{" "}
-          (orden y familia). <strong>Sin</strong> desglose por especie individual ni por año. No se
-          inventan datos ausentes.
+          <strong>Con desglose por departamento, municipio, región de la ENCA</strong> (la región es
+          una propuesta por región predominante, pendiente de confirmación de SAO){" "}
+          <strong>y por grupo taxonómico</strong> (orden y familia). <strong>Sin</strong> desglose
+          por especie individual ni por año. No se inventan datos ausentes.
         </li>
         <li>
           <strong>Es un borrador:</strong> esta vista muestra el contenido de forma preliminar; la
@@ -1008,6 +1116,7 @@ export function BiodiversidadPage() {
 
       <PublicadoresCard resumen={resumen} />
       <DepartamentosCard resumen={resumen} />
+      <MunicipiosCard resumen={resumen} />
       <TaxonomiaCard resumen={resumen} />
       <MapaCard resumen={resumen} />
       <LimitacionesCard />

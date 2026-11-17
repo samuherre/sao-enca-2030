@@ -236,6 +236,81 @@ def fetch_department_facet(
     return ranking, params
 
 
+# Endpoint de geocodificación GADM de GBIF (resuelve un GID -> nombre/nivel).
+GADM_GEOCODE = f"{GBIF_BASE_URL}/geocode/gadm"
+
+
+def _es_gid_municipio(gid: str) -> bool:
+    """True si el GADM GID es de nivel 2 (municipio) para Colombia.
+
+    Patrón GADM: 'COL' (país), 'COL.N_2' (departamento, 1 punto), 'COL.N.M_2'
+    (municipio, 2 puntos). Se distingue por el número de puntos, sin llamar a la
+    red.
+    """
+    return gid.startswith("COL.") and gid.count(".") == 2
+
+
+def resolve_gadm_name(gid: str, timeout: int) -> str | None:
+    """Resuelve un GADM GID -> nombre. None si no se puede (no se inventa)."""
+    try:
+        payload = _get_json(f"{GADM_GEOCODE}/{gid}", {}, timeout)
+    except GbifError:
+        return None
+    if isinstance(payload, dict):
+        nombre = payload.get("name")
+        if isinstance(nombre, str) and nombre.strip():
+            return nombre.strip()
+    return None
+
+
+def fetch_municipality_facet(
+    facet_limit: int, timeout: int, resolve_names: bool, top: int = 25
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Ranking de MUNICIPIOS (faceta gadmGid, nivel 2) con sus conteos.
+
+    GBIF factea por gadmGid mezclando país/departamento/municipio; se filtran los
+    GID de nivel 2 (municipio) por el patrón del código, se toman los ``top`` con
+    más registros y se resuelve su nombre (resto se deja como el propio GID, no se
+    inventa). El ``facet_limit`` alto asegura capturar suficientes municipios.
+    """
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": "gadmGid",
+        "facetLimit": facet_limit,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    if not isinstance(payload, dict):
+        raise GbifError("Respuesta inesperada al solicitar facetas de municipio.")
+
+    facets = payload.get("facets") or []
+    if not facets:
+        return [], params
+
+    counts = facets[0].get("counts") or []
+    municipios: list[dict[str, Any]] = []
+    for item in counts:
+        gid = item.get("name")
+        occ = item.get("count")
+        if not isinstance(gid, str) or not isinstance(occ, int):
+            continue
+        if not _es_gid_municipio(gid):
+            # País o departamento: no es municipio, se omite.
+            continue
+        municipios.append({"gadm_gid": gid, "occurrence_count": occ})
+
+    # Ordena por conteo y conserva solo los 'top' para acotar las resoluciones.
+    municipios.sort(key=lambda m: m["occurrence_count"], reverse=True)
+    municipios = municipios[:top]
+
+    for muni in municipios:
+        muni["name"] = (
+            resolve_gadm_name(muni["gadm_gid"], timeout) if resolve_names else None
+        )
+    return municipios, params
+
+
 # Las SEIS regiones de la ENCA (data-and-domain.md §10) coinciden con las
 # regiones naturales de Colombia.
 REGIONES_ENCA = ("Andina", "Caribe", "Pacífico", "Orinoquía", "Amazonía", "Insular")
@@ -444,6 +519,8 @@ def run(
     resolve_names: bool,
     department_facet_limit: int = 40,
     taxon_facet_limit: int = 15,
+    municipality_facet_limit: int = 300,
+    municipality_top: int = 25,
 ) -> dict[str, Any]:
     started_at = datetime.now(timezone.utc)
     errors: list[str] = []
@@ -475,6 +552,17 @@ def run(
     # Agregación por región ENCA (predominante) a partir del ranking de
     # departamentos. Es un cálculo local, no otra consulta a GBIF.
     region_ranking, departments_without_region = agrupar_por_region(department_ranking)
+
+    # Top municipios (gadmGid nivel 2, con nombre resuelto).
+    municipality_ranking: list[dict[str, Any]] = []
+    municipality_params: dict[str, Any] = {}
+    if municipality_facet_limit > 0:
+        try:
+            municipality_ranking, municipality_params = fetch_municipality_facet(
+                municipality_facet_limit, timeout, resolve_names, top=municipality_top
+            )
+        except GbifError as error:
+            errors.append(f"municipality_facet: {error}")
 
     # Desglose taxonómico: top órdenes y top familias. GBIF devuelve claves; los
     # nombres se resuelven luego contra /species/{key}.
@@ -525,6 +613,7 @@ def run(
             "total_count": total_params,
             "publisher_facet": facet_params,
             "department_facet": department_params,
+            "municipality_facet": municipality_params,
             "order_facet": order_params,
             "family_facet": family_params,
         },
@@ -537,6 +626,8 @@ def run(
         "region_ranking": region_ranking,
         "regions_in_ranking": len(region_ranking),
         "departments_without_region": departments_without_region,
+        "municipality_ranking": municipality_ranking,
+        "municipalities_in_ranking": len(municipality_ranking),
         "order_ranking": order_ranking,
         "orders_in_ranking": len(order_ranking),
         "family_ranking": family_ranking,

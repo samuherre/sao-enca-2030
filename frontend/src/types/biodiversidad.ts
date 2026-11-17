@@ -29,6 +29,16 @@ export interface TaxonGBIF {
   readonly registros_ocurrencia: number;
 }
 
+/** Conteo de registros de aves de un municipio de Colombia (GADM nivel 2). */
+export interface MunicipioGBIF {
+  readonly rank: number;
+  /** Identificador GADM nivel 2 (p. ej. "COL.8.9_2"); llave de join en ArcGIS. */
+  readonly gadm_gid: string;
+  /** Nombre resuelto por GBIF; `null` si no se resolvió (no se inventa). */
+  readonly nombre: string | null;
+  readonly registros_ocurrencia: number;
+}
+
 /** Conteo de registros de aves agrupado por región ENCA (predominante). */
 export interface RegionGBIF {
   readonly rank: number;
@@ -74,6 +84,7 @@ export interface ResumenGBIF {
   readonly total_registros_ocurrencia: number | null;
   readonly publicadores: readonly PublicadorGBIF[];
   readonly departamentos: readonly DepartamentoGBIF[];
+  readonly municipios: readonly MunicipioGBIF[];
   readonly regiones: readonly RegionGBIF[];
   readonly ordenes: readonly TaxonGBIF[];
   readonly familias: readonly TaxonGBIF[];

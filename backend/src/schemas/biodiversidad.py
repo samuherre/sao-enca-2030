@@ -66,6 +66,21 @@ class TaxonGBIF(SchemaBase):
     registros_ocurrencia: int
 
 
+class MunicipioGBIF(SchemaBase):
+    """Conteo de registros de aves de un municipio de Colombia.
+
+    ``gadm_gid`` es el identificador GADM de nivel 2 (p. ej. ``COL.8.9_2``), que
+    sirve como llave para unir con una capa de municipios en ArcGIS. ``nombre``
+    es el nombre resuelto por GBIF; puede ser ``None`` si no se resolvió (no se
+    inventa). Los registros sin municipio no se cuentan aquí.
+    """
+
+    rank: int
+    gadm_gid: str
+    nombre: str | None
+    registros_ocurrencia: int
+
+
 class RegionGBIF(SchemaBase):
     """Conteo de registros de aves agrupado por región geográfica de la ENCA.
 
@@ -141,6 +156,9 @@ class ResumenGBIF(SchemaBase):
     # Agrupación por región ENCA (predominante). Propuesta del equipo, pendiente
     # de confirmación por SAO. Puede venir vacía en cortes antiguos.
     regiones: list[RegionGBIF] = []
+
+    # Top municipios (GADM nivel 2). Puede venir vacío en cortes antiguos.
+    municipios: list[MunicipioGBIF] = []
 
     # Desglose taxonómico: top órdenes y top familias. Pueden venir vacíos en
     # cortes anteriores a esta funcionalidad.

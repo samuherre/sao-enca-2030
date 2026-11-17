@@ -5,8 +5,8 @@
   "cobertura_geografica": "Colombia (country=CO)",
   "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
   "origen": "almacenado",
-  "extraido_utc": "2026-11-17T00:26:33.401268+00:00",
-  "finalizado_utc": "2026-11-17T00:27:08.186153+00:00",
+  "extraido_utc": "2026-11-17T00:46:57.897128+00:00",
+  "finalizado_utc": "2026-11-17T00:47:48.853624+00:00",
   "estado": "completed",
   "errores": [],
   "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null. El desglose por departamento usa el campo stateProvince (texto libre de GBIF); las variantes de un mismo departamento se suman tras canonizar el nombre. Los registros sin departamento no aparecen, por lo que la suma por departamento puede ser menor que el total nacional.",
@@ -302,6 +302,158 @@
       "registros_ocurrencia": 47436
     }
   ],
+  "municipios": [
+    {
+      "rank": 1,
+      "gadm_gid": "COL.8.9_2",
+      "nombre": "Manizales",
+      "registros_ocurrencia": 888313
+    },
+    {
+      "rank": 2,
+      "gadm_gid": "COL.20.26_2",
+      "nombre": "Santa Marta",
+      "registros_ocurrencia": 758380
+    },
+    {
+      "rank": 3,
+      "gadm_gid": "COL.5.1_2",
+      "nombre": "Bogotá D.C.",
+      "registros_ocurrencia": 624642
+    },
+    {
+      "rank": 4,
+      "gadm_gid": "COL.31.32_2",
+      "nombre": "Santiago de Cali",
+      "registros_ocurrencia": 571781
+    },
+    {
+      "rank": 5,
+      "gadm_gid": "COL.26.11_2",
+      "nombre": "Pueblo Rico",
+      "registros_ocurrencia": 403747
+    },
+    {
+      "rank": 6,
+      "gadm_gid": "COL.31.12_2",
+      "nombre": "Dagua",
+      "registros_ocurrencia": 362354
+    },
+    {
+      "rank": 7,
+      "gadm_gid": "COL.26.10_2",
+      "nombre": "Pereira",
+      "registros_ocurrencia": 334324
+    },
+    {
+      "rank": 8,
+      "gadm_gid": "COL.2.69_2",
+      "nombre": "Medellín",
+      "registros_ocurrencia": 320663
+    },
+    {
+      "rank": 9,
+      "gadm_gid": "COL.15.76_2",
+      "nombre": "San Antonio del Tequendama",
+      "registros_ocurrencia": 310346
+    },
+    {
+      "rank": 10,
+      "gadm_gid": "COL.21.28_2",
+      "nombre": "Villavicencio",
+      "registros_ocurrencia": 296106
+    },
+    {
+      "rank": 11,
+      "gadm_gid": "COL.30.22_2",
+      "nombre": "Ibagué",
+      "registros_ocurrencia": 294900
+    },
+    {
+      "rank": 12,
+      "gadm_gid": "COL.8.26_2",
+      "nombre": "Villamaría",
+      "registros_ocurrencia": 286778
+    },
+    {
+      "rank": 13,
+      "gadm_gid": "COL.2.60_2",
+      "nombre": "Jardín",
+      "registros_ocurrencia": 254928
+    },
+    {
+      "rank": 14,
+      "gadm_gid": "COL.31.20_2",
+      "nombre": "Guadalajara de Buga",
+      "registros_ocurrencia": 225866
+    },
+    {
+      "rank": 15,
+      "gadm_gid": "COL.19.10_2",
+      "nombre": "Riohacha",
+      "registros_ocurrencia": 200064
+    },
+    {
+      "rank": 16,
+      "gadm_gid": "COL.31.6_2",
+      "nombre": "Buenaventura",
+      "registros_ocurrencia": 192260
+    },
+    {
+      "rank": 17,
+      "gadm_gid": "COL.1.5_2",
+      "nombre": "Leticia",
+      "registros_ocurrencia": 172345
+    },
+    {
+      "rank": 18,
+      "gadm_gid": "COL.32.2_2",
+      "nombre": "Mitú",
+      "registros_ocurrencia": 158715
+    },
+    {
+      "rank": 19,
+      "gadm_gid": "COL.25.12_2",
+      "nombre": "Salento",
+      "registros_ocurrencia": 157186
+    },
+    {
+      "rank": 20,
+      "gadm_gid": "COL.13.12_2",
+      "nombre": "El Carmen de Atrato",
+      "registros_ocurrencia": 153064
+    },
+    {
+      "rank": 21,
+      "gadm_gid": "COL.21.22_2",
+      "nombre": "Restrepo",
+      "registros_ocurrencia": 146135
+    },
+    {
+      "rank": 22,
+      "gadm_gid": "COL.6.9_2",
+      "nombre": "Cartagena de Indias",
+      "registros_ocurrencia": 137651
+    },
+    {
+      "rank": 23,
+      "gadm_gid": "COL.17.4_2",
+      "nombre": "San José del Guaviare",
+      "registros_ocurrencia": 131847
+    },
+    {
+      "rank": 24,
+      "gadm_gid": "COL.28.74_2",
+      "nombre": "San Vicente de Chucurí",
+      "registros_ocurrencia": 125424
+    },
+    {
+      "rank": 25,
+      "gadm_gid": "COL.22.5_2",
+      "nombre": "Barbacoas",
+      "registros_ocurrencia": 123488
+    }
+  ],
   "ordenes": [
     {
       "rank": 1,
@@ -486,7 +638,7 @@
       "registros_ocurrencia": 427456
     }
   ],
-  "cortes_historicos": 7,
+  "cortes_historicos": 8,
   "historico": [
     {
       "extraido_utc": "2026-10-21T17:45:51.364310+00:00",
@@ -532,6 +684,13 @@
     },
     {
       "extraido_utc": "2026-11-17T00:26:33.401268+00:00",
+      "fecha": "2026-11-17",
+      "estado": "completed",
+      "total_registros_ocurrencia": 20091344,
+      "publicadores_en_ranking": 15
+    },
+    {
+      "extraido_utc": "2026-11-17T00:46:57.897128+00:00",
       "fecha": "2026-11-17",
       "estado": "completed",
       "total_registros_ocurrencia": 20091344,
