@@ -230,6 +230,118 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/** Gráfico + tabla de registros de aves por departamento de Colombia. */
+function DepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
+  const departamentos = resumen.departamentos;
+
+  if (departamentos.length === 0) {
+    return (
+      <section style={{ marginTop: "1.5rem" }}>
+        <h3 style={{ marginBottom: "0.5rem" }}>Registros por departamento</h3>
+        <p style={{ color: "#666" }}>
+          Este corte no incluye el desglose por departamento. Se generará en la próxima
+          actualización de datos.
+        </p>
+      </section>
+    );
+  }
+
+  // Suma por departamento vs. total nacional: parte de los registros de GBIF no
+  // trae departamento, así que la suma será menor. Se informa con honestidad.
+  const sumaDepartamentos = departamentos.reduce((acc, d) => acc + d.registros_ocurrencia, 0);
+  const total = resumen.total_registros_ocurrencia;
+  const sinDepartamento =
+    total !== null && total >= sumaDepartamentos ? total - sumaDepartamentos : null;
+
+  const data = departamentos.map((d) => ({
+    etiqueta: d.departamento,
+    registros: d.registros_ocurrencia,
+  }));
+  const alto = Math.max(260, data.length * 24);
+
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Registros por departamento</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Registros de ocurrencia de aves de Colombia por departamento, según el campo de ubicación de
+        GBIF. Los registros que GBIF no asocia a ningún departamento no aparecen aquí, por lo que la
+        suma por departamento es menor que el total nacional.
+      </p>
+
+      <div style={{ width: "100%", height: alto }}>
+        <ResponsiveContainer>
+          <BarChart
+            layout="vertical"
+            data={data}
+            margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+            <YAxis type="category" dataKey="etiqueta" width={180} tick={{ fontSize: 11 }} />
+            <Tooltip
+              formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
+            />
+            <Bar dataKey="registros" name="Registros" fill={VERDE} radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      {sinDepartamento !== null ? (
+        <p style={{ color: "#789", fontSize: "0.8rem", marginTop: "0.25rem" }}>
+          Registros sin departamento asignado en GBIF: {formatoEntero(sinDepartamento)} (no se
+          reparten entre departamentos para no inventar una ubicación).
+        </p>
+      ) : null}
+
+      <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
+        <thead>
+          <tr>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>#</th>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Departamento
+            </th>
+            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Registros de ocurrencia
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {departamentos.map((d) => (
+            <tr key={d.departamento}>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{d.rank}</td>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{d.departamento}</td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                {formatoEntero(d.registros_ocurrencia)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Regiones geográficas de la ENCA: pedido por SAO, pero NO se puede
+          derivar todavía. No existe un mapeo validado departamento -> región
+          ENCA (data-and-domain.md marca la granularidad regional como
+          PENDING_VALIDATION). No se inventa la agrupación. */}
+      <p
+        style={{
+          marginTop: "0.75rem",
+          padding: "0.75rem 1rem",
+          backgroundColor: "#faf3df",
+          border: "1px solid #ecdcae",
+          borderRadius: "0.375rem",
+          color: "#5a4a1f",
+          fontSize: "0.85rem",
+        }}
+      >
+        <strong>Por región geográfica de la ENCA:</strong> pendiente de validación. Agrupar estos
+        departamentos en las regiones de la ENCA (Andina, Caribe, Insular, Orinoquía, Pacífico,
+        Amazonía) requiere que SAO confirme a qué región pertenece cada departamento. No se muestra
+        una agrupación inventada.
+      </p>
+    </section>
+  );
+}
+
 /** Sección del histórico de cortes (con transparencia sobre su significado). */
 function HistoricoCard({ resumen }: { resumen: ResumenGBIF }) {
   const cortes = resumen.historico;
@@ -364,8 +476,9 @@ function LimitacionesCard() {
           individuo puede tener muchos registros.
         </li>
         <li>
-          <strong>Sin desglose</strong> por departamento, especie ni año: el piloto actual no genera
-          esos datos, y no se inventan.
+          <strong>Con desglose por departamento</strong> (campo de ubicación de GBIF), pero{" "}
+          <strong>sin</strong> desglose por especie ni año, y sin agrupación por región de la ENCA
+          (requiere validación de SAO). No se inventan datos ausentes.
         </li>
         <li>
           <strong>Es un borrador:</strong> esta vista muestra el contenido de forma preliminar; la
@@ -557,6 +670,7 @@ export function BiodiversidadPage() {
       </div>
 
       <PublicadoresCard resumen={resumen} />
+      <DepartamentosCard resumen={resumen} />
       <LimitacionesCard />
 
       {/* Información de administración, no de valor para el usuario de SAO:

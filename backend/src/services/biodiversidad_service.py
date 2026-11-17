@@ -37,6 +37,7 @@ from backend.src.domain.exceptions import NotFoundError
 from backend.src.schemas.biodiversidad import (
     ArchivoExportacion,
     CorteHistoricoGBIF,
+    DepartamentoGBIF,
     PublicadorGBIF,
     ResumenGBIF,
 )
@@ -120,6 +121,25 @@ def _publicadores_desde_report(report: dict[str, Any]) -> list[PublicadorGBIF]:
                 rank=pos,
                 org_key=str(org_key),
                 nombre=pub.get("publisher_name"),  # None si GBIF no lo resolvió
+                registros_ocurrencia=occ,
+            )
+        )
+    return salida
+
+
+def _departamentos_desde_report(report: dict[str, Any]) -> list[DepartamentoGBIF]:
+    """Convierte ``department_ranking`` del report al contrato de la API."""
+    salida: list[DepartamentoGBIF] = []
+    for pos, dep in enumerate(report.get("department_ranking", []) or [], start=1):
+        nombre = dep.get("departamento")
+        occ = dep.get("occurrence_count")
+        if not isinstance(nombre, str) or not isinstance(occ, int):
+            # Entrada malformada: se omite, no se inventa.
+            continue
+        salida.append(
+            DepartamentoGBIF(
+                rank=pos,
+                departamento=nombre,
                 registros_ocurrencia=occ,
             )
         )
@@ -210,6 +230,7 @@ class BiodiversidadService:
             nota=report.get("notes"),
             total_registros_ocurrencia=report.get("total_bird_records_colombia"),
             publicadores=_publicadores_desde_report(report),
+            departamentos=_departamentos_desde_report(report),
             cortes_historicos=len(historico),
             historico=historico,
             exportaciones=_listar_exportaciones(),
@@ -251,6 +272,7 @@ class BiodiversidadService:
             nota=report.get("notes"),
             total_registros_ocurrencia=report.get("total_bird_records_colombia"),
             publicadores=_publicadores_desde_report(report),
+            departamentos=_departamentos_desde_report(report),
             cortes_historicos=len(historico),
             historico=historico,
             exportaciones=_listar_exportaciones(),

@@ -149,6 +149,90 @@ def fetch_publisher_facet(
     return ranking, params
 
 
+# Normalización de nombres de departamento (campo stateProvince de GBIF).
+#
+# GBIF expone ``stateProvince`` como TEXTO LIBRE: el mismo departamento llega con
+# variantes de tildes, mayúsculas o formas (p. ej. "Narino"/"Nariño",
+# "Valle Del Cauca"/"Valle del Cauca", y Bogotá como "Bogotá, D.C." o
+# "Distrito Capital de Bogotá"). Para no mostrar duplicados, se canonizan las
+# variantes OBSERVADAS a un nombre oficial. No se inventan departamentos: una
+# variante no contemplada se conserva tal cual (no se descarta ni se renombra a
+# algo no verificado).
+_DEPARTAMENTO_CANONICO = {
+    "narino": "Nariño",
+    "nariño": "Nariño",
+    "choco": "Chocó",
+    "chocó": "Chocó",
+    "bolivar": "Bolívar",
+    "bolívar": "Bolívar",
+    "caqueta": "Caquetá",
+    "caquetá": "Caquetá",
+    "valle del cauca": "Valle del Cauca",
+    "bogota, d.c.": "Bogotá, D.C.",
+    "bogotá, d.c.": "Bogotá, D.C.",
+    "distrito capital de bogota": "Bogotá, D.C.",
+    "distrito capital de bogotá": "Bogotá, D.C.",
+    "san andres providencia y santa catalina": (
+        "Archipiélago de San Andrés, Providencia y Santa Catalina"
+    ),
+    "archipiélago de san andrés, providencia y santa catalina": (
+        "Archipiélago de San Andrés, Providencia y Santa Catalina"
+    ),
+}
+
+
+def _canonizar_departamento(nombre: str) -> str:
+    """Devuelve el nombre oficial de un departamento a partir de una variante.
+
+    Si la variante no está contemplada, devuelve el nombre original sin cambios
+    (no se inventa ni se descarta un valor no verificado).
+    """
+    clave = nombre.strip().casefold()
+    return _DEPARTAMENTO_CANONICO.get(clave, nombre.strip())
+
+
+def fetch_department_facet(
+    facet_limit: int, timeout: int
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Ranking de departamentos (faceta stateProvince) con sus conteos.
+
+    Los conteos de variantes del MISMO departamento se SUMAN tras canonizar el
+    nombre, de modo que no aparezcan filas duplicadas. El resultado se ordena de
+    mayor a menor conteo.
+    """
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": "stateProvince",
+        "facetLimit": facet_limit,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    if not isinstance(payload, dict):
+        raise GbifError("Respuesta inesperada al solicitar facetas de departamento.")
+
+    facets = payload.get("facets") or []
+    if not facets:
+        return [], params
+
+    counts = facets[0].get("counts") or []
+    acumulado: dict[str, int] = {}
+    for item in counts:
+        nombre = item.get("name")
+        occ = item.get("count")
+        if not isinstance(nombre, str) or not isinstance(occ, int):
+            # Entrada malformada o sin departamento: se omite, no se inventa.
+            continue
+        canonico = _canonizar_departamento(nombre)
+        acumulado[canonico] = acumulado.get(canonico, 0) + occ
+
+    ranking = [
+        {"departamento": nombre, "occurrence_count": occ}
+        for nombre, occ in sorted(acumulado.items(), key=lambda kv: kv[1], reverse=True)
+    ]
+    return ranking, params
+
+
 def resolve_publisher_name(org_key: str, timeout: int) -> str | None:
     """Resuelve orgKey -> título del publicador. None si no se puede."""
     try:
@@ -203,7 +287,12 @@ def write_outputs(
 
 # --- Orquestación ------------------------------------------------------------
 
-def run(facet_limit: int, timeout: int, resolve_names: bool) -> dict[str, Any]:
+def run(
+    facet_limit: int,
+    timeout: int,
+    resolve_names: bool,
+    department_facet_limit: int = 40,
+) -> dict[str, Any]:
     started_at = datetime.now(timezone.utc)
     errors: list[str] = []
 
@@ -220,6 +309,16 @@ def run(facet_limit: int, timeout: int, resolve_names: bool) -> dict[str, Any]:
         ranking, facet_params = fetch_publisher_facet(facet_limit, timeout)
     except GbifError as error:
         errors.append(f"publisher_facet: {error}")
+
+    department_ranking: list[dict[str, Any]] = []
+    department_params: dict[str, Any] = {}
+    if department_facet_limit > 0:
+        try:
+            department_ranking, department_params = fetch_department_facet(
+                department_facet_limit, timeout
+            )
+        except GbifError as error:
+            errors.append(f"department_facet: {error}")
 
     names_resolved = 0
     if resolve_names:
@@ -245,17 +344,24 @@ def run(facet_limit: int, timeout: int, resolve_names: bool) -> dict[str, Any]:
         "query_params": {
             "total_count": total_params,
             "publisher_facet": facet_params,
+            "department_facet": department_params,
         },
         "total_bird_records_colombia": total_count,
         "publisher_ranking": ranking,
         "publishers_in_ranking": len(ranking),
         "publisher_names_resolved": names_resolved,
+        "department_ranking": department_ranking,
+        "departments_in_ranking": len(department_ranking),
         "errors": errors,
         "status": status,
         "notes": (
             "Conteos agregados de GBIF (limit=0 + facet); no se descargaron "
             "ocurrencias individuales. 'count' es el total vivo al momento de la "
-            "consulta. Cifras y nombres no detectados se dejan como null."
+            "consulta. Cifras y nombres no detectados se dejan como null. El "
+            "desglose por departamento usa el campo stateProvince (texto libre "
+            "de GBIF); las variantes de un mismo departamento se suman tras "
+            "canonizar el nombre. Los registros sin departamento no aparecen, por "
+            "lo que la suma por departamento puede ser menor que el total nacional."
         ),
     }
     return report

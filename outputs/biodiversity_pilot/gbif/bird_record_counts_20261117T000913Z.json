@@ -1,0 +1,250 @@
+{
+  "source": "GBIF Occurrence API",
+  "source_base_url": "https://api.gbif.org/v1",
+  "scope": "Registros de aves (Aves, taxonKey=212) en Colombia (country=CO)",
+  "extracted_at_utc": "2026-11-17T00:09:13.983903+00:00",
+  "finished_at_utc": "2026-11-17T00:09:26.830849+00:00",
+  "query_params": {
+    "total_count": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0
+    },
+    "publisher_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "publishingOrg",
+      "facetLimit": 15
+    },
+    "department_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "stateProvince",
+      "facetLimit": 40
+    }
+  },
+  "total_bird_records_colombia": 20091344,
+  "publisher_ranking": [
+    {
+      "org_key": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+      "occurrence_count": 17476440,
+      "publisher_name": "Cornell Lab of Ornithology"
+    },
+    {
+      "org_key": "dc282b9d-8f3b-4197-b174-ba5272721a6f",
+      "occurrence_count": 437712,
+      "publisher_name": "Red Nacional de Observadores de Aves - RNOA"
+    },
+    {
+      "org_key": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+      "occurrence_count": 307858,
+      "publisher_name": "iNaturalist.org"
+    },
+    {
+      "org_key": "d42b7e5d-a3e5-4fc2-8b3d-105336d70898",
+      "occurrence_count": 181510,
+      "publisher_name": "Empresas Públicas de Medellín E.S.P."
+    },
+    {
+      "org_key": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
+      "occurrence_count": 178767,
+      "publisher_name": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt"
+    },
+    {
+      "org_key": "d5ef14a1-5177-4547-9ce2-46d84a4214eb",
+      "occurrence_count": 171312,
+      "publisher_name": "Ecopetrol S.A."
+    },
+    {
+      "org_key": "e70c4151-0d1a-414d-b70e-e87ac1e812b7",
+      "occurrence_count": 92695,
+      "publisher_name": "Secretaría Distrital de Ambiente"
+    },
+    {
+      "org_key": "1d8b951a-3a02-40ab-aa7a-f37dc0009abf",
+      "occurrence_count": 72693,
+      "publisher_name": "Secretaría de Medio Ambiente del Distrito de Medellín"
+    },
+    {
+      "org_key": "ab13adb9-ce23-444d-87c9-ce41f03ef2b3",
+      "occurrence_count": 56904,
+      "publisher_name": "Parques Nacionales Naturales de Colombia"
+    },
+    {
+      "org_key": "bad9baef-be05-4410-83c8-31060a9bafb7",
+      "occurrence_count": 43321,
+      "publisher_name": "Área Metropolitana del Valle de Aburrá"
+    },
+    {
+      "org_key": "567cdb5e-5bb3-42e1-ae07-ffa6fc60b56e",
+      "occurrence_count": 40255,
+      "publisher_name": "Asociación SELVA: Investigación para la Conservación en el Neotrópico"
+    },
+    {
+      "org_key": "1f00d75c-f6fc-4224-a595-975e82d7689c",
+      "occurrence_count": 35248,
+      "publisher_name": "Xeno-canto Foundation for Nature Sounds"
+    },
+    {
+      "org_key": "a2f1c6f5-88de-4fc5-891a-336259f32f4e",
+      "occurrence_count": 34826,
+      "publisher_name": "Asociación para el estudio y conservación de las aves acuáticas en Colombia - Calidris"
+    },
+    {
+      "org_key": "04ce62dd-30ec-4d98-8b30-b09cafc3ac38",
+      "occurrence_count": 34661,
+      "publisher_name": "Isagen S.A. E.S.P."
+    },
+    {
+      "org_key": "dbc07e15-c05b-4781-9ec3-59d331a9a4d8",
+      "occurrence_count": 32175,
+      "publisher_name": "Parex Resources Colombia - AG Sucursal"
+    }
+  ],
+  "publishers_in_ranking": 15,
+  "publisher_names_resolved": 15,
+  "department_ranking": [
+    {
+      "departamento": "Antioquia",
+      "occurrence_count": 2753306
+    },
+    {
+      "departamento": "Valle del Cauca",
+      "occurrence_count": 2089535
+    },
+    {
+      "departamento": "Caldas",
+      "occurrence_count": 1766269
+    },
+    {
+      "departamento": "Cundinamarca",
+      "occurrence_count": 1662240
+    },
+    {
+      "departamento": "Meta",
+      "occurrence_count": 1254313
+    },
+    {
+      "departamento": "Risaralda",
+      "occurrence_count": 1057883
+    },
+    {
+      "departamento": "Magdalena",
+      "occurrence_count": 985552
+    },
+    {
+      "departamento": "Tolima",
+      "occurrence_count": 840884
+    },
+    {
+      "departamento": "Santander",
+      "occurrence_count": 794165
+    },
+    {
+      "departamento": "Quindío",
+      "occurrence_count": 650129
+    },
+    {
+      "departamento": "Bogotá, D.C.",
+      "occurrence_count": 543151
+    },
+    {
+      "departamento": "Boyacá",
+      "occurrence_count": 439145
+    },
+    {
+      "departamento": "Huila",
+      "occurrence_count": 433974
+    },
+    {
+      "departamento": "La Guajira",
+      "occurrence_count": 431767
+    },
+    {
+      "departamento": "Casanare",
+      "occurrence_count": 426019
+    },
+    {
+      "departamento": "Bolívar",
+      "occurrence_count": 380281
+    },
+    {
+      "departamento": "Chocó",
+      "occurrence_count": 373860
+    },
+    {
+      "departamento": "Putumayo",
+      "occurrence_count": 371428
+    },
+    {
+      "departamento": "Cauca",
+      "occurrence_count": 365287
+    },
+    {
+      "departamento": "Nariño",
+      "occurrence_count": 365032
+    },
+    {
+      "departamento": "Amazonas",
+      "occurrence_count": 255288
+    },
+    {
+      "departamento": "Cesar",
+      "occurrence_count": 234262
+    },
+    {
+      "departamento": "Córdoba",
+      "occurrence_count": 224713
+    },
+    {
+      "departamento": "Caquetá",
+      "occurrence_count": 171434
+    },
+    {
+      "departamento": "Vaupés",
+      "occurrence_count": 162890
+    },
+    {
+      "departamento": "Guaviare",
+      "occurrence_count": 158437
+    },
+    {
+      "departamento": "Atlántico",
+      "occurrence_count": 139364
+    },
+    {
+      "departamento": "Guainía",
+      "occurrence_count": 139143
+    },
+    {
+      "departamento": "Sucre",
+      "occurrence_count": 116104
+    },
+    {
+      "departamento": "Arauca",
+      "occurrence_count": 83256
+    },
+    {
+      "departamento": "Vichada",
+      "occurrence_count": 79239
+    },
+    {
+      "departamento": "Norte de Santander",
+      "occurrence_count": 76159
+    },
+    {
+      "departamento": "San Andrés Providencia y Santa Catalina",
+      "occurrence_count": 38259
+    },
+    {
+      "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+      "occurrence_count": 9177
+    }
+  ],
+  "departments_in_ranking": 34,
+  "errors": [],
+  "status": "completed",
+  "notes": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null. El desglose por departamento usa el campo stateProvince (texto libre de GBIF); las variantes de un mismo departamento se suman tras canonizar el nombre. Los registros sin departamento no aparecen, por lo que la suma por departamento puede ser menor que el total nacional."
+}

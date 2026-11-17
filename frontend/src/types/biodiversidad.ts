@@ -13,6 +13,13 @@ export interface PublicadorGBIF {
   readonly registros_ocurrencia: number;
 }
 
+/** Conteo de registros de aves de un departamento de Colombia (stateProvince). */
+export interface DepartamentoGBIF {
+  readonly rank: number;
+  readonly departamento: string;
+  readonly registros_ocurrencia: number;
+}
+
 /** Un corte del histórico de cifras agregadas (snapshot con su fecha). */
 export interface CorteHistoricoGBIF {
   readonly extraido_utc: string;
@@ -50,6 +57,7 @@ export interface ResumenGBIF {
 
   readonly total_registros_ocurrencia: number | null;
   readonly publicadores: readonly PublicadorGBIF[];
+  readonly departamentos: readonly DepartamentoGBIF[];
 
   readonly cortes_historicos: number;
   readonly historico: readonly CorteHistoricoGBIF[];

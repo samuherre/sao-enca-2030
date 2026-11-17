@@ -38,6 +38,20 @@ class PublicadorGBIF(SchemaBase):
     registros_ocurrencia: int
 
 
+class DepartamentoGBIF(SchemaBase):
+    """Conteo de registros de aves de un departamento de Colombia.
+
+    El nombre procede del campo ``stateProvince`` de GBIF (texto libre), ya
+    canonizado para unir variantes del mismo departamento. Los registros sin
+    departamento no se cuentan aquí, de modo que la suma por departamento puede
+    ser inferior al total nacional (no se inventa una asignación).
+    """
+
+    rank: int
+    departamento: str
+    registros_ocurrencia: int
+
+
 class CorteHistoricoGBIF(SchemaBase):
     """Un corte del histórico de cifras agregadas (snapshot con su fecha).
 
@@ -91,6 +105,10 @@ class ResumenGBIF(SchemaBase):
     # Cifras (registros de OCURRENCIA, no individuos ni especies únicas).
     total_registros_ocurrencia: int | None
     publicadores: list[PublicadorGBIF] = []
+
+    # Desglose por departamento (campo stateProvince de GBIF, canonizado). Puede
+    # venir vacío si el corte almacenado es anterior a esta funcionalidad.
+    departamentos: list[DepartamentoGBIF] = []
 
     # Contexto del histórico y de las exportaciones disponibles.
     cortes_historicos: int = 0

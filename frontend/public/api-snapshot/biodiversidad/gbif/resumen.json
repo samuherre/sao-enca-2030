@@ -5,11 +5,11 @@
   "cobertura_geografica": "Colombia (country=CO)",
   "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
   "origen": "almacenado",
-  "extraido_utc": "2026-11-16T23:42:19.529354+00:00",
-  "finalizado_utc": "2026-11-16T23:42:31.084053+00:00",
+  "extraido_utc": "2026-11-17T00:09:13.983903+00:00",
+  "finalizado_utc": "2026-11-17T00:09:26.830849+00:00",
   "estado": "completed",
   "errores": [],
-  "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null.",
+  "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null. El desglose por departamento usa el campo stateProvince (texto libre de GBIF); las variantes de un mismo departamento se suman tras canonizar el nombre. Los registros sin departamento no aparecen, por lo que la suma por departamento puede ser menor que el total nacional.",
   "total_registros_ocurrencia": 20091344,
   "publicadores": [
     {
@@ -103,7 +103,179 @@
       "registros_ocurrencia": 32175
     }
   ],
-  "cortes_historicos": 3,
+  "departamentos": [
+    {
+      "rank": 1,
+      "departamento": "Antioquia",
+      "registros_ocurrencia": 2753306
+    },
+    {
+      "rank": 2,
+      "departamento": "Valle del Cauca",
+      "registros_ocurrencia": 2089535
+    },
+    {
+      "rank": 3,
+      "departamento": "Caldas",
+      "registros_ocurrencia": 1766269
+    },
+    {
+      "rank": 4,
+      "departamento": "Cundinamarca",
+      "registros_ocurrencia": 1662240
+    },
+    {
+      "rank": 5,
+      "departamento": "Meta",
+      "registros_ocurrencia": 1254313
+    },
+    {
+      "rank": 6,
+      "departamento": "Risaralda",
+      "registros_ocurrencia": 1057883
+    },
+    {
+      "rank": 7,
+      "departamento": "Magdalena",
+      "registros_ocurrencia": 985552
+    },
+    {
+      "rank": 8,
+      "departamento": "Tolima",
+      "registros_ocurrencia": 840884
+    },
+    {
+      "rank": 9,
+      "departamento": "Santander",
+      "registros_ocurrencia": 794165
+    },
+    {
+      "rank": 10,
+      "departamento": "Quindío",
+      "registros_ocurrencia": 650129
+    },
+    {
+      "rank": 11,
+      "departamento": "Bogotá, D.C.",
+      "registros_ocurrencia": 543151
+    },
+    {
+      "rank": 12,
+      "departamento": "Boyacá",
+      "registros_ocurrencia": 439145
+    },
+    {
+      "rank": 13,
+      "departamento": "Huila",
+      "registros_ocurrencia": 433974
+    },
+    {
+      "rank": 14,
+      "departamento": "La Guajira",
+      "registros_ocurrencia": 431767
+    },
+    {
+      "rank": 15,
+      "departamento": "Casanare",
+      "registros_ocurrencia": 426019
+    },
+    {
+      "rank": 16,
+      "departamento": "Bolívar",
+      "registros_ocurrencia": 380281
+    },
+    {
+      "rank": 17,
+      "departamento": "Chocó",
+      "registros_ocurrencia": 373860
+    },
+    {
+      "rank": 18,
+      "departamento": "Putumayo",
+      "registros_ocurrencia": 371428
+    },
+    {
+      "rank": 19,
+      "departamento": "Cauca",
+      "registros_ocurrencia": 365287
+    },
+    {
+      "rank": 20,
+      "departamento": "Nariño",
+      "registros_ocurrencia": 365032
+    },
+    {
+      "rank": 21,
+      "departamento": "Amazonas",
+      "registros_ocurrencia": 255288
+    },
+    {
+      "rank": 22,
+      "departamento": "Cesar",
+      "registros_ocurrencia": 234262
+    },
+    {
+      "rank": 23,
+      "departamento": "Córdoba",
+      "registros_ocurrencia": 224713
+    },
+    {
+      "rank": 24,
+      "departamento": "Caquetá",
+      "registros_ocurrencia": 171434
+    },
+    {
+      "rank": 25,
+      "departamento": "Vaupés",
+      "registros_ocurrencia": 162890
+    },
+    {
+      "rank": 26,
+      "departamento": "Guaviare",
+      "registros_ocurrencia": 158437
+    },
+    {
+      "rank": 27,
+      "departamento": "Atlántico",
+      "registros_ocurrencia": 139364
+    },
+    {
+      "rank": 28,
+      "departamento": "Guainía",
+      "registros_ocurrencia": 139143
+    },
+    {
+      "rank": 29,
+      "departamento": "Sucre",
+      "registros_ocurrencia": 116104
+    },
+    {
+      "rank": 30,
+      "departamento": "Arauca",
+      "registros_ocurrencia": 83256
+    },
+    {
+      "rank": 31,
+      "departamento": "Vichada",
+      "registros_ocurrencia": 79239
+    },
+    {
+      "rank": 32,
+      "departamento": "Norte de Santander",
+      "registros_ocurrencia": 76159
+    },
+    {
+      "rank": 33,
+      "departamento": "San Andrés Providencia y Santa Catalina",
+      "registros_ocurrencia": 38259
+    },
+    {
+      "rank": 34,
+      "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+      "registros_ocurrencia": 9177
+    }
+  ],
+  "cortes_historicos": 4,
   "historico": [
     {
       "extraido_utc": "2026-10-21T17:45:51.364310+00:00",
@@ -122,6 +294,13 @@
     {
       "extraido_utc": "2026-11-16T23:42:19.529354+00:00",
       "fecha": "2026-11-16",
+      "estado": "completed",
+      "total_registros_ocurrencia": 20091344,
+      "publicadores_en_ranking": 15
+    },
+    {
+      "extraido_utc": "2026-11-17T00:09:13.983903+00:00",
+      "fecha": "2026-11-17",
       "estado": "completed",
       "total_registros_ocurrencia": 20091344,
       "publicadores_en_ranking": 15
