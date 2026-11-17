@@ -29,6 +29,32 @@ export interface TaxonGBIF {
   readonly registros_ocurrencia: number;
 }
 
+/** Un punto (año, conteo) de la serie temporal de una especie. */
+export interface SerieAnioGBIF {
+  readonly anio: number;
+  readonly registros_ocurrencia: number;
+}
+
+/** Registros por categoría de la Lista Roja de la UICN. */
+export interface CategoriaIUCN {
+  readonly rank: number;
+  readonly codigo: string;
+  readonly etiqueta: string;
+  readonly registros_ocurrencia: number;
+}
+
+/** Especie amenazada (UICN) con su serie de registros por año. */
+export interface EspecieAmenazada {
+  readonly rank: number;
+  readonly species_key: string;
+  readonly nombre_cientifico: string | null;
+  readonly nombre_comun: string | null;
+  readonly iucn_codigo: string;
+  readonly iucn_etiqueta: string;
+  readonly registros_ocurrencia: number;
+  readonly por_anio: readonly SerieAnioGBIF[];
+}
+
 /** Conteo de registros por tipo (basisOfRecord de GBIF). */
 export interface TipoRegistroGBIF {
   readonly rank: number;
@@ -103,6 +129,8 @@ export interface ResumenGBIF {
   readonly municipios: readonly MunicipioGBIF[];
   readonly anios: readonly AnioGBIF[];
   readonly tipos_registro: readonly TipoRegistroGBIF[];
+  readonly iucn_categorias: readonly CategoriaIUCN[];
+  readonly especies_amenazadas: readonly EspecieAmenazada[];
   readonly regiones: readonly RegionGBIF[];
   readonly ordenes: readonly TaxonGBIF[];
   readonly familias: readonly TaxonGBIF[];

@@ -244,6 +244,181 @@ def fetch_basis_of_record_facet(
     return ranking, params
 
 
+# Categorías de la Lista Roja de la UICN (vocabulario de GBIF) y su etiqueta en
+# español. Enum fijo; un código no contemplado conserva su valor original.
+_IUCN_CATEGORIAS_ES = {
+    "EX": "Extinta (EX)",
+    "EW": "Extinta en estado silvestre (EW)",
+    "CR": "En peligro crítico (CR)",
+    "EN": "En peligro (EN)",
+    "VU": "Vulnerable (VU)",
+    "NT": "Casi amenazada (NT)",
+    "LC": "Preocupación menor (LC)",
+    "DD": "Datos insuficientes (DD)",
+    "NE": "No evaluada (NE)",
+}
+
+# Categorías que se consideran "amenazadas" para el módulo (criterio UICN).
+_IUCN_AMENAZADAS = ("CR", "EN", "VU")
+
+
+def fetch_iucn_facet(
+    facet_limit: int, timeout: int
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Registros por categoría de amenaza (faceta iucnRedListCategory).
+
+    Devuelve el código UICN y su etiqueta en español, ordenado por conteo.
+    """
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": "iucnRedListCategory",
+        "facetLimit": facet_limit,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    if not isinstance(payload, dict):
+        raise GbifError("Respuesta inesperada al solicitar facetas UICN.")
+
+    facets = payload.get("facets") or []
+    if not facets:
+        return [], params
+
+    counts = facets[0].get("counts") or []
+    ranking: list[dict[str, Any]] = []
+    for item in counts:
+        codigo = item.get("name")
+        occ = item.get("count")
+        if not isinstance(codigo, str) or not isinstance(occ, int):
+            continue
+        ranking.append(
+            {
+                "iucn_category": codigo,
+                "etiqueta": _IUCN_CATEGORIAS_ES.get(codigo, codigo),
+                "occurrence_count": occ,
+            }
+        )
+    ranking.sort(key=lambda r: r["occurrence_count"], reverse=True)
+    return ranking, params
+
+
+def _facet_species_por_iucn(
+    categoria: str, facet_limit: int, timeout: int
+) -> list[tuple[str, int]]:
+    """(speciesKey, conteo) de las especies de una categoría UICN dada."""
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": "speciesKey",
+        "facetLimit": facet_limit,
+        "iucnRedListCategory": categoria,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    if not isinstance(payload, dict):
+        return []
+    facets = payload.get("facets") or []
+    if not facets:
+        return []
+    salida: list[tuple[str, int]] = []
+    for item in facets[0].get("counts") or []:
+        key = item.get("name")
+        occ = item.get("count")
+        if isinstance(key, str) and isinstance(occ, int):
+            salida.append((key, occ))
+    return salida
+
+
+def fetch_year_series_for_species(species_key: str, timeout: int) -> list[dict[str, Any]]:
+    """Serie de registros por año de UNA especie (faceta year + speciesKey)."""
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": "year",
+        "facetLimit": 300,
+        "speciesKey": species_key,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    if not isinstance(payload, dict):
+        return []
+    facets = payload.get("facets") or []
+    if not facets:
+        return []
+    pares: list[tuple[int, int]] = []
+    for item in facets[0].get("counts") or []:
+        anio = item.get("name")
+        occ = item.get("count")
+        if isinstance(occ, int) and isinstance(anio, str) and anio.isdigit():
+            pares.append((int(anio), occ))
+    pares.sort(key=lambda p: p[0])
+    return [{"anio": a, "occurrence_count": n} for a, n in pares]
+
+
+def _resolver_especie(species_key: str, timeout: int) -> dict[str, Any]:
+    """Resuelve speciesKey -> nombre científico y común (lo que haya)."""
+    try:
+        payload = _get_json(f"{GBIF_BASE_URL}/species/{species_key}", {}, timeout)
+    except GbifError:
+        return {}
+    if not isinstance(payload, dict):
+        return {}
+    cientifico = payload.get("canonicalName") or payload.get("scientificName")
+    comun = payload.get("vernacularName")
+    return {
+        "scientific_name": cientifico if isinstance(cientifico, str) else None,
+        "vernacular_name": comun if isinstance(comun, str) else None,
+    }
+
+
+def fetch_threatened_species(
+    timeout: int, resolve_names: bool, max_especies: int = 150
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Especies amenazadas (UICN CR/EN/VU) con conteo, categoría y serie por año.
+
+    Para cada especie amenazada se obtiene su serie de registros por año (para el
+    selector "registros por especie por año"). Se acota a ``max_especies`` por
+    seguridad (nº de llamadas). Los nombres se resuelven si ``resolve_names``.
+    """
+    info_params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "iucnRedListCategory": ",".join(_IUCN_AMENAZADAS),
+        "facet": "speciesKey",
+    }
+
+    # 1) Reunir (speciesKey, conteo, categoría) de cada categoría amenazada.
+    por_especie: dict[str, dict[str, Any]] = {}
+    for categoria in _IUCN_AMENAZADAS:
+        for key, occ in _facet_species_por_iucn(categoria, 500, timeout):
+            # Una especie tiene una sola categoría; si apareciera repetida, se
+            # conserva la de mayor severidad (orden CR, EN, VU ya es severo→menos).
+            if key not in por_especie:
+                por_especie[key] = {
+                    "species_key": key,
+                    "iucn_category": categoria,
+                    "occurrence_count": occ,
+                }
+
+    # 2) Ordenar por conteo y acotar.
+    especies = sorted(
+        por_especie.values(), key=lambda e: e["occurrence_count"], reverse=True
+    )[:max_especies]
+
+    # 3) Resolver nombre y serie por año de cada una.
+    for esp in especies:
+        if resolve_names:
+            nombres = _resolver_especie(esp["species_key"], timeout)
+            esp["scientific_name"] = nombres.get("scientific_name")
+            esp["vernacular_name"] = nombres.get("vernacular_name")
+        else:
+            esp["scientific_name"] = None
+            esp["vernacular_name"] = None
+        esp["por_anio"] = fetch_year_series_for_species(esp["species_key"], timeout)
+
+    return especies, info_params
+
+
 # Normalización de nombres de departamento (campo stateProvince de GBIF).
 #
 # GBIF expone ``stateProvince`` como TEXTO LIBRE: el mismo departamento llega con
@@ -618,6 +793,7 @@ def run(
     municipality_top: int = 25,
     year_facet_limit: int = 300,
     basis_facet_limit: int = 20,
+    threatened: bool = True,
 ) -> dict[str, Any]:
     started_at = datetime.now(timezone.utc)
     errors: list[str] = []
@@ -681,6 +857,20 @@ def run(
         except GbifError as error:
             errors.append(f"basis_of_record_facet: {error}")
 
+    # Módulo de amenazadas: categorías UICN + especies amenazadas con serie anual.
+    iucn_ranking: list[dict[str, Any]] = []
+    iucn_params: dict[str, Any] = {}
+    threatened_species: list[dict[str, Any]] = []
+    if threatened:
+        try:
+            iucn_ranking, iucn_params = fetch_iucn_facet(20, timeout)
+        except GbifError as error:
+            errors.append(f"iucn_facet: {error}")
+        try:
+            threatened_species, _ = fetch_threatened_species(timeout, resolve_names)
+        except GbifError as error:
+            errors.append(f"threatened_species: {error}")
+
     # Desglose taxonómico: top órdenes y top familias. GBIF devuelve claves; los
     # nombres se resuelven luego contra /species/{key}.
     order_ranking: list[dict[str, Any]] = []
@@ -733,6 +923,7 @@ def run(
             "municipality_facet": municipality_params,
             "year_facet": year_params,
             "basis_of_record_facet": basis_params,
+            "iucn_facet": iucn_params,
             "order_facet": order_params,
             "family_facet": family_params,
         },
@@ -751,6 +942,9 @@ def run(
         "years_in_ranking": len(year_ranking),
         "basis_of_record_ranking": basis_ranking,
         "basis_of_record_in_ranking": len(basis_ranking),
+        "iucn_ranking": iucn_ranking,
+        "threatened_species": threatened_species,
+        "threatened_species_count": len(threatened_species),
         "order_ranking": order_ranking,
         "orders_in_ranking": len(order_ranking),
         "family_ranking": family_ranking,

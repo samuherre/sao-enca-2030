@@ -920,6 +920,156 @@ function TaxonomiaCard({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/**
+ * Módulo de especies amenazadas (UICN) + selector "registros por especie por
+ * año". El endemismo NO se incluye: GBIF no marca especies endémicas de
+ * Colombia y no existe una lista oficial validada por SAO (no se inventa).
+ */
+function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
+  const categorias = resumen.iucn_categorias;
+  const especies = resumen.especies_amenazadas;
+
+  // Especie seleccionada en el desplegable (por species_key).
+  const [seleccion, setSeleccion] = useState<string>(
+    especies.length > 0 ? especies[0].species_key : "",
+  );
+
+  if (categorias.length === 0 && especies.length === 0) {
+    return null;
+  }
+
+  const especie = especies.find((e) => e.species_key === seleccion) ?? especies[0];
+  const serie = especie
+    ? especie.por_anio.filter((p) => p.anio >= 1990).map((p) => ({
+        anio: String(p.anio),
+        registros: p.registros_ocurrencia,
+      }))
+    : [];
+
+  function nombreEspecie(e: import("../types").EspecieAmenazada): string {
+    if (e.nombre_comun && e.nombre_cientifico) return `${e.nombre_comun} (${e.nombre_cientifico})`;
+    return e.nombre_cientifico ?? e.nombre_comun ?? e.species_key;
+  }
+
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Especies amenazadas</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Registros de aves de Colombia según su categoría de amenaza en la{" "}
+        <strong>Lista Roja de la UICN</strong> (dato de GBIF). "Amenazadas" agrupa las categorías
+        Vulnerable (VU), En peligro (EN) y En peligro crítico (CR).
+      </p>
+
+      {/* Desglose por categoría UICN */}
+      {categorias.length > 0 ? (
+        <table style={{ borderCollapse: "collapse", width: "100%", marginBottom: "1rem" }}>
+          <thead>
+            <tr>
+              <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                Categoría UICN
+              </th>
+              <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                Registros de ocurrencia
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {categorias.map((c) => (
+              <tr key={c.codigo}>
+                <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{c.etiqueta}</td>
+                <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                  {formatoEntero(c.registros_ocurrencia)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : null}
+
+      {/* Selector de especie amenazada + serie por año */}
+      {especies.length > 0 ? (
+        <div>
+          <h4 style={{ marginBottom: "0.25rem" }}>Registros por especie, por año</h4>
+          <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+            Elige una especie amenazada y mira la evolución de sus registros por año. Se listan las{" "}
+            {especies.length} especies amenazadas con más registros.
+          </p>
+
+          <label
+            style={{ display: "flex", flexDirection: "column", gap: "0.2rem", fontSize: "0.8rem", color: "#567", maxWidth: 480 }}
+          >
+            Especie amenazada
+            <select
+              value={seleccion}
+              onChange={(e) => setSeleccion(e.target.value)}
+              style={{
+                padding: "0.4rem 0.6rem",
+                border: `1px solid ${BORDE}`,
+                borderRadius: "0.375rem",
+                fontSize: "0.9rem",
+              }}
+            >
+              {especies.map((e) => (
+                <option key={e.species_key} value={e.species_key}>
+                  {nombreEspecie(e)} — {e.iucn_etiqueta}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          {especie ? (
+            <>
+              <p style={{ color: "#456", fontSize: "0.85rem", margin: "0.5rem 0 0" }}>
+                <strong>{nombreEspecie(especie)}</strong> — {especie.iucn_etiqueta}. Total de
+                registros: {formatoEntero(especie.registros_ocurrencia)}.
+              </p>
+
+              {serie.length > 0 ? (
+                <div style={{ width: "100%", height: 280, marginTop: "0.5rem" }}>
+                  <ResponsiveContainer>
+                    <BarChart data={serie} margin={{ top: 8, right: 16, bottom: 8, left: 8 }}>
+                      <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+                      <XAxis dataKey="anio" tick={{ fontSize: 10 }} interval="preserveStartEnd" />
+                      <YAxis tickFormatter={(v: number) => formatoCompacto(v)} tick={{ fontSize: 11 }} />
+                      <Tooltip
+                        formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
+                        labelFormatter={(label: string) => `Año ${label}`}
+                      />
+                      <Bar dataKey="registros" name="Registros" fill={VERDE_OSCURO} radius={[4, 4, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              ) : (
+                <p style={{ color: "#666", fontSize: "0.85rem" }}>
+                  Sin registros con año asignado desde 1990 para esta especie.
+                </p>
+              )}
+            </>
+          ) : null}
+        </div>
+      ) : null}
+
+      {/* Endemismo: pendiente de lista oficial de SAO (no se inventa). */}
+      <p
+        style={{
+          marginTop: "0.75rem",
+          padding: "0.6rem 0.9rem",
+          backgroundColor: "#faf3df",
+          border: "1px solid #ecdcae",
+          borderRadius: "0.375rem",
+          color: "#5a4a1f",
+          fontSize: "0.82rem",
+        }}
+      >
+        <strong>Especies endémicas: pendiente de validación.</strong> GBIF no marca qué especies son
+        endémicas de Colombia; identificarlas requiere una lista oficial (p. ej. de SAO/ABO). Cuando
+        SAO la proporcione, se cruza con estas especies por su nombre/clave. No se marca el endemismo
+        de forma inventada.
+      </p>
+    </section>
+  );
+}
+
 /** Sección del histórico de cortes (con transparencia sobre su significado). */
 function HistoricoCard({ resumen }: { resumen: ResumenGBIF }) {
   const cortes = resumen.historico;
@@ -1056,8 +1206,10 @@ function LimitacionesCard() {
         <li>
           <strong>Con desglose por departamento, municipio, región de la ENCA</strong> (la región es
           una propuesta por región predominante, pendiente de confirmación de SAO),{" "}
-          <strong>por año</strong> y <strong>por grupo taxonómico</strong> (orden y familia).{" "}
-          <strong>Sin</strong> desglose por especie individual. No se inventan datos ausentes.
+          <strong>por año</strong>, <strong>por grupo taxonómico</strong> (orden y familia) y{" "}
+          <strong>por categoría de amenaza UICN</strong> (con serie por especie amenazada). El{" "}
+          <strong>endemismo</strong> queda pendiente de una lista oficial de SAO. No se inventan
+          datos ausentes.
         </li>
         <li>
           <strong>Es un borrador:</strong> esta vista muestra el contenido de forma preliminar; la
@@ -1254,6 +1406,7 @@ export function BiodiversidadPage() {
       <MunicipiosCard resumen={resumen} />
       <AniosCard resumen={resumen} />
       <TaxonomiaCard resumen={resumen} />
+      <AmenazadasCard resumen={resumen} />
       <MapaCard resumen={resumen} />
       <LimitacionesCard />
 

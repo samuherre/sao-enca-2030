@@ -37,9 +37,12 @@ from backend.src.domain.exceptions import NotFoundError
 from backend.src.schemas.biodiversidad import (
     AnioGBIF,
     ArchivoExportacion,
+    CategoriaIUCN,
     CorteHistoricoGBIF,
     DepartamentoGBIF,
+    EspecieAmenazada,
     MunicipioGBIF,
+    SerieAnioGBIF,
     PublicadorGBIF,
     RegionGBIF,
     ResumenGBIF,
@@ -149,6 +152,64 @@ def _departamentos_desde_report(report: dict[str, Any]) -> list[DepartamentoGBIF
             )
         )
     return salida
+
+
+def _iucn_desde_report(report: dict[str, Any]) -> list[CategoriaIUCN]:
+    """Convierte ``iucn_ranking`` del report al contrato de la API."""
+    salida: list[CategoriaIUCN] = []
+    for pos, cat in enumerate(report.get("iucn_ranking", []) or [], start=1):
+        codigo = cat.get("iucn_category")
+        etiqueta = cat.get("etiqueta")
+        occ = cat.get("occurrence_count")
+        if not isinstance(codigo, str) or not isinstance(occ, int):
+            continue
+        salida.append(
+            CategoriaIUCN(
+                rank=pos,
+                codigo=codigo,
+                etiqueta=etiqueta if isinstance(etiqueta, str) and etiqueta else codigo,
+                registros_ocurrencia=occ,
+            )
+        )
+    return salida
+
+
+def _especies_amenazadas_desde_report(report: dict[str, Any]) -> list[EspecieAmenazada]:
+    """Convierte ``threatened_species`` del report al contrato de la API."""
+    salida: list[EspecieAmenazada] = []
+    for pos, esp in enumerate(report.get("threatened_species", []) or [], start=1):
+        key = esp.get("species_key")
+        occ = esp.get("occurrence_count")
+        codigo = esp.get("iucn_category")
+        if not isinstance(key, str) or not isinstance(occ, int) or not isinstance(codigo, str):
+            continue
+        serie = [
+            SerieAnioGBIF(anio=p["anio"], registros_ocurrencia=p["occurrence_count"])
+            for p in esp.get("por_anio", []) or []
+            if isinstance(p.get("anio"), int) and isinstance(p.get("occurrence_count"), int)
+        ]
+        salida.append(
+            EspecieAmenazada(
+                rank=pos,
+                species_key=key,
+                nombre_cientifico=esp.get("scientific_name"),
+                nombre_comun=esp.get("vernacular_name"),
+                iucn_codigo=codigo,
+                iucn_etiqueta=_IUCN_ETIQUETAS.get(codigo, codigo),
+                registros_ocurrencia=occ,
+                por_anio=serie,
+            )
+        )
+    return salida
+
+
+# Etiquetas UICN en español (coinciden con las del colector).
+_IUCN_ETIQUETAS = {
+    "CR": "En peligro crítico (CR)",
+    "EN": "En peligro (EN)",
+    "VU": "Vulnerable (VU)",
+    "NT": "Casi amenazada (NT)",
+}
 
 
 def _tipos_registro_desde_report(report: dict[str, Any]) -> list[TipoRegistroGBIF]:
@@ -332,6 +393,8 @@ class BiodiversidadService:
             municipios=_municipios_desde_report(report),
             anios=_anios_desde_report(report),
             tipos_registro=_tipos_registro_desde_report(report),
+            iucn_categorias=_iucn_desde_report(report),
+            especies_amenazadas=_especies_amenazadas_desde_report(report),
             regiones=_regiones_desde_report(report),
             ordenes=_taxones_desde_report(report, "order_ranking"),
             familias=_taxones_desde_report(report, "family_ranking"),
@@ -380,6 +443,8 @@ class BiodiversidadService:
             municipios=_municipios_desde_report(report),
             anios=_anios_desde_report(report),
             tipos_registro=_tipos_registro_desde_report(report),
+            iucn_categorias=_iucn_desde_report(report),
+            especies_amenazadas=_especies_amenazadas_desde_report(report),
             regiones=_regiones_desde_report(report),
             ordenes=_taxones_desde_report(report, "order_ranking"),
             familias=_taxones_desde_report(report, "family_ranking"),

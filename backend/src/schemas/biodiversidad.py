@@ -66,6 +66,43 @@ class TaxonGBIF(SchemaBase):
     registros_ocurrencia: int
 
 
+class SerieAnioGBIF(SchemaBase):
+    """Un punto (año, conteo) de la serie temporal de una especie."""
+
+    anio: int
+    registros_ocurrencia: int
+
+
+class CategoriaIUCN(SchemaBase):
+    """Registros por categoría de la Lista Roja de la UICN.
+
+    ``codigo`` es el valor de GBIF (p. ej. ``VU``); ``etiqueta`` su traducción.
+    """
+
+    rank: int
+    codigo: str
+    etiqueta: str
+    registros_ocurrencia: int
+
+
+class EspecieAmenazada(SchemaBase):
+    """Especie de ave amenazada (UICN CR/EN/VU) con su serie de registros/año.
+
+    ``species_key`` es la clave del backbone de GBIF. Los nombres pueden ser
+    ``None`` si GBIF no los devolvió (no se inventan). ``por_anio`` es la serie
+    temporal de esa especie, para el selector "registros por especie por año".
+    """
+
+    rank: int
+    species_key: str
+    nombre_cientifico: str | None
+    nombre_comun: str | None
+    iucn_codigo: str
+    iucn_etiqueta: str
+    registros_ocurrencia: int
+    por_anio: list[SerieAnioGBIF] = []
+
+
 class TipoRegistroGBIF(SchemaBase):
     """Conteo de registros por TIPO (basisOfRecord de GBIF).
 
@@ -193,6 +230,11 @@ class ResumenGBIF(SchemaBase):
 
     # Registros por tipo (basisOfRecord). Puede venir vacío en cortes antiguos.
     tipos_registro: list[TipoRegistroGBIF] = []
+
+    # Módulo de amenazadas: categorías UICN + especies amenazadas con serie anual.
+    # Pueden venir vacíos en cortes anteriores a esta funcionalidad.
+    iucn_categorias: list[CategoriaIUCN] = []
+    especies_amenazadas: list[EspecieAmenazada] = []
 
     # Desglose taxonómico: top órdenes y top familias. Pueden venir vacíos en
     # cortes anteriores a esta funcionalidad.
