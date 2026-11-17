@@ -149,6 +149,45 @@ def fetch_publisher_facet(
     return ranking, params
 
 
+def fetch_year_facet(
+    facet_limit: int, timeout: int
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Registros por AÑO (faceta year) con sus conteos, ordenados por año asc.
+
+    El 'año' de GBIF es el año de EVENTO del registro (cuándo se observó/recolectó
+    la ocurrencia), no la fecha de extracción. Las entradas sin año o no numéricas
+    se omiten (no se inventan).
+    """
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": "year",
+        "facetLimit": facet_limit,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    if not isinstance(payload, dict):
+        raise GbifError("Respuesta inesperada al solicitar facetas de año.")
+
+    facets = payload.get("facets") or []
+    if not facets:
+        return [], params
+
+    counts = facets[0].get("counts") or []
+    pares: list[tuple[int, int]] = []
+    for item in counts:
+        anio = item.get("name")
+        occ = item.get("count")
+        if not isinstance(occ, int):
+            continue
+        if not (isinstance(anio, str) and anio.isdigit()):
+            continue
+        pares.append((int(anio), occ))
+
+    pares.sort(key=lambda p: p[0])
+    return [{"anio": a, "occurrence_count": n} for a, n in pares], params
+
+
 # Normalización de nombres de departamento (campo stateProvince de GBIF).
 #
 # GBIF expone ``stateProvince`` como TEXTO LIBRE: el mismo departamento llega con
@@ -521,6 +560,7 @@ def run(
     taxon_facet_limit: int = 15,
     municipality_facet_limit: int = 300,
     municipality_top: int = 25,
+    year_facet_limit: int = 300,
 ) -> dict[str, Any]:
     started_at = datetime.now(timezone.utc)
     errors: list[str] = []
@@ -563,6 +603,15 @@ def run(
             )
         except GbifError as error:
             errors.append(f"municipality_facet: {error}")
+
+    # Serie temporal: registros por año de evento.
+    year_ranking: list[dict[str, Any]] = []
+    year_params: dict[str, Any] = {}
+    if year_facet_limit > 0:
+        try:
+            year_ranking, year_params = fetch_year_facet(year_facet_limit, timeout)
+        except GbifError as error:
+            errors.append(f"year_facet: {error}")
 
     # Desglose taxonómico: top órdenes y top familias. GBIF devuelve claves; los
     # nombres se resuelven luego contra /species/{key}.
@@ -614,6 +663,7 @@ def run(
             "publisher_facet": facet_params,
             "department_facet": department_params,
             "municipality_facet": municipality_params,
+            "year_facet": year_params,
             "order_facet": order_params,
             "family_facet": family_params,
         },
@@ -628,6 +678,8 @@ def run(
         "departments_without_region": departments_without_region,
         "municipality_ranking": municipality_ranking,
         "municipalities_in_ranking": len(municipality_ranking),
+        "year_ranking": year_ranking,
+        "years_in_ranking": len(year_ranking),
         "order_ranking": order_ranking,
         "orders_in_ranking": len(order_ranking),
         "family_ranking": family_ranking,

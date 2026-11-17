@@ -35,6 +35,7 @@ from typing import Any
 
 from backend.src.domain.exceptions import NotFoundError
 from backend.src.schemas.biodiversidad import (
+    AnioGBIF,
     ArchivoExportacion,
     CorteHistoricoGBIF,
     DepartamentoGBIF,
@@ -146,6 +147,19 @@ def _departamentos_desde_report(report: dict[str, Any]) -> list[DepartamentoGBIF
                 registros_ocurrencia=occ,
             )
         )
+    return salida
+
+
+def _anios_desde_report(report: dict[str, Any]) -> list[AnioGBIF]:
+    """Convierte ``year_ranking`` del report al contrato de la API."""
+    salida: list[AnioGBIF] = []
+    for item in report.get("year_ranking", []) or []:
+        anio = item.get("anio")
+        occ = item.get("occurrence_count")
+        if not isinstance(anio, int) or not isinstance(occ, int):
+            # Entrada malformada: se omite, no se inventa.
+            continue
+        salida.append(AnioGBIF(anio=anio, registros_ocurrencia=occ))
     return salida
 
 
@@ -294,6 +308,7 @@ class BiodiversidadService:
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
             municipios=_municipios_desde_report(report),
+            anios=_anios_desde_report(report),
             regiones=_regiones_desde_report(report),
             ordenes=_taxones_desde_report(report, "order_ranking"),
             familias=_taxones_desde_report(report, "family_ranking"),
@@ -340,6 +355,7 @@ class BiodiversidadService:
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
             municipios=_municipios_desde_report(report),
+            anios=_anios_desde_report(report),
             regiones=_regiones_desde_report(report),
             ordenes=_taxones_desde_report(report, "order_ranking"),
             familias=_taxones_desde_report(report, "family_ranking"),

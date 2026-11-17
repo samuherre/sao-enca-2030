@@ -1,0 +1,1374 @@
+{
+  "source": "GBIF Occurrence API",
+  "source_base_url": "https://api.gbif.org/v1",
+  "scope": "Registros de aves (Aves, taxonKey=212) en Colombia (country=CO)",
+  "extracted_at_utc": "2026-11-17T00:54:39.003239+00:00",
+  "finished_at_utc": "2026-11-17T00:55:30.972676+00:00",
+  "query_params": {
+    "total_count": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0
+    },
+    "publisher_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "publishingOrg",
+      "facetLimit": 15
+    },
+    "department_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "stateProvince",
+      "facetLimit": 40
+    },
+    "municipality_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "gadmGid",
+      "facetLimit": 300
+    },
+    "year_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "year",
+      "facetLimit": 300
+    },
+    "order_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "orderKey",
+      "facetLimit": 15
+    },
+    "family_facet": {
+      "country": "CO",
+      "taxonKey": 212,
+      "limit": 0,
+      "facet": "familyKey",
+      "facetLimit": 15
+    }
+  },
+  "total_bird_records_colombia": 20091344,
+  "publisher_ranking": [
+    {
+      "org_key": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+      "occurrence_count": 17476440,
+      "publisher_name": "Cornell Lab of Ornithology"
+    },
+    {
+      "org_key": "dc282b9d-8f3b-4197-b174-ba5272721a6f",
+      "occurrence_count": 437712,
+      "publisher_name": "Red Nacional de Observadores de Aves - RNOA"
+    },
+    {
+      "org_key": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+      "occurrence_count": 307858,
+      "publisher_name": "iNaturalist.org"
+    },
+    {
+      "org_key": "d42b7e5d-a3e5-4fc2-8b3d-105336d70898",
+      "occurrence_count": 181510,
+      "publisher_name": "Empresas Públicas de Medellín E.S.P."
+    },
+    {
+      "org_key": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
+      "occurrence_count": 178767,
+      "publisher_name": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt"
+    },
+    {
+      "org_key": "d5ef14a1-5177-4547-9ce2-46d84a4214eb",
+      "occurrence_count": 171312,
+      "publisher_name": "Ecopetrol S.A."
+    },
+    {
+      "org_key": "e70c4151-0d1a-414d-b70e-e87ac1e812b7",
+      "occurrence_count": 92695,
+      "publisher_name": "Secretaría Distrital de Ambiente"
+    },
+    {
+      "org_key": "1d8b951a-3a02-40ab-aa7a-f37dc0009abf",
+      "occurrence_count": 72693,
+      "publisher_name": "Secretaría de Medio Ambiente del Distrito de Medellín"
+    },
+    {
+      "org_key": "ab13adb9-ce23-444d-87c9-ce41f03ef2b3",
+      "occurrence_count": 56904,
+      "publisher_name": "Parques Nacionales Naturales de Colombia"
+    },
+    {
+      "org_key": "bad9baef-be05-4410-83c8-31060a9bafb7",
+      "occurrence_count": 43321,
+      "publisher_name": "Área Metropolitana del Valle de Aburrá"
+    },
+    {
+      "org_key": "567cdb5e-5bb3-42e1-ae07-ffa6fc60b56e",
+      "occurrence_count": 40255,
+      "publisher_name": "Asociación SELVA: Investigación para la Conservación en el Neotrópico"
+    },
+    {
+      "org_key": "1f00d75c-f6fc-4224-a595-975e82d7689c",
+      "occurrence_count": 35248,
+      "publisher_name": "Xeno-canto Foundation for Nature Sounds"
+    },
+    {
+      "org_key": "a2f1c6f5-88de-4fc5-891a-336259f32f4e",
+      "occurrence_count": 34826,
+      "publisher_name": "Asociación para el estudio y conservación de las aves acuáticas en Colombia - Calidris"
+    },
+    {
+      "org_key": "04ce62dd-30ec-4d98-8b30-b09cafc3ac38",
+      "occurrence_count": 34661,
+      "publisher_name": "Isagen S.A. E.S.P."
+    },
+    {
+      "org_key": "dbc07e15-c05b-4781-9ec3-59d331a9a4d8",
+      "occurrence_count": 32175,
+      "publisher_name": "Parex Resources Colombia - AG Sucursal"
+    }
+  ],
+  "publishers_in_ranking": 15,
+  "publisher_names_resolved": 15,
+  "department_ranking": [
+    {
+      "departamento": "Antioquia",
+      "occurrence_count": 2753306
+    },
+    {
+      "departamento": "Valle del Cauca",
+      "occurrence_count": 2089535
+    },
+    {
+      "departamento": "Caldas",
+      "occurrence_count": 1766269
+    },
+    {
+      "departamento": "Cundinamarca",
+      "occurrence_count": 1662240
+    },
+    {
+      "departamento": "Meta",
+      "occurrence_count": 1254313
+    },
+    {
+      "departamento": "Risaralda",
+      "occurrence_count": 1057883
+    },
+    {
+      "departamento": "Magdalena",
+      "occurrence_count": 985552
+    },
+    {
+      "departamento": "Tolima",
+      "occurrence_count": 840884
+    },
+    {
+      "departamento": "Santander",
+      "occurrence_count": 794165
+    },
+    {
+      "departamento": "Quindío",
+      "occurrence_count": 650129
+    },
+    {
+      "departamento": "Bogotá, D.C.",
+      "occurrence_count": 543151
+    },
+    {
+      "departamento": "Boyacá",
+      "occurrence_count": 439145
+    },
+    {
+      "departamento": "Huila",
+      "occurrence_count": 433974
+    },
+    {
+      "departamento": "La Guajira",
+      "occurrence_count": 431767
+    },
+    {
+      "departamento": "Casanare",
+      "occurrence_count": 426019
+    },
+    {
+      "departamento": "Bolívar",
+      "occurrence_count": 380281
+    },
+    {
+      "departamento": "Chocó",
+      "occurrence_count": 373860
+    },
+    {
+      "departamento": "Putumayo",
+      "occurrence_count": 371428
+    },
+    {
+      "departamento": "Cauca",
+      "occurrence_count": 365287
+    },
+    {
+      "departamento": "Nariño",
+      "occurrence_count": 365032
+    },
+    {
+      "departamento": "Amazonas",
+      "occurrence_count": 255288
+    },
+    {
+      "departamento": "Cesar",
+      "occurrence_count": 234262
+    },
+    {
+      "departamento": "Córdoba",
+      "occurrence_count": 224713
+    },
+    {
+      "departamento": "Caquetá",
+      "occurrence_count": 171434
+    },
+    {
+      "departamento": "Vaupés",
+      "occurrence_count": 162890
+    },
+    {
+      "departamento": "Guaviare",
+      "occurrence_count": 158437
+    },
+    {
+      "departamento": "Atlántico",
+      "occurrence_count": 139364
+    },
+    {
+      "departamento": "Guainía",
+      "occurrence_count": 139143
+    },
+    {
+      "departamento": "Sucre",
+      "occurrence_count": 116104
+    },
+    {
+      "departamento": "Arauca",
+      "occurrence_count": 83256
+    },
+    {
+      "departamento": "Vichada",
+      "occurrence_count": 79239
+    },
+    {
+      "departamento": "Norte de Santander",
+      "occurrence_count": 76159
+    },
+    {
+      "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+      "occurrence_count": 47436
+    }
+  ],
+  "departments_in_ranking": 33,
+  "region_ranking": [
+    {
+      "region": "Andina",
+      "occurrence_count": 11017305
+    },
+    {
+      "region": "Pacífico",
+      "occurrence_count": 3193714
+    },
+    {
+      "region": "Caribe",
+      "occurrence_count": 2512043
+    },
+    {
+      "region": "Orinoquía",
+      "occurrence_count": 1842827
+    },
+    {
+      "region": "Amazonía",
+      "occurrence_count": 1258620
+    },
+    {
+      "region": "Insular",
+      "occurrence_count": 47436
+    }
+  ],
+  "regions_in_ranking": 6,
+  "departments_without_region": [],
+  "municipality_ranking": [
+    {
+      "gadm_gid": "COL.8.9_2",
+      "occurrence_count": 888313,
+      "name": "Manizales"
+    },
+    {
+      "gadm_gid": "COL.20.26_2",
+      "occurrence_count": 758380,
+      "name": "Santa Marta"
+    },
+    {
+      "gadm_gid": "COL.5.1_2",
+      "occurrence_count": 624642,
+      "name": "Bogotá D.C."
+    },
+    {
+      "gadm_gid": "COL.31.32_2",
+      "occurrence_count": 571781,
+      "name": "Santiago de Cali"
+    },
+    {
+      "gadm_gid": "COL.26.11_2",
+      "occurrence_count": 403747,
+      "name": "Pueblo Rico"
+    },
+    {
+      "gadm_gid": "COL.31.12_2",
+      "occurrence_count": 362354,
+      "name": "Dagua"
+    },
+    {
+      "gadm_gid": "COL.26.10_2",
+      "occurrence_count": 334324,
+      "name": "Pereira"
+    },
+    {
+      "gadm_gid": "COL.2.69_2",
+      "occurrence_count": 320663,
+      "name": "Medellín"
+    },
+    {
+      "gadm_gid": "COL.15.76_2",
+      "occurrence_count": 310346,
+      "name": "San Antonio del Tequendama"
+    },
+    {
+      "gadm_gid": "COL.21.28_2",
+      "occurrence_count": 296106,
+      "name": "Villavicencio"
+    },
+    {
+      "gadm_gid": "COL.30.22_2",
+      "occurrence_count": 294900,
+      "name": "Ibagué"
+    },
+    {
+      "gadm_gid": "COL.8.26_2",
+      "occurrence_count": 286778,
+      "name": "Villamaría"
+    },
+    {
+      "gadm_gid": "COL.2.60_2",
+      "occurrence_count": 254928,
+      "name": "Jardín"
+    },
+    {
+      "gadm_gid": "COL.31.20_2",
+      "occurrence_count": 225866,
+      "name": "Guadalajara de Buga"
+    },
+    {
+      "gadm_gid": "COL.19.10_2",
+      "occurrence_count": 200064,
+      "name": "Riohacha"
+    },
+    {
+      "gadm_gid": "COL.31.6_2",
+      "occurrence_count": 192260,
+      "name": "Buenaventura"
+    },
+    {
+      "gadm_gid": "COL.1.5_2",
+      "occurrence_count": 172345,
+      "name": "Leticia"
+    },
+    {
+      "gadm_gid": "COL.32.2_2",
+      "occurrence_count": 158715,
+      "name": "Mitú"
+    },
+    {
+      "gadm_gid": "COL.25.12_2",
+      "occurrence_count": 157186,
+      "name": "Salento"
+    },
+    {
+      "gadm_gid": "COL.13.12_2",
+      "occurrence_count": 153064,
+      "name": "El Carmen de Atrato"
+    },
+    {
+      "gadm_gid": "COL.21.22_2",
+      "occurrence_count": 146135,
+      "name": "Restrepo"
+    },
+    {
+      "gadm_gid": "COL.6.9_2",
+      "occurrence_count": 137651,
+      "name": "Cartagena de Indias"
+    },
+    {
+      "gadm_gid": "COL.17.4_2",
+      "occurrence_count": 131847,
+      "name": "San José del Guaviare"
+    },
+    {
+      "gadm_gid": "COL.28.74_2",
+      "occurrence_count": 125424,
+      "name": "San Vicente de Chucurí"
+    },
+    {
+      "gadm_gid": "COL.22.5_2",
+      "occurrence_count": 123488,
+      "name": "Barbacoas"
+    }
+  ],
+  "municipalities_in_ranking": 25,
+  "year_ranking": [
+    {
+      "anio": 1774,
+      "occurrence_count": 1
+    },
+    {
+      "anio": 1779,
+      "occurrence_count": 2
+    },
+    {
+      "anio": 1804,
+      "occurrence_count": 1
+    },
+    {
+      "anio": 1810,
+      "occurrence_count": 1
+    },
+    {
+      "anio": 1816,
+      "occurrence_count": 3
+    },
+    {
+      "anio": 1819,
+      "occurrence_count": 1
+    },
+    {
+      "anio": 1827,
+      "occurrence_count": 1
+    },
+    {
+      "anio": 1829,
+      "occurrence_count": 2
+    },
+    {
+      "anio": 1836,
+      "occurrence_count": 1
+    },
+    {
+      "anio": 1840,
+      "occurrence_count": 4
+    },
+    {
+      "anio": 1841,
+      "occurrence_count": 2
+    },
+    {
+      "anio": 1842,
+      "occurrence_count": 2
+    },
+    {
+      "anio": 1843,
+      "occurrence_count": 20
+    },
+    {
+      "anio": 1844,
+      "occurrence_count": 18
+    },
+    {
+      "anio": 1845,
+      "occurrence_count": 38
+    },
+    {
+      "anio": 1846,
+      "occurrence_count": 18
+    },
+    {
+      "anio": 1847,
+      "occurrence_count": 30
+    },
+    {
+      "anio": 1848,
+      "occurrence_count": 21
+    },
+    {
+      "anio": 1849,
+      "occurrence_count": 6
+    },
+    {
+      "anio": 1850,
+      "occurrence_count": 23
+    },
+    {
+      "anio": 1851,
+      "occurrence_count": 13
+    },
+    {
+      "anio": 1852,
+      "occurrence_count": 19
+    },
+    {
+      "anio": 1853,
+      "occurrence_count": 36
+    },
+    {
+      "anio": 1854,
+      "occurrence_count": 33
+    },
+    {
+      "anio": 1855,
+      "occurrence_count": 28
+    },
+    {
+      "anio": 1856,
+      "occurrence_count": 16
+    },
+    {
+      "anio": 1857,
+      "occurrence_count": 8
+    },
+    {
+      "anio": 1858,
+      "occurrence_count": 31
+    },
+    {
+      "anio": 1859,
+      "occurrence_count": 7
+    },
+    {
+      "anio": 1860,
+      "occurrence_count": 198
+    },
+    {
+      "anio": 1861,
+      "occurrence_count": 17
+    },
+    {
+      "anio": 1862,
+      "occurrence_count": 104
+    },
+    {
+      "anio": 1863,
+      "occurrence_count": 9
+    },
+    {
+      "anio": 1864,
+      "occurrence_count": 23
+    },
+    {
+      "anio": 1865,
+      "occurrence_count": 6
+    },
+    {
+      "anio": 1866,
+      "occurrence_count": 30
+    },
+    {
+      "anio": 1867,
+      "occurrence_count": 37
+    },
+    {
+      "anio": 1868,
+      "occurrence_count": 61
+    },
+    {
+      "anio": 1869,
+      "occurrence_count": 33
+    },
+    {
+      "anio": 1870,
+      "occurrence_count": 47
+    },
+    {
+      "anio": 1871,
+      "occurrence_count": 42
+    },
+    {
+      "anio": 1872,
+      "occurrence_count": 84
+    },
+    {
+      "anio": 1873,
+      "occurrence_count": 59
+    },
+    {
+      "anio": 1874,
+      "occurrence_count": 33
+    },
+    {
+      "anio": 1875,
+      "occurrence_count": 43
+    },
+    {
+      "anio": 1876,
+      "occurrence_count": 131
+    },
+    {
+      "anio": 1877,
+      "occurrence_count": 22
+    },
+    {
+      "anio": 1878,
+      "occurrence_count": 205
+    },
+    {
+      "anio": 1879,
+      "occurrence_count": 367
+    },
+    {
+      "anio": 1880,
+      "occurrence_count": 45
+    },
+    {
+      "anio": 1881,
+      "occurrence_count": 82
+    },
+    {
+      "anio": 1882,
+      "occurrence_count": 27
+    },
+    {
+      "anio": 1883,
+      "occurrence_count": 23
+    },
+    {
+      "anio": 1884,
+      "occurrence_count": 55
+    },
+    {
+      "anio": 1885,
+      "occurrence_count": 48
+    },
+    {
+      "anio": 1886,
+      "occurrence_count": 289
+    },
+    {
+      "anio": 1887,
+      "occurrence_count": 62
+    },
+    {
+      "anio": 1888,
+      "occurrence_count": 464
+    },
+    {
+      "anio": 1889,
+      "occurrence_count": 58
+    },
+    {
+      "anio": 1890,
+      "occurrence_count": 43
+    },
+    {
+      "anio": 1891,
+      "occurrence_count": 73
+    },
+    {
+      "anio": 1892,
+      "occurrence_count": 143
+    },
+    {
+      "anio": 1893,
+      "occurrence_count": 27
+    },
+    {
+      "anio": 1894,
+      "occurrence_count": 87
+    },
+    {
+      "anio": 1895,
+      "occurrence_count": 132
+    },
+    {
+      "anio": 1896,
+      "occurrence_count": 233
+    },
+    {
+      "anio": 1897,
+      "occurrence_count": 442
+    },
+    {
+      "anio": 1898,
+      "occurrence_count": 3587
+    },
+    {
+      "anio": 1899,
+      "occurrence_count": 3616
+    },
+    {
+      "anio": 1900,
+      "occurrence_count": 93
+    },
+    {
+      "anio": 1901,
+      "occurrence_count": 835
+    },
+    {
+      "anio": 1902,
+      "occurrence_count": 47
+    },
+    {
+      "anio": 1903,
+      "occurrence_count": 53
+    },
+    {
+      "anio": 1904,
+      "occurrence_count": 286
+    },
+    {
+      "anio": 1905,
+      "occurrence_count": 64
+    },
+    {
+      "anio": 1906,
+      "occurrence_count": 245
+    },
+    {
+      "anio": 1907,
+      "occurrence_count": 1050
+    },
+    {
+      "anio": 1908,
+      "occurrence_count": 527
+    },
+    {
+      "anio": 1909,
+      "occurrence_count": 566
+    },
+    {
+      "anio": 1910,
+      "occurrence_count": 683
+    },
+    {
+      "anio": 1911,
+      "occurrence_count": 6346
+    },
+    {
+      "anio": 1912,
+      "occurrence_count": 4219
+    },
+    {
+      "anio": 1913,
+      "occurrence_count": 5960
+    },
+    {
+      "anio": 1914,
+      "occurrence_count": 3184
+    },
+    {
+      "anio": 1915,
+      "occurrence_count": 1815
+    },
+    {
+      "anio": 1916,
+      "occurrence_count": 4849
+    },
+    {
+      "anio": 1917,
+      "occurrence_count": 2000
+    },
+    {
+      "anio": 1918,
+      "occurrence_count": 4386
+    },
+    {
+      "anio": 1919,
+      "occurrence_count": 98
+    },
+    {
+      "anio": 1920,
+      "occurrence_count": 231
+    },
+    {
+      "anio": 1921,
+      "occurrence_count": 122
+    },
+    {
+      "anio": 1922,
+      "occurrence_count": 104
+    },
+    {
+      "anio": 1923,
+      "occurrence_count": 43
+    },
+    {
+      "anio": 1924,
+      "occurrence_count": 68
+    },
+    {
+      "anio": 1925,
+      "occurrence_count": 21
+    },
+    {
+      "anio": 1926,
+      "occurrence_count": 85
+    },
+    {
+      "anio": 1927,
+      "occurrence_count": 105
+    },
+    {
+      "anio": 1928,
+      "occurrence_count": 319
+    },
+    {
+      "anio": 1929,
+      "occurrence_count": 379
+    },
+    {
+      "anio": 1930,
+      "occurrence_count": 130
+    },
+    {
+      "anio": 1931,
+      "occurrence_count": 16
+    },
+    {
+      "anio": 1932,
+      "occurrence_count": 17
+    },
+    {
+      "anio": 1933,
+      "occurrence_count": 60
+    },
+    {
+      "anio": 1934,
+      "occurrence_count": 33
+    },
+    {
+      "anio": 1935,
+      "occurrence_count": 47
+    },
+    {
+      "anio": 1936,
+      "occurrence_count": 282
+    },
+    {
+      "anio": 1937,
+      "occurrence_count": 504
+    },
+    {
+      "anio": 1938,
+      "occurrence_count": 933
+    },
+    {
+      "anio": 1939,
+      "occurrence_count": 1256
+    },
+    {
+      "anio": 1940,
+      "occurrence_count": 3055
+    },
+    {
+      "anio": 1941,
+      "occurrence_count": 5861
+    },
+    {
+      "anio": 1942,
+      "occurrence_count": 6248
+    },
+    {
+      "anio": 1943,
+      "occurrence_count": 1862
+    },
+    {
+      "anio": 1944,
+      "occurrence_count": 593
+    },
+    {
+      "anio": 1945,
+      "occurrence_count": 4106
+    },
+    {
+      "anio": 1946,
+      "occurrence_count": 3130
+    },
+    {
+      "anio": 1947,
+      "occurrence_count": 4416
+    },
+    {
+      "anio": 1948,
+      "occurrence_count": 3492
+    },
+    {
+      "anio": 1949,
+      "occurrence_count": 5149
+    },
+    {
+      "anio": 1950,
+      "occurrence_count": 4168
+    },
+    {
+      "anio": 1951,
+      "occurrence_count": 2844
+    },
+    {
+      "anio": 1952,
+      "occurrence_count": 2852
+    },
+    {
+      "anio": 1953,
+      "occurrence_count": 776
+    },
+    {
+      "anio": 1954,
+      "occurrence_count": 424
+    },
+    {
+      "anio": 1955,
+      "occurrence_count": 1133
+    },
+    {
+      "anio": 1956,
+      "occurrence_count": 1780
+    },
+    {
+      "anio": 1957,
+      "occurrence_count": 3483
+    },
+    {
+      "anio": 1958,
+      "occurrence_count": 5169
+    },
+    {
+      "anio": 1959,
+      "occurrence_count": 5147
+    },
+    {
+      "anio": 1960,
+      "occurrence_count": 2757
+    },
+    {
+      "anio": 1961,
+      "occurrence_count": 2439
+    },
+    {
+      "anio": 1962,
+      "occurrence_count": 1134
+    },
+    {
+      "anio": 1963,
+      "occurrence_count": 1306
+    },
+    {
+      "anio": 1964,
+      "occurrence_count": 1805
+    },
+    {
+      "anio": 1965,
+      "occurrence_count": 1777
+    },
+    {
+      "anio": 1966,
+      "occurrence_count": 2233
+    },
+    {
+      "anio": 1967,
+      "occurrence_count": 2710
+    },
+    {
+      "anio": 1968,
+      "occurrence_count": 3137
+    },
+    {
+      "anio": 1969,
+      "occurrence_count": 4113
+    },
+    {
+      "anio": 1970,
+      "occurrence_count": 3933
+    },
+    {
+      "anio": 1971,
+      "occurrence_count": 3628
+    },
+    {
+      "anio": 1972,
+      "occurrence_count": 2336
+    },
+    {
+      "anio": 1973,
+      "occurrence_count": 2140
+    },
+    {
+      "anio": 1974,
+      "occurrence_count": 3471
+    },
+    {
+      "anio": 1975,
+      "occurrence_count": 5050
+    },
+    {
+      "anio": 1976,
+      "occurrence_count": 2943
+    },
+    {
+      "anio": 1977,
+      "occurrence_count": 1352
+    },
+    {
+      "anio": 1978,
+      "occurrence_count": 1402
+    },
+    {
+      "anio": 1979,
+      "occurrence_count": 2181
+    },
+    {
+      "anio": 1980,
+      "occurrence_count": 1444
+    },
+    {
+      "anio": 1981,
+      "occurrence_count": 2116
+    },
+    {
+      "anio": 1982,
+      "occurrence_count": 1709
+    },
+    {
+      "anio": 1983,
+      "occurrence_count": 1406
+    },
+    {
+      "anio": 1984,
+      "occurrence_count": 792
+    },
+    {
+      "anio": 1985,
+      "occurrence_count": 1410
+    },
+    {
+      "anio": 1986,
+      "occurrence_count": 3155
+    },
+    {
+      "anio": 1987,
+      "occurrence_count": 5535
+    },
+    {
+      "anio": 1988,
+      "occurrence_count": 5239
+    },
+    {
+      "anio": 1989,
+      "occurrence_count": 9831
+    },
+    {
+      "anio": 1990,
+      "occurrence_count": 12669
+    },
+    {
+      "anio": 1991,
+      "occurrence_count": 10741
+    },
+    {
+      "anio": 1992,
+      "occurrence_count": 9784
+    },
+    {
+      "anio": 1993,
+      "occurrence_count": 8623
+    },
+    {
+      "anio": 1994,
+      "occurrence_count": 12184
+    },
+    {
+      "anio": 1995,
+      "occurrence_count": 16949
+    },
+    {
+      "anio": 1996,
+      "occurrence_count": 19092
+    },
+    {
+      "anio": 1997,
+      "occurrence_count": 22302
+    },
+    {
+      "anio": 1998,
+      "occurrence_count": 33496
+    },
+    {
+      "anio": 1999,
+      "occurrence_count": 23803
+    },
+    {
+      "anio": 2000,
+      "occurrence_count": 64418
+    },
+    {
+      "anio": 2001,
+      "occurrence_count": 39654
+    },
+    {
+      "anio": 2002,
+      "occurrence_count": 40435
+    },
+    {
+      "anio": 2003,
+      "occurrence_count": 38580
+    },
+    {
+      "anio": 2004,
+      "occurrence_count": 96245
+    },
+    {
+      "anio": 2005,
+      "occurrence_count": 59027
+    },
+    {
+      "anio": 2006,
+      "occurrence_count": 61521
+    },
+    {
+      "anio": 2007,
+      "occurrence_count": 58597
+    },
+    {
+      "anio": 2008,
+      "occurrence_count": 54842
+    },
+    {
+      "anio": 2009,
+      "occurrence_count": 78311
+    },
+    {
+      "anio": 2010,
+      "occurrence_count": 93729
+    },
+    {
+      "anio": 2011,
+      "occurrence_count": 88186
+    },
+    {
+      "anio": 2012,
+      "occurrence_count": 132372
+    },
+    {
+      "anio": 2013,
+      "occurrence_count": 156461
+    },
+    {
+      "anio": 2014,
+      "occurrence_count": 234093
+    },
+    {
+      "anio": 2015,
+      "occurrence_count": 343710
+    },
+    {
+      "anio": 2016,
+      "occurrence_count": 461570
+    },
+    {
+      "anio": 2017,
+      "occurrence_count": 676237
+    },
+    {
+      "anio": 2018,
+      "occurrence_count": 1073659
+    },
+    {
+      "anio": 2019,
+      "occurrence_count": 1474459
+    },
+    {
+      "anio": 2020,
+      "occurrence_count": 1498936
+    },
+    {
+      "anio": 2021,
+      "occurrence_count": 1733070
+    },
+    {
+      "anio": 2022,
+      "occurrence_count": 2193431
+    },
+    {
+      "anio": 2023,
+      "occurrence_count": 2579402
+    },
+    {
+      "anio": 2024,
+      "occurrence_count": 2903444
+    },
+    {
+      "anio": 2025,
+      "occurrence_count": 3273972
+    },
+    {
+      "anio": 2026,
+      "occurrence_count": 106563
+    }
+  ],
+  "years_in_ranking": 196,
+  "order_ranking": [
+    {
+      "taxon_key": "729",
+      "occurrence_count": 11865949,
+      "name": "Passeriformes"
+    },
+    {
+      "taxon_key": "1448",
+      "occurrence_count": 1511627,
+      "name": "Apodiformes"
+    },
+    {
+      "taxon_key": "7191147",
+      "occurrence_count": 929875,
+      "name": "Accipitriformes"
+    },
+    {
+      "taxon_key": "1446",
+      "occurrence_count": 899429,
+      "name": "Columbiformes"
+    },
+    {
+      "taxon_key": "724",
+      "occurrence_count": 891825,
+      "name": "Piciformes"
+    },
+    {
+      "taxon_key": "7190953",
+      "occurrence_count": 818385,
+      "name": "Pelecaniformes"
+    },
+    {
+      "taxon_key": "1445",
+      "occurrence_count": 616981,
+      "name": "Psittaciformes"
+    },
+    {
+      "taxon_key": "7192402",
+      "occurrence_count": 473892,
+      "name": "Charadriiformes"
+    },
+    {
+      "taxon_key": "1492",
+      "occurrence_count": 357309,
+      "name": "Cuculiformes"
+    },
+    {
+      "taxon_key": "7191407",
+      "occurrence_count": 344751,
+      "name": "Falconiformes"
+    },
+    {
+      "taxon_key": "723",
+      "occurrence_count": 304755,
+      "name": "Galliformes"
+    },
+    {
+      "taxon_key": "1447",
+      "occurrence_count": 223680,
+      "name": "Coraciiformes"
+    },
+    {
+      "taxon_key": "1493",
+      "occurrence_count": 186599,
+      "name": "Gruiformes"
+    },
+    {
+      "taxon_key": "1108",
+      "occurrence_count": 145046,
+      "name": "Anseriformes"
+    },
+    {
+      "taxon_key": "7192775",
+      "occurrence_count": 97094,
+      "name": "Suliformes"
+    }
+  ],
+  "orders_in_ranking": 15,
+  "family_ranking": [
+    {
+      "taxon_key": "9352",
+      "occurrence_count": 3157772,
+      "name": "Thraupidae"
+    },
+    {
+      "taxon_key": "5291",
+      "occurrence_count": 2527005,
+      "name": "Tyrannidae"
+    },
+    {
+      "taxon_key": "5289",
+      "occurrence_count": 1402426,
+      "name": "Trochilidae"
+    },
+    {
+      "taxon_key": "5233",
+      "occurrence_count": 899393,
+      "name": "Columbidae"
+    },
+    {
+      "taxon_key": "5263",
+      "occurrence_count": 718506,
+      "name": "Parulidae"
+    },
+    {
+      "taxon_key": "6176",
+      "occurrence_count": 693702,
+      "name": "Icteridae"
+    },
+    {
+      "taxon_key": "9355",
+      "occurrence_count": 679246,
+      "name": "Troglodytidae"
+    },
+    {
+      "taxon_key": "5290",
+      "occurrence_count": 623781,
+      "name": "Turdidae"
+    },
+    {
+      "taxon_key": "9340",
+      "occurrence_count": 616967,
+      "name": "Psittacidae"
+    },
+    {
+      "taxon_key": "5243",
+      "occurrence_count": 582753,
+      "name": "Furnariidae"
+    },
+    {
+      "taxon_key": "3685",
+      "occurrence_count": 558055,
+      "name": "Ardeidae"
+    },
+    {
+      "taxon_key": "9410667",
+      "occurrence_count": 522461,
+      "name": "Passerellidae"
+    },
+    {
+      "taxon_key": "9333",
+      "occurrence_count": 494300,
+      "name": "Picidae"
+    },
+    {
+      "taxon_key": "3242141",
+      "occurrence_count": 476852,
+      "name": "Cathartidae"
+    },
+    {
+      "taxon_key": "2877",
+      "occurrence_count": 427456,
+      "name": "Accipitridae"
+    }
+  ],
+  "families_in_ranking": 15,
+  "region_mapping_note": "Agrupación por región ENCA usando la región predominante de cada departamento. Propuesta del equipo, pendiente de confirmación por SAO.",
+  "errors": [],
+  "status": "completed",
+  "notes": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null. El desglose por departamento usa el campo stateProvince (texto libre de GBIF); las variantes de un mismo departamento se suman tras canonizar el nombre. Los registros sin departamento no aparecen, por lo que la suma por departamento puede ser menor que el total nacional."
+}

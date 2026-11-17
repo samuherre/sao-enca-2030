@@ -432,6 +432,63 @@ function RegionesBloque({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/** Serie temporal de registros por año de evento. */
+function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
+  // Año desde el cual mostrar: GBIF tiene registros desde el s. XVIII, pero con
+  // cifras ínfimas; se muestra el periodo con datos significativos (>=1990) para
+  // que la tendencia reciente sea legible. Los datos completos quedan en el dato
+  // (y migran a ArcGIS); esto es solo el recorte de presentación.
+  const ANIO_MINIMO = 1990;
+  const serie = resumen.anios.filter((a) => a.anio >= ANIO_MINIMO);
+
+  if (resumen.anios.length === 0) {
+    return (
+      <section style={{ marginTop: "1.5rem" }}>
+        <h3 style={{ marginBottom: "0.5rem" }}>Registros por año</h3>
+        <p style={{ color: "#666" }}>
+          Este corte no incluye el desglose por año. Se generará en la próxima actualización.
+        </p>
+      </section>
+    );
+  }
+
+  const data = serie.map((a) => ({ anio: String(a.anio), registros: a.registros_ocurrencia }));
+  const primero = resumen.anios[0];
+  const ultimo = resumen.anios[resumen.anios.length - 1];
+
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Registros por año</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Evolución del número de registros de ocurrencia de aves por <strong>año de observación</strong>{" "}
+        (no de extracción). Se muestra desde {ANIO_MINIMO}; GBIF tiene registros más antiguos pero con
+        cifras muy bajas. El año en curso suele verse incompleto.
+      </p>
+
+      <div style={{ width: "100%", height: 300 }}>
+        <ResponsiveContainer>
+          <BarChart data={data} margin={{ top: 8, right: 16, bottom: 8, left: 8 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis dataKey="anio" tick={{ fontSize: 10 }} interval="preserveStartEnd" />
+            <YAxis tickFormatter={(v: number) => formatoCompacto(v)} tick={{ fontSize: 11 }} />
+            <Tooltip
+              formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
+              labelFormatter={(label: string) => `Año ${label}`}
+            />
+            <Bar dataKey="registros" name="Registros" fill={VERDE} radius={[4, 4, 0, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      <p style={{ color: "#789", fontSize: "0.8rem", marginTop: "0.25rem" }}>
+        Rango disponible en GBIF: {primero.anio}–{ultimo.anio}. El crecimiento reciente refleja sobre
+        todo el auge de la ciencia ciudadana (observaciones en línea), no necesariamente cambios en las
+        poblaciones de aves.
+      </p>
+    </section>
+  );
+}
+
 /** Gráfico + tabla de registros por municipio (top de GADM nivel 2). */
 function MunicipiosCard({ resumen }: { resumen: ResumenGBIF }) {
   const municipios = resumen.municipios;
@@ -921,9 +978,9 @@ function LimitacionesCard() {
         </li>
         <li>
           <strong>Con desglose por departamento, municipio, región de la ENCA</strong> (la región es
-          una propuesta por región predominante, pendiente de confirmación de SAO){" "}
-          <strong>y por grupo taxonómico</strong> (orden y familia). <strong>Sin</strong> desglose
-          por especie individual ni por año. No se inventan datos ausentes.
+          una propuesta por región predominante, pendiente de confirmación de SAO),{" "}
+          <strong>por año</strong> y <strong>por grupo taxonómico</strong> (orden y familia).{" "}
+          <strong>Sin</strong> desglose por especie individual. No se inventan datos ausentes.
         </li>
         <li>
           <strong>Es un borrador:</strong> esta vista muestra el contenido de forma preliminar; la
@@ -1117,6 +1174,7 @@ export function BiodiversidadPage() {
       <PublicadoresCard resumen={resumen} />
       <DepartamentosCard resumen={resumen} />
       <MunicipiosCard resumen={resumen} />
+      <AniosCard resumen={resumen} />
       <TaxonomiaCard resumen={resumen} />
       <MapaCard resumen={resumen} />
       <LimitacionesCard />

@@ -29,6 +29,12 @@ export interface TaxonGBIF {
   readonly registros_ocurrencia: number;
 }
 
+/** Conteo de registros de aves por año de evento (serie temporal). */
+export interface AnioGBIF {
+  readonly anio: number;
+  readonly registros_ocurrencia: number;
+}
+
 /** Conteo de registros de aves de un municipio de Colombia (GADM nivel 2). */
 export interface MunicipioGBIF {
   readonly rank: number;
@@ -85,6 +91,7 @@ export interface ResumenGBIF {
   readonly publicadores: readonly PublicadorGBIF[];
   readonly departamentos: readonly DepartamentoGBIF[];
   readonly municipios: readonly MunicipioGBIF[];
+  readonly anios: readonly AnioGBIF[];
   readonly regiones: readonly RegionGBIF[];
   readonly ordenes: readonly TaxonGBIF[];
   readonly familias: readonly TaxonGBIF[];

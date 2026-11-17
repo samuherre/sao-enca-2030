@@ -43,6 +43,7 @@ export type {
   PublicadorGBIF,
   DepartamentoGBIF,
   MunicipioGBIF,
+  AnioGBIF,
   RegionGBIF,
   TaxonGBIF,
   CorteHistoricoGBIF,

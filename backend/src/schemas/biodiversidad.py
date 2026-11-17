@@ -66,6 +66,18 @@ class TaxonGBIF(SchemaBase):
     registros_ocurrencia: int
 
 
+class AnioGBIF(SchemaBase):
+    """Conteo de registros de aves por año de evento (serie temporal).
+
+    El año es el año de EVENTO del registro en GBIF (cuándo se observó/recolectó
+    la ocurrencia), no la fecha de extracción. Los registros sin año no se
+    cuentan aquí.
+    """
+
+    anio: int
+    registros_ocurrencia: int
+
+
 class MunicipioGBIF(SchemaBase):
     """Conteo de registros de aves de un municipio de Colombia.
 
@@ -159,6 +171,10 @@ class ResumenGBIF(SchemaBase):
 
     # Top municipios (GADM nivel 2). Puede venir vacío en cortes antiguos.
     municipios: list[MunicipioGBIF] = []
+
+    # Serie temporal: registros por año de evento. Puede venir vacía en cortes
+    # anteriores a esta funcionalidad.
+    anios: list[AnioGBIF] = []
 
     # Desglose taxonómico: top órdenes y top familias. Pueden venir vacíos en
     # cortes anteriores a esta funcionalidad.

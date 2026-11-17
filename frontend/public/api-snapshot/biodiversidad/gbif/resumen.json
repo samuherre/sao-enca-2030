@@ -5,8 +5,8 @@
   "cobertura_geografica": "Colombia (country=CO)",
   "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
   "origen": "almacenado",
-  "extraido_utc": "2026-11-17T00:46:57.897128+00:00",
-  "finalizado_utc": "2026-11-17T00:47:48.853624+00:00",
+  "extraido_utc": "2026-11-17T00:54:39.003239+00:00",
+  "finalizado_utc": "2026-11-17T00:55:30.972676+00:00",
   "estado": "completed",
   "errores": [],
   "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null. El desglose por departamento usa el campo stateProvince (texto libre de GBIF); las variantes de un mismo departamento se suman tras canonizar el nombre. Los registros sin departamento no aparecen, por lo que la suma por departamento puede ser menor que el total nacional.",
@@ -454,6 +454,792 @@
       "registros_ocurrencia": 123488
     }
   ],
+  "anios": [
+    {
+      "anio": 1774,
+      "registros_ocurrencia": 1
+    },
+    {
+      "anio": 1779,
+      "registros_ocurrencia": 2
+    },
+    {
+      "anio": 1804,
+      "registros_ocurrencia": 1
+    },
+    {
+      "anio": 1810,
+      "registros_ocurrencia": 1
+    },
+    {
+      "anio": 1816,
+      "registros_ocurrencia": 3
+    },
+    {
+      "anio": 1819,
+      "registros_ocurrencia": 1
+    },
+    {
+      "anio": 1827,
+      "registros_ocurrencia": 1
+    },
+    {
+      "anio": 1829,
+      "registros_ocurrencia": 2
+    },
+    {
+      "anio": 1836,
+      "registros_ocurrencia": 1
+    },
+    {
+      "anio": 1840,
+      "registros_ocurrencia": 4
+    },
+    {
+      "anio": 1841,
+      "registros_ocurrencia": 2
+    },
+    {
+      "anio": 1842,
+      "registros_ocurrencia": 2
+    },
+    {
+      "anio": 1843,
+      "registros_ocurrencia": 20
+    },
+    {
+      "anio": 1844,
+      "registros_ocurrencia": 18
+    },
+    {
+      "anio": 1845,
+      "registros_ocurrencia": 38
+    },
+    {
+      "anio": 1846,
+      "registros_ocurrencia": 18
+    },
+    {
+      "anio": 1847,
+      "registros_ocurrencia": 30
+    },
+    {
+      "anio": 1848,
+      "registros_ocurrencia": 21
+    },
+    {
+      "anio": 1849,
+      "registros_ocurrencia": 6
+    },
+    {
+      "anio": 1850,
+      "registros_ocurrencia": 23
+    },
+    {
+      "anio": 1851,
+      "registros_ocurrencia": 13
+    },
+    {
+      "anio": 1852,
+      "registros_ocurrencia": 19
+    },
+    {
+      "anio": 1853,
+      "registros_ocurrencia": 36
+    },
+    {
+      "anio": 1854,
+      "registros_ocurrencia": 33
+    },
+    {
+      "anio": 1855,
+      "registros_ocurrencia": 28
+    },
+    {
+      "anio": 1856,
+      "registros_ocurrencia": 16
+    },
+    {
+      "anio": 1857,
+      "registros_ocurrencia": 8
+    },
+    {
+      "anio": 1858,
+      "registros_ocurrencia": 31
+    },
+    {
+      "anio": 1859,
+      "registros_ocurrencia": 7
+    },
+    {
+      "anio": 1860,
+      "registros_ocurrencia": 198
+    },
+    {
+      "anio": 1861,
+      "registros_ocurrencia": 17
+    },
+    {
+      "anio": 1862,
+      "registros_ocurrencia": 104
+    },
+    {
+      "anio": 1863,
+      "registros_ocurrencia": 9
+    },
+    {
+      "anio": 1864,
+      "registros_ocurrencia": 23
+    },
+    {
+      "anio": 1865,
+      "registros_ocurrencia": 6
+    },
+    {
+      "anio": 1866,
+      "registros_ocurrencia": 30
+    },
+    {
+      "anio": 1867,
+      "registros_ocurrencia": 37
+    },
+    {
+      "anio": 1868,
+      "registros_ocurrencia": 61
+    },
+    {
+      "anio": 1869,
+      "registros_ocurrencia": 33
+    },
+    {
+      "anio": 1870,
+      "registros_ocurrencia": 47
+    },
+    {
+      "anio": 1871,
+      "registros_ocurrencia": 42
+    },
+    {
+      "anio": 1872,
+      "registros_ocurrencia": 84
+    },
+    {
+      "anio": 1873,
+      "registros_ocurrencia": 59
+    },
+    {
+      "anio": 1874,
+      "registros_ocurrencia": 33
+    },
+    {
+      "anio": 1875,
+      "registros_ocurrencia": 43
+    },
+    {
+      "anio": 1876,
+      "registros_ocurrencia": 131
+    },
+    {
+      "anio": 1877,
+      "registros_ocurrencia": 22
+    },
+    {
+      "anio": 1878,
+      "registros_ocurrencia": 205
+    },
+    {
+      "anio": 1879,
+      "registros_ocurrencia": 367
+    },
+    {
+      "anio": 1880,
+      "registros_ocurrencia": 45
+    },
+    {
+      "anio": 1881,
+      "registros_ocurrencia": 82
+    },
+    {
+      "anio": 1882,
+      "registros_ocurrencia": 27
+    },
+    {
+      "anio": 1883,
+      "registros_ocurrencia": 23
+    },
+    {
+      "anio": 1884,
+      "registros_ocurrencia": 55
+    },
+    {
+      "anio": 1885,
+      "registros_ocurrencia": 48
+    },
+    {
+      "anio": 1886,
+      "registros_ocurrencia": 289
+    },
+    {
+      "anio": 1887,
+      "registros_ocurrencia": 62
+    },
+    {
+      "anio": 1888,
+      "registros_ocurrencia": 464
+    },
+    {
+      "anio": 1889,
+      "registros_ocurrencia": 58
+    },
+    {
+      "anio": 1890,
+      "registros_ocurrencia": 43
+    },
+    {
+      "anio": 1891,
+      "registros_ocurrencia": 73
+    },
+    {
+      "anio": 1892,
+      "registros_ocurrencia": 143
+    },
+    {
+      "anio": 1893,
+      "registros_ocurrencia": 27
+    },
+    {
+      "anio": 1894,
+      "registros_ocurrencia": 87
+    },
+    {
+      "anio": 1895,
+      "registros_ocurrencia": 132
+    },
+    {
+      "anio": 1896,
+      "registros_ocurrencia": 233
+    },
+    {
+      "anio": 1897,
+      "registros_ocurrencia": 442
+    },
+    {
+      "anio": 1898,
+      "registros_ocurrencia": 3587
+    },
+    {
+      "anio": 1899,
+      "registros_ocurrencia": 3616
+    },
+    {
+      "anio": 1900,
+      "registros_ocurrencia": 93
+    },
+    {
+      "anio": 1901,
+      "registros_ocurrencia": 835
+    },
+    {
+      "anio": 1902,
+      "registros_ocurrencia": 47
+    },
+    {
+      "anio": 1903,
+      "registros_ocurrencia": 53
+    },
+    {
+      "anio": 1904,
+      "registros_ocurrencia": 286
+    },
+    {
+      "anio": 1905,
+      "registros_ocurrencia": 64
+    },
+    {
+      "anio": 1906,
+      "registros_ocurrencia": 245
+    },
+    {
+      "anio": 1907,
+      "registros_ocurrencia": 1050
+    },
+    {
+      "anio": 1908,
+      "registros_ocurrencia": 527
+    },
+    {
+      "anio": 1909,
+      "registros_ocurrencia": 566
+    },
+    {
+      "anio": 1910,
+      "registros_ocurrencia": 683
+    },
+    {
+      "anio": 1911,
+      "registros_ocurrencia": 6346
+    },
+    {
+      "anio": 1912,
+      "registros_ocurrencia": 4219
+    },
+    {
+      "anio": 1913,
+      "registros_ocurrencia": 5960
+    },
+    {
+      "anio": 1914,
+      "registros_ocurrencia": 3184
+    },
+    {
+      "anio": 1915,
+      "registros_ocurrencia": 1815
+    },
+    {
+      "anio": 1916,
+      "registros_ocurrencia": 4849
+    },
+    {
+      "anio": 1917,
+      "registros_ocurrencia": 2000
+    },
+    {
+      "anio": 1918,
+      "registros_ocurrencia": 4386
+    },
+    {
+      "anio": 1919,
+      "registros_ocurrencia": 98
+    },
+    {
+      "anio": 1920,
+      "registros_ocurrencia": 231
+    },
+    {
+      "anio": 1921,
+      "registros_ocurrencia": 122
+    },
+    {
+      "anio": 1922,
+      "registros_ocurrencia": 104
+    },
+    {
+      "anio": 1923,
+      "registros_ocurrencia": 43
+    },
+    {
+      "anio": 1924,
+      "registros_ocurrencia": 68
+    },
+    {
+      "anio": 1925,
+      "registros_ocurrencia": 21
+    },
+    {
+      "anio": 1926,
+      "registros_ocurrencia": 85
+    },
+    {
+      "anio": 1927,
+      "registros_ocurrencia": 105
+    },
+    {
+      "anio": 1928,
+      "registros_ocurrencia": 319
+    },
+    {
+      "anio": 1929,
+      "registros_ocurrencia": 379
+    },
+    {
+      "anio": 1930,
+      "registros_ocurrencia": 130
+    },
+    {
+      "anio": 1931,
+      "registros_ocurrencia": 16
+    },
+    {
+      "anio": 1932,
+      "registros_ocurrencia": 17
+    },
+    {
+      "anio": 1933,
+      "registros_ocurrencia": 60
+    },
+    {
+      "anio": 1934,
+      "registros_ocurrencia": 33
+    },
+    {
+      "anio": 1935,
+      "registros_ocurrencia": 47
+    },
+    {
+      "anio": 1936,
+      "registros_ocurrencia": 282
+    },
+    {
+      "anio": 1937,
+      "registros_ocurrencia": 504
+    },
+    {
+      "anio": 1938,
+      "registros_ocurrencia": 933
+    },
+    {
+      "anio": 1939,
+      "registros_ocurrencia": 1256
+    },
+    {
+      "anio": 1940,
+      "registros_ocurrencia": 3055
+    },
+    {
+      "anio": 1941,
+      "registros_ocurrencia": 5861
+    },
+    {
+      "anio": 1942,
+      "registros_ocurrencia": 6248
+    },
+    {
+      "anio": 1943,
+      "registros_ocurrencia": 1862
+    },
+    {
+      "anio": 1944,
+      "registros_ocurrencia": 593
+    },
+    {
+      "anio": 1945,
+      "registros_ocurrencia": 4106
+    },
+    {
+      "anio": 1946,
+      "registros_ocurrencia": 3130
+    },
+    {
+      "anio": 1947,
+      "registros_ocurrencia": 4416
+    },
+    {
+      "anio": 1948,
+      "registros_ocurrencia": 3492
+    },
+    {
+      "anio": 1949,
+      "registros_ocurrencia": 5149
+    },
+    {
+      "anio": 1950,
+      "registros_ocurrencia": 4168
+    },
+    {
+      "anio": 1951,
+      "registros_ocurrencia": 2844
+    },
+    {
+      "anio": 1952,
+      "registros_ocurrencia": 2852
+    },
+    {
+      "anio": 1953,
+      "registros_ocurrencia": 776
+    },
+    {
+      "anio": 1954,
+      "registros_ocurrencia": 424
+    },
+    {
+      "anio": 1955,
+      "registros_ocurrencia": 1133
+    },
+    {
+      "anio": 1956,
+      "registros_ocurrencia": 1780
+    },
+    {
+      "anio": 1957,
+      "registros_ocurrencia": 3483
+    },
+    {
+      "anio": 1958,
+      "registros_ocurrencia": 5169
+    },
+    {
+      "anio": 1959,
+      "registros_ocurrencia": 5147
+    },
+    {
+      "anio": 1960,
+      "registros_ocurrencia": 2757
+    },
+    {
+      "anio": 1961,
+      "registros_ocurrencia": 2439
+    },
+    {
+      "anio": 1962,
+      "registros_ocurrencia": 1134
+    },
+    {
+      "anio": 1963,
+      "registros_ocurrencia": 1306
+    },
+    {
+      "anio": 1964,
+      "registros_ocurrencia": 1805
+    },
+    {
+      "anio": 1965,
+      "registros_ocurrencia": 1777
+    },
+    {
+      "anio": 1966,
+      "registros_ocurrencia": 2233
+    },
+    {
+      "anio": 1967,
+      "registros_ocurrencia": 2710
+    },
+    {
+      "anio": 1968,
+      "registros_ocurrencia": 3137
+    },
+    {
+      "anio": 1969,
+      "registros_ocurrencia": 4113
+    },
+    {
+      "anio": 1970,
+      "registros_ocurrencia": 3933
+    },
+    {
+      "anio": 1971,
+      "registros_ocurrencia": 3628
+    },
+    {
+      "anio": 1972,
+      "registros_ocurrencia": 2336
+    },
+    {
+      "anio": 1973,
+      "registros_ocurrencia": 2140
+    },
+    {
+      "anio": 1974,
+      "registros_ocurrencia": 3471
+    },
+    {
+      "anio": 1975,
+      "registros_ocurrencia": 5050
+    },
+    {
+      "anio": 1976,
+      "registros_ocurrencia": 2943
+    },
+    {
+      "anio": 1977,
+      "registros_ocurrencia": 1352
+    },
+    {
+      "anio": 1978,
+      "registros_ocurrencia": 1402
+    },
+    {
+      "anio": 1979,
+      "registros_ocurrencia": 2181
+    },
+    {
+      "anio": 1980,
+      "registros_ocurrencia": 1444
+    },
+    {
+      "anio": 1981,
+      "registros_ocurrencia": 2116
+    },
+    {
+      "anio": 1982,
+      "registros_ocurrencia": 1709
+    },
+    {
+      "anio": 1983,
+      "registros_ocurrencia": 1406
+    },
+    {
+      "anio": 1984,
+      "registros_ocurrencia": 792
+    },
+    {
+      "anio": 1985,
+      "registros_ocurrencia": 1410
+    },
+    {
+      "anio": 1986,
+      "registros_ocurrencia": 3155
+    },
+    {
+      "anio": 1987,
+      "registros_ocurrencia": 5535
+    },
+    {
+      "anio": 1988,
+      "registros_ocurrencia": 5239
+    },
+    {
+      "anio": 1989,
+      "registros_ocurrencia": 9831
+    },
+    {
+      "anio": 1990,
+      "registros_ocurrencia": 12669
+    },
+    {
+      "anio": 1991,
+      "registros_ocurrencia": 10741
+    },
+    {
+      "anio": 1992,
+      "registros_ocurrencia": 9784
+    },
+    {
+      "anio": 1993,
+      "registros_ocurrencia": 8623
+    },
+    {
+      "anio": 1994,
+      "registros_ocurrencia": 12184
+    },
+    {
+      "anio": 1995,
+      "registros_ocurrencia": 16949
+    },
+    {
+      "anio": 1996,
+      "registros_ocurrencia": 19092
+    },
+    {
+      "anio": 1997,
+      "registros_ocurrencia": 22302
+    },
+    {
+      "anio": 1998,
+      "registros_ocurrencia": 33496
+    },
+    {
+      "anio": 1999,
+      "registros_ocurrencia": 23803
+    },
+    {
+      "anio": 2000,
+      "registros_ocurrencia": 64418
+    },
+    {
+      "anio": 2001,
+      "registros_ocurrencia": 39654
+    },
+    {
+      "anio": 2002,
+      "registros_ocurrencia": 40435
+    },
+    {
+      "anio": 2003,
+      "registros_ocurrencia": 38580
+    },
+    {
+      "anio": 2004,
+      "registros_ocurrencia": 96245
+    },
+    {
+      "anio": 2005,
+      "registros_ocurrencia": 59027
+    },
+    {
+      "anio": 2006,
+      "registros_ocurrencia": 61521
+    },
+    {
+      "anio": 2007,
+      "registros_ocurrencia": 58597
+    },
+    {
+      "anio": 2008,
+      "registros_ocurrencia": 54842
+    },
+    {
+      "anio": 2009,
+      "registros_ocurrencia": 78311
+    },
+    {
+      "anio": 2010,
+      "registros_ocurrencia": 93729
+    },
+    {
+      "anio": 2011,
+      "registros_ocurrencia": 88186
+    },
+    {
+      "anio": 2012,
+      "registros_ocurrencia": 132372
+    },
+    {
+      "anio": 2013,
+      "registros_ocurrencia": 156461
+    },
+    {
+      "anio": 2014,
+      "registros_ocurrencia": 234093
+    },
+    {
+      "anio": 2015,
+      "registros_ocurrencia": 343710
+    },
+    {
+      "anio": 2016,
+      "registros_ocurrencia": 461570
+    },
+    {
+      "anio": 2017,
+      "registros_ocurrencia": 676237
+    },
+    {
+      "anio": 2018,
+      "registros_ocurrencia": 1073659
+    },
+    {
+      "anio": 2019,
+      "registros_ocurrencia": 1474459
+    },
+    {
+      "anio": 2020,
+      "registros_ocurrencia": 1498936
+    },
+    {
+      "anio": 2021,
+      "registros_ocurrencia": 1733070
+    },
+    {
+      "anio": 2022,
+      "registros_ocurrencia": 2193431
+    },
+    {
+      "anio": 2023,
+      "registros_ocurrencia": 2579402
+    },
+    {
+      "anio": 2024,
+      "registros_ocurrencia": 2903444
+    },
+    {
+      "anio": 2025,
+      "registros_ocurrencia": 3273972
+    },
+    {
+      "anio": 2026,
+      "registros_ocurrencia": 106563
+    }
+  ],
   "ordenes": [
     {
       "rank": 1,
@@ -638,7 +1424,7 @@
       "registros_ocurrencia": 427456
     }
   ],
-  "cortes_historicos": 8,
+  "cortes_historicos": 9,
   "historico": [
     {
       "extraido_utc": "2026-10-21T17:45:51.364310+00:00",
@@ -691,6 +1477,13 @@
     },
     {
       "extraido_utc": "2026-11-17T00:46:57.897128+00:00",
+      "fecha": "2026-11-17",
+      "estado": "completed",
+      "total_registros_ocurrencia": 20091344,
+      "publicadores_en_ranking": 15
+    },
+    {
+      "extraido_utc": "2026-11-17T00:54:39.003239+00:00",
       "fecha": "2026-11-17",
       "estado": "completed",
       "total_registros_ocurrencia": 20091344,
