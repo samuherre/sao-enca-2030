@@ -405,6 +405,118 @@ function RegionesBloque({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/** Gráfico + tabla de registros por grupo taxonómico (orden o familia). */
+function TaxonCard({
+  titulo,
+  descripcion,
+  items,
+  etiquetaColumna,
+}: {
+  titulo: string;
+  descripcion: string;
+  items: readonly import("../types").TaxonGBIF[];
+  etiquetaColumna: string;
+}) {
+  if (items.length === 0) {
+    return (
+      <div style={{ marginTop: "1rem" }}>
+        <h4 style={{ marginBottom: "0.25rem" }}>{titulo}</h4>
+        <p style={{ color: "#666", fontSize: "0.85rem" }}>
+          Este corte no incluye el desglose. Se generará en la próxima actualización.
+        </p>
+      </div>
+    );
+  }
+
+  const data = items.map((t) => ({
+    etiqueta: t.nombre ?? t.taxon_key,
+    registros: t.registros_ocurrencia,
+  }));
+
+  return (
+    <div style={{ marginTop: "1rem" }}>
+      <h4 style={{ marginBottom: "0.25rem" }}>{titulo}</h4>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>{descripcion}</p>
+
+      <div style={{ width: "100%", height: Math.max(220, data.length * 28) }}>
+        <ResponsiveContainer>
+          <BarChart
+            layout="vertical"
+            data={data}
+            margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+            <YAxis type="category" dataKey="etiqueta" width={160} tick={{ fontSize: 11 }} />
+            <Tooltip
+              formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
+            />
+            <Bar dataKey="registros" name="Registros" fill={VERDE} radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
+        <thead>
+          <tr>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>#</th>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              {etiquetaColumna}
+            </th>
+            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Registros de ocurrencia
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((t) => (
+            <tr key={t.taxon_key}>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{t.rank}</td>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
+                {t.nombre ?? (
+                  <em style={{ color: "#888" }}>nombre no disponible ({t.taxon_key})</em>
+                )}
+              </td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                {formatoEntero(t.registros_ocurrencia)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+/** Sección de desglose taxonómico: órdenes y familias de aves. */
+function TaxonomiaCard({ resumen }: { resumen: ResumenGBIF }) {
+  if (resumen.ordenes.length === 0 && resumen.familias.length === 0) {
+    return null;
+  }
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Por grupo taxonómico</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Registros de ocurrencia de aves de Colombia por <strong>orden</strong> y por{" "}
+        <strong>familia</strong> taxonómica (clasificación del backbone de GBIF). Se muestran los
+        grupos con más registros.
+      </p>
+      <TaxonCard
+        titulo="Órdenes con más registros"
+        descripcion="Órdenes de aves ordenados por número de registros de ocurrencia."
+        items={resumen.ordenes}
+        etiquetaColumna="Orden"
+      />
+      <TaxonCard
+        titulo="Familias con más registros"
+        descripcion="Familias de aves ordenadas por número de registros de ocurrencia."
+        items={resumen.familias}
+        etiquetaColumna="Familia"
+      />
+    </section>
+  );
+}
+
 /** Sección del histórico de cortes (con transparencia sobre su significado). */
 function HistoricoCard({ resumen }: { resumen: ResumenGBIF }) {
   const cortes = resumen.historico;
@@ -539,9 +651,10 @@ function LimitacionesCard() {
           individuo puede tener muchos registros.
         </li>
         <li>
-          <strong>Con desglose por departamento y por región de la ENCA</strong> (esta última es una
-          propuesta por región predominante, pendiente de confirmación de SAO). <strong>Sin</strong>{" "}
-          desglose por especie ni año. No se inventan datos ausentes.
+          <strong>Con desglose por departamento, región de la ENCA</strong> (propuesta por región
+          predominante, pendiente de confirmación de SAO) <strong>y por grupo taxonómico</strong>{" "}
+          (orden y familia). <strong>Sin</strong> desglose por especie individual ni por año. No se
+          inventan datos ausentes.
         </li>
         <li>
           <strong>Es un borrador:</strong> esta vista muestra el contenido de forma preliminar; la
@@ -734,6 +847,7 @@ export function BiodiversidadPage() {
 
       <PublicadoresCard resumen={resumen} />
       <DepartamentosCard resumen={resumen} />
+      <TaxonomiaCard resumen={resumen} />
       <LimitacionesCard />
 
       {/* Información de administración, no de valor para el usuario de SAO:

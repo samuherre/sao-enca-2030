@@ -20,6 +20,15 @@ export interface DepartamentoGBIF {
   readonly registros_ocurrencia: number;
 }
 
+/** Conteo de registros de aves por grupo taxonómico (orden o familia). */
+export interface TaxonGBIF {
+  readonly rank: number;
+  readonly taxon_key: string;
+  /** Nombre científico resuelto; `null` si GBIF no lo devolvió (no se inventa). */
+  readonly nombre: string | null;
+  readonly registros_ocurrencia: number;
+}
+
 /** Conteo de registros de aves agrupado por región ENCA (predominante). */
 export interface RegionGBIF {
   readonly rank: number;
@@ -66,6 +75,8 @@ export interface ResumenGBIF {
   readonly publicadores: readonly PublicadorGBIF[];
   readonly departamentos: readonly DepartamentoGBIF[];
   readonly regiones: readonly RegionGBIF[];
+  readonly ordenes: readonly TaxonGBIF[];
+  readonly familias: readonly TaxonGBIF[];
 
   readonly cortes_historicos: number;
   readonly historico: readonly CorteHistoricoGBIF[];

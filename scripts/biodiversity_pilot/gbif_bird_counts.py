@@ -322,6 +322,68 @@ def agrupar_por_region(
     return ranking, sin_region
 
 
+def fetch_taxon_facet(
+    facet: str, facet_limit: int, timeout: int
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Ranking taxonómico por ``facet`` (orderKey o familyKey) con sus conteos.
+
+    GBIF devuelve CLAVES del backbone (numéricas), no nombres; la resolución a
+    nombre se hace aparte (``resolve_taxon_name``). Las entradas malformadas se
+    omiten (no se inventan).
+    """
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": facet,
+        "facetLimit": facet_limit,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    if not isinstance(payload, dict):
+        raise GbifError(f"Respuesta inesperada al solicitar facetas de {facet}.")
+
+    facets = payload.get("facets") or []
+    if not facets:
+        return [], params
+
+    counts = facets[0].get("counts") or []
+    ranking: list[dict[str, Any]] = []
+    for item in counts:
+        key = item.get("name")
+        occ = item.get("count")
+        if key is None or not isinstance(occ, int):
+            continue
+        ranking.append({"taxon_key": key, "occurrence_count": occ})
+    return ranking, params
+
+
+def resolve_taxon_name(taxon_key: str, timeout: int) -> str | None:
+    """Resuelve una clave del backbone -> nombre científico (canonicalName).
+
+    Devuelve ``None`` si no se puede resolver (no se inventa).
+    """
+    try:
+        payload = _get_json(f"{GBIF_BASE_URL}/species/{taxon_key}", {}, timeout)
+    except GbifError:
+        return None
+    if isinstance(payload, dict):
+        for campo in ("canonicalName", "scientificName"):
+            valor = payload.get(campo)
+            if isinstance(valor, str) and valor.strip():
+                return valor.strip()
+    return None
+
+
+def _resolver_nombres_taxon(
+    ranking: list[dict[str, Any]], resolve_names: bool, timeout: int
+) -> None:
+    """Añade ``name`` a cada entrada del ranking taxonómico (in place)."""
+    for fila in ranking:
+        fila["name"] = (
+            resolve_taxon_name(str(fila["taxon_key"]), timeout) if resolve_names else None
+        )
+
+
 def resolve_publisher_name(org_key: str, timeout: int) -> str | None:
     """Resuelve orgKey -> título del publicador. None si no se puede."""
     try:
@@ -381,6 +443,7 @@ def run(
     timeout: int,
     resolve_names: bool,
     department_facet_limit: int = 40,
+    taxon_facet_limit: int = 15,
 ) -> dict[str, Any]:
     started_at = datetime.now(timezone.utc)
     errors: list[str] = []
@@ -413,6 +476,26 @@ def run(
     # departamentos. Es un cálculo local, no otra consulta a GBIF.
     region_ranking, departments_without_region = agrupar_por_region(department_ranking)
 
+    # Desglose taxonómico: top órdenes y top familias. GBIF devuelve claves; los
+    # nombres se resuelven luego contra /species/{key}.
+    order_ranking: list[dict[str, Any]] = []
+    order_params: dict[str, Any] = {}
+    family_ranking: list[dict[str, Any]] = []
+    family_params: dict[str, Any] = {}
+    if taxon_facet_limit > 0:
+        try:
+            order_ranking, order_params = fetch_taxon_facet(
+                "orderKey", taxon_facet_limit, timeout
+            )
+        except GbifError as error:
+            errors.append(f"order_facet: {error}")
+        try:
+            family_ranking, family_params = fetch_taxon_facet(
+                "familyKey", taxon_facet_limit, timeout
+            )
+        except GbifError as error:
+            errors.append(f"family_facet: {error}")
+
     names_resolved = 0
     if resolve_names:
         for row in ranking:
@@ -423,6 +506,10 @@ def run(
     else:
         for row in ranking:
             row["publisher_name"] = None
+
+    # Nombres de órdenes y familias (key -> canonicalName).
+    _resolver_nombres_taxon(order_ranking, resolve_names, timeout)
+    _resolver_nombres_taxon(family_ranking, resolve_names, timeout)
 
     finished_at = datetime.now(timezone.utc)
 
@@ -438,6 +525,8 @@ def run(
             "total_count": total_params,
             "publisher_facet": facet_params,
             "department_facet": department_params,
+            "order_facet": order_params,
+            "family_facet": family_params,
         },
         "total_bird_records_colombia": total_count,
         "publisher_ranking": ranking,
@@ -448,6 +537,10 @@ def run(
         "region_ranking": region_ranking,
         "regions_in_ranking": len(region_ranking),
         "departments_without_region": departments_without_region,
+        "order_ranking": order_ranking,
+        "orders_in_ranking": len(order_ranking),
+        "family_ranking": family_ranking,
+        "families_in_ranking": len(family_ranking),
         "region_mapping_note": (
             "Agrupación por región ENCA usando la región predominante de cada "
             "departamento. Propuesta del equipo, pendiente de confirmación por SAO."

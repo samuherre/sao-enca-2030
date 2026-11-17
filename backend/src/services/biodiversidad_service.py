@@ -41,6 +41,7 @@ from backend.src.schemas.biodiversidad import (
     PublicadorGBIF,
     RegionGBIF,
     ResumenGBIF,
+    TaxonGBIF,
 )
 
 # --- Identificación de la fuente y el alcance (constantes del piloto) --------
@@ -166,6 +167,26 @@ def _regiones_desde_report(report: dict[str, Any]) -> list[RegionGBIF]:
     return salida
 
 
+def _taxones_desde_report(report: dict[str, Any], clave: str) -> list[TaxonGBIF]:
+    """Convierte ``order_ranking`` o ``family_ranking`` al contrato de la API."""
+    salida: list[TaxonGBIF] = []
+    for pos, tax in enumerate(report.get(clave, []) or [], start=1):
+        taxon_key = tax.get("taxon_key")
+        occ = tax.get("occurrence_count")
+        if taxon_key is None or not isinstance(occ, int):
+            # Entrada malformada: se omite, no se inventa.
+            continue
+        salida.append(
+            TaxonGBIF(
+                rank=pos,
+                taxon_key=str(taxon_key),
+                nombre=tax.get("name"),  # None si GBIF no lo resolvió
+                registros_ocurrencia=occ,
+            )
+        )
+    return salida
+
+
 def _leer_historico() -> list[CorteHistoricoGBIF]:
     """Lee el histórico consolidado de total nacional (si existe)."""
     if not _NATIONAL_TOTAL_HISTORY.exists():
@@ -252,6 +273,8 @@ class BiodiversidadService:
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
             regiones=_regiones_desde_report(report),
+            ordenes=_taxones_desde_report(report, "order_ranking"),
+            familias=_taxones_desde_report(report, "family_ranking"),
             cortes_historicos=len(historico),
             historico=historico,
             exportaciones=_listar_exportaciones(),
@@ -295,6 +318,8 @@ class BiodiversidadService:
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
             regiones=_regiones_desde_report(report),
+            ordenes=_taxones_desde_report(report, "order_ranking"),
+            familias=_taxones_desde_report(report, "family_ranking"),
             cortes_historicos=len(historico),
             historico=historico,
             exportaciones=_listar_exportaciones(),

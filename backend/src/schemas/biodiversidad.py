@@ -52,6 +52,20 @@ class DepartamentoGBIF(SchemaBase):
     registros_ocurrencia: int
 
 
+class TaxonGBIF(SchemaBase):
+    """Conteo de registros de aves por grupo taxonómico (orden o familia).
+
+    ``taxon_key`` es la clave del backbone de GBIF. ``nombre`` es el nombre
+    científico resuelto (canonicalName); puede ser ``None`` si GBIF no lo
+    devolvió (no se inventa).
+    """
+
+    rank: int
+    taxon_key: str
+    nombre: str | None
+    registros_ocurrencia: int
+
+
 class RegionGBIF(SchemaBase):
     """Conteo de registros de aves agrupado por región geográfica de la ENCA.
 
@@ -127,6 +141,11 @@ class ResumenGBIF(SchemaBase):
     # Agrupación por región ENCA (predominante). Propuesta del equipo, pendiente
     # de confirmación por SAO. Puede venir vacía en cortes antiguos.
     regiones: list[RegionGBIF] = []
+
+    # Desglose taxonómico: top órdenes y top familias. Pueden venir vacíos en
+    # cortes anteriores a esta funcionalidad.
+    ordenes: list[TaxonGBIF] = []
+    familias: list[TaxonGBIF] = []
 
     # Contexto del histórico y de las exportaciones disponibles.
     cortes_historicos: int = 0

@@ -5,8 +5,8 @@
   "cobertura_geografica": "Colombia (country=CO)",
   "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
   "origen": "almacenado",
-  "extraido_utc": "2026-11-17T00:21:09.627732+00:00",
-  "finalizado_utc": "2026-11-17T00:21:20.933164+00:00",
+  "extraido_utc": "2026-11-17T00:26:33.401268+00:00",
+  "finalizado_utc": "2026-11-17T00:27:08.186153+00:00",
   "estado": "completed",
   "errores": [],
   "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null. El desglose por departamento usa el campo stateProvince (texto libre de GBIF); las variantes de un mismo departamento se suman tras canonizar el nombre. Los registros sin departamento no aparecen, por lo que la suma por departamento puede ser menor que el total nacional.",
@@ -302,7 +302,191 @@
       "registros_ocurrencia": 47436
     }
   ],
-  "cortes_historicos": 6,
+  "ordenes": [
+    {
+      "rank": 1,
+      "taxon_key": "729",
+      "nombre": "Passeriformes",
+      "registros_ocurrencia": 11865949
+    },
+    {
+      "rank": 2,
+      "taxon_key": "1448",
+      "nombre": "Apodiformes",
+      "registros_ocurrencia": 1511627
+    },
+    {
+      "rank": 3,
+      "taxon_key": "7191147",
+      "nombre": "Accipitriformes",
+      "registros_ocurrencia": 929875
+    },
+    {
+      "rank": 4,
+      "taxon_key": "1446",
+      "nombre": "Columbiformes",
+      "registros_ocurrencia": 899429
+    },
+    {
+      "rank": 5,
+      "taxon_key": "724",
+      "nombre": "Piciformes",
+      "registros_ocurrencia": 891825
+    },
+    {
+      "rank": 6,
+      "taxon_key": "7190953",
+      "nombre": "Pelecaniformes",
+      "registros_ocurrencia": 818385
+    },
+    {
+      "rank": 7,
+      "taxon_key": "1445",
+      "nombre": "Psittaciformes",
+      "registros_ocurrencia": 616981
+    },
+    {
+      "rank": 8,
+      "taxon_key": "7192402",
+      "nombre": "Charadriiformes",
+      "registros_ocurrencia": 473892
+    },
+    {
+      "rank": 9,
+      "taxon_key": "1492",
+      "nombre": "Cuculiformes",
+      "registros_ocurrencia": 357309
+    },
+    {
+      "rank": 10,
+      "taxon_key": "7191407",
+      "nombre": "Falconiformes",
+      "registros_ocurrencia": 344751
+    },
+    {
+      "rank": 11,
+      "taxon_key": "723",
+      "nombre": "Galliformes",
+      "registros_ocurrencia": 304755
+    },
+    {
+      "rank": 12,
+      "taxon_key": "1447",
+      "nombre": "Coraciiformes",
+      "registros_ocurrencia": 223680
+    },
+    {
+      "rank": 13,
+      "taxon_key": "1493",
+      "nombre": "Gruiformes",
+      "registros_ocurrencia": 186599
+    },
+    {
+      "rank": 14,
+      "taxon_key": "1108",
+      "nombre": "Anseriformes",
+      "registros_ocurrencia": 145046
+    },
+    {
+      "rank": 15,
+      "taxon_key": "7192775",
+      "nombre": "Suliformes",
+      "registros_ocurrencia": 97094
+    }
+  ],
+  "familias": [
+    {
+      "rank": 1,
+      "taxon_key": "9352",
+      "nombre": "Thraupidae",
+      "registros_ocurrencia": 3157772
+    },
+    {
+      "rank": 2,
+      "taxon_key": "5291",
+      "nombre": "Tyrannidae",
+      "registros_ocurrencia": 2527005
+    },
+    {
+      "rank": 3,
+      "taxon_key": "5289",
+      "nombre": "Trochilidae",
+      "registros_ocurrencia": 1402426
+    },
+    {
+      "rank": 4,
+      "taxon_key": "5233",
+      "nombre": "Columbidae",
+      "registros_ocurrencia": 899393
+    },
+    {
+      "rank": 5,
+      "taxon_key": "5263",
+      "nombre": "Parulidae",
+      "registros_ocurrencia": 718506
+    },
+    {
+      "rank": 6,
+      "taxon_key": "6176",
+      "nombre": "Icteridae",
+      "registros_ocurrencia": 693702
+    },
+    {
+      "rank": 7,
+      "taxon_key": "9355",
+      "nombre": "Troglodytidae",
+      "registros_ocurrencia": 679246
+    },
+    {
+      "rank": 8,
+      "taxon_key": "5290",
+      "nombre": "Turdidae",
+      "registros_ocurrencia": 623781
+    },
+    {
+      "rank": 9,
+      "taxon_key": "9340",
+      "nombre": "Psittacidae",
+      "registros_ocurrencia": 616967
+    },
+    {
+      "rank": 10,
+      "taxon_key": "5243",
+      "nombre": "Furnariidae",
+      "registros_ocurrencia": 582753
+    },
+    {
+      "rank": 11,
+      "taxon_key": "3685",
+      "nombre": "Ardeidae",
+      "registros_ocurrencia": 558055
+    },
+    {
+      "rank": 12,
+      "taxon_key": "9410667",
+      "nombre": "Passerellidae",
+      "registros_ocurrencia": 522461
+    },
+    {
+      "rank": 13,
+      "taxon_key": "9333",
+      "nombre": "Picidae",
+      "registros_ocurrencia": 494300
+    },
+    {
+      "rank": 14,
+      "taxon_key": "3242141",
+      "nombre": "Cathartidae",
+      "registros_ocurrencia": 476852
+    },
+    {
+      "rank": 15,
+      "taxon_key": "2877",
+      "nombre": "Accipitridae",
+      "registros_ocurrencia": 427456
+    }
+  ],
+  "cortes_historicos": 7,
   "historico": [
     {
       "extraido_utc": "2026-10-21T17:45:51.364310+00:00",
@@ -341,6 +525,13 @@
     },
     {
       "extraido_utc": "2026-11-17T00:21:09.627732+00:00",
+      "fecha": "2026-11-17",
+      "estado": "completed",
+      "total_registros_ocurrencia": 20091344,
+      "publicadores_en_ranking": 15
+    },
+    {
+      "extraido_utc": "2026-11-17T00:26:33.401268+00:00",
       "fecha": "2026-11-17",
       "estado": "completed",
       "total_registros_ocurrencia": 20091344,

@@ -43,6 +43,7 @@ export type {
   PublicadorGBIF,
   DepartamentoGBIF,
   RegionGBIF,
+  TaxonGBIF,
   CorteHistoricoGBIF,
   ArchivoExportacion,
   OrigenGBIF,
