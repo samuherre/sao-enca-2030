@@ -66,18 +66,18 @@ function formatoFechaHora(iso: string | null | undefined): string {
 }
 
 /**
- * Enlace al portal web de GBIF con las ocurrencias de ESE publicador, aplicando
- * los MISMOS filtros que usan nuestras cifras: Colombia (country=CO) y aves
- * (taxon_key=212). Así el usuario llega a la misma población de registros que
- * resume la tabla, no a un listado genérico.
+ * Enlace al portal web de GBIF con las ocurrencias de ESE publicador en
+ * Colombia (country=CO + publishing_org=orgKey).
  *
- * El portal web usa parámetros en snake_case (country, taxon_key,
- * publishing_org), distintos de los camelCase de la API REST.
+ * NO se incluye el filtro de taxón: el portal web NO reconoce `taxon_key` en la
+ * URL y lo interpreta como un término de búsqueda de nombre científico (p. ej.
+ * "212"), lo que devolvía 0 resultados. Los filtros que el portal sí aplica
+ * desde la URL son `country` y `publishing_org`; el usuario puede acotar a aves
+ * con el selector de taxón del propio portal si lo necesita.
  */
 function urlGbifPublicador(orgKey: string): string {
   const params = new URLSearchParams({
     country: "CO",
-    taxon_key: "212",
     publishing_org: orgKey,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
@@ -186,8 +186,8 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
       </div>
 
       <p style={{ color: "#789", fontSize: "0.8rem", marginBottom: "0.25rem" }}>
-        El nombre de cada publicador enlaza a GBIF, con el filtro de aves de Colombia ya aplicado
-        (se abre en una pestaña nueva).
+        El nombre de cada publicador enlaza a sus registros en GBIF filtrados por publicador y
+        Colombia (se abre en una pestaña nueva).
       </p>
 
       <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
@@ -211,7 +211,7 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
                   href={urlGbifPublicador(p.org_key)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="Ver en GBIF las ocurrencias de aves de Colombia de este publicador"
+                  title="Ver en GBIF las ocurrencias de este publicador en Colombia"
                   style={{ color: VERDE_OSCURO, textDecoration: "underline" }}
                 >
                   {p.nombre ?? (
