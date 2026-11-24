@@ -84,6 +84,22 @@ function urlGbifPublicador(orgKey: string): string {
 }
 
 /**
+ * Enlace a GBIF con TODAS las ocurrencias de Colombia (solo ``country=CO``),
+ * usado por la fila/barra "Otros publicadores". El portal de GBIF no permite
+ * filtrar por "todos los publicadores EXCEPTO estos", así que el enlace lleva al
+ * conjunto nacional completo (que incluye a los no listados); así el usuario
+ * llega al menos a los registros de Colombia, como pidió SAO. Se aclara en el
+ * título del enlace para no dar a entender que filtra solo "los demás".
+ */
+function urlGbifColombia(): string {
+  const params = new URLSearchParams({ country: "CO" });
+  return `https://www.gbif.org/occurrence/search?${params.toString()}`;
+}
+
+/** Etiqueta de la barra/fila que agrupa a los publicadores fuera del ranking. */
+const ETIQUETA_OTROS_PUBLICADORES = "Otros publicadores";
+
+/**
  * Enlace a la VISTA DE MAPA de GBIF (mapa de calor de densidad de ocurrencias),
  * con los filtros que el portal aplica de forma fiable desde la URL: país y,
  * opcionalmente, publicador. La pestaña "MAP" del portal muestra el mapa de
@@ -167,6 +183,17 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
       etiqueta: p.nombre ?? p.org_key,
       registros: p.registros_ocurrencia,
     }));
+
+  // "Otros publicadores" = total nacional − suma de los del ranking. Solo se
+  // calcula si hay un total nacional fiable y queda remanente positivo; nunca
+  // se inventa (si no hay total, no se añade la barra).
+  const sumaTop = resumen.publicadores.reduce((acc, p) => acc + p.registros_ocurrencia, 0);
+  const total = resumen.total_registros_ocurrencia;
+  const otros = total !== null && total > sumaTop ? total - sumaTop : null;
+  if (otros !== null) {
+    data.push({ etiqueta: ETIQUETA_OTROS_PUBLICADORES, registros: otros });
+  }
+
   const alto = Math.max(220, data.length * 40);
 
   // Dominio del eje logarítmico: de la menor potencia de 10 por debajo del
@@ -214,7 +241,9 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
 
       <p style={{ color: "#789", fontSize: "0.8rem", marginBottom: "0.25rem" }}>
         El nombre de cada publicador enlaza a sus registros en GBIF filtrados por publicador y
-        Colombia (se abre en una pestaña nueva).
+        Colombia (se abre en una pestaña nueva). "Otros publicadores" agrupa los registros fuera de
+        este ranking; como GBIF no permite filtrar "todos excepto estos", su enlace lleva a todas las
+        ocurrencias de aves de Colombia en GBIF.
       </p>
 
       <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
@@ -251,6 +280,28 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
               </td>
             </tr>
           ))}
+          {otros !== null ? (
+            <tr>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee", color: "#789" }}>—</td>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
+                <a
+                  href={urlGbifColombia()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GBIF no permite filtrar 'todos excepto estos'; este enlace lleva a todas las ocurrencias de aves de Colombia en GBIF"
+                  style={{ color: VERDE_OSCURO, textDecoration: "underline" }}
+                >
+                  {ETIQUETA_OTROS_PUBLICADORES}
+                </a>{" "}
+                <span style={{ color: "#aaa", fontSize: "0.75rem" }}>
+                  (resto no listado individualmente)
+                </span>
+              </td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                {formatoEntero(otros)}
+              </td>
+            </tr>
+          ) : null}
         </tbody>
       </table>
     </section>
