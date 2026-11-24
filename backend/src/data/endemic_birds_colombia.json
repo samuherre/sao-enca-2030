@@ -1,0 +1,588 @@
+{
+  "fuente": "CCRO - Listado de aves de Colombia (julio 2026)",
+  "criterio": "Estado julio2026 contiene \"Endémica\"",
+  "total": 83,
+  "especies": [
+    {
+      "nombre_ccro": "Penelope perspicax",
+      "nombres": [
+        "Penelope perspicax"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Ortalis garrula",
+      "nombres": [
+        "Ortalis garrula"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Ortalis columbiana",
+      "nombres": [
+        "Ortalis columbiana"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Crax alberti",
+      "nombres": [
+        "Crax alberti"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Odontophorus hyperythrus",
+      "nombres": [
+        "Odontophorus hyperythrus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Odontophorus strophium",
+      "nombres": [
+        "Odontophorus strophium"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Podiceps andinus",
+      "nombres": [
+        "Podiceps andinus"
+      ],
+      "estado": "Residente Endémica - Extinta"
+    },
+    {
+      "nombre_ccro": "Leptotila conoveri",
+      "nombres": [
+        "Leptotila conoveri"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Ramphomicron dorsale",
+      "nombres": [
+        "Ramphomicron dorsale"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Oxypogon stuebelii",
+      "nombres": [
+        "Oxypogon stuebelii"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Oxypogon cyanolaemus",
+      "nombres": [
+        "Oxypogon cyanolaemus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Oxypogon guerinii",
+      "nombres": [
+        "Oxypogon guerinii"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Eriocnemis isabellae",
+      "nombres": [
+        "Eriocnemis isabellae"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Eriocnemis mirabilis",
+      "nombres": [
+        "Eriocnemis mirabilis"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Coeligena prunellei",
+      "nombres": [
+        "Coeligena prunellei"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Coeligena phalerata",
+      "nombres": [
+        "Coeligena phalerata"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Coeligena orina",
+      "nombres": [
+        "Coeligena orina"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Chaetocercus astreans",
+      "nombres": [
+        "Chaetocercus astreans"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Chlorostilbon olivaresi",
+      "nombres": [
+        "Chlorostilbon olivaresi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Anthocephala floriceps",
+      "nombres": [
+        "Anthocephala floriceps"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Anthocephala berlepschi",
+      "nombres": [
+        "Anthocephala berlepschi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Campylopterus phainopeplus",
+      "nombres": [
+        "Campylopterus phainopeplus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Saucerottia cyanifrons",
+      "nombres": [
+        "Saucerottia cyanifrons"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Saucerottia castaneiventris",
+      "nombres": [
+        "Saucerottia castaneiventris"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Chrysuronia lilliae",
+      "nombres": [
+        "Chrysuronia lilliae"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Rallus semiplumbeus",
+      "nombres": [
+        "Rallus semiplumbeus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Megascops gilesi",
+      "nombres": [
+        "Megascops gilesi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Bucco noanamae",
+      "nombres": [
+        "Bucco noanamae"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Capito hypoleucus",
+      "nombres": [
+        "Capito hypoleucus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Picumnus granadensis",
+      "nombres": [
+        "Picumnus granadensis"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Melanerpes pulcher",
+      "nombres": [
+        "Melanerpes pulcher"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Bolborhynchus ferrugineifrons",
+      "nombres": [
+        "Bolborhynchus ferrugineifrons"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Hapalopsittaca fuertesi",
+      "nombres": [
+        "Hapalopsittaca fuertesi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Pyrrhura viridicata",
+      "nombres": [
+        "Pyrrhura viridicata"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Pyrrhura calliptera",
+      "nombres": [
+        "Pyrrhura calliptera"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Drymophila hellmayri",
+      "nombres": [
+        "Drymophila hellmayri"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Drymophila caudata",
+      "nombres": [
+        "Drymophila caudata"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Cercomacroides parkeri",
+      "nombres": [
+        "Cercomacroides parkeri"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Grallaria bangsi",
+      "nombres": [
+        "Grallaria bangsi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Grallaria kaestneri",
+      "nombres": [
+        "Grallaria kaestneri"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Grallaria urraoensis",
+      "nombres": [
+        "Grallaria urraoensis"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Grallaria milleri",
+      "nombres": [
+        "Grallaria milleri"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Scytalopus canus",
+      "nombres": [
+        "Scytalopus canus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Scytalopus sanctaemartae",
+      "nombres": [
+        "Scytalopus sanctaemartae"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Scytalopus rodriguezi",
+      "nombres": [
+        "Scytalopus rodriguezi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Scytalopus stilesi",
+      "nombres": [
+        "Scytalopus stilesi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Scytalopus alvarezlopezi",
+      "nombres": [
+        "Scytalopus alvarezlopezi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Scytalopus latebricola",
+      "nombres": [
+        "Scytalopus latebricola"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Clibanornis rufipectus",
+      "nombres": [
+        "Clibanornis rufipectus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Cranioleuca hellmayri",
+      "nombres": [
+        "Cranioleuca hellmayri"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Synallaxis subpudica",
+      "nombres": [
+        "Synallaxis subpudica"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Synallaxis fuscorufa",
+      "nombres": [
+        "Synallaxis fuscorufa"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Lipaugus weberi",
+      "nombres": [
+        "Lipaugus weberi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Pogonotriccus lanyoni",
+      "nombres": [
+        "Pogonotriccus lanyoni"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Myiarchus apicalis",
+      "nombres": [
+        "Myiarchus apicalis"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Myiotheretes pernix",
+      "nombres": [
+        "Myiotheretes pernix"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Vireo caribaeus",
+      "nombres": [
+        "Vireo caribaeus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Troglodytes monticola",
+      "nombres": [
+        "Troglodytes monticola"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Cistothorus apolinari",
+      "nombres": [
+        "Cistothorus apolinari"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Thryophilus sernai",
+      "nombres": [
+        "Thryophilus sernai"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Thryophilus nicefori",
+      "nombres": [
+        "Thryophilus nicefori"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Henicorhina anachoreta",
+      "nombres": [
+        "Henicorhina anachoreta"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Henicorhina negreti",
+      "nombres": [
+        "Henicorhina negreti"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Euphonia concinna",
+      "nombres": [
+        "Euphonia concinna"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Arremon basilicus",
+      "nombres": [
+        "Arremon basilicus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Atlapetes melanocephalus",
+      "nombres": [
+        "Atlapetes melanocephalus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Atlapetes flaviceps",
+      "nombres": [
+        "Atlapetes flaviceps"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Atlapetes fuscoolivaceus",
+      "nombres": [
+        "Atlapetes fuscoolivaceus"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Atlapetes blancae",
+      "nombres": [
+        "Atlapetes blancae"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Psarocolius cassini",
+      "nombres": [
+        "Psarocolius cassini"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Hypopyrrhus pyrohypogaster",
+      "nombres": [
+        "Hypopyrrhus pyrohypogaster"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Macroagelaius subalaris",
+      "nombres": [
+        "Macroagelaius subalaris"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Myiothlypis basilica",
+      "nombres": [
+        "Myiothlypis basilica"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Myiothlypis conspicillata",
+      "nombres": [
+        "Myiothlypis conspicillata"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Myioborus flavivertex",
+      "nombres": [
+        "Myioborus flavivertex"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Driophlox gutturalis",
+      "nombres": [
+        "Driophlox gutturalis"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Driophlox cristata",
+      "nombres": [
+        "Driophlox cristata"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Diglossa gloriosissima",
+      "nombres": [
+        "Diglossa gloriosissima"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Dacnis hartlaubi",
+      "nombres": [
+        "Dacnis hartlaubi"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Chlorochrysa nitidissima",
+      "nombres": [
+        "Chlorochrysa nitidissima"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Anisognathus melanogenys",
+      "nombres": [
+        "Anisognathus melanogenys"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Bangsia melanochlamys",
+      "nombres": [
+        "Bangsia melanochlamys"
+      ],
+      "estado": "Residente Endémica"
+    },
+    {
+      "nombre_ccro": "Bangsia aureocincta",
+      "nombres": [
+        "Bangsia aureocincta"
+      ],
+      "estado": "Residente Endémica"
+    }
+  ]
+}

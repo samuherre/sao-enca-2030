@@ -28,8 +28,11 @@ from __future__ import annotations
 import csv
 import importlib.util
 import json
+import re
 import threading
+import unicodedata
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -69,6 +72,39 @@ _GBIF_DIR = _REPO_ROOT / "outputs" / "biodiversity_pilot" / "gbif"
 _HISTORY_DIR = _GBIF_DIR / "history"
 _NATIONAL_TOTAL_HISTORY = _HISTORY_DIR / "national_total_history.csv"
 _ARCGIS_DIR = _GBIF_DIR / "arcgis"
+
+# Lista oficial de especies ENDÉMICAS de Colombia (derivada del listado CCRO,
+# columna "Estado julio2026" = "Residente Endémica"). Fuente validada por SAO;
+# no se infiere el endemismo (product.md §15). Se cruza por nombre científico.
+_ENDEMIC_FILE = _REPO_ROOT / "backend" / "src" / "data" / "endemic_birds_colombia.json"
+
+
+def _norm_nombre_cientifico(nombre: str | None) -> str:
+    """Normaliza un nombre científico para cruce (minúsculas, sin acentos, 1 espacio)."""
+    if not nombre:
+        return ""
+    t = unicodedata.normalize("NFKD", nombre.lower().strip())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", t)
+
+
+@lru_cache(maxsize=1)
+def _nombres_endemicos() -> frozenset[str]:
+    """Conjunto de nombres científicos endémicos normalizados (de la lista CCRO).
+
+    Se cachea (la lista es estática). Si el archivo no existe, devuelve conjunto
+    vacío (no se marca ningún endemismo, en vez de inventarlo).
+    """
+    if not _ENDEMIC_FILE.exists():
+        return frozenset()
+    data = json.loads(_ENDEMIC_FILE.read_text(encoding="utf-8"))
+    nombres: set[str] = set()
+    for esp in data.get("especies", []):
+        for n in esp.get("nombres", []):
+            clave = _norm_nombre_cientifico(n)
+            if clave:
+                nombres.add(clave)
+    return frozenset(nombres)
 
 # Ruta del script de Fase 1, cargado por importlib para reutilizar ``run``.
 _FASE1_PATH = (
@@ -188,16 +224,19 @@ def _especies_amenazadas_desde_report(report: dict[str, Any]) -> list[EspecieAme
             for p in esp.get("por_anio", []) or []
             if isinstance(p.get("anio"), int) and isinstance(p.get("occurrence_count"), int)
         ]
+        cientifico = esp.get("scientific_name")
+        es_endemica = _norm_nombre_cientifico(cientifico) in _nombres_endemicos()
         salida.append(
             EspecieAmenazada(
                 rank=pos,
                 species_key=key,
-                nombre_cientifico=esp.get("scientific_name"),
+                nombre_cientifico=cientifico,
                 nombre_comun=esp.get("vernacular_name"),
                 iucn_codigo=codigo,
                 iucn_etiqueta=_IUCN_ETIQUETAS.get(codigo, codigo),
                 registros_ocurrencia=occ,
                 por_anio=serie,
+                endemica=es_endemica,
             )
         )
     return salida

@@ -101,6 +101,10 @@ class EspecieAmenazada(SchemaBase):
     iucn_etiqueta: str
     registros_ocurrencia: int
     por_anio: list[SerieAnioGBIF] = []
+    # True si la especie es endémica de Colombia según el listado oficial CCRO
+    # (cruce por nombre científico). False si no lo es o no se pudo cruzar; el
+    # endemismo no se infiere (se toma solo de la lista oficial).
+    endemica: bool = False
 
 
 class TipoRegistroGBIF(SchemaBase):

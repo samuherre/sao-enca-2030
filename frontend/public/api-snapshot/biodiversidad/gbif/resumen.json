@@ -8138,7 +8138,8 @@
           "anio": 2026,
           "registros_ocurrencia": 108
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 2,
@@ -8429,7 +8430,8 @@
           "anio": 2026,
           "registros_ocurrencia": 16
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 3,
@@ -8620,7 +8622,8 @@
           "anio": 2026,
           "registros_ocurrencia": 23
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 4,
@@ -8783,7 +8786,8 @@
           "anio": 2026,
           "registros_ocurrencia": 37
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 5,
@@ -8990,7 +8994,8 @@
           "anio": 2026,
           "registros_ocurrencia": 29
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 6,
@@ -9201,7 +9206,8 @@
           "anio": 2026,
           "registros_ocurrencia": 19
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 7,
@@ -9444,7 +9450,8 @@
           "anio": 2026,
           "registros_ocurrencia": 13
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 8,
@@ -9679,7 +9686,8 @@
           "anio": 2026,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 9,
@@ -9830,7 +9838,8 @@
           "anio": 2026,
           "registros_ocurrencia": 13
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 10,
@@ -9993,7 +10002,8 @@
           "anio": 2026,
           "registros_ocurrencia": 9
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 11,
@@ -10212,7 +10222,8 @@
           "anio": 2026,
           "registros_ocurrencia": 12
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 12,
@@ -10447,7 +10458,8 @@
           "anio": 2026,
           "registros_ocurrencia": 21
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 13,
@@ -10642,7 +10654,8 @@
           "anio": 2026,
           "registros_ocurrencia": 13
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 14,
@@ -10761,7 +10774,8 @@
           "anio": 2026,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 15,
@@ -10968,7 +10982,8 @@
           "anio": 2026,
           "registros_ocurrencia": 19
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 16,
@@ -11115,7 +11130,8 @@
           "anio": 2026,
           "registros_ocurrencia": 15
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 17,
@@ -11198,7 +11214,8 @@
           "anio": 2026,
           "registros_ocurrencia": 6
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 18,
@@ -11373,7 +11390,8 @@
           "anio": 2026,
           "registros_ocurrencia": 20
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 19,
@@ -11504,7 +11522,8 @@
           "anio": 2026,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 20,
@@ -11703,7 +11722,8 @@
           "anio": 2026,
           "registros_ocurrencia": 3
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 21,
@@ -11886,7 +11906,8 @@
           "anio": 2026,
           "registros_ocurrencia": 14
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 22,
@@ -12065,7 +12086,8 @@
           "anio": 2026,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 23,
@@ -12196,7 +12218,8 @@
           "anio": 2026,
           "registros_ocurrencia": 8
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 24,
@@ -12359,7 +12382,8 @@
           "anio": 2026,
           "registros_ocurrencia": 23
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 25,
@@ -12502,7 +12526,8 @@
           "anio": 2026,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 26,
@@ -12613,7 +12638,8 @@
           "anio": 2026,
           "registros_ocurrencia": 6
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 27,
@@ -12736,7 +12762,8 @@
           "anio": 2026,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 28,
@@ -12919,7 +12946,8 @@
           "anio": 2026,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 29,
@@ -13046,7 +13074,8 @@
           "anio": 2025,
           "registros_ocurrencia": 195
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 30,
@@ -13205,7 +13234,8 @@
           "anio": 2026,
           "registros_ocurrencia": 6
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 31,
@@ -13316,7 +13346,8 @@
           "anio": 2026,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 32,
@@ -13491,7 +13522,8 @@
           "anio": 2026,
           "registros_ocurrencia": 3
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 33,
@@ -13654,7 +13686,8 @@
           "anio": 2026,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 34,
@@ -13761,7 +13794,8 @@
           "anio": 2026,
           "registros_ocurrencia": 3
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 35,
@@ -13876,7 +13910,8 @@
           "anio": 2026,
           "registros_ocurrencia": 9
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 36,
@@ -14047,7 +14082,8 @@
           "anio": 2026,
           "registros_ocurrencia": 3
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 37,
@@ -14166,7 +14202,8 @@
           "anio": 2026,
           "registros_ocurrencia": 5
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 38,
@@ -14281,7 +14318,8 @@
           "anio": 2026,
           "registros_ocurrencia": 6
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 39,
@@ -14408,7 +14446,8 @@
           "anio": 2026,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 40,
@@ -14511,7 +14550,8 @@
           "anio": 2025,
           "registros_ocurrencia": 67
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 41,
@@ -14618,7 +14658,8 @@
           "anio": 2026,
           "registros_ocurrencia": 20
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 42,
@@ -14673,7 +14714,8 @@
           "anio": 2026,
           "registros_ocurrencia": 6
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 43,
@@ -14812,7 +14854,8 @@
           "anio": 2026,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 44,
@@ -14919,7 +14962,8 @@
           "anio": 2026,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 45,
@@ -15054,7 +15098,8 @@
           "anio": 2025,
           "registros_ocurrencia": 107
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 46,
@@ -15173,7 +15218,8 @@
           "anio": 2026,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 47,
@@ -15296,7 +15342,8 @@
           "anio": 2025,
           "registros_ocurrencia": 62
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 48,
@@ -15431,7 +15478,8 @@
           "anio": 2025,
           "registros_ocurrencia": 49
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 49,
@@ -15506,7 +15554,8 @@
           "anio": 2025,
           "registros_ocurrencia": 70
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 50,
@@ -15637,7 +15686,8 @@
           "anio": 2026,
           "registros_ocurrencia": 7
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 51,
@@ -15764,7 +15814,8 @@
           "anio": 2025,
           "registros_ocurrencia": 26
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 52,
@@ -15907,7 +15958,8 @@
           "anio": 2026,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 53,
@@ -15978,7 +16030,8 @@
           "anio": 2025,
           "registros_ocurrencia": 74
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 54,
@@ -16133,7 +16186,8 @@
           "anio": 2026,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 55,
@@ -16192,7 +16246,8 @@
           "anio": 2025,
           "registros_ocurrencia": 34
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 56,
@@ -16383,7 +16438,8 @@
           "anio": 2026,
           "registros_ocurrencia": 18
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 57,
@@ -16518,7 +16574,8 @@
           "anio": 2025,
           "registros_ocurrencia": 29
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 58,
@@ -16601,7 +16658,8 @@
           "anio": 2026,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 59,
@@ -16692,7 +16750,8 @@
           "anio": 2025,
           "registros_ocurrencia": 35
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 60,
@@ -16803,7 +16862,8 @@
           "anio": 2025,
           "registros_ocurrencia": 34
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 61,
@@ -16862,7 +16922,8 @@
           "anio": 2025,
           "registros_ocurrencia": 42
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 62,
@@ -16941,7 +17002,8 @@
           "anio": 2025,
           "registros_ocurrencia": 20
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 63,
@@ -17004,7 +17066,8 @@
           "anio": 2025,
           "registros_ocurrencia": 27
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 64,
@@ -17079,7 +17142,8 @@
           "anio": 2025,
           "registros_ocurrencia": 17
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 65,
@@ -17122,7 +17186,8 @@
           "anio": 2025,
           "registros_ocurrencia": 38
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 66,
@@ -17201,7 +17266,8 @@
           "anio": 2025,
           "registros_ocurrencia": 48
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 67,
@@ -17292,7 +17358,8 @@
           "anio": 2025,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 68,
@@ -17307,7 +17374,8 @@
           "anio": 2019,
           "registros_ocurrencia": 78
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 69,
@@ -17410,7 +17478,8 @@
           "anio": 2025,
           "registros_ocurrencia": 5
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 70,
@@ -17429,7 +17498,8 @@
           "anio": 2022,
           "registros_ocurrencia": 25
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 71,
@@ -17504,7 +17574,8 @@
           "anio": 2026,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 72,
@@ -17595,7 +17666,8 @@
           "anio": 2026,
           "registros_ocurrencia": 29
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 73,
@@ -17670,7 +17742,8 @@
           "anio": 2025,
           "registros_ocurrencia": 7
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 74,
@@ -17749,7 +17822,8 @@
           "anio": 2025,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 75,
@@ -17836,7 +17910,8 @@
           "anio": 2026,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 76,
@@ -17895,7 +17970,8 @@
           "anio": 2025,
           "registros_ocurrencia": 3
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 77,
@@ -17974,7 +18050,8 @@
           "anio": 2024,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 78,
@@ -18021,7 +18098,8 @@
           "anio": 2005,
           "registros_ocurrencia": 6
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 79,
@@ -18064,7 +18142,8 @@
           "anio": 2025,
           "registros_ocurrencia": 7
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 80,
@@ -18091,7 +18170,8 @@
           "anio": 2005,
           "registros_ocurrencia": 4
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 81,
@@ -18130,7 +18210,8 @@
           "anio": 2024,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 82,
@@ -18161,7 +18242,8 @@
           "anio": 2020,
           "registros_ocurrencia": 3
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 83,
@@ -18184,7 +18266,8 @@
           "anio": 2005,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 84,
@@ -18211,7 +18294,8 @@
           "anio": 2005,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 85,
@@ -18221,7 +18305,8 @@
       "iucn_codigo": "EN",
       "iucn_etiqueta": "En peligro (EN)",
       "registros_ocurrencia": 5,
-      "por_anio": []
+      "por_anio": [],
+      "endemica": false
     },
     {
       "rank": 86,
@@ -18236,7 +18321,8 @@
           "anio": 2004,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 87,
@@ -18259,7 +18345,8 @@
           "anio": 2023,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 88,
@@ -18278,7 +18365,8 @@
           "anio": 2025,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": true
     },
     {
       "rank": 89,
@@ -18293,7 +18381,8 @@
           "anio": 2024,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 90,
@@ -18316,7 +18405,8 @@
           "anio": 2025,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 91,
@@ -18335,7 +18425,8 @@
           "anio": 2025,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 92,
@@ -18382,7 +18473,8 @@
           "anio": 2016,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 93,
@@ -18401,7 +18493,8 @@
           "anio": 2017,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 94,
@@ -18420,7 +18513,8 @@
           "anio": 2012,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 95,
@@ -18435,7 +18529,8 @@
           "anio": 2004,
           "registros_ocurrencia": 3
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 96,
@@ -18450,7 +18545,8 @@
           "anio": 2007,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 97,
@@ -18465,7 +18561,8 @@
           "anio": 2014,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 98,
@@ -18484,7 +18581,8 @@
           "anio": 1957,
           "registros_ocurrencia": 7
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 99,
@@ -18499,7 +18597,8 @@
           "anio": 1933,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 100,
@@ -18509,7 +18608,8 @@
       "iucn_codigo": "EN",
       "iucn_etiqueta": "En peligro (EN)",
       "registros_ocurrencia": 1,
-      "por_anio": []
+      "por_anio": [],
+      "endemica": false
     },
     {
       "rank": 101,
@@ -18524,7 +18624,8 @@
           "anio": 2004,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 102,
@@ -18539,7 +18640,8 @@
           "anio": 1916,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 103,
@@ -18554,7 +18656,8 @@
           "anio": 2004,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 104,
@@ -18569,7 +18672,8 @@
           "anio": 2021,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 105,
@@ -18584,7 +18688,8 @@
           "anio": 1948,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 106,
@@ -18599,7 +18704,8 @@
           "anio": 2023,
           "registros_ocurrencia": 2
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 107,
@@ -18609,7 +18715,8 @@
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
       "registros_ocurrencia": 1,
-      "por_anio": []
+      "por_anio": [],
+      "endemica": false
     },
     {
       "rank": 108,
@@ -18624,7 +18731,8 @@
           "anio": 2021,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 109,
@@ -18639,7 +18747,8 @@
           "anio": 1901,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 110,
@@ -18654,7 +18763,8 @@
           "anio": 2023,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     },
     {
       "rank": 111,
@@ -18669,7 +18779,8 @@
           "anio": 2004,
           "registros_ocurrencia": 1
         }
-      ]
+      ],
+      "endemica": false
     }
   ],
   "ordenes": [

@@ -1420,9 +1420,14 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
     : [];
 
   function nombreEspecie(e: import("../types").EspecieAmenazada): string {
-    if (e.nombre_comun && e.nombre_cientifico) return `${e.nombre_comun} (${e.nombre_cientifico})`;
-    return e.nombre_cientifico ?? e.nombre_comun ?? e.species_key;
+    const base =
+      e.nombre_comun && e.nombre_cientifico
+        ? `${e.nombre_comun} (${e.nombre_cientifico})`
+        : e.nombre_cientifico ?? e.nombre_comun ?? e.species_key;
+    return e.endemica ? `★ ${base} · endémica` : base;
   }
+
+  const hayEndemicas = especies.some((e) => e.endemica);
 
   return (
     <section style={{ marginTop: "1.5rem" }}>
@@ -1511,6 +1516,12 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
               <p style={{ color: "#456", fontSize: "0.85rem", margin: "0.5rem 0 0" }}>
                 <strong>{nombreEspecie(especie)}</strong> — {especie.iucn_etiqueta}. Total de
                 registros: {formatoEntero(especie.registros_ocurrencia)}.
+                {especie.endemica ? (
+                  <span style={{ color: "#1f5c3a", fontWeight: 600 }}>
+                    {" "}
+                    Especie endémica de Colombia.
+                  </span>
+                ) : null}
               </p>
 
               {serie.length > 0 ? (
@@ -1538,22 +1549,25 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
         </div>
       ) : null}
 
-      {/* Endemismo: pendiente de lista oficial de SAO (no se inventa). */}
+      {/* Endemismo: ahora SÍ se marca, cruzando con la lista oficial CCRO. */}
       <p
         style={{
           marginTop: "0.75rem",
           padding: "0.6rem 0.9rem",
-          backgroundColor: "#faf3df",
-          border: "1px solid #ecdcae",
+          backgroundColor: "#eef6f0",
+          border: `1px solid ${BORDE}`,
           borderRadius: "0.375rem",
-          color: "#5a4a1f",
+          color: "#1f5c3a",
           fontSize: "0.82rem",
         }}
       >
-        <strong>Especies endémicas: pendiente de validación.</strong> GBIF no marca qué especies son
-        endémicas de Colombia; identificarlas requiere una lista oficial (p. ej. de SAO/ABO). Cuando
-        SAO la proporcione, se cruza con estas especies por su nombre/clave. No se marca el endemismo
-        de forma inventada.
+        <strong>★ Especies endémicas de Colombia.</strong> Se marcan con “★ … · endémica” cruzando
+        por nombre científico con el <strong>Listado oficial de aves de Colombia (CCRO)</strong>{" "}
+        (estado “Residente Endémica”). GBIF no marca el endemismo; se toma solo de esa lista oficial,
+        no se infiere.
+        {!hayEndemicas
+          ? " Ninguna de las especies amenazadas listadas coincidió con la lista de endémicas."
+          : ""}
       </p>
     </section>
   );

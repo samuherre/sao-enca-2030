@@ -53,6 +53,8 @@ export interface EspecieAmenazada {
   readonly iucn_etiqueta: string;
   readonly registros_ocurrencia: number;
   readonly por_anio: readonly SerieAnioGBIF[];
+  /** True si es endémica de Colombia (listado oficial CCRO). */
+  readonly endemica: boolean;
 }
 
 /** Conteo de registros por tipo (basisOfRecord de GBIF). */
