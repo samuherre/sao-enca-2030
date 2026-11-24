@@ -18762,6 +18762,132 @@
       "taxon_key": "7192775",
       "nombre": "Suliformes",
       "registros_ocurrencia": 97098
+    },
+    {
+      "rank": 16,
+      "taxon_key": "1449",
+      "nombre": "Trogoniformes",
+      "registros_ocurrencia": 90866
+    },
+    {
+      "rank": 17,
+      "taxon_key": "726",
+      "nombre": "Tinamiformes",
+      "registros_ocurrencia": 85651
+    },
+    {
+      "rank": 18,
+      "taxon_key": "1450",
+      "nombre": "Strigiformes",
+      "registros_ocurrencia": 79322
+    },
+    {
+      "rank": 19,
+      "taxon_key": "8510645",
+      "nombre": "Caprimulgiformes",
+      "registros_ocurrencia": 59367
+    },
+    {
+      "rank": 20,
+      "taxon_key": "10833565",
+      "nombre": "Nyctibiiformes",
+      "registros_ocurrencia": 23344
+    },
+    {
+      "rank": 21,
+      "taxon_key": "7191588",
+      "nombre": "Podicipediformes",
+      "registros_ocurrencia": 22837
+    },
+    {
+      "rank": 22,
+      "taxon_key": "839",
+      "nombre": "Ciconiiformes",
+      "registros_ocurrencia": 14302
+    },
+    {
+      "rank": 23,
+      "taxon_key": "8705315",
+      "nombre": "Opisthocomiformes",
+      "registros_ocurrencia": 13957
+    },
+    {
+      "rank": 24,
+      "taxon_key": "10726067",
+      "nombre": "Steatornithiformes",
+      "registros_ocurrencia": 7224
+    },
+    {
+      "rank": 25,
+      "taxon_key": "8481794",
+      "nombre": "Eurypygiformes",
+      "registros_ocurrencia": 6906
+    },
+    {
+      "rank": 26,
+      "taxon_key": "7191426",
+      "nombre": "Phoenicopteriformes",
+      "registros_ocurrencia": 3434
+    },
+    {
+      "rank": 27,
+      "taxon_key": "7192755",
+      "nombre": "Procellariiformes",
+      "registros_ocurrencia": 956
+    },
+    {
+      "rank": 28,
+      "taxon_key": "7190987",
+      "nombre": "Phaethontiformes",
+      "registros_ocurrencia": 155
+    },
+    {
+      "rank": 29,
+      "taxon_key": "7190978",
+      "nombre": "Sphenisciformes",
+      "registros_ocurrencia": 10
+    },
+    {
+      "rank": 30,
+      "taxon_key": "8603836",
+      "nombre": "Rheiformes",
+      "registros_ocurrencia": 8
+    },
+    {
+      "rank": 31,
+      "taxon_key": "8602104",
+      "nombre": "Casuariiformes",
+      "registros_ocurrencia": 7
+    },
+    {
+      "rank": 32,
+      "taxon_key": "725",
+      "nombre": "Struthioniformes",
+      "registros_ocurrencia": 3
+    },
+    {
+      "rank": 33,
+      "taxon_key": "1444",
+      "nombre": "Musophagiformes",
+      "registros_ocurrencia": 2
+    },
+    {
+      "rank": 34,
+      "taxon_key": "7192754",
+      "nombre": "Gaviiformes",
+      "registros_ocurrencia": 1
+    },
+    {
+      "rank": 35,
+      "taxon_key": "721",
+      "nombre": "Coliiformes",
+      "registros_ocurrencia": 1
+    },
+    {
+      "rank": 36,
+      "taxon_key": "8708973",
+      "nombre": "Otidiformes",
+      "registros_ocurrencia": 1
     }
   ],
   "familias": [

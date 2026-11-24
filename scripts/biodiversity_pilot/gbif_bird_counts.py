@@ -796,6 +796,7 @@ def run(
     resolve_names: bool,
     department_facet_limit: int = 40,
     taxon_facet_limit: int = 15,
+    order_facet_limit: int = 50,
     municipality_facet_limit: int = 300,
     municipality_top: int | None = 25,
     year_facet_limit: int = 300,
@@ -886,8 +887,11 @@ def run(
     family_params: dict[str, Any] = {}
     if taxon_facet_limit > 0:
         try:
+            # Órdenes: límite propio (más alto) para traer TODOS los órdenes de
+            # aves con registros en Colombia (~36), no solo un top. GBIF tiene
+            # ~36 órdenes con registros; 50 cubre con margen.
             order_ranking, order_params = fetch_taxon_facet(
-                "orderKey", taxon_facet_limit, timeout
+                "orderKey", order_facet_limit, timeout
             )
         except GbifError as error:
             errors.append(f"order_facet: {error}")

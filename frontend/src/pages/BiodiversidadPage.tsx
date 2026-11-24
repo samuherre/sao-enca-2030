@@ -958,11 +958,14 @@ function TaxonCard({
   descripcion,
   items,
   etiquetaColumna,
+  escalaLog = false,
 }: {
   titulo: string;
   descripcion: string;
   items: readonly import("../types").TaxonGBIF[];
   etiquetaColumna: string;
+  /** Si true, el eje usa escala logarítmica (para cuando un grupo domina). */
+  escalaLog?: boolean;
 }) {
   if (items.length === 0) {
     return (
@@ -975,15 +978,36 @@ function TaxonCard({
     );
   }
 
-  const data = items.map((t) => ({
-    etiqueta: t.nombre ?? t.taxon_key,
-    registros: t.registros_ocurrencia,
-  }));
+  // En escala logarítmica un valor <= 0 no es representable; esos se excluyen del
+  // GRÁFICO (siguen en la tabla). En escala lineal se muestran todos.
+  const data = items
+    .filter((t) => !escalaLog || t.registros_ocurrencia > 0)
+    .map((t) => ({
+      etiqueta: t.nombre ?? t.taxon_key,
+      registros: t.registros_ocurrencia,
+    }));
+
+  const valores = data.map((d) => d.registros);
+  const minimo = valores.length > 0 ? Math.min(...valores) : 1;
+  const maximo = valores.length > 0 ? Math.max(...valores) : 1;
+  const dominioLog: [number, number] = [
+    Math.pow(10, Math.floor(Math.log10(minimo))),
+    Math.pow(10, Math.ceil(Math.log10(maximo))),
+  ];
 
   return (
     <div style={{ marginTop: "1rem" }}>
       <h4 style={{ marginBottom: "0.25rem" }}>{titulo}</h4>
-      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>{descripcion}</p>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        {descripcion}
+        {escalaLog ? (
+          <>
+            {" "}
+            El eje usa una <strong>escala logarítmica</strong> (cada marca es diez veces la anterior)
+            para que los órdenes con pocos registros sean visibles junto a Passeriformes.
+          </>
+        ) : null}
+      </p>
 
       <div style={{ width: "100%", height: Math.max(220, data.length * 28) }}>
         <ResponsiveContainer>
@@ -993,7 +1017,17 @@ function TaxonCard({
             margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
-            <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+            {escalaLog ? (
+              <XAxis
+                type="number"
+                scale="log"
+                domain={dominioLog}
+                allowDataOverflow
+                tickFormatter={(v: number) => formatoCompacto(v)}
+              />
+            ) : (
+              <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+            )}
             <YAxis type="category" dataKey="etiqueta" width={160} tick={{ fontSize: 11 }} />
             <Tooltip
               formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
@@ -1183,9 +1217,10 @@ function TaxonomiaCard({ resumen }: { resumen: ResumenGBIF }) {
         grupos con más registros.
       </p>
       <TaxonCard
-        titulo="Órdenes con más registros"
-        descripcion="Órdenes de aves ordenados por número de registros de ocurrencia."
+        titulo="Órdenes de aves"
+        descripcion="Todos los órdenes de aves con registros de ocurrencia en Colombia, ordenados por número de registros."
         items={resumen.ordenes}
+        escalaLog
         etiquetaColumna="Orden"
       />
       <TaxonCard
