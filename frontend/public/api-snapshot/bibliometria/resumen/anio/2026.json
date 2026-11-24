@@ -274,8 +274,24 @@
   ],
   "por_acceso_abierto": [
     {
-      "clave": "Acceso abierto",
-      "conteo": 284
+      "clave": "Abierto — revista gratuita (diamond)",
+      "conteo": 62
+    },
+    {
+      "clave": "Abierto — revista OA (gold)",
+      "conteo": 42
+    },
+    {
+      "clave": "Abierto — revista de pago, artículo liberado (hybrid)",
+      "conteo": 27
+    },
+    {
+      "clave": "Abierto — en web del editor, sin licencia (bronze)",
+      "conteo": 3
+    },
+    {
+      "clave": "Solo en repositorio — revista cerrada (green)",
+      "conteo": 150
     },
     {
       "clave": "Acceso cerrado",

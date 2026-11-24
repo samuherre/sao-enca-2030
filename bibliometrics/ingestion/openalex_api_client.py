@@ -645,6 +645,15 @@ def _extract_is_open_access(work: dict) -> Optional[bool]:
     return None
 
 
+def _extract_oa_status(work: dict) -> Optional[str]:
+    """Estado fino de OA (``open_access.oa_status``): diamond/gold/hybrid/bronze/
+    green/closed. None si no viene (no se inventa)."""
+    oa = work.get("open_access")
+    if isinstance(oa, dict):
+        return _clean_str(oa.get("oa_status"))
+    return None
+
+
 def _extract_cited_by_count(work: dict) -> Optional[int]:
     """Número de citas (``cited_by_count``). None si no es un entero válido."""
     val = work.get("cited_by_count")
@@ -813,6 +822,7 @@ def work_to_record(work: dict) -> ArticleRecord:
     authorships = _extract_authorships(work)
     document_type = _extract_document_type(work)
     is_open_access = _extract_is_open_access(work)
+    oa_status = _extract_oa_status(work)
     cited_by_count = _extract_cited_by_count(work)
     # Procedencia propia de OpenAlex: la URL del work (campo ``id``). Ausente →
     # None (no se inventa) (Req 8.2).
@@ -869,6 +879,7 @@ def work_to_record(work: dict) -> ArticleRecord:
         language=language,
         document_type=document_type,
         is_open_access=is_open_access,
+        oa_status=oa_status,
         authorships=authorships,
         cited_by_count=cited_by_count,
         abstract=abstract,

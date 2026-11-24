@@ -609,26 +609,54 @@ def _por_tipo_documento(registros: list[dict]) -> list[ConteoPorClave]:
     ]
 
 
-def _por_acceso_abierto(registros: list[dict]) -> list[ConteoPorClave]:
-    """Distribución por acceso abierto: Abierto / Cerrado / Sin dato.
+# Etiquetas del estado fino de acceso abierto (OpenAlex ``oa_status``). El orden
+# define el de las barras (de más "abierto de verdad" a cerrado).
+_OA_STATUS_ETIQUETAS: list[tuple[str, str]] = [
+    ("diamond", "Abierto — revista gratuita (diamond)"),
+    ("gold", "Abierto — revista OA (gold)"),
+    ("hybrid", "Abierto — revista de pago, artículo liberado (hybrid)"),
+    ("bronze", "Abierto — en web del editor, sin licencia (bronze)"),
+    ("green", "Solo en repositorio — revista cerrada (green)"),
+    ("closed", "Acceso cerrado"),
+]
 
-    Solo cuenta ``is_open_access`` cuando es booleano; ``None`` va a "Sin dato"
-    (no se asume abierto ni cerrado).
+
+def _por_acceso_abierto(registros: list[dict]) -> list[ConteoPorClave]:
+    """Distribución por tipo de acceso usando el estado FINO (``oa_status``).
+
+    Antes se mostraba un binario abierto/cerrado que engañaba: OpenAlex marca
+    como "abierto" (is_oa) incluso cuando el artículo solo está en un repositorio
+    (green OA) y la REVISTA es cerrada. Aquí se desglosa por ``oa_status`` para
+    distinguir revista-abierta (diamond/gold/hybrid/bronze) de copia-en-
+    repositorio (green) y cerrado. Los registros sin ``oa_status`` pero con el
+    booleano ``is_open_access`` (p. ej. otras fuentes) caen en "Abierto (sin
+    detalle)"/"Cerrado"; los sin ningún dato, en "Sin dato". No se inventa.
     """
-    abierto = cerrado = sin_dato = 0
+    por_status: Counter = Counter()
+    abierto_sin_detalle = cerrado_bin = sin_dato = 0
+    conocidos = {codigo for codigo, _ in _OA_STATUS_ETIQUETAS}
     for r in registros:
+        status = r.get("oa_status")
+        if status and str(status).lower() in conocidos:
+            por_status[str(status).lower()] += 1
+            continue
+        # Sin oa_status fino: respaldo por el booleano.
         v = r.get("is_open_access")
         if v is True:
-            abierto += 1
+            abierto_sin_detalle += 1
         elif v is False:
-            cerrado += 1
+            cerrado_bin += 1
         else:
             sin_dato += 1
+
     salida: list[ConteoPorClave] = []
-    if abierto:
-        salida.append(ConteoPorClave(clave="Acceso abierto", conteo=abierto))
-    if cerrado:
-        salida.append(ConteoPorClave(clave="Acceso cerrado", conteo=cerrado))
+    for codigo, etiqueta in _OA_STATUS_ETIQUETAS:
+        if por_status[codigo]:
+            salida.append(ConteoPorClave(clave=etiqueta, conteo=por_status[codigo]))
+    if abierto_sin_detalle:
+        salida.append(ConteoPorClave(clave="Abierto (sin detalle)", conteo=abierto_sin_detalle))
+    if cerrado_bin:
+        salida.append(ConteoPorClave(clave="Acceso cerrado", conteo=cerrado_bin))
     if sin_dato:
         salida.append(ConteoPorClave(clave="Sin dato", conteo=sin_dato))
     return salida

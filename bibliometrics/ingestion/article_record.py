@@ -55,6 +55,11 @@ class ArticleRecord:
     document_type: Optional[str] = None
     # Acceso abierto: True/False si la fuente lo informa, None si no se conoce.
     is_open_access: Optional[bool] = None
+    # Estado fino de acceso abierto (OpenAlex ``oa_status``): "diamond", "gold",
+    # "hybrid", "bronze", "green" (copia en repositorio aunque la revista sea
+    # cerrada) o "closed". None si no se conoce. Distingue revista-abierta de
+    # copia-en-repositorio, que el booleano ``is_open_access`` no diferencia.
+    oa_status: Optional[str] = None
     # Afiliaciones por autor, en orden de autoría. Cada entrada:
     #   {"position": "first|middle|last", "institutions": [{"name","country"}]}
     # Lista vacía si la fuente no aporta afiliaciones (no se inventa).

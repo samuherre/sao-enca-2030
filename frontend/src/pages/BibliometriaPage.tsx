@@ -828,7 +828,7 @@ export function BibliometriaPage() {
           <RevistasCard data={data.por_revista} />
           <BarsCard title="Artículos por idioma" data={data.por_idioma} />
           <BarsCard title="Artículos por tipo de documento" data={data.por_tipo_documento} />
-          <BarsCard title="Acceso abierto vs. cerrado" data={data.por_acceso_abierto} />
+          <BarsCard title="Tipo de acceso (según GBIF/OpenAlex)" data={data.por_acceso_abierto} />
           <InstitucionesCard
             titulo="Instituciones — por primer autor (top 10)"
             descripcion="Instituciones del autor principal (posición 'first') con más artículos."
