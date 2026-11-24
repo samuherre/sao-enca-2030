@@ -119,9 +119,15 @@ function urlGbifTipoRegistro(codigo: string): string {
  * la URL; ``codigo`` es el valor de GBIF (LC, NT, VU, EN, CR, DD, EX, EW, NE).
  */
 function urlGbifCategoriaIUCN(codigo: string): string {
+  // NO se incluye el filtro de taxón (``taxon_key``): el portal web de GBIF no
+  // lo reconoce en la URL y lo interpreta como un término de búsqueda de texto
+  // ("212"), lo que rompe el filtrado y devuelve 0 resultados. Los filtros que
+  // el portal SÍ aplica desde la URL son ``country`` e ``iucn_red_list_category``;
+  // así el enlace funciona. El resultado en GBIF puede incluir otros grupos
+  // además de aves (el acotado a Aves por URL no es fiable en el portal); por eso
+  // su total puede ser mayor que el de la tabla, que sí está acotada a aves.
   const params = new URLSearchParams({
     country: "CO",
-    taxon_key: "212",
     iucn_red_list_category: codigo,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
@@ -1533,7 +1539,8 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
         <>
         <p style={{ color: "#789", fontSize: "0.8rem", margin: "0 0 0.25rem" }}>
           Cada categoría enlaza a esas ocurrencias en GBIF, filtradas por Colombia (se abre en una
-          pestaña nueva).
+          pestaña nueva). Nota: el portal de GBIF no permite acotar el enlace solo a aves, así que
+          su total puede ser mayor que el de esta tabla (que sí cuenta solo aves).
         </p>
         <table style={{ borderCollapse: "collapse", width: "100%", marginBottom: "1rem" }}>
           <thead>
@@ -1554,7 +1561,7 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
                     href={urlGbifCategoriaIUCN(c.codigo)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Ver en GBIF las ocurrencias de aves de Colombia en esta categoría UICN"
+                    title="Ver en GBIF las ocurrencias de Colombia en esta categoría UICN (el portal no permite acotar solo a aves desde el enlace)"
                     style={{ color: VERDE_OSCURO, textDecoration: "underline" }}
                   >
                     {c.etiqueta}
