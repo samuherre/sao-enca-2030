@@ -606,8 +606,29 @@ function TipoRegistroCard({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/**
+ * Agrupa la serie anual en DÉCADAS (1770s, 1780s, …): suma los registros de los
+ * años de cada década y devuelve una fila por década con datos. La etiqueta es
+ * "1770s", "2020s", etc. (la década = año − año%10). No inventa décadas vacías
+ * intermedias: solo aparecen las que tienen al menos un registro.
+ */
+function agruparPorDecada(
+  anios: readonly { anio: number; registros_ocurrencia: number }[],
+): { etiqueta: string; decada: number; registros: number }[] {
+  const porDecada = new Map<number, number>();
+  for (const a of anios) {
+    const decada = Math.floor(a.anio / 10) * 10;
+    porDecada.set(decada, (porDecada.get(decada) ?? 0) + a.registros_ocurrencia);
+  }
+  return [...porDecada.entries()]
+    .sort((x, y) => x[0] - y[0])
+    .map(([decada, registros]) => ({ etiqueta: `${decada}s`, decada, registros }));
+}
+
 /** Serie temporal de registros por año de evento. */
 function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
+  // Búsqueda por año: el usuario escribe un año y se muestra su conteo exacto.
+  const [anioBuscado, setAnioBuscado] = useState("");
   // Año desde el cual mostrar: GBIF tiene registros desde el s. XVIII, pero con
   // cifras ínfimas; se muestra el periodo con datos significativos (>=1990) para
   // que la tendencia reciente sea legible. Los datos completos quedan en el dato
@@ -629,6 +650,15 @@ function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
   const data = serie.map((a) => ({ anio: String(a.anio), registros: a.registros_ocurrencia }));
   const primero = resumen.anios[0];
   const ultimo = resumen.anios[resumen.anios.length - 1];
+
+  // Vista por DÉCADAS sobre TODA la serie (1770s→2020s): permite ver la historia
+  // completa de forma legible (una barra por década) sin recortar desde 1990.
+  const decadas = agruparPorDecada(resumen.anios);
+
+  // Resultado de la búsqueda por año: conteo exacto del año escrito (o null).
+  const anioNum = /^\d{4}$/.test(anioBuscado.trim()) ? Number(anioBuscado.trim()) : null;
+  const registroDelAnio =
+    anioNum !== null ? resumen.anios.find((a) => a.anio === anioNum) ?? null : null;
 
   return (
     <section style={{ marginTop: "1.5rem" }}>
@@ -659,6 +689,72 @@ function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
         todo el auge de la ciencia ciudadana (observaciones en línea), no necesariamente cambios en las
         poblaciones de aves.
       </p>
+
+      {/* --- Vista por décadas (historia completa, legible) --------------- */}
+      <h4 style={{ margin: "1.25rem 0 0.25rem" }}>Por décadas ({decadas[0].etiqueta}–{decadas[decadas.length - 1].etiqueta})</h4>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Los mismos registros agrupados por década, para ver toda la historia disponible en GBIF
+        (desde {primero.anio}) de un vistazo. La escala es lineal: las décadas antiguas tienen cifras
+        muy bajas frente a las recientes.
+      </p>
+
+      <div style={{ width: "100%", height: 280 }}>
+        <ResponsiveContainer>
+          <BarChart
+            data={decadas.map((d) => ({ etiqueta: d.etiqueta, registros: d.registros }))}
+            margin={{ top: 8, right: 16, bottom: 8, left: 8 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis dataKey="etiqueta" tick={{ fontSize: 10 }} interval={0} angle={-45} textAnchor="end" height={50} />
+            <YAxis tickFormatter={(v: number) => formatoCompacto(v)} tick={{ fontSize: 11 }} />
+            <Tooltip
+              formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
+              labelFormatter={(label: string) => `Década ${label}`}
+            />
+            <Bar dataKey="registros" name="Registros" fill={VERDE_OSCURO} radius={[4, 4, 0, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* --- Búsqueda por año --------------------------------------------- */}
+      <h4 style={{ margin: "1.25rem 0 0.25rem" }}>Consultar un año</h4>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Escribe un año ({primero.anio}–{ultimo.anio}) para ver cuántos registros de aves tiene GBIF
+        en Colombia ese año.
+      </p>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
+        <input
+          type="number"
+          inputMode="numeric"
+          value={anioBuscado}
+          onChange={(e) => setAnioBuscado(e.target.value)}
+          placeholder="Ej. 2015"
+          aria-label="Año a consultar"
+          min={primero.anio}
+          max={ultimo.anio}
+          style={{
+            width: 140,
+            padding: "0.45rem 0.6rem",
+            borderRadius: "0.4rem",
+            border: `1px solid ${BORDE}`,
+            fontSize: "0.9rem",
+          }}
+        />
+        {anioNum !== null ? (
+          registroDelAnio ? (
+            <span style={{ fontSize: "0.9rem", color: "#456" }}>
+              En <strong>{anioNum}</strong> hubo{" "}
+              <strong>{formatoEntero(registroDelAnio.registros_ocurrencia)}</strong> registros.
+            </span>
+          ) : (
+            <span style={{ fontSize: "0.9rem", color: "#789" }}>
+              GBIF no tiene registros de aves de Colombia para {anioNum}.
+            </span>
+          )
+        ) : anioBuscado.trim() !== "" ? (
+          <span style={{ fontSize: "0.85rem", color: "#a33" }}>Escribe un año de 4 dígitos.</span>
+        ) : null}
+      </div>
     </section>
   );
 }
