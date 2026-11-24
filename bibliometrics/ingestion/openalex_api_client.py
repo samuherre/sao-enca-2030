@@ -80,6 +80,13 @@ class Consulta:
         = sin filtro de país (la acotación geográfica, si la hay, va en ``term``
         vía topónimos). Parte de la estrategia solo-Colombia (afiliación CO O
         topónimos únicos).
+    :param strict: si ``True`` (por defecto), ``term`` se envía como filtro
+        ESTRICTO ``title_and_abstract.search:<term>`` (el artículo DEBE mencionar
+        los términos en título o abstract). Si ``False``, va como ``search``
+        (ranking blando por relevancia, que NO excluye artículos no coincidentes
+        y por eso colaba ruido). Siempre usar ``True`` para acotar de verdad el
+        tema (p. ej. aves): fue la causa del ruido (ranas, psiquiatría…) cuando
+        se usó ``search`` junto a un filtro amplio de país.
 
     Ambos años acotan el Período_Inclusión 2020–2030 mediante el filtro de año
     que se envía a la API (``publication_year:{from}-{to}``). La ``Consulta`` es
@@ -90,6 +97,7 @@ class Consulta:
     year_from: int = PERIODO_MIN
     year_to: int = PERIODO_MAX
     country_code: Optional[str] = None
+    strict: bool = True
 
 
 @dataclass(frozen=True)
@@ -234,11 +242,18 @@ def _build_params(consulta: Consulta, cursor: str, config: ApiConfig) -> dict[st
             f"authorships.institutions.country_code:{consulta.country_code}"
         )
     params: dict[str, Any] = {
-        "search": consulta.term,
-        "filter": ",".join(filtros),
+        "filter": None,  # se fija abajo
         "per_page": config.per_page,
         "cursor": cursor,
     }
+    if consulta.strict:
+        # Término ESTRICTO: el artículo debe mencionarlo en título o abstract.
+        # Va dentro del ``filter`` (no como ``search``), que es lo que de verdad
+        # EXCLUYE los artículos no coincidentes (evita el ruido de ``search``).
+        filtros.append(f"title_and_abstract.search:{consulta.term}")
+    else:
+        params["search"] = consulta.term
+    params["filter"] = ",".join(filtros)
     if config.mailto:
         params["mailto"] = config.mailto
     if config.api_key:

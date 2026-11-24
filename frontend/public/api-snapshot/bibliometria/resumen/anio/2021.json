@@ -1,154 +1,150 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 2359,
+  "total_articulos": 436,
   "por_anio": [
     {
       "clave": "2021",
-      "conteo": 2359
+      "conteo": 436
     }
   ],
   "por_revista": [
     {
       "clave": "Ornitología colombiana",
-      "conteo": 275
-    },
-    {
-      "clave": "Universidad Industrial de Santander",
-      "conteo": 100
-    },
-    {
-      "clave": "Repositorio Institucional (Pontificia Universidad Javeriana)",
-      "conteo": 37
-    },
-    {
-      "clave": "Repositorio Digital Universidad ECCI",
-      "conteo": 36
-    },
-    {
-      "clave": "Ciencia Unisalle (Universidad de La Salle)",
-      "conteo": 33
-    },
-    {
-      "clave": "Lumieres - Repositorio institucional Universidad de América",
-      "conteo": 33
-    },
-    {
-      "clave": "Repositorio Institucional Universidad El Bosque",
-      "conteo": 32
-    },
-    {
-      "clave": "Repositorio Institucional FULL",
-      "conteo": 25
-    },
-    {
-      "clave": "Biota Colombiana",
-      "conteo": 21
-    },
-    {
-      "clave": "Repositorio Institucional-Universidad Catolica de Manizales",
-      "conteo": 19
+      "conteo": 185
     },
     {
       "clave": "Global Biodiversity Information Facility",
-      "conteo": 18
+      "conteo": 20
     },
     {
-      "clave": "Catálogo editorial",
-      "conteo": 18
-    },
-    {
-      "clave": "Sustainability",
-      "conteo": 16
-    },
-    {
-      "clave": "Intellectum (Universidad de La Sabana)",
-      "conteo": 16
-    },
-    {
-      "clave": "PeerJ",
-      "conteo": 13
+      "clave": "Biota Colombiana",
+      "conteo": 11
     },
     {
       "clave": "Universidad Nacional Abierta y a Distancia, UNAD eBooks",
-      "conteo": 13
-    },
-    {
-      "clave": "Repositorio Universidad Distrital",
-      "conteo": 13
-    },
-    {
-      "clave": "Biblioteca Digital Uniajc",
-      "conteo": 13
-    },
-    {
-      "clave": "PLoS ONE",
-      "conteo": 12
-    },
-    {
-      "clave": "Editorial Universidad Santiago de Cali eBooks",
-      "conteo": 12
-    },
-    {
-      "clave": "Scientific Reports",
-      "conteo": 11
-    },
-    {
-      "clave": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
-      "conteo": 11
-    },
-    {
-      "clave": "Vitela (Pontificia Universidad Javeriana Cali)",
-      "conteo": 10
-    },
-    {
-      "clave": "Revista de Biología Tropical",
-      "conteo": 10
-    },
-    {
-      "clave": "Research Square",
       "conteo": 9
     },
     {
-      "clave": "Universidad Tecnológica de Pereira eBooks",
-      "conteo": 9
+      "clave": "Boletín SAO",
+      "conteo": 6
     },
     {
-      "clave": "Ecology and Evolution",
-      "conteo": 9
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 5
+    },
+    {
+      "clave": "Actualidades Biológicas",
+      "conteo": 4
+    },
+    {
+      "clave": "Ibis",
+      "conteo": 4
+    },
+    {
+      "clave": "Diversity",
+      "conteo": 3
+    },
+    {
+      "clave": "The Auk",
+      "conteo": 3
+    },
+    {
+      "clave": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
+      "conteo": 3
+    },
+    {
+      "clave": "Revista Universidad Católica de Oriente",
+      "conteo": 3
     },
     {
       "clave": "Acta Biológica Colombiana",
-      "conteo": 9
+      "conteo": 3
     },
     {
-      "clave": "Gestión y Ambiente",
-      "conteo": 9
+      "clave": "Vitela (Pontificia Universidad Javeriana Cali)",
+      "conteo": 3
     },
     {
-      "clave": "International Journal of Environmental Research and Public Health",
-      "conteo": 9
+      "clave": "Basic and Applied Ecology",
+      "conteo": 2
+    },
+    {
+      "clave": "Conservation …",
+      "conteo": 2
+    },
+    {
+      "clave": "Frontiers in Ecology and Evolution",
+      "conteo": 2
+    },
+    {
+      "clave": "Biodiversity Data Journal",
+      "conteo": 2
+    },
+    {
+      "clave": "World s Veterinary Journal",
+      "conteo": 2
+    },
+    {
+      "clave": "The Catalogue of Life",
+      "conteo": 2
+    },
+    {
+      "clave": "Journal of Field Ornithology",
+      "conteo": 2
+    },
+    {
+      "clave": "Science Advances",
+      "conteo": 2
+    },
+    {
+      "clave": "Revista Colombiana de Ciencia Animal - RECIA",
+      "conteo": 2
+    },
+    {
+      "clave": "Boletín Científico Centro de Museos Museo de Historia Natural",
+      "conteo": 2
+    },
+    {
+      "clave": "Zootaxa",
+      "conteo": 2
+    },
+    {
+      "clave": "Ornitología Neotropical",
+      "conteo": 2
+    },
+    {
+      "clave": "Proceedings of the Royal Society B Biological Sciences",
+      "conteo": 2
+    },
+    {
+      "clave": "The Wilson Journal of Ornithology",
+      "conteo": 2
+    },
+    {
+      "clave": "Ecological Indicators",
+      "conteo": 2
+    },
+    {
+      "clave": "Repositorio Digital Universidad ECCI",
+      "conteo": 2
     },
     {
       "clave": "Otros",
-      "conteo": 1479
+      "conteo": 131
     }
   ],
   "por_idioma": [
     {
       "clave": "Inglés",
-      "conteo": 895
+      "conteo": 135
     },
     {
       "clave": "Español",
-      "conteo": 1396
-    },
-    {
-      "clave": "Portugués",
-      "conteo": 24
+      "conteo": 261
     },
     {
       "clave": "Otros idiomas",
-      "conteo": 10
+      "conteo": 6
     },
     {
       "clave": "Sin idioma identificado",
@@ -158,32 +154,32 @@
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 2356,
-      "total": 2359
+      "con_dato": 436,
+      "total": 436
     },
     {
       "campo": "authors",
-      "con_dato": 2350,
-      "total": 2359
+      "con_dato": 436,
+      "total": 436
     },
     {
       "campo": "abstract",
-      "con_dato": 2207,
-      "total": 2359
+      "con_dato": 353,
+      "total": 436
     },
     {
       "campo": "keywords",
-      "con_dato": 2318,
-      "total": 2359
+      "con_dato": 401,
+      "total": 436
     },
     {
       "campo": "doi",
-      "con_dato": 1709,
-      "total": 2359
+      "con_dato": 260,
+      "total": 436
     }
   ],
-  "pendientes_revision": 2359,
-  "posibles_duplicados": 397,
+  "pendientes_revision": 436,
+  "posibles_duplicados": 48,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
@@ -203,91 +199,67 @@
   ],
   "anio_seleccionado": 2021,
   "indicadores": {
-    "total_publicaciones": 2359,
-    "publicaciones_individuales": 671,
-    "publicaciones_colaborativas": 1645,
-    "total_firmas": 10517,
-    "autores_unicos": 9100,
-    "articulos_sin_autoria": 43,
-    "publicaciones_internacionales": 785,
-    "publicaciones_interinstitucionales": 993,
-    "grado_colaboracion": 0.71,
-    "rcc": 0.502
+    "total_publicaciones": 436,
+    "publicaciones_individuales": 114,
+    "publicaciones_colaborativas": 288,
+    "total_firmas": 1385,
+    "autores_unicos": 1060,
+    "articulos_sin_autoria": 34,
+    "publicaciones_internacionales": 126,
+    "publicaciones_interinstitucionales": 154,
+    "grado_colaboracion": 0.72,
+    "rcc": 0.51
   },
   "por_tipo_documento": [
     {
       "clave": "Artículo",
-      "conteo": 1612
-    },
-    {
-      "clave": "Tesis",
-      "conteo": 437
-    },
-    {
-      "clave": "Capítulo de libro",
-      "conteo": 60
-    },
-    {
-      "clave": "Libro",
-      "conteo": 53
-    },
-    {
-      "clave": "Review",
-      "conteo": 50
+      "conteo": 326
     },
     {
       "clave": "Conjunto de datos",
-      "conteo": 21
+      "conteo": 23
+    },
+    {
+      "clave": "Tesis",
+      "conteo": 14
+    },
+    {
+      "clave": "Capítulo de libro",
+      "conteo": 10
+    },
+    {
+      "clave": "Review",
+      "conteo": 5
     },
     {
       "clave": "Artículo de congreso",
-      "conteo": 18
-    },
-    {
-      "clave": "Editorial",
-      "conteo": 18
-    },
-    {
-      "clave": "Preprint",
-      "conteo": 15
-    },
-    {
-      "clave": "book-review",
-      "conteo": 11
-    },
-    {
-      "clave": "paratext",
-      "conteo": 8
-    },
-    {
-      "clave": "Informe",
-      "conteo": 7
-    },
-    {
-      "clave": "peer-review",
       "conteo": 4
     },
     {
-      "clave": "other",
-      "conteo": 3
+      "clave": "book-review",
+      "conteo": 4
     },
     {
-      "clave": "erratum",
-      "conteo": 1
+      "clave": "Editorial",
+      "conteo": 4
     },
     {
-      "clave": "Resumen de congreso",
-      "conteo": 1
+      "clave": "Libro",
+      "conteo": 4
+    },
+    {
+      "clave": "Preprint",
+      "conteo": 2
     }
   ],
   "por_acceso_abierto": [
     {
       "clave": "Acceso abierto",
-      "conteo": 2278
+      "conteo": 366
     },
     {
       "clave": "Acceso cerrado",
-      "conteo": 41
+      "conteo": 30
     },
     {
       "clave": "Sin dato",
@@ -297,93 +269,93 @@
   "instituciones_primer_autor": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 132
-    },
-    {
-      "clave": "Universidad Industrial de Santander",
-      "conteo": 115
-    },
-    {
-      "clave": "Pontificia Universidad Javeriana",
-      "conteo": 115
-    },
-    {
-      "clave": "Universidad de Antioquia",
-      "conteo": 86
+      "conteo": 34
     },
     {
       "clave": "Universidad de Los Andes",
-      "conteo": 75
+      "conteo": 30
+    },
+    {
+      "clave": "Pontificia Universidad Javeriana",
+      "conteo": 27
+    },
+    {
+      "clave": "Universidad de Antioquia",
+      "conteo": 24
     },
     {
       "clave": "Universidad del Valle",
-      "conteo": 62
+      "conteo": 22
     },
     {
-      "clave": "University of La Salle",
-      "conteo": 52
+      "clave": "Universidad del Quindío",
+      "conteo": 15
     },
     {
-      "clave": "Universidad El Bosque",
-      "conteo": 45
+      "clave": "Universidad del Tolima",
+      "conteo": 15
     },
     {
       "clave": "Universidad Pedagógica y Tecnológica de Colombia",
-      "conteo": 43
+      "conteo": 12
     },
     {
-      "clave": "Universidad Distrital Francisco José de Caldas",
-      "conteo": 37
+      "clave": "Alexander von Humboldt Biological Resources Research Institute",
+      "conteo": 11
+    },
+    {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 10
     }
   ],
   "instituciones_presencia": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 219
+      "conteo": 49
     },
     {
       "clave": "Pontificia Universidad Javeriana",
-      "conteo": 157
-    },
-    {
-      "clave": "Universidad de Antioquia",
-      "conteo": 127
-    },
-    {
-      "clave": "Universidad Industrial de Santander",
-      "conteo": 125
+      "conteo": 42
     },
     {
       "clave": "Universidad de Los Andes",
-      "conteo": 117
+      "conteo": 41
     },
     {
-      "clave": "Universidad del Valle",
-      "conteo": 87
+      "clave": "Universidad de Antioquia",
+      "conteo": 32
     },
     {
       "clave": "Alexander von Humboldt Biological Resources Research Institute",
-      "conteo": 57
+      "conteo": 28
     },
     {
-      "clave": "University of La Salle",
-      "conteo": 57
+      "clave": "Universidad del Valle",
+      "conteo": 27
     },
     {
-      "clave": "Universidad Pedagógica y Tecnológica de Colombia",
-      "conteo": 53
+      "clave": "SELVA",
+      "conteo": 19
     },
     {
-      "clave": "Universidad El Bosque",
-      "conteo": 53
+      "clave": "Universidad del Tolima",
+      "conteo": 19
+    },
+    {
+      "clave": "Universidad del Quindío",
+      "conteo": 17
+    },
+    {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 14
     }
   ],
   "colaboracion_por_anio": [
     {
       "anio": 2021,
-      "una_institucion": 1145,
-      "nacional": 244,
-      "internacional": 785
+      "una_institucion": 207,
+      "nacional": 45,
+      "internacional": 126
     }
   ],
   "clasificacion_disponible": true,
@@ -612,32 +584,32 @@
     },
     {
       "fuente": "OpenAlex",
-      "total_articulos": 2319,
+      "total_articulos": 396,
       "completitud": [
         {
           "campo": "title",
-          "con_dato": 2316,
-          "total": 2319
+          "con_dato": 396,
+          "total": 396
         },
         {
           "campo": "authors",
-          "con_dato": 2310,
-          "total": 2319
+          "con_dato": 396,
+          "total": 396
         },
         {
           "campo": "abstract",
-          "con_dato": 2168,
-          "total": 2319
+          "con_dato": 314,
+          "total": 396
         },
         {
           "campo": "keywords",
-          "con_dato": 2312,
-          "total": 2319
+          "con_dato": 395,
+          "total": 396
         },
         {
           "campo": "doi",
-          "con_dato": 1701,
-          "total": 2319
+          "con_dato": 252,
+          "total": 396
         }
       ]
     }

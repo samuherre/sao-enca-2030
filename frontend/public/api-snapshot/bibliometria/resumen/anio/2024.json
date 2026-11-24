@@ -1,193 +1,189 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 2340,
+  "total_articulos": 228,
   "por_anio": [
     {
       "clave": "2024",
-      "conteo": 2340
+      "conteo": 228
     }
   ],
   "por_revista": [
     {
       "clave": "Universidad Industrial de Santander",
-      "conteo": 122
-    },
-    {
-      "clave": "Repositorio Universidad Distrital",
-      "conteo": 42
-    },
-    {
-      "clave": "Repositorio Fundación Universitaria Agraria de Colombia",
-      "conteo": 36
-    },
-    {
-      "clave": "Repositorio Institucional FULL",
-      "conteo": 33
-    },
-    {
-      "clave": "Digital Commons - University of South Florida (University of South Florida)",
-      "conteo": 31
-    },
-    {
-      "clave": "Univalle Digital Repository (University of Valle)",
-      "conteo": 29
-    },
-    {
-      "clave": "Repositorio Institucional Universidad El Bosque",
-      "conteo": 27
-    },
-    {
-      "clave": "Lumieres - Repositorio institucional Universidad de América",
-      "conteo": 24
-    },
-    {
-      "clave": "Minerva Digital Library (Universidad EAN)",
-      "conteo": 23
-    },
-    {
-      "clave": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
-      "conteo": 21
-    },
-    {
-      "clave": "Sustainability",
-      "conteo": 19
-    },
-    {
-      "clave": "Repositorio UNIREMINGTON",
-      "conteo": 19
-    },
-    {
-      "clave": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
-      "conteo": 19
-    },
-    {
-      "clave": "Ornitología colombiana",
-      "conteo": 18
-    },
-    {
-      "clave": "Ciencia Unisalle (Universidad de La Salle)",
-      "conteo": 17
-    },
-    {
-      "clave": "Heliyon",
-      "conteo": 16
-    },
-    {
-      "clave": "Biblioteca Digital Uniajc",
-      "conteo": 16
-    },
-    {
-      "clave": "PLoS ONE",
-      "conteo": 16
-    },
-    {
-      "clave": "Intellectum (Universidad de La Sabana)",
-      "conteo": 16
-    },
-    {
-      "clave": "Revista Conservación Colombiana",
-      "conteo": 13
-    },
-    {
-      "clave": "Ciencia Latina Revista Científica Multidisciplinar",
       "conteo": 12
-    },
-    {
-      "clave": "Physical review. D/Physical review. D.",
-      "conteo": 12
-    },
-    {
-      "clave": "Scientific Reports",
-      "conteo": 11
-    },
-    {
-      "clave": "Repository Technological University of Pereira (Technological University of Pereira)",
-      "conteo": 11
-    },
-    {
-      "clave": "Journal of High Energy Physics",
-      "conteo": 10
     },
     {
       "clave": "Global Biodiversity Information Facility",
-      "conteo": 9
+      "conteo": 11
+    },
+    {
+      "clave": "Ornitología colombiana",
+      "conteo": 10
+    },
+    {
+      "clave": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
+      "conteo": 7
+    },
+    {
+      "clave": "Repositorio Institucional Universidad El Bosque",
+      "conteo": 4
+    },
+    {
+      "clave": "Ornithological Applications",
+      "conteo": 4
+    },
+    {
+      "clave": "Digital Commons - University of South Florida (University of South Florida)",
+      "conteo": 4
+    },
+    {
+      "clave": "Boletín SAO",
+      "conteo": 3
+    },
+    {
+      "clave": "Repositorio Institucional FULL",
+      "conteo": 3
+    },
+    {
+      "clave": "Ciencia Latina Revista Científica Multidisciplinar",
+      "conteo": 3
+    },
+    {
+      "clave": "Frontiers in Veterinary Science",
+      "conteo": 3
+    },
+    {
+      "clave": "Ornitología Neotropical",
+      "conteo": 3
     },
     {
       "clave": "Boletín Científico Centro de Museos Museo de Historia Natural",
-      "conteo": 8
+      "conteo": 3
+    },
+    {
+      "clave": "Revista de Medicina Veterinaria",
+      "conteo": 2
+    },
+    {
+      "clave": "Parasitology Research",
+      "conteo": 2
+    },
+    {
+      "clave": "limentech Ciencia y Tecnología Alimentaria",
+      "conteo": 2
+    },
+    {
+      "clave": "Ecology and Evolution",
+      "conteo": 2
+    },
+    {
+      "clave": "Univalle Digital Repository (University of Valle)",
+      "conteo": 2
+    },
+    {
+      "clave": "Journal of Applied Ecology",
+      "conteo": 2
+    },
+    {
+      "clave": "Global Ecology and Conservation",
+      "conteo": 2
     },
     {
       "clave": "Biblioteca Digital - Universidad Icesi",
-      "conteo": 8
+      "conteo": 2
     },
     {
-      "clave": "Animals",
-      "conteo": 7
+      "clave": "Ciencia Unisalle (Universidad de La Salle)",
+      "conteo": 2
     },
     {
-      "clave": "Revista Mvz Córdoba",
-      "conteo": 7
+      "clave": "Scientific Reports",
+      "conteo": 2
+    },
+    {
+      "clave": "Acta Zoológica Lilloana",
+      "conteo": 2
+    },
+    {
+      "clave": "Lumieres - Repositorio institucional Universidad de América",
+      "conteo": 2
+    },
+    {
+      "clave": "eLife",
+      "conteo": 2
+    },
+    {
+      "clave": "Frontiers of Biogeography",
+      "conteo": 2
+    },
+    {
+      "clave": "Authorea",
+      "conteo": 2
+    },
+    {
+      "clave": "Elsevier eBooks",
+      "conteo": 2
+    },
+    {
+      "clave": "Revista de Medicina …",
+      "conteo": 1
     },
     {
       "clave": "Otros",
-      "conteo": 1636
+      "conteo": 119
     }
   ],
   "por_idioma": [
     {
       "clave": "Inglés",
-      "conteo": 1060
+      "conteo": 126
     },
     {
       "clave": "Español",
-      "conteo": 1225
+      "conteo": 85
     },
     {
       "clave": "Portugués",
-      "conteo": 31
-    },
-    {
-      "clave": "Francés",
       "conteo": 1
     },
     {
       "clave": "Otros idiomas",
-      "conteo": 9
+      "conteo": 3
     },
     {
       "clave": "Sin idioma identificado",
-      "conteo": 14
+      "conteo": 13
     }
   ],
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 2336,
-      "total": 2340
+      "con_dato": 228,
+      "total": 228
     },
     {
       "campo": "authors",
-      "con_dato": 2330,
-      "total": 2340
+      "con_dato": 228,
+      "total": 228
     },
     {
       "campo": "abstract",
-      "con_dato": 2247,
-      "total": 2340
+      "con_dato": 205,
+      "total": 228
     },
     {
       "campo": "keywords",
-      "con_dato": 2322,
-      "total": 2340
+      "con_dato": 215,
+      "total": 228
     },
     {
       "campo": "doi",
-      "con_dato": 1747,
-      "total": 2340
+      "con_dato": 177,
+      "total": 228
     }
   ],
-  "pendientes_revision": 2340,
-  "posibles_duplicados": 341,
+  "pendientes_revision": 228,
+  "posibles_duplicados": 21,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
@@ -207,76 +203,60 @@
   ],
   "anio_seleccionado": 2024,
   "indicadores": {
-    "total_publicaciones": 2340,
-    "publicaciones_individuales": 662,
-    "publicaciones_colaborativas": 1655,
-    "total_firmas": 13933,
-    "autores_unicos": 10309,
-    "articulos_sin_autoria": 23,
-    "publicaciones_internacionales": 774,
-    "publicaciones_interinstitucionales": 958,
+    "total_publicaciones": 228,
+    "publicaciones_individuales": 62,
+    "publicaciones_colaborativas": 153,
+    "total_firmas": 984,
+    "autores_unicos": 875,
+    "articulos_sin_autoria": 13,
+    "publicaciones_internacionales": 77,
+    "publicaciones_interinstitucionales": 94,
     "grado_colaboracion": 0.71,
-    "rcc": 0.517
+    "rcc": 0.539
   },
   "por_tipo_documento": [
     {
       "clave": "Artículo",
-      "conteo": 1504
+      "conteo": 141
     },
     {
       "clave": "Tesis",
-      "conteo": 515
-    },
-    {
-      "clave": "Review",
-      "conteo": 76
-    },
-    {
-      "clave": "Capítulo de libro",
-      "conteo": 50
-    },
-    {
-      "clave": "Libro",
-      "conteo": 45
-    },
-    {
-      "clave": "Preprint",
-      "conteo": 30
-    },
-    {
-      "clave": "Artículo de congreso",
-      "conteo": 21
-    },
-    {
-      "clave": "Editorial",
-      "conteo": 17
-    },
-    {
-      "clave": "Informe",
-      "conteo": 15
-    },
-    {
-      "clave": "peer-review",
-      "conteo": 11
+      "conteo": 33
     },
     {
       "clave": "Conjunto de datos",
-      "conteo": 10
+      "conteo": 11
     },
     {
-      "clave": "paratext",
-      "conteo": 10
+      "clave": "Review",
+      "conteo": 8
     },
     {
-      "clave": "book-review",
-      "conteo": 9
+      "clave": "Preprint",
+      "conteo": 4
     },
     {
-      "clave": "other",
-      "conteo": 5
+      "clave": "Capítulo de libro",
+      "conteo": 3
     },
     {
-      "clave": "data-paper",
+      "clave": "Libro",
+      "conteo": 2
+    },
+    {
+      "clave": "Informe",
+      "conteo": 2
+    },
+    {
+      "clave": "peer-review",
+      "conteo": 2
+    },
+    {
+      "clave": "Editorial",
+      "conteo": 2
+    },
+    {
+      "clave": "Artículo de congreso",
       "conteo": 2
     },
     {
@@ -284,26 +264,18 @@
       "conteo": 1
     },
     {
-      "clave": "erratum",
-      "conteo": 1
-    },
-    {
-      "clave": "Resumen de congreso",
-      "conteo": 1
-    },
-    {
-      "clave": "reference-entry",
+      "clave": "book-review",
       "conteo": 1
     }
   ],
   "por_acceso_abierto": [
     {
       "clave": "Acceso abierto",
-      "conteo": 2293
+      "conteo": 184
     },
     {
       "clave": "Acceso cerrado",
-      "conteo": 31
+      "conteo": 28
     },
     {
       "clave": "Sin dato",
@@ -313,93 +285,93 @@
   "instituciones_primer_autor": [
     {
       "clave": "Universidad Industrial de Santander",
-      "conteo": 136
+      "conteo": 13
     },
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 124
+      "conteo": 10
     },
     {
-      "clave": "Pontificia Universidad Javeriana",
-      "conteo": 65
-    },
-    {
-      "clave": "Universidad del Valle",
-      "conteo": 65
+      "clave": "Universidad de Caldas",
+      "conteo": 7
     },
     {
       "clave": "Universidad de Antioquia",
-      "conteo": 64
+      "conteo": 5
     },
     {
-      "clave": "Universidad Distrital Francisco José de Caldas",
-      "conteo": 51
+      "clave": "Universidad del Valle",
+      "conteo": 5
     },
     {
       "clave": "Universidad de Los Andes",
-      "conteo": 41
-    },
-    {
-      "clave": "Fundación Universitaria Agraria de Colombia - UNIAGRARIA",
-      "conteo": 36
-    },
-    {
-      "clave": "Fundación Universitaria Los Libertadores",
-      "conteo": 35
+      "conteo": 5
     },
     {
       "clave": "Universidad El Bosque",
-      "conteo": 33
+      "conteo": 4
+    },
+    {
+      "clave": "Universidad del Tolima",
+      "conteo": 4
+    },
+    {
+      "clave": "Universidad Popular del Cesar",
+      "conteo": 4
+    },
+    {
+      "clave": "Universidad del Cauca",
+      "conteo": 4
     }
   ],
   "instituciones_presencia": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 217
-    },
-    {
-      "clave": "Universidad Industrial de Santander",
-      "conteo": 143
+      "conteo": 22
     },
     {
       "clave": "Universidad de Antioquia",
-      "conteo": 127
+      "conteo": 15
     },
     {
-      "clave": "Pontificia Universidad Javeriana",
-      "conteo": 99
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 15
     },
     {
       "clave": "Universidad del Valle",
-      "conteo": 97
+      "conteo": 11
     },
     {
       "clave": "Universidad de Los Andes",
-      "conteo": 96
+      "conteo": 11
     },
     {
-      "clave": "Universidad Distrital Francisco José de Caldas",
-      "conteo": 59
+      "clave": "Universidad de Caldas",
+      "conteo": 10
     },
     {
-      "clave": "Universidad del Rosario",
-      "conteo": 53
+      "clave": "Pontificia Universidad Javeriana",
+      "conteo": 8
     },
     {
-      "clave": "Centre National de la Recherche Scientifique",
-      "conteo": 51
+      "clave": "SELVA",
+      "conteo": 8
     },
     {
-      "clave": "Consejo Nacional de Investigaciones Científicas y Técnicas",
-      "conteo": 45
+      "clave": "Universidad del Tolima",
+      "conteo": 7
+    },
+    {
+      "clave": "University of La Salle",
+      "conteo": 7
     }
   ],
   "colaboracion_por_anio": [
     {
       "anio": 2024,
-      "una_institucion": 1163,
-      "nacional": 237,
-      "internacional": 774
+      "una_institucion": 97,
+      "nacional": 22,
+      "internacional": 77
     }
   ],
   "clasificacion_disponible": true,
@@ -628,32 +600,32 @@
     },
     {
       "fuente": "OpenAlex",
-      "total_articulos": 2324,
+      "total_articulos": 212,
       "completitud": [
         {
           "campo": "title",
-          "con_dato": 2320,
-          "total": 2324
+          "con_dato": 212,
+          "total": 212
         },
         {
           "campo": "authors",
-          "con_dato": 2314,
-          "total": 2324
+          "con_dato": 212,
+          "total": 212
         },
         {
           "campo": "abstract",
-          "con_dato": 2231,
-          "total": 2324
+          "con_dato": 189,
+          "total": 212
         },
         {
           "campo": "keywords",
-          "con_dato": 2319,
-          "total": 2324
+          "con_dato": 212,
+          "total": 212
         },
         {
           "campo": "doi",
-          "con_dato": 1743,
-          "total": 2324
+          "con_dato": 173,
+          "total": 212
         }
       ]
     }

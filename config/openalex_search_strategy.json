@@ -1,29 +1,34 @@
 {
-  "_comentario": "Estrategia de busqueda SAO — OPCION 2 (validada por Julian): corpus solo-Colombia = (afiliacion institucional colombiana) O (aves + toponimos UNICOS de Colombia). Las consultas 'tematica-CO' usan el filtro ESTRUCTURADO country_code=CO (autores en instituciones colombianas): es preciso, no por texto, y captura la investigacion aviar hecha DESDE Colombia. Las consultas 'toponimos-unicos' NO exigen pais: capturan estudios (incluso de extranjeros) sobre sitios colombianos de nombre inequivoco (Chiribiquete, Sierra Nevada de Santa Marta, Sumapaz...). Se descarto el enfoque de toponimos ambiguos en texto porque el 'search' de OpenAlex no filtra geografia (traia ~40k por consulta con ruido).",
-  "_periodo": "2020-2030 se aplica via filter de anio del pipeline.",
-  "_criterio_geografico": "country_code=CO (afiliacion) para tematicas; toponimos unicos sin pais para sitios emblematicos.",
+  "_comentario": "Estrategia solo-Colombia CORREGIDA. El termino de AVES va como filtro ESTRICTO (title_and_abstract.search via 'strict': true): el articulo DEBE mencionar aves en titulo o abstract. Antes se usaba 'search' (ranking blando) que NO excluia nada y colaba ruido (ranas, aranas, psiquiatria...). Corpus = (aves estricto + afiliacion CO) O (aves estricto + toponimo unico de Colombia). 'strict' por defecto es true; se deja explicito por claridad.",
+  "_periodo": "2020-2030 via filter de anio.",
   "consultas": [
     {
-      "_grupo": "tematica-CO",
-      "term": "bird OR birds OR avian OR avifauna OR ave OR aves OR \"aves silvestres\"",
-      "country_code": "CO"
+      "_grupo": "afiliacion-CO",
+      "_nota": "Aves (estricto en titulo/abstract) + autores con afiliacion institucional en Colombia. Es el nucleo del corpus colombiano.",
+      "term": "bird OR birds OR avian OR avifauna OR ave OR aves OR \"aves silvestres\" OR ornithology OR ornitologia",
+      "country_code": "CO",
+      "strict": true
     },
     {
       "_grupo": "toponimos-unicos",
-      "_nota": "Sitios colombianos de nombre inequivoco: aves + sitio, sin exigir pais (capturan estudios de autores extranjeros sobre esos sitios).",
-      "term": "(bird OR birds OR avian OR ave OR aves) AND (Chiribiquete OR \"Sierra Nevada de Santa Marta\" OR \"Serrania de la Macarena\" OR \"Serrania del Baudo\" OR \"Serrania de los Yariguies\" OR \"Serrania de San Lucas\" OR \"Serrania de los Churumbelos\" OR \"Serrania de la Lindosa\")"
+      "_nota": "Aves (estricto) + sitio colombiano de nombre inequivoco, sin exigir pais (captura estudios de autores extranjeros sobre esos sitios).",
+      "term": "(bird OR birds OR avian OR ave OR aves OR avifauna) AND (Chiribiquete OR \"Sierra Nevada de Santa Marta\" OR \"Serrania de la Macarena\" OR \"Serrania del Baudo\" OR \"Serrania de los Yariguies\" OR \"Serrania de San Lucas\" OR \"Serrania de los Churumbelos\" OR \"Serrania de la Lindosa\")",
+      "strict": true
     },
     {
       "_grupo": "toponimos-unicos",
-      "term": "(bird OR birds OR avian OR ave OR aves) AND (\"Paramo de Sumapaz\" OR Santurban OR Chingaza OR \"Nevado del Ruiz\" OR \"Nevado del Huila\" OR \"Nevado del Tolima\" OR \"Farallones de Cali\" OR Purace OR Munchique OR Tatama OR Paramillo)"
+      "term": "(bird OR birds OR avian OR ave OR aves OR avifauna) AND (\"Paramo de Sumapaz\" OR Santurban OR Chingaza OR \"Nevado del Ruiz\" OR \"Nevado del Huila\" OR \"Nevado del Tolima\" OR \"Farallones de Cali\" OR Purace OR Munchique OR Tatama OR Paramillo)",
+      "strict": true
     },
     {
       "_grupo": "toponimos-unicos",
-      "term": "(bird OR birds OR avian OR ave OR aves) AND (\"Cienaga Grande de Santa Marta\" OR \"Desierto de la Tatacoa\" OR \"Canon del Chicamocha\" OR \"Laguna de Tota\" OR \"Laguna de la Cocha\" OR \"Rio Atrato\" OR \"Rio Apaporis\" OR \"Valle de Cocora\" OR \"Serrania de las Quinchas\" OR \"Serrania de los Paraguas\")"
+      "term": "(bird OR birds OR avian OR ave OR aves OR avifauna) AND (\"Cienaga Grande de Santa Marta\" OR \"Desierto de la Tatacoa\" OR \"Canon del Chicamocha\" OR \"Laguna de Tota\" OR \"Laguna de la Cocha\" OR \"Rio Atrato\" OR \"Rio Apaporis\" OR \"Valle de Cocora\" OR \"Serrania de las Quinchas\" OR \"Serrania de los Paraguas\")",
+      "strict": true
     },
     {
       "_grupo": "toponimos-unicos",
-      "term": "(bird OR birds OR avian OR ave OR aves) AND (Amacayacu OR Cahuinari OR \"Yaigoje Apaporis\" OR Tinigua OR \"Cueva de los Guacharos\" OR \"El Cocuy\" OR Iguaque OR \"Las Orquideas\" OR \"Los Katios\" OR Utria OR Sanquianga OR Gorgona OR Malpelo OR Tayrona OR \"Selva de Florencia\" OR \"Otun Quimbaya\" OR \"Rio Nambi\" OR \"Alto Quindio Acaime\")"
+      "term": "(bird OR birds OR avian OR ave OR aves OR avifauna) AND (Amacayacu OR Cahuinari OR \"Yaigoje Apaporis\" OR Tinigua OR \"Cueva de los Guacharos\" OR \"El Cocuy\" OR Iguaque OR \"Las Orquideas\" OR \"Los Katios\" OR Utria OR Sanquianga OR Gorgona OR Malpelo OR Tayrona OR \"Selva de Florencia\" OR \"Otun Quimbaya\" OR \"Rio Nambi\" OR \"Alto Quindio Acaime\")",
+      "strict": true
     }
   ]
 }
