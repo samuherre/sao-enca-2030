@@ -395,7 +395,11 @@ def _consultas_desde_config(path: Path, year_from: int, year_to: int) -> list[Co
                 continue
             yf = int(entrada.get("year_from", year_from))
             yt = int(entrada.get("year_to", year_to))
-            consultas.append(Consulta(term=term, year_from=yf, year_to=yt))
+            cc = entrada.get("country_code")
+            cc = str(cc).strip() if cc else None
+            consultas.append(
+                Consulta(term=term, year_from=yf, year_to=yt, country_code=cc)
+            )
     return consultas
 
 

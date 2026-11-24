@@ -48,6 +48,16 @@ Componente A es **interna por carpetas y módulos** (`bibliometrics/`, `backend/
     "Andes"/"Neotropical" o nombran un departamento sin el país. El criterio de
     inclusión geográfica concreto (qué cuenta como "de Colombia") queda
     `PENDING_VALIDATION`: debe afinarse con SAO para no perder material válido.
+  * **RESUELTO con topónimos (validado por Julián):** el criterio geográfico se
+    concretó en `config/openalex_search_strategy.json` combinando aves +
+    señales de Colombia + una lista de TOPÓNIMOS de SAO (departamentos,
+    regiones, serranías, páramos, ríos, parques, ciudades). Regla anti-ruido:
+    los topónimos AMBIGUOS (Providencia, Meta, Leticia, departamentos que
+    coinciden con lugares de otros países…) van SIEMPRE combinados con aves Y
+    una señal inequívoca de Colombia; solo los nombres propios ÚNICOS en el
+    mundo (Chiribiquete, Sierra Nevada de Santa Marta, Sumapaz, Farallones de
+    Cali…) pueden ir con aves sin exigir "Colombia". Así se amplía el n sin
+    colar artículos de otros países.
 * **Article Data Contract V1** (`docs/bibliometrics/article-data-contract.md`)
   es el contrato de datos. Toda fuente debe producir registros conforme a él.
 * **Criterios de inclusión/exclusión V1**

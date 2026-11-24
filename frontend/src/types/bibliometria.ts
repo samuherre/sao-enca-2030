@@ -30,6 +30,14 @@ export interface ConteoOFC {
   readonly gc_articulos_sin_autoria: number;
 }
 
+/** Tipo de colaboración de un año (una institución / nacional / internacional). */
+export interface ColaboracionAnual {
+  readonly anio: number;
+  readonly una_institucion: number;
+  readonly nacional: number;
+  readonly internacional: number;
+}
+
 /** Indicadores de colaboración/autoría (tabla + índices Subramanyam y RCC). */
 export interface IndicadoresColaboracion {
   readonly total_publicaciones: number;
@@ -114,6 +122,12 @@ export interface ResumenConsolidado {
   readonly anio_seleccionado: number | null;
   // Indicadores de colaboración/autoría (tabla + índices Subramanyam y RCC).
   readonly indicadores: IndicadoresColaboracion | null;
+  // Distribuciones nuevas (re-ingesta con afiliaciones/tipo/OA).
+  readonly por_tipo_documento: readonly ConteoPorClave[];
+  readonly por_acceso_abierto: readonly ConteoPorClave[];
+  readonly instituciones_primer_autor: readonly ConteoPorClave[];
+  readonly instituciones_presencia: readonly ConteoPorClave[];
+  readonly colaboracion_por_anio: readonly ColaboracionAnual[];
   readonly clasificacion_disponible: boolean;
   readonly por_ofc: readonly ConteoOFC[];
   readonly sin_ofc: number;

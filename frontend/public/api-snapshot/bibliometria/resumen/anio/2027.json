@@ -1,19 +1,27 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 1,
+  "total_articulos": 3,
   "por_anio": [
     {
       "clave": "2027",
-      "conteo": 1
+      "conteo": 3
     }
   ],
   "por_revista": [
+    {
+      "clave": "Estudios de Literatura Colombiana",
+      "conteo": 2
+    },
     {
       "clave": "Landscape and Urban …",
       "conteo": 1
     }
   ],
   "por_idioma": [
+    {
+      "clave": "Español",
+      "conteo": 2
+    },
     {
       "clave": "Sin idioma identificado",
       "conteo": 1
@@ -22,40 +30,38 @@
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 1,
-      "total": 1
+      "con_dato": 3,
+      "total": 3
     },
     {
       "campo": "authors",
-      "con_dato": 1,
-      "total": 1
+      "con_dato": 3,
+      "total": 3
     },
     {
       "campo": "abstract",
-      "con_dato": 1,
-      "total": 1
+      "con_dato": 3,
+      "total": 3
     },
     {
       "campo": "keywords",
-      "con_dato": 0,
-      "total": 1
+      "con_dato": 2,
+      "total": 3
     },
     {
       "campo": "doi",
-      "con_dato": 0,
-      "total": 1
+      "con_dato": 2,
+      "total": 3
     }
   ],
-  "pendientes_revision": 1,
+  "pendientes_revision": 3,
   "posibles_duplicados": 0,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
     "2026-10-28",
-    "2026-10-28",
-    "2026-10-29",
     "2026-10-30",
-    "2026-10-30"
+    "2026-11-24"
   ],
   "anios_disponibles": [
     2020,
@@ -69,17 +75,61 @@
   ],
   "anio_seleccionado": 2027,
   "indicadores": {
-    "total_publicaciones": 1,
-    "publicaciones_individuales": 0,
-    "publicaciones_colaborativas": 0,
-    "total_firmas": 0,
-    "autores_unicos": 0,
+    "total_publicaciones": 3,
+    "publicaciones_individuales": 1,
+    "publicaciones_colaborativas": 1,
+    "total_firmas": 3,
+    "autores_unicos": 3,
     "articulos_sin_autoria": 1,
     "publicaciones_internacionales": null,
     "publicaciones_interinstitucionales": null,
-    "grado_colaboracion": null,
-    "rcc": null
+    "grado_colaboracion": 0.5,
+    "rcc": 0.5
   },
+  "por_tipo_documento": [
+    {
+      "clave": "Artículo",
+      "conteo": 2
+    }
+  ],
+  "por_acceso_abierto": [
+    {
+      "clave": "Acceso abierto",
+      "conteo": 2
+    },
+    {
+      "clave": "Sin dato",
+      "conteo": 1
+    }
+  ],
+  "instituciones_primer_autor": [
+    {
+      "clave": "Universidad Manuela Beltrán",
+      "conteo": 1
+    },
+    {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 1
+    }
+  ],
+  "instituciones_presencia": [
+    {
+      "clave": "Universidad Manuela Beltrán",
+      "conteo": 1
+    },
+    {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 1
+    }
+  ],
+  "colaboracion_por_anio": [
+    {
+      "anio": 2027,
+      "una_institucion": 2,
+      "nacional": 0,
+      "internacional": 0
+    }
+  ],
   "clasificacion_disponible": false,
   "por_ofc": [],
   "sin_ofc": 0,
@@ -217,32 +267,32 @@
     },
     {
       "fuente": "OpenAlex",
-      "total_articulos": 0,
+      "total_articulos": 2,
       "completitud": [
         {
           "campo": "title",
-          "con_dato": 0,
-          "total": 0
+          "con_dato": 2,
+          "total": 2
         },
         {
           "campo": "authors",
-          "con_dato": 0,
-          "total": 0
+          "con_dato": 2,
+          "total": 2
         },
         {
           "campo": "abstract",
-          "con_dato": 0,
-          "total": 0
+          "con_dato": 2,
+          "total": 2
         },
         {
           "campo": "keywords",
-          "con_dato": 0,
-          "total": 0
+          "con_dato": 2,
+          "total": 2
         },
         {
           "campo": "doi",
-          "con_dato": 0,
-          "total": 0
+          "con_dato": 2,
+          "total": 2
         }
       ]
     }

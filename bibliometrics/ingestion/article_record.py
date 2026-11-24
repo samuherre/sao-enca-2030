@@ -50,6 +50,17 @@ class ArticleRecord:
     pages: Optional[str] = None
     publisher: Optional[str] = None
     language: Optional[str] = None
+    # Tipo de documento (p. ej. "article", "review", "book-chapter", "letter").
+    # Fuentes sin este dato lo dejan None (no se inventa).
+    document_type: Optional[str] = None
+    # Acceso abierto: True/False si la fuente lo informa, None si no se conoce.
+    is_open_access: Optional[bool] = None
+    # Afiliaciones por autor, en orden de autoría. Cada entrada:
+    #   {"position": "first|middle|last", "institutions": [{"name","country"}]}
+    # Lista vacía si la fuente no aporta afiliaciones (no se inventa).
+    authorships: list = field(default_factory=list)
+    # Número de citas que el work ha recibido (None si no se conoce).
+    cited_by_count: Optional[int] = None
     # Contenido
     abstract: Optional[str] = None
     keywords: Optional[str] = None

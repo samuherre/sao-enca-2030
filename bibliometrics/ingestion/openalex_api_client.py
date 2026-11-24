@@ -73,6 +73,13 @@ class Consulta:
         validar con SAO; no es un criterio oficial de SAO.
     :param year_from: año inicial del filtro de período (por defecto 2020).
     :param year_to: año final del filtro de período (por defecto 2030).
+    :param country_code: si se indica (p. ej. "CO"), añade el filtro ESTRUCTURADO
+        ``authorships.institutions.country_code:<cc>`` a la consulta, que exige
+        que al menos un autor tenga afiliación en ese país. Es un filtro preciso
+        (no por texto): captura la investigación hecha DESDE ese país. ``None``
+        = sin filtro de país (la acotación geográfica, si la hay, va en ``term``
+        vía topónimos). Parte de la estrategia solo-Colombia (afiliación CO O
+        topónimos únicos).
 
     Ambos años acotan el Período_Inclusión 2020–2030 mediante el filtro de año
     que se envía a la API (``publication_year:{from}-{to}``). La ``Consulta`` es
@@ -82,6 +89,7 @@ class Consulta:
     term: str
     year_from: int = PERIODO_MIN
     year_to: int = PERIODO_MAX
+    country_code: Optional[str] = None
 
 
 @dataclass(frozen=True)
@@ -217,9 +225,17 @@ def _build_params(consulta: Consulta, cursor: str, config: ApiConfig) -> dict[st
     Capa HTTP pura: no transforma works, solo arma la petición. NO imprime ni
     registra el valor de ``api_key`` (Req 7.4).
     """
+    filtros = [f"publication_year:{consulta.year_from}-{consulta.year_to}"]
+    if consulta.country_code:
+        # Filtro ESTRUCTURADO por país de afiliación de los autores (no por
+        # texto): exige que al menos un autor esté en una institución de ese
+        # país. Es la vía precisa para "investigación hecha desde Colombia".
+        filtros.append(
+            f"authorships.institutions.country_code:{consulta.country_code}"
+        )
     params: dict[str, Any] = {
         "search": consulta.term,
-        "filter": f"publication_year:{consulta.year_from}-{consulta.year_to}",
+        "filter": ",".join(filtros),
         "per_page": config.per_page,
         "cursor": cursor,
     }
@@ -559,6 +575,69 @@ def _extract_authors(work: dict) -> Optional[str]:
     return "; ".join(names) or None
 
 
+def _extract_authorships(work: dict) -> list:
+    """Afiliaciones por autor: posición + instituciones (nombre y país).
+
+    Ruta: ``work["authorships"][*]`` con ``author_position``, ``institutions``
+    (``display_name``, ``country_code``). Campo ausente → se omite ese dato (no
+    se inventa). Devuelve lista vacía si no hay ``authorships`` utilizables.
+
+    Estructura de cada entrada:
+        {"position": "first"|"middle"|"last"|None,
+         "institutions": [{"name": str, "country": str|None}, ...]}
+    """
+    authorships = work.get("authorships")
+    if not isinstance(authorships, (list, tuple)):
+        return []
+    salida: list = []
+    for a in authorships:
+        if not isinstance(a, dict):
+            continue
+        posicion = _clean_str(a.get("author_position"))
+        insts: list = []
+        raw_insts = a.get("institutions")
+        if isinstance(raw_insts, (list, tuple)):
+            for inst in raw_insts:
+                if not isinstance(inst, dict):
+                    continue
+                nombre = _clean_str(inst.get("display_name"))
+                if not nombre:
+                    continue
+                insts.append(
+                    {"name": nombre, "country": _clean_str(inst.get("country_code"))}
+                )
+        # Solo se añade la entrada si aporta algo (posición o instituciones).
+        if posicion or insts:
+            salida.append({"position": posicion, "institutions": insts})
+    return salida
+
+
+def _extract_document_type(work: dict) -> Optional[str]:
+    """Tipo de documento del ``work`` (``type``). Ausente → None (no se inventa)."""
+    return _clean_str(work.get("type"))
+
+
+def _extract_is_open_access(work: dict) -> Optional[bool]:
+    """Acceso abierto: ``work["open_access"]["is_oa"]`` si viene como bool.
+
+    None si el campo no está presente o no es un booleano (no se asume cerrado).
+    """
+    oa = work.get("open_access")
+    if isinstance(oa, dict):
+        val = oa.get("is_oa")
+        if isinstance(val, bool):
+            return val
+    return None
+
+
+def _extract_cited_by_count(work: dict) -> Optional[int]:
+    """Número de citas (``cited_by_count``). None si no es un entero válido."""
+    val = work.get("cited_by_count")
+    if isinstance(val, bool):
+        return None
+    return val if isinstance(val, int) else None
+
+
 def _primary_location(work: dict) -> dict:
     """Devuelve ``work["primary_location"]`` como dict (``{}`` si no aplica)."""
     loc = work.get("primary_location")
@@ -714,6 +793,12 @@ def work_to_record(work: dict) -> ArticleRecord:
     abstract = reconstruct_abstract(work.get("abstract_inverted_index"))
     keywords = _extract_keywords(work)
     language = _clean_str(work.get("language"))
+    # Campos ampliados (re-ingesta solo-Colombia): afiliaciones por autor, tipo
+    # de documento, acceso abierto y citas. Ausentes → None/[] (no se inventa).
+    authorships = _extract_authorships(work)
+    document_type = _extract_document_type(work)
+    is_open_access = _extract_is_open_access(work)
+    cited_by_count = _extract_cited_by_count(work)
     # Procedencia propia de OpenAlex: la URL del work (campo ``id``). Ausente →
     # None (no se inventa) (Req 8.2).
     source_url = _clean_str(work.get("id"))
@@ -767,6 +852,10 @@ def work_to_record(work: dict) -> ArticleRecord:
         pages=pages,
         publisher=publisher,
         language=language,
+        document_type=document_type,
+        is_open_access=is_open_access,
+        authorships=authorships,
+        cited_by_count=cited_by_count,
         abstract=abstract,
         keywords=keywords,
         source=OPENALEX_SOURCE,

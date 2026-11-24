@@ -1,87 +1,43 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 3408,
+  "total_articulos": 2313,
   "por_anio": [
     {
       "clave": "2023",
-      "conteo": 3408
+      "conteo": 2313
     }
   ],
   "por_revista": [
     {
-      "clave": "Global Biodiversity Information Facility",
-      "conteo": 147
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 107
     },
     {
-      "clave": "Biological Conservation",
-      "conteo": 40
+      "clave": "Repositorio Institucional FULL",
+      "conteo": 80
     },
     {
-      "clave": "Research Square",
-      "conteo": 39
+      "clave": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
+      "conteo": 46
     },
     {
-      "clave": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
-      "conteo": 38
-    },
-    {
-      "clave": "Animals",
-      "conteo": 36
-    },
-    {
-      "clave": "bioRxiv (Cold Spring Harbor Laboratory)",
-      "conteo": 36
-    },
-    {
-      "clave": "Ecology and Evolution",
-      "conteo": 33
-    },
-    {
-      "clave": "Zenodo (CERN European Organization for Nuclear Research)",
-      "conteo": 32
-    },
-    {
-      "clave": "Journal of Threatened Taxa",
-      "conteo": 31
-    },
-    {
-      "clave": "Figshare",
+      "clave": "Repositorio Universidad Distrital",
       "conteo": 29
     },
     {
-      "clave": "Conservation Biology",
+      "clave": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
       "conteo": 27
     },
     {
-      "clave": "Nature Communications",
+      "clave": "Minerva Digital Library (Universidad EAN)",
       "conteo": 26
     },
     {
-      "clave": "Scientific Reports",
-      "conteo": 25
-    },
-    {
-      "clave": "Digital Commons - University of South Florida (University of South Florida)",
-      "conteo": 23
-    },
-    {
-      "clave": "Springer eBooks",
-      "conteo": 23
-    },
-    {
-      "clave": "Diversity",
+      "clave": "Global Biodiversity Information Facility",
       "conteo": 22
     },
     {
-      "clave": "Cambridge University Press eBooks",
-      "conteo": 22
-    },
-    {
-      "clave": "Global Ecology and Conservation",
-      "conteo": 22
-    },
-    {
-      "clave": "PLoS ONE",
+      "clave": "Journal of High Energy Physics",
       "conteo": 21
     },
     {
@@ -89,113 +45,155 @@
       "conteo": 20
     },
     {
-      "clave": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
-      "conteo": 20
-    },
-    {
-      "clave": "The Science of The Total Environment",
+      "clave": "Repositorio Fundación Universitaria Agraria de Colombia",
       "conteo": 18
     },
     {
-      "clave": "Proceedings of the National Academy of Sciences",
-      "conteo": 18
-    },
-    {
-      "clave": "Nature",
-      "conteo": 18
-    },
-    {
-      "clave": "Global Change Biology",
-      "conteo": 18
-    },
-    {
-      "clave": "eLife",
-      "conteo": 18
-    },
-    {
-      "clave": "Frontiers in Ecology and Evolution",
+      "clave": "Ciencia Unisalle (Universidad de La Salle)",
       "conteo": 17
     },
     {
-      "clave": "Global Ecology and Biogeography",
+      "clave": "Repositorio Institucional UNIMAYOR",
       "conteo": 17
     },
     {
-      "clave": "Raptors Conservation",
-      "conteo": 17
+      "clave": "Repositorio Institucional Universidad El Bosque",
+      "conteo": 15
     },
     {
-      "clave": "Biodiversity and Conservation",
-      "conteo": 16
+      "clave": "Ciencia Latina Revista Científica Multidisciplinar",
+      "conteo": 14
+    },
+    {
+      "clave": "Zenodo (CERN European Organization for Nuclear Research)",
+      "conteo": 13
+    },
+    {
+      "clave": "Ornitología colombiana",
+      "conteo": 13
+    },
+    {
+      "clave": "Repository Technological University of Pereira (Technological University of Pereira)",
+      "conteo": 13
+    },
+    {
+      "clave": "Scientific Reports",
+      "conteo": 12
+    },
+    {
+      "clave": "Heliyon",
+      "conteo": 12
+    },
+    {
+      "clave": "Lumieres - Repositorio institucional Universidad de América",
+      "conteo": 12
+    },
+    {
+      "clave": "Biblioteca Digital Uniajc",
+      "conteo": 12
+    },
+    {
+      "clave": "PLoS ONE",
+      "conteo": 11
+    },
+    {
+      "clave": "PeerJ",
+      "conteo": 11
+    },
+    {
+      "clave": "Revista de Biología Tropical",
+      "conteo": 9
+    },
+    {
+      "clave": "Repositorio Digital Universidad ECCI",
+      "conteo": 9
+    },
+    {
+      "clave": "Energies",
+      "conteo": 9
+    },
+    {
+      "clave": "Diversity",
+      "conteo": 8
+    },
+    {
+      "clave": "Caldasia",
+      "conteo": 8
+    },
+    {
+      "clave": "Repositorio UNIREMINGTON",
+      "conteo": 8
+    },
+    {
+      "clave": "Intellectum (Universidad de La Sabana)",
+      "conteo": 8
     },
     {
       "clave": "Otros",
-      "conteo": 2422
+      "conteo": 1609
     }
   ],
   "por_idioma": [
     {
       "clave": "Inglés",
-      "conteo": 2480
+      "conteo": 998
     },
     {
       "clave": "Español",
-      "conteo": 235
+      "conteo": 1233
     },
     {
       "clave": "Portugués",
-      "conteo": 120
+      "conteo": 43
     },
     {
       "clave": "Francés",
-      "conteo": 16
+      "conteo": 5
     },
     {
       "clave": "Otros idiomas",
-      "conteo": 52
+      "conteo": 12
     },
     {
       "clave": "Sin idioma identificado",
-      "conteo": 505
+      "conteo": 22
     }
   ],
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 3404,
-      "total": 3408
+      "con_dato": 2308,
+      "total": 2313
     },
     {
       "campo": "authors",
-      "con_dato": 3348,
-      "total": 3408
+      "con_dato": 2300,
+      "total": 2313
     },
     {
       "campo": "abstract",
-      "con_dato": 3114,
-      "total": 3408
+      "con_dato": 2237,
+      "total": 2313
     },
     {
       "campo": "keywords",
-      "con_dato": 2904,
-      "total": 3408
+      "con_dato": 2291,
+      "total": 2313
     },
     {
       "campo": "doi",
-      "con_dato": 3176,
-      "total": 3408
+      "con_dato": 1792,
+      "total": 2313
     }
   ],
-  "pendientes_revision": 3408,
-  "posibles_duplicados": 976,
+  "pendientes_revision": 2313,
+  "posibles_duplicados": 305,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
     "2026-10-28",
-    "2026-10-28",
-    "2026-10-29",
     "2026-10-30",
-    "2026-10-30"
+    "2026-11-24"
   ],
   "anios_disponibles": [
     2020,
@@ -209,17 +207,193 @@
   ],
   "anio_seleccionado": 2023,
   "indicadores": {
-    "total_publicaciones": 3408,
-    "publicaciones_individuales": 709,
-    "publicaciones_colaborativas": 2618,
-    "total_firmas": 17928,
-    "autores_unicos": 15120,
-    "articulos_sin_autoria": 81,
+    "total_publicaciones": 2313,
+    "publicaciones_individuales": 661,
+    "publicaciones_colaborativas": 1618,
+    "total_firmas": 13471,
+    "autores_unicos": 9603,
+    "articulos_sin_autoria": 34,
     "publicaciones_internacionales": null,
     "publicaciones_interinstitucionales": null,
-    "grado_colaboracion": 0.79,
-    "rcc": 0.595
+    "grado_colaboracion": 0.71,
+    "rcc": 0.518
   },
+  "por_tipo_documento": [
+    {
+      "clave": "Artículo",
+      "conteo": 1505
+    },
+    {
+      "clave": "Tesis",
+      "conteo": 460
+    },
+    {
+      "clave": "Libro",
+      "conteo": 72
+    },
+    {
+      "clave": "Review",
+      "conteo": 60
+    },
+    {
+      "clave": "Capítulo de libro",
+      "conteo": 59
+    },
+    {
+      "clave": "Conjunto de datos",
+      "conteo": 36
+    },
+    {
+      "clave": "Artículo de congreso",
+      "conteo": 23
+    },
+    {
+      "clave": "Preprint",
+      "conteo": 21
+    },
+    {
+      "clave": "Informe",
+      "conteo": 15
+    },
+    {
+      "clave": "peer-review",
+      "conteo": 8
+    },
+    {
+      "clave": "paratext",
+      "conteo": 8
+    },
+    {
+      "clave": "book-review",
+      "conteo": 6
+    },
+    {
+      "clave": "Editorial",
+      "conteo": 5
+    },
+    {
+      "clave": "other",
+      "conteo": 5
+    },
+    {
+      "clave": "Resumen de congreso",
+      "conteo": 2
+    },
+    {
+      "clave": "data-paper",
+      "conteo": 1
+    },
+    {
+      "clave": "Nota corta (carta)",
+      "conteo": 1
+    }
+  ],
+  "por_acceso_abierto": [
+    {
+      "clave": "Acceso abierto",
+      "conteo": 2255
+    },
+    {
+      "clave": "Acceso cerrado",
+      "conteo": 32
+    },
+    {
+      "clave": "Sin dato",
+      "conteo": 26
+    }
+  ],
+  "instituciones_primer_autor": [
+    {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 123
+    },
+    {
+      "clave": "Universidad Nacional de Colombia",
+      "conteo": 105
+    },
+    {
+      "clave": "Fundación Universitaria Los Libertadores",
+      "conteo": 80
+    },
+    {
+      "clave": "Pontificia Universidad Javeriana",
+      "conteo": 67
+    },
+    {
+      "clave": "Universidad de Antioquia",
+      "conteo": 65
+    },
+    {
+      "clave": "Universidad de Los Andes",
+      "conteo": 55
+    },
+    {
+      "clave": "Universidad del Valle",
+      "conteo": 45
+    },
+    {
+      "clave": "Universidad de Córdoba",
+      "conteo": 44
+    },
+    {
+      "clave": "Universidad Distrital Francisco José de Caldas",
+      "conteo": 43
+    },
+    {
+      "clave": "University of Córdoba",
+      "conteo": 38
+    }
+  ],
+  "instituciones_presencia": [
+    {
+      "clave": "Universidad Nacional de Colombia",
+      "conteo": 198
+    },
+    {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 135
+    },
+    {
+      "clave": "Universidad de Antioquia",
+      "conteo": 116
+    },
+    {
+      "clave": "Pontificia Universidad Javeriana",
+      "conteo": 106
+    },
+    {
+      "clave": "Universidad de Los Andes",
+      "conteo": 99
+    },
+    {
+      "clave": "Fundación Universitaria Los Libertadores",
+      "conteo": 84
+    },
+    {
+      "clave": "Universidad del Valle",
+      "conteo": 67
+    },
+    {
+      "clave": "Universidad de Córdoba",
+      "conteo": 65
+    },
+    {
+      "clave": "Consejo Nacional de Investigaciones Científicas y Técnicas",
+      "conteo": 64
+    },
+    {
+      "clave": "Centre National de la Recherche Scientifique",
+      "conteo": 58
+    }
+  ],
+  "colaboracion_por_anio": [
+    {
+      "anio": 2023,
+      "una_institucion": 1065,
+      "nacional": 269,
+      "internacional": 813
+    }
+  ],
   "clasificacion_disponible": true,
   "por_ofc": [
     {
@@ -446,32 +620,32 @@
     },
     {
       "fuente": "OpenAlex",
-      "total_articulos": 3382,
+      "total_articulos": 2287,
       "completitud": [
         {
           "campo": "title",
-          "con_dato": 3378,
-          "total": 3382
+          "con_dato": 2282,
+          "total": 2287
         },
         {
           "campo": "authors",
-          "con_dato": 3322,
-          "total": 3382
+          "con_dato": 2274,
+          "total": 2287
         },
         {
           "campo": "abstract",
-          "con_dato": 3088,
-          "total": 3382
+          "con_dato": 2211,
+          "total": 2287
         },
         {
           "campo": "keywords",
-          "con_dato": 2899,
-          "total": 3382
+          "con_dato": 2286,
+          "total": 2287
         },
         {
           "campo": "doi",
-          "con_dato": 3168,
-          "total": 3382
+          "con_dato": 1784,
+          "total": 2287
         }
       ]
     }

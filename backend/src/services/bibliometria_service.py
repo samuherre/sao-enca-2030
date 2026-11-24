@@ -32,6 +32,7 @@ from backend.src.schemas.bibliometria import (
     AporteFuente,
     ArticuloItem,
     ArticulosOFC,
+    ColaboracionAnual,
     CompletitudCampo,
     ConteoOFC,
     ConteoPorClave,
@@ -497,6 +498,199 @@ def _top_por_revista(registros: list[dict]) -> list[ConteoPorClave]:
     return resultado
 
 
+# Etiquetas legibles para los tipos de documento de OpenAlex (los no mapeados
+# se muestran con su código tal cual; no se inventa una traducción).
+_TIPO_DOC_ETIQUETAS = {
+    "article": "Artículo",
+    "review": "Review",
+    "book-chapter": "Capítulo de libro",
+    "book": "Libro",
+    "dissertation": "Tesis",
+    "conference-paper": "Artículo de congreso",
+    "conference-abstract": "Resumen de congreso",
+    "letter": "Nota corta (carta)",
+    "dataset": "Conjunto de datos",
+    "report": "Informe",
+    "preprint": "Preprint",
+    "editorial": "Editorial",
+}
+
+
+def _clave_dedup(r: dict) -> str | None:
+    """Clave de identidad entre fuentes: DOI normalizado o (título + año).
+
+    DOI (minúsculas, sin prefijo URL) si existe; si no, título normalizado + año
+    como respaldo (común en fuentes sin DOI, p. ej. SciELO/Redalyc o Boletín).
+    ``None`` si no hay ni DOI ni título (no se puede deduplicar sin clave).
+    """
+    doi = r.get("doi")
+    if doi and str(doi).strip():
+        d = str(doi).strip().lower()
+        d = d.replace("https://doi.org/", "").replace("http://doi.org/", "")
+        return f"doi:{d}"
+    titulo = r.get("title")
+    if titulo and str(titulo).strip():
+        t = norm_titulo_dedup(str(titulo))
+        anio = r.get("publication_year")
+        return f"ta:{t}|{anio}"
+    return None
+
+
+def norm_titulo_dedup(titulo: str) -> str:
+    """Normaliza un título para deduplicar (minúsculas, sin acentos, 1 espacio)."""
+    t = unicodedata.normalize("NFKD", titulo.lower().strip())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", t)
+
+
+def _dedup_entre_fuentes(registros: list[dict]) -> None:
+    """Marca ``is_duplicate`` ENTRE fuentes por DOI (o título+año) IN PLACE.
+
+    Recorre en orden; la PRIMERA aparición de una clave es la "canónica" y las
+    siguientes se marcan ``is_duplicate=True`` con ``duplicate_of`` al id de la
+    primera. No borra registros (trazabilidad). Respeta marcas previas: si un
+    registro ya venía marcado duplicado dentro de su fuente, se conserva.
+    """
+    vistos: dict[str, str] = {}
+    for r in registros:
+        clave = _clave_dedup(r)
+        if clave is None:
+            continue
+        if clave in vistos:
+            r["is_duplicate"] = True
+            if not r.get("duplicate_of"):
+                r["duplicate_of"] = vistos[clave]
+        else:
+            vistos[clave] = r.get("article_id") or clave
+
+
+def _por_tipo_documento(registros: list[dict]) -> list[ConteoPorClave]:
+    """Distribución por tipo de documento (``document_type``), ordenada desc.
+
+    Usa etiqueta legible cuando el código es conocido; si no, el propio código.
+    Los registros sin tipo no se cuentan (no se inventa).
+    """
+    conteo: Counter = Counter()
+    for r in registros:
+        t = r.get("document_type")
+        if t:
+            conteo[str(t)] += 1
+    return [
+        ConteoPorClave(clave=_TIPO_DOC_ETIQUETAS.get(codigo, codigo), conteo=n)
+        for codigo, n in conteo.most_common()
+    ]
+
+
+def _por_acceso_abierto(registros: list[dict]) -> list[ConteoPorClave]:
+    """Distribución por acceso abierto: Abierto / Cerrado / Sin dato.
+
+    Solo cuenta ``is_open_access`` cuando es booleano; ``None`` va a "Sin dato"
+    (no se asume abierto ni cerrado).
+    """
+    abierto = cerrado = sin_dato = 0
+    for r in registros:
+        v = r.get("is_open_access")
+        if v is True:
+            abierto += 1
+        elif v is False:
+            cerrado += 1
+        else:
+            sin_dato += 1
+    salida: list[ConteoPorClave] = []
+    if abierto:
+        salida.append(ConteoPorClave(clave="Acceso abierto", conteo=abierto))
+    if cerrado:
+        salida.append(ConteoPorClave(clave="Acceso cerrado", conteo=cerrado))
+    if sin_dato:
+        salida.append(ConteoPorClave(clave="Sin dato", conteo=sin_dato))
+    return salida
+
+
+def _instituciones(registros: list[dict]) -> tuple[list[ConteoPorClave], list[ConteoPorClave]]:
+    """Dos rankings de instituciones (top 10 cada uno), decisión de Julián:
+
+    1. **Primer autor**: cuenta solo la institución del autor en posición
+       ``first`` (cada artículo suma 1 a esa/s institución/es).
+    2. **Presencia**: una institución cuenta 1 por artículo si al menos uno de
+       sus autores pertenece a ella (sin doble conteo por varios autores de la
+       misma institución en el mismo artículo).
+
+    Refleja el nombre de institución tal cual viene del dato; sin afiliación no
+    se cuenta (no se inventa). Devuelve ``(primer_autor, presencia)``.
+    """
+    primer_autor: Counter = Counter()
+    presencia: Counter = Counter()
+    for r in registros:
+        autorias = r.get("authorships") or []
+        if not isinstance(autorias, list):
+            continue
+        insts_articulo: set[str] = set()  # para presencia (una vez por artículo)
+        for a in autorias:
+            if not isinstance(a, dict):
+                continue
+            nombres = {
+                str(i.get("name")).strip()
+                for i in (a.get("institutions") or [])
+                if isinstance(i, dict) and i.get("name")
+            }
+            insts_articulo |= nombres
+            if a.get("position") == "first":
+                for nombre in nombres:
+                    primer_autor[nombre] += 1
+        for nombre in insts_articulo:
+            presencia[nombre] += 1
+
+    def _top10(c: Counter) -> list[ConteoPorClave]:
+        return [ConteoPorClave(clave=n, conteo=v) for n, v in c.most_common(10)]
+
+    return _top10(primer_autor), _top10(presencia)
+
+
+def _colaboracion_por_anio(registros: list[dict]) -> list["ColaboracionAnual"]:
+    """Tipo de colaboración por año: una institución / nacional / internacional.
+
+    Por artículo, mirando los países e instituciones de sus autores:
+    - una sola institución → sin colaboración entre instituciones,
+    - varias instituciones todas de Colombia → colaboración nacional,
+    - instituciones de más de un país → colaboración internacional.
+    Los artículos sin afiliación suficiente no se clasifican (no se inventa).
+    """
+    # anio -> [una_inst, nacional, internacional]
+    por_anio: dict[int, list[int]] = defaultdict(lambda: [0, 0, 0])
+    for r in registros:
+        anio = r.get("publication_year")
+        if not isinstance(anio, int):
+            continue
+        autorias = r.get("authorships") or []
+        instituciones: set[str] = set()
+        paises: set[str] = set()
+        for a in autorias:
+            if not isinstance(a, dict):
+                continue
+            for i in a.get("institutions") or []:
+                if isinstance(i, dict) and i.get("name"):
+                    instituciones.add(str(i["name"]).strip())
+                    if i.get("country"):
+                        paises.add(str(i["country"]).strip())
+        if not instituciones:
+            continue  # sin afiliación contable: no se clasifica
+        if len(paises) > 1:
+            por_anio[anio][2] += 1  # internacional
+        elif len(instituciones) > 1:
+            por_anio[anio][1] += 1  # nacional (varias instituciones, mismo país)
+        else:
+            por_anio[anio][0] += 1  # una sola institución
+    return [
+        ColaboracionAnual(
+            anio=anio,
+            una_institucion=vals[0],
+            nacional=vals[1],
+            internacional=vals[2],
+        )
+        for anio, vals in sorted(por_anio.items())
+    ]
+
+
 def _completitud(registros: list[dict]) -> list[CompletitudCampo]:
     """Completitud por campo sobre un conjunto de registros."""
     total = len(registros)
@@ -730,6 +924,14 @@ class BibliometriaService:
                 por_fuente[fuente].append(r)
                 combinados.append(r)
 
+        # --- 2a-bis) Deduplicación ENTRE fuentes por DOI (decisión de Julián) -
+        # Mismo DOI = mismo artículo: se conserva UNA copia (la primera vista) y
+        # las repetidas se marcan is_duplicate. Para registros SIN DOI, respaldo
+        # por (título normalizado + año). No se BORRA nada: se marca, igual que
+        # la dedup interna de cada fuente, para que el total refleje artículos
+        # únicos sin perder trazabilidad.
+        _dedup_entre_fuentes(combinados)
+
         # --- 2b) Años disponibles (SIEMPRE sobre el conjunto completo) -------
         # Se calcula antes de aplicar el filtro para que el desplegable del
         # frontend liste todos los años aunque ya se haya seleccionado uno.
@@ -771,6 +973,11 @@ class BibliometriaService:
         por_revista = _top_por_revista(combinados)
         # Distribución por idioma: inglés/español/portugués/francés + "Otros".
         por_idioma = _por_idioma(combinados)
+        # Distribuciones nuevas (campos de la re-ingesta: tipo, OA, afiliaciones).
+        por_tipo_documento = _por_tipo_documento(combinados)
+        por_acceso_abierto = _por_acceso_abierto(combinados)
+        inst_primer_autor, inst_presencia = _instituciones(combinados)
+        colaboracion_por_anio = _colaboracion_por_anio(combinados)
         pendientes = sum(
             1 for r in combinados if r.get("inclusion_status") == "PENDIENTE_REVISIÓN"
         )
@@ -859,6 +1066,11 @@ class BibliometriaService:
             anios_disponibles=anios_disponibles,
             anio_seleccionado=anio,
             indicadores=_indicadores_colaboracion(combinados),
+            por_tipo_documento=por_tipo_documento,
+            por_acceso_abierto=por_acceso_abierto,
+            instituciones_primer_autor=inst_primer_autor,
+            instituciones_presencia=inst_presencia,
+            colaboracion_por_anio=colaboracion_por_anio,
             clasificacion_disponible=clasificacion_disponible,
             por_ofc=por_ofc,
             sin_ofc=sin_ofc,

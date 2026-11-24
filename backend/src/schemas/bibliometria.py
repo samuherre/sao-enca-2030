@@ -21,6 +21,19 @@ class ConteoPorClave(SchemaBase):
     conteo: int
 
 
+class ColaboracionAnual(SchemaBase):
+    """Tipo de colaboración de un año: una institución / nacional / internacional.
+
+    Se calcula por artículo a partir de las afiliaciones (país e institución de
+    los autores). Los artículos sin afiliación contable no se clasifican.
+    """
+
+    anio: int
+    una_institucion: int
+    nacional: int
+    internacional: int
+
+
 class CompletitudCampo(SchemaBase):
     """Completitud de un campo del contrato: cuántos registros lo tienen."""
 
@@ -200,6 +213,14 @@ class ResumenConsolidado(SchemaBase):
     anio_seleccionado: int | None = None
     # Indicadores de colaboración/autoría (tabla + índices Subramanyam y RCC).
     indicadores: IndicadoresColaboracion | None = None
+    # Distribuciones nuevas (re-ingesta con afiliaciones/tipo/OA).
+    por_tipo_documento: list[ConteoPorClave] = []
+    por_acceso_abierto: list[ConteoPorClave] = []
+    # Instituciones: dos rankings (decisión de Julián), top 10 cada uno.
+    instituciones_primer_autor: list[ConteoPorClave] = []
+    instituciones_presencia: list[ConteoPorClave] = []
+    # Tipo de colaboración por año (una institución / nacional / internacional).
+    colaboracion_por_anio: list[ColaboracionAnual] = []
     # Clasificación por OFC (automática, sujeta a revisión).
     clasificacion_disponible: bool = False
     por_ofc: list[ConteoOFC] = []

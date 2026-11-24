@@ -266,6 +266,77 @@ function AnioAcumuladoCard({
   );
 }
 
+/** Ranking de instituciones (barras horizontales; nombres largos). */
+function InstitucionesCard({
+  titulo,
+  descripcion,
+  data,
+}: {
+  titulo: string;
+  descripcion: string;
+  data: readonly { clave: string; conteo: number }[];
+}) {
+  if (data.length === 0) return null;
+  const chart = data.map((d) => ({ inst: d.clave, conteo: d.conteo }));
+  const alto = Math.max(220, chart.length * 32);
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>{titulo}</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>{descripcion}</p>
+      <div style={{ width: "100%", height: alto }}>
+        <ResponsiveContainer>
+          <BarChart layout="vertical" data={chart} margin={{ top: 8, right: 24, bottom: 8, left: 8 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis type="number" allowDecimals={false} />
+            <YAxis type="category" dataKey="inst" width={240} tick={{ fontSize: 11 }} />
+            <Tooltip formatter={(v: number) => [`${v} artículos`, "Artículos"]} />
+            <Bar dataKey="conteo" name="Artículos" fill="#2f8f5b" radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </section>
+  );
+}
+
+/** Gráfico de barras apiladas de colaboración por año. */
+function ColaboracionCard({
+  data,
+}: {
+  data: ResumenConsolidado["colaboracion_por_anio"];
+}) {
+  if (data.length === 0) return null;
+  const chart = data.map((d) => ({
+    anio: String(d.anio),
+    "Una institución": d.una_institucion,
+    Nacional: d.nacional,
+    Internacional: d.internacional,
+  }));
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Tipo de colaboración por año</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Clasificación de cada artículo según las instituciones de sus autores: de una sola
+        institución, colaboración nacional (varias instituciones colombianas) o internacional
+        (instituciones de más de un país). Los artículos sin afiliación no se clasifican.
+      </p>
+      <div style={{ width: "100%", height: 300 }}>
+        <ResponsiveContainer>
+          <BarChart data={chart} margin={{ top: 8, right: 16, bottom: 8, left: 8 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis dataKey="anio" tick={{ fontSize: 10 }} />
+            <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="Una institución" stackId="c" fill="#9ecfb4" />
+            <Bar dataKey="Nacional" stackId="c" fill="#2f8f5b" />
+            <Bar dataKey="Internacional" stackId="c" fill="#1f5c3a" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+    </section>
+  );
+}
+
 /**
  * Distribución por revista: barras HORIZONTALES con el nombre de la revista.
  *
@@ -755,6 +826,19 @@ export function BibliometriaPage() {
           <OFCCard resumen={data} />
           <RevistasCard data={data.por_revista} />
           <BarsCard title="Artículos por idioma" data={data.por_idioma} />
+          <BarsCard title="Artículos por tipo de documento" data={data.por_tipo_documento} />
+          <BarsCard title="Acceso abierto vs. cerrado" data={data.por_acceso_abierto} />
+          <InstitucionesCard
+            titulo="Instituciones — por primer autor (top 10)"
+            descripcion="Instituciones del autor principal (posición 'first') con más artículos."
+            data={data.instituciones_primer_autor}
+          />
+          <InstitucionesCard
+            titulo="Instituciones — por presencia (top 10)"
+            descripcion="Instituciones con más artículos en los que participa al menos uno de sus autores (cuenta 1 por artículo)."
+            data={data.instituciones_presencia}
+          />
+          <ColaboracionCard data={data.colaboracion_por_anio} />
         </>
       )}
     </div>

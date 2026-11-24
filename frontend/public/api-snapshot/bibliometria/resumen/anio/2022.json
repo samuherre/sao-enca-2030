@@ -1,201 +1,199 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 3140,
+  "total_articulos": 2181,
   "por_anio": [
     {
       "clave": "2022",
-      "conteo": 3140
+      "conteo": 2181
     }
   ],
   "por_revista": [
     {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 104
+    },
+    {
+      "clave": "Repositorio Institucional FULL",
+      "conteo": 56
+    },
+    {
+      "clave": "Repositorio Institucional (Pontificia Universidad Javeriana)",
+      "conteo": 34
+    },
+    {
       "clave": "Global Biodiversity Information Facility",
-      "conteo": 57
+      "conteo": 33
     },
     {
-      "clave": "Zenodo (CERN European Organization for Nuclear Research)",
-      "conteo": 40
-    },
-    {
-      "clave": "Diversity",
+      "clave": "Lumieres - Repositorio institucional Universidad de América",
       "conteo": 31
     },
     {
-      "clave": "bioRxiv (Cold Spring Harbor Laboratory)",
-      "conteo": 31
-    },
-    {
-      "clave": "Scientific Reports",
-      "conteo": 29
-    },
-    {
-      "clave": "Frontiers in Ecology and Evolution",
+      "clave": "Repositorio Institucional Universidad El Bosque",
       "conteo": 28
     },
     {
-      "clave": "Sustainability",
-      "conteo": 27
-    },
-    {
-      "clave": "Global Ecology and Conservation",
-      "conteo": 26
-    },
-    {
-      "clave": "Animals",
-      "conteo": 25
-    },
-    {
-      "clave": "Figshare",
-      "conteo": 25
-    },
-    {
-      "clave": "Biological Conservation",
+      "clave": "Ciencia Unisalle (Universidad de La Salle)",
       "conteo": 24
     },
     {
-      "clave": "Huitzil Revista Mexicana de Ornitología",
+      "clave": "Zenodo (CERN European Organization for Nuclear Research)",
       "conteo": 23
     },
     {
-      "clave": "Ecology and Evolution",
-      "conteo": 22
-    },
-    {
-      "clave": "Conservation Science and Practice",
+      "clave": "Sustainability",
       "conteo": 21
     },
     {
-      "clave": "The Science of The Total Environment",
-      "conteo": 20
-    },
-    {
-      "clave": "Research Square",
-      "conteo": 20
-    },
-    {
-      "clave": "Nature Communications",
-      "conteo": 19
-    },
-    {
-      "clave": "Publons reviews and discussion",
-      "conteo": 19
-    },
-    {
-      "clave": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
-      "conteo": 19
-    },
-    {
-      "clave": "PLoS ONE",
+      "clave": "Repositorio Digital Universidad ECCI",
       "conteo": 18
     },
     {
-      "clave": "Biological reviews/Biological reviews of the Cambridge Philosophical Society",
-      "conteo": 18
-    },
-    {
-      "clave": "Diversity and Distributions",
+      "clave": "Ornitología colombiana",
       "conteo": 17
     },
     {
-      "clave": "Journal of Applied Ecology",
+      "clave": "Repositorio Universidad de Caldas",
       "conteo": 17
     },
     {
-      "clave": "Avian Conservation and Ecology",
-      "conteo": 16
-    },
-    {
-      "clave": "Proceedings of the National Academy of Sciences",
-      "conteo": 16
-    },
-    {
-      "clave": "Land",
-      "conteo": 15
-    },
-    {
-      "clave": "Ibis",
-      "conteo": 15
-    },
-    {
-      "clave": "Global Change Biology",
-      "conteo": 15
-    },
-    {
-      "clave": "Ecological Applications",
-      "conteo": 15
-    },
-    {
-      "clave": "El Hornero",
+      "clave": "Scientific Reports",
       "conteo": 14
     },
     {
+      "clave": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
+      "conteo": 14
+    },
+    {
+      "clave": "Repositorio Universidad Distrital",
+      "conteo": 13
+    },
+    {
+      "clave": "Diversity",
+      "conteo": 12
+    },
+    {
+      "clave": "Biota Colombiana",
+      "conteo": 11
+    },
+    {
+      "clave": "The Catalogue of Life",
+      "conteo": 10
+    },
+    {
+      "clave": "Caldasia",
+      "conteo": 10
+    },
+    {
+      "clave": "Mundo FESC",
+      "conteo": 10
+    },
+    {
+      "clave": "Repositorio Institucional UNIMAYOR",
+      "conteo": 10
+    },
+    {
+      "clave": "Boletín Científico Centro de Museos Museo de Historia Natural",
+      "conteo": 8
+    },
+    {
+      "clave": "PLoS ONE",
+      "conteo": 8
+    },
+    {
+      "clave": "PeerJ",
+      "conteo": 8
+    },
+    {
+      "clave": "Biblioteca Digital Uniajc",
+      "conteo": 8
+    },
+    {
+      "clave": "Boletín SAO",
+      "conteo": 7
+    },
+    {
+      "clave": "Intropica",
+      "conteo": 7
+    },
+    {
+      "clave": "Nature Communications",
+      "conteo": 7
+    },
+    {
+      "clave": "UN Sustainable Development Solutions Network (SDSN) eBooks",
+      "conteo": 7
+    },
+    {
+      "clave": "Frontiers in Ecology and Evolution",
+      "conteo": 7
+    },
+    {
       "clave": "Otros",
-      "conteo": 2351
+      "conteo": 1523
     }
   ],
   "por_idioma": [
     {
       "clave": "Inglés",
-      "conteo": 2063
+      "conteo": 845
     },
     {
       "clave": "Español",
-      "conteo": 220
+      "conteo": 1272
     },
     {
       "clave": "Portugués",
-      "conteo": 98
+      "conteo": 25
     },
     {
       "clave": "Francés",
-      "conteo": 5
+      "conteo": 3
     },
     {
       "clave": "Otros idiomas",
-      "conteo": 53
+      "conteo": 15
     },
     {
       "clave": "Sin idioma identificado",
-      "conteo": 701
+      "conteo": 21
     }
   ],
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 3139,
-      "total": 3140
+      "con_dato": 2178,
+      "total": 2181
     },
     {
       "campo": "authors",
-      "con_dato": 3084,
-      "total": 3140
+      "con_dato": 2173,
+      "total": 2181
     },
     {
       "campo": "abstract",
-      "con_dato": 2824,
-      "total": 3140
+      "con_dato": 2084,
+      "total": 2181
     },
     {
       "campo": "keywords",
-      "con_dato": 2439,
-      "total": 3140
+      "con_dato": 2159,
+      "total": 2181
     },
     {
       "campo": "doi",
-      "con_dato": 2991,
-      "total": 3140
+      "con_dato": 1704,
+      "total": 2181
     }
   ],
-  "pendientes_revision": 3140,
-  "posibles_duplicados": 863,
+  "pendientes_revision": 2181,
+  "posibles_duplicados": 336,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
     "2026-10-28",
-    "2026-10-28",
-    "2026-10-29",
     "2026-10-30",
-    "2026-10-30"
+    "2026-11-24"
   ],
   "anios_disponibles": [
     2020,
@@ -209,17 +207,193 @@
   ],
   "anio_seleccionado": 2022,
   "indicadores": {
-    "total_publicaciones": 3140,
-    "publicaciones_individuales": 529,
-    "publicaciones_colaborativas": 2535,
-    "total_firmas": 18181,
-    "autores_unicos": 15707,
-    "articulos_sin_autoria": 76,
+    "total_publicaciones": 2181,
+    "publicaciones_individuales": 617,
+    "publicaciones_colaborativas": 1536,
+    "total_firmas": 11538,
+    "autores_unicos": 9723,
+    "articulos_sin_autoria": 28,
     "publicaciones_internacionales": null,
     "publicaciones_interinstitucionales": null,
-    "grado_colaboracion": 0.83,
-    "rcc": 0.628
+    "grado_colaboracion": 0.71,
+    "rcc": 0.515
   },
+  "por_tipo_documento": [
+    {
+      "clave": "Artículo",
+      "conteo": 1371
+    },
+    {
+      "clave": "Tesis",
+      "conteo": 431
+    },
+    {
+      "clave": "Libro",
+      "conteo": 70
+    },
+    {
+      "clave": "Capítulo de libro",
+      "conteo": 66
+    },
+    {
+      "clave": "Review",
+      "conteo": 62
+    },
+    {
+      "clave": "Conjunto de datos",
+      "conteo": 47
+    },
+    {
+      "clave": "Informe",
+      "conteo": 33
+    },
+    {
+      "clave": "Artículo de congreso",
+      "conteo": 21
+    },
+    {
+      "clave": "Preprint",
+      "conteo": 17
+    },
+    {
+      "clave": "Editorial",
+      "conteo": 15
+    },
+    {
+      "clave": "book-review",
+      "conteo": 6
+    },
+    {
+      "clave": "paratext",
+      "conteo": 4
+    },
+    {
+      "clave": "Resumen de congreso",
+      "conteo": 3
+    },
+    {
+      "clave": "data-paper",
+      "conteo": 3
+    },
+    {
+      "clave": "erratum",
+      "conteo": 2
+    },
+    {
+      "clave": "peer-review",
+      "conteo": 2
+    },
+    {
+      "clave": "other",
+      "conteo": 1
+    }
+  ],
+  "por_acceso_abierto": [
+    {
+      "clave": "Acceso abierto",
+      "conteo": 2124
+    },
+    {
+      "clave": "Acceso cerrado",
+      "conteo": 30
+    },
+    {
+      "clave": "Sin dato",
+      "conteo": 27
+    }
+  ],
+  "instituciones_primer_autor": [
+    {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 113
+    },
+    {
+      "clave": "Universidad Nacional de Colombia",
+      "conteo": 110
+    },
+    {
+      "clave": "Pontificia Universidad Javeriana",
+      "conteo": 73
+    },
+    {
+      "clave": "Universidad de Antioquia",
+      "conteo": 61
+    },
+    {
+      "clave": "Fundación Universitaria Los Libertadores",
+      "conteo": 55
+    },
+    {
+      "clave": "Universidad del Valle",
+      "conteo": 39
+    },
+    {
+      "clave": "Universidad de Caldas",
+      "conteo": 38
+    },
+    {
+      "clave": "Universidad de Los Andes",
+      "conteo": 36
+    },
+    {
+      "clave": "Universidad El Bosque",
+      "conteo": 34
+    },
+    {
+      "clave": "Universidad de Córdoba",
+      "conteo": 32
+    }
+  ],
+  "instituciones_presencia": [
+    {
+      "clave": "Universidad Nacional de Colombia",
+      "conteo": 194
+    },
+    {
+      "clave": "Universidad Industrial de Santander",
+      "conteo": 125
+    },
+    {
+      "clave": "Pontificia Universidad Javeriana",
+      "conteo": 113
+    },
+    {
+      "clave": "Universidad de Antioquia",
+      "conteo": 103
+    },
+    {
+      "clave": "Universidad de Los Andes",
+      "conteo": 80
+    },
+    {
+      "clave": "Universidad del Valle",
+      "conteo": 61
+    },
+    {
+      "clave": "Universidad de Caldas",
+      "conteo": 56
+    },
+    {
+      "clave": "Fundación Universitaria Los Libertadores",
+      "conteo": 56
+    },
+    {
+      "clave": "Centre National de la Recherche Scientifique",
+      "conteo": 53
+    },
+    {
+      "clave": "Universidad del Rosario",
+      "conteo": 48
+    }
+  ],
+  "colaboracion_por_anio": [
+    {
+      "anio": 2022,
+      "una_institucion": 1055,
+      "nacional": 234,
+      "internacional": 722
+    }
+  ],
   "clasificacion_disponible": true,
   "por_ofc": [
     {
@@ -446,32 +620,32 @@
     },
     {
       "fuente": "OpenAlex",
-      "total_articulos": 3113,
+      "total_articulos": 2154,
       "completitud": [
         {
           "campo": "title",
-          "con_dato": 3112,
-          "total": 3113
+          "con_dato": 2151,
+          "total": 2154
         },
         {
           "campo": "authors",
-          "con_dato": 3057,
-          "total": 3113
+          "con_dato": 2146,
+          "total": 2154
         },
         {
           "campo": "abstract",
-          "con_dato": 2797,
-          "total": 3113
+          "con_dato": 2057,
+          "total": 2154
         },
         {
           "campo": "keywords",
-          "con_dato": 2432,
-          "total": 3113
+          "con_dato": 2152,
+          "total": 2154
         },
         {
           "campo": "doi",
-          "con_dato": 2988,
-          "total": 3113
+          "con_dato": 1701,
+          "total": 2154
         }
       ]
     }

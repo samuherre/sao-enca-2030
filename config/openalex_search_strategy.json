@@ -1,21 +1,29 @@
 {
-  "_comentario": "Estrategia de busqueda SAO (search-strategy.md): 5 familias de ecuaciones instanciadas en sintaxis booleana de OpenAlex (operadores en MAYUSCULA; sinonimos con OR; multilingue ES/EN/PT dentro de cada ecuacion). Propuesta V1 del Equipo_Proyecto, a validar con SAO. No es secreto; no debe vivir en data/raw/.",
-  "_periodo": "2020-2030 se aplica via filter de anio del pipeline, no como keyword.",
+  "_comentario": "Estrategia de busqueda SAO — OPCION 2 (validada por Julian): corpus solo-Colombia = (afiliacion institucional colombiana) O (aves + toponimos UNICOS de Colombia). Las consultas 'tematica-CO' usan el filtro ESTRUCTURADO country_code=CO (autores en instituciones colombianas): es preciso, no por texto, y captura la investigacion aviar hecha DESDE Colombia. Las consultas 'toponimos-unicos' NO exigen pais: capturan estudios (incluso de extranjeros) sobre sitios colombianos de nombre inequivoco (Chiribiquete, Sierra Nevada de Santa Marta, Sumapaz...). Se descarto el enfoque de toponimos ambiguos en texto porque el 'search' de OpenAlex no filtra geografia (traia ~40k por consulta con ruido).",
+  "_periodo": "2020-2030 se aplica via filter de anio del pipeline.",
+  "_criterio_geografico": "country_code=CO (afiliacion) para tematicas; toponimos unicos sin pais para sitios emblematicos.",
   "consultas": [
     {
-      "term": "(bird OR birds OR avian OR avifauna OR ave OR aves OR \"aves silvestres\") AND (conservation OR conservacion OR conservacao OR protection OR proteccion OR protecao OR \"threatened species\")"
+      "_grupo": "tematica-CO",
+      "term": "bird OR birds OR avian OR avifauna OR ave OR aves OR \"aves silvestres\"",
+      "country_code": "CO"
     },
     {
-      "term": "(bird OR birds OR avian OR avifauna OR ave OR aves) AND (conservation OR conservacion OR conservacao OR protection OR \"habitat restoration\" OR \"restauracion de habitats\") AND (Colombia OR Colombian OR colombiana OR Andes OR Neotropical OR neotropico)"
+      "_grupo": "toponimos-unicos",
+      "_nota": "Sitios colombianos de nombre inequivoco: aves + sitio, sin exigir pais (capturan estudios de autores extranjeros sobre esos sitios).",
+      "term": "(bird OR birds OR avian OR ave OR aves) AND (Chiribiquete OR \"Sierra Nevada de Santa Marta\" OR \"Serrania de la Macarena\" OR \"Serrania del Baudo\" OR \"Serrania de los Yariguies\" OR \"Serrania de San Lucas\" OR \"Serrania de los Churumbelos\" OR \"Serrania de la Lindosa\")"
     },
     {
-      "term": "(bird OR birds OR avian OR ave OR aves) AND (\"habitat loss\" OR \"perdida de habitat\" OR deforestation OR deforestacion OR fragmentation OR fragmentacion OR \"climate change\" OR \"cambio climatico\")"
+      "_grupo": "toponimos-unicos",
+      "term": "(bird OR birds OR avian OR ave OR aves) AND (\"Paramo de Sumapaz\" OR Santurban OR Chingaza OR \"Nevado del Ruiz\" OR \"Nevado del Huila\" OR \"Nevado del Tolima\" OR \"Farallones de Cali\" OR Purace OR Munchique OR Tatama OR Paramillo)"
     },
     {
-      "term": "(bird OR birds OR avian OR avifauna OR ave OR aves) AND (biodiversity OR biodiversidad OR biodiversidade OR \"protected areas\" OR \"areas protegidas\" OR \"ecological restoration\" OR \"restauracion ecologica\" OR \"conservation planning\")"
+      "_grupo": "toponimos-unicos",
+      "term": "(bird OR birds OR avian OR ave OR aves) AND (\"Cienaga Grande de Santa Marta\" OR \"Desierto de la Tatacoa\" OR \"Canon del Chicamocha\" OR \"Laguna de Tota\" OR \"Laguna de la Cocha\" OR \"Rio Atrato\" OR \"Rio Apaporis\" OR \"Valle de Cocora\" OR \"Serrania de las Quinchas\" OR \"Serrania de los Paraguas\")"
     },
     {
-      "term": "(bird OR birds OR \"bird species\" OR ave OR aves) AND (\"threatened species\" OR \"especies amenazadas\" OR \"endangered birds\" OR \"aves amenazadas\" OR \"population monitoring\" OR \"monitoreo de poblaciones\" OR \"species monitoring\")"
+      "_grupo": "toponimos-unicos",
+      "term": "(bird OR birds OR avian OR ave OR aves) AND (Amacayacu OR Cahuinari OR \"Yaigoje Apaporis\" OR Tinigua OR \"Cueva de los Guacharos\" OR \"El Cocuy\" OR Iguaque OR \"Las Orquideas\" OR \"Los Katios\" OR Utria OR Sanquianga OR Gorgona OR Malpelo OR Tayrona OR \"Selva de Florencia\" OR \"Otun Quimbaya\" OR \"Rio Nambi\" OR \"Alto Quindio Acaime\")"
     }
   ]
 }
