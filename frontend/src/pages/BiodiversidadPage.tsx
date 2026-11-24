@@ -128,6 +128,19 @@ function urlGbifCategoriaIUCN(codigo: string): string {
 }
 
 /**
+ * Enlace a GBIF con las ocurrencias de UNA especie en Colombia. El portal sí
+ * filtra por ``species_key`` (clave del backbone de GBIF) desde la URL, así que
+ * el enlace lleva exactamente a los registros de esa especie.
+ */
+function urlGbifEspecie(speciesKey: string): string {
+  const params = new URLSearchParams({
+    country: "CO",
+    species_key: speciesKey,
+  });
+  return `https://www.gbif.org/occurrence/search?${params.toString()}`;
+}
+
+/**
  * Enlace a la VISTA DE MAPA de GBIF (mapa de calor de densidad de ocurrencias),
  * con los filtros que el portal aplica de forma fiable desde la URL: país y,
  * opcionalmente, publicador. La pestaña "MAP" del portal muestra el mapa de
@@ -1412,11 +1425,16 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
   }
 
   const especie = especies.find((e) => e.species_key === seleccion) ?? especies[0];
+  // Para especies amenazadas/endémicas se muestra TODO el rango de años
+  // disponible (sin recortar en 1990): sus registros suelen ser históricos y
+  // escasos (p. ej. ejemplares de museo de 1901), y recortar los ocultaba.
   const serie = especie
-    ? especie.por_anio.filter((p) => p.anio >= 1990).map((p) => ({
-        anio: String(p.anio),
-        registros: p.registros_ocurrencia,
-      }))
+    ? [...especie.por_anio]
+        .sort((a, b) => a.anio - b.anio)
+        .map((p) => ({
+          anio: String(p.anio),
+          registros: p.registros_ocurrencia,
+        }))
     : [];
 
   function nombreEspecie(e: import("../types").EspecieAmenazada): string {
@@ -1521,7 +1539,16 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
                     {" "}
                     Especie endémica de Colombia.
                   </span>
-                ) : null}
+                ) : null}{" "}
+                <a
+                  href={urlGbifEspecie(especie.species_key)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ver en GBIF los registros de ocurrencia de esta especie en Colombia"
+                  style={{ color: VERDE_OSCURO, textDecoration: "underline", fontWeight: 600 }}
+                >
+                  Ver registros en GBIF ↗
+                </a>
               </p>
 
               {serie.length > 0 ? (
@@ -1541,7 +1568,8 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
                 </div>
               ) : (
                 <p style={{ color: "#666", fontSize: "0.85rem" }}>
-                  Sin registros con año asignado desde 1990 para esta especie.
+                  Esta especie no tiene registros con año asignado en GBIF (sus ocurrencias no
+                  traen fecha). Usa el enlace "Ver registros en GBIF" para consultarlas.
                 </p>
               )}
             </>
