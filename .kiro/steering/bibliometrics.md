@@ -131,8 +131,14 @@ Julián dio visto bueno a una re-ingesta ÚNICA de OpenAlex (~23.000 works, filt
 solo-Colombia) que amplía el Article Data Contract y alimenta nuevas vistas. Se
 hace de una sola vez para no descargar dos veces. Campos/gráficas aprobados:
 
-* **Instituciones** que más publican (gráfica/tabla). Ponderación por rol de
-  autor: `PENDING_VALIDATION` (ver abajo, hay dos reglas en conflicto).
+* **Instituciones — RESUELTO (Julián): DOS gráficas, no una.** Se descarga toda
+  la afiliación una vez y se usa en dos vistas distintas, evitando elegir entre
+  las dos reglas que estaban en conflicto:
+  1. **Primer autor por institución** (top 10): cuenta solo la institución del
+     autor en posición `first`.
+  2. **Publicaciones por institución**: una institución cuenta 1 por artículo si
+     al menos uno de sus autores pertenece a ella (presencia, sin doble conteo
+     por varios autores de la misma institución en el mismo artículo).
 * **Tipo de documento** (artículo, review, capítulo, resumen de congreso, libro,
   tesis, "letter"≈nota corta) → gráfica de barras.
 * **Open Access** (abierto vs. cerrado) con filtro OA/privado en la vista.
@@ -148,21 +154,28 @@ hace de una sola vez para no descargar dos veces. Campos/gráficas aprobados:
 * **Abstracts: NO se descargan** (acuerdo con Julián): no alimentan gráficas y
   pesan; se reconsideraría solo si se hace búsqueda por texto.
 
-### 7.1 Decisiones que BLOQUEAN arrancar la re-ingesta
+### 7.1 Estado de las decisiones de la re-ingesta
 
-1. **Ponderación de instituciones — CONFLICTO sin resolver.** Julián dio dos
-   reglas incompatibles en mensajes distintos: (a) primer autor = 2 puntos,
-   coautor = 1; y (b) contar solo 1 autor/institución/artículo (presencia
-   simple). Debe elegir UNA. No decidir por el equipo (tech.md §37.4).
-2. **Criterio "de Colombia" concreto.** Filtrar por mención textual de
-   "Colombia" pierde ~92% del corpus y es impreciso (deja fuera estudios
-   colombianos que dicen "Andes"/"Neotropical" o solo el departamento). Hay que
-   afinar qué cuenta como "de Colombia" (p. ej. país de afiliación + menciones).
-3. **Departamentos (geografía).** Piloto hecho: buscar departamentos en
-   título+abstract rinde <5% útil y con falsos positivos (p. ej. "Meta" =
-   meta-análisis). El tiempo NO es el problema (~37 s para todo). Decisión de
-   SAO sobre si vale la pena con esa cobertura. Correspondencia
-   departamento→región ENCA debe darla SAO.
+* **Instituciones — RESUELTO:** dos gráficas (primer autor / presencia). Ver §7.
+* **Criterio "de Colombia" — RESUELTO (enfoque), FALTA insumo.** Julián eligió
+  filtro ESTRICTO de Colombia ampliado con una lista de **topónimos** (p. ej.
+  "Colombian Andes", "Cauca Valley", "Santa Marta", y nombres como Magdalena,
+  Cauca, Aburrá…) para subir el n sin colar artículos de otros países. Prefiere
+  un corpus pequeño y limpio a uno grande con ruido, y luego expandir. **Insumo
+  pendiente: Julián enviará la lista de topónimos.** Sin ella no se fija el
+  filtro (y el filtro condiciona toda la descarga → no arrancar antes).
+* **Departamentos (mapa) — CONDICIONADO al volumen.** Match por estructura
+  (Capitalizado + espacio final) para reducir falsos positivos del piloto
+  (p. ej. "Meta" = meta-análisis). Se hace el mapa SOLO si el n de artículos con
+  departamento es razonable (Julián: si n < 500 no vale la pena). Correspondencia
+  departamento→región ENCA: Julián la buscará (insumo pendiente).
+
+### 7.3 Fuentes nuevas — SciELO y Redalyc (aprobadas)
+
+Julián priorizó **SciELO y Redalyc** (literatura en español, amplían el n
+colombiano). Al incorporarlas, aplicar deduplicación por **DOI** y, cuando el
+registro no tenga DOI (común en estas fuentes), por **título** (+ año). Las demás
+fuentes propuestas quedan descartadas por solapamiento con OpenAlex (§7.2).
 
 ### 7.2 Fuentes nuevas propuestas por Julián (evaluación del equipo)
 
