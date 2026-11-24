@@ -35,6 +35,7 @@ export type {
   ResumenBibliometrico,
   AporteFuente,
   ResumenConsolidado,
+  IndicadoresColaboracion,
   ArticuloItem,
   ArticulosOFC,
 } from "./bibliometria";

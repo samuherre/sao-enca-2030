@@ -208,6 +208,18 @@
     2027
   ],
   "anio_seleccionado": 2023,
+  "indicadores": {
+    "total_publicaciones": 3408,
+    "publicaciones_individuales": 709,
+    "publicaciones_colaborativas": 2618,
+    "total_firmas": 17928,
+    "autores_unicos": 15120,
+    "articulos_sin_autoria": 81,
+    "publicaciones_internacionales": null,
+    "publicaciones_interinstitucionales": null,
+    "grado_colaboracion": 0.79,
+    "rcc": 0.595
+  },
   "clasificacion_disponible": true,
   "por_ofc": [
     {

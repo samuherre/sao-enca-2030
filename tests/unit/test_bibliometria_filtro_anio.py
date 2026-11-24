@@ -291,6 +291,42 @@ def test_articulos_de_ofc_lista_y_total() -> None:
     assert len(limitado.items) == 1
 
 
+def test_indicadores_colaboracion_y_rcc() -> None:
+    """Tabla de indicadores: conteos, Subramanyam y RCC sobre autoría contable.
+
+    4 artículos de OpenAlex (contables) + 1 de Boletín (texto libre, no contable).
+    Autores: [1, 2, 3, 2] -> individuales=1, colaborativas=3, firmas=8.
+    RCC de Egghe debe salir en (0,1] y Subramanyam = 1 - 1/4 = 0.75.
+    """
+    coleccion = {
+        "openalex": [
+            {"source": "OpenAlex", "publication_year": 2021, "authors": "A"},            # 1
+            {"source": "OpenAlex", "publication_year": 2021, "authors": "A; B"},         # 2
+            {"source": "OpenAlex", "publication_year": 2021, "authors": "C; D; E"},      # 3
+            {"source": "OpenAlex", "publication_year": 2021, "authors": "A; F"},         # 2
+            {"source": "Boletín SAO", "publication_year": 2021, "authors": "X, Y y Z"},  # no contable
+        ],
+    }
+    r = _resumen(coleccion, anio=None)
+    ind = r.indicadores
+    assert ind is not None
+    assert ind.total_publicaciones == 5
+    assert ind.articulos_sin_autoria == 1          # el de Boletín (texto libre)
+    assert ind.publicaciones_individuales == 1
+    assert ind.publicaciones_colaborativas == 3
+    assert ind.total_firmas == 1 + 2 + 3 + 2       # 8
+    # Autores únicos (normalizados): A,B,C,D,E,F = 6 (A se repite y no re-cuenta).
+    assert ind.autores_unicos == 6
+    # Subramanyam = 1 - f1/N = 1 - 1/4 = 0.75.
+    assert ind.grado_colaboracion == 0.75
+    # RCC de Egghe: valor en (0, 1]; con estos datos debe ser calculable.
+    assert ind.rcc is not None
+    assert 0.0 < ind.rcc <= 1.0
+    # Internacional/interinstitucional aún no disponibles (requieren afiliaciones).
+    assert ind.publicaciones_internacionales is None
+    assert ind.publicaciones_interinstitucionales is None
+
+
 def test_num_autores_fiable_openalex_y_boletin() -> None:
     """Conteo de autores: fiable en OpenAlex (por '; '), no contable en texto libre."""
     # OpenAlex: autores unidos por "; " -> contable.

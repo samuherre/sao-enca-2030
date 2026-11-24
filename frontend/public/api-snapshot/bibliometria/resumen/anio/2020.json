@@ -208,6 +208,18 @@
     2027
   ],
   "anio_seleccionado": 2020,
+  "indicadores": {
+    "total_publicaciones": 3624,
+    "publicaciones_individuales": 645,
+    "publicaciones_colaborativas": 2906,
+    "total_firmas": 20678,
+    "autores_unicos": 18059,
+    "articulos_sin_autoria": 73,
+    "publicaciones_internacionales": null,
+    "publicaciones_interinstitucionales": null,
+    "grado_colaboracion": 0.82,
+    "rcc": 0.621
+  },
   "clasificacion_disponible": true,
   "por_ofc": [
     {

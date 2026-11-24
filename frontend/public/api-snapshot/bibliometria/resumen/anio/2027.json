@@ -68,6 +68,18 @@
     2027
   ],
   "anio_seleccionado": 2027,
+  "indicadores": {
+    "total_publicaciones": 1,
+    "publicaciones_individuales": 0,
+    "publicaciones_colaborativas": 0,
+    "total_firmas": 0,
+    "autores_unicos": 0,
+    "articulos_sin_autoria": 1,
+    "publicaciones_internacionales": null,
+    "publicaciones_interinstitucionales": null,
+    "grado_colaboracion": null,
+    "rcc": null
+  },
   "clasificacion_disponible": false,
   "por_ofc": [],
   "sin_ofc": 0,

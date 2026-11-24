@@ -23,6 +23,7 @@ import csv
 import io
 import json
 import re
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -35,6 +36,7 @@ from backend.src.schemas.bibliometria import (
     ConteoOFC,
     ConteoPorClave,
     DescripcionOFC,
+    IndicadoresColaboracion,
     ResumenBibliometrico,
     ResumenConsolidado,
 )
@@ -301,6 +303,106 @@ def _num_autores_fiable(registro: dict) -> int | None:
             return len(nombres)
 
     return None
+
+
+def _nombres_autores_fiables(registro: dict) -> list[str] | None:
+    """Lista de nombres de autor, SOLO si la autoría es contable de forma fiable.
+
+    Misma regla que :func:`_num_autores_fiable`, pero devuelve los NOMBRES (para
+    contar autores únicos). ``None`` si no es contable. No se inventan nombres.
+    """
+    al = registro.get("authors_list")
+    if isinstance(al, list):
+        nombres = [str(x).strip() for x in al if str(x).strip()]
+        if nombres:
+            return nombres
+
+    fuente = registro.get("source")
+    authors = registro.get("authors")
+    if fuente in _FUENTES_AUTORIA_FIABLE and isinstance(authors, str) and authors.strip():
+        nombres = [n.strip() for n in authors.split(_SEP_AUTORES_FIABLE) if n.strip()]
+        if nombres:
+            return nombres
+
+    return None
+
+
+def _norm_nombre_autor(nombre: str) -> str:
+    """Clave normalizada para contar autores únicos (minúsculas, sin acentos).
+
+    Aproximación: NO resuelve homónimos ni variantes del mismo autor ("J. Pérez"
+    vs "Juan Pérez"). Por eso "autores únicos" es un indicador APROXIMADO y así
+    debe comunicarse.
+    """
+    t = unicodedata.normalize("NFKD", nombre.lower().strip())
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"\s+", " ", t)
+
+
+def _calcular_rcc(dist_autores: Counter, n: int) -> float | None:
+    """Revised Collaborative Coefficient (RCC) de Egghe (1991).
+
+    ``CC* = A/(A-1) * (1 - (1/N) * Σ_{j=1..A} f_j / j)``, donde:
+    - ``N`` = número de artículos con autoría contable,
+    - ``f_j`` = número de artículos con exactamente ``j`` autores,
+    - ``A`` = número MÁXIMO de autores en un artículo de la colección.
+
+    Devuelve ``None`` si no hay base suficiente (``N == 0`` o ``A <= 1``, donde
+    ``A/(A-1)`` no está definido). No se inventa un valor.
+    """
+    if n <= 0 or not dist_autores:
+        return None
+    a_max = max(dist_autores)
+    if a_max <= 1:
+        return None
+    suma = sum(f_j / j for j, f_j in dist_autores.items())
+    return round((a_max / (a_max - 1)) * (1 - suma / n), 3)
+
+
+def _indicadores_colaboracion(registros: list[dict]) -> IndicadoresColaboracion:
+    """Calcula la tabla de indicadores de autoría/colaboración + Subramanyam + RCC.
+
+    Opera sobre los artículos con autoría contable fiable; los demás se reportan
+    en ``articulos_sin_autoria``. Internacional/interinstitucional quedan en
+    ``None`` hasta que la re-ingesta traiga país/institución por autor.
+    """
+    total = len(registros)
+    dist_autores: Counter = Counter()  # f_j: nº de artículos con j autores
+    individuales = 0
+    colaborativas = 0
+    total_firmas = 0
+    autores_unicos: set[str] = set()
+    sin_autoria = 0
+
+    for r in registros:
+        nombres = _nombres_autores_fiables(r)
+        if nombres is None:
+            sin_autoria += 1
+            continue
+        j = len(nombres)
+        dist_autores[j] += 1
+        total_firmas += j
+        if j == 1:
+            individuales += 1
+        else:
+            colaborativas += 1
+        for nombre in nombres:
+            autores_unicos.add(_norm_nombre_autor(nombre))
+
+    n_contables = total - sin_autoria
+    return IndicadoresColaboracion(
+        total_publicaciones=total,
+        publicaciones_individuales=individuales,
+        publicaciones_colaborativas=colaborativas,
+        total_firmas=total_firmas,
+        autores_unicos=len(autores_unicos),
+        articulos_sin_autoria=sin_autoria,
+        # Requieren afiliaciones (re-ingesta); aún no disponibles.
+        publicaciones_internacionales=None,
+        publicaciones_interinstitucionales=None,
+        grado_colaboracion=_calcular_gc(n_contables, individuales),
+        rcc=_calcular_rcc(dist_autores, n_contables),
+    )
 
 
 # Número de revistas con más artículos que se muestran individualmente en la
@@ -756,6 +858,7 @@ class BibliometriaService:
             fechas_dataset=sorted(fechas_dataset),
             anios_disponibles=anios_disponibles,
             anio_seleccionado=anio,
+            indicadores=_indicadores_colaboracion(combinados),
             clasificacion_disponible=clasificacion_disponible,
             por_ofc=por_ofc,
             sin_ofc=sin_ofc,

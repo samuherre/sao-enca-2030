@@ -49,6 +49,36 @@ class ConteoOFC(SchemaBase):
     gc_articulos_sin_autoria: int = 0
 
 
+class IndicadoresColaboracion(SchemaBase):
+    """Indicadores bibliométricos de colaboración y de autoría (tipo tabla).
+
+    Se calculan sobre los artículos con autoría CONTABLE de forma fiable (ver
+    servicio). ``articulos_sin_autoria`` indica cuántos quedaron fuera del
+    cálculo por no tener autoría contable (transparencia; no se inventan datos).
+
+    Las publicaciones internacionales e interinstitucionales requieren país e
+    institución por autor: hasta que la re-ingesta traiga esas afiliaciones son
+    ``None`` (dato no disponible aún, no es cero real).
+
+    Índices de colaboración:
+    - ``grado_colaboracion`` (Subramanyam 1983) = 1 - f1/N.
+    - ``rcc`` (Egghe 1991, Revised Collaborative Coefficient).
+    """
+
+    total_publicaciones: int
+    publicaciones_individuales: int
+    publicaciones_colaborativas: int  # 2 o más autores
+    total_firmas: int  # suma de autores sobre todos los artículos
+    autores_unicos: int  # APROXIMADO (no resuelve homónimos/variantes)
+    articulos_sin_autoria: int
+    # Requieren afiliaciones (re-ingesta): None mientras no estén disponibles.
+    publicaciones_internacionales: int | None = None
+    publicaciones_interinstitucionales: int | None = None
+    # Índices de colaboración (None si no hay base suficiente).
+    grado_colaboracion: float | None = None
+    rcc: float | None = None
+
+
 class ArticuloItem(SchemaBase):
     """Artículo individual para listar "detrás de" una barra (p. ej. un OFC).
 
@@ -168,6 +198,8 @@ class ResumenConsolidado(SchemaBase):
     # todos los años ("Todos").
     anios_disponibles: list[int] = []
     anio_seleccionado: int | None = None
+    # Indicadores de colaboración/autoría (tabla + índices Subramanyam y RCC).
+    indicadores: IndicadoresColaboracion | None = None
     # Clasificación por OFC (automática, sujeta a revisión).
     clasificacion_disponible: bool = False
     por_ofc: list[ConteoOFC] = []

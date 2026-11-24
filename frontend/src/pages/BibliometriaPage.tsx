@@ -36,7 +36,11 @@ import {
   urlDescargaArticulosOfcCsv,
   urlDescargaConsolidadoCsv,
 } from "../services";
-import type { ArticulosOFC, ResumenConsolidado } from "../types";
+import type {
+  ArticulosOFC,
+  IndicadoresColaboracion,
+  ResumenConsolidado,
+} from "../types";
 
 /** Valor del desplegable que representa "todos los años" (sin filtro). */
 const TODOS_LOS_ANIOS = "todos";
@@ -97,6 +101,74 @@ function MetricCard({ label, value }: { label: string; value: string | number })
       <div style={{ fontSize: "1.8rem", fontWeight: 700, color: "#1f5c3a" }}>{value}</div>
       <div style={{ fontSize: "0.85rem", color: "#456" }}>{label}</div>
     </div>
+  );
+}
+
+/**
+ * Tabla de indicadores de colaboración y autoría, bajo las métricas resumen.
+ *
+ * Incluye conteos (publicaciones, firmas, autores únicos) y los dos índices de
+ * colaboración: Grado de Colaboración (Subramanyam 1983) y RCC (Egghe 1991).
+ * Las filas de internacional/interinstitucional dependen de las afiliaciones
+ * (país/institución por autor), que llegarán con la re-ingesta; mientras tanto
+ * se muestran como "pendiente (requiere afiliaciones)". "Autores únicos" es
+ * aproximado (no resuelve homónimos ni variantes del mismo nombre).
+ */
+function IndicadoresTable({ ind }: { ind: IndicadoresColaboracion }) {
+  const td: CSSProperties = { padding: "0.35rem 0.6rem", borderBottom: "1px solid #eee" };
+  const tdR: CSSProperties = { ...td, textAlign: "right", fontVariantNumeric: "tabular-nums" };
+  const pendiente = "pendiente (requiere afiliaciones)";
+  const fmt = (v: number | null) => (v == null ? "—" : v.toLocaleString("es-CO"));
+
+  const filas: { etiqueta: string; valor: string; nota?: string }[] = [
+    { etiqueta: "Total de publicaciones", valor: fmt(ind.total_publicaciones) },
+    { etiqueta: "Publicaciones individuales", valor: fmt(ind.publicaciones_individuales) },
+    { etiqueta: "Publicaciones de 2 o más autores", valor: fmt(ind.publicaciones_colaborativas) },
+    { etiqueta: "Total de firmas de autor", valor: fmt(ind.total_firmas) },
+    { etiqueta: "Autores únicos", valor: fmt(ind.autores_unicos), nota: "aproximado" },
+    {
+      etiqueta: "Publicaciones internacionales",
+      valor: ind.publicaciones_internacionales == null ? pendiente : fmt(ind.publicaciones_internacionales),
+    },
+    {
+      etiqueta: "Publicaciones interinstitucionales",
+      valor: ind.publicaciones_interinstitucionales == null ? pendiente : fmt(ind.publicaciones_interinstitucionales),
+    },
+    {
+      etiqueta: "Grado de Colaboración (Subramanyam, 1983)",
+      valor: ind.grado_colaboracion == null ? "—" : ind.grado_colaboracion.toFixed(2),
+    },
+    {
+      etiqueta: "RCC — Revised Collaborative Coefficient (Egghe, 1991)",
+      valor: ind.rcc == null ? "—" : ind.rcc.toFixed(3),
+    },
+  ];
+
+  return (
+    <section style={{ marginTop: "1rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Indicadores de colaboración</h3>
+      <p style={{ color: "#567", fontSize: "0.82rem", marginTop: 0 }}>
+        Calculados sobre los artículos con autoría contable.{" "}
+        {ind.articulos_sin_autoria > 0
+          ? `${ind.articulos_sin_autoria.toLocaleString("es-CO")} artículo(s) sin autoría contable quedan fuera del cálculo.`
+          : ""}
+      </p>
+      <table style={{ borderCollapse: "collapse", width: "100%", maxWidth: 520 }}>
+        <tbody>
+          {filas.map((f) => (
+            <tr key={f.etiqueta}>
+              <td style={td}>
+                {f.etiqueta}
+                {f.nota ? (
+                  <span style={{ color: "#8a6d1f", fontSize: "0.78rem" }}> ({f.nota})</span>
+                ) : null}
+              </td>
+              <td style={tdR}>{f.valor}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
   );
 }
 
@@ -676,6 +748,8 @@ export function BibliometriaPage() {
             <MetricCard label="Artículos" value={data.total_articulos} />
             <MetricCard label="Fuentes" value={data.aporte_por_fuente.length} />
           </div>
+
+          {data.indicadores && <IndicadoresTable ind={data.indicadores} />}
 
           <AnioAcumuladoCard data={data.por_anio} />
           <OFCCard resumen={data} />

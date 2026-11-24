@@ -30,6 +30,21 @@ export interface ConteoOFC {
   readonly gc_articulos_sin_autoria: number;
 }
 
+/** Indicadores de colaboración/autoría (tabla + índices Subramanyam y RCC). */
+export interface IndicadoresColaboracion {
+  readonly total_publicaciones: number;
+  readonly publicaciones_individuales: number;
+  readonly publicaciones_colaborativas: number;
+  readonly total_firmas: number;
+  readonly autores_unicos: number;
+  readonly articulos_sin_autoria: number;
+  // Requieren afiliaciones (re-ingesta): null mientras no estén disponibles.
+  readonly publicaciones_internacionales: number | null;
+  readonly publicaciones_interinstitucionales: number | null;
+  readonly grado_colaboracion: number | null;
+  readonly rcc: number | null;
+}
+
 /** Artículo individual para listar "detrás de" una barra (p. ej. un OFC). */
 export interface ArticuloItem {
   readonly titulo: string;
@@ -97,6 +112,8 @@ export interface ResumenConsolidado {
   // año por el que se filtró el resumen (null = "Todos").
   readonly anios_disponibles: readonly number[];
   readonly anio_seleccionado: number | null;
+  // Indicadores de colaboración/autoría (tabla + índices Subramanyam y RCC).
+  readonly indicadores: IndicadoresColaboracion | null;
   readonly clasificacion_disponible: boolean;
   readonly por_ofc: readonly ConteoOFC[];
   readonly sin_ofc: number;
