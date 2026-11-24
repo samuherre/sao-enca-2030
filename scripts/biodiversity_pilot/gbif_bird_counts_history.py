@@ -221,6 +221,7 @@ def main(argv: list[str] | None = None) -> int:
         # el desglose por especie (resolver sus nombres es el paso más lento).
         family_facet_limit=200,
         species_facet_limit=5000,
+        species_richness_by_dept=True,
     )
 
     print("Estado de la corrida:", report["status"])

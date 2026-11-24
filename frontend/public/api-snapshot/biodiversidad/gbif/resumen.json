@@ -270,6 +270,173 @@
       "registros_ocurrencia": 47436
     }
   ],
+  "riqueza_departamentos": [
+    {
+      "rank": 1,
+      "departamento": "Cauca",
+      "especies": 1465
+    },
+    {
+      "rank": 2,
+      "departamento": "Nariño",
+      "especies": 1386
+    },
+    {
+      "rank": 3,
+      "departamento": "Antioquia",
+      "especies": 1381
+    },
+    {
+      "rank": 4,
+      "departamento": "Meta",
+      "especies": 1329
+    },
+    {
+      "rank": 5,
+      "departamento": "Valle del Cauca",
+      "especies": 1249
+    },
+    {
+      "rank": 6,
+      "departamento": "Cundinamarca",
+      "especies": 1216
+    },
+    {
+      "rank": 7,
+      "departamento": "Chocó",
+      "especies": 1167
+    },
+    {
+      "rank": 8,
+      "departamento": "Caquetá",
+      "especies": 1142
+    },
+    {
+      "rank": 9,
+      "departamento": "Putumayo",
+      "especies": 1137
+    },
+    {
+      "rank": 10,
+      "departamento": "Boyacá",
+      "especies": 1088
+    },
+    {
+      "rank": 11,
+      "departamento": "Caldas",
+      "especies": 1073
+    },
+    {
+      "rank": 12,
+      "departamento": "Risaralda",
+      "especies": 1059
+    },
+    {
+      "rank": 13,
+      "departamento": "Santander",
+      "especies": 1035
+    },
+    {
+      "rank": 14,
+      "departamento": "Casanare",
+      "especies": 1024
+    },
+    {
+      "rank": 15,
+      "departamento": "Huila",
+      "especies": 948
+    },
+    {
+      "rank": 16,
+      "departamento": "Tolima",
+      "especies": 946
+    },
+    {
+      "rank": 17,
+      "departamento": "Norte de Santander",
+      "especies": 907
+    },
+    {
+      "rank": 18,
+      "departamento": "Magdalena",
+      "especies": 890
+    },
+    {
+      "rank": 19,
+      "departamento": "Cesar",
+      "especies": 856
+    },
+    {
+      "rank": 20,
+      "departamento": "Amazonas",
+      "especies": 853
+    },
+    {
+      "rank": 21,
+      "departamento": "La Guajira",
+      "especies": 828
+    },
+    {
+      "rank": 22,
+      "departamento": "Vichada",
+      "especies": 814
+    },
+    {
+      "rank": 23,
+      "departamento": "Bolívar",
+      "especies": 811
+    },
+    {
+      "rank": 24,
+      "departamento": "Bogotá, D.C.",
+      "especies": 774
+    },
+    {
+      "rank": 25,
+      "departamento": "Guaviare",
+      "especies": 772
+    },
+    {
+      "rank": 26,
+      "departamento": "Córdoba",
+      "especies": 759
+    },
+    {
+      "rank": 27,
+      "departamento": "Quindío",
+      "especies": 715
+    },
+    {
+      "rank": 28,
+      "departamento": "Arauca",
+      "especies": 708
+    },
+    {
+      "rank": 29,
+      "departamento": "Vaupés",
+      "especies": 697
+    },
+    {
+      "rank": 30,
+      "departamento": "Guainía",
+      "especies": 678
+    },
+    {
+      "rank": 31,
+      "departamento": "Sucre",
+      "especies": 558
+    },
+    {
+      "rank": 32,
+      "departamento": "Atlántico",
+      "especies": 529
+    },
+    {
+      "rank": 33,
+      "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+      "especies": 229
+    }
+  ],
   "regiones": [
     {
       "rank": 1,

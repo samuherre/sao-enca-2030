@@ -207,6 +207,7 @@ def run_pipeline(
         municipality_top=None,
         family_facet_limit=200,
         species_facet_limit=5000,
+        species_richness_by_dept=True,
     )
     history.gbc.write_outputs(history.GBIF_DIR, now, report, report["publisher_ranking"])
     history.append_to_history(report)

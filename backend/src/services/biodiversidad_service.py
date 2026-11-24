@@ -49,6 +49,7 @@ from backend.src.schemas.biodiversidad import (
     PublicadorGBIF,
     RegionGBIF,
     ResumenGBIF,
+    RiquezaDepartamentoGBIF,
     TaxonGBIF,
     TipoRegistroGBIF,
 )
@@ -305,6 +306,20 @@ def _municipios_desde_report(report: dict[str, Any]) -> list[MunicipioGBIF]:
     return salida
 
 
+def _riqueza_departamentos_desde_report(
+    report: dict[str, Any],
+) -> list[RiquezaDepartamentoGBIF]:
+    """Convierte ``species_by_department_ranking`` del report al contrato de la API."""
+    salida: list[RiquezaDepartamentoGBIF] = []
+    for pos, item in enumerate(report.get("species_by_department_ranking", []) or [], start=1):
+        dep = item.get("departamento")
+        n = item.get("species_count")
+        if not isinstance(dep, str) or not isinstance(n, int):
+            continue
+        salida.append(RiquezaDepartamentoGBIF(rank=pos, departamento=dep, especies=n))
+    return salida
+
+
 def _regiones_desde_report(report: dict[str, Any]) -> list[RegionGBIF]:
     """Convierte ``region_ranking`` del report al contrato de la API."""
     salida: list[RegionGBIF] = []
@@ -429,6 +444,7 @@ class BiodiversidadService:
             total_registros_ocurrencia=report.get("total_bird_records_colombia"),
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
+            riqueza_departamentos=_riqueza_departamentos_desde_report(report),
             municipios=_municipios_desde_report(report),
             anios=_anios_desde_report(report),
             tipos_registro=_tipos_registro_desde_report(report),
@@ -480,6 +496,7 @@ class BiodiversidadService:
             total_registros_ocurrencia=report.get("total_bird_records_colombia"),
             publicadores=_publicadores_desde_report(report),
             departamentos=_departamentos_desde_report(report),
+            riqueza_departamentos=_riqueza_departamentos_desde_report(report),
             municipios=_municipios_desde_report(report),
             anios=_anios_desde_report(report),
             tipos_registro=_tipos_registro_desde_report(report),

@@ -149,6 +149,19 @@ class MunicipioGBIF(SchemaBase):
     registros_ocurrencia: int
 
 
+class RiquezaDepartamentoGBIF(SchemaBase):
+    """Riqueza de especies: nº de especies de aves DISTINTAS por departamento.
+
+    A diferencia de ``DepartamentoGBIF`` (que cuenta registros de ocurrencia),
+    aquí ``especies`` es cuántas especies distintas tienen al menos un registro
+    en ese departamento (unión de especies sobre las variantes del nombre).
+    """
+
+    rank: int
+    departamento: str
+    especies: int
+
+
 class RegionGBIF(SchemaBase):
     """Conteo de registros de aves agrupado por región geográfica de la ENCA.
 
@@ -220,6 +233,9 @@ class ResumenGBIF(SchemaBase):
     # Desglose por departamento (campo stateProvince de GBIF, canonizado). Puede
     # venir vacío si el corte almacenado es anterior a esta funcionalidad.
     departamentos: list[DepartamentoGBIF] = []
+    # Riqueza de especies (nº de especies distintas) por departamento. Puede
+    # venir vacía en cortes anteriores a esta funcionalidad.
+    riqueza_departamentos: list[RiquezaDepartamentoGBIF] = []
 
     # Agrupación por región ENCA (predominante). Propuesta del equipo, pendiente
     # de confirmación por SAO. Puede venir vacía en cortes antiguos.

@@ -83,6 +83,13 @@ export interface MunicipioGBIF {
   readonly registros_ocurrencia: number;
 }
 
+/** Riqueza de especies: nº de especies de aves distintas por departamento. */
+export interface RiquezaDepartamentoGBIF {
+  readonly rank: number;
+  readonly departamento: string;
+  readonly especies: number;
+}
+
 /** Conteo de registros de aves agrupado por región ENCA (predominante). */
 export interface RegionGBIF {
   readonly rank: number;
@@ -128,6 +135,7 @@ export interface ResumenGBIF {
   readonly total_registros_ocurrencia: number | null;
   readonly publicadores: readonly PublicadorGBIF[];
   readonly departamentos: readonly DepartamentoGBIF[];
+  readonly riqueza_departamentos: readonly RiquezaDepartamentoGBIF[];
   readonly municipios: readonly MunicipioGBIF[];
   readonly anios: readonly AnioGBIF[];
   readonly tipos_registro: readonly TipoRegistroGBIF[];

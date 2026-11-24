@@ -506,6 +506,69 @@ def fetch_department_facet(
     return ranking, params
 
 
+def fetch_species_richness_by_department(
+    department_facet_limit: int, species_facet_limit: int, timeout: int
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    """Riqueza de especies (nº de especies DISTINTAS) por departamento.
+
+    Para cada variante de ``stateProvince`` se pide la faceta ``speciesKey`` y se
+    UNEN las claves de especie por departamento canónico (unión, NO suma: una
+    misma especie en varias variantes del mismo departamento cuenta una vez). El
+    resultado es, por departamento, cuántas especies de aves distintas tienen al
+    menos un registro. Es más caro que un ranking simple (una consulta por
+    variante), pero barato comparado con resolver nombres: solo cuenta claves.
+
+    Los registros sin departamento no aportan (no se inventa su ubicación).
+    """
+    # 1) Variantes de stateProvince observadas.
+    params = {
+        "country": COUNTRY,
+        "taxonKey": AVES_TAXON_KEY,
+        "limit": 0,
+        "facet": "stateProvince",
+        "facetLimit": department_facet_limit,
+    }
+    payload = _get_json(OCCURRENCE_SEARCH, params, timeout)
+    counts = (payload.get("facets") or [{}])[0].get("counts") or [] if isinstance(payload, dict) else []
+
+    # 2) Por cada variante, unir las speciesKey al departamento canónico.
+    # Solo se conservan los departamentos OFICIALES (los del mapa
+    # departamento->región); el resto de valores de stateProvince es texto libre
+    # o ruido de GBIF (municipios, nombres mal escritos) y no se muestra.
+    especies_por_depto: dict[str, set[str]] = {}
+    for item in counts:
+        nombre = item.get("name")
+        if not isinstance(nombre, str) or not nombre.strip():
+            continue
+        canonico = _canonizar_departamento(nombre)
+        if canonico not in _REGION_POR_DEPARTAMENTO:
+            # No es un departamento oficial reconocido: se omite (no se inventa).
+            continue
+        sp_payload = _get_json(
+            OCCURRENCE_SEARCH,
+            {
+                "country": COUNTRY,
+                "taxonKey": AVES_TAXON_KEY,
+                "limit": 0,
+                "facet": "speciesKey",
+                "facetLimit": species_facet_limit,
+                "stateProvince": nombre,
+            },
+            timeout,
+        )
+        sp_counts = (sp_payload.get("facets") or [{}])[0].get("counts") or [] if isinstance(sp_payload, dict) else []
+        claves = {str(c["name"]) for c in sp_counts if c.get("name") is not None}
+        especies_por_depto.setdefault(canonico, set()).update(claves)
+
+    ranking = [
+        {"departamento": dep, "species_count": len(claves)}
+        for dep, claves in sorted(
+            especies_por_depto.items(), key=lambda kv: len(kv[1]), reverse=True
+        )
+    ]
+    return ranking, params
+
+
 # Endpoint de geocodificación GADM de GBIF (resuelve un GID -> nombre/nivel).
 GADM_GEOCODE = f"{GBIF_BASE_URL}/geocode/gadm"
 
@@ -799,6 +862,7 @@ def run(
     order_facet_limit: int = 50,
     family_facet_limit: int = 200,
     species_facet_limit: int = 0,
+    species_richness_by_dept: bool = False,
     municipality_facet_limit: int = 300,
     municipality_top: int | None = 25,
     year_facet_limit: int = 300,
@@ -835,6 +899,19 @@ def run(
     # Agregación por región ENCA (predominante) a partir del ranking de
     # departamentos. Es un cálculo local, no otra consulta a GBIF.
     region_ranking, departments_without_region = agrupar_por_region(department_ranking)
+
+    # Riqueza de especies por departamento (nº de especies distintas). Opcional
+    # y algo más caro (una consulta de species por variante de departamento);
+    # solo en el corte almacenado, no en la consulta en vivo.
+    species_by_dept_ranking: list[dict[str, Any]] = []
+    species_by_dept_params: dict[str, Any] = {}
+    if species_richness_by_dept:
+        try:
+            species_by_dept_ranking, species_by_dept_params = (
+                fetch_species_richness_by_department(department_facet_limit, 3000, timeout)
+            )
+        except GbifError as error:
+            errors.append(f"species_richness_by_department: {error}")
 
     # Top municipios (gadmGid nivel 2, con nombre resuelto).
     municipality_ranking: list[dict[str, Any]] = []
@@ -968,6 +1045,8 @@ def run(
         "region_ranking": region_ranking,
         "regions_in_ranking": len(region_ranking),
         "departments_without_region": departments_without_region,
+        "species_by_department_ranking": species_by_dept_ranking,
+        "species_by_department_in_ranking": len(species_by_dept_ranking),
         "municipality_ranking": municipality_ranking,
         "municipalities_in_ranking": len(municipality_ranking),
         "year_ranking": year_ranking,

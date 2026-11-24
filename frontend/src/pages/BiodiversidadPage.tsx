@@ -524,6 +524,78 @@ function RegionesBloque({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/**
+ * Gráfico + tabla de RIQUEZA de especies por departamento: cuántas especies de
+ * aves DISTINTAS tienen registro en cada departamento (no es nº de registros,
+ * sino de especies). Complementa a "Registros por departamento".
+ */
+function RiquezaDepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
+  const items = resumen.riqueza_departamentos;
+  if (items.length === 0) {
+    return (
+      <section style={{ marginTop: "1.5rem" }}>
+        <h3 style={{ marginBottom: "0.5rem" }}>Especies por departamento</h3>
+        <p style={{ color: "#666" }}>
+          Este corte no incluye el desglose de especies por departamento. Se generará en la próxima
+          actualización.
+        </p>
+      </section>
+    );
+  }
+
+  const data = items.map((d) => ({ etiqueta: d.departamento, especies: d.especies }));
+  const alto = Math.max(260, data.length * 24);
+  const top = items[0];
+
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Especies por departamento</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Número de especies de aves <strong>distintas</strong> con al menos un registro en cada
+        departamento (riqueza de especies, no número de registros). El departamento con más especies
+        es <strong>{top.departamento}</strong> ({formatoEntero(top.especies)} especies).
+      </p>
+
+      <div style={{ width: "100%", height: alto }}>
+        <ResponsiveContainer>
+          <BarChart layout="vertical" data={data} margin={{ top: 8, right: 32, bottom: 8, left: 8 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
+            <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+            <YAxis type="category" dataKey="etiqueta" width={160} tick={{ fontSize: 11 }} />
+            <Tooltip formatter={(value: number) => [`${formatoEntero(value)} especies`, "Especies"]} />
+            <Bar dataKey="especies" name="Especies" fill={VERDE} radius={[0, 4, 4, 0]} />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
+        <thead>
+          <tr>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>#</th>
+            <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Departamento
+            </th>
+            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              Especies distintas
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((d) => (
+            <tr key={d.departamento}>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{d.rank}</td>
+              <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{d.departamento}</td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                {formatoEntero(d.especies)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  );
+}
+
 /** Gráfico + tabla de registros por tipo (basisOfRecord). */
 function TipoRegistroCard({ resumen }: { resumen: ResumenGBIF }) {
   const tipos = resumen.tipos_registro;
@@ -1934,6 +2006,7 @@ export function BiodiversidadPage() {
       <PublicadoresCard resumen={resumen} />
       <TipoRegistroCard resumen={resumen} />
       <DepartamentosCard resumen={resumen} />
+      <RiquezaDepartamentosCard resumen={resumen} />
       <MunicipiosCard resumen={resumen} />
       <AniosCard resumen={resumen} />
       <TaxonomiaCard resumen={resumen} />
