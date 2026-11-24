@@ -89,6 +89,31 @@ def _norm_nombre_cientifico(nombre: str | None) -> str:
     return re.sub(r"\s+", " ", t)
 
 
+# Catálogo taxonómico OFICIAL del CCRO (validado por SAO). Se usa para FILTRAR
+# las listas de GBIF (que mezclan ruido: taxones de otros países, subespecies
+# mal identificadas). Decisión de Julián: la lista CCRO tiene validación humana,
+# GBIF es un mero compilador.
+_CCRO_TAXONOMY_FILE = _REPO_ROOT / "backend" / "src" / "data" / "ccro_taxonomy_colombia.json"
+
+
+@lru_cache(maxsize=1)
+def _taxonomia_ccro() -> dict[str, frozenset[str]]:
+    """Conjuntos normalizados de órdenes, familias y especies oficiales (CCRO).
+
+    Devuelve ``{"ordenes": frozenset, "familias": frozenset, "especies":
+    frozenset}``. Si el archivo no existe, devuelve conjuntos vacíos (en ese
+    caso NO se filtra, para no ocultar todo por falta del catálogo).
+    """
+    if not _CCRO_TAXONOMY_FILE.exists():
+        return {"ordenes": frozenset(), "familias": frozenset(), "especies": frozenset()}
+    data = json.loads(_CCRO_TAXONOMY_FILE.read_text(encoding="utf-8"))
+    return {
+        "ordenes": frozenset(data.get("ordenes_norm", [])),
+        "familias": frozenset(data.get("familias_norm", [])),
+        "especies": frozenset(data.get("especies_norm", [])),
+    }
+
+
 @lru_cache(maxsize=1)
 def _nombres_endemicos() -> frozenset[str]:
     """Conjunto de nombres científicos endémicos normalizados (de la lista CCRO).
@@ -339,20 +364,38 @@ def _regiones_desde_report(report: dict[str, Any]) -> list[RegionGBIF]:
     return salida
 
 
-def _taxones_desde_report(report: dict[str, Any], clave: str) -> list[TaxonGBIF]:
-    """Convierte ``order_ranking`` o ``family_ranking`` al contrato de la API."""
+def _taxones_desde_report(
+    report: dict[str, Any], clave: str, nivel_ccro: str | None = None
+) -> list[TaxonGBIF]:
+    """Convierte ``order_ranking``/``family_ranking``/``species_ranking`` al contrato.
+
+    Si ``nivel_ccro`` ("ordenes" | "familias" | "especies") se indica, FILTRA la
+    lista dejando solo los taxones presentes en la taxonomía oficial del CCRO
+    (cruce por nombre normalizado). Los taxones de GBIF que no están en CCRO
+    (ruido: taxones de otros países, mal identificados) se descartan. Decisión de
+    Julián. Si el catálogo CCRO no está disponible, NO se filtra (no se oculta
+    todo por falta del archivo). El ``rank`` se renumera tras filtrar.
+    """
+    ccro = _taxonomia_ccro().get(nivel_ccro, frozenset()) if nivel_ccro else frozenset()
     salida: list[TaxonGBIF] = []
-    for pos, tax in enumerate(report.get(clave, []) or [], start=1):
+    pos = 0
+    for tax in report.get(clave, []) or []:
         taxon_key = tax.get("taxon_key")
         occ = tax.get("occurrence_count")
         if taxon_key is None or not isinstance(occ, int):
             # Entrada malformada: se omite, no se inventa.
             continue
+        nombre = tax.get("name")  # None si GBIF no lo resolvió
+        # Filtro a la taxonomía oficial CCRO (si aplica y el catálogo existe).
+        if nivel_ccro and ccro:
+            if not nombre or _norm_nombre_cientifico(nombre) not in ccro:
+                continue
+        pos += 1
         salida.append(
             TaxonGBIF(
                 rank=pos,
                 taxon_key=str(taxon_key),
-                nombre=tax.get("name"),  # None si GBIF no lo resolvió
+                nombre=nombre,
                 registros_ocurrencia=occ,
             )
         )
@@ -451,9 +494,9 @@ class BiodiversidadService:
             iucn_categorias=_iucn_desde_report(report),
             especies_amenazadas=_especies_amenazadas_desde_report(report),
             regiones=_regiones_desde_report(report),
-            ordenes=_taxones_desde_report(report, "order_ranking"),
-            familias=_taxones_desde_report(report, "family_ranking"),
-            especies=_taxones_desde_report(report, "species_ranking"),
+            ordenes=_taxones_desde_report(report, "order_ranking", nivel_ccro="ordenes"),
+            familias=_taxones_desde_report(report, "family_ranking", nivel_ccro="familias"),
+            especies=_taxones_desde_report(report, "species_ranking", nivel_ccro="especies"),
             cortes_historicos=len(historico),
             historico=historico,
             exportaciones=_listar_exportaciones(),
@@ -503,9 +546,9 @@ class BiodiversidadService:
             iucn_categorias=_iucn_desde_report(report),
             especies_amenazadas=_especies_amenazadas_desde_report(report),
             regiones=_regiones_desde_report(report),
-            ordenes=_taxones_desde_report(report, "order_ranking"),
-            familias=_taxones_desde_report(report, "family_ranking"),
-            especies=_taxones_desde_report(report, "species_ranking"),
+            ordenes=_taxones_desde_report(report, "order_ranking", nivel_ccro="ordenes"),
+            familias=_taxones_desde_report(report, "family_ranking", nivel_ccro="familias"),
+            especies=_taxones_desde_report(report, "species_ranking", nivel_ccro="especies"),
             cortes_historicos=len(historico),
             historico=historico,
             exportaciones=_listar_exportaciones(),
