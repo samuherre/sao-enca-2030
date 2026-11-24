@@ -216,6 +216,11 @@ def main(argv: list[str] | None = None) -> int:
         resolve_names=not args.no_resolve_names,
         municipality_facet_limit=2000,
         municipality_top=None,
+        # Desglose taxonómico completo para el dashboard: todas las familias
+        # (~127) y todas las especies (~2.500). species_facet_limit alto activa
+        # el desglose por especie (resolver sus nombres es el paso más lento).
+        family_facet_limit=200,
+        species_facet_limit=5000,
     )
 
     print("Estado de la corrida:", report["status"])

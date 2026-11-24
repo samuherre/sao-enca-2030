@@ -1203,6 +1203,145 @@ function MapaCard({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/**
+ * Buscador reutilizable sobre una lista de taxones (familias o especies).
+ * Filtra por nombre (o clave) y muestra los resultados en una tabla acotada.
+ */
+function BuscadorTaxon({
+  items,
+  etiqueta,
+  placeholder,
+}: {
+  items: readonly import("../types").TaxonGBIF[];
+  etiqueta: string;
+  placeholder: string;
+}) {
+  const [consulta, setConsulta] = useState("");
+  const q = normalizaBusqueda(consulta);
+  const resultados = q
+    ? items.filter(
+        (t) =>
+          normalizaBusqueda(t.nombre ?? "").includes(q) ||
+          String(t.taxon_key).toLowerCase().includes(q),
+      )
+    : [];
+  return (
+    <div style={{ margin: "0.75rem 0" }}>
+      <input
+        type="search"
+        value={consulta}
+        onChange={(e) => setConsulta(e.target.value)}
+        placeholder={placeholder}
+        aria-label={`Buscar ${etiqueta}`}
+        style={{
+          width: "100%",
+          maxWidth: 380,
+          padding: "0.45rem 0.6rem",
+          borderRadius: "0.4rem",
+          border: `1px solid ${BORDE}`,
+          fontSize: "0.9rem",
+        }}
+      />
+      {q ? (
+        resultados.length === 0 ? (
+          <p style={{ color: "#789", fontSize: "0.85rem", marginTop: "0.4rem" }}>
+            Sin coincidencias para “{consulta}”. (Solo aparecen {etiqueta} con al menos un registro
+            en GBIF.)
+          </p>
+        ) : (
+          <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem", maxWidth: 520 }}>
+            <thead>
+              <tr>
+                <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                  {etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1)}
+                </th>
+                <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                  Registros de ocurrencia
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {resultados.slice(0, MAX_RESULTADOS_BUSQUEDA).map((t) => (
+                <tr key={t.taxon_key}>
+                  <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
+                    {t.nombre ?? <em style={{ color: "#888" }}>sin nombre ({t.taxon_key})</em>}
+                  </td>
+                  <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                    {formatoEntero(t.registros_ocurrencia)}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )
+      ) : null}
+      {q && resultados.length > MAX_RESULTADOS_BUSQUEDA ? (
+        <p style={{ color: "#789", fontSize: "0.8rem", marginTop: "0.25rem" }}>
+          Mostrando {MAX_RESULTADOS_BUSQUEDA} de {formatoEntero(resultados.length)} coincidencias;
+          afina la búsqueda.
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+/** Sección de especies: top 5 y bottom 5 por registros + buscador. */
+function EspeciesCard({ resumen }: { resumen: ResumenGBIF }) {
+  const especies = resumen.especies;
+  if (especies.length === 0) return null;
+
+  // La lista viene ordenada por conteo descendente desde el pipeline.
+  const top5 = especies.slice(0, 5);
+  // Bottom 5: las de menos registros (excluye solapamiento si hay <10).
+  const bottom5 = especies.slice(-5).filter((e) => !top5.includes(e)).reverse();
+
+  const filaEspecie = (e: import("../types").TaxonGBIF) => (
+    <tr key={e.taxon_key}>
+      <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
+        {e.nombre ?? <em style={{ color: "#888" }}>sin nombre ({e.taxon_key})</em>}
+      </td>
+      <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+        {formatoEntero(e.registros_ocurrencia)}
+      </td>
+    </tr>
+  );
+
+  return (
+    <section style={{ marginTop: "1.5rem" }}>
+      <h3 style={{ marginBottom: "0.25rem" }}>Especies</h3>
+      <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
+        Registros de ocurrencia por especie de ave en Colombia ({formatoEntero(especies.length)}{" "}
+        especies con al menos un registro en GBIF). Busca cualquier especie por su nombre científico.
+      </p>
+
+      <BuscadorTaxon
+        items={especies}
+        etiqueta="especies"
+        placeholder="Buscar especie (p. ej. Tangara, Ramphastos…)"
+      />
+
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "1.5rem" }}>
+        <div style={{ flex: "1 1 320px" }}>
+          <h4 style={{ margin: "0 0 0.25rem" }}>5 especies con más registros</h4>
+          <table style={{ borderCollapse: "collapse", width: "100%" }}>
+            <tbody>{top5.map(filaEspecie)}</tbody>
+          </table>
+        </div>
+        <div style={{ flex: "1 1 320px" }}>
+          <h4 style={{ margin: "0 0 0.25rem" }}>5 especies con menos registros</h4>
+          <table style={{ borderCollapse: "collapse", width: "100%" }}>
+            <tbody>{bottom5.map(filaEspecie)}</tbody>
+          </table>
+          <p style={{ color: "#789", fontSize: "0.78rem", marginTop: "0.25rem" }}>
+            Pocos registros no significa que la especie sea rara: puede reflejar poco muestreo o
+            identificación difícil.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /** Sección de desglose taxonómico: órdenes y familias de aves. */
 function TaxonomiaCard({ resumen }: { resumen: ResumenGBIF }) {
   if (resumen.ordenes.length === 0 && resumen.familias.length === 0) {
@@ -1225,10 +1364,17 @@ function TaxonomiaCard({ resumen }: { resumen: ResumenGBIF }) {
       />
       <TaxonCard
         titulo="Familias con más registros"
-        descripcion="Familias de aves ordenadas por número de registros de ocurrencia."
+        descripcion="Familias de aves ordenadas por número de registros de ocurrencia. El gráfico muestra las que más registros tienen; usa el buscador para encontrar cualquier familia."
         items={resumen.familias}
         etiquetaColumna="Familia"
       />
+      {resumen.familias.length > 0 ? (
+        <BuscadorTaxon
+          items={resumen.familias}
+          etiqueta="familias"
+          placeholder="Buscar familia (p. ej. Trochilidae, Ardeidae…)"
+        />
+      ) : null}
     </section>
   );
 }
@@ -1719,6 +1865,7 @@ export function BiodiversidadPage() {
       <MunicipiosCard resumen={resumen} />
       <AniosCard resumen={resumen} />
       <TaxonomiaCard resumen={resumen} />
+      <EspeciesCard resumen={resumen} />
       <AmenazadasCard resumen={resumen} />
       <MapaCard resumen={resumen} />
       <LimitacionesCard />

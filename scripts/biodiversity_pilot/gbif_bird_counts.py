@@ -797,6 +797,8 @@ def run(
     department_facet_limit: int = 40,
     taxon_facet_limit: int = 15,
     order_facet_limit: int = 50,
+    family_facet_limit: int = 200,
+    species_facet_limit: int = 0,
     municipality_facet_limit: int = 300,
     municipality_top: int | None = 25,
     year_facet_limit: int = 300,
@@ -896,8 +898,10 @@ def run(
         except GbifError as error:
             errors.append(f"order_facet: {error}")
         try:
+            # Familias: límite propio (alto) para traer TODAS las familias de
+            # aves con registros en Colombia (~127), no solo un top.
             family_ranking, family_params = fetch_taxon_facet(
-                "familyKey", taxon_facet_limit, timeout
+                "familyKey", family_facet_limit, timeout
             )
         except GbifError as error:
             errors.append(f"family_facet: {error}")
@@ -913,9 +917,25 @@ def run(
         for row in ranking:
             row["publisher_name"] = None
 
+    # Desglose por ESPECIE (todas las especies con registros). Es opcional y
+    # caro: resolver el nombre de cada especie es 1 llamada HTTP, y hay ~2.500
+    # especies, así que solo se activa en el corte ALMACENADO (offline), nunca
+    # en la consulta en vivo (species_facet_limit=0 por defecto).
+    species_ranking: list[dict[str, Any]] = []
+    species_params: dict[str, Any] = {}
+    if species_facet_limit > 0:
+        try:
+            species_ranking, species_params = fetch_taxon_facet(
+                "speciesKey", species_facet_limit, timeout
+            )
+        except GbifError as error:
+            errors.append(f"species_facet: {error}")
+
     # Nombres de órdenes y familias (key -> canonicalName).
     _resolver_nombres_taxon(order_ranking, resolve_names, timeout)
     _resolver_nombres_taxon(family_ranking, resolve_names, timeout)
+    # Nombres de especies (solo si se pidió el desglose completo).
+    _resolver_nombres_taxon(species_ranking, resolve_names, timeout)
 
     finished_at = datetime.now(timezone.utc)
 
@@ -937,6 +957,7 @@ def run(
             "iucn_facet": iucn_params,
             "order_facet": order_params,
             "family_facet": family_params,
+            "species_facet": species_params,
         },
         "total_bird_records_colombia": total_count,
         "publisher_ranking": ranking,
@@ -960,6 +981,8 @@ def run(
         "orders_in_ranking": len(order_ranking),
         "family_ranking": family_ranking,
         "families_in_ranking": len(family_ranking),
+        "species_ranking": species_ranking,
+        "species_in_ranking": len(species_ranking),
         "region_mapping_note": (
             "Agrupación por región ENCA usando la región predominante de cada "
             "departamento. Propuesta del equipo, pendiente de confirmación por SAO."

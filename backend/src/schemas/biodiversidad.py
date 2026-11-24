@@ -236,10 +236,12 @@ class ResumenGBIF(SchemaBase):
     iucn_categorias: list[CategoriaIUCN] = []
     especies_amenazadas: list[EspecieAmenazada] = []
 
-    # Desglose taxonómico: top órdenes y top familias. Pueden venir vacíos en
-    # cortes anteriores a esta funcionalidad.
+    # Desglose taxonómico: órdenes, familias y especies. Pueden venir vacíos en
+    # cortes anteriores a esta funcionalidad. ``especies`` es la lista completa
+    # (todas las especies con registros) para el buscador del dashboard.
     ordenes: list[TaxonGBIF] = []
     familias: list[TaxonGBIF] = []
+    especies: list[TaxonGBIF] = []
 
     # Contexto del histórico y de las exportaciones disponibles.
     cortes_historicos: int = 0

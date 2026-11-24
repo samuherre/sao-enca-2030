@@ -134,6 +134,7 @@ export interface ResumenGBIF {
   readonly regiones: readonly RegionGBIF[];
   readonly ordenes: readonly TaxonGBIF[];
   readonly familias: readonly TaxonGBIF[];
+  readonly especies: readonly TaxonGBIF[];
 
   readonly cortes_historicos: number;
   readonly historico: readonly CorteHistoricoGBIF[];
