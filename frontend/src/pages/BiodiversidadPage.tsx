@@ -100,6 +100,20 @@ function urlGbifColombia(): string {
 const ETIQUETA_OTROS_PUBLICADORES = "Otros publicadores";
 
 /**
+ * Enlace a GBIF con las ocurrencias de un TIPO de registro (basisOfRecord) en
+ * Colombia. El portal web SÍ aplica ``basis_of_record`` desde la URL (a
+ * diferencia del taxón), así que el filtro funciona. ``codigo`` es el propio
+ * valor de GBIF (p. ej. "HUMAN_OBSERVATION", "PRESERVED_SPECIMEN").
+ */
+function urlGbifTipoRegistro(codigo: string): string {
+  const params = new URLSearchParams({
+    country: "CO",
+    basis_of_record: codigo,
+  });
+  return `https://www.gbif.org/occurrence/search?${params.toString()}`;
+}
+
+/**
  * Enlace a la VISTA DE MAPA de GBIF (mapa de calor de densidad de ocurrencias),
  * con los filtros que el portal aplica de forma fiable desde la URL: país y,
  * opcionalmente, publicador. La pestaña "MAP" del portal muestra el mapa de
@@ -499,8 +513,20 @@ function TipoRegistroCard({ resumen }: { resumen: ResumenGBIF }) {
     );
   }
 
-  const data = tipos.map((t) => ({ etiqueta: t.etiqueta, registros: t.registros_ocurrencia }));
+  // Escala logarítmica (como en publicadores): "Observación humana" supera por
+  // varios órdenes de magnitud al resto, así que en escala lineal las demás
+  // barras son invisibles. En log cada tipo se aprecia. Un valor <= 0 no es
+  // representable en log, por lo que se excluye del GRÁFICO (no de la tabla).
+  const data = tipos
+    .filter((t) => t.registros_ocurrencia > 0)
+    .map((t) => ({ etiqueta: t.etiqueta, registros: t.registros_ocurrencia }));
   const alto = Math.max(200, data.length * 40);
+
+  const valores = data.map((d) => d.registros);
+  const minimo = valores.length > 0 ? Math.min(...valores) : 1;
+  const maximo = valores.length > 0 ? Math.max(...valores) : 1;
+  const dominioInferior = Math.pow(10, Math.floor(Math.log10(minimo)));
+  const dominioSuperior = Math.pow(10, Math.ceil(Math.log10(maximo)));
 
   return (
     <section style={{ marginTop: "1.5rem" }}>
@@ -508,7 +534,8 @@ function TipoRegistroCard({ resumen }: { resumen: ResumenGBIF }) {
       <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
         Naturaleza del registro según GBIF: observación de una persona, observación automática
         (sensor/cámara), espécimen de museo preservado, etc. La inmensa mayoría son observaciones, no
-        especímenes físicos.
+        especímenes físicos. El eje usa una <strong>escala logarítmica</strong> (cada marca es diez
+        veces la anterior) para que los tipos minoritarios sean visibles junto a la observación humana.
       </p>
 
       <div style={{ width: "100%", height: alto }}>
@@ -519,7 +546,13 @@ function TipoRegistroCard({ resumen }: { resumen: ResumenGBIF }) {
             margin={{ top: 8, right: 32, bottom: 8, left: 8 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
-            <XAxis type="number" tickFormatter={(v: number) => formatoCompacto(v)} />
+            <XAxis
+              type="number"
+              scale="log"
+              domain={[dominioInferior, dominioSuperior]}
+              allowDataOverflow
+              tickFormatter={(v: number) => formatoCompacto(v)}
+            />
             <YAxis type="category" dataKey="etiqueta" width={220} tick={{ fontSize: 11 }} />
             <Tooltip
               formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
@@ -528,6 +561,11 @@ function TipoRegistroCard({ resumen }: { resumen: ResumenGBIF }) {
           </BarChart>
         </ResponsiveContainer>
       </div>
+
+      <p style={{ color: "#789", fontSize: "0.8rem", marginBottom: "0.25rem" }}>
+        Cada tipo de registro enlaza a esas ocurrencias en GBIF, filtradas por Colombia (se abre en
+        una pestaña nueva).
+      </p>
 
       <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
         <thead>
@@ -546,7 +584,15 @@ function TipoRegistroCard({ resumen }: { resumen: ResumenGBIF }) {
             <tr key={t.codigo}>
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{t.rank}</td>
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
-                {t.etiqueta}{" "}
+                <a
+                  href={urlGbifTipoRegistro(t.codigo)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ver en GBIF las ocurrencias de este tipo de registro en Colombia"
+                  style={{ color: VERDE_OSCURO, textDecoration: "underline" }}
+                >
+                  {t.etiqueta}
+                </a>{" "}
                 <span style={{ color: "#aaa", fontSize: "0.75rem" }}>({t.codigo})</span>
               </td>
               <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
