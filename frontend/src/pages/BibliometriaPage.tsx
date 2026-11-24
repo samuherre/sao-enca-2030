@@ -353,8 +353,8 @@ function RevistasCard({
   if (data.length === 0) {
     return (
       <section style={{ marginTop: "1.5rem" }}>
-        <h3 style={{ marginBottom: "0.5rem" }}>Artículos por revista</h3>
-        <p style={{ color: "#666" }}>No hay información de revista en el conjunto actual.</p>
+        <h3 style={{ marginBottom: "0.5rem" }}>Artículos por fuente</h3>
+        <p style={{ color: "#666" }}>No hay información de fuente en el conjunto actual.</p>
       </section>
     );
   }
@@ -362,10 +362,11 @@ function RevistasCard({
   const alto = Math.max(260, chart.length * 26);
   return (
     <section style={{ marginTop: "1.5rem" }}>
-      <h3 style={{ marginBottom: "0.25rem" }}>Artículos por revista</h3>
+      <h3 style={{ marginBottom: "0.25rem" }}>Artículos por fuente</h3>
       <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
-        Revistas con más publicaciones; el resto se agrupa en “Otros”. El nombre se muestra tal
-        como viene de la fuente (puede incluir repositorios como GBIF, bioRxiv o Zenodo).
+        Fuentes con más publicaciones; el resto se agrupa en “Otros”. El nombre se muestra tal como
+        viene del dato y puede ser una revista o un repositorio institucional (p. ej. repositorios
+        universitarios, GBIF o Zenodo).
       </p>
       <div style={{ width: "100%", height: alto }}>
         <ResponsiveContainer>
