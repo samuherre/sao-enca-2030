@@ -81,8 +81,8 @@
     "total_firmas": 3,
     "autores_unicos": 3,
     "articulos_sin_autoria": 1,
-    "publicaciones_internacionales": null,
-    "publicaciones_interinstitucionales": null,
+    "publicaciones_internacionales": 0,
+    "publicaciones_interinstitucionales": 0,
     "grado_colaboracion": 0.5,
     "rcc": 0.5
   },

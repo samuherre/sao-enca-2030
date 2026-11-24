@@ -241,8 +241,8 @@
     "total_firmas": 87246,
     "autores_unicos": 54235,
     "articulos_sin_autoria": 234,
-    "publicaciones_internacionales": null,
-    "publicaciones_interinstitucionales": null,
+    "publicaciones_internacionales": 5283,
+    "publicaciones_interinstitucionales": 6735,
     "grado_colaboracion": 0.7,
     "rcc": 0.504
   },

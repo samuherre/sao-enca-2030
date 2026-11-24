@@ -375,7 +375,33 @@ def _indicadores_colaboracion(registros: list[dict]) -> IndicadoresColaboracion:
     autores_unicos: set[str] = set()
     sin_autoria = 0
 
+    # Colaboración por afiliación (independiente del conteo de autores): se
+    # calcula sobre los artículos que traen afiliación contable. Un artículo sin
+    # afiliaciones no cuenta en estas cifras (no se infiere).
+    con_afiliacion = 0
+    internacionales = 0
+    interinstitucionales = 0
+
     for r in registros:
+        # --- Colaboración por afiliación (país / institución) ---
+        instituciones: set[str] = set()
+        paises: set[str] = set()
+        for a in r.get("authorships") or []:
+            if not isinstance(a, dict):
+                continue
+            for i in a.get("institutions") or []:
+                if isinstance(i, dict) and i.get("name"):
+                    instituciones.add(str(i["name"]).strip())
+                    if i.get("country"):
+                        paises.add(str(i["country"]).strip())
+        if instituciones:
+            con_afiliacion += 1
+            if len(paises) > 1:
+                internacionales += 1
+            if len(instituciones) > 1:
+                interinstitucionales += 1
+
+        # --- Autoría (conteo de autores) ---
         nombres = _nombres_autores_fiables(r)
         if nombres is None:
             sin_autoria += 1
@@ -398,9 +424,11 @@ def _indicadores_colaboracion(registros: list[dict]) -> IndicadoresColaboracion:
         total_firmas=total_firmas,
         autores_unicos=len(autores_unicos),
         articulos_sin_autoria=sin_autoria,
-        # Requieren afiliaciones (re-ingesta); aún no disponibles.
-        publicaciones_internacionales=None,
-        publicaciones_interinstitucionales=None,
+        # Colaboración por afiliación: internacional = instituciones de >1 país;
+        # interinstitucional = >1 institución (mismo o distinto país). ``None``
+        # solo si NINGÚN artículo trae afiliación contable (no se inventa un 0).
+        publicaciones_internacionales=internacionales if con_afiliacion else None,
+        publicaciones_interinstitucionales=interinstitucionales if con_afiliacion else None,
         grado_colaboracion=_calcular_gc(n_contables, individuales),
         rcc=_calcular_rcc(dist_autores, n_contables),
     )
