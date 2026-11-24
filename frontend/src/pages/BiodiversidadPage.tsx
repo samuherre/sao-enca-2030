@@ -75,9 +75,16 @@ function formatoFechaHora(iso: string | null | undefined): string {
  * desde la URL son `country` y `publishing_org`; el usuario puede acotar a aves
  * con el selector de taxón del propio portal si lo necesita.
  */
+// Clave del backbone de GBIF para la clase Aves. Se añade a TODOS los enlaces
+// de ocurrencias para que el portal filtre solo aves (igual que nuestras
+// cifras, calculadas con taxonKey=212). Sin esto, los enlaces mostraban también
+// hongos, plantas, etc. (todo lo de Colombia), no solo aves.
+const GBIF_TAXON_AVES = "212";
+
 function urlGbifPublicador(orgKey: string): string {
   const params = new URLSearchParams({
     country: "CO",
+    taxon_key: GBIF_TAXON_AVES,
     publishing_org: orgKey,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
@@ -92,7 +99,7 @@ function urlGbifPublicador(orgKey: string): string {
  * título del enlace para no dar a entender que filtra solo "los demás".
  */
 function urlGbifColombia(): string {
-  const params = new URLSearchParams({ country: "CO" });
+  const params = new URLSearchParams({ country: "CO", taxon_key: GBIF_TAXON_AVES });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
 }
 
@@ -108,6 +115,7 @@ const ETIQUETA_OTROS_PUBLICADORES = "Otros publicadores";
 function urlGbifTipoRegistro(codigo: string): string {
   const params = new URLSearchParams({
     country: "CO",
+    taxon_key: GBIF_TAXON_AVES,
     basis_of_record: codigo,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
@@ -119,15 +127,12 @@ function urlGbifTipoRegistro(codigo: string): string {
  * la URL; ``codigo`` es el valor de GBIF (LC, NT, VU, EN, CR, DD, EX, EW, NE).
  */
 function urlGbifCategoriaIUCN(codigo: string): string {
-  // NO se incluye el filtro de taxón (``taxon_key``): el portal web de GBIF no
-  // lo reconoce en la URL y lo interpreta como un término de búsqueda de texto
-  // ("212"), lo que rompe el filtrado y devuelve 0 resultados. Los filtros que
-  // el portal SÍ aplica desde la URL son ``country`` e ``iucn_red_list_category``;
-  // así el enlace funciona. El resultado en GBIF puede incluir otros grupos
-  // además de aves (el acotado a Aves por URL no es fiable en el portal); por eso
-  // su total puede ser mayor que el de la tabla, que sí está acotada a aves.
+  // El portal de OCURRENCIAS sí aplica taxon_key=212 (Aves) desde la URL, igual
+  // que country e iucn_red_list_category. Así el enlace muestra solo aves y su
+  // total coincide con el de la tabla.
   const params = new URLSearchParams({
     country: "CO",
+    taxon_key: GBIF_TAXON_AVES,
     iucn_red_list_category: codigo,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
@@ -158,7 +163,7 @@ function urlGbifEspecie(speciesKey: string): string {
  * trae su propio mapa).
  */
 function urlGbifMapaPublicador(orgKey: string | null): string {
-  const params = new URLSearchParams({ country: "CO" });
+  const params = new URLSearchParams({ country: "CO", taxon_key: GBIF_TAXON_AVES });
   if (orgKey) params.set("publishing_org", orgKey);
   return `https://www.gbif.org/occurrence/map?${params.toString()}`;
 }
@@ -1538,9 +1543,8 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
       {categorias.length > 0 ? (
         <>
         <p style={{ color: "#789", fontSize: "0.8rem", margin: "0 0 0.25rem" }}>
-          Cada categoría enlaza a esas ocurrencias en GBIF, filtradas por Colombia (se abre en una
-          pestaña nueva). Nota: el portal de GBIF no permite acotar el enlace solo a aves, así que
-          su total puede ser mayor que el de esta tabla (que sí cuenta solo aves).
+          Cada categoría enlaza a esas ocurrencias de aves en GBIF, filtradas por Colombia (se abre
+          en una pestaña nueva).
         </p>
         <table style={{ borderCollapse: "collapse", width: "100%", marginBottom: "1rem" }}>
           <thead>
@@ -1561,7 +1565,7 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
                     href={urlGbifCategoriaIUCN(c.codigo)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Ver en GBIF las ocurrencias de Colombia en esta categoría UICN (el portal no permite acotar solo a aves desde el enlace)"
+                    title="Ver en GBIF las ocurrencias de aves de Colombia en esta categoría UICN"
                     style={{ color: VERDE_OSCURO, textDecoration: "underline" }}
                   >
                     {c.etiqueta}
