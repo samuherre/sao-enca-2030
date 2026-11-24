@@ -114,6 +114,20 @@ function urlGbifTipoRegistro(codigo: string): string {
 }
 
 /**
+ * Enlace a GBIF con las ocurrencias de aves de Colombia de una categoría de la
+ * Lista Roja de la UICN. El portal filtra por ``iucn_red_list_category`` desde
+ * la URL; ``codigo`` es el valor de GBIF (LC, NT, VU, EN, CR, DD, EX, EW, NE).
+ */
+function urlGbifCategoriaIUCN(codigo: string): string {
+  const params = new URLSearchParams({
+    country: "CO",
+    taxon_key: "212",
+    iucn_red_list_category: codigo,
+  });
+  return `https://www.gbif.org/occurrence/search?${params.toString()}`;
+}
+
+/**
  * Enlace a la VISTA DE MAPA de GBIF (mapa de calor de densidad de ocurrencias),
  * con los filtros que el portal aplica de forma fiable desde la URL: país y,
  * opcionalmente, publicador. La pestaña "MAP" del portal muestra el mapa de
@@ -1421,6 +1435,11 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
 
       {/* Desglose por categoría UICN */}
       {categorias.length > 0 ? (
+        <>
+        <p style={{ color: "#789", fontSize: "0.8rem", margin: "0 0 0.25rem" }}>
+          Cada categoría enlaza a esas ocurrencias en GBIF, filtradas por Colombia (se abre en una
+          pestaña nueva).
+        </p>
         <table style={{ borderCollapse: "collapse", width: "100%", marginBottom: "1rem" }}>
           <thead>
             <tr>
@@ -1435,7 +1454,17 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
           <tbody>
             {categorias.map((c) => (
               <tr key={c.codigo}>
-                <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{c.etiqueta}</td>
+                <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
+                  <a
+                    href={urlGbifCategoriaIUCN(c.codigo)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Ver en GBIF las ocurrencias de aves de Colombia en esta categoría UICN"
+                    style={{ color: VERDE_OSCURO, textDecoration: "underline" }}
+                  >
+                    {c.etiqueta}
+                  </a>
+                </td>
                 <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
                   {formatoEntero(c.registros_ocurrencia)}
                 </td>
@@ -1443,6 +1472,7 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
             ))}
           </tbody>
         </table>
+        </>
       ) : null}
 
       {/* Selector de especie amenazada + serie por año */}
