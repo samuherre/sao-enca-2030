@@ -534,14 +534,20 @@ def resolve_gadm_name(gid: str, timeout: int) -> str | None:
 
 
 def fetch_municipality_facet(
-    facet_limit: int, timeout: int, resolve_names: bool, top: int = 25
+    facet_limit: int, timeout: int, resolve_names: bool, top: int | None = 25
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Ranking de MUNICIPIOS (faceta gadmGid, nivel 2) con sus conteos.
 
     GBIF factea por gadmGid mezclando país/departamento/municipio; se filtran los
-    GID de nivel 2 (municipio) por el patrón del código, se toman los ``top`` con
-    más registros y se resuelve su nombre (resto se deja como el propio GID, no se
-    inventa). El ``facet_limit`` alto asegura capturar suficientes municipios.
+    GID de nivel 2 (municipio) por el patrón del código y se ordenan por conteo.
+    ``top`` acota cuántos se conservan (y, por tanto, cuántos nombres se
+    resuelven): ``top=25`` para la consulta EN VIVO (rápida); ``top=None`` para
+    el corte ALMACENADO del pipeline, que trae TODOS los municipios con registros
+    (~1100) para permitir la búsqueda por cualquier municipio. Resolver el nombre
+    cuesta 1 llamada HTTP por municipio, así que ``top=None`` solo debe usarse en
+    el proceso offline, nunca en la consulta en vivo. El ``facet_limit`` debe ser
+    mayor que el número total de GID (país+departamentos+municipios) para no
+    truncar; para traerlos todos se usa un límite amplio (~2000).
     """
     params = {
         "country": COUNTRY,
@@ -570,9 +576,10 @@ def fetch_municipality_facet(
             continue
         municipios.append({"gadm_gid": gid, "occurrence_count": occ})
 
-    # Ordena por conteo y conserva solo los 'top' para acotar las resoluciones.
+    # Ordena por conteo y, si hay 'top', conserva solo esos (acota resoluciones).
     municipios.sort(key=lambda m: m["occurrence_count"], reverse=True)
-    municipios = municipios[:top]
+    if top is not None:
+        municipios = municipios[:top]
 
     for muni in municipios:
         muni["name"] = (
@@ -790,7 +797,7 @@ def run(
     department_facet_limit: int = 40,
     taxon_facet_limit: int = 15,
     municipality_facet_limit: int = 300,
-    municipality_top: int = 25,
+    municipality_top: int | None = 25,
     year_facet_limit: int = 300,
     basis_facet_limit: int = 20,
     threatened: bool = True,

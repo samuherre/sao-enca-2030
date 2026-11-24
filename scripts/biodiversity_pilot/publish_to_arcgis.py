@@ -198,8 +198,13 @@ def run_pipeline(
     now = run_at
 
     # 1) Extracción + histórico (Fase 2). Reutiliza su recolector y filtros.
+    # Trae TODOS los municipios (no solo el top) para el dashboard y ArcGIS.
     report = history.gbc.run(
-        facet_limit=facet_limit, timeout=timeout, resolve_names=resolve_names
+        facet_limit=facet_limit,
+        timeout=timeout,
+        resolve_names=resolve_names,
+        municipality_facet_limit=2000,
+        municipality_top=None,
     )
     history.gbc.write_outputs(history.GBIF_DIR, now, report, report["publisher_ranking"])
     history.append_to_history(report)

@@ -206,10 +206,16 @@ def main(argv: list[str] | None = None) -> int:
     now = datetime.now(timezone.utc)
 
     # 1) Recolección (reutiliza Fase 1; mismos filtros CO + 212).
+    # El corte ALMACENADO trae TODOS los municipios con registros (no solo el
+    # top), para permitir la búsqueda por cualquiera de los ~1.100 municipios en
+    # el dashboard. municipality_top=None = sin recorte; facetLimit amplio (2000)
+    # para no truncar el facet gadmGid (país+departamentos+municipios).
     report = gbc.run(
         facet_limit=args.facet_limit,
         timeout=args.timeout,
         resolve_names=not args.no_resolve_names,
+        municipality_facet_limit=2000,
+        municipality_top=None,
     )
 
     print("Estado de la corrida:", report["status"])

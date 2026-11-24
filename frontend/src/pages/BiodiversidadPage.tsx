@@ -663,9 +663,24 @@ function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/** Nº de municipios que se muestran en el gráfico (los demás, vía búsqueda). */
+const MUNICIPIOS_EN_GRAFICO = 25;
+/** Máximo de resultados que lista la búsqueda, para no volcar cientos. */
+const MAX_RESULTADOS_BUSQUEDA = 50;
+
+/** Normaliza para búsqueda: minúsculas y sin acentos. */
+function normalizaBusqueda(texto: string): string {
+  return texto
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
 /** Gráfico + tabla de registros por municipio (top de GADM nivel 2). */
 function MunicipiosCard({ resumen }: { resumen: ResumenGBIF }) {
   const municipios = resumen.municipios;
+  const [consulta, setConsulta] = useState("");
 
   if (municipios.length === 0) {
     return (
@@ -678,31 +693,101 @@ function MunicipiosCard({ resumen }: { resumen: ResumenGBIF }) {
     );
   }
 
-  const data = municipios.map((m) => ({
+  // El gráfico muestra solo el top; la lista completa (todos los municipios con
+  // registros) se explora con la búsqueda. Los datos ya vienen ordenados por
+  // conteo descendente desde el pipeline.
+  const top = municipios.slice(0, MUNICIPIOS_EN_GRAFICO);
+  const data = top.map((m) => ({
     etiqueta: m.nombre ?? m.gadm_gid,
     registros: m.registros_ocurrencia,
   }));
   const alto = Math.max(260, data.length * 24);
 
   const conMas = municipios[0];
-  const conMenos = municipios[municipios.length - 1];
+
+  // Búsqueda sobre TODOS los municipios (por nombre o código GADM).
+  const q = normalizaBusqueda(consulta);
+  const resultados = q
+    ? municipios.filter(
+        (m) =>
+          normalizaBusqueda(m.nombre ?? "").includes(q) ||
+          m.gadm_gid.toLowerCase().includes(q),
+      )
+    : [];
 
   return (
     <section style={{ marginTop: "1.5rem" }}>
       <h3 style={{ marginBottom: "0.25rem" }}>Registros por municipio</h3>
       <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
-        Municipios de Colombia con más registros de ocurrencia de aves, según la ubicación GADM de
-        GBIF. Se muestran los {municipios.length} con mayor número de registros; no es el listado de
-        todos los municipios del país.
+        Registros de ocurrencia de aves por municipio de Colombia, según la ubicación GADM de GBIF.
+        El gráfico muestra los {MUNICIPIOS_EN_GRAFICO} con más registros; el total disponible es de{" "}
+        <strong>{formatoEntero(municipios.length)}</strong> municipios. Usa el buscador para
+        encontrar cualquier municipio del país.
       </p>
 
       <p style={{ color: "#456", fontSize: "0.85rem", margin: "0 0 0.5rem" }}>
-        En este ranking, el municipio con <strong>más</strong> registros es{" "}
-        <strong>{conMas.nombre ?? conMas.gadm_gid}</strong> ({formatoEntero(conMas.registros_ocurrencia)})
-        y el de <strong>menos</strong> es{" "}
-        <strong>{conMenos.nombre ?? conMenos.gadm_gid}</strong> (
-        {formatoEntero(conMenos.registros_ocurrencia)}).
+        El municipio con <strong>más</strong> registros es{" "}
+        <strong>{conMas.nombre ?? conMas.gadm_gid}</strong> (
+        {formatoEntero(conMas.registros_ocurrencia)}).
       </p>
+
+      {/* Buscador entre todos los municipios */}
+      <div style={{ margin: "0.5rem 0 0.75rem" }}>
+        <input
+          type="search"
+          value={consulta}
+          onChange={(e) => setConsulta(e.target.value)}
+          placeholder="Buscar municipio (p. ej. Jericó, Leticia…)"
+          aria-label="Buscar municipio"
+          style={{
+            width: "100%",
+            maxWidth: 360,
+            padding: "0.45rem 0.6rem",
+            borderRadius: "0.4rem",
+            border: `1px solid ${BORDE}`,
+            fontSize: "0.9rem",
+          }}
+        />
+        {q ? (
+          resultados.length === 0 ? (
+            <p style={{ color: "#789", fontSize: "0.85rem", marginTop: "0.4rem" }}>
+              Sin coincidencias para “{consulta}”. (Solo aparecen municipios con al menos un registro
+              de aves en GBIF.)
+            </p>
+          ) : (
+            <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                    Municipio
+                  </th>
+                  <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                    Registros de ocurrencia
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {resultados.slice(0, MAX_RESULTADOS_BUSQUEDA).map((m) => (
+                  <tr key={m.gadm_gid}>
+                    <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
+                      {m.nombre ?? <em style={{ color: "#888" }}>sin nombre ({m.gadm_gid})</em>}
+                    </td>
+                    <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                      {formatoEntero(m.registros_ocurrencia)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )
+        ) : null}
+        {q && resultados.length > MAX_RESULTADOS_BUSQUEDA ? (
+          <p style={{ color: "#789", fontSize: "0.8rem", marginTop: "0.25rem" }}>
+            Mostrando {MAX_RESULTADOS_BUSQUEDA} de {formatoEntero(resultados.length)} coincidencias;
+            afina la búsqueda para ver menos.
+          </p>
+        ) : null}
+      </div>
 
       <div style={{ width: "100%", height: alto }}>
         <ResponsiveContainer>
@@ -735,7 +820,7 @@ function MunicipiosCard({ resumen }: { resumen: ResumenGBIF }) {
           </tr>
         </thead>
         <tbody>
-          {municipios.map((m) => (
+          {top.map((m) => (
             <tr key={m.gadm_gid}>
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{m.rank}</td>
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>

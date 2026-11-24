@@ -5,12 +5,12 @@
   "cobertura_geografica": "Colombia (country=CO)",
   "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
   "origen": "almacenado",
-  "extraido_utc": "2026-11-17T01:08:38.331744+00:00",
-  "finalizado_utc": "2026-11-17T01:12:09.160926+00:00",
+  "extraido_utc": "2026-11-24T02:26:01.509001+00:00",
+  "finalizado_utc": "2026-11-24T02:42:46.445398+00:00",
   "estado": "completed",
   "errores": [],
   "nota": "Conteos agregados de GBIF (limit=0 + facet); no se descargaron ocurrencias individuales. 'count' es el total vivo al momento de la consulta. Cifras y nombres no detectados se dejan como null. El desglose por departamento usa el campo stateProvince (texto libre de GBIF); las variantes de un mismo departamento se suman tras canonizar el nombre. Los registros sin departamento no aparecen, por lo que la suma por departamento puede ser menor que el total nacional.",
-  "total_registros_ocurrencia": 20091344,
+  "total_registros_ocurrencia": 20092384,
   "publicadores": [
     {
       "rank": 1,
@@ -28,7 +28,7 @@
       "rank": 3,
       "org_key": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
       "nombre": "iNaturalist.org",
-      "registros_ocurrencia": 307858
+      "registros_ocurrencia": 308961
     },
     {
       "rank": 4,
@@ -75,14 +75,14 @@
     {
       "rank": 11,
       "org_key": "567cdb5e-5bb3-42e1-ae07-ffa6fc60b56e",
-      "nombre": "Asociación SELVA: Investigación para la Conservación en el Neotrópico",
+      "nombre": "SELVA: Investigación para la Conservación en el Neotrópico",
       "registros_ocurrencia": 40255
     },
     {
       "rank": 12,
       "org_key": "1f00d75c-f6fc-4224-a595-975e82d7689c",
       "nombre": "Xeno-canto Foundation for Nature Sounds",
-      "registros_ocurrencia": 35248
+      "registros_ocurrencia": 35310
     },
     {
       "rank": 13,
@@ -100,59 +100,59 @@
       "rank": 15,
       "org_key": "dbc07e15-c05b-4781-9ec3-59d331a9a4d8",
       "nombre": "Parex Resources Colombia - AG Sucursal",
-      "registros_ocurrencia": 32175
+      "registros_ocurrencia": 32179
     }
   ],
   "departamentos": [
     {
       "rank": 1,
       "departamento": "Antioquia",
-      "registros_ocurrencia": 2753306
+      "registros_ocurrencia": 2753622
     },
     {
       "rank": 2,
       "departamento": "Valle del Cauca",
-      "registros_ocurrencia": 2089535
+      "registros_ocurrencia": 2089670
     },
     {
       "rank": 3,
       "departamento": "Caldas",
-      "registros_ocurrencia": 1766269
+      "registros_ocurrencia": 1766311
     },
     {
       "rank": 4,
       "departamento": "Cundinamarca",
-      "registros_ocurrencia": 1662240
+      "registros_ocurrencia": 1662385
     },
     {
       "rank": 5,
       "departamento": "Meta",
-      "registros_ocurrencia": 1254313
+      "registros_ocurrencia": 1254326
     },
     {
       "rank": 6,
       "departamento": "Risaralda",
-      "registros_ocurrencia": 1057883
+      "registros_ocurrencia": 1057920
     },
     {
       "rank": 7,
       "departamento": "Magdalena",
-      "registros_ocurrencia": 985552
+      "registros_ocurrencia": 985640
     },
     {
       "rank": 8,
       "departamento": "Tolima",
-      "registros_ocurrencia": 840884
+      "registros_ocurrencia": 840911
     },
     {
       "rank": 9,
       "departamento": "Santander",
-      "registros_ocurrencia": 794165
+      "registros_ocurrencia": 794189
     },
     {
       "rank": 10,
       "departamento": "Quindío",
-      "registros_ocurrencia": 650129
+      "registros_ocurrencia": 650256
     },
     {
       "rank": 11,
@@ -162,7 +162,7 @@
     {
       "rank": 12,
       "departamento": "Boyacá",
-      "registros_ocurrencia": 439145
+      "registros_ocurrencia": 439162
     },
     {
       "rank": 13,
@@ -172,72 +172,72 @@
     {
       "rank": 14,
       "departamento": "La Guajira",
-      "registros_ocurrencia": 431767
+      "registros_ocurrencia": 431775
     },
     {
       "rank": 15,
       "departamento": "Casanare",
-      "registros_ocurrencia": 426019
+      "registros_ocurrencia": 426021
     },
     {
       "rank": 16,
       "departamento": "Bolívar",
-      "registros_ocurrencia": 380281
+      "registros_ocurrencia": 380288
     },
     {
       "rank": 17,
       "departamento": "Chocó",
-      "registros_ocurrencia": 373860
+      "registros_ocurrencia": 373903
     },
     {
       "rank": 18,
       "departamento": "Putumayo",
-      "registros_ocurrencia": 371428
+      "registros_ocurrencia": 371445
     },
     {
       "rank": 19,
       "departamento": "Cauca",
-      "registros_ocurrencia": 365287
+      "registros_ocurrencia": 365293
     },
     {
       "rank": 20,
       "departamento": "Nariño",
-      "registros_ocurrencia": 365032
+      "registros_ocurrencia": 365040
     },
     {
       "rank": 21,
       "departamento": "Amazonas",
-      "registros_ocurrencia": 255288
+      "registros_ocurrencia": 255299
     },
     {
       "rank": 22,
       "departamento": "Cesar",
-      "registros_ocurrencia": 234262
+      "registros_ocurrencia": 234297
     },
     {
       "rank": 23,
       "departamento": "Córdoba",
-      "registros_ocurrencia": 224713
+      "registros_ocurrencia": 224714
     },
     {
       "rank": 24,
       "departamento": "Caquetá",
-      "registros_ocurrencia": 171434
+      "registros_ocurrencia": 171441
     },
     {
       "rank": 25,
       "departamento": "Vaupés",
-      "registros_ocurrencia": 162890
+      "registros_ocurrencia": 162902
     },
     {
       "rank": 26,
       "departamento": "Guaviare",
-      "registros_ocurrencia": 158437
+      "registros_ocurrencia": 158439
     },
     {
       "rank": 27,
       "departamento": "Atlántico",
-      "registros_ocurrencia": 139364
+      "registros_ocurrencia": 139376
     },
     {
       "rank": 28,
@@ -252,17 +252,17 @@
     {
       "rank": 30,
       "departamento": "Arauca",
-      "registros_ocurrencia": 83256
+      "registros_ocurrencia": 83257
     },
     {
       "rank": 31,
       "departamento": "Vichada",
-      "registros_ocurrencia": 79239
+      "registros_ocurrencia": 79241
     },
     {
       "rank": 32,
       "departamento": "Norte de Santander",
-      "registros_ocurrencia": 76159
+      "registros_ocurrencia": 76179
     },
     {
       "rank": 33,
@@ -274,27 +274,27 @@
     {
       "rank": 1,
       "region": "Andina",
-      "registros_ocurrencia": 11017305
+      "registros_ocurrencia": 11018060
     },
     {
       "rank": 2,
       "region": "Pacífico",
-      "registros_ocurrencia": 3193714
+      "registros_ocurrencia": 3193906
     },
     {
       "rank": 3,
       "region": "Caribe",
-      "registros_ocurrencia": 2512043
+      "registros_ocurrencia": 2512194
     },
     {
       "rank": 4,
       "region": "Orinoquía",
-      "registros_ocurrencia": 1842827
+      "registros_ocurrencia": 1842845
     },
     {
       "rank": 5,
       "region": "Amazonía",
-      "registros_ocurrencia": 1258620
+      "registros_ocurrencia": 1258669
     },
     {
       "rank": 6,
@@ -307,55 +307,55 @@
       "rank": 1,
       "gadm_gid": "COL.8.9_2",
       "nombre": "Manizales",
-      "registros_ocurrencia": 888313
+      "registros_ocurrencia": 888346
     },
     {
       "rank": 2,
       "gadm_gid": "COL.20.26_2",
       "nombre": "Santa Marta",
-      "registros_ocurrencia": 758380
+      "registros_ocurrencia": 758411
     },
     {
       "rank": 3,
       "gadm_gid": "COL.5.1_2",
       "nombre": "Bogotá D.C.",
-      "registros_ocurrencia": 624642
+      "registros_ocurrencia": 624726
     },
     {
       "rank": 4,
       "gadm_gid": "COL.31.32_2",
       "nombre": "Santiago de Cali",
-      "registros_ocurrencia": 571781
+      "registros_ocurrencia": 571789
     },
     {
       "rank": 5,
       "gadm_gid": "COL.26.11_2",
       "nombre": "Pueblo Rico",
-      "registros_ocurrencia": 403747
+      "registros_ocurrencia": 403748
     },
     {
       "rank": 6,
       "gadm_gid": "COL.31.12_2",
       "nombre": "Dagua",
-      "registros_ocurrencia": 362354
+      "registros_ocurrencia": 362361
     },
     {
       "rank": 7,
       "gadm_gid": "COL.26.10_2",
       "nombre": "Pereira",
-      "registros_ocurrencia": 334324
+      "registros_ocurrencia": 334346
     },
     {
       "rank": 8,
       "gadm_gid": "COL.2.69_2",
       "nombre": "Medellín",
-      "registros_ocurrencia": 320663
+      "registros_ocurrencia": 320737
     },
     {
       "rank": 9,
       "gadm_gid": "COL.15.76_2",
       "nombre": "San Antonio del Tequendama",
-      "registros_ocurrencia": 310346
+      "registros_ocurrencia": 310351
     },
     {
       "rank": 10,
@@ -367,25 +367,25 @@
       "rank": 11,
       "gadm_gid": "COL.30.22_2",
       "nombre": "Ibagué",
-      "registros_ocurrencia": 294900
+      "registros_ocurrencia": 294913
     },
     {
       "rank": 12,
       "gadm_gid": "COL.8.26_2",
       "nombre": "Villamaría",
-      "registros_ocurrencia": 286778
+      "registros_ocurrencia": 286790
     },
     {
       "rank": 13,
       "gadm_gid": "COL.2.60_2",
       "nombre": "Jardín",
-      "registros_ocurrencia": 254928
+      "registros_ocurrencia": 254947
     },
     {
       "rank": 14,
       "gadm_gid": "COL.31.20_2",
       "nombre": "Guadalajara de Buga",
-      "registros_ocurrencia": 225866
+      "registros_ocurrencia": 225952
     },
     {
       "rank": 15,
@@ -397,31 +397,31 @@
       "rank": 16,
       "gadm_gid": "COL.31.6_2",
       "nombre": "Buenaventura",
-      "registros_ocurrencia": 192260
+      "registros_ocurrencia": 192268
     },
     {
       "rank": 17,
       "gadm_gid": "COL.1.5_2",
       "nombre": "Leticia",
-      "registros_ocurrencia": 172345
+      "registros_ocurrencia": 172356
     },
     {
       "rank": 18,
       "gadm_gid": "COL.32.2_2",
       "nombre": "Mitú",
-      "registros_ocurrencia": 158715
+      "registros_ocurrencia": 158728
     },
     {
       "rank": 19,
       "gadm_gid": "COL.25.12_2",
       "nombre": "Salento",
-      "registros_ocurrencia": 157186
+      "registros_ocurrencia": 157272
     },
     {
       "rank": 20,
       "gadm_gid": "COL.13.12_2",
       "nombre": "El Carmen de Atrato",
-      "registros_ocurrencia": 153064
+      "registros_ocurrencia": 153086
     },
     {
       "rank": 21,
@@ -433,25 +433,6577 @@
       "rank": 22,
       "gadm_gid": "COL.6.9_2",
       "nombre": "Cartagena de Indias",
-      "registros_ocurrencia": 137651
+      "registros_ocurrencia": 137656
     },
     {
       "rank": 23,
       "gadm_gid": "COL.17.4_2",
       "nombre": "San José del Guaviare",
-      "registros_ocurrencia": 131847
+      "registros_ocurrencia": 131849
     },
     {
       "rank": 24,
       "gadm_gid": "COL.28.74_2",
       "nombre": "San Vicente de Chucurí",
-      "registros_ocurrencia": 125424
+      "registros_ocurrencia": 125433
     },
     {
       "rank": 25,
       "gadm_gid": "COL.22.5_2",
       "nombre": "Barbacoas",
-      "registros_ocurrencia": 123488
+      "registros_ocurrencia": 123502
+    },
+    {
+      "rank": 26,
+      "gadm_gid": "COL.20.27_2",
+      "nombre": "Sitionuevo",
+      "registros_ocurrencia": 122274
+    },
+    {
+      "rank": 27,
+      "gadm_gid": "COL.16.8_2",
+      "nombre": "Puerto Inírida",
+      "registros_ocurrencia": 121044
+    },
+    {
+      "rank": 28,
+      "gadm_gid": "COL.24.9_2",
+      "nombre": "San Miguel de Mocoa",
+      "registros_ocurrencia": 117403
+    },
+    {
+      "rank": 29,
+      "gadm_gid": "COL.2.35_2",
+      "nombre": "Cocorná",
+      "registros_ocurrencia": 111776
+    },
+    {
+      "rank": 30,
+      "gadm_gid": "COL.21.1_2",
+      "nombre": "Acacías",
+      "registros_ocurrencia": 111262
+    },
+    {
+      "rank": 31,
+      "gadm_gid": "COL.26.13_2",
+      "nombre": "Santa Rosa de Cabal",
+      "registros_ocurrencia": 111242
+    },
+    {
+      "rank": 32,
+      "gadm_gid": "COL.7.72_2",
+      "nombre": "Puerto Boyacá",
+      "registros_ocurrencia": 111121
+    },
+    {
+      "rank": 33,
+      "gadm_gid": "COL.2.46_2",
+      "nombre": "Envigado",
+      "registros_ocurrencia": 110521
+    },
+    {
+      "rank": 34,
+      "gadm_gid": "COL.25.1_2",
+      "nombre": "Armenia",
+      "registros_ocurrencia": 110281
+    },
+    {
+      "rank": 35,
+      "gadm_gid": "COL.2.91_2",
+      "nombre": "San Francisco",
+      "registros_ocurrencia": 102960
+    },
+    {
+      "rank": 36,
+      "gadm_gid": "COL.31.41_2",
+      "nombre": "Yumbo",
+      "registros_ocurrencia": 101919
+    },
+    {
+      "rank": 37,
+      "gadm_gid": "COL.2.85_2",
+      "nombre": "Rionegro",
+      "registros_ocurrencia": 101899
+    },
+    {
+      "rank": 38,
+      "gadm_gid": "COL.30.20_2",
+      "nombre": "Herveo",
+      "registros_ocurrencia": 94239
+    },
+    {
+      "rank": 39,
+      "gadm_gid": "COL.30.7_2",
+      "nombre": "Cajamarca",
+      "registros_ocurrencia": 92895
+    },
+    {
+      "rank": 40,
+      "gadm_gid": "COL.21.12_2",
+      "nombre": "La Macarena",
+      "registros_ocurrencia": 87236
+    },
+    {
+      "rank": 41,
+      "gadm_gid": "COL.8.5_2",
+      "nombre": "Chinchiná",
+      "registros_ocurrencia": 86162
+    },
+    {
+      "rank": 42,
+      "gadm_gid": "COL.2.9_2",
+      "nombre": "Anorí",
+      "registros_ocurrencia": 86099
+    },
+    {
+      "rank": 43,
+      "gadm_gid": "COL.8.18_2",
+      "nombre": "Pensilvania",
+      "registros_ocurrencia": 86072
+    },
+    {
+      "rank": 44,
+      "gadm_gid": "COL.11.26_2",
+      "nombre": "Popayán",
+      "registros_ocurrencia": 85066
+    },
+    {
+      "rank": 45,
+      "gadm_gid": "COL.26.9_2",
+      "nombre": "Mistrató",
+      "registros_ocurrencia": 83137
+    },
+    {
+      "rank": 46,
+      "gadm_gid": "COL.24.3_2",
+      "nombre": "Puerto Asís",
+      "registros_ocurrencia": 79300
+    },
+    {
+      "rank": 47,
+      "gadm_gid": "COL.15.52_2",
+      "nombre": "La Vega",
+      "registros_ocurrencia": 77918
+    },
+    {
+      "rank": 48,
+      "gadm_gid": "COL.10.19_2",
+      "nombre": "Yopal",
+      "registros_ocurrencia": 76896
+    },
+    {
+      "rank": 49,
+      "gadm_gid": "COL.15.40_2",
+      "nombre": "Guasca",
+      "registros_ocurrencia": 76142
+    },
+    {
+      "rank": 50,
+      "gadm_gid": "COL.9.7_2",
+      "nombre": "Florencia",
+      "registros_ocurrencia": 74465
+    },
+    {
+      "rank": 51,
+      "gadm_gid": "COL.8.25_2",
+      "nombre": "Victoria",
+      "registros_ocurrencia": 73181
+    },
+    {
+      "rank": 52,
+      "gadm_gid": "COL.6.42_2",
+      "nombre": "Turbaco",
+      "registros_ocurrencia": 73169
+    },
+    {
+      "rank": 53,
+      "gadm_gid": "COL.24.2_2",
+      "nombre": "Orito",
+      "registros_ocurrencia": 73011
+    },
+    {
+      "rank": 54,
+      "gadm_gid": "COL.21.20_2",
+      "nombre": "Puerto López",
+      "registros_ocurrencia": 72752
+    },
+    {
+      "rank": 55,
+      "gadm_gid": "COL.31.26_2",
+      "nombre": "Palmira",
+      "registros_ocurrencia": 72428
+    },
+    {
+      "rank": 56,
+      "gadm_gid": "COL.31.9_2",
+      "nombre": "Calima",
+      "registros_ocurrencia": 71819
+    },
+    {
+      "rank": 57,
+      "gadm_gid": "COL.2.61_2",
+      "nombre": "Jericó",
+      "registros_ocurrencia": 71496
+    },
+    {
+      "rank": 58,
+      "gadm_gid": "COL.15.48_2",
+      "nombre": "La Calera",
+      "registros_ocurrencia": 69315
+    },
+    {
+      "rank": 59,
+      "gadm_gid": "COL.19.2_2",
+      "nombre": "Dibulla",
+      "registros_ocurrencia": 68778
+    },
+    {
+      "rank": 60,
+      "gadm_gid": "COL.10.9_2",
+      "nombre": "Paz de Ariporo",
+      "registros_ocurrencia": 68654
+    },
+    {
+      "rank": 61,
+      "gadm_gid": "COL.28.7_2",
+      "nombre": "Betulia",
+      "registros_ocurrencia": 67610
+    },
+    {
+      "rank": 62,
+      "gadm_gid": "COL.31.22_2",
+      "nombre": "La Cumbre",
+      "registros_ocurrencia": 67103
+    },
+    {
+      "rank": 63,
+      "gadm_gid": "COL.31.40_2",
+      "nombre": "Yotoco",
+      "registros_ocurrencia": 67064
+    },
+    {
+      "rank": 64,
+      "gadm_gid": "COL.21.18_2",
+      "nombre": "Puerto Gaitán",
+      "registros_ocurrencia": 66917
+    },
+    {
+      "rank": 65,
+      "gadm_gid": "COL.1.9_2",
+      "nombre": "Puerto Nariño",
+      "registros_ocurrencia": 66578
+    },
+    {
+      "rank": 66,
+      "gadm_gid": "COL.2.98_2",
+      "nombre": "San Rafael",
+      "registros_ocurrencia": 65077
+    },
+    {
+      "rank": 67,
+      "gadm_gid": "COL.21.15_2",
+      "nombre": "Mapiripán",
+      "registros_ocurrencia": 65012
+    },
+    {
+      "rank": 68,
+      "gadm_gid": "COL.25.6_2",
+      "nombre": "Filandia",
+      "registros_ocurrencia": 64865
+    },
+    {
+      "rank": 69,
+      "gadm_gid": "COL.28.61_2",
+      "nombre": "Piedecuesta",
+      "registros_ocurrencia": 64718
+    },
+    {
+      "rank": 70,
+      "gadm_gid": "COL.31.21_2",
+      "nombre": "Jamundí",
+      "registros_ocurrencia": 64193
+    },
+    {
+      "rank": 71,
+      "gadm_gid": "COL.21.26_2",
+      "nombre": "San Luis de Cubarral",
+      "registros_ocurrencia": 63914
+    },
+    {
+      "rank": 72,
+      "gadm_gid": "COL.7.86_2",
+      "nombre": "Santa María",
+      "registros_ocurrencia": 62286
+    },
+    {
+      "rank": 73,
+      "gadm_gid": "COL.8.7_2",
+      "nombre": "La Dorada",
+      "registros_ocurrencia": 60839
+    },
+    {
+      "rank": 74,
+      "gadm_gid": "COL.13.5_2",
+      "nombre": "Bahía Solano",
+      "registros_ocurrencia": 60501
+    },
+    {
+      "rank": 75,
+      "gadm_gid": "COL.15.64_2",
+      "nombre": "Pacho",
+      "registros_ocurrencia": 60422
+    },
+    {
+      "rank": 76,
+      "gadm_gid": "COL.15.44_2",
+      "nombre": "Guayabetal",
+      "registros_ocurrencia": 60419
+    },
+    {
+      "rank": 77,
+      "gadm_gid": "COL.25.4_2",
+      "nombre": "Circasia",
+      "registros_ocurrencia": 60283
+    },
+    {
+      "rank": 78,
+      "gadm_gid": "COL.4.2_2",
+      "nombre": "Barranquilla",
+      "registros_ocurrencia": 59360
+    },
+    {
+      "rank": 79,
+      "gadm_gid": "COL.15.90_2",
+      "nombre": "Supatá",
+      "registros_ocurrencia": 59244
+    },
+    {
+      "rank": 80,
+      "gadm_gid": "COL.10.14_2",
+      "nombre": "San Luis de Palenque",
+      "registros_ocurrencia": 59026
+    },
+    {
+      "rank": 81,
+      "gadm_gid": "COL.28.78_2",
+      "nombre": "Socorro",
+      "registros_ocurrencia": 58588
+    },
+    {
+      "rank": 82,
+      "gadm_gid": "COL.11.31_2",
+      "nombre": "Santa Rosa",
+      "registros_ocurrencia": 57933
+    },
+    {
+      "rank": 83,
+      "gadm_gid": "COL.2.62_2",
+      "nombre": "La Ceja",
+      "registros_ocurrencia": 57509
+    },
+    {
+      "rank": 84,
+      "gadm_gid": "COL.25.3_2",
+      "nombre": "Calarcá",
+      "registros_ocurrencia": 57141
+    },
+    {
+      "rank": 85,
+      "gadm_gid": "COL.12.15_2",
+      "nombre": "La Paz",
+      "registros_ocurrencia": 57020
+    },
+    {
+      "rank": 86,
+      "gadm_gid": "COL.22.48_2",
+      "nombre": "Ricaurte",
+      "registros_ocurrencia": 56944
+    },
+    {
+      "rank": 87,
+      "gadm_gid": "COL.15.21_2",
+      "nombre": "Cota",
+      "registros_ocurrencia": 55733
+    },
+    {
+      "rank": 88,
+      "gadm_gid": "COL.2.24_2",
+      "nombre": "Caldas",
+      "registros_ocurrencia": 55147
+    },
+    {
+      "rank": 89,
+      "gadm_gid": "COL.28.65_2",
+      "nombre": "Puerto Wilches",
+      "registros_ocurrencia": 55056
+    },
+    {
+      "rank": 90,
+      "gadm_gid": "COL.8.19_2",
+      "nombre": "Riosucio",
+      "registros_ocurrencia": 54714
+    },
+    {
+      "rank": 91,
+      "gadm_gid": "COL.2.87_2",
+      "nombre": "Sabaneta",
+      "registros_ocurrencia": 54292
+    },
+    {
+      "rank": 92,
+      "gadm_gid": "COL.2.108_2",
+      "nombre": "Támesis",
+      "registros_ocurrencia": 53563
+    },
+    {
+      "rank": 93,
+      "gadm_gid": "COL.25.7_2",
+      "nombre": "Génova",
+      "registros_ocurrencia": 53009
+    },
+    {
+      "rank": 94,
+      "gadm_gid": "COL.8.22_2",
+      "nombre": "Samaná",
+      "registros_ocurrencia": 52461
+    },
+    {
+      "rank": 95,
+      "gadm_gid": "COL.2.90_2",
+      "nombre": "San Carlos",
+      "registros_ocurrencia": 52018
+    },
+    {
+      "rank": 96,
+      "gadm_gid": "COL.28.6_2",
+      "nombre": "Barrancabermeja",
+      "registros_ocurrencia": 51247
+    },
+    {
+      "rank": 97,
+      "gadm_gid": "COL.19.8_2",
+      "nombre": "Maicao",
+      "registros_ocurrencia": 50877
+    },
+    {
+      "rank": 98,
+      "gadm_gid": "COL.2.95_2",
+      "nombre": "San Luís",
+      "registros_ocurrencia": 50022
+    },
+    {
+      "rank": 99,
+      "gadm_gid": "COL.28.9_2",
+      "nombre": "Bucaramanga",
+      "registros_ocurrencia": 49888
+    },
+    {
+      "rank": 100,
+      "gadm_gid": "COL.31.15_2",
+      "nombre": "El Cerrito",
+      "registros_ocurrencia": 49472
+    },
+    {
+      "rank": 101,
+      "gadm_gid": "COL.10.16_2",
+      "nombre": "Tauramena",
+      "registros_ocurrencia": 49211
+    },
+    {
+      "rank": 102,
+      "gadm_gid": "COL.2.82_2",
+      "nombre": "Puerto Triunfo",
+      "registros_ocurrencia": 48311
+    },
+    {
+      "rank": 103,
+      "gadm_gid": "COL.12.16_2",
+      "nombre": "Manaure",
+      "registros_ocurrencia": 48016
+    },
+    {
+      "rank": 104,
+      "gadm_gid": "COL.14.14_2",
+      "nombre": "Montería",
+      "registros_ocurrencia": 46808
+    },
+    {
+      "rank": 105,
+      "gadm_gid": "COL.18.25_2",
+      "nombre": "Pitalito",
+      "registros_ocurrencia": 46093
+    },
+    {
+      "rank": 106,
+      "gadm_gid": "COL.21.5_2",
+      "nombre": "Cumaral",
+      "registros_ocurrencia": 46065
+    },
+    {
+      "rank": 107,
+      "gadm_gid": "COL.18.23_2",
+      "nombre": "Palestina",
+      "registros_ocurrencia": 44741
+    },
+    {
+      "rank": 108,
+      "gadm_gid": "COL.18.10_2",
+      "nombre": "Garzón",
+      "registros_ocurrencia": 43529
+    },
+    {
+      "rank": 109,
+      "gadm_gid": "COL.15.49_2",
+      "nombre": "La Mesa",
+      "registros_ocurrencia": 43468
+    },
+    {
+      "rank": 110,
+      "gadm_gid": "COL.10.17_2",
+      "nombre": "Trinidad",
+      "registros_ocurrencia": 43060
+    },
+    {
+      "rank": 111,
+      "gadm_gid": "COL.28.48_2",
+      "nombre": "Lebríja",
+      "registros_ocurrencia": 42562
+    },
+    {
+      "rank": 112,
+      "gadm_gid": "COL.22.62_2",
+      "nombre": "Tumaco",
+      "registros_ocurrencia": 42332
+    },
+    {
+      "rank": 113,
+      "gadm_gid": "COL.25.8_2",
+      "nombre": "La Tebaida",
+      "registros_ocurrencia": 41373
+    },
+    {
+      "rank": 114,
+      "gadm_gid": "COL.18.28_2",
+      "nombre": "San Agustín",
+      "registros_ocurrencia": 40498
+    },
+    {
+      "rank": 115,
+      "gadm_gid": "COL.2.113_2",
+      "nombre": "Turbo",
+      "registros_ocurrencia": 40476
+    },
+    {
+      "rank": 116,
+      "gadm_gid": "COL.2.16_2",
+      "nombre": "Bello",
+      "registros_ocurrencia": 40056
+    },
+    {
+      "rank": 117,
+      "gadm_gid": "COL.18.1_2",
+      "nombre": "Acevedo",
+      "registros_ocurrencia": 39927
+    },
+    {
+      "rank": 118,
+      "gadm_gid": "COL.12.25_2",
+      "nombre": "Valledupar",
+      "registros_ocurrencia": 39614
+    },
+    {
+      "rank": 119,
+      "gadm_gid": "COL.24.13_2",
+      "nombre": "Villagarzón",
+      "registros_ocurrencia": 39514
+    },
+    {
+      "rank": 120,
+      "gadm_gid": "COL.3.1_2",
+      "nombre": "Arauca",
+      "registros_ocurrencia": 39360
+    },
+    {
+      "rank": 121,
+      "gadm_gid": "COL.10.1_2",
+      "nombre": "Aguazul",
+      "registros_ocurrencia": 38998
+    },
+    {
+      "rank": 122,
+      "gadm_gid": "COL.8.14_2",
+      "nombre": "Neira",
+      "registros_ocurrencia": 38138
+    },
+    {
+      "rank": 123,
+      "gadm_gid": "COL.27.3_2",
+      "nombre": "San Andrés",
+      "registros_ocurrencia": 37875
+    },
+    {
+      "rank": 124,
+      "gadm_gid": "COL.28.33_2",
+      "nombre": "Floridablanca",
+      "registros_ocurrencia": 37492
+    },
+    {
+      "rank": 125,
+      "gadm_gid": "COL.26.1_2",
+      "nombre": "Apía",
+      "registros_ocurrencia": 37371
+    },
+    {
+      "rank": 126,
+      "gadm_gid": "COL.2.122_2",
+      "nombre": "Yarumal",
+      "registros_ocurrencia": 37360
+    },
+    {
+      "rank": 127,
+      "gadm_gid": "COL.15.31_2",
+      "nombre": "Fusagasugá",
+      "registros_ocurrencia": 37339
+    },
+    {
+      "rank": 128,
+      "gadm_gid": "COL.31.11_2",
+      "nombre": "Cartago",
+      "registros_ocurrencia": 36717
+    },
+    {
+      "rank": 129,
+      "gadm_gid": "COL.6.32_2",
+      "nombre": "San Juan Nepomuceno",
+      "registros_ocurrencia": 36195
+    },
+    {
+      "rank": 130,
+      "gadm_gid": "COL.2.107_2",
+      "nombre": "Sonsón",
+      "registros_ocurrencia": 35662
+    },
+    {
+      "rank": 131,
+      "gadm_gid": "COL.15.61_2",
+      "nombre": "Nilo",
+      "registros_ocurrencia": 33814
+    },
+    {
+      "rank": 132,
+      "gadm_gid": "COL.20.6_2",
+      "nombre": "Ciénaga",
+      "registros_ocurrencia": 33753
+    },
+    {
+      "rank": 133,
+      "gadm_gid": "COL.33.1_2",
+      "nombre": "Cumaribo",
+      "registros_ocurrencia": 33598
+    },
+    {
+      "rank": 134,
+      "gadm_gid": "COL.15.30_2",
+      "nombre": "Fúquene",
+      "registros_ocurrencia": 33594
+    },
+    {
+      "rank": 135,
+      "gadm_gid": "COL.2.115_2",
+      "nombre": "Urrao",
+      "registros_ocurrencia": 33557
+    },
+    {
+      "rank": 136,
+      "gadm_gid": "COL.21.10_2",
+      "nombre": "Granada",
+      "registros_ocurrencia": 33367
+    },
+    {
+      "rank": 137,
+      "gadm_gid": "COL.22.52_2",
+      "nombre": "San Juan de Pasto",
+      "registros_ocurrencia": 33169
+    },
+    {
+      "rank": 138,
+      "gadm_gid": "COL.30.34_2",
+      "nombre": "Purificación",
+      "registros_ocurrencia": 33083
+    },
+    {
+      "rank": 139,
+      "gadm_gid": "COL.30.25_2",
+      "nombre": "Líbano",
+      "registros_ocurrencia": 32972
+    },
+    {
+      "rank": 140,
+      "gadm_gid": "COL.15.79_2",
+      "nombre": "San Francisco",
+      "registros_ocurrencia": 32187
+    },
+    {
+      "rank": 141,
+      "gadm_gid": "COL.8.12_2",
+      "nombre": "Marquetalia",
+      "registros_ocurrencia": 31656
+    },
+    {
+      "rank": 142,
+      "gadm_gid": "COL.21.27_2",
+      "nombre": "San Martín",
+      "registros_ocurrencia": 31238
+    },
+    {
+      "rank": 143,
+      "gadm_gid": "COL.25.10_2",
+      "nombre": "Pijao",
+      "registros_ocurrencia": 31222
+    },
+    {
+      "rank": 144,
+      "gadm_gid": "COL.10.5_2",
+      "nombre": "Maní",
+      "registros_ocurrencia": 31106
+    },
+    {
+      "rank": 145,
+      "gadm_gid": "COL.2.15_2",
+      "nombre": "Barbosa",
+      "registros_ocurrencia": 30899
+    },
+    {
+      "rank": 146,
+      "gadm_gid": "COL.21.24_2",
+      "nombre": "San Juan de Arama",
+      "registros_ocurrencia": 30094
+    },
+    {
+      "rank": 147,
+      "gadm_gid": "COL.2.124_2",
+      "nombre": "Yondó",
+      "registros_ocurrencia": 29378
+    },
+    {
+      "rank": 148,
+      "gadm_gid": "COL.2.84_2",
+      "nombre": "Retiro",
+      "registros_ocurrencia": 28591
+    },
+    {
+      "rank": 149,
+      "gadm_gid": "COL.15.27_2",
+      "nombre": "Fómeque",
+      "registros_ocurrencia": 28413
+    },
+    {
+      "rank": 150,
+      "gadm_gid": "COL.33.3_2",
+      "nombre": "Puerto Carreño",
+      "registros_ocurrencia": 28283
+    },
+    {
+      "rank": 151,
+      "gadm_gid": "COL.18.19_2",
+      "nombre": "Neiva",
+      "registros_ocurrencia": 28123
+    },
+    {
+      "rank": 152,
+      "gadm_gid": "COL.18.11_2",
+      "nombre": "Gigante",
+      "registros_ocurrencia": 28091
+    },
+    {
+      "rank": 153,
+      "gadm_gid": "COL.2.86_2",
+      "nombre": "Sabanalarga",
+      "registros_ocurrencia": 27417
+    },
+    {
+      "rank": 154,
+      "gadm_gid": "COL.14.27_2",
+      "nombre": "Tierralta",
+      "registros_ocurrencia": 27295
+    },
+    {
+      "rank": 155,
+      "gadm_gid": "COL.15.102_2",
+      "nombre": "Ubalá",
+      "registros_ocurrencia": 26818
+    },
+    {
+      "rank": 156,
+      "gadm_gid": "COL.12.14_2",
+      "nombre": "La Jagua de Ibirico",
+      "registros_ocurrencia": 26379
+    },
+    {
+      "rank": 157,
+      "gadm_gid": "COL.21.16_2",
+      "nombre": "Mesetas",
+      "registros_ocurrencia": 26127
+    },
+    {
+      "rank": 158,
+      "gadm_gid": "COL.21.11_2",
+      "nombre": "Guamal",
+      "registros_ocurrencia": 26103
+    },
+    {
+      "rank": 159,
+      "gadm_gid": "COL.13.27_2",
+      "nombre": "San José del Palmar",
+      "registros_ocurrencia": 25826
+    },
+    {
+      "rank": 160,
+      "gadm_gid": "COL.11.24_2",
+      "nombre": "Piamonte",
+      "registros_ocurrencia": 25760
+    },
+    {
+      "rank": 161,
+      "gadm_gid": "COL.2.78_2",
+      "nombre": "Pequé",
+      "registros_ocurrencia": 25444
+    },
+    {
+      "rank": 162,
+      "gadm_gid": "COL.2.59_2",
+      "nombre": "Ituango",
+      "registros_ocurrencia": 25134
+    },
+    {
+      "rank": 163,
+      "gadm_gid": "COL.9.14_2",
+      "nombre": "Solano",
+      "registros_ocurrencia": 24871
+    },
+    {
+      "rank": 164,
+      "gadm_gid": "COL.2.72_2",
+      "nombre": "Mutatá",
+      "registros_ocurrencia": 24818
+    },
+    {
+      "rank": 165,
+      "gadm_gid": "COL.15.97_2",
+      "nombre": "Tibacuy",
+      "registros_ocurrencia": 24791
+    },
+    {
+      "rank": 166,
+      "gadm_gid": "COL.2.6_2",
+      "nombre": "Andes",
+      "registros_ocurrencia": 24757
+    },
+    {
+      "rank": 167,
+      "gadm_gid": "COL.30.21_2",
+      "nombre": "Honda",
+      "registros_ocurrencia": 24530
+    },
+    {
+      "rank": 168,
+      "gadm_gid": "COL.15.86_2",
+      "nombre": "Soacha",
+      "registros_ocurrencia": 24391
+    },
+    {
+      "rank": 169,
+      "gadm_gid": "COL.21.4_2",
+      "nombre": "Castilla la Nueva",
+      "registros_ocurrencia": 24265
+    },
+    {
+      "rank": 170,
+      "gadm_gid": "COL.21.17_2",
+      "nombre": "Puerto Concordia",
+      "registros_ocurrencia": 23832
+    },
+    {
+      "rank": 171,
+      "gadm_gid": "COL.2.5_2",
+      "nombre": "Amalfi",
+      "registros_ocurrencia": 23559
+    },
+    {
+      "rank": 172,
+      "gadm_gid": "COL.15.3_2",
+      "nombre": "Anapoima",
+      "registros_ocurrencia": 23334
+    },
+    {
+      "rank": 173,
+      "gadm_gid": "COL.2.75_2",
+      "nombre": "Necoclí",
+      "registros_ocurrencia": 23113
+    },
+    {
+      "rank": 174,
+      "gadm_gid": "COL.10.8_2",
+      "nombre": "Orocué",
+      "registros_ocurrencia": 23033
+    },
+    {
+      "rank": 175,
+      "gadm_gid": "COL.25.11_2",
+      "nombre": "Quimbaya",
+      "registros_ocurrencia": 22644
+    },
+    {
+      "rank": 176,
+      "gadm_gid": "COL.10.3_2",
+      "nombre": "Hato Corozal",
+      "registros_ocurrencia": 22634
+    },
+    {
+      "rank": 177,
+      "gadm_gid": "COL.15.36_2",
+      "nombre": "Girardot",
+      "registros_ocurrencia": 22207
+    },
+    {
+      "rank": 178,
+      "gadm_gid": "COL.7.121_2",
+      "nombre": "Villa de Leyva",
+      "registros_ocurrencia": 22126
+    },
+    {
+      "rank": 179,
+      "gadm_gid": "COL.31.14_2",
+      "nombre": "El Cairo",
+      "registros_ocurrencia": 22071
+    },
+    {
+      "rank": 180,
+      "gadm_gid": "COL.25.9_2",
+      "nombre": "Montenegro",
+      "registros_ocurrencia": 21848
+    },
+    {
+      "rank": 181,
+      "gadm_gid": "COL.11.28_2",
+      "nombre": "Puracé",
+      "registros_ocurrencia": 21814
+    },
+    {
+      "rank": 182,
+      "gadm_gid": "COL.18.26_2",
+      "nombre": "Rivera",
+      "registros_ocurrencia": 21739
+    },
+    {
+      "rank": 183,
+      "gadm_gid": "COL.30.16_2",
+      "nombre": "Falán",
+      "registros_ocurrencia": 21646
+    },
+    {
+      "rank": 184,
+      "gadm_gid": "COL.11.10_2",
+      "nombre": "El Tambo",
+      "registros_ocurrencia": 21512
+    },
+    {
+      "rank": 185,
+      "gadm_gid": "COL.2.34_2",
+      "nombre": "Ciudad Bolívar",
+      "registros_ocurrencia": 21328
+    },
+    {
+      "rank": 186,
+      "gadm_gid": "COL.21.29_2",
+      "nombre": "Vista Hermosa",
+      "registros_ocurrencia": 21306
+    },
+    {
+      "rank": 187,
+      "gadm_gid": "COL.3.7_2",
+      "nombre": "Tame",
+      "registros_ocurrencia": 20998
+    },
+    {
+      "rank": 188,
+      "gadm_gid": "COL.18.17_2",
+      "nombre": "La Plata",
+      "registros_ocurrencia": 20957
+    },
+    {
+      "rank": 189,
+      "gadm_gid": "COL.15.39_2",
+      "nombre": "Guaduas",
+      "registros_ocurrencia": 20825
+    },
+    {
+      "rank": 190,
+      "gadm_gid": "COL.2.20_2",
+      "nombre": "Briceño",
+      "registros_ocurrencia": 20443
+    },
+    {
+      "rank": 191,
+      "gadm_gid": "COL.24.6_2",
+      "nombre": "Puerto Leguízamo",
+      "registros_ocurrencia": 20439
+    },
+    {
+      "rank": 192,
+      "gadm_gid": "COL.15.93_2",
+      "nombre": "Tabio",
+      "registros_ocurrencia": 20438
+    },
+    {
+      "rank": 193,
+      "gadm_gid": "COL.13.1_2",
+      "nombre": "Acandí",
+      "registros_ocurrencia": 20353
+    },
+    {
+      "rank": 194,
+      "gadm_gid": "COL.2.43_2",
+      "nombre": "El Carmen de Viboral",
+      "registros_ocurrencia": 20115
+    },
+    {
+      "rank": 195,
+      "gadm_gid": "COL.8.17_2",
+      "nombre": "Palestina",
+      "registros_ocurrencia": 20104
+    },
+    {
+      "rank": 196,
+      "gadm_gid": "COL.30.5_2",
+      "nombre": "Armero",
+      "registros_ocurrencia": 20082
+    },
+    {
+      "rank": 197,
+      "gadm_gid": "COL.30.18_2",
+      "nombre": "Fresno",
+      "registros_ocurrencia": 19864
+    },
+    {
+      "rank": 198,
+      "gadm_gid": "COL.15.43_2",
+      "nombre": "Guayabal de Síquima",
+      "registros_ocurrencia": 19752
+    },
+    {
+      "rank": 199,
+      "gadm_gid": "COL.2.103_2",
+      "nombre": "Santafé de Antioquia",
+      "registros_ocurrencia": 19631
+    },
+    {
+      "rank": 200,
+      "gadm_gid": "COL.25.5_2",
+      "nombre": "Córdoba",
+      "registros_ocurrencia": 19488
+    },
+    {
+      "rank": 201,
+      "gadm_gid": "COL.11.32_2",
+      "nombre": "Santander de Quilichao",
+      "registros_ocurrencia": 19059
+    },
+    {
+      "rank": 202,
+      "gadm_gid": "COL.7.3_2",
+      "nombre": "Arcabuco",
+      "registros_ocurrencia": 18926
+    },
+    {
+      "rank": 203,
+      "gadm_gid": "COL.6.35_2",
+      "nombre": "Santa Catalina",
+      "registros_ocurrencia": 18886
+    },
+    {
+      "rank": 204,
+      "gadm_gid": "COL.2.102_2",
+      "nombre": "Santa Rosa de Osos",
+      "registros_ocurrencia": 18876
+    },
+    {
+      "rank": 205,
+      "gadm_gid": "COL.2.21_2",
+      "nombre": "Buriticá",
+      "registros_ocurrencia": 18784
+    },
+    {
+      "rank": 206,
+      "gadm_gid": "COL.2.112_2",
+      "nombre": "Toledo",
+      "registros_ocurrencia": 18771
+    },
+    {
+      "rank": 207,
+      "gadm_gid": "COL.30.27_2",
+      "nombre": "Murillo",
+      "registros_ocurrencia": 18735
+    },
+    {
+      "rank": 208,
+      "gadm_gid": "COL.22.38_2",
+      "nombre": "Mallama",
+      "registros_ocurrencia": 18645
+    },
+    {
+      "rank": 209,
+      "gadm_gid": "COL.28.36_2",
+      "nombre": "Girón",
+      "registros_ocurrencia": 18584
+    },
+    {
+      "rank": 210,
+      "gadm_gid": "COL.26.4_2",
+      "nombre": "Dosquebradas",
+      "registros_ocurrencia": 18170
+    },
+    {
+      "rank": 211,
+      "gadm_gid": "COL.2.47_2",
+      "nombre": "Fredonia",
+      "registros_ocurrencia": 18090
+    },
+    {
+      "rank": 212,
+      "gadm_gid": "COL.2.11_2",
+      "nombre": "Apartadó",
+      "registros_ocurrencia": 18006
+    },
+    {
+      "rank": 213,
+      "gadm_gid": "COL.13.22_2",
+      "nombre": "Nuquí",
+      "registros_ocurrencia": 17912
+    },
+    {
+      "rank": 214,
+      "gadm_gid": "COL.21.3_2",
+      "nombre": "Cabuyaro",
+      "registros_ocurrencia": 17633
+    },
+    {
+      "rank": 215,
+      "gadm_gid": "COL.13.7_2",
+      "nombre": "Belén de Bajirá",
+      "registros_ocurrencia": 17536
+    },
+    {
+      "rank": 216,
+      "gadm_gid": "COL.2.110_2",
+      "nombre": "Tarso",
+      "registros_ocurrencia": 17465
+    },
+    {
+      "rank": 217,
+      "gadm_gid": "COL.16.4_2",
+      "nombre": "Mapiripana",
+      "registros_ocurrencia": 17414
+    },
+    {
+      "rank": 218,
+      "gadm_gid": "COL.14.1_2",
+      "nombre": "Ayapel",
+      "registros_ocurrencia": 17233
+    },
+    {
+      "rank": 219,
+      "gadm_gid": "COL.11.40_2",
+      "nombre": "Totoró",
+      "registros_ocurrencia": 17180
+    },
+    {
+      "rank": 220,
+      "gadm_gid": "COL.10.18_2",
+      "nombre": "Villanueva",
+      "registros_ocurrencia": 17175
+    },
+    {
+      "rank": 221,
+      "gadm_gid": "COL.2.44_2",
+      "nombre": "El Sopetrán",
+      "registros_ocurrencia": 17168
+    },
+    {
+      "rank": 222,
+      "gadm_gid": "COL.2.123_2",
+      "nombre": "Yolombó",
+      "registros_ocurrencia": 16983
+    },
+    {
+      "rank": 223,
+      "gadm_gid": "COL.14.26_2",
+      "nombre": "Santa Cruz de Lorica",
+      "registros_ocurrencia": 16793
+    },
+    {
+      "rank": 224,
+      "gadm_gid": "COL.31.8_2",
+      "nombre": "Caicedonia",
+      "registros_ocurrencia": 16688
+    },
+    {
+      "rank": 225,
+      "gadm_gid": "COL.28.66_2",
+      "nombre": "Rionegro",
+      "registros_ocurrencia": 16640
+    },
+    {
+      "rank": 226,
+      "gadm_gid": "COL.14.21_2",
+      "nombre": "San Antero",
+      "registros_ocurrencia": 16615
+    },
+    {
+      "rank": 227,
+      "gadm_gid": "COL.18.36_2",
+      "nombre": "Villavieja",
+      "registros_ocurrencia": 16391
+    },
+    {
+      "rank": 228,
+      "gadm_gid": "COL.19.12_2",
+      "nombre": "Uribía",
+      "registros_ocurrencia": 16329
+    },
+    {
+      "rank": 229,
+      "gadm_gid": "COL.8.2_2",
+      "nombre": "Anserma",
+      "registros_ocurrencia": 16279
+    },
+    {
+      "rank": 230,
+      "gadm_gid": "COL.28.20_2",
+      "nombre": "Cimitarra",
+      "registros_ocurrencia": 16209
+    },
+    {
+      "rank": 231,
+      "gadm_gid": "COL.2.66_2",
+      "nombre": "Liborina",
+      "registros_ocurrencia": 15917
+    },
+    {
+      "rank": 232,
+      "gadm_gid": "COL.15.23_2",
+      "nombre": "El Colegio",
+      "registros_ocurrencia": 15807
+    },
+    {
+      "rank": 233,
+      "gadm_gid": "COL.4.11_2",
+      "nombre": "Piojó",
+      "registros_ocurrencia": 15803
+    },
+    {
+      "rank": 234,
+      "gadm_gid": "COL.30.39_2",
+      "nombre": "San Antonio",
+      "registros_ocurrencia": 15734
+    },
+    {
+      "rank": 235,
+      "gadm_gid": "COL.26.14_2",
+      "nombre": "Santuario",
+      "registros_ocurrencia": 15697
+    },
+    {
+      "rank": 236,
+      "gadm_gid": "COL.31.23_2",
+      "nombre": "La Unión",
+      "registros_ocurrencia": 15533
+    },
+    {
+      "rank": 237,
+      "gadm_gid": "COL.2.81_2",
+      "nombre": "Puerto Nare",
+      "registros_ocurrencia": 15461
+    },
+    {
+      "rank": 238,
+      "gadm_gid": "COL.2.38_2",
+      "nombre": "Copacabana",
+      "registros_ocurrencia": 15442
+    },
+    {
+      "rank": 239,
+      "gadm_gid": "COL.2.96_2",
+      "nombre": "San Pedro de los Milagros",
+      "registros_ocurrencia": 15412
+    },
+    {
+      "rank": 240,
+      "gadm_gid": "COL.15.112_2",
+      "nombre": "Villeta",
+      "registros_ocurrencia": 15355
+    },
+    {
+      "rank": 241,
+      "gadm_gid": "COL.15.18_2",
+      "nombre": "Choachí",
+      "registros_ocurrencia": 15267
+    },
+    {
+      "rank": 242,
+      "gadm_gid": "COL.15.87_2",
+      "nombre": "Sopó",
+      "registros_ocurrencia": 15261
+    },
+    {
+      "rank": 243,
+      "gadm_gid": "COL.33.2_2",
+      "nombre": "La Primavera",
+      "registros_ocurrencia": 14901
+    },
+    {
+      "rank": 244,
+      "gadm_gid": "COL.2.29_2",
+      "nombre": "Carepa",
+      "registros_ocurrencia": 14869
+    },
+    {
+      "rank": 245,
+      "gadm_gid": "COL.7.38_2",
+      "nombre": "Garagoa",
+      "registros_ocurrencia": 14856
+    },
+    {
+      "rank": 246,
+      "gadm_gid": "COL.9.13_2",
+      "nombre": "San Vicente del Caguán",
+      "registros_ocurrencia": 14738
+    },
+    {
+      "rank": 247,
+      "gadm_gid": "COL.2.63_2",
+      "nombre": "La Estrella",
+      "registros_ocurrencia": 14698
+    },
+    {
+      "rank": 248,
+      "gadm_gid": "COL.14.13_2",
+      "nombre": "Montelíbano",
+      "registros_ocurrencia": 14614
+    },
+    {
+      "rank": 249,
+      "gadm_gid": "COL.24.7_2",
+      "nombre": "San Francisco",
+      "registros_ocurrencia": 14358
+    },
+    {
+      "rank": 250,
+      "gadm_gid": "COL.19.1_2",
+      "nombre": "Barrancas",
+      "registros_ocurrencia": 14350
+    },
+    {
+      "rank": 251,
+      "gadm_gid": "COL.11.13_2",
+      "nombre": "Inzá",
+      "registros_ocurrencia": 14309
+    },
+    {
+      "rank": 252,
+      "gadm_gid": "COL.15.11_2",
+      "nombre": "Cajicá",
+      "registros_ocurrencia": 14309
+    },
+    {
+      "rank": 253,
+      "gadm_gid": "COL.29.19_2",
+      "nombre": "San Marcos",
+      "registros_ocurrencia": 14291
+    },
+    {
+      "rank": 254,
+      "gadm_gid": "COL.18.2_2",
+      "nombre": "Agrado",
+      "registros_ocurrencia": 14194
+    },
+    {
+      "rank": 255,
+      "gadm_gid": "COL.30.26_2",
+      "nombre": "Melgar",
+      "registros_ocurrencia": 14028
+    },
+    {
+      "rank": 256,
+      "gadm_gid": "COL.8.15_2",
+      "nombre": "Norcasia",
+      "registros_ocurrencia": 14001
+    },
+    {
+      "rank": 257,
+      "gadm_gid": "COL.18.22_2",
+      "nombre": "Palermo",
+      "registros_ocurrencia": 13951
+    },
+    {
+      "rank": 258,
+      "gadm_gid": "COL.31.27_2",
+      "nombre": "Pradera",
+      "registros_ocurrencia": 13811
+    },
+    {
+      "rank": 259,
+      "gadm_gid": "COL.11.6_2",
+      "nombre": "Cajibío",
+      "registros_ocurrencia": 13746
+    },
+    {
+      "rank": 260,
+      "gadm_gid": "COL.15.100_2",
+      "nombre": "Tocancipá",
+      "registros_ocurrencia": 13660
+    },
+    {
+      "rank": 261,
+      "gadm_gid": "COL.29.25_2",
+      "nombre": "Tolú",
+      "registros_ocurrencia": 13487
+    },
+    {
+      "rank": 262,
+      "gadm_gid": "COL.2.80_2",
+      "nombre": "Puerto Berrío",
+      "registros_ocurrencia": 13441
+    },
+    {
+      "rank": 263,
+      "gadm_gid": "COL.15.57_2",
+      "nombre": "Medina",
+      "registros_ocurrencia": 13291
+    },
+    {
+      "rank": 264,
+      "gadm_gid": "COL.15.84_2",
+      "nombre": "Silvania",
+      "registros_ocurrencia": 13276
+    },
+    {
+      "rank": 265,
+      "gadm_gid": "COL.28.16_2",
+      "nombre": "Charalá",
+      "registros_ocurrencia": 13215
+    },
+    {
+      "rank": 266,
+      "gadm_gid": "COL.21.19_2",
+      "nombre": "Puerto Lleras",
+      "registros_ocurrencia": 13183
+    },
+    {
+      "rank": 267,
+      "gadm_gid": "COL.23.24_2",
+      "nombre": "Ocaña",
+      "registros_ocurrencia": 13077
+    },
+    {
+      "rank": 268,
+      "gadm_gid": "COL.26.8_2",
+      "nombre": "Marsella",
+      "registros_ocurrencia": 13064
+    },
+    {
+      "rank": 269,
+      "gadm_gid": "COL.4.14_2",
+      "nombre": "Puerto Colombia",
+      "registros_ocurrencia": 13044
+    },
+    {
+      "rank": 270,
+      "gadm_gid": "COL.28.5_2",
+      "nombre": "Barichara",
+      "registros_ocurrencia": 12956
+    },
+    {
+      "rank": 271,
+      "gadm_gid": "COL.20.18_2",
+      "nombre": "Pueblo Viejo",
+      "registros_ocurrencia": 12818
+    },
+    {
+      "rank": 272,
+      "gadm_gid": "COL.21.25_2",
+      "nombre": "San Juanito",
+      "registros_ocurrencia": 12816
+    },
+    {
+      "rank": 273,
+      "gadm_gid": "COL.18.15_2",
+      "nombre": "Isnos",
+      "registros_ocurrencia": 12730
+    },
+    {
+      "rank": 274,
+      "gadm_gid": "COL.28.87_2",
+      "nombre": "Zapatoca",
+      "registros_ocurrencia": 12551
+    },
+    {
+      "rank": 275,
+      "gadm_gid": "COL.2.111_2",
+      "nombre": "Titiribí",
+      "registros_ocurrencia": 12394
+    },
+    {
+      "rank": 276,
+      "gadm_gid": "COL.12.4_2",
+      "nombre": "Becerríl",
+      "registros_ocurrencia": 12356
+    },
+    {
+      "rank": 277,
+      "gadm_gid": "COL.10.2_2",
+      "nombre": "Chámeza",
+      "registros_ocurrencia": 12340
+    },
+    {
+      "rank": 278,
+      "gadm_gid": "COL.30.41_2",
+      "nombre": "San Sebastian de Mariquita",
+      "registros_ocurrencia": 12276
+    },
+    {
+      "rank": 279,
+      "gadm_gid": "COL.2.54_2",
+      "nombre": "Guarné",
+      "registros_ocurrencia": 12255
+    },
+    {
+      "rank": 280,
+      "gadm_gid": "COL.26.7_2",
+      "nombre": "La Virginia",
+      "registros_ocurrencia": 12064
+    },
+    {
+      "rank": 281,
+      "gadm_gid": "COL.2.65_2",
+      "nombre": "La Unión",
+      "registros_ocurrencia": 12056
+    },
+    {
+      "rank": 282,
+      "gadm_gid": "COL.7.114_2",
+      "nombre": "Tunja",
+      "registros_ocurrencia": 12047
+    },
+    {
+      "rank": 283,
+      "gadm_gid": "COL.30.31_2",
+      "nombre": "Piedras",
+      "registros_ocurrencia": 11751
+    },
+    {
+      "rank": 284,
+      "gadm_gid": "COL.15.83_2",
+      "nombre": "Sibaté",
+      "registros_ocurrencia": 11729
+    },
+    {
+      "rank": 285,
+      "gadm_gid": "COL.29.20_2",
+      "nombre": "San Onofre",
+      "registros_ocurrencia": 11484
+    },
+    {
+      "rank": 286,
+      "gadm_gid": "COL.2.92_2",
+      "nombre": "San Jerónimo",
+      "registros_ocurrencia": 11472
+    },
+    {
+      "rank": 287,
+      "gadm_gid": "COL.9.10_2",
+      "nombre": "Morelia",
+      "registros_ocurrencia": 11461
+    },
+    {
+      "rank": 288,
+      "gadm_gid": "COL.28.70_2",
+      "nombre": "San Gil",
+      "registros_ocurrencia": 11383
+    },
+    {
+      "rank": 289,
+      "gadm_gid": "COL.28.8_2",
+      "nombre": "Bolívar",
+      "registros_ocurrencia": 11317
+    },
+    {
+      "rank": 290,
+      "gadm_gid": "COL.15.81_2",
+      "nombre": "Sasaima",
+      "registros_ocurrencia": 11193
+    },
+    {
+      "rank": 291,
+      "gadm_gid": "COL.10.6_2",
+      "nombre": "Monterrey",
+      "registros_ocurrencia": 11096
+    },
+    {
+      "rank": 292,
+      "gadm_gid": "COL.7.93_2",
+      "nombre": "Soatá",
+      "registros_ocurrencia": 11042
+    },
+    {
+      "rank": 293,
+      "gadm_gid": "COL.14.23_2",
+      "nombre": "San Bernardo del Viento",
+      "registros_ocurrencia": 10974
+    },
+    {
+      "rank": 294,
+      "gadm_gid": "COL.15.16_2",
+      "nombre": "Chía",
+      "registros_ocurrencia": 10902
+    },
+    {
+      "rank": 295,
+      "gadm_gid": "COL.2.83_2",
+      "nombre": "Remedios",
+      "registros_ocurrencia": 10888
+    },
+    {
+      "rank": 296,
+      "gadm_gid": "COL.30.24_2",
+      "nombre": "Lérida",
+      "registros_ocurrencia": 10882
+    },
+    {
+      "rank": 297,
+      "gadm_gid": "COL.31.17_2",
+      "nombre": "Florida",
+      "registros_ocurrencia": 10644
+    },
+    {
+      "rank": 298,
+      "gadm_gid": "COL.2.67_2",
+      "nombre": "Maceo",
+      "registros_ocurrencia": 10614
+    },
+    {
+      "rank": 299,
+      "gadm_gid": "COL.7.52_2",
+      "nombre": "Miraflores",
+      "registros_ocurrencia": 10491
+    },
+    {
+      "rank": 300,
+      "gadm_gid": "COL.30.36_2",
+      "nombre": "Roncesvalles",
+      "registros_ocurrencia": 10464
+    },
+    {
+      "rank": 301,
+      "gadm_gid": "COL.25.2_2",
+      "nombre": "Buenavista",
+      "registros_ocurrencia": 10419
+    },
+    {
+      "rank": 302,
+      "gadm_gid": "COL.4.23_2",
+      "nombre": "Usiacurí",
+      "registros_ocurrencia": 10414
+    },
+    {
+      "rank": 303,
+      "gadm_gid": "COL.28.26_2",
+      "nombre": "El Carmen de Chucurí",
+      "registros_ocurrencia": 10295
+    },
+    {
+      "rank": 304,
+      "gadm_gid": "COL.2.3_2",
+      "nombre": "Alejandría",
+      "registros_ocurrencia": 10279
+    },
+    {
+      "rank": 305,
+      "gadm_gid": "COL.26.5_2",
+      "nombre": "Guática",
+      "registros_ocurrencia": 10168
+    },
+    {
+      "rank": 306,
+      "gadm_gid": "COL.17.1_2",
+      "nombre": "Calamar",
+      "registros_ocurrencia": 10099
+    },
+    {
+      "rank": 307,
+      "gadm_gid": "COL.15.95_2",
+      "nombre": "Tena",
+      "registros_ocurrencia": 10089
+    },
+    {
+      "rank": 308,
+      "gadm_gid": "COL.2.37_2",
+      "nombre": "Concordia",
+      "registros_ocurrencia": 10072
+    },
+    {
+      "rank": 309,
+      "gadm_gid": "COL.31.18_2",
+      "nombre": "Ginebra",
+      "registros_ocurrencia": 10047
+    },
+    {
+      "rank": 310,
+      "gadm_gid": "COL.2.55_2",
+      "nombre": "Guatapé",
+      "registros_ocurrencia": 9902
+    },
+    {
+      "rank": 311,
+      "gadm_gid": "COL.7.64_2",
+      "nombre": "Paipa",
+      "registros_ocurrencia": 9892
+    },
+    {
+      "rank": 312,
+      "gadm_gid": "COL.15.8_2",
+      "nombre": "Bojacá",
+      "registros_ocurrencia": 9776
+    },
+    {
+      "rank": 313,
+      "gadm_gid": "COL.31.13_2",
+      "nombre": "El Águila",
+      "registros_ocurrencia": 9764
+    },
+    {
+      "rank": 314,
+      "gadm_gid": "COL.7.2_2",
+      "nombre": "Aquitania",
+      "registros_ocurrencia": 9653
+    },
+    {
+      "rank": 315,
+      "gadm_gid": "COL.21.13_2",
+      "nombre": "La Uribe",
+      "registros_ocurrencia": 9621
+    },
+    {
+      "rank": 316,
+      "gadm_gid": "COL.14.18_2",
+      "nombre": "Puerto Libertador",
+      "registros_ocurrencia": 9585
+    },
+    {
+      "rank": 317,
+      "gadm_gid": "COL.15.42_2",
+      "nombre": "Guatavita",
+      "registros_ocurrencia": 9535
+    },
+    {
+      "rank": 318,
+      "gadm_gid": "COL.31.1_2",
+      "nombre": "Alcalá",
+      "registros_ocurrencia": 9482
+    },
+    {
+      "rank": 319,
+      "gadm_gid": "COL.15.99_2",
+      "nombre": "Tocaíma",
+      "registros_ocurrencia": 9451
+    },
+    {
+      "rank": 320,
+      "gadm_gid": "COL.15.75_2",
+      "nombre": "Ricaurte",
+      "registros_ocurrencia": 9449
+    },
+    {
+      "rank": 321,
+      "gadm_gid": "COL.14.15_2",
+      "nombre": "Planeta Rica",
+      "registros_ocurrencia": 9250
+    },
+    {
+      "rank": 322,
+      "gadm_gid": "COL.9.2_2",
+      "nombre": "Belén de los Andaquies",
+      "registros_ocurrencia": 9238
+    },
+    {
+      "rank": 323,
+      "gadm_gid": "COL.28.49_2",
+      "nombre": "Los Santos",
+      "registros_ocurrencia": 9198
+    },
+    {
+      "rank": 324,
+      "gadm_gid": "COL.2.48_2",
+      "nombre": "Frontino",
+      "registros_ocurrencia": 9196
+    },
+    {
+      "rank": 325,
+      "gadm_gid": "COL.7.85_2",
+      "nombre": "San Pablo de Borbur",
+      "registros_ocurrencia": 9184
+    },
+    {
+      "rank": 326,
+      "gadm_gid": "COL.15.91_2",
+      "nombre": "Susa",
+      "registros_ocurrencia": 9125
+    },
+    {
+      "rank": 327,
+      "gadm_gid": "COL.18.16_2",
+      "nombre": "La Argentina",
+      "registros_ocurrencia": 9033
+    },
+    {
+      "rank": 328,
+      "gadm_gid": "COL.2.4_2",
+      "nombre": "Amagá",
+      "registros_ocurrencia": 9031
+    },
+    {
+      "rank": 329,
+      "gadm_gid": "COL.6.4_2",
+      "nombre": "Arjona",
+      "registros_ocurrencia": 8943
+    },
+    {
+      "rank": 330,
+      "gadm_gid": "COL.15.116_2",
+      "nombre": "Zipaquirá",
+      "registros_ocurrencia": 8903
+    },
+    {
+      "rank": 331,
+      "gadm_gid": "COL.31.33_2",
+      "nombre": "Sevilla",
+      "registros_ocurrencia": 8867
+    },
+    {
+      "rank": 332,
+      "gadm_gid": "COL.7.61_2",
+      "nombre": "Otanche",
+      "registros_ocurrencia": 8859
+    },
+    {
+      "rank": 333,
+      "gadm_gid": "COL.28.81_2",
+      "nombre": "Suratá",
+      "registros_ocurrencia": 8843
+    },
+    {
+      "rank": 334,
+      "gadm_gid": "COL.28.35_2",
+      "nombre": "Gámbita",
+      "registros_ocurrencia": 8829
+    },
+    {
+      "rank": 335,
+      "gadm_gid": "COL.7.31_2",
+      "nombre": "Duitama",
+      "registros_ocurrencia": 8735
+    },
+    {
+      "rank": 336,
+      "gadm_gid": "COL.31.36_2",
+      "nombre": "Tuluá",
+      "registros_ocurrencia": 8700
+    },
+    {
+      "rank": 337,
+      "gadm_gid": "COL.15.37_2",
+      "nombre": "Granada",
+      "registros_ocurrencia": 8535
+    },
+    {
+      "rank": 338,
+      "gadm_gid": "COL.21.14_2",
+      "nombre": "Lejanías",
+      "registros_ocurrencia": 8535
+    },
+    {
+      "rank": 339,
+      "gadm_gid": "COL.11.25_2",
+      "nombre": "Piendamó",
+      "registros_ocurrencia": 8529
+    },
+    {
+      "rank": 340,
+      "gadm_gid": "COL.15.105_2",
+      "nombre": "Útica",
+      "registros_ocurrencia": 8528
+    },
+    {
+      "rank": 341,
+      "gadm_gid": "COL.2.58_2",
+      "nombre": "Itagüí",
+      "registros_ocurrencia": 8522
+    },
+    {
+      "rank": 342,
+      "gadm_gid": "COL.2.104_2",
+      "nombre": "Santo Domingo",
+      "registros_ocurrencia": 8512
+    },
+    {
+      "rank": 343,
+      "gadm_gid": "COL.30.46_2",
+      "nombre": "Villahermosa",
+      "registros_ocurrencia": 8508
+    },
+    {
+      "rank": 344,
+      "gadm_gid": "COL.21.8_2",
+      "nombre": "El Dorado",
+      "registros_ocurrencia": 8466
+    },
+    {
+      "rank": 345,
+      "gadm_gid": "COL.7.73_2",
+      "nombre": "Quípama",
+      "registros_ocurrencia": 8438
+    },
+    {
+      "rank": 346,
+      "gadm_gid": "COL.30.10_2",
+      "nombre": "Chaparral",
+      "registros_ocurrencia": 8431
+    },
+    {
+      "rank": 347,
+      "gadm_gid": "COL.24.1_2",
+      "nombre": "Colón",
+      "registros_ocurrencia": 8356
+    },
+    {
+      "rank": 348,
+      "gadm_gid": "COL.2.121_2",
+      "nombre": "Yalí",
+      "registros_ocurrencia": 8328
+    },
+    {
+      "rank": 349,
+      "gadm_gid": "COL.15.4_2",
+      "nombre": "Anolaima",
+      "registros_ocurrencia": 8302
+    },
+    {
+      "rank": 350,
+      "gadm_gid": "COL.15.5_2",
+      "nombre": "Arbeláez",
+      "registros_ocurrencia": 8282
+    },
+    {
+      "rank": 351,
+      "gadm_gid": "COL.8.21_2",
+      "nombre": "Salamina",
+      "registros_ocurrencia": 8237
+    },
+    {
+      "rank": 352,
+      "gadm_gid": "COL.2.125_2",
+      "nombre": "Zaragoza",
+      "registros_ocurrencia": 8236
+    },
+    {
+      "rank": 353,
+      "gadm_gid": "COL.2.51_2",
+      "nombre": "Gómez Plata",
+      "registros_ocurrencia": 8212
+    },
+    {
+      "rank": 354,
+      "gadm_gid": "COL.26.3_2",
+      "nombre": "Belén de Umbría",
+      "registros_ocurrencia": 8209
+    },
+    {
+      "rank": 355,
+      "gadm_gid": "COL.2.1_2",
+      "nombre": "Abejorral",
+      "registros_ocurrencia": 8159
+    },
+    {
+      "rank": 356,
+      "gadm_gid": "COL.12.10_2",
+      "nombre": "El Paso",
+      "registros_ocurrencia": 8156
+    },
+    {
+      "rank": 357,
+      "gadm_gid": "COL.20.2_2",
+      "nombre": "Aracataca",
+      "registros_ocurrencia": 8129
+    },
+    {
+      "rank": 358,
+      "gadm_gid": "COL.2.50_2",
+      "nombre": "Girardota",
+      "registros_ocurrencia": 8070
+    },
+    {
+      "rank": 359,
+      "gadm_gid": "COL.15.26_2",
+      "nombre": "Facatativá",
+      "registros_ocurrencia": 8043
+    },
+    {
+      "rank": 360,
+      "gadm_gid": "COL.30.32_2",
+      "nombre": "Planadas",
+      "registros_ocurrencia": 8034
+    },
+    {
+      "rank": 361,
+      "gadm_gid": "COL.21.2_2",
+      "nombre": "Barranca de Upía",
+      "registros_ocurrencia": 8006
+    },
+    {
+      "rank": 362,
+      "gadm_gid": "COL.30.3_2",
+      "nombre": "Ambalema",
+      "registros_ocurrencia": 7997
+    },
+    {
+      "rank": 363,
+      "gadm_gid": "COL.2.77_2",
+      "nombre": "Peñol",
+      "registros_ocurrencia": 7984
+    },
+    {
+      "rank": 364,
+      "gadm_gid": "COL.7.65_2",
+      "nombre": "Pajarito",
+      "registros_ocurrencia": 7930
+    },
+    {
+      "rank": 365,
+      "gadm_gid": "COL.2.117_2",
+      "nombre": "Valparaíso",
+      "registros_ocurrencia": 7859
+    },
+    {
+      "rank": 366,
+      "gadm_gid": "COL.15.115_2",
+      "nombre": "Zipacón",
+      "registros_ocurrencia": 7748
+    },
+    {
+      "rank": 367,
+      "gadm_gid": "COL.2.109_2",
+      "nombre": "Tarazá",
+      "registros_ocurrencia": 7702
+    },
+    {
+      "rank": 368,
+      "gadm_gid": "COL.9.12_2",
+      "nombre": "San José del Fragua",
+      "registros_ocurrencia": 7636
+    },
+    {
+      "rank": 369,
+      "gadm_gid": "COL.30.40_2",
+      "nombre": "San Luís",
+      "registros_ocurrencia": 7574
+    },
+    {
+      "rank": 370,
+      "gadm_gid": "COL.19.6_2",
+      "nombre": "Hatonuevo",
+      "registros_ocurrencia": 7530
+    },
+    {
+      "rank": 371,
+      "gadm_gid": "COL.31.34_2",
+      "nombre": "Toro",
+      "registros_ocurrencia": 7496
+    },
+    {
+      "rank": 372,
+      "gadm_gid": "COL.18.29_2",
+      "nombre": "Santa María",
+      "registros_ocurrencia": 7400
+    },
+    {
+      "rank": 373,
+      "gadm_gid": "COL.3.6_2",
+      "nombre": "Saravena",
+      "registros_ocurrencia": 7360
+    },
+    {
+      "rank": 374,
+      "gadm_gid": "COL.14.22_2",
+      "nombre": "San Bernardino de Sahagún",
+      "registros_ocurrencia": 7328
+    },
+    {
+      "rank": 375,
+      "gadm_gid": "COL.15.58_2",
+      "nombre": "Mosquera",
+      "registros_ocurrencia": 7276
+    },
+    {
+      "rank": 376,
+      "gadm_gid": "COL.9.3_2",
+      "nombre": "Cartagena del Chairá",
+      "registros_ocurrencia": 7262
+    },
+    {
+      "rank": 377,
+      "gadm_gid": "COL.6.30_2",
+      "nombre": "San Jacinto",
+      "registros_ocurrencia": 7261
+    },
+    {
+      "rank": 378,
+      "gadm_gid": "COL.28.30_2",
+      "nombre": "Encino",
+      "registros_ocurrencia": 7105
+    },
+    {
+      "rank": 379,
+      "gadm_gid": "COL.31.5_2",
+      "nombre": "Bolívar",
+      "registros_ocurrencia": 7101
+    },
+    {
+      "rank": 380,
+      "gadm_gid": "COL.23.32_2",
+      "nombre": "San José de Cúcuta",
+      "registros_ocurrencia": 7098
+    },
+    {
+      "rank": 381,
+      "gadm_gid": "COL.28.82_2",
+      "nombre": "Tona",
+      "registros_ocurrencia": 7087
+    },
+    {
+      "rank": 382,
+      "gadm_gid": "COL.8.3_2",
+      "nombre": "Aranzazú",
+      "registros_ocurrencia": 7054
+    },
+    {
+      "rank": 383,
+      "gadm_gid": "COL.21.6_2",
+      "nombre": "El Calvario",
+      "registros_ocurrencia": 7050
+    },
+    {
+      "rank": 384,
+      "gadm_gid": "COL.31.3_2",
+      "nombre": "Ansermanuevo",
+      "registros_ocurrencia": 6979
+    },
+    {
+      "rank": 385,
+      "gadm_gid": "COL.3.2_2",
+      "nombre": "Arauquita",
+      "registros_ocurrencia": 6869
+    },
+    {
+      "rank": 386,
+      "gadm_gid": "COL.11.37_2",
+      "nombre": "Timbío",
+      "registros_ocurrencia": 6833
+    },
+    {
+      "rank": 387,
+      "gadm_gid": "COL.15.69_2",
+      "nombre": "Puerto Salgar",
+      "registros_ocurrencia": 6832
+    },
+    {
+      "rank": 388,
+      "gadm_gid": "COL.7.36_2",
+      "nombre": "Gachantivá",
+      "registros_ocurrencia": 6796
+    },
+    {
+      "rank": 389,
+      "gadm_gid": "COL.15.7_2",
+      "nombre": "Bituima",
+      "registros_ocurrencia": 6776
+    },
+    {
+      "rank": 390,
+      "gadm_gid": "COL.22.64_2",
+      "nombre": "Yacuanquér",
+      "registros_ocurrencia": 6729
+    },
+    {
+      "rank": 391,
+      "gadm_gid": "COL.2.40_2",
+      "nombre": "Don Matías",
+      "registros_ocurrencia": 6701
+    },
+    {
+      "rank": 392,
+      "gadm_gid": "COL.22.10_2",
+      "nombre": "Consacá",
+      "registros_ocurrencia": 6684
+    },
+    {
+      "rank": 393,
+      "gadm_gid": "COL.6.43_2",
+      "nombre": "Turbaná",
+      "registros_ocurrencia": 6617
+    },
+    {
+      "rank": 394,
+      "gadm_gid": "COL.2.26_2",
+      "nombre": "Cañasgordas",
+      "registros_ocurrencia": 6610
+    },
+    {
+      "rank": 395,
+      "gadm_gid": "COL.31.31_2",
+      "nombre": "San Pedro",
+      "registros_ocurrencia": 6551
+    },
+    {
+      "rank": 396,
+      "gadm_gid": "COL.6.21_2",
+      "nombre": "Mompós",
+      "registros_ocurrencia": 6527
+    },
+    {
+      "rank": 397,
+      "gadm_gid": "COL.24.10_2",
+      "nombre": "Santiago",
+      "registros_ocurrencia": 6525
+    },
+    {
+      "rank": 398,
+      "gadm_gid": "COL.30.11_2",
+      "nombre": "Coello",
+      "registros_ocurrencia": 6512
+    },
+    {
+      "rank": 399,
+      "gadm_gid": "COL.15.20_2",
+      "nombre": "Cogua",
+      "registros_ocurrencia": 6477
+    },
+    {
+      "rank": 400,
+      "gadm_gid": "COL.15.113_2",
+      "nombre": "Viotá",
+      "registros_ocurrencia": 6454
+    },
+    {
+      "rank": 401,
+      "gadm_gid": "COL.15.24_2",
+      "nombre": "El Peñon",
+      "registros_ocurrencia": 6432
+    },
+    {
+      "rank": 402,
+      "gadm_gid": "COL.22.32_2",
+      "nombre": "La Tola",
+      "registros_ocurrencia": 6424
+    },
+    {
+      "rank": 403,
+      "gadm_gid": "COL.10.12_2",
+      "nombre": "Sabanalarga",
+      "registros_ocurrencia": 6418
+    },
+    {
+      "rank": 404,
+      "gadm_gid": "COL.14.2_2",
+      "nombre": "Buenavista",
+      "registros_ocurrencia": 6411
+    },
+    {
+      "rank": 405,
+      "gadm_gid": "COL.14.4_2",
+      "nombre": "Cereté",
+      "registros_ocurrencia": 6408
+    },
+    {
+      "rank": 406,
+      "gadm_gid": "COL.8.10_2",
+      "nombre": "Manzanares",
+      "registros_ocurrencia": 6385
+    },
+    {
+      "rank": 407,
+      "gadm_gid": "COL.9.5_2",
+      "nombre": "El Doncello",
+      "registros_ocurrencia": 6376
+    },
+    {
+      "rank": 408,
+      "gadm_gid": "COL.20.16_2",
+      "nombre": "Pivijay",
+      "registros_ocurrencia": 6334
+    },
+    {
+      "rank": 409,
+      "gadm_gid": "COL.11.38_2",
+      "nombre": "Timbiquí",
+      "registros_ocurrencia": 6327
+    },
+    {
+      "rank": 410,
+      "gadm_gid": "COL.15.80_2",
+      "nombre": "San Juan de Río Seco",
+      "registros_ocurrencia": 6269
+    },
+    {
+      "rank": 411,
+      "gadm_gid": "COL.31.7_2",
+      "nombre": "Bugalagrande",
+      "registros_ocurrencia": 6239
+    },
+    {
+      "rank": 412,
+      "gadm_gid": "COL.22.39_2",
+      "nombre": "Mosquera",
+      "registros_ocurrencia": 6221
+    },
+    {
+      "rank": 413,
+      "gadm_gid": "COL.27.2_2",
+      "nombre": "Providencia",
+      "registros_ocurrencia": 6211
+    },
+    {
+      "rank": 414,
+      "gadm_gid": "COL.15.63_2",
+      "nombre": "Nocaima",
+      "registros_ocurrencia": 6202
+    },
+    {
+      "rank": 415,
+      "gadm_gid": "COL.13.23_2",
+      "nombre": "Quibdó",
+      "registros_ocurrencia": 6126
+    },
+    {
+      "rank": 416,
+      "gadm_gid": "COL.2.42_2",
+      "nombre": "El Bagre",
+      "registros_ocurrencia": 6079
+    },
+    {
+      "rank": 417,
+      "gadm_gid": "COL.15.29_2",
+      "nombre": "Funza",
+      "registros_ocurrencia": 6075
+    },
+    {
+      "rank": 418,
+      "gadm_gid": "COL.4.6_2",
+      "nombre": "Juan de Acosta",
+      "registros_ocurrencia": 6057
+    },
+    {
+      "rank": 419,
+      "gadm_gid": "COL.31.28_2",
+      "nombre": "Restrepo",
+      "registros_ocurrencia": 6054
+    },
+    {
+      "rank": 420,
+      "gadm_gid": "COL.2.7_2",
+      "nombre": "Angelópolis",
+      "registros_ocurrencia": 6047
+    },
+    {
+      "rank": 421,
+      "gadm_gid": "COL.23.29_2",
+      "nombre": "Salazar de las Palmas",
+      "registros_ocurrencia": 6047
+    },
+    {
+      "rank": 422,
+      "gadm_gid": "COL.13.26_2",
+      "nombre": "Riosucio",
+      "registros_ocurrencia": 6016
+    },
+    {
+      "rank": 423,
+      "gadm_gid": "COL.15.103_2",
+      "nombre": "Ubaqué",
+      "registros_ocurrencia": 5985
+    },
+    {
+      "rank": 424,
+      "gadm_gid": "COL.2.68_2",
+      "nombre": "Marinilla",
+      "registros_ocurrencia": 5952
+    },
+    {
+      "rank": 425,
+      "gadm_gid": "COL.2.17_2",
+      "nombre": "Belmira",
+      "registros_ocurrencia": 5946
+    },
+    {
+      "rank": 426,
+      "gadm_gid": "COL.2.64_2",
+      "nombre": "La Pintada",
+      "registros_ocurrencia": 5912
+    },
+    {
+      "rank": 427,
+      "gadm_gid": "COL.8.27_2",
+      "nombre": "Viterbo",
+      "registros_ocurrencia": 5901
+    },
+    {
+      "rank": 428,
+      "gadm_gid": "COL.28.67_2",
+      "nombre": "Sabana de Torres",
+      "registros_ocurrencia": 5867
+    },
+    {
+      "rank": 429,
+      "gadm_gid": "COL.29.23_2",
+      "nombre": "Sincelejo",
+      "registros_ocurrencia": 5855
+    },
+    {
+      "rank": 430,
+      "gadm_gid": "COL.18.3_2",
+      "nombre": "Aipe",
+      "registros_ocurrencia": 5837
+    },
+    {
+      "rank": 431,
+      "gadm_gid": "COL.28.64_2",
+      "nombre": "Puerto Parra",
+      "registros_ocurrencia": 5837
+    },
+    {
+      "rank": 432,
+      "gadm_gid": "COL.17.2_2",
+      "nombre": "El Retorno",
+      "registros_ocurrencia": 5827
+    },
+    {
+      "rank": 433,
+      "gadm_gid": "COL.21.23_2",
+      "nombre": "San Carlos de Guaroa",
+      "registros_ocurrencia": 5817
+    },
+    {
+      "rank": 434,
+      "gadm_gid": "COL.15.74_2",
+      "nombre": "Rafael Reyes",
+      "registros_ocurrencia": 5776
+    },
+    {
+      "rank": 435,
+      "gadm_gid": "COL.4.7_2",
+      "nombre": "Luruaco",
+      "registros_ocurrencia": 5769
+    },
+    {
+      "rank": 436,
+      "gadm_gid": "COL.29.26_2",
+      "nombre": "Toluviejo",
+      "registros_ocurrencia": 5762
+    },
+    {
+      "rank": 437,
+      "gadm_gid": "COL.31.19_2",
+      "nombre": "Guacarí",
+      "registros_ocurrencia": 5757
+    },
+    {
+      "rank": 438,
+      "gadm_gid": "COL.15.2_2",
+      "nombre": "Albán",
+      "registros_ocurrencia": 5703
+    },
+    {
+      "rank": 439,
+      "gadm_gid": "COL.23.7_2",
+      "nombre": "Chinácota",
+      "registros_ocurrencia": 5697
+    },
+    {
+      "rank": 440,
+      "gadm_gid": "COL.21.9_2",
+      "nombre": "Fuente de Oro",
+      "registros_ocurrencia": 5681
+    },
+    {
+      "rank": 441,
+      "gadm_gid": "COL.2.76_2",
+      "nombre": "Olaya",
+      "registros_ocurrencia": 5636
+    },
+    {
+      "rank": 442,
+      "gadm_gid": "COL.15.77_2",
+      "nombre": "San Bernardo",
+      "registros_ocurrencia": 5579
+    },
+    {
+      "rank": 443,
+      "gadm_gid": "COL.29.6_2",
+      "nombre": "Coveñas",
+      "registros_ocurrencia": 5566
+    },
+    {
+      "rank": 444,
+      "gadm_gid": "COL.6.36_2",
+      "nombre": "Santa Rosa",
+      "registros_ocurrencia": 5563
+    },
+    {
+      "rank": 445,
+      "gadm_gid": "COL.15.88_2",
+      "nombre": "Subachoque",
+      "registros_ocurrencia": 5419
+    },
+    {
+      "rank": 446,
+      "gadm_gid": "COL.28.25_2",
+      "nombre": "Curití",
+      "registros_ocurrencia": 5414
+    },
+    {
+      "rank": 447,
+      "gadm_gid": "COL.31.39_2",
+      "nombre": "Vijes",
+      "registros_ocurrencia": 5408
+    },
+    {
+      "rank": 448,
+      "gadm_gid": "COL.19.9_2",
+      "nombre": "Manaure",
+      "registros_ocurrencia": 5354
+    },
+    {
+      "rank": 449,
+      "gadm_gid": "COL.14.6_2",
+      "nombre": "Chinú",
+      "registros_ocurrencia": 5332
+    },
+    {
+      "rank": 450,
+      "gadm_gid": "COL.7.82_2",
+      "nombre": "San Luis de Gaceno",
+      "registros_ocurrencia": 5289
+    },
+    {
+      "rank": 451,
+      "gadm_gid": "COL.23.10_2",
+      "nombre": "Cucutilla",
+      "registros_ocurrencia": 5105
+    },
+    {
+      "rank": 452,
+      "gadm_gid": "COL.15.32_2",
+      "nombre": "Gachalá",
+      "registros_ocurrencia": 5101
+    },
+    {
+      "rank": 453,
+      "gadm_gid": "COL.28.79_2",
+      "nombre": "Suaita",
+      "registros_ocurrencia": 5000
+    },
+    {
+      "rank": 454,
+      "gadm_gid": "COL.11.7_2",
+      "nombre": "Caldonó",
+      "registros_ocurrencia": 4991
+    },
+    {
+      "rank": 455,
+      "gadm_gid": "COL.10.7_2",
+      "nombre": "Nunchía",
+      "registros_ocurrencia": 4973
+    },
+    {
+      "rank": 456,
+      "gadm_gid": "COL.2.36_2",
+      "nombre": "Concepción",
+      "registros_ocurrencia": 4938
+    },
+    {
+      "rank": 457,
+      "gadm_gid": "COL.13.17_2",
+      "nombre": "Lloró",
+      "registros_ocurrencia": 4936
+    },
+    {
+      "rank": 458,
+      "gadm_gid": "COL.30.44_2",
+      "nombre": "Valle de San Juan",
+      "registros_ocurrencia": 4899
+    },
+    {
+      "rank": 459,
+      "gadm_gid": "COL.23.38_2",
+      "nombre": "Toledo",
+      "registros_ocurrencia": 4895
+    },
+    {
+      "rank": 460,
+      "gadm_gid": "COL.30.33_2",
+      "nombre": "Prado",
+      "registros_ocurrencia": 4871
+    },
+    {
+      "rank": 461,
+      "gadm_gid": "COL.13.29_2",
+      "nombre": "Tadó",
+      "registros_ocurrencia": 4860
+    },
+    {
+      "rank": 462,
+      "gadm_gid": "COL.11.2_2",
+      "nombre": "Argelia",
+      "registros_ocurrencia": 4857
+    },
+    {
+      "rank": 463,
+      "gadm_gid": "COL.6.18_2",
+      "nombre": "Mahates",
+      "registros_ocurrencia": 4843
+    },
+    {
+      "rank": 464,
+      "gadm_gid": "COL.11.23_2",
+      "nombre": "Patía",
+      "registros_ocurrencia": 4820
+    },
+    {
+      "rank": 465,
+      "gadm_gid": "COL.8.24_2",
+      "nombre": "Supía",
+      "registros_ocurrencia": 4819
+    },
+    {
+      "rank": 466,
+      "gadm_gid": "COL.23.25_2",
+      "nombre": "Pamplona",
+      "registros_ocurrencia": 4801
+    },
+    {
+      "rank": 467,
+      "gadm_gid": "COL.2.31_2",
+      "nombre": "Caucasia",
+      "registros_ocurrencia": 4777
+    },
+    {
+      "rank": 468,
+      "gadm_gid": "COL.2.119_2",
+      "nombre": "Venecia",
+      "registros_ocurrencia": 4734
+    },
+    {
+      "rank": 469,
+      "gadm_gid": "COL.2.88_2",
+      "nombre": "Salgar",
+      "registros_ocurrencia": 4705
+    },
+    {
+      "rank": 470,
+      "gadm_gid": "COL.15.82_2",
+      "nombre": "Sesquilé",
+      "registros_ocurrencia": 4695
+    },
+    {
+      "rank": 471,
+      "gadm_gid": "COL.2.116_2",
+      "nombre": "Valdivia",
+      "registros_ocurrencia": 4555
+    },
+    {
+      "rank": 472,
+      "gadm_gid": "COL.9.6_2",
+      "nombre": "El Paujíl",
+      "registros_ocurrencia": 4514
+    },
+    {
+      "rank": 473,
+      "gadm_gid": "COL.22.8_2",
+      "nombre": "Chachagüí",
+      "registros_ocurrencia": 4509
+    },
+    {
+      "rank": 474,
+      "gadm_gid": "COL.24.11_2",
+      "nombre": "Sibundoy",
+      "registros_ocurrencia": 4509
+    },
+    {
+      "rank": 475,
+      "gadm_gid": "COL.15.62_2",
+      "nombre": "Nimaima",
+      "registros_ocurrencia": 4498
+    },
+    {
+      "rank": 476,
+      "gadm_gid": "COL.9.8_2",
+      "nombre": "La Montañita",
+      "registros_ocurrencia": 4468
+    },
+    {
+      "rank": 477,
+      "gadm_gid": "COL.15.10_2",
+      "nombre": "Cachipay",
+      "registros_ocurrencia": 4411
+    },
+    {
+      "rank": 478,
+      "gadm_gid": "COL.13.21_2",
+      "nombre": "Nóvita",
+      "registros_ocurrencia": 4387
+    },
+    {
+      "rank": 479,
+      "gadm_gid": "COL.7.28_2",
+      "nombre": "Cubará",
+      "registros_ocurrencia": 4369
+    },
+    {
+      "rank": 480,
+      "gadm_gid": "COL.3.3_2",
+      "nombre": "Cravo Norte",
+      "registros_ocurrencia": 4357
+    },
+    {
+      "rank": 481,
+      "gadm_gid": "COL.15.67_2",
+      "nombre": "Paratebueno",
+      "registros_ocurrencia": 4323
+    },
+    {
+      "rank": 482,
+      "gadm_gid": "COL.30.8_2",
+      "nombre": "Carmen de Apicalá",
+      "registros_ocurrencia": 4301
+    },
+    {
+      "rank": 483,
+      "gadm_gid": "COL.30.2_2",
+      "nombre": "Alvarado",
+      "registros_ocurrencia": 4261
+    },
+    {
+      "rank": 484,
+      "gadm_gid": "COL.15.71_2",
+      "nombre": "Quebradanegra",
+      "registros_ocurrencia": 4214
+    },
+    {
+      "rank": 485,
+      "gadm_gid": "COL.10.15_2",
+      "nombre": "Támara",
+      "registros_ocurrencia": 4207
+    },
+    {
+      "rank": 486,
+      "gadm_gid": "COL.30.37_2",
+      "nombre": "Rovira",
+      "registros_ocurrencia": 4180
+    },
+    {
+      "rank": 487,
+      "gadm_gid": "COL.7.106_2",
+      "nombre": "Tibaná",
+      "registros_ocurrencia": 4120
+    },
+    {
+      "rank": 488,
+      "gadm_gid": "COL.26.12_2",
+      "nombre": "Quinchía",
+      "registros_ocurrencia": 4111
+    },
+    {
+      "rank": 489,
+      "gadm_gid": "COL.15.19_2",
+      "nombre": "Chocontá",
+      "registros_ocurrencia": 4071
+    },
+    {
+      "rank": 490,
+      "gadm_gid": "COL.2.8_2",
+      "nombre": "Angostura",
+      "registros_ocurrencia": 4070
+    },
+    {
+      "rank": 491,
+      "gadm_gid": "COL.2.32_2",
+      "nombre": "Chigorodó",
+      "registros_ocurrencia": 4064
+    },
+    {
+      "rank": 492,
+      "gadm_gid": "COL.2.27_2",
+      "nombre": "Caracolí",
+      "registros_ocurrencia": 4039
+    },
+    {
+      "rank": 493,
+      "gadm_gid": "COL.15.96_2",
+      "nombre": "Tenjo",
+      "registros_ocurrencia": 4029
+    },
+    {
+      "rank": 494,
+      "gadm_gid": "COL.4.8_2",
+      "nombre": "Malambo",
+      "registros_ocurrencia": 4028
+    },
+    {
+      "rank": 495,
+      "gadm_gid": "COL.15.94_2",
+      "nombre": "Tausa",
+      "registros_ocurrencia": 4026
+    },
+    {
+      "rank": 496,
+      "gadm_gid": "COL.14.12_2",
+      "nombre": "Moñitos",
+      "registros_ocurrencia": 4019
+    },
+    {
+      "rank": 497,
+      "gadm_gid": "COL.15.50_2",
+      "nombre": "La Palma",
+      "registros_ocurrencia": 3999
+    },
+    {
+      "rank": 498,
+      "gadm_gid": "COL.28.23_2",
+      "nombre": "Contratación",
+      "registros_ocurrencia": 3962
+    },
+    {
+      "rank": 499,
+      "gadm_gid": "COL.7.20_2",
+      "nombre": "Chitaraque",
+      "registros_ocurrencia": 3954
+    },
+    {
+      "rank": 500,
+      "gadm_gid": "COL.30.23_2",
+      "nombre": "Icononzo",
+      "registros_ocurrencia": 3937
+    },
+    {
+      "rank": 501,
+      "gadm_gid": "COL.30.35_2",
+      "nombre": "Rioblanco",
+      "registros_ocurrencia": 3923
+    },
+    {
+      "rank": 502,
+      "gadm_gid": "COL.11.33_2",
+      "nombre": "Silvia",
+      "registros_ocurrencia": 3889
+    },
+    {
+      "rank": 503,
+      "gadm_gid": "COL.15.101_2",
+      "nombre": "Topaipí",
+      "registros_ocurrencia": 3887
+    },
+    {
+      "rank": 504,
+      "gadm_gid": "COL.23.2_2",
+      "nombre": "Arboledas",
+      "registros_ocurrencia": 3887
+    },
+    {
+      "rank": 505,
+      "gadm_gid": "COL.6.44_2",
+      "nombre": "Villanueva",
+      "registros_ocurrencia": 3880
+    },
+    {
+      "rank": 506,
+      "gadm_gid": "COL.7.113_2",
+      "nombre": "Tota",
+      "registros_ocurrencia": 3875
+    },
+    {
+      "rank": 507,
+      "gadm_gid": "COL.2.18_2",
+      "nombre": "Betania",
+      "registros_ocurrencia": 3869
+    },
+    {
+      "rank": 508,
+      "gadm_gid": "COL.2.106_2",
+      "nombre": "Segovia",
+      "registros_ocurrencia": 3867
+    },
+    {
+      "rank": 509,
+      "gadm_gid": "COL.11.12_2",
+      "nombre": "Guapí",
+      "registros_ocurrencia": 3860
+    },
+    {
+      "rank": 510,
+      "gadm_gid": "COL.30.47_2",
+      "nombre": "Villarrica",
+      "registros_ocurrencia": 3824
+    },
+    {
+      "rank": 511,
+      "gadm_gid": "COL.2.30_2",
+      "nombre": "Carolina del Principe",
+      "registros_ocurrencia": 3785
+    },
+    {
+      "rank": 512,
+      "gadm_gid": "COL.29.4_2",
+      "nombre": "Colosó",
+      "registros_ocurrencia": 3761
+    },
+    {
+      "rank": 513,
+      "gadm_gid": "COL.14.16_2",
+      "nombre": "Pueblo Nuevo",
+      "registros_ocurrencia": 3750
+    },
+    {
+      "rank": 514,
+      "gadm_gid": "COL.18.21_2",
+      "nombre": "Paicol",
+      "registros_ocurrencia": 3706
+    },
+    {
+      "rank": 515,
+      "gadm_gid": "COL.12.9_2",
+      "nombre": "El Copey",
+      "registros_ocurrencia": 3680
+    },
+    {
+      "rank": 516,
+      "gadm_gid": "COL.23.21_2",
+      "nombre": "Los Patios",
+      "registros_ocurrencia": 3680
+    },
+    {
+      "rank": 517,
+      "gadm_gid": "COL.19.11_2",
+      "nombre": "San Juan del Cesar",
+      "registros_ocurrencia": 3678
+    },
+    {
+      "rank": 518,
+      "gadm_gid": "COL.28.75_2",
+      "nombre": "Santa Bárbara",
+      "registros_ocurrencia": 3673
+    },
+    {
+      "rank": 519,
+      "gadm_gid": "COL.11.27_2",
+      "nombre": "Puerto Tejada",
+      "registros_ocurrencia": 3657
+    },
+    {
+      "rank": 520,
+      "gadm_gid": "COL.18.37_2",
+      "nombre": "Yaguará",
+      "registros_ocurrencia": 3652
+    },
+    {
+      "rank": 521,
+      "gadm_gid": "COL.8.1_2",
+      "nombre": "Aguadas",
+      "registros_ocurrencia": 3641
+    },
+    {
+      "rank": 522,
+      "gadm_gid": "COL.15.1_2",
+      "nombre": "Agua de Díos",
+      "registros_ocurrencia": 3639
+    },
+    {
+      "rank": 523,
+      "gadm_gid": "COL.2.41_2",
+      "nombre": "Ebéjico",
+      "registros_ocurrencia": 3637
+    },
+    {
+      "rank": 524,
+      "gadm_gid": "COL.15.35_2",
+      "nombre": "Gama",
+      "registros_ocurrencia": 3629
+    },
+    {
+      "rank": 525,
+      "gadm_gid": "COL.31.29_2",
+      "nombre": "Riofrío",
+      "registros_ocurrencia": 3614
+    },
+    {
+      "rank": 526,
+      "gadm_gid": "COL.7.50_2",
+      "nombre": "Macanal",
+      "registros_ocurrencia": 3600
+    },
+    {
+      "rank": 527,
+      "gadm_gid": "COL.22.37_2",
+      "nombre": "Magüí",
+      "registros_ocurrencia": 3598
+    },
+    {
+      "rank": 528,
+      "gadm_gid": "COL.26.6_2",
+      "nombre": "La Celia",
+      "registros_ocurrencia": 3491
+    },
+    {
+      "rank": 529,
+      "gadm_gid": "COL.1.1_2",
+      "nombre": "El Encanto",
+      "registros_ocurrencia": 3459
+    },
+    {
+      "rank": 530,
+      "gadm_gid": "COL.26.2_2",
+      "nombre": "Balboa",
+      "registros_ocurrencia": 3446
+    },
+    {
+      "rank": 531,
+      "gadm_gid": "COL.31.35_2",
+      "nombre": "Trujillo",
+      "registros_ocurrencia": 3394
+    },
+    {
+      "rank": 532,
+      "gadm_gid": "COL.15.54_2",
+      "nombre": "Machetá",
+      "registros_ocurrencia": 3392
+    },
+    {
+      "rank": 533,
+      "gadm_gid": "COL.22.28_2",
+      "nombre": "Ipiales",
+      "registros_ocurrencia": 3391
+    },
+    {
+      "rank": 534,
+      "gadm_gid": "COL.6.16_2",
+      "nombre": "Hatillo de Loba",
+      "registros_ocurrencia": 3388
+    },
+    {
+      "rank": 535,
+      "gadm_gid": "COL.30.45_2",
+      "nombre": "Venadillo",
+      "registros_ocurrencia": 3384
+    },
+    {
+      "rank": 536,
+      "gadm_gid": "COL.30.28_2",
+      "nombre": "Natagaima",
+      "registros_ocurrencia": 3377
+    },
+    {
+      "rank": 537,
+      "gadm_gid": "COL.15.47_2",
+      "nombre": "Junín",
+      "registros_ocurrencia": 3376
+    },
+    {
+      "rank": 538,
+      "gadm_gid": "COL.11.22_2",
+      "nombre": "Páez",
+      "registros_ocurrencia": 3372
+    },
+    {
+      "rank": 539,
+      "gadm_gid": "COL.7.55_2",
+      "nombre": "Moniquirá",
+      "registros_ocurrencia": 3362
+    },
+    {
+      "rank": 540,
+      "gadm_gid": "COL.11.41_2",
+      "nombre": "Villa Rica",
+      "registros_ocurrencia": 3345
+    },
+    {
+      "rank": 541,
+      "gadm_gid": "COL.14.28_2",
+      "nombre": "Valencia",
+      "registros_ocurrencia": 3335
+    },
+    {
+      "rank": 542,
+      "gadm_gid": "COL.30.9_2",
+      "nombre": "Casabianca",
+      "registros_ocurrencia": 3330
+    },
+    {
+      "rank": 543,
+      "gadm_gid": "COL.28.77_2",
+      "nombre": "Simacota",
+      "registros_ocurrencia": 3313
+    },
+    {
+      "rank": 544,
+      "gadm_gid": "COL.4.22_2",
+      "nombre": "Tubará",
+      "registros_ocurrencia": 3192
+    },
+    {
+      "rank": 545,
+      "gadm_gid": "COL.22.46_2",
+      "nombre": "Puerres",
+      "registros_ocurrencia": 3171
+    },
+    {
+      "rank": 546,
+      "gadm_gid": "COL.23.3_2",
+      "nombre": "Bochalema",
+      "registros_ocurrencia": 3167
+    },
+    {
+      "rank": 547,
+      "gadm_gid": "COL.18.8_2",
+      "nombre": "Colombia",
+      "registros_ocurrencia": 3154
+    },
+    {
+      "rank": 548,
+      "gadm_gid": "COL.1.11_2",
+      "nombre": "Tarapacá",
+      "registros_ocurrencia": 3150
+    },
+    {
+      "rank": 549,
+      "gadm_gid": "COL.2.99_2",
+      "nombre": "San Roque",
+      "registros_ocurrencia": 3133
+    },
+    {
+      "rank": 550,
+      "gadm_gid": "COL.13.16_2",
+      "nombre": "Juradó",
+      "registros_ocurrencia": 3120
+    },
+    {
+      "rank": 551,
+      "gadm_gid": "COL.12.2_2",
+      "nombre": "Agustín Codazzi",
+      "registros_ocurrencia": 3115
+    },
+    {
+      "rank": 552,
+      "gadm_gid": "COL.31.30_2",
+      "nombre": "Roldanillo",
+      "registros_ocurrencia": 3112
+    },
+    {
+      "rank": 553,
+      "gadm_gid": "COL.2.100_2",
+      "nombre": "San Vicente",
+      "registros_ocurrencia": 3107
+    },
+    {
+      "rank": 554,
+      "gadm_gid": "COL.2.52_2",
+      "nombre": "Granada",
+      "registros_ocurrencia": 3107
+    },
+    {
+      "rank": 555,
+      "gadm_gid": "COL.4.17_2",
+      "nombre": "Sabanalarga",
+      "registros_ocurrencia": 3087
+    },
+    {
+      "rank": 556,
+      "gadm_gid": "COL.12.19_2",
+      "nombre": "Pueblo Bello",
+      "registros_ocurrencia": 3084
+    },
+    {
+      "rank": 557,
+      "gadm_gid": "COL.12.23_2",
+      "nombre": "San Martín",
+      "registros_ocurrencia": 3065
+    },
+    {
+      "rank": 558,
+      "gadm_gid": "COL.22.14_2",
+      "nombre": "Cumbal",
+      "registros_ocurrencia": 3049
+    },
+    {
+      "rank": 559,
+      "gadm_gid": "COL.9.4_2",
+      "nombre": "Curillo",
+      "registros_ocurrencia": 3035
+    },
+    {
+      "rank": 560,
+      "gadm_gid": "COL.15.25_2",
+      "nombre": "El Rosal",
+      "registros_ocurrencia": 2989
+    },
+    {
+      "rank": 561,
+      "gadm_gid": "COL.15.38_2",
+      "nombre": "Guachetá",
+      "registros_ocurrencia": 2978
+    },
+    {
+      "rank": 562,
+      "gadm_gid": "COL.8.23_2",
+      "nombre": "San José",
+      "registros_ocurrencia": 2971
+    },
+    {
+      "rank": 563,
+      "gadm_gid": "COL.7.68_2",
+      "nombre": "Paya",
+      "registros_ocurrencia": 2957
+    },
+    {
+      "rank": 564,
+      "gadm_gid": "COL.2.14_2",
+      "nombre": "Armenia",
+      "registros_ocurrencia": 2946
+    },
+    {
+      "rank": 565,
+      "gadm_gid": "COL.8.20_2",
+      "nombre": "Risaralda",
+      "registros_ocurrencia": 2938
+    },
+    {
+      "rank": 566,
+      "gadm_gid": "COL.28.60_2",
+      "nombre": "Páramo",
+      "registros_ocurrencia": 2929
+    },
+    {
+      "rank": 567,
+      "gadm_gid": "COL.31.24_2",
+      "nombre": "La Victoria",
+      "registros_ocurrencia": 2924
+    },
+    {
+      "rank": 568,
+      "gadm_gid": "COL.12.7_2",
+      "nombre": "Chiriguaná",
+      "registros_ocurrencia": 2897
+    },
+    {
+      "rank": 569,
+      "gadm_gid": "COL.24.5_2",
+      "nombre": "Puerto Guzmán",
+      "registros_ocurrencia": 2832
+    },
+    {
+      "rank": 570,
+      "gadm_gid": "COL.8.13_2",
+      "nombre": "Marulanda",
+      "registros_ocurrencia": 2825
+    },
+    {
+      "rank": 571,
+      "gadm_gid": "COL.30.15_2",
+      "nombre": "Espinal",
+      "registros_ocurrencia": 2820
+    },
+    {
+      "rank": 572,
+      "gadm_gid": "COL.14.10_2",
+      "nombre": "Los Córdobas",
+      "registros_ocurrencia": 2808
+    },
+    {
+      "rank": 573,
+      "gadm_gid": "COL.31.37_2",
+      "nombre": "Ulloa",
+      "registros_ocurrencia": 2805
+    },
+    {
+      "rank": 574,
+      "gadm_gid": "COL.19.5_2",
+      "nombre": "Fonseca",
+      "registros_ocurrencia": 2804
+    },
+    {
+      "rank": 575,
+      "gadm_gid": "COL.18.7_2",
+      "nombre": "Campoalegre",
+      "registros_ocurrencia": 2801
+    },
+    {
+      "rank": 576,
+      "gadm_gid": "COL.31.42_2",
+      "nombre": "Zarzal",
+      "registros_ocurrencia": 2796
+    },
+    {
+      "rank": 577,
+      "gadm_gid": "COL.2.45_2",
+      "nombre": "Entrerríos",
+      "registros_ocurrencia": 2793
+    },
+    {
+      "rank": 578,
+      "gadm_gid": "COL.15.89_2",
+      "nombre": "Suesca",
+      "registros_ocurrencia": 2789
+    },
+    {
+      "rank": 579,
+      "gadm_gid": "COL.24.4_2",
+      "nombre": "Puerto Caicedo",
+      "registros_ocurrencia": 2787
+    },
+    {
+      "rank": 580,
+      "gadm_gid": "COL.11.8_2",
+      "nombre": "Caloto",
+      "registros_ocurrencia": 2777
+    },
+    {
+      "rank": 581,
+      "gadm_gid": "COL.23.19_2",
+      "nombre": "La Playa de Belén",
+      "registros_ocurrencia": 2776
+    },
+    {
+      "rank": 582,
+      "gadm_gid": "COL.31.38_2",
+      "nombre": "Versalles",
+      "registros_ocurrencia": 2769
+    },
+    {
+      "rank": 583,
+      "gadm_gid": "COL.2.74_2",
+      "nombre": "Nechí",
+      "registros_ocurrencia": 2741
+    },
+    {
+      "rank": 584,
+      "gadm_gid": "COL.7.30_2",
+      "nombre": "Cuítiva",
+      "registros_ocurrencia": 2741
+    },
+    {
+      "rank": 585,
+      "gadm_gid": "COL.28.62_2",
+      "nombre": "Pinchote",
+      "registros_ocurrencia": 2738
+    },
+    {
+      "rank": 586,
+      "gadm_gid": "COL.28.3_2",
+      "nombre": "Aratoca",
+      "registros_ocurrencia": 2726
+    },
+    {
+      "rank": 587,
+      "gadm_gid": "COL.24.8_2",
+      "nombre": "San Miguel",
+      "registros_ocurrencia": 2723
+    },
+    {
+      "rank": 588,
+      "gadm_gid": "COL.7.41_2",
+      "nombre": "Guayatá",
+      "registros_ocurrencia": 2718
+    },
+    {
+      "rank": 589,
+      "gadm_gid": "COL.1.2_2",
+      "nombre": "La Chorrera",
+      "registros_ocurrencia": 2715
+    },
+    {
+      "rank": 590,
+      "gadm_gid": "COL.6.20_2",
+      "nombre": "María la Baja",
+      "registros_ocurrencia": 2683
+    },
+    {
+      "rank": 591,
+      "gadm_gid": "COL.30.4_2",
+      "nombre": "Anzoátegui",
+      "registros_ocurrencia": 2675
+    },
+    {
+      "rank": 592,
+      "gadm_gid": "COL.6.13_2",
+      "nombre": "El Carmen de Bolívar",
+      "registros_ocurrencia": 2637
+    },
+    {
+      "rank": 593,
+      "gadm_gid": "COL.20.17_2",
+      "nombre": "Plato",
+      "registros_ocurrencia": 2614
+    },
+    {
+      "rank": 594,
+      "gadm_gid": "COL.28.63_2",
+      "nombre": "Puente Nacional",
+      "registros_ocurrencia": 2610
+    },
+    {
+      "rank": 595,
+      "gadm_gid": "COL.2.23_2",
+      "nombre": "Caicedo",
+      "registros_ocurrencia": 2605
+    },
+    {
+      "rank": 596,
+      "gadm_gid": "COL.22.7_2",
+      "nombre": "Buesaco",
+      "registros_ocurrencia": 2594
+    },
+    {
+      "rank": 597,
+      "gadm_gid": "COL.7.40_2",
+      "nombre": "Guateque",
+      "registros_ocurrencia": 2594
+    },
+    {
+      "rank": 598,
+      "gadm_gid": "COL.15.13_2",
+      "nombre": "Cáqueza",
+      "registros_ocurrencia": 2592
+    },
+    {
+      "rank": 599,
+      "gadm_gid": "COL.24.12_2",
+      "nombre": "Valle del Guamuéz",
+      "registros_ocurrencia": 2592
+    },
+    {
+      "rank": 600,
+      "gadm_gid": "COL.8.6_2",
+      "nombre": "Filadelfia",
+      "registros_ocurrencia": 2582
+    },
+    {
+      "rank": 601,
+      "gadm_gid": "COL.15.12_2",
+      "nombre": "Caparrapí",
+      "registros_ocurrencia": 2573
+    },
+    {
+      "rank": 602,
+      "gadm_gid": "COL.2.39_2",
+      "nombre": "Dabeiba",
+      "registros_ocurrencia": 2565
+    },
+    {
+      "rank": 603,
+      "gadm_gid": "COL.14.7_2",
+      "nombre": "Ciénaga de Oro",
+      "registros_ocurrencia": 2556
+    },
+    {
+      "rank": 604,
+      "gadm_gid": "COL.15.70_2",
+      "nombre": "Pulí",
+      "registros_ocurrencia": 2554
+    },
+    {
+      "rank": 605,
+      "gadm_gid": "COL.31.10_2",
+      "nombre": "Candelaria",
+      "registros_ocurrencia": 2500
+    },
+    {
+      "rank": 606,
+      "gadm_gid": "COL.7.96_2",
+      "nombre": "Sogamoso",
+      "registros_ocurrencia": 2498
+    },
+    {
+      "rank": 607,
+      "gadm_gid": "COL.8.8_2",
+      "nombre": "La Merced",
+      "registros_ocurrencia": 2474
+    },
+    {
+      "rank": 608,
+      "gadm_gid": "COL.10.10_2",
+      "nombre": "Pore",
+      "registros_ocurrencia": 2468
+    },
+    {
+      "rank": 609,
+      "gadm_gid": "COL.7.67_2",
+      "nombre": "Pauna",
+      "registros_ocurrencia": 2459
+    },
+    {
+      "rank": 610,
+      "gadm_gid": "COL.8.11_2",
+      "nombre": "Marmato",
+      "registros_ocurrencia": 2458
+    },
+    {
+      "rank": 611,
+      "gadm_gid": "COL.2.79_2",
+      "nombre": "Pueblorrico",
+      "registros_ocurrencia": 2455
+    },
+    {
+      "rank": 612,
+      "gadm_gid": "COL.13.19_2",
+      "nombre": "Medio Baudó",
+      "registros_ocurrencia": 2441
+    },
+    {
+      "rank": 613,
+      "gadm_gid": "COL.30.19_2",
+      "nombre": "Guamo",
+      "registros_ocurrencia": 2440
+    },
+    {
+      "rank": 614,
+      "gadm_gid": "COL.14.25_2",
+      "nombre": "San Pelayo",
+      "registros_ocurrencia": 2419
+    },
+    {
+      "rank": 615,
+      "gadm_gid": "COL.31.4_2",
+      "nombre": "Argelia",
+      "registros_ocurrencia": 2411
+    },
+    {
+      "rank": 616,
+      "gadm_gid": "COL.15.68_2",
+      "nombre": "Pasca",
+      "registros_ocurrencia": 2410
+    },
+    {
+      "rank": 617,
+      "gadm_gid": "COL.7.75_2",
+      "nombre": "Ráquira",
+      "registros_ocurrencia": 2402
+    },
+    {
+      "rank": 618,
+      "gadm_gid": "COL.15.72_2",
+      "nombre": "Quetame",
+      "registros_ocurrencia": 2397
+    },
+    {
+      "rank": 619,
+      "gadm_gid": "COL.4.5_2",
+      "nombre": "Galapa",
+      "registros_ocurrencia": 2386
+    },
+    {
+      "rank": 620,
+      "gadm_gid": "COL.28.52_2",
+      "nombre": "Matanza",
+      "registros_ocurrencia": 2383
+    },
+    {
+      "rank": 621,
+      "gadm_gid": "COL.4.1_2",
+      "nombre": "Baranoa",
+      "registros_ocurrencia": 2366
+    },
+    {
+      "rank": 622,
+      "gadm_gid": "COL.7.111_2",
+      "nombre": "Toguí",
+      "registros_ocurrencia": 2365
+    },
+    {
+      "rank": 623,
+      "gadm_gid": "COL.7.32_2",
+      "nombre": "El Cocuy",
+      "registros_ocurrencia": 2328
+    },
+    {
+      "rank": 624,
+      "gadm_gid": "COL.31.16_2",
+      "nombre": "El Dovio",
+      "registros_ocurrencia": 2312
+    },
+    {
+      "rank": 625,
+      "gadm_gid": "COL.14.24_2",
+      "nombre": "San Carlos",
+      "registros_ocurrencia": 2285
+    },
+    {
+      "rank": 626,
+      "gadm_gid": "COL.15.106_2",
+      "nombre": "Venecia",
+      "registros_ocurrencia": 2277
+    },
+    {
+      "rank": 627,
+      "gadm_gid": "COL.7.123_2",
+      "nombre": "Zetaquirá",
+      "registros_ocurrencia": 2275
+    },
+    {
+      "rank": 628,
+      "gadm_gid": "COL.6.37_2",
+      "nombre": "Santa Rosa del Sur",
+      "registros_ocurrencia": 2258
+    },
+    {
+      "rank": 629,
+      "gadm_gid": "COL.2.28_2",
+      "nombre": "Caramanta",
+      "registros_ocurrencia": 2255
+    },
+    {
+      "rank": 630,
+      "gadm_gid": "COL.4.15_2",
+      "nombre": "Repelón",
+      "registros_ocurrencia": 2238
+    },
+    {
+      "rank": 631,
+      "gadm_gid": "COL.2.2_2",
+      "nombre": "Abriaquí",
+      "registros_ocurrencia": 2233
+    },
+    {
+      "rank": 632,
+      "gadm_gid": "COL.30.42_2",
+      "nombre": "Santa Isabel",
+      "registros_ocurrencia": 2226
+    },
+    {
+      "rank": 633,
+      "gadm_gid": "COL.13.30_2",
+      "nombre": "Unguía",
+      "registros_ocurrencia": 2204
+    },
+    {
+      "rank": 634,
+      "gadm_gid": "COL.28.51_2",
+      "nombre": "Málaga",
+      "registros_ocurrencia": 2200
+    },
+    {
+      "rank": 635,
+      "gadm_gid": "COL.2.118_2",
+      "nombre": "Vegachí",
+      "registros_ocurrencia": 2180
+    },
+    {
+      "rank": 636,
+      "gadm_gid": "COL.15.55_2",
+      "nombre": "Madrid",
+      "registros_ocurrencia": 2179
+    },
+    {
+      "rank": 637,
+      "gadm_gid": "COL.15.114_2",
+      "nombre": "Yacopí",
+      "registros_ocurrencia": 2172
+    },
+    {
+      "rank": 638,
+      "gadm_gid": "COL.7.63_2",
+      "nombre": "Páez",
+      "registros_ocurrencia": 2167
+    },
+    {
+      "rank": 639,
+      "gadm_gid": "COL.2.89_2",
+      "nombre": "San Andrés de Cuerquia",
+      "registros_ocurrencia": 2165
+    },
+    {
+      "rank": 640,
+      "gadm_gid": "COL.22.29_2",
+      "nombre": "La Cruz",
+      "registros_ocurrencia": 2163
+    },
+    {
+      "rank": 641,
+      "gadm_gid": "COL.2.22_2",
+      "nombre": "Cáceres",
+      "registros_ocurrencia": 2157
+    },
+    {
+      "rank": 642,
+      "gadm_gid": "COL.18.34_2",
+      "nombre": "Tesalia",
+      "registros_ocurrencia": 2146
+    },
+    {
+      "rank": 643,
+      "gadm_gid": "COL.2.101_2",
+      "nombre": "Santa Bárbara",
+      "registros_ocurrencia": 2138
+    },
+    {
+      "rank": 644,
+      "gadm_gid": "COL.22.16_2",
+      "nombre": "El Charco",
+      "registros_ocurrencia": 2135
+    },
+    {
+      "rank": 645,
+      "gadm_gid": "COL.4.16_2",
+      "nombre": "Sabanagrande",
+      "registros_ocurrencia": 2135
+    },
+    {
+      "rank": 646,
+      "gadm_gid": "COL.1.10_2",
+      "nombre": "Puerto Santander",
+      "registros_ocurrencia": 2132
+    },
+    {
+      "rank": 647,
+      "gadm_gid": "COL.18.5_2",
+      "nombre": "Altamira",
+      "registros_ocurrencia": 2131
+    },
+    {
+      "rank": 648,
+      "gadm_gid": "COL.9.11_2",
+      "nombre": "Puerto Rico",
+      "registros_ocurrencia": 2103
+    },
+    {
+      "rank": 649,
+      "gadm_gid": "COL.8.16_2",
+      "nombre": "Pácora",
+      "registros_ocurrencia": 2088
+    },
+    {
+      "rank": 650,
+      "gadm_gid": "COL.20.11_2",
+      "nombre": "Fundación",
+      "registros_ocurrencia": 2080
+    },
+    {
+      "rank": 651,
+      "gadm_gid": "COL.28.57_2",
+      "nombre": "Onzaga",
+      "registros_ocurrencia": 2077
+    },
+    {
+      "rank": 652,
+      "gadm_gid": "COL.12.20_2",
+      "nombre": "Río de Oro",
+      "registros_ocurrencia": 2072
+    },
+    {
+      "rank": 653,
+      "gadm_gid": "COL.18.6_2",
+      "nombre": "Baraya",
+      "registros_ocurrencia": 2066
+    },
+    {
+      "rank": 654,
+      "gadm_gid": "COL.2.97_2",
+      "nombre": "San Pedro de Urabá",
+      "registros_ocurrencia": 2057
+    },
+    {
+      "rank": 655,
+      "gadm_gid": "COL.2.33_2",
+      "nombre": "Cisneros",
+      "registros_ocurrencia": 2052
+    },
+    {
+      "rank": 656,
+      "gadm_gid": "COL.4.9_2",
+      "nombre": "Manatí",
+      "registros_ocurrencia": 2045
+    },
+    {
+      "rank": 657,
+      "gadm_gid": "COL.7.110_2",
+      "nombre": "Toca",
+      "registros_ocurrencia": 2044
+    },
+    {
+      "rank": 658,
+      "gadm_gid": "COL.22.41_2",
+      "nombre": "Olaya Herrera",
+      "registros_ocurrencia": 2039
+    },
+    {
+      "rank": 659,
+      "gadm_gid": "COL.1.3_2",
+      "nombre": "La Pedrera",
+      "registros_ocurrencia": 2036
+    },
+    {
+      "rank": 660,
+      "gadm_gid": "COL.2.105_2",
+      "nombre": "Santuario",
+      "registros_ocurrencia": 2033
+    },
+    {
+      "rank": 661,
+      "gadm_gid": "COL.29.17_2",
+      "nombre": "San Benito Abad",
+      "registros_ocurrencia": 2033
+    },
+    {
+      "rank": 662,
+      "gadm_gid": "COL.30.17_2",
+      "nombre": "Flandes",
+      "registros_ocurrencia": 2029
+    },
+    {
+      "rank": 663,
+      "gadm_gid": "COL.28.32_2",
+      "nombre": "Florián",
+      "registros_ocurrencia": 2024
+    },
+    {
+      "rank": 664,
+      "gadm_gid": "COL.17.3_2",
+      "nombre": "Miraflores",
+      "registros_ocurrencia": 2019
+    },
+    {
+      "rank": 665,
+      "gadm_gid": "COL.4.13_2",
+      "nombre": "Ponedera",
+      "registros_ocurrencia": 2000
+    },
+    {
+      "rank": 666,
+      "gadm_gid": "COL.20.23_2",
+      "nombre": "San Zenón",
+      "registros_ocurrencia": 1993
+    },
+    {
+      "rank": 667,
+      "gadm_gid": "COL.18.24_2",
+      "nombre": "Pital",
+      "registros_ocurrencia": 1984
+    },
+    {
+      "rank": 668,
+      "gadm_gid": "COL.13.2_2",
+      "nombre": "Alto Baudó",
+      "registros_ocurrencia": 1960
+    },
+    {
+      "rank": 669,
+      "gadm_gid": "COL.18.35_2",
+      "nombre": "Timaná",
+      "registros_ocurrencia": 1954
+    },
+    {
+      "rank": 670,
+      "gadm_gid": "COL.7.42_2",
+      "nombre": "Güicán",
+      "registros_ocurrencia": 1944
+    },
+    {
+      "rank": 671,
+      "gadm_gid": "COL.30.13_2",
+      "nombre": "Cunday",
+      "registros_ocurrencia": 1917
+    },
+    {
+      "rank": 672,
+      "gadm_gid": "COL.28.28_2",
+      "nombre": "El Peñon",
+      "registros_ocurrencia": 1892
+    },
+    {
+      "rank": 673,
+      "gadm_gid": "COL.6.45_2",
+      "nombre": "Zambrano",
+      "registros_ocurrencia": 1888
+    },
+    {
+      "rank": 674,
+      "gadm_gid": "COL.18.14_2",
+      "nombre": "Iquira",
+      "registros_ocurrencia": 1881
+    },
+    {
+      "rank": 675,
+      "gadm_gid": "COL.2.73_2",
+      "nombre": "Nariño",
+      "registros_ocurrencia": 1878
+    },
+    {
+      "rank": 676,
+      "gadm_gid": "COL.20.30_2",
+      "nombre": "Zona Bananera",
+      "registros_ocurrencia": 1875
+    },
+    {
+      "rank": 677,
+      "gadm_gid": "COL.8.4_2",
+      "nombre": "Belalcázar",
+      "registros_ocurrencia": 1874
+    },
+    {
+      "rank": 678,
+      "gadm_gid": "COL.7.54_2",
+      "nombre": "Monguí",
+      "registros_ocurrencia": 1873
+    },
+    {
+      "rank": 679,
+      "gadm_gid": "COL.7.17_2",
+      "nombre": "Chíquiza",
+      "registros_ocurrencia": 1866
+    },
+    {
+      "rank": 680,
+      "gadm_gid": "COL.21.7_2",
+      "nombre": "El Castillo",
+      "registros_ocurrencia": 1863
+    },
+    {
+      "rank": 681,
+      "gadm_gid": "COL.18.31_2",
+      "nombre": "Tarquí",
+      "registros_ocurrencia": 1862
+    },
+    {
+      "rank": 682,
+      "gadm_gid": "COL.2.56_2",
+      "nombre": "Heliconia",
+      "registros_ocurrencia": 1859
+    },
+    {
+      "rank": 683,
+      "gadm_gid": "COL.19.3_2",
+      "nombre": "Distracción",
+      "registros_ocurrencia": 1858
+    },
+    {
+      "rank": 684,
+      "gadm_gid": "COL.18.4_2",
+      "nombre": "Algeciras",
+      "registros_ocurrencia": 1852
+    },
+    {
+      "rank": 685,
+      "gadm_gid": "COL.33.4_2",
+      "nombre": "Santa Rosalía",
+      "registros_ocurrencia": 1822
+    },
+    {
+      "rank": 686,
+      "gadm_gid": "COL.21.21_2",
+      "nombre": "Puerto Rico",
+      "registros_ocurrencia": 1807
+    },
+    {
+      "rank": 687,
+      "gadm_gid": "COL.22.63_2",
+      "nombre": "Túquerres",
+      "registros_ocurrencia": 1803
+    },
+    {
+      "rank": 688,
+      "gadm_gid": "COL.20.1_2",
+      "nombre": "Algarrobo",
+      "registros_ocurrencia": 1801
+    },
+    {
+      "rank": 689,
+      "gadm_gid": "COL.13.28_2",
+      "nombre": "Sipí",
+      "registros_ocurrencia": 1789
+    },
+    {
+      "rank": 690,
+      "gadm_gid": "COL.15.65_2",
+      "nombre": "Paime",
+      "registros_ocurrencia": 1779
+    },
+    {
+      "rank": 691,
+      "gadm_gid": "COL.32.3_2",
+      "nombre": "Pacoa",
+      "registros_ocurrencia": 1766
+    },
+    {
+      "rank": 692,
+      "gadm_gid": "COL.9.16_2",
+      "nombre": "Valparaíso",
+      "registros_ocurrencia": 1759
+    },
+    {
+      "rank": 693,
+      "gadm_gid": "COL.18.33_2",
+      "nombre": "Teruel",
+      "registros_ocurrencia": 1756
+    },
+    {
+      "rank": 694,
+      "gadm_gid": "COL.12.21_2",
+      "nombre": "San Alberto",
+      "registros_ocurrencia": 1749
+    },
+    {
+      "rank": 695,
+      "gadm_gid": "COL.15.17_2",
+      "nombre": "Chipaque",
+      "registros_ocurrencia": 1749
+    },
+    {
+      "rank": 696,
+      "gadm_gid": "COL.29.3_2",
+      "nombre": "Chalán",
+      "registros_ocurrencia": 1733
+    },
+    {
+      "rank": 697,
+      "gadm_gid": "COL.2.10_2",
+      "nombre": "Anzá",
+      "registros_ocurrencia": 1728
+    },
+    {
+      "rank": 698,
+      "gadm_gid": "COL.18.12_2",
+      "nombre": "Guadalupe",
+      "registros_ocurrencia": 1703
+    },
+    {
+      "rank": 699,
+      "gadm_gid": "COL.7.15_2",
+      "nombre": "Chinavita",
+      "registros_ocurrencia": 1692
+    },
+    {
+      "rank": 700,
+      "gadm_gid": "COL.29.10_2",
+      "nombre": "La Unión de Sucre",
+      "registros_ocurrencia": 1685
+    },
+    {
+      "rank": 701,
+      "gadm_gid": "COL.15.109_2",
+      "nombre": "Villa de San Diego de Ubaté",
+      "registros_ocurrencia": 1682
+    },
+    {
+      "rank": 702,
+      "gadm_gid": "COL.29.22_2",
+      "nombre": "Sincé",
+      "registros_ocurrencia": 1674
+    },
+    {
+      "rank": 703,
+      "gadm_gid": "COL.11.4_2",
+      "nombre": "Bolívar",
+      "registros_ocurrencia": 1659
+    },
+    {
+      "rank": 704,
+      "gadm_gid": "COL.2.25_2",
+      "nombre": "Campamento",
+      "registros_ocurrencia": 1648
+    },
+    {
+      "rank": 705,
+      "gadm_gid": "COL.22.19_2",
+      "nombre": "El Tablón de Gomez",
+      "registros_ocurrencia": 1644
+    },
+    {
+      "rank": 706,
+      "gadm_gid": "COL.15.45_2",
+      "nombre": "Gutiérrez",
+      "registros_ocurrencia": 1638
+    },
+    {
+      "rank": 707,
+      "gadm_gid": "COL.18.32_2",
+      "nombre": "Tello",
+      "registros_ocurrencia": 1638
+    },
+    {
+      "rank": 708,
+      "gadm_gid": "COL.11.34_2",
+      "nombre": "Sotará",
+      "registros_ocurrencia": 1602
+    },
+    {
+      "rank": 709,
+      "gadm_gid": "COL.11.20_2",
+      "nombre": "Morales",
+      "registros_ocurrencia": 1600
+    },
+    {
+      "rank": 710,
+      "gadm_gid": "COL.20.19_2",
+      "nombre": "Remolino",
+      "registros_ocurrencia": 1598
+    },
+    {
+      "rank": 711,
+      "gadm_gid": "COL.12.13_2",
+      "nombre": "La Gloria",
+      "registros_ocurrencia": 1580
+    },
+    {
+      "rank": 712,
+      "gadm_gid": "COL.7.53_2",
+      "nombre": "Mongua",
+      "registros_ocurrencia": 1564
+    },
+    {
+      "rank": 713,
+      "gadm_gid": "COL.22.33_2",
+      "nombre": "La Unión",
+      "registros_ocurrencia": 1557
+    },
+    {
+      "rank": 714,
+      "gadm_gid": "COL.29.16_2",
+      "nombre": "San Antonio de Palmito",
+      "registros_ocurrencia": 1530
+    },
+    {
+      "rank": 715,
+      "gadm_gid": "COL.30.12_2",
+      "nombre": "Coyaima",
+      "registros_ocurrencia": 1522
+    },
+    {
+      "rank": 716,
+      "gadm_gid": "COL.18.30_2",
+      "nombre": "Suazá",
+      "registros_ocurrencia": 1519
+    },
+    {
+      "rank": 717,
+      "gadm_gid": "COL.30.43_2",
+      "nombre": "Suárez",
+      "registros_ocurrencia": 1510
+    },
+    {
+      "rank": 718,
+      "gadm_gid": "COL.13.13_2",
+      "nombre": "El Carmen del Darién",
+      "registros_ocurrencia": 1507
+    },
+    {
+      "rank": 719,
+      "gadm_gid": "COL.29.15_2",
+      "nombre": "Sampués",
+      "registros_ocurrencia": 1505
+    },
+    {
+      "rank": 720,
+      "gadm_gid": "COL.15.15_2",
+      "nombre": "Chaguaní",
+      "registros_ocurrencia": 1504
+    },
+    {
+      "rank": 721,
+      "gadm_gid": "COL.7.119_2",
+      "nombre": "Umbita",
+      "registros_ocurrencia": 1498
+    },
+    {
+      "rank": 722,
+      "gadm_gid": "COL.11.15_2",
+      "nombre": "La Sierra",
+      "registros_ocurrencia": 1496
+    },
+    {
+      "rank": 723,
+      "gadm_gid": "COL.12.1_2",
+      "nombre": "Aguachica",
+      "registros_ocurrencia": 1491
+    },
+    {
+      "rank": 724,
+      "gadm_gid": "COL.12.6_2",
+      "nombre": "Chimichagua",
+      "registros_ocurrencia": 1489
+    },
+    {
+      "rank": 725,
+      "gadm_gid": "COL.28.29_2",
+      "nombre": "El Playón",
+      "registros_ocurrencia": 1477
+    },
+    {
+      "rank": 726,
+      "gadm_gid": "COL.7.16_2",
+      "nombre": "Chiquinquirá",
+      "registros_ocurrencia": 1476
+    },
+    {
+      "rank": 727,
+      "gadm_gid": "COL.15.108_2",
+      "nombre": "Vianí",
+      "registros_ocurrencia": 1474
+    },
+    {
+      "rank": 728,
+      "gadm_gid": "COL.29.5_2",
+      "nombre": "Corozal",
+      "registros_ocurrencia": 1470
+    },
+    {
+      "rank": 729,
+      "gadm_gid": "COL.23.8_2",
+      "nombre": "Chitagá",
+      "registros_ocurrencia": 1462
+    },
+    {
+      "rank": 730,
+      "gadm_gid": "COL.28.11_2",
+      "nombre": "California",
+      "registros_ocurrencia": 1446
+    },
+    {
+      "rank": 731,
+      "gadm_gid": "COL.23.26_2",
+      "nombre": "Pamplonita",
+      "registros_ocurrencia": 1443
+    },
+    {
+      "rank": 732,
+      "gadm_gid": "COL.7.62_2",
+      "nombre": "Pachavita",
+      "registros_ocurrencia": 1441
+    },
+    {
+      "rank": 733,
+      "gadm_gid": "COL.2.57_2",
+      "nombre": "Hispania",
+      "registros_ocurrencia": 1437
+    },
+    {
+      "rank": 734,
+      "gadm_gid": "COL.2.53_2",
+      "nombre": "Guadalupe",
+      "registros_ocurrencia": 1429
+    },
+    {
+      "rank": 735,
+      "gadm_gid": "COL.3.5_2",
+      "nombre": "Puerto Rondón",
+      "registros_ocurrencia": 1425
+    },
+    {
+      "rank": 736,
+      "gadm_gid": "COL.7.83_2",
+      "nombre": "San Mateo",
+      "registros_ocurrencia": 1418
+    },
+    {
+      "rank": 737,
+      "gadm_gid": "COL.7.78_2",
+      "nombre": "Sáchica",
+      "registros_ocurrencia": 1415
+    },
+    {
+      "rank": 738,
+      "gadm_gid": "COL.7.84_2",
+      "nombre": "San Miguel de Sema",
+      "registros_ocurrencia": 1414
+    },
+    {
+      "rank": 739,
+      "gadm_gid": "COL.11.18_2",
+      "nombre": "Mercaderes",
+      "registros_ocurrencia": 1402
+    },
+    {
+      "rank": 740,
+      "gadm_gid": "COL.6.8_2",
+      "nombre": "Cantagallo",
+      "registros_ocurrencia": 1401
+    },
+    {
+      "rank": 741,
+      "gadm_gid": "COL.28.42_2",
+      "nombre": "Hato",
+      "registros_ocurrencia": 1394
+    },
+    {
+      "rank": 742,
+      "gadm_gid": "COL.23.17_2",
+      "nombre": "Herrán",
+      "registros_ocurrencia": 1393
+    },
+    {
+      "rank": 743,
+      "gadm_gid": "COL.9.1_2",
+      "nombre": "Albania",
+      "registros_ocurrencia": 1383
+    },
+    {
+      "rank": 744,
+      "gadm_gid": "COL.11.1_2",
+      "nombre": "Almaguer",
+      "registros_ocurrencia": 1382
+    },
+    {
+      "rank": 745,
+      "gadm_gid": "COL.4.20_2",
+      "nombre": "Soledad",
+      "registros_ocurrencia": 1369
+    },
+    {
+      "rank": 746,
+      "gadm_gid": "COL.9.9_2",
+      "nombre": "Milán",
+      "registros_ocurrencia": 1366
+    },
+    {
+      "rank": 747,
+      "gadm_gid": "COL.23.18_2",
+      "nombre": "La Esperanza",
+      "registros_ocurrencia": 1356
+    },
+    {
+      "rank": 748,
+      "gadm_gid": "COL.15.66_2",
+      "nombre": "Pandi",
+      "registros_ocurrencia": 1349
+    },
+    {
+      "rank": 749,
+      "gadm_gid": "COL.13.6_2",
+      "nombre": "Bajo Baudó",
+      "registros_ocurrencia": 1338
+    },
+    {
+      "rank": 750,
+      "gadm_gid": "COL.6.12_2",
+      "nombre": "Córdoba",
+      "registros_ocurrencia": 1331
+    },
+    {
+      "rank": 751,
+      "gadm_gid": "COL.28.4_2",
+      "nombre": "Barbosa",
+      "registros_ocurrencia": 1323
+    },
+    {
+      "rank": 752,
+      "gadm_gid": "COL.31.25_2",
+      "nombre": "Obando",
+      "registros_ocurrencia": 1323
+    },
+    {
+      "rank": 753,
+      "gadm_gid": "COL.32.1_2",
+      "nombre": "Carurú",
+      "registros_ocurrencia": 1319
+    },
+    {
+      "rank": 754,
+      "gadm_gid": "COL.6.17_2",
+      "nombre": "Magangué",
+      "registros_ocurrencia": 1319
+    },
+    {
+      "rank": 755,
+      "gadm_gid": "COL.15.6_2",
+      "nombre": "Beltrán",
+      "registros_ocurrencia": 1305
+    },
+    {
+      "rank": 756,
+      "gadm_gid": "COL.20.3_2",
+      "nombre": "Ariguaní",
+      "registros_ocurrencia": 1301
+    },
+    {
+      "rank": 757,
+      "gadm_gid": "COL.7.23_2",
+      "nombre": "Ciénaga",
+      "registros_ocurrencia": 1267
+    },
+    {
+      "rank": 758,
+      "gadm_gid": "COL.22.61_2",
+      "nombre": "Tangua",
+      "registros_ocurrencia": 1261
+    },
+    {
+      "rank": 759,
+      "gadm_gid": "COL.15.22_2",
+      "nombre": "Cucunubá",
+      "registros_ocurrencia": 1245
+    },
+    {
+      "rank": 760,
+      "gadm_gid": "COL.7.104_2",
+      "nombre": "Tasco",
+      "registros_ocurrencia": 1238
+    },
+    {
+      "rank": 761,
+      "gadm_gid": "COL.7.95_2",
+      "nombre": "Socotá",
+      "registros_ocurrencia": 1235
+    },
+    {
+      "rank": 762,
+      "gadm_gid": "COL.30.1_2",
+      "nombre": "Alpujarra",
+      "registros_ocurrencia": 1231
+    },
+    {
+      "rank": 763,
+      "gadm_gid": "COL.7.109_2",
+      "nombre": "Tipacoque",
+      "registros_ocurrencia": 1228
+    },
+    {
+      "rank": 764,
+      "gadm_gid": "COL.15.9_2",
+      "nombre": "Cabrera",
+      "registros_ocurrencia": 1226
+    },
+    {
+      "rank": 765,
+      "gadm_gid": "COL.30.38_2",
+      "nombre": "Saldaña",
+      "registros_ocurrencia": 1225
+    },
+    {
+      "rank": 766,
+      "gadm_gid": "COL.18.13_2",
+      "nombre": "Hobo",
+      "registros_ocurrencia": 1211
+    },
+    {
+      "rank": 767,
+      "gadm_gid": "COL.28.31_2",
+      "nombre": "Enciso",
+      "registros_ocurrencia": 1207
+    },
+    {
+      "rank": 768,
+      "gadm_gid": "COL.28.85_2",
+      "nombre": "Vetas",
+      "registros_ocurrencia": 1206
+    },
+    {
+      "rank": 769,
+      "gadm_gid": "COL.6.11_2",
+      "nombre": "Clemencia",
+      "registros_ocurrencia": 1201
+    },
+    {
+      "rank": 770,
+      "gadm_gid": "COL.23.40_2",
+      "nombre": "Villa del Rosario",
+      "registros_ocurrencia": 1199
+    },
+    {
+      "rank": 771,
+      "gadm_gid": "COL.22.60_2",
+      "nombre": "Taminango",
+      "registros_ocurrencia": 1190
+    },
+    {
+      "rank": 772,
+      "gadm_gid": "COL.20.10_2",
+      "nombre": "El Retén",
+      "registros_ocurrencia": 1187
+    },
+    {
+      "rank": 773,
+      "gadm_gid": "COL.6.23_2",
+      "nombre": "Morales",
+      "registros_ocurrencia": 1187
+    },
+    {
+      "rank": 774,
+      "gadm_gid": "COL.28.47_2",
+      "nombre": "Landázuri",
+      "registros_ocurrencia": 1184
+    },
+    {
+      "rank": 775,
+      "gadm_gid": "COL.22.18_2",
+      "nombre": "El Rosario",
+      "registros_ocurrencia": 1182
+    },
+    {
+      "rank": 776,
+      "gadm_gid": "COL.28.56_2",
+      "nombre": "Oiba",
+      "registros_ocurrencia": 1166
+    },
+    {
+      "rank": 777,
+      "gadm_gid": "COL.7.100_2",
+      "nombre": "Sotaquirá",
+      "registros_ocurrencia": 1159
+    },
+    {
+      "rank": 778,
+      "gadm_gid": "COL.15.104_2",
+      "nombre": "Une",
+      "registros_ocurrencia": 1155
+    },
+    {
+      "rank": 779,
+      "gadm_gid": "COL.2.12_2",
+      "nombre": "Arboletes",
+      "registros_ocurrencia": 1150
+    },
+    {
+      "rank": 780,
+      "gadm_gid": "COL.22.59_2",
+      "nombre": "Sapuyes",
+      "registros_ocurrencia": 1146
+    },
+    {
+      "rank": 781,
+      "gadm_gid": "COL.7.94_2",
+      "nombre": "Socha",
+      "registros_ocurrencia": 1142
+    },
+    {
+      "rank": 782,
+      "gadm_gid": "COL.7.87_2",
+      "nombre": "Santa Rosa de Viterbo",
+      "registros_ocurrencia": 1114
+    },
+    {
+      "rank": 783,
+      "gadm_gid": "COL.28.15_2",
+      "nombre": "Cerrito",
+      "registros_ocurrencia": 1112
+    },
+    {
+      "rank": 784,
+      "gadm_gid": "COL.22.57_2",
+      "nombre": "Santa Bárbara",
+      "registros_ocurrencia": 1108
+    },
+    {
+      "rank": 785,
+      "gadm_gid": "COL.7.22_2",
+      "nombre": "Chivor",
+      "registros_ocurrencia": 1105
+    },
+    {
+      "rank": 786,
+      "gadm_gid": "COL.15.34_2",
+      "nombre": "Gachetá",
+      "registros_ocurrencia": 1095
+    },
+    {
+      "rank": 787,
+      "gadm_gid": "COL.10.11_2",
+      "nombre": "Recetor",
+      "registros_ocurrencia": 1094
+    },
+    {
+      "rank": 788,
+      "gadm_gid": "COL.20.24_2",
+      "nombre": "Santa Ana",
+      "registros_ocurrencia": 1094
+    },
+    {
+      "rank": 789,
+      "gadm_gid": "COL.2.70_2",
+      "nombre": "Montebello",
+      "registros_ocurrencia": 1088
+    },
+    {
+      "rank": 790,
+      "gadm_gid": "COL.7.101_2",
+      "nombre": "Susacón",
+      "registros_ocurrencia": 1079
+    },
+    {
+      "rank": 791,
+      "gadm_gid": "COL.15.107_2",
+      "nombre": "Vergara",
+      "registros_ocurrencia": 1074
+    },
+    {
+      "rank": 792,
+      "gadm_gid": "COL.2.49_2",
+      "nombre": "Giraldo",
+      "registros_ocurrencia": 1072
+    },
+    {
+      "rank": 793,
+      "gadm_gid": "COL.4.19_2",
+      "nombre": "Santo Tomás",
+      "registros_ocurrencia": 1043
+    },
+    {
+      "rank": 794,
+      "gadm_gid": "COL.7.105_2",
+      "nombre": "Tenza",
+      "registros_ocurrencia": 1032
+    },
+    {
+      "rank": 795,
+      "gadm_gid": "COL.7.13_2",
+      "nombre": "Campohermoso",
+      "registros_ocurrencia": 1027
+    },
+    {
+      "rank": 796,
+      "gadm_gid": "COL.19.13_2",
+      "nombre": "Urumita",
+      "registros_ocurrencia": 1022
+    },
+    {
+      "rank": 797,
+      "gadm_gid": "COL.18.27_2",
+      "nombre": "Saladoblanco",
+      "registros_ocurrencia": 1020
+    },
+    {
+      "rank": 798,
+      "gadm_gid": "COL.11.39_2",
+      "nombre": "Toribío",
+      "registros_ocurrencia": 1018
+    },
+    {
+      "rank": 799,
+      "gadm_gid": "COL.7.115_2",
+      "nombre": "Tunungua",
+      "registros_ocurrencia": 1017
+    },
+    {
+      "rank": 800,
+      "gadm_gid": "COL.28.24_2",
+      "nombre": "Coromoro",
+      "registros_ocurrencia": 1016
+    },
+    {
+      "rank": 801,
+      "gadm_gid": "COL.15.110_2",
+      "nombre": "Villagómez",
+      "registros_ocurrencia": 1014
+    },
+    {
+      "rank": 802,
+      "gadm_gid": "COL.15.14_2",
+      "nombre": "Carmen de Carupa",
+      "registros_ocurrencia": 1011
+    },
+    {
+      "rank": 803,
+      "gadm_gid": "COL.11.35_2",
+      "nombre": "Suárez",
+      "registros_ocurrencia": 1006
+    },
+    {
+      "rank": 804,
+      "gadm_gid": "COL.28.38_2",
+      "nombre": "Guadalupe",
+      "registros_ocurrencia": 1004
+    },
+    {
+      "rank": 805,
+      "gadm_gid": "COL.13.10_2",
+      "nombre": "Condotó",
+      "registros_ocurrencia": 1001
+    },
+    {
+      "rank": 806,
+      "gadm_gid": "COL.22.43_2",
+      "nombre": "Policarpa",
+      "registros_ocurrencia": 992
+    },
+    {
+      "rank": 807,
+      "gadm_gid": "COL.13.3_2",
+      "nombre": "Atrato",
+      "registros_ocurrencia": 989
+    },
+    {
+      "rank": 808,
+      "gadm_gid": "COL.11.30_2",
+      "nombre": "San Sebastián",
+      "registros_ocurrencia": 987
+    },
+    {
+      "rank": 809,
+      "gadm_gid": "COL.28.34_2",
+      "nombre": "Galán",
+      "registros_ocurrencia": 987
+    },
+    {
+      "rank": 810,
+      "gadm_gid": "COL.22.9_2",
+      "nombre": "Colón",
+      "registros_ocurrencia": 980
+    },
+    {
+      "rank": 811,
+      "gadm_gid": "COL.12.8_2",
+      "nombre": "Curumaní",
+      "registros_ocurrencia": 977
+    },
+    {
+      "rank": 812,
+      "gadm_gid": "COL.18.18_2",
+      "nombre": "Nátaga",
+      "registros_ocurrencia": 963
+    },
+    {
+      "rank": 813,
+      "gadm_gid": "COL.28.68_2",
+      "nombre": "San Andrés de Cuerquia",
+      "registros_ocurrencia": 963
+    },
+    {
+      "rank": 814,
+      "gadm_gid": "COL.22.30_2",
+      "nombre": "La Florida",
+      "registros_ocurrencia": 954
+    },
+    {
+      "rank": 815,
+      "gadm_gid": "COL.7.108_2",
+      "nombre": "Tinjacá",
+      "registros_ocurrencia": 952
+    },
+    {
+      "rank": 816,
+      "gadm_gid": "COL.11.5_2",
+      "nombre": "Buenos Aires",
+      "registros_ocurrencia": 936
+    },
+    {
+      "rank": 817,
+      "gadm_gid": "COL.29.2_2",
+      "nombre": "Caimito",
+      "registros_ocurrencia": 929
+    },
+    {
+      "rank": 818,
+      "gadm_gid": "COL.22.20_2",
+      "nombre": "El Tambo",
+      "registros_ocurrencia": 925
+    },
+    {
+      "rank": 819,
+      "gadm_gid": "COL.18.9_2",
+      "nombre": "Elías",
+      "registros_ocurrencia": 913
+    },
+    {
+      "rank": 820,
+      "gadm_gid": "COL.7.120_2",
+      "nombre": "Ventaquemada",
+      "registros_ocurrencia": 907
+    },
+    {
+      "rank": 821,
+      "gadm_gid": "COL.28.45_2",
+      "nombre": "La Belleza",
+      "registros_ocurrencia": 906
+    },
+    {
+      "rank": 822,
+      "gadm_gid": "COL.28.84_2",
+      "nombre": "Vélez",
+      "registros_ocurrencia": 903
+    },
+    {
+      "rank": 823,
+      "gadm_gid": "COL.30.30_2",
+      "nombre": "Palo Cabildo",
+      "registros_ocurrencia": 895
+    },
+    {
+      "rank": 824,
+      "gadm_gid": "COL.12.5_2",
+      "nombre": "Bosconia",
+      "registros_ocurrencia": 894
+    },
+    {
+      "rank": 825,
+      "gadm_gid": "COL.28.59_2",
+      "nombre": "Palmas del Socorro",
+      "registros_ocurrencia": 876
+    },
+    {
+      "rank": 826,
+      "gadm_gid": "COL.23.14_2",
+      "nombre": "El Zulía",
+      "registros_ocurrencia": 871
+    },
+    {
+      "rank": 827,
+      "gadm_gid": "COL.12.24_2",
+      "nombre": "Tamalameque",
+      "registros_ocurrencia": 866
+    },
+    {
+      "rank": 828,
+      "gadm_gid": "COL.15.73_2",
+      "nombre": "Quipile",
+      "registros_ocurrencia": 859
+    },
+    {
+      "rank": 829,
+      "gadm_gid": "COL.23.31_2",
+      "nombre": "San Cayetano",
+      "registros_ocurrencia": 858
+    },
+    {
+      "rank": 830,
+      "gadm_gid": "COL.7.79_2",
+      "nombre": "Samacá",
+      "registros_ocurrencia": 857
+    },
+    {
+      "rank": 831,
+      "gadm_gid": "COL.15.60_2",
+      "nombre": "Nemocón",
+      "registros_ocurrencia": 848
+    },
+    {
+      "rank": 832,
+      "gadm_gid": "COL.11.3_2",
+      "nombre": "Balboa",
+      "registros_ocurrencia": 835
+    },
+    {
+      "rank": 833,
+      "gadm_gid": "COL.29.13_2",
+      "nombre": "Morroa",
+      "registros_ocurrencia": 835
+    },
+    {
+      "rank": 834,
+      "gadm_gid": "COL.12.11_2",
+      "nombre": "Gamarra",
+      "registros_ocurrencia": 834
+    },
+    {
+      "rank": 835,
+      "gadm_gid": "COL.14.17_2",
+      "nombre": "Puerto Escondido",
+      "registros_ocurrencia": 834
+    },
+    {
+      "rank": 836,
+      "gadm_gid": "COL.7.24_2",
+      "nombre": "Cómbita",
+      "registros_ocurrencia": 831
+    },
+    {
+      "rank": 837,
+      "gadm_gid": "COL.20.22_2",
+      "nombre": "San Sebastián de Buenavista",
+      "registros_ocurrencia": 828
+    },
+    {
+      "rank": 838,
+      "gadm_gid": "COL.7.4_2",
+      "nombre": "Belén",
+      "registros_ocurrencia": 813
+    },
+    {
+      "rank": 839,
+      "gadm_gid": "COL.6.26_2",
+      "nombre": "Río Viejo",
+      "registros_ocurrencia": 811
+    },
+    {
+      "rank": 840,
+      "gadm_gid": "COL.23.23_2",
+      "nombre": "Mutiscua",
+      "registros_ocurrencia": 779
+    },
+    {
+      "rank": 841,
+      "gadm_gid": "COL.28.86_2",
+      "nombre": "Villanueva",
+      "registros_ocurrencia": 776
+    },
+    {
+      "rank": 842,
+      "gadm_gid": "COL.7.117_2",
+      "nombre": "Tuta",
+      "registros_ocurrencia": 768
+    },
+    {
+      "rank": 843,
+      "gadm_gid": "COL.22.36_2",
+      "nombre": "Los Andes",
+      "registros_ocurrencia": 759
+    },
+    {
+      "rank": 844,
+      "gadm_gid": "COL.7.97_2",
+      "nombre": "Somondoco",
+      "registros_ocurrencia": 746
+    },
+    {
+      "rank": 845,
+      "gadm_gid": "COL.22.42_2",
+      "nombre": "Ospina",
+      "registros_ocurrencia": 745
+    },
+    {
+      "rank": 846,
+      "gadm_gid": "COL.28.18_2",
+      "nombre": "Chimá",
+      "registros_ocurrencia": 743
+    },
+    {
+      "rank": 847,
+      "gadm_gid": "COL.20.8_2",
+      "nombre": "El Banco",
+      "registros_ocurrencia": 739
+    },
+    {
+      "rank": 848,
+      "gadm_gid": "COL.13.18_2",
+      "nombre": "Medio Atrato",
+      "registros_ocurrencia": 737
+    },
+    {
+      "rank": 849,
+      "gadm_gid": "COL.15.51_2",
+      "nombre": "La Peña",
+      "registros_ocurrencia": 735
+    },
+    {
+      "rank": 850,
+      "gadm_gid": "COL.28.17_2",
+      "nombre": "Charta",
+      "registros_ocurrencia": 729
+    },
+    {
+      "rank": 851,
+      "gadm_gid": "COL.30.6_2",
+      "nombre": "Ataco",
+      "registros_ocurrencia": 726
+    },
+    {
+      "rank": 852,
+      "gadm_gid": "COL.29.8_2",
+      "nombre": "Galeras",
+      "registros_ocurrencia": 720
+    },
+    {
+      "rank": 853,
+      "gadm_gid": "COL.20.28_2",
+      "nombre": "Tenerife",
+      "registros_ocurrencia": 717
+    },
+    {
+      "rank": 854,
+      "gadm_gid": "COL.2.13_2",
+      "nombre": "Argelia",
+      "registros_ocurrencia": 715
+    },
+    {
+      "rank": 855,
+      "gadm_gid": "COL.7.107_2",
+      "nombre": "Tibasosa",
+      "registros_ocurrencia": 714
+    },
+    {
+      "rank": 856,
+      "gadm_gid": "COL.7.57_2",
+      "nombre": "Muzo",
+      "registros_ocurrencia": 712
+    },
+    {
+      "rank": 857,
+      "gadm_gid": "COL.6.34_2",
+      "nombre": "San Pablo",
+      "registros_ocurrencia": 711
+    },
+    {
+      "rank": 858,
+      "gadm_gid": "COL.32.6_2",
+      "nombre": "Yavaraté",
+      "registros_ocurrencia": 700
+    },
+    {
+      "rank": 859,
+      "gadm_gid": "COL.10.13_2",
+      "nombre": "Sácama",
+      "registros_ocurrencia": 698
+    },
+    {
+      "rank": 860,
+      "gadm_gid": "COL.22.25_2",
+      "nombre": "Gualmatán",
+      "registros_ocurrencia": 694
+    },
+    {
+      "rank": 861,
+      "gadm_gid": "COL.28.39_2",
+      "nombre": "Guapotá",
+      "registros_ocurrencia": 694
+    },
+    {
+      "rank": 862,
+      "gadm_gid": "COL.7.76_2",
+      "nombre": "Rondón",
+      "registros_ocurrencia": 694
+    },
+    {
+      "rank": 863,
+      "gadm_gid": "COL.22.27_2",
+      "nombre": "Imués",
+      "registros_ocurrencia": 693
+    },
+    {
+      "rank": 864,
+      "gadm_gid": "COL.7.77_2",
+      "nombre": "Saboyá",
+      "registros_ocurrencia": 687
+    },
+    {
+      "rank": 865,
+      "gadm_gid": "COL.22.44_2",
+      "nombre": "Potosí",
+      "registros_ocurrencia": 677
+    },
+    {
+      "rank": 866,
+      "gadm_gid": "COL.22.40_2",
+      "nombre": "Nariño",
+      "registros_ocurrencia": 673
+    },
+    {
+      "rank": 867,
+      "gadm_gid": "COL.22.11_2",
+      "nombre": "Contadero",
+      "registros_ocurrencia": 671
+    },
+    {
+      "rank": 868,
+      "gadm_gid": "COL.13.14_2",
+      "nombre": "El Litoral del San Juan",
+      "registros_ocurrencia": 670
+    },
+    {
+      "rank": 869,
+      "gadm_gid": "COL.22.55_2",
+      "nombre": "San Pedro de Cartago",
+      "registros_ocurrencia": 664
+    },
+    {
+      "rank": 870,
+      "gadm_gid": "COL.28.37_2",
+      "nombre": "Guaca",
+      "registros_ocurrencia": 664
+    },
+    {
+      "rank": 871,
+      "gadm_gid": "COL.7.14_2",
+      "nombre": "Cerinza",
+      "registros_ocurrencia": 658
+    },
+    {
+      "rank": 872,
+      "gadm_gid": "COL.31.2_2",
+      "nombre": "Andalucía",
+      "registros_ocurrencia": 657
+    },
+    {
+      "rank": 873,
+      "gadm_gid": "COL.19.4_2",
+      "nombre": "El Molino",
+      "registros_ocurrencia": 655
+    },
+    {
+      "rank": 874,
+      "gadm_gid": "COL.29.11_2",
+      "nombre": "Los Palmitos",
+      "registros_ocurrencia": 638
+    },
+    {
+      "rank": 875,
+      "gadm_gid": "COL.7.56_2",
+      "nombre": "Motavita",
+      "registros_ocurrencia": 635
+    },
+    {
+      "rank": 876,
+      "gadm_gid": "COL.11.16_2",
+      "nombre": "La Vega",
+      "registros_ocurrencia": 632
+    },
+    {
+      "rank": 877,
+      "gadm_gid": "COL.29.14_2",
+      "nombre": "Ovejas",
+      "registros_ocurrencia": 622
+    },
+    {
+      "rank": 878,
+      "gadm_gid": "COL.22.26_2",
+      "nombre": "Iles",
+      "registros_ocurrencia": 620
+    },
+    {
+      "rank": 879,
+      "gadm_gid": "COL.22.23_2",
+      "nombre": "Guachucal",
+      "registros_ocurrencia": 617
+    },
+    {
+      "rank": 880,
+      "gadm_gid": "COL.15.78_2",
+      "nombre": "San Cayetano",
+      "registros_ocurrencia": 616
+    },
+    {
+      "rank": 881,
+      "gadm_gid": "COL.15.92_2",
+      "nombre": "Sutatausa",
+      "registros_ocurrencia": 614
+    },
+    {
+      "rank": 882,
+      "gadm_gid": "COL.16.9_2",
+      "nombre": "San Felipe",
+      "registros_ocurrencia": 599
+    },
+    {
+      "rank": 883,
+      "gadm_gid": "COL.22.4_2",
+      "nombre": "Arboleda",
+      "registros_ocurrencia": 594
+    },
+    {
+      "rank": 884,
+      "gadm_gid": "COL.7.74_2",
+      "nombre": "Ramiriquí",
+      "registros_ocurrencia": 587
+    },
+    {
+      "rank": 885,
+      "gadm_gid": "COL.20.15_2",
+      "nombre": "Pijiño del Carmen",
+      "registros_ocurrencia": 578
+    },
+    {
+      "rank": 886,
+      "gadm_gid": "COL.20.20_2",
+      "nombre": "Sabanas de San Angel",
+      "registros_ocurrencia": 574
+    },
+    {
+      "rank": 887,
+      "gadm_gid": "COL.6.38_2",
+      "nombre": "Simití",
+      "registros_ocurrencia": 559
+    },
+    {
+      "rank": 888,
+      "gadm_gid": "COL.15.111_2",
+      "nombre": "Villapinzón",
+      "registros_ocurrencia": 556
+    },
+    {
+      "rank": 889,
+      "gadm_gid": "COL.15.46_2",
+      "nombre": "Jerusalén",
+      "registros_ocurrencia": 554
+    },
+    {
+      "rank": 890,
+      "gadm_gid": "COL.22.54_2",
+      "nombre": "San Pablo",
+      "registros_ocurrencia": 551
+    },
+    {
+      "rank": 891,
+      "gadm_gid": "COL.18.20_2",
+      "nombre": "Oporapa",
+      "registros_ocurrencia": 544
+    },
+    {
+      "rank": 892,
+      "gadm_gid": "COL.23.37_2",
+      "nombre": "Tibú",
+      "registros_ocurrencia": 544
+    },
+    {
+      "rank": 893,
+      "gadm_gid": "COL.23.5_2",
+      "nombre": "Cáchira",
+      "registros_ocurrencia": 538
+    },
+    {
+      "rank": 894,
+      "gadm_gid": "COL.28.53_2",
+      "nombre": "Mogotes",
+      "registros_ocurrencia": 535
+    },
+    {
+      "rank": 895,
+      "gadm_gid": "COL.3.4_2",
+      "nombre": "Fortul",
+      "registros_ocurrencia": 529
+    },
+    {
+      "rank": 896,
+      "gadm_gid": "COL.28.54_2",
+      "nombre": "Molagavita",
+      "registros_ocurrencia": 526
+    },
+    {
+      "rank": 897,
+      "gadm_gid": "COL.23.1_2",
+      "nombre": "Abrego",
+      "registros_ocurrencia": 524
+    },
+    {
+      "rank": 898,
+      "gadm_gid": "COL.20.21_2",
+      "nombre": "Salamina",
+      "registros_ocurrencia": 522
+    },
+    {
+      "rank": 899,
+      "gadm_gid": "COL.30.29_2",
+      "nombre": "Ortega",
+      "registros_ocurrencia": 514
+    },
+    {
+      "rank": 900,
+      "gadm_gid": "COL.20.9_2",
+      "nombre": "El Piñón",
+      "registros_ocurrencia": 506
+    },
+    {
+      "rank": 901,
+      "gadm_gid": "COL.13.25_2",
+      "nombre": "Río Quito",
+      "registros_ocurrencia": 505
+    },
+    {
+      "rank": 902,
+      "gadm_gid": "COL.13.15_2",
+      "nombre": "Istmina",
+      "registros_ocurrencia": 500
+    },
+    {
+      "rank": 903,
+      "gadm_gid": "COL.15.98_2",
+      "nombre": "Tibirita",
+      "registros_ocurrencia": 497
+    },
+    {
+      "rank": 904,
+      "gadm_gid": "COL.19.7_2",
+      "nombre": "La Jagua del Pilar",
+      "registros_ocurrencia": 497
+    },
+    {
+      "rank": 905,
+      "gadm_gid": "COL.28.27_2",
+      "nombre": "El Guacamayo",
+      "registros_ocurrencia": 495
+    },
+    {
+      "rank": 906,
+      "gadm_gid": "COL.32.5_2",
+      "nombre": "Taraira",
+      "registros_ocurrencia": 494
+    },
+    {
+      "rank": 907,
+      "gadm_gid": "COL.7.58_2",
+      "nombre": "Nobsa",
+      "registros_ocurrencia": 486
+    },
+    {
+      "rank": 908,
+      "gadm_gid": "COL.20.7_2",
+      "nombre": "Concordia",
+      "registros_ocurrencia": 484
+    },
+    {
+      "rank": 909,
+      "gadm_gid": "COL.30.14_2",
+      "nombre": "Dolores",
+      "registros_ocurrencia": 479
+    },
+    {
+      "rank": 910,
+      "gadm_gid": "COL.6.27_2",
+      "nombre": "San Cristobal",
+      "registros_ocurrencia": 479
+    },
+    {
+      "rank": 911,
+      "gadm_gid": "COL.20.25_2",
+      "nombre": "Santa Bárbara de Pinto",
+      "registros_ocurrencia": 478
+    },
+    {
+      "rank": 912,
+      "gadm_gid": "COL.15.33_2",
+      "nombre": "Gachancipá",
+      "registros_ocurrencia": 470
+    },
+    {
+      "rank": 913,
+      "gadm_gid": "COL.2.93_2",
+      "nombre": "San José de la Montaña",
+      "registros_ocurrencia": 469
+    },
+    {
+      "rank": 914,
+      "gadm_gid": "COL.6.7_2",
+      "nombre": "Calamar",
+      "registros_ocurrencia": 469
+    },
+    {
+      "rank": 915,
+      "gadm_gid": "COL.16.1_2",
+      "nombre": "Barranco Minas",
+      "registros_ocurrencia": 459
+    },
+    {
+      "rank": 916,
+      "gadm_gid": "COL.2.114_2",
+      "nombre": "Uramita",
+      "registros_ocurrencia": 459
+    },
+    {
+      "rank": 917,
+      "gadm_gid": "COL.15.59_2",
+      "nombre": "Nariño",
+      "registros_ocurrencia": 455
+    },
+    {
+      "rank": 918,
+      "gadm_gid": "COL.7.71_2",
+      "nombre": "Pisba",
+      "registros_ocurrencia": 453
+    },
+    {
+      "rank": 919,
+      "gadm_gid": "COL.28.12_2",
+      "nombre": "Capitanejo",
+      "registros_ocurrencia": 448
+    },
+    {
+      "rank": 920,
+      "gadm_gid": "COL.29.12_2",
+      "nombre": "Majagual",
+      "registros_ocurrencia": 445
+    },
+    {
+      "rank": 921,
+      "gadm_gid": "COL.19.14_2",
+      "nombre": "Villanueva",
+      "registros_ocurrencia": 439
+    },
+    {
+      "rank": 922,
+      "gadm_gid": "COL.22.22_2",
+      "nombre": "Funes",
+      "registros_ocurrencia": 434
+    },
+    {
+      "rank": 923,
+      "gadm_gid": "COL.15.41_2",
+      "nombre": "Guataquí",
+      "registros_ocurrencia": 431
+    },
+    {
+      "rank": 924,
+      "gadm_gid": "COL.2.94_2",
+      "nombre": "San Juan de Urabá",
+      "registros_ocurrencia": 431
+    },
+    {
+      "rank": 925,
+      "gadm_gid": "COL.28.44_2",
+      "nombre": "Jordán",
+      "registros_ocurrencia": 431
+    },
+    {
+      "rank": 926,
+      "gadm_gid": "COL.20.13_2",
+      "nombre": "Nueva Granada",
+      "registros_ocurrencia": 427
+    },
+    {
+      "rank": 927,
+      "gadm_gid": "COL.22.56_2",
+      "nombre": "Sandoná",
+      "registros_ocurrencia": 426
+    },
+    {
+      "rank": 928,
+      "gadm_gid": "COL.14.9_2",
+      "nombre": "La Apartada",
+      "registros_ocurrencia": 421
+    },
+    {
+      "rank": 929,
+      "gadm_gid": "COL.2.19_2",
+      "nombre": "Betulia",
+      "registros_ocurrencia": 418
+    },
+    {
+      "rank": 930,
+      "gadm_gid": "COL.7.44_2",
+      "nombre": "Jenesano",
+      "registros_ocurrencia": 410
+    },
+    {
+      "rank": 931,
+      "gadm_gid": "COL.7.81_2",
+      "nombre": "San José de Pare",
+      "registros_ocurrencia": 408
+    },
+    {
+      "rank": 932,
+      "gadm_gid": "COL.29.7_2",
+      "nombre": "El Roble",
+      "registros_ocurrencia": 404
+    },
+    {
+      "rank": 933,
+      "gadm_gid": "COL.14.20_2",
+      "nombre": "San Andrés de Sotavento",
+      "registros_ocurrencia": 403
+    },
+    {
+      "rank": 934,
+      "gadm_gid": "COL.11.19_2",
+      "nombre": "Miranda",
+      "registros_ocurrencia": 398
+    },
+    {
+      "rank": 935,
+      "gadm_gid": "COL.28.21_2",
+      "nombre": "Concepción",
+      "registros_ocurrencia": 396
+    },
+    {
+      "rank": 936,
+      "gadm_gid": "COL.22.53_2",
+      "nombre": "San Lorenzo",
+      "registros_ocurrencia": 390
+    },
+    {
+      "rank": 937,
+      "gadm_gid": "COL.14.11_2",
+      "nombre": "Momil",
+      "registros_ocurrencia": 389
+    },
+    {
+      "rank": 938,
+      "gadm_gid": "COL.7.59_2",
+      "nombre": "Nuevo Colón",
+      "registros_ocurrencia": 389
+    },
+    {
+      "rank": 939,
+      "gadm_gid": "COL.7.70_2",
+      "nombre": "Pesca",
+      "registros_ocurrencia": 384
+    },
+    {
+      "rank": 940,
+      "gadm_gid": "COL.23.15_2",
+      "nombre": "Gramalote",
+      "registros_ocurrencia": 380
+    },
+    {
+      "rank": 941,
+      "gadm_gid": "COL.6.28_2",
+      "nombre": "San Estanislao de Kostka",
+      "registros_ocurrencia": 373
+    },
+    {
+      "rank": 942,
+      "gadm_gid": "COL.6.31_2",
+      "nombre": "San Jacinto del Cauca",
+      "registros_ocurrencia": 371
+    },
+    {
+      "rank": 943,
+      "gadm_gid": "COL.6.14_2",
+      "nombre": "El Guamo",
+      "registros_ocurrencia": 370
+    },
+    {
+      "rank": 944,
+      "gadm_gid": "COL.7.88_2",
+      "nombre": "Santa Sofía",
+      "registros_ocurrencia": 368
+    },
+    {
+      "rank": 945,
+      "gadm_gid": "COL.13.31_2",
+      "nombre": "Unión Panamericana",
+      "registros_ocurrencia": 364
+    },
+    {
+      "rank": 946,
+      "gadm_gid": "COL.28.55_2",
+      "nombre": "Ocamonte",
+      "registros_ocurrencia": 355
+    },
+    {
+      "rank": 947,
+      "gadm_gid": "COL.22.12_2",
+      "nombre": "Córdoba",
+      "registros_ocurrencia": 352
+    },
+    {
+      "rank": 948,
+      "gadm_gid": "COL.6.39_2",
+      "nombre": "Soplaviento",
+      "registros_ocurrencia": 351
+    },
+    {
+      "rank": 949,
+      "gadm_gid": "COL.28.83_2",
+      "nombre": "Valle de San José",
+      "registros_ocurrencia": 350
+    },
+    {
+      "rank": 950,
+      "gadm_gid": "COL.7.5_2",
+      "nombre": "Berbeo",
+      "registros_ocurrencia": 348
+    },
+    {
+      "rank": 951,
+      "gadm_gid": "COL.7.89_2",
+      "nombre": "Santana",
+      "registros_ocurrencia": 346
+    },
+    {
+      "rank": 952,
+      "gadm_gid": "COL.7.102_2",
+      "nombre": "Sutamarchán",
+      "registros_ocurrencia": 343
+    },
+    {
+      "rank": 953,
+      "gadm_gid": "COL.7.7_2",
+      "nombre": "Boavita",
+      "registros_ocurrencia": 343
+    },
+    {
+      "rank": 954,
+      "gadm_gid": "COL.23.11_2",
+      "nombre": "Durania",
+      "registros_ocurrencia": 336
+    },
+    {
+      "rank": 955,
+      "gadm_gid": "COL.23.12_2",
+      "nombre": "El Carmen",
+      "registros_ocurrencia": 336
+    },
+    {
+      "rank": 956,
+      "gadm_gid": "COL.12.22_2",
+      "nombre": "San Diego",
+      "registros_ocurrencia": 334
+    },
+    {
+      "rank": 957,
+      "gadm_gid": "COL.12.17_2",
+      "nombre": "Pailitas",
+      "registros_ocurrencia": 333
+    },
+    {
+      "rank": 958,
+      "gadm_gid": "COL.7.66_2",
+      "nombre": "Panqueba",
+      "registros_ocurrencia": 323
+    },
+    {
+      "rank": 959,
+      "gadm_gid": "COL.28.19_2",
+      "nombre": "Chipatá",
+      "registros_ocurrencia": 322
+    },
+    {
+      "rank": 960,
+      "gadm_gid": "COL.10.4_2",
+      "nombre": "La Salina",
+      "registros_ocurrencia": 312
+    },
+    {
+      "rank": 961,
+      "gadm_gid": "COL.7.12_2",
+      "nombre": "Caldas",
+      "registros_ocurrencia": 311
+    },
+    {
+      "rank": 962,
+      "gadm_gid": "COL.22.47_2",
+      "nombre": "Pupiales",
+      "registros_ocurrencia": 310
+    },
+    {
+      "rank": 963,
+      "gadm_gid": "COL.6.19_2",
+      "nombre": "Margarita",
+      "registros_ocurrencia": 310
+    },
+    {
+      "rank": 964,
+      "gadm_gid": "COL.7.34_2",
+      "nombre": "Firavitoba",
+      "registros_ocurrencia": 310
+    },
+    {
+      "rank": 965,
+      "gadm_gid": "COL.15.56_2",
+      "nombre": "Manta",
+      "registros_ocurrencia": 297
+    },
+    {
+      "rank": 966,
+      "gadm_gid": "COL.13.4_2",
+      "nombre": "Bagadó",
+      "registros_ocurrencia": 289
+    },
+    {
+      "rank": 967,
+      "gadm_gid": "COL.16.2_2",
+      "nombre": "Cacahual",
+      "registros_ocurrencia": 287
+    },
+    {
+      "rank": 968,
+      "gadm_gid": "COL.23.28_2",
+      "nombre": "Ragonvalía",
+      "registros_ocurrencia": 287
+    },
+    {
+      "rank": 969,
+      "gadm_gid": "COL.7.49_2",
+      "nombre": "Labranzagrande",
+      "registros_ocurrencia": 286
+    },
+    {
+      "rank": 970,
+      "gadm_gid": "COL.7.118_2",
+      "nombre": "Tutazá",
+      "registros_ocurrencia": 285
+    },
+    {
+      "rank": 971,
+      "gadm_gid": "COL.15.28_2",
+      "nombre": "Fosca",
+      "registros_ocurrencia": 283
+    },
+    {
+      "rank": 972,
+      "gadm_gid": "COL.14.8_2",
+      "nombre": "Cotorra",
+      "registros_ocurrencia": 282
+    },
+    {
+      "rank": 973,
+      "gadm_gid": "COL.6.10_2",
+      "nombre": "Cicuco",
+      "registros_ocurrencia": 281
+    },
+    {
+      "rank": 974,
+      "gadm_gid": "COL.20.29_2",
+      "nombre": "Zapayán",
+      "registros_ocurrencia": 272
+    },
+    {
+      "rank": 975,
+      "gadm_gid": "COL.20.12_2",
+      "nombre": "Guamal",
+      "registros_ocurrencia": 267
+    },
+    {
+      "rank": 976,
+      "gadm_gid": "COL.28.10_2",
+      "nombre": "Cabrera",
+      "registros_ocurrencia": 262
+    },
+    {
+      "rank": 977,
+      "gadm_gid": "COL.28.13_2",
+      "nombre": "Carcasí",
+      "registros_ocurrencia": 261
+    },
+    {
+      "rank": 978,
+      "gadm_gid": "COL.11.11_2",
+      "nombre": "Florencia",
+      "registros_ocurrencia": 260
+    },
+    {
+      "rank": 979,
+      "gadm_gid": "COL.22.51_2",
+      "nombre": "San Bernardo",
+      "registros_ocurrencia": 257
+    },
+    {
+      "rank": 980,
+      "gadm_gid": "COL.7.46_2",
+      "nombre": "La Capilla",
+      "registros_ocurrencia": 255
+    },
+    {
+      "rank": 981,
+      "gadm_gid": "COL.7.99_2",
+      "nombre": "Soracá",
+      "registros_ocurrencia": 255
+    },
+    {
+      "rank": 982,
+      "gadm_gid": "COL.12.18_2",
+      "nombre": "Pelaya",
+      "registros_ocurrencia": 253
+    },
+    {
+      "rank": 983,
+      "gadm_gid": "COL.6.1_2",
+      "nombre": "Achí",
+      "registros_ocurrencia": 249
+    },
+    {
+      "rank": 984,
+      "gadm_gid": "COL.28.43_2",
+      "nombre": "Jesús María",
+      "registros_ocurrencia": 247
+    },
+    {
+      "rank": 985,
+      "gadm_gid": "COL.7.116_2",
+      "nombre": "Turmequé",
+      "registros_ocurrencia": 245
+    },
+    {
+      "rank": 986,
+      "gadm_gid": "COL.7.103_2",
+      "nombre": "Sutatenza",
+      "registros_ocurrencia": 244
+    },
+    {
+      "rank": 987,
+      "gadm_gid": "COL.22.31_2",
+      "nombre": "La Llanada",
+      "registros_ocurrencia": 241
+    },
+    {
+      "rank": 988,
+      "gadm_gid": "COL.29.24_2",
+      "nombre": "Sucre",
+      "registros_ocurrencia": 239
+    },
+    {
+      "rank": 989,
+      "gadm_gid": "COL.11.17_2",
+      "nombre": "López de Micay",
+      "registros_ocurrencia": 236
+    },
+    {
+      "rank": 990,
+      "gadm_gid": "COL.22.3_2",
+      "nombre": "Ancuyá",
+      "registros_ocurrencia": 230
+    },
+    {
+      "rank": 991,
+      "gadm_gid": "COL.11.29_2",
+      "nombre": "Rosas",
+      "registros_ocurrencia": 228
+    },
+    {
+      "rank": 992,
+      "gadm_gid": "COL.15.85_2",
+      "nombre": "Simijaca",
+      "registros_ocurrencia": 223
+    },
+    {
+      "rank": 993,
+      "gadm_gid": "COL.7.1_2",
+      "nombre": "Almeida",
+      "registros_ocurrencia": 221
+    },
+    {
+      "rank": 994,
+      "gadm_gid": "COL.22.21_2",
+      "nombre": "Francisco Pizarro",
+      "registros_ocurrencia": 219
+    },
+    {
+      "rank": 995,
+      "gadm_gid": "COL.7.25_2",
+      "nombre": "Coper",
+      "registros_ocurrencia": 219
+    },
+    {
+      "rank": 996,
+      "gadm_gid": "COL.4.21_2",
+      "nombre": "Suan",
+      "registros_ocurrencia": 218
+    },
+    {
+      "rank": 997,
+      "gadm_gid": "COL.7.60_2",
+      "nombre": "Oicatá",
+      "registros_ocurrencia": 217
+    },
+    {
+      "rank": 998,
+      "gadm_gid": "COL.29.21_2",
+      "nombre": "San Pedro",
+      "registros_ocurrencia": 214
+    },
+    {
+      "rank": 999,
+      "gadm_gid": "COL.15.53_2",
+      "nombre": "Lenguazaque",
+      "registros_ocurrencia": 213
+    },
+    {
+      "rank": 1000,
+      "gadm_gid": "COL.7.18_2",
+      "nombre": "Chiscas",
+      "registros_ocurrencia": 213
+    },
+    {
+      "rank": 1001,
+      "gadm_gid": "COL.22.17_2",
+      "nombre": "El Peñol",
+      "registros_ocurrencia": 207
+    },
+    {
+      "rank": 1002,
+      "gadm_gid": "COL.7.19_2",
+      "nombre": "Chita",
+      "registros_ocurrencia": 207
+    },
+    {
+      "rank": 1003,
+      "gadm_gid": "COL.7.69_2",
+      "nombre": "Paz de Río",
+      "registros_ocurrencia": 199
+    },
+    {
+      "rank": 1004,
+      "gadm_gid": "COL.23.9_2",
+      "nombre": "Convención",
+      "registros_ocurrencia": 196
+    },
+    {
+      "rank": 1005,
+      "gadm_gid": "COL.28.2_2",
+      "nombre": "Albania",
+      "registros_ocurrencia": 196
+    },
+    {
+      "rank": 1006,
+      "gadm_gid": "COL.7.122_2",
+      "nombre": "Viracachá",
+      "registros_ocurrencia": 196
+    },
+    {
+      "rank": 1007,
+      "gadm_gid": "COL.7.6_2",
+      "nombre": "Beteitiva",
+      "registros_ocurrencia": 193
+    },
+    {
+      "rank": 1008,
+      "gadm_gid": "COL.28.76_2",
+      "nombre": "Santa Helena del Opón",
+      "registros_ocurrencia": 190
+    },
+    {
+      "rank": 1009,
+      "gadm_gid": "COL.6.2_2",
+      "nombre": "Altos del Rosario",
+      "registros_ocurrencia": 190
+    },
+    {
+      "rank": 1010,
+      "gadm_gid": "COL.7.10_2",
+      "nombre": "Buenavista",
+      "registros_ocurrencia": 190
+    },
+    {
+      "rank": 1011,
+      "gadm_gid": "COL.22.50_2",
+      "nombre": "Samaniego",
+      "registros_ocurrencia": 180
+    },
+    {
+      "rank": 1012,
+      "gadm_gid": "COL.7.29_2",
+      "nombre": "Cucaita",
+      "registros_ocurrencia": 179
+    },
+    {
+      "rank": 1013,
+      "gadm_gid": "COL.12.3_2",
+      "nombre": "Astrea",
+      "registros_ocurrencia": 177
+    },
+    {
+      "rank": 1014,
+      "gadm_gid": "COL.4.10_2",
+      "nombre": "Palmar de Varela",
+      "registros_ocurrencia": 177
+    },
+    {
+      "rank": 1015,
+      "gadm_gid": "COL.7.27_2",
+      "nombre": "Covarachía",
+      "registros_ocurrencia": 176
+    },
+    {
+      "rank": 1016,
+      "gadm_gid": "COL.23.6_2",
+      "nombre": "Cácota",
+      "registros_ocurrencia": 175
+    },
+    {
+      "rank": 1017,
+      "gadm_gid": "COL.29.18_2",
+      "nombre": "San Juan de Betulia",
+      "registros_ocurrencia": 175
+    },
+    {
+      "rank": 1018,
+      "gadm_gid": "COL.28.80_2",
+      "nombre": "Sucre",
+      "registros_ocurrencia": 173
+    },
+    {
+      "rank": 1019,
+      "gadm_gid": "COL.13.8_2",
+      "nombre": "Bojayá",
+      "registros_ocurrencia": 169
+    },
+    {
+      "rank": 1020,
+      "gadm_gid": "COL.22.24_2",
+      "nombre": "Guaitarilla",
+      "registros_ocurrencia": 169
+    },
+    {
+      "rank": 1021,
+      "gadm_gid": "COL.14.5_2",
+      "nombre": "Chimá",
+      "registros_ocurrencia": 168
+    },
+    {
+      "rank": 1022,
+      "gadm_gid": "COL.23.35_2",
+      "nombre": "Sardinata",
+      "registros_ocurrencia": 164
+    },
+    {
+      "rank": 1023,
+      "gadm_gid": "COL.23.34_2",
+      "nombre": "Santo Domingo de Silos",
+      "registros_ocurrencia": 161
+    },
+    {
+      "rank": 1024,
+      "gadm_gid": "COL.14.19_2",
+      "nombre": "Purísima",
+      "registros_ocurrencia": 160
+    },
+    {
+      "rank": 1025,
+      "gadm_gid": "COL.14.3_2",
+      "nombre": "Canalete",
+      "registros_ocurrencia": 160
+    },
+    {
+      "rank": 1026,
+      "gadm_gid": "COL.23.20_2",
+      "nombre": "Labateca",
+      "registros_ocurrencia": 157
+    },
+    {
+      "rank": 1027,
+      "gadm_gid": "COL.28.22_2",
+      "nombre": "Confines",
+      "registros_ocurrencia": 157
+    },
+    {
+      "rank": 1028,
+      "gadm_gid": "COL.29.9_2",
+      "nombre": "Guarandá",
+      "registros_ocurrencia": 155
+    },
+    {
+      "rank": 1029,
+      "gadm_gid": "COL.23.33_2",
+      "nombre": "Santiago",
+      "registros_ocurrencia": 154
+    },
+    {
+      "rank": 1030,
+      "gadm_gid": "COL.13.20_2",
+      "nombre": "Medio San Juan",
+      "registros_ocurrencia": 152
+    },
+    {
+      "rank": 1031,
+      "gadm_gid": "COL.28.69_2",
+      "nombre": "San Benito",
+      "registros_ocurrencia": 151
+    },
+    {
+      "rank": 1032,
+      "gadm_gid": "COL.7.80_2",
+      "nombre": "San Eduardo",
+      "registros_ocurrencia": 151
+    },
+    {
+      "rank": 1033,
+      "gadm_gid": "COL.16.5_2",
+      "nombre": "Morichal Nuevo",
+      "registros_ocurrencia": 150
+    },
+    {
+      "rank": 1034,
+      "gadm_gid": "COL.9.15_2",
+      "nombre": "Solita",
+      "registros_ocurrencia": 150
+    },
+    {
+      "rank": 1035,
+      "gadm_gid": "COL.11.9_2",
+      "nombre": "Corinto",
+      "registros_ocurrencia": 145
+    },
+    {
+      "rank": 1036,
+      "gadm_gid": "COL.28.41_2",
+      "nombre": "Güepsa",
+      "registros_ocurrencia": 140
+    },
+    {
+      "rank": 1037,
+      "gadm_gid": "COL.23.36_2",
+      "nombre": "Teorama",
+      "registros_ocurrencia": 139
+    },
+    {
+      "rank": 1038,
+      "gadm_gid": "COL.7.47_2",
+      "nombre": "La Uvita",
+      "registros_ocurrencia": 136
+    },
+    {
+      "rank": 1039,
+      "gadm_gid": "COL.6.22_2",
+      "nombre": "Montecristo",
+      "registros_ocurrencia": 135
+    },
+    {
+      "rank": 1040,
+      "gadm_gid": "COL.7.112_2",
+      "nombre": "Topagá",
+      "registros_ocurrencia": 135
+    },
+    {
+      "rank": 1041,
+      "gadm_gid": "COL.28.58_2",
+      "nombre": "Palmar",
+      "registros_ocurrencia": 134
+    },
+    {
+      "rank": 1042,
+      "gadm_gid": "COL.7.48_2",
+      "nombre": "La Victoria",
+      "registros_ocurrencia": 133
+    },
+    {
+      "rank": 1043,
+      "gadm_gid": "COL.7.35_2",
+      "nombre": "Floresta",
+      "registros_ocurrencia": 131
+    },
+    {
+      "rank": 1044,
+      "gadm_gid": "COL.7.8_2",
+      "nombre": "Boyacá",
+      "registros_ocurrencia": 129
+    },
+    {
+      "rank": 1045,
+      "gadm_gid": "COL.16.3_2",
+      "nombre": "La Guadalupe",
+      "registros_ocurrencia": 126
+    },
+    {
+      "rank": 1046,
+      "gadm_gid": "COL.28.72_2",
+      "nombre": "San José de Miranda",
+      "registros_ocurrencia": 125
+    },
+    {
+      "rank": 1047,
+      "gadm_gid": "COL.22.15_2",
+      "nombre": "Cumbitara",
+      "registros_ocurrencia": 123
+    },
+    {
+      "rank": 1048,
+      "gadm_gid": "COL.28.14_2",
+      "nombre": "Cepitá",
+      "registros_ocurrencia": 122
+    },
+    {
+      "rank": 1049,
+      "gadm_gid": "COL.7.90_2",
+      "nombre": "Sativanorte",
+      "registros_ocurrencia": 110
+    },
+    {
+      "rank": 1050,
+      "gadm_gid": "COL.23.22_2",
+      "nombre": "Lourdes",
+      "registros_ocurrencia": 108
+    },
+    {
+      "rank": 1051,
+      "gadm_gid": "COL.22.1_2",
+      "nombre": "Albán",
+      "registros_ocurrencia": 106
+    },
+    {
+      "rank": 1052,
+      "gadm_gid": "COL.28.71_2",
+      "nombre": "San Joaquín",
+      "registros_ocurrencia": 102
+    },
+    {
+      "rank": 1053,
+      "gadm_gid": "COL.7.92_2",
+      "nombre": "Siachoque",
+      "registros_ocurrencia": 101
+    },
+    {
+      "rank": 1054,
+      "gadm_gid": "COL.7.33_2",
+      "nombre": "El Espino",
+      "registros_ocurrencia": 98
+    },
+    {
+      "rank": 1055,
+      "gadm_gid": "COL.2.120_2",
+      "nombre": "Vigía del Fuerte",
+      "registros_ocurrencia": 95
+    },
+    {
+      "rank": 1056,
+      "gadm_gid": "COL.6.6_2",
+      "nombre": "Barranco de Loba",
+      "registros_ocurrencia": 93
+    },
+    {
+      "rank": 1057,
+      "gadm_gid": "COL.28.73_2",
+      "nombre": "San Miguel",
+      "registros_ocurrencia": 90
+    },
+    {
+      "rank": 1058,
+      "gadm_gid": "COL.20.14_2",
+      "nombre": "Pedraza",
+      "registros_ocurrencia": 84
+    },
+    {
+      "rank": 1059,
+      "gadm_gid": "COL.7.26_2",
+      "nombre": "Corrales",
+      "registros_ocurrencia": 83
+    },
+    {
+      "rank": 1060,
+      "gadm_gid": "COL.2.71_2",
+      "nombre": "Murindó",
+      "registros_ocurrencia": 82
+    },
+    {
+      "rank": 1061,
+      "gadm_gid": "COL.20.4_2",
+      "nombre": "Cerro de San Antonio",
+      "registros_ocurrencia": 76
+    },
+    {
+      "rank": 1062,
+      "gadm_gid": "COL.6.3_2",
+      "nombre": "Arenal",
+      "registros_ocurrencia": 76
+    },
+    {
+      "rank": 1063,
+      "gadm_gid": "COL.6.5_2",
+      "nombre": "Arroyohondo",
+      "registros_ocurrencia": 76
+    },
+    {
+      "rank": 1064,
+      "gadm_gid": "COL.7.37_2",
+      "nombre": "Gámeza",
+      "registros_ocurrencia": 73
+    },
+    {
+      "rank": 1065,
+      "gadm_gid": "COL.7.91_2",
+      "nombre": "Sativasur",
+      "registros_ocurrencia": 72
+    },
+    {
+      "rank": 1066,
+      "gadm_gid": "COL.4.12_2",
+      "nombre": "Polonuevo",
+      "registros_ocurrencia": 70
+    },
+    {
+      "rank": 1067,
+      "gadm_gid": "COL.28.1_2",
+      "nombre": "Aguada",
+      "registros_ocurrencia": 69
+    },
+    {
+      "rank": 1068,
+      "gadm_gid": "COL.7.43_2",
+      "nombre": "Izá",
+      "registros_ocurrencia": 69
+    },
+    {
+      "rank": 1069,
+      "gadm_gid": "COL.4.3_2",
+      "nombre": "Campo de la Cruz",
+      "registros_ocurrencia": 67
+    },
+    {
+      "rank": 1070,
+      "gadm_gid": "COL.1.6_2",
+      "nombre": "Mirití-Paraná",
+      "registros_ocurrencia": 66
+    },
+    {
+      "rank": 1071,
+      "gadm_gid": "COL.13.24_2",
+      "nombre": "Río Iro",
+      "registros_ocurrencia": 65
+    },
+    {
+      "rank": 1072,
+      "gadm_gid": "COL.7.39_2",
+      "nombre": "Guacamayas",
+      "registros_ocurrencia": 61
+    },
+    {
+      "rank": 1073,
+      "gadm_gid": "COL.28.40_2",
+      "nombre": "Guavatá",
+      "registros_ocurrencia": 57
+    },
+    {
+      "rank": 1074,
+      "gadm_gid": "COL.23.4_2",
+      "nombre": "Bucarasica",
+      "registros_ocurrencia": 55
+    },
+    {
+      "rank": 1075,
+      "gadm_gid": "COL.6.29_2",
+      "nombre": "San Fernando",
+      "registros_ocurrencia": 50
+    },
+    {
+      "rank": 1076,
+      "gadm_gid": "COL.28.50_2",
+      "nombre": "Macaravita",
+      "registros_ocurrencia": 49
+    },
+    {
+      "rank": 1077,
+      "gadm_gid": "COL.6.40_2",
+      "nombre": "Talaigua Nuevo",
+      "registros_ocurrencia": 47
+    },
+    {
+      "rank": 1078,
+      "gadm_gid": "COL.29.1_2",
+      "nombre": "Buenavista",
+      "registros_ocurrencia": 46
+    },
+    {
+      "rank": 1079,
+      "gadm_gid": "COL.28.46_2",
+      "nombre": "La Paz",
+      "registros_ocurrencia": 45
+    },
+    {
+      "rank": 1080,
+      "gadm_gid": "COL.11.21_2",
+      "nombre": "Padilla",
+      "registros_ocurrencia": 44
+    },
+    {
+      "rank": 1081,
+      "gadm_gid": "COL.4.4_2",
+      "nombre": "Candelaria",
+      "registros_ocurrencia": 43
+    },
+    {
+      "rank": 1082,
+      "gadm_gid": "COL.7.11_2",
+      "nombre": "Busbanza",
+      "registros_ocurrencia": 42
+    },
+    {
+      "rank": 1083,
+      "gadm_gid": "COL.7.51_2",
+      "nombre": "Maripí",
+      "registros_ocurrencia": 37
+    },
+    {
+      "rank": 1084,
+      "gadm_gid": "COL.1.7_2",
+      "nombre": "Puerto Alegria",
+      "registros_ocurrencia": 34
+    },
+    {
+      "rank": 1085,
+      "gadm_gid": "COL.27.1_2",
+      "nombre": "Islas Serranilla",
+      "registros_ocurrencia": 31
+    },
+    {
+      "rank": 1086,
+      "gadm_gid": "COL.22.35_2",
+      "nombre": "Linares",
+      "registros_ocurrencia": 30
+    },
+    {
+      "rank": 1087,
+      "gadm_gid": "COL.23.16_2",
+      "nombre": "Hacarí",
+      "registros_ocurrencia": 28
+    },
+    {
+      "rank": 1088,
+      "gadm_gid": "COL.7.45_2",
+      "nombre": "Jericó",
+      "registros_ocurrencia": 28
+    },
+    {
+      "rank": 1089,
+      "gadm_gid": "COL.6.41_2",
+      "nombre": "Tiquisio",
+      "registros_ocurrencia": 27
+    },
+    {
+      "rank": 1090,
+      "gadm_gid": "COL.23.13_2",
+      "nombre": "El Tarra",
+      "registros_ocurrencia": 26
+    },
+    {
+      "rank": 1091,
+      "gadm_gid": "COL.16.7_2",
+      "nombre": "Puerto Colombia",
+      "registros_ocurrencia": 25
+    },
+    {
+      "rank": 1092,
+      "gadm_gid": "COL.6.15_2",
+      "nombre": "El Peñon",
+      "registros_ocurrencia": 24
+    },
+    {
+      "rank": 1093,
+      "gadm_gid": "COL.6.24_2",
+      "nombre": "Pinillos",
+      "registros_ocurrencia": 24
+    },
+    {
+      "rank": 1094,
+      "gadm_gid": "COL.22.2_2",
+      "nombre": "Aldana",
+      "registros_ocurrencia": 21
+    },
+    {
+      "rank": 1095,
+      "gadm_gid": "COL.7.9_2",
+      "nombre": "Briceño",
+      "registros_ocurrencia": 21
+    },
+    {
+      "rank": 1096,
+      "gadm_gid": "COL.11.36_2",
+      "nombre": "Sucre",
+      "registros_ocurrencia": 20
+    },
+    {
+      "rank": 1097,
+      "gadm_gid": "COL.22.6_2",
+      "nombre": "Belén",
+      "registros_ocurrencia": 20
+    },
+    {
+      "rank": 1098,
+      "gadm_gid": "COL.23.27_2",
+      "nombre": "Puerto Santander",
+      "registros_ocurrencia": 18
+    },
+    {
+      "rank": 1099,
+      "gadm_gid": "COL.1.8_2",
+      "nombre": "Puerto Arica",
+      "registros_ocurrencia": 17
+    },
+    {
+      "rank": 1100,
+      "gadm_gid": "COL.32.4_2",
+      "nombre": "Papunahua",
+      "registros_ocurrencia": 17
+    },
+    {
+      "rank": 1101,
+      "gadm_gid": "COL.4.18_2",
+      "nombre": "Santa Lucía",
+      "registros_ocurrencia": 16
+    },
+    {
+      "rank": 1102,
+      "gadm_gid": "COL.22.13_2",
+      "nombre": "Cuaspud",
+      "registros_ocurrencia": 14
+    },
+    {
+      "rank": 1103,
+      "gadm_gid": "COL.22.58_2",
+      "nombre": "Santa Cruz",
+      "registros_ocurrencia": 13
+    },
+    {
+      "rank": 1104,
+      "gadm_gid": "COL.7.21_2",
+      "nombre": "Chivatá",
+      "registros_ocurrencia": 13
+    },
+    {
+      "rank": 1105,
+      "gadm_gid": "COL.6.33_2",
+      "nombre": "San Martín de Loba",
+      "registros_ocurrencia": 12
+    },
+    {
+      "rank": 1106,
+      "gadm_gid": "COL.7.98_2",
+      "nombre": "Sora",
+      "registros_ocurrencia": 12
+    },
+    {
+      "rank": 1107,
+      "gadm_gid": "COL.23.39_2",
+      "nombre": "Villa Caro",
+      "registros_ocurrencia": 11
+    },
+    {
+      "rank": 1108,
+      "gadm_gid": "COL.1.4_2",
+      "nombre": "La Victoria",
+      "registros_ocurrencia": 8
+    },
+    {
+      "rank": 1109,
+      "gadm_gid": "COL.13.11_2",
+      "nombre": "El Cantón del San Pablo",
+      "registros_ocurrencia": 8
+    },
+    {
+      "rank": 1110,
+      "gadm_gid": "COL.13.9_2",
+      "nombre": "Cértegui",
+      "registros_ocurrencia": 6
+    },
+    {
+      "rank": 1111,
+      "gadm_gid": "COL.11.14_2",
+      "nombre": "Jambaló",
+      "registros_ocurrencia": 5
+    },
+    {
+      "rank": 1112,
+      "gadm_gid": "COL.22.34_2",
+      "nombre": "Leiva",
+      "registros_ocurrencia": 4
+    },
+    {
+      "rank": 1113,
+      "gadm_gid": "COL.22.49_2",
+      "nombre": "Roberto Payán",
+      "registros_ocurrencia": 3
+    },
+    {
+      "rank": 1114,
+      "gadm_gid": "COL.20.5_2",
+      "nombre": "Chivolo",
+      "registros_ocurrencia": 2
+    },
+    {
+      "rank": 1115,
+      "gadm_gid": "COL.23.30_2",
+      "nombre": "San Calixto",
+      "registros_ocurrencia": 2
+    },
+    {
+      "rank": 1116,
+      "gadm_gid": "COL.16.6_2",
+      "nombre": "Pana Pana",
+      "registros_ocurrencia": 1
+    },
+    {
+      "rank": 1117,
+      "gadm_gid": "COL.6.25_2",
+      "nombre": "Regidor",
+      "registros_ocurrencia": 1
     }
   ],
   "anios": [
@@ -637,7 +7189,7 @@
     },
     {
       "anio": 1876,
-      "registros_ocurrencia": 131
+      "registros_ocurrencia": 130
     },
     {
       "anio": 1877,
@@ -649,7 +7201,7 @@
     },
     {
       "anio": 1879,
-      "registros_ocurrencia": 367
+      "registros_ocurrencia": 360
     },
     {
       "anio": 1880,
@@ -669,7 +7221,7 @@
     },
     {
       "anio": 1884,
-      "registros_ocurrencia": 55
+      "registros_ocurrencia": 51
     },
     {
       "anio": 1885,
@@ -677,7 +7229,7 @@
     },
     {
       "anio": 1886,
-      "registros_ocurrencia": 289
+      "registros_ocurrencia": 287
     },
     {
       "anio": 1887,
@@ -693,11 +7245,11 @@
     },
     {
       "anio": 1890,
-      "registros_ocurrencia": 43
+      "registros_ocurrencia": 42
     },
     {
       "anio": 1891,
-      "registros_ocurrencia": 73
+      "registros_ocurrencia": 72
     },
     {
       "anio": 1892,
@@ -705,7 +7257,7 @@
     },
     {
       "anio": 1893,
-      "registros_ocurrencia": 27
+      "registros_ocurrencia": 26
     },
     {
       "anio": 1894,
@@ -713,15 +7265,15 @@
     },
     {
       "anio": 1895,
-      "registros_ocurrencia": 132
+      "registros_ocurrencia": 131
     },
     {
       "anio": 1896,
-      "registros_ocurrencia": 233
+      "registros_ocurrencia": 230
     },
     {
       "anio": 1897,
-      "registros_ocurrencia": 442
+      "registros_ocurrencia": 427
     },
     {
       "anio": 1898,
@@ -749,7 +7301,7 @@
     },
     {
       "anio": 1904,
-      "registros_ocurrencia": 286
+      "registros_ocurrencia": 284
     },
     {
       "anio": 1905,
@@ -785,7 +7337,7 @@
     },
     {
       "anio": 1913,
-      "registros_ocurrencia": 5960
+      "registros_ocurrencia": 5959
     },
     {
       "anio": 1914,
@@ -845,7 +7397,7 @@
     },
     {
       "anio": 1928,
-      "registros_ocurrencia": 319
+      "registros_ocurrencia": 311
     },
     {
       "anio": 1929,
@@ -917,7 +7469,7 @@
     },
     {
       "anio": 1946,
-      "registros_ocurrencia": 3130
+      "registros_ocurrencia": 3129
     },
     {
       "anio": 1947,
@@ -937,7 +7489,7 @@
     },
     {
       "anio": 1951,
-      "registros_ocurrencia": 2844
+      "registros_ocurrencia": 2843
     },
     {
       "anio": 1952,
@@ -953,7 +7505,7 @@
     },
     {
       "anio": 1955,
-      "registros_ocurrencia": 1133
+      "registros_ocurrencia": 1132
     },
     {
       "anio": 1956,
@@ -997,7 +7549,7 @@
     },
     {
       "anio": 1966,
-      "registros_ocurrencia": 2233
+      "registros_ocurrencia": 2231
     },
     {
       "anio": 1967,
@@ -1017,7 +7569,7 @@
     },
     {
       "anio": 1971,
-      "registros_ocurrencia": 3628
+      "registros_ocurrencia": 3627
     },
     {
       "anio": 1972,
@@ -1153,7 +7705,7 @@
     },
     {
       "anio": 2005,
-      "registros_ocurrencia": 59027
+      "registros_ocurrencia": 59026
     },
     {
       "anio": 2006,
@@ -1173,7 +7725,7 @@
     },
     {
       "anio": 2010,
-      "registros_ocurrencia": 93729
+      "registros_ocurrencia": 93732
     },
     {
       "anio": 2011,
@@ -1185,7 +7737,7 @@
     },
     {
       "anio": 2013,
-      "registros_ocurrencia": 156461
+      "registros_ocurrencia": 156462
     },
     {
       "anio": 2014,
@@ -1193,11 +7745,11 @@
     },
     {
       "anio": 2015,
-      "registros_ocurrencia": 343710
+      "registros_ocurrencia": 343709
     },
     {
       "anio": 2016,
-      "registros_ocurrencia": 461570
+      "registros_ocurrencia": 461571
     },
     {
       "anio": 2017,
@@ -1205,39 +7757,39 @@
     },
     {
       "anio": 2018,
-      "registros_ocurrencia": 1073659
+      "registros_ocurrencia": 1073674
     },
     {
       "anio": 2019,
-      "registros_ocurrencia": 1474459
+      "registros_ocurrencia": 1474455
     },
     {
       "anio": 2020,
-      "registros_ocurrencia": 1498936
+      "registros_ocurrencia": 1498938
     },
     {
       "anio": 2021,
-      "registros_ocurrencia": 1733070
+      "registros_ocurrencia": 1733069
     },
     {
       "anio": 2022,
-      "registros_ocurrencia": 2193431
+      "registros_ocurrencia": 2193426
     },
     {
       "anio": 2023,
-      "registros_ocurrencia": 2579402
+      "registros_ocurrencia": 2579403
     },
     {
       "anio": 2024,
-      "registros_ocurrencia": 2903444
+      "registros_ocurrencia": 2903449
     },
     {
       "anio": 2025,
-      "registros_ocurrencia": 3273972
+      "registros_ocurrencia": 3274131
     },
     {
       "anio": 2026,
-      "registros_ocurrencia": 106563
+      "registros_ocurrencia": 107603
     }
   ],
   "tipos_registro": [
@@ -1245,25 +7797,25 @@
       "rank": 1,
       "codigo": "HUMAN_OBSERVATION",
       "etiqueta": "Observación humana",
-      "registros_ocurrencia": 19515527
+      "registros_ocurrencia": 19516750
     },
     {
       "rank": 2,
       "codigo": "MACHINE_OBSERVATION",
       "etiqueta": "Observación automática (sensor/cámara)",
-      "registros_ocurrencia": 340069
+      "registros_ocurrencia": 340073
     },
     {
       "rank": 3,
       "codigo": "PRESERVED_SPECIMEN",
       "etiqueta": "Espécimen preservado",
-      "registros_ocurrencia": 227053
+      "registros_ocurrencia": 226877
     },
     {
       "rank": 4,
       "codigo": "MATERIAL_SAMPLE",
       "etiqueta": "Muestra de material",
-      "registros_ocurrencia": 8120
+      "registros_ocurrencia": 8109
     },
     {
       "rank": 5,
@@ -1289,37 +7841,37 @@
       "rank": 1,
       "codigo": "LC",
       "etiqueta": "Preocupación menor (LC)",
-      "registros_ocurrencia": 16752889
+      "registros_ocurrencia": 16753723
     },
     {
       "rank": 2,
       "codigo": "NE",
       "etiqueta": "No evaluada (NE)",
-      "registros_ocurrencia": 2983716
+      "registros_ocurrencia": 2983896
     },
     {
       "rank": 3,
       "codigo": "NT",
       "etiqueta": "Casi amenazada (NT)",
-      "registros_ocurrencia": 209202
+      "registros_ocurrencia": 209218
     },
     {
       "rank": 4,
       "codigo": "VU",
       "etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 120516
+      "registros_ocurrencia": 120521
     },
     {
       "rank": 5,
       "codigo": "EN",
       "etiqueta": "En peligro (EN)",
-      "registros_ocurrencia": 19033
+      "registros_ocurrencia": 19036
     },
     {
       "rank": 6,
       "codigo": "CR",
       "etiqueta": "En peligro crítico (CR)",
-      "registros_ocurrencia": 5934
+      "registros_ocurrencia": 5936
     },
     {
       "rank": 7,
@@ -1348,7 +7900,7 @@
       "nombre_comun": "Red-bellied Grackle",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 16141,
+      "registros_ocurrencia": 16142,
       "por_anio": [
         {
           "anio": 1879,
@@ -1584,7 +8136,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 107
+          "registros_ocurrencia": 108
         }
       ]
     },
@@ -1595,7 +8147,7 @@
       "nombre_comun": "Lesser Yellowlegs",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 10704,
+      "registros_ocurrencia": 10705,
       "por_anio": [
         {
           "anio": 1898,
@@ -1875,7 +8427,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 15
+          "registros_ocurrencia": 16
         }
       ]
     },
@@ -1886,7 +8438,7 @@
       "nombre_comun": "Military Macaw",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 7914,
+      "registros_ocurrencia": 7915,
       "por_anio": [
         {
           "anio": 1888,
@@ -2066,7 +8618,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 22
+          "registros_ocurrencia": 23
         }
       ]
     },
@@ -2077,7 +8629,7 @@
       "nombre_comun": "Cauca Guan",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 6342,
+      "registros_ocurrencia": 6344,
       "por_anio": [
         {
           "anio": 1937,
@@ -2229,7 +8781,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 35
+          "registros_ocurrencia": 37
         }
       ]
     },
@@ -2658,7 +9210,7 @@
       "nombre_comun": "Bogota Rail",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 5246,
+      "registros_ocurrencia": 5247,
       "por_anio": [
         {
           "anio": 1875,
@@ -2890,7 +9442,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 12
+          "registros_ocurrencia": 13
         }
       ]
     },
@@ -3136,7 +9688,7 @@
       "nombre_comun": "Gold-ringed Tanager",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 4862,
+      "registros_ocurrencia": 4863,
       "por_anio": [
         {
           "anio": 1911,
@@ -3276,7 +9828,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 12
+          "registros_ocurrencia": 13
         }
       ]
     },
@@ -4218,7 +10770,7 @@
       "nombre_comun": "Black Inca",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 3310,
+      "registros_ocurrencia": 3304,
       "por_anio": [
         {
           "anio": 1845,
@@ -4237,16 +10789,8 @@
           "registros_ocurrencia": 2
         },
         {
-          "anio": 1884,
-          "registros_ocurrencia": 2
-        },
-        {
           "anio": 1888,
           "registros_ocurrencia": 3
-        },
-        {
-          "anio": 1895,
-          "registros_ocurrencia": 1
         },
         {
           "anio": 1899,
@@ -4663,7 +11207,7 @@
       "nombre_comun": "Andean Condor",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 2695,
+      "registros_ocurrencia": 2696,
       "por_anio": [
         {
           "anio": 1936,
@@ -4827,7 +11371,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 19
+          "registros_ocurrencia": 20
         }
       ]
     },
@@ -5530,7 +12074,7 @@
       "nombre_comun": "Tolima Blossomcrown",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 2123,
+      "registros_ocurrencia": 2124,
       "por_anio": [
         {
           "anio": 1880,
@@ -5650,7 +12194,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 7
+          "registros_ocurrencia": 8
         }
       ]
     },
@@ -5967,7 +12511,7 @@
       "nombre_comun": "Santa Marta Screech Owl",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 1889,
+      "registros_ocurrencia": 1890,
       "por_anio": [
         {
           "anio": 1982,
@@ -6067,7 +12611,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 5
+          "registros_ocurrencia": 6
         }
       ]
     },
@@ -6201,7 +12745,7 @@
       "nombre_comun": "Baudo Guan",
       "iucn_codigo": "EN",
       "iucn_etiqueta": "En peligro (EN)",
-      "registros_ocurrencia": 1436,
+      "registros_ocurrencia": 1437,
       "por_anio": [
         {
           "anio": 1896,
@@ -6373,7 +12917,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 3
+          "registros_ocurrencia": 4
         }
       ]
     },
@@ -7512,7 +14056,7 @@
       "nombre_comun": "Baudo Oropendola",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 1070,
+      "registros_ocurrencia": 1071,
       "por_anio": [
         {
           "anio": 1940,
@@ -7620,7 +14164,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 4
+          "registros_ocurrencia": 5
         }
       ]
     },
@@ -7631,7 +14175,7 @@
       "nombre_comun": "Cundinamarca Antpitta",
       "iucn_codigo": "EN",
       "iucn_etiqueta": "En peligro (EN)",
-      "registros_ocurrencia": 1059,
+      "registros_ocurrencia": 1060,
       "por_anio": [
         {
           "anio": 1989,
@@ -7735,7 +14279,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 5
+          "registros_ocurrencia": 6
         }
       ]
     },
@@ -7746,7 +14290,7 @@
       "nombre_comun": "Chestnut-capped Piha",
       "iucn_codigo": "CR",
       "iucn_etiqueta": "En peligro crítico (CR)",
-      "registros_ocurrencia": 1037,
+      "registros_ocurrencia": 1038,
       "por_anio": [
         {
           "anio": 1994,
@@ -7862,7 +14406,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 3
+          "registros_ocurrencia": 4
         }
       ]
     },
@@ -8083,7 +14627,7 @@
       "nombre_comun": "Antioquia Brushfinch",
       "iucn_codigo": "CR",
       "iucn_etiqueta": "En peligro crítico (CR)",
-      "registros_ocurrencia": 785,
+      "registros_ocurrencia": 786,
       "por_anio": [
         {
           "anio": 1971,
@@ -8127,7 +14671,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 5
+          "registros_ocurrencia": 6
         }
       ]
     },
@@ -8971,7 +15515,7 @@
       "nombre_comun": "Harpy Eagle",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 501,
+      "registros_ocurrencia": 500,
       "por_anio": [
         {
           "anio": 1965,
@@ -9657,7 +16201,7 @@
       "nombre_comun": "Black-and-chestnut Eagle",
       "iucn_codigo": "EN",
       "iucn_etiqueta": "En peligro (EN)",
-      "registros_ocurrencia": 282,
+      "registros_ocurrencia": 283,
       "por_anio": [
         {
           "anio": 1898,
@@ -9837,7 +16381,7 @@
         },
         {
           "anio": 2026,
-          "registros_ocurrencia": 17
+          "registros_ocurrencia": 18
         }
       ]
     },
@@ -10157,7 +16701,7 @@
       "nombre_comun": "Buff-breasted Sandpiper",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 206,
+      "registros_ocurrencia": 208,
       "por_anio": [
         {
           "anio": 1898,
@@ -10237,7 +16781,7 @@
         },
         {
           "anio": 2020,
-          "registros_ocurrencia": 4
+          "registros_ocurrencia": 6
         },
         {
           "anio": 2021,
@@ -10772,7 +17316,7 @@
       "nombre_comun": "Plumbeous Forest-Falcon",
       "iucn_codigo": "VU",
       "iucn_etiqueta": "Vulnerable (VU)",
-      "registros_ocurrencia": 78,
+      "registros_ocurrencia": 77,
       "por_anio": [
         {
           "anio": 1938,
@@ -12133,91 +18677,91 @@
       "rank": 1,
       "taxon_key": "729",
       "nombre": "Passeriformes",
-      "registros_ocurrencia": 11865949
+      "registros_ocurrencia": 11866435
     },
     {
       "rank": 2,
       "taxon_key": "1448",
       "nombre": "Apodiformes",
-      "registros_ocurrencia": 1511627
+      "registros_ocurrencia": 1511644
     },
     {
       "rank": 3,
       "taxon_key": "7191147",
       "nombre": "Accipitriformes",
-      "registros_ocurrencia": 929875
+      "registros_ocurrencia": 929960
     },
     {
       "rank": 4,
       "taxon_key": "1446",
       "nombre": "Columbiformes",
-      "registros_ocurrencia": 899429
+      "registros_ocurrencia": 899495
     },
     {
       "rank": 5,
       "taxon_key": "724",
       "nombre": "Piciformes",
-      "registros_ocurrencia": 891825
+      "registros_ocurrencia": 891879
     },
     {
       "rank": 6,
       "taxon_key": "7190953",
       "nombre": "Pelecaniformes",
-      "registros_ocurrencia": 818385
+      "registros_ocurrencia": 818470
     },
     {
       "rank": 7,
       "taxon_key": "1445",
       "nombre": "Psittaciformes",
-      "registros_ocurrencia": 616981
+      "registros_ocurrencia": 617011
     },
     {
       "rank": 8,
       "taxon_key": "7192402",
       "nombre": "Charadriiformes",
-      "registros_ocurrencia": 473892
+      "registros_ocurrencia": 473927
     },
     {
       "rank": 9,
       "taxon_key": "1492",
       "nombre": "Cuculiformes",
-      "registros_ocurrencia": 357309
+      "registros_ocurrencia": 357328
     },
     {
       "rank": 10,
       "taxon_key": "7191407",
       "nombre": "Falconiformes",
-      "registros_ocurrencia": 344751
+      "registros_ocurrencia": 344768
     },
     {
       "rank": 11,
       "taxon_key": "723",
       "nombre": "Galliformes",
-      "registros_ocurrencia": 304755
+      "registros_ocurrencia": 304807
     },
     {
       "rank": 12,
       "taxon_key": "1447",
       "nombre": "Coraciiformes",
-      "registros_ocurrencia": 223680
+      "registros_ocurrencia": 223702
     },
     {
       "rank": 13,
       "taxon_key": "1493",
       "nombre": "Gruiformes",
-      "registros_ocurrencia": 186599
+      "registros_ocurrencia": 186626
     },
     {
       "rank": 14,
       "taxon_key": "1108",
       "nombre": "Anseriformes",
-      "registros_ocurrencia": 145046
+      "registros_ocurrencia": 145060
     },
     {
       "rank": 15,
       "taxon_key": "7192775",
       "nombre": "Suliformes",
-      "registros_ocurrencia": 97094
+      "registros_ocurrencia": 97098
     }
   ],
   "familias": [
@@ -12225,91 +18769,91 @@
       "rank": 1,
       "taxon_key": "9352",
       "nombre": "Thraupidae",
-      "registros_ocurrencia": 3157772
+      "registros_ocurrencia": 3157875
     },
     {
       "rank": 2,
       "taxon_key": "5291",
       "nombre": "Tyrannidae",
-      "registros_ocurrencia": 2527005
+      "registros_ocurrencia": 2527102
     },
     {
       "rank": 3,
       "taxon_key": "5289",
       "nombre": "Trochilidae",
-      "registros_ocurrencia": 1402426
+      "registros_ocurrencia": 1402442
     },
     {
       "rank": 4,
       "taxon_key": "5233",
       "nombre": "Columbidae",
-      "registros_ocurrencia": 899393
+      "registros_ocurrencia": 899459
     },
     {
       "rank": 5,
       "taxon_key": "5263",
       "nombre": "Parulidae",
-      "registros_ocurrencia": 718506
+      "registros_ocurrencia": 718535
     },
     {
       "rank": 6,
       "taxon_key": "6176",
       "nombre": "Icteridae",
-      "registros_ocurrencia": 693702
+      "registros_ocurrencia": 693740
     },
     {
       "rank": 7,
       "taxon_key": "9355",
       "nombre": "Troglodytidae",
-      "registros_ocurrencia": 679246
+      "registros_ocurrencia": 679257
     },
     {
       "rank": 8,
       "taxon_key": "5290",
       "nombre": "Turdidae",
-      "registros_ocurrencia": 623781
+      "registros_ocurrencia": 623813
     },
     {
       "rank": 9,
       "taxon_key": "9340",
       "nombre": "Psittacidae",
-      "registros_ocurrencia": 616967
+      "registros_ocurrencia": 616997
     },
     {
       "rank": 10,
       "taxon_key": "5243",
       "nombre": "Furnariidae",
-      "registros_ocurrencia": 582753
+      "registros_ocurrencia": 582774
     },
     {
       "rank": 11,
       "taxon_key": "3685",
       "nombre": "Ardeidae",
-      "registros_ocurrencia": 558055
+      "registros_ocurrencia": 558106
     },
     {
       "rank": 12,
       "taxon_key": "9410667",
       "nombre": "Passerellidae",
-      "registros_ocurrencia": 522461
+      "registros_ocurrencia": 522499
     },
     {
       "rank": 13,
       "taxon_key": "9333",
       "nombre": "Picidae",
-      "registros_ocurrencia": 494300
+      "registros_ocurrencia": 494332
     },
     {
       "rank": 14,
       "taxon_key": "3242141",
       "nombre": "Cathartidae",
-      "registros_ocurrencia": 476852
+      "registros_ocurrencia": 476878
     },
     {
       "rank": 15,
       "taxon_key": "2877",
       "nombre": "Accipitridae",
-      "registros_ocurrencia": 427456
+      "registros_ocurrencia": 427514
     }
   ],
   "cortes_historicos": 3,
