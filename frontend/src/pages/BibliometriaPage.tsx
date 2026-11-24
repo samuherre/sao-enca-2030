@@ -517,6 +517,16 @@ function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
     nombre: o.nombre,
     conteo: o.conteo,
   }));
+  // Barra adicional (decisión de Julián): los artículos de aves que NO encajan
+  // en ningún OFC se muestran como una categoría propia, no se ocultan. Son
+  // temas no focales (enfermedades, genética, metodología...).
+  if (resumen.sin_ofc > 0) {
+    data.push({
+      ofc: "Otros",
+      nombre: "Otros tópicos no incluidos (enfermedades, genética, metodología…)",
+      conteo: resumen.sin_ofc,
+    });
+  }
   const alto = Math.max(220, data.length * 34);
 
   return (
@@ -524,7 +534,8 @@ function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
       <h3 style={{ marginBottom: "0.25rem" }}>Distribución por OFC</h3>
       <p style={{ color: "#8a6d1f", fontSize: "0.85rem", marginTop: 0 }}>
         Clasificación <strong>automática</strong> (reglas por palabras clave), sujeta a revisión
-        humana. {resumen.sin_ofc} artículo(s) sin OFC asignado.
+        humana. Los {resumen.sin_ofc} artículos que no encajan en ningún OFC se muestran como
+        “Otros tópicos no incluidos” (temas no focales: enfermedades, genética, metodología…).
       </p>
       <ExplicacionOFC
         descripcion={resumen.ofc_descripcion}
@@ -558,7 +569,8 @@ function OFCCard({ resumen }: { resumen: ResumenConsolidado }) {
               cursor="pointer"
               onClick={(payload: unknown) => {
                 const ofc = (payload as { ofc?: string } | undefined)?.ofc;
-                if (ofc) onSeleccionarOfc(ofc);
+                // "Otros" no es un OFC real (no tiene drill-down de artículos).
+                if (ofc && ofc.startsWith("OFC-")) onSeleccionarOfc(ofc);
               }}
             />
           </BarChart>

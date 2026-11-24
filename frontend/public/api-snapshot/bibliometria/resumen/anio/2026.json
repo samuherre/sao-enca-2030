@@ -399,93 +399,93 @@
     {
       "ofc_id": "OFC-01",
       "nombre": "Aves de hábitats marinos, costeros y de manglar",
-      "conteo": 282,
-      "grado_colaboracion": 0.74,
-      "gc_articulos_contables": 280,
-      "gc_articulos_sin_autoria": 2
+      "conteo": 23,
+      "grado_colaboracion": 0.52,
+      "gc_articulos_contables": 23,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 519,
-      "grado_colaboracion": 0.77,
-      "gc_articulos_contables": 514,
-      "gc_articulos_sin_autoria": 5
+      "conteo": 43,
+      "grado_colaboracion": 0.52,
+      "gc_articulos_contables": 42,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-03",
       "nombre": "Aves de sabanas y pastizales naturales",
-      "conteo": 144,
+      "conteo": 5,
       "grado_colaboracion": 0.8,
-      "gc_articulos_contables": 143,
-      "gc_articulos_sin_autoria": 1
+      "gc_articulos_contables": 5,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-04",
       "nombre": "Aves de bosques y matorrales secos",
-      "conteo": 50,
-      "grado_colaboracion": 0.84,
-      "gc_articulos_contables": 50,
+      "conteo": 16,
+      "grado_colaboracion": 0.94,
+      "gc_articulos_contables": 16,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-05",
       "nombre": "Aves de bosques húmedos de tierras bajas",
-      "conteo": 50,
-      "grado_colaboracion": 0.74,
-      "gc_articulos_contables": 50,
+      "conteo": 5,
+      "grado_colaboracion": 0.8,
+      "gc_articulos_contables": 5,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-06",
       "nombre": "Aves de bosques premontanos y montanos",
-      "conteo": 58,
-      "grado_colaboracion": 0.93,
-      "gc_articulos_contables": 58,
+      "conteo": 12,
+      "grado_colaboracion": 0.75,
+      "gc_articulos_contables": 12,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-07",
       "nombre": "Aves de alta montaña",
-      "conteo": 44,
-      "grado_colaboracion": 0.84,
-      "gc_articulos_contables": 44,
+      "conteo": 29,
+      "grado_colaboracion": 0.17,
+      "gc_articulos_contables": 29,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-08",
       "nombre": "Aves en sistemas urbanos",
-      "conteo": 324,
-      "grado_colaboracion": 0.8,
-      "gc_articulos_contables": 320,
-      "gc_articulos_sin_autoria": 4
+      "conteo": 22,
+      "grado_colaboracion": 0.95,
+      "gc_articulos_contables": 21,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-09",
       "nombre": "Aves en agroecosistemas",
-      "conteo": 172,
-      "grado_colaboracion": 0.81,
-      "gc_articulos_contables": 172,
+      "conteo": 18,
+      "grado_colaboracion": 0.83,
+      "gc_articulos_contables": 18,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-10",
       "nombre": "Sistemas culturales asociados a la apreciación de las aves",
-      "conteo": 27,
-      "grado_colaboracion": 0.85,
-      "gc_articulos_contables": 27,
+      "conteo": 5,
+      "grado_colaboracion": 0.8,
+      "gc_articulos_contables": 5,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-11",
       "nombre": "Aviturismo",
-      "conteo": 56,
-      "grado_colaboracion": 0.69,
-      "gc_articulos_contables": 54,
-      "gc_articulos_sin_autoria": 2
+      "conteo": 6,
+      "grado_colaboracion": 0.5,
+      "gc_articulos_contables": 6,
+      "gc_articulos_sin_autoria": 0
     }
   ],
-  "sin_ofc": 1843,
+  "sin_ofc": 181,
   "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
   "catalogo_ofc": [
     {

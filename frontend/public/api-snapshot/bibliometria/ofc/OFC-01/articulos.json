@@ -1,608 +1,590 @@
 {
   "ofc_id": "OFC-01",
   "nombre": "Aves de hábitats marinos, costeros y de manglar",
-  "total": 1711,
-  "mostrados": 100,
+  "total": 97,
+  "mostrados": 97,
   "items": [
     {
-      "titulo": "4D technology and virtual reality as an innovative strategy for education",
+      "titulo": "A test of the species-sorting hypothesis in avian communities along temperature and longitudinal gradients across North America",
       "anio": 2026,
-      "revista": "Minerva Digital Library (Universidad EAN)",
-      "enlace": "https://hdl.handle.net/10882/19540"
+      "revista": "DRYAD",
+      "enlace": "https://doi.org/10.5061/dryad.3j9kd51v7"
     },
     {
-      "titulo": "A avifauna da Ilha dos Remédios, litoral norte de Santa Catarina",
+      "titulo": "Building local capacity for coral reef restoration: insights from two Caribbean MPAs",
       "anio": 2026,
-      "revista": "Acta Biológica Catarinense",
-      "enlace": "https://doi.org/10.21726/abc.v13i2.3130"
+      "revista": "Revista de Biología Tropical",
+      "enlace": "https://doi.org/10.15517/chgx9f68"
     },
     {
-      "titulo": "A conservation trade-off: overgrazing by reintroduced Père David’s deer threatens canopy-nesting birds in coastal engineered forests in China",
+      "titulo": "Challenges and opportunities of local engagement in coral restoration at Laughing Bird Caye National Park",
       "anio": 2026,
-      "revista": "Biodiversity and Conservation",
-      "enlace": "https://doi.org/10.1007/s10531-026-03360-6"
+      "revista": "Revista de Biología Tropical",
+      "enlace": "https://doi.org/10.15517/h2934847"
     },
     {
-      "titulo": "A Detailed Evaluation of the Suitability of Waterbird Habitats in Hangzhou Bay National Wetland Park—A Differential Analysis of Wading Birds and Swimming Birds",
-      "anio": 2026,
-      "revista": "Biology",
-      "enlace": "https://doi.org/10.3390/biology15181617"
-    },
-    {
-      "titulo": "A Factors–Responses–Consequences Framework for Assessing Wildlife Impacts of Uncrewed Aerial Systems: A Systematic Review",
-      "anio": 2026,
-      "revista": "Drones",
-      "enlace": "https://doi.org/10.3390/drones10040298"
-    },
-    {
-      "titulo": "A New Inventory and Conservation Assessment of United States Islands",
-      "anio": 2026,
-      "revista": "Annals of the American Association of Geographers",
-      "enlace": "https://doi.org/10.1080/24694452.2025.2604843"
-    },
-    {
-      "titulo": "A new Plasmodium Marchiafava & Celli, 1885 (Apicomplexa: Haemosporida) species in Cory’s Shearwater (Calonectris borealis) [Cory]) (Aves: Procellariiformes) stranded in a coastal area in Brazil",
-      "anio": 2026,
-      "revista": "Systematic Parasitology",
-      "enlace": "https://doi.org/10.1007/s11230-026-10281-z"
-    },
-    {
-      "titulo": "A practical decision tool for marine bird mortality assessments",
-      "anio": 2026,
-      "revista": "Ornithological Applications",
-      "enlace": "https://doi.org/10.1093/ornithapp/duag044"
-    },
-    {
-      "titulo": "A review of 28 Years of beach-nesting Australian Pied Oystercatcher Haematopus Longirostris conservation in the Richmond River Area, New South Wales",
-      "anio": 2026,
-      "revista": null,
-      "enlace": "https://doi.org/10.32942/x2767h"
-    },
-    {
-      "titulo": "A sampling-event dataset from the survey of wintering waterbirds in Coastal Fujian Province, China",
-      "anio": 2026,
-      "revista": "Biodiversity Data Journal",
-      "enlace": "https://doi.org/10.3897/bdj.14.e197082"
-    },
-    {
-      "titulo": "A Spatial and Taxonomic Dataset of Avian Biodiversity Across the Guatemalan Avian Route Consortium: A 2026 Citizen-Science and Field Survey Profile",
+      "titulo": "CTD casts and corrected GLORYS12V1 temperature and salinity profiles, Marguerite Bay, Antarctic Peninsula, December 2025",
       "anio": 2026,
       "revista": "Zenodo (CERN European Organization for Nuclear Research)",
-      "enlace": "https://doi.org/10.5281/zenodo.21500599"
+      "enlace": "https://doi.org/10.5281/zenodo.23112578"
     },
     {
-      "titulo": "A Study on Bird Strike Prevention and Ecological Coexistence at Gimhae International Airport Adjacent to a Migratory Bird Habitat",
+      "titulo": "Detección de biodiversidad a partir del ADN Ambiental en el DNMI Colinas y Lomas de la Cuenca Pacifico Norte Colombiana | eDNA derived biodiversity detections in the Colombian DNMI Colinas and Lomas from the North Pacific Basin",
       "anio": 2026,
-      "revista": "Journal of the Korean Society for Environmental Technology",
-      "enlace": "https://doi.org/10.26511/jkset.27.3.4"
+      "revista": "SiB Colombia - GBIF Colombia",
+      "enlace": "https://doi.org/10.15472/xzlcj6"
     },
     {
-      "titulo": "A Systems Approach to Island Endemic Birds: Lessons from Cyprus",
+      "titulo": "Discovering the mesophotic fauna of Malpelo Ridge: biodiversity insights in a remote marine sanctuary",
       "anio": 2026,
-      "revista": null,
-      "enlace": "https://doi.org/10.22541/authorea.15004076/v1"
+      "revista": "Frontiers in Marine Science",
+      "enlace": "https://doi.org/10.3389/fmars.2026.1879566"
     },
     {
-      "titulo": "Accomplishment, Issues and Strategies for Water Bird Conservation in Coastal Wetland",
+      "titulo": "Distribución y abundancia de garrapatas y patógenos asociados en el Parque Nacional Natural Tayrona, como una estrategia para la contención de posibles zoonosis",
       "anio": 2026,
-      "revista": "Wetlands: ecology, conservation and management",
-      "enlace": "https://doi.org/10.1007/978-3-032-17125-2_13"
+      "revista": "SiB Colombia - GBIF Colombia",
+      "enlace": "https://doi.org/10.15472/um3io0"
     },
     {
-      "titulo": "Adaptations of Migratory Birds Wintering in the East Asian–Australasian Flyway to Climate Change",
+      "titulo": "DNA barcoding reveals taxonomic gaps and cryptic diversity in mosquito vectors from arbovirus-active coastal ecosystems of Colombia",
       "anio": 2026,
-      "revista": "Technium Social Sciences Journal",
-      "enlace": "https://doi.org/10.47577/tssj.v80i1.13448"
+      "revista": "Acta Tropica",
+      "enlace": "https://doi.org/10.1016/j.actatropica.2026.108249"
     },
     {
-      "titulo": "Adenovirus Diversity in Wild Birds of Atol das Rocas Biological Reserve, Brazil",
+      "titulo": "Highly Pathogenic Avian Influenza H5N1 in South America, 2022–2025: Spread, Affected Species, and Southward Expansion into the Antarctic Region",
       "anio": 2026,
-      "revista": "Research Square",
-      "enlace": "https://doi.org/10.21203/rs.3.rs-9794703/v1"
+      "revista": "Viruses",
+      "enlace": "https://doi.org/10.3390/v18070764"
     },
     {
-      "titulo": "Advances in evolutionary research of Bromeliaceae: revisiting traits, adaptations, and species limits in the ecological and geographic spaces",
+      "titulo": "Mosquito-host blood-meal networks reveal potential arboviral bridge pathways in Colombian Caribbean mangroves",
       "anio": 2026,
-      "revista": "Botanical Journal of the Linnean Society",
-      "enlace": "https://doi.org/10.1093/botlinnean/boag017"
+      "revista": "Acta Tropica",
+      "enlace": "https://doi.org/10.1016/j.actatropica.2026.108288"
     },
     {
-      "titulo": "Amalda rubiginosa (Swainson, 1823)",
-      "anio": 2026,
-      "revista": null,
-      "enlace": "https://data.biodiversitydata.nl/naturalis/specimen/ZMA.MOLL.2518677"
-    },
-    {
-      "titulo": "AMAPPS_FWS_Aerial_Winter2010-2011",
-      "anio": 2026,
-      "revista": "OBIS-SEAMAP",
-      "enlace": "https://doi.org/10.82144/8533c2e6"
-    },
-    {
-      "titulo": "An annotated checklist of the avifauna of Pichavaram Mangrove Forest, southern India: a Ramsar wetland with conservation significance",
-      "anio": 2026,
-      "revista": "Journal of Threatened Taxa",
-      "enlace": "https://doi.org/10.11609/jott.10624.18.9.29617-29629"
-    },
-    {
-      "titulo": "An Assessment of the Threats to Anatidae Birds on a Global Level and Potential Conservation Strategies",
-      "anio": 2026,
-      "revista": "CRC Press eBooks",
-      "enlace": "https://doi.org/10.1201/9781003669784-11"
-    },
-    {
-      "titulo": "An Integrated Inventory of Terrestrial and Marine Biodiversity in the Extreme South of Madagascar",
-      "anio": 2026,
-      "revista": "Ite Ngabdi",
-      "enlace": "https://doi.org/10.61798/89h59392"
-    },
-    {
-      "titulo": "Analysis of Wildlife Diversity, Abundance, and Distribution in the Sekaroh Forest to Support Ecotourism Potential",
-      "anio": 2026,
-      "revista": "JURNAL BIOLOGI TROPIS",
-      "enlace": "https://doi.org/10.29303/jbt.v26i2.12156"
-    },
-    {
-      "titulo": "Animal Remains from Aeminium (Coimbra, Portugal): A Diachronic view from the Roman to the Modern Period",
-      "anio": 2026,
-      "revista": "Environmental Archaeology",
-      "enlace": "https://doi.org/10.1080/14614103.2026.2661427"
-    },
-    {
-      "titulo": "Anthropogenic drivers of bacterial and viral shifts in wildlife",
-      "anio": 2026,
-      "revista": "International Journal of Advanced Biochemistry Research",
-      "enlace": "https://doi.org/10.33545/26174693.2026.v10.i8d.9546"
-    },
-    {
-      "titulo": "APPLICATIONS OF GEDI LIDAR FOR REMOTE SENSING OF FOREST STRUCTURE AND BIODIVERSITY INDICATORS",
-      "anio": 2026,
-      "revista": "Digital Repository at the University of Maryland (University of Maryland College Park)",
-      "enlace": "https://doi.org/10.13016/jw6q-krgj"
-    },
-    {
-      "titulo": "Asociación parásito-hospedador-ambiente en aves marinas antárticas en un contexto de cambio climático global",
-      "anio": 2026,
-      "revista": null,
-      "enlace": "https://doi.org/10.35537/10915/195243"
-    },
-    {
-      "titulo": "Assessment and restoration of an endangered ecological community; Coastal Swamp Oak (Casuarina glauca) Forests of South East Queensland",
-      "anio": 2026,
-      "revista": "University of the Sunshine Coast",
-      "enlace": "https://doi.org/10.25907/01006"
-    },
-    {
-      "titulo": "Assessment of mangrove loss and bird abundance",
-      "anio": 2026,
-      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
-      "enlace": "https://doi.org/10.5281/zenodo.21447944"
-    },
-    {
-      "titulo": "Atoll biodiversity and environments: an AI-ready, interactive data portal for Indo-Pacific atolls",
-      "anio": 2026,
-      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
-      "enlace": "https://doi.org/10.5281/zenodo.18848127"
-    },
-    {
-      "titulo": "Atoll biodiversity and environments: an AI-ready, interactive data portal for Indo-Pacific atolls",
-      "anio": 2026,
-      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
-      "enlace": "https://doi.org/10.5281/zenodo.18339504"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Canaveral National Seashore",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256623"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Cape Hatteras National Seashore",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256625"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Cape Lookout National Seashore",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256627"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Chattahoochee River National Recreation Area",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256629"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Congaree National Park",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256645"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Cumberland Island National Seashore",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256619"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Fort Frederica National Monument",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256633"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Fort Matanzas National Monument and Castillo de San Marcos National Monument",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256635"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Fort Pulaski National Monument",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256637"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Fort Raleigh National Historic Site",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256631"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Fort Sumter National Monument and Fort Moultrie National Monument Charles Pinckney National Historic Site",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256638"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Horseshoe Bend National Military Park",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256640"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Kennesaw Mountain National Battlefield Park",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256642"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Moores Creek National Battlefield",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256621"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Ocmulgee National Monument",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e257292"
-    },
-    {
-      "titulo": "Avian conservation implementation plan — Wright Brothers National Memorial",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256648"
-    },
-    {
-      "titulo": "Avian diversity and conservation significance of gatehara bird field in Kalol, Gandhinagar, Gujarat: an assessment of species diversity, population status and biodiversity indices",
-      "anio": 2026,
-      "revista": "International Journal of Zoology and Applied Biosciences",
-      "enlace": "https://doi.org/10.55126/ijzab.2026.v11.i01.024"
-    },
-    {
-      "titulo": "Avian diversity and ethnoornithology in Pawukon - a 19th-Century Javanese manuscript : informing contemporary conservation of vulnerable species",
-      "anio": 2026,
-      "revista": "Journal of Ethnobiology and Ethnomedicine",
-      "enlace": "https://doi.org/10.1186/s13002-026-00858-9"
-    },
-    {
-      "titulo": "Avian Ecosystem Services: Ecological Roles and Contribution to Ecosystem Functioning",
-      "anio": 2026,
-      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
-      "enlace": "https://doi.org/10.5281/zenodo.22809051"
-    },
-    {
-      "titulo": "Avian Occurrence Records from Eni Ghana Environmental Monitoring (2015–2025)",
+      "titulo": "Occurrence Download",
       "anio": 2026,
       "revista": "Global Biodiversity Information Facility",
-      "enlace": "https://doi.org/10.15468/ugfb5j"
+      "enlace": "https://doi.org/10.15468/dl.ygynxe"
     },
     {
-      "titulo": "Avian Responses to Coastal Urbanization: Spatiotemporal Shifts in Habitat Suitability and Changing Ecological Drivers in a High-Density City",
-      "anio": 2026,
-      "revista": "Land",
-      "enlace": "https://doi.org/10.3390/land15071210"
-    },
-    {
-      "titulo": "Avifauna of Nijhum Dweep National Park in Bangladesh, an East Asian-Australasian Flyway Network Site and Important Bird Area in the World’s Largest River Delta",
-      "anio": 2026,
-      "revista": "Journal of the Bombay Natural History Society (JBNHS)",
-      "enlace": "https://doi.org/10.17087/jbnhs/2026/v123/171100"
-    },
-    {
-      "titulo": "Avifauna of The Ashtoum El Gamil Protected Area (Manzala Lagoon): Species Composition and Status",
-      "anio": 2026,
-      "revista": "Catrina The International Journal of Environmental Sciences",
-      "enlace": "https://doi.org/10.21608/cat.2026.512023"
-    },
-    {
-      "titulo": "AVIFAUNAL DIVERSITY AND HABITAT ANALYSIS: TRENDS, THREATS, AND CONSERVATION APPROACHES IN THE WETLAND ECOSYSTEM",
-      "anio": 2026,
-      "revista": "Life sciences leaflets",
-      "enlace": "https://petsd.org/ojs/index.php/lifesciencesleaflets/article/view/1883"
-    },
-    {
-      "titulo": "Biodiversidade do Delta do Parnaíba: Para ler e colorir",
-      "anio": 2026,
-      "revista": "Even3 Publicações eBooks",
-      "enlace": "https://doi.org/10.29327/5934043"
-    },
-    {
-      "titulo": "Bioinformatics-Driven Environmental DNA Metabarcoding and Conservation Genomics for Non-Invasive Wildlife Biodiversity Monitoring under Climate Change",
-      "anio": 2026,
-      "revista": "Kashmir Journal of Academic Research and Development",
-      "enlace": "https://doi.org/10.71317/kjard.2.10.2026.772"
-    },
-    {
-      "titulo": "Bird communities within salt pond habitats of St. John, U.S. Virgin Islands",
-      "anio": 2026,
-      "revista": "Journal of Caribbean Ornithology",
-      "enlace": "https://doi.org/10.55431/jco.2026.39.71-79"
-    },
-    {
-      "titulo": "Bird Diversity Of The Coastal Forests Of Eastern Africa Biodiversity Hotspot",
-      "anio": 2026,
-      "revista": "Apple Academic Press eBooks",
-      "enlace": "https://doi.org/10.1201/9781998511099-10"
-    },
-    {
-      "titulo": "Bird Diversity, Relative Abundance and Seasonal Dynamics of Bird Assemblages at Abhera Wetland, Kota, Rajasthan",
-      "anio": 2026,
-      "revista": "International Journal of Scientific Research in Computer Science Engineering and Information Technology",
-      "enlace": "https://doi.org/10.32628/cseit261213100"
-    },
-    {
-      "titulo": "Bird Diversity, Relative Abundance and Seasonal Dynamics of Bird Assemblages at Abhera Wetland, Kota, Rajasthan",
-      "anio": 2026,
-      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
-      "enlace": "https://doi.org/10.5281/zenodo.21603282"
-    },
-    {
-      "titulo": "Bird vocalizations during spring migration on a small Mediterranean island (Ventotene, Italy)",
-      "anio": 2026,
-      "revista": "Ornis Hungarica",
-      "enlace": "https://doi.org/10.2478/orhu-2026-0021"
-    },
-    {
-      "titulo": "Birds of Fernando de Noronha archipelago, Brazil",
-      "anio": 2026,
-      "revista": "Biodiversidade Brasileira",
-      "enlace": "https://doi.org/10.37002/biodiversidadebrasileira.v16i1.2870"
-    },
-    {
-      "titulo": "Black Rail Inventory at Cape Lookout and Cape Hatteras National Seashores",
-      "anio": 2026,
-      "revista": "ICPSR Data Holdings",
-      "enlace": "https://doi.org/10.3886/e256545"
-    },
-    {
-      "titulo": "Boletín divulgativo Totuma Vol. 2: Monitoreo Hiperespectral, Biodiversidad y Participación Comunitaria en el Lago de Tota",
-      "anio": 2026,
-      "revista": "Repositorio Institucional UPTC",
-      "enlace": "https://repositorio.uptc.edu.co/handle/001/21851"
-    },
-    {
-      "titulo": "Breeding Dispersal of Baltic Dunlins Is Not an Adaptive Response to Unpredictable Nest Flooding",
-      "anio": 2026,
-      "revista": "Animal Conservation",
-      "enlace": "https://doi.org/10.1111/acv.70104"
-    },
-    {
-      "titulo": "Breeding distribution of the Vulnerable Sooty Falcon (Falco concolor) in northwestern Saudi Arabia, the NEOM region",
-      "anio": 2026,
-      "revista": "Ornis Hungarica",
-      "enlace": "https://doi.org/10.2478/orhu-2026-0008"
-    },
-    {
-      "titulo": "CAJ | Monitoramento da Avifauna - ETA PIRAÍ outubro de 2026",
-      "anio": 2026,
-      "revista": "SiBBr - GBIF Brazil",
-      "enlace": "https://doi.org/10.71819/mueebt"
-    },
-    {
-      "titulo": "Can coastal plantation forests substitute for natural coastal forests as bird and plant habitat? A test across coastal zonation",
-      "anio": 2026,
-      "revista": "bioRxiv (Cold Spring Harbor Laboratory)",
-      "enlace": "https://doi.org/10.64898/2026.04.16.718952"
-    },
-    {
-      "titulo": "Changes in Avian Capture Rate and Migration Phenology Across 37 Years at a Coastal Barrier Island in Georgia",
-      "anio": 2026,
-      "revista": "UTC Scholar (University of Tennessee at Chattanooga)",
-      "enlace": "https://scholar.utc.edu/theses/1068"
-    },
-    {
-      "titulo": "Checklist of the Birds of Kenya",
+      "titulo": "Occurrence Download",
       "anio": 2026,
       "revista": "Global Biodiversity Information Facility",
-      "enlace": "https://doi.org/10.15468/mehwcx"
+      "enlace": "https://doi.org/10.15468/dl.ha5zcb"
     },
     {
-      "titulo": "China’s mangrove expansion boosts avian diversity",
+      "titulo": "Occurrence Download",
       "anio": 2026,
-      "revista": "The Innovation",
-      "enlace": "https://doi.org/10.1016/j.xinn.2026.101400"
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.beycv9"
     },
     {
-      "titulo": "Chromosome Evolution in Birds: Molecular Cytogenetics, Comparative Genomics and Whole Genome Assemblies",
+      "titulo": "Occurrence Download",
       "anio": 2026,
-      "revista": "Encyclopedia",
-      "enlace": "https://doi.org/10.3390/encyclopedia6060130"
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.w7rhfp"
     },
     {
-      "titulo": "Citizen science reveals climatic and geographical influence in the movement patterns of Hymenops perspicillatus (Spectacled Tyrant), a Neotropical austral migrant",
+      "titulo": "Occurrence Download",
       "anio": 2026,
-      "revista": "Ornithological Applications",
-      "enlace": "https://doi.org/10.1093/ornithapp/duag056"
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.vcr7s8"
     },
     {
-      "titulo": "Climate Change and Ecosystem Functions and Services in the Congo Basin",
+      "titulo": "Occurrence Download",
       "anio": 2026,
-      "revista": "Springer eBooks",
-      "enlace": "https://doi.org/10.1007/978-1-0716-5512-2_17"
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.yqg48c"
     },
     {
-      "titulo": "Climate change and wildlife: Effects on biodiversity and ecosystem dynamics",
+      "titulo": "Occurrence Download",
       "anio": 2026,
-      "revista": "Wild Animals",
-      "enlace": "https://doi.org/10.31893/wild.2026007"
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.h99368"
     },
     {
-      "titulo": "Climate Change Impacts on Vertebrate Fauna: A Comprehensive Review of Extinction Risks, Range Shifts, and Ecological Disruptions",
+      "titulo": "Occurrence Download",
       "anio": 2026,
-      "revista": "European journal of ecology, biology and agriculture.",
-      "enlace": "https://doi.org/10.59324/ejeba.2026.3(5).03"
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.rmabfz"
     },
     {
-      "titulo": "Climate Change Impacts on Wildlife: A Structured Review of Mechanisms, Recent Evidences, and Conservation Strategies",
+      "titulo": "Occurrence Download",
       "anio": 2026,
-      "revista": "Sustainable Environmental Insight",
-      "enlace": "https://doi.org/10.53623/sein.v3i2.1071"
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.qjn3vz"
     },
     {
-      "titulo": "Climate change, biodiversity loss, pollution, deforestation, urbanization, and emerging challenges to ecological sustainability and human survival to global ecosystems in 21st century",
+      "titulo": "Occurrence Download",
       "anio": 2026,
-      "revista": "International journal of applied research",
-      "enlace": "https://doi.org/10.22271/allresearch.2026.v12.i5b.13628"
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.pnaxxq"
     },
     {
-      "titulo": "Climatic niche variation in genetically distinct populations throughout the annual cycle for a migratory parulid bird, Cardellina pusilla",
-      "anio": 2026,
-      "revista": "PeerJ",
-      "enlace": "https://doi.org/10.7717/peerj.21540"
-    },
-    {
-      "titulo": "Clustering of Hawai‘i residents’ actions and beliefs in relation to managing cats",
-      "anio": 2026,
-      "revista": "Research Square",
-      "enlace": "https://doi.org/10.21203/rs.3.rs-8759190/v1"
-    },
-    {
-      "titulo": "Coastal Marine Ecology",
-      "anio": 2026,
-      "revista": "Advances in geographical and environmental sciences",
-      "enlace": "https://doi.org/10.1007/978-3-032-11046-6_6"
-    },
-    {
-      "titulo": "Colaboración inclusiva Reconectando un sistema de humedal costero de Colombia",
-      "anio": 2026,
-      "revista": "Center for International Forestry Research (CIFOR) eBooks",
-      "enlace": "https://doi.org/10.17528/cifor-icraf/009472"
-    },
-    {
-      "titulo": "COMPARATIVE BIODIVERSITY OF VERTEBRATES IN MAHARASHTRA ECOSYSTEMS",
-      "anio": 2026,
-      "revista": "EPRA International Journal of Multidisciplinary Research (IJMR)",
-      "enlace": "https://doi.org/10.36713/epra29250"
-    },
-    {
-      "titulo": "Comparing Bird Species Richness among Habitats in Bai Tu Long National Park",
-      "anio": 2026,
-      "revista": "Journal of Tropical Science and Engineering",
-      "enlace": "https://doi.org/10.58334/jtse.vol.001.844"
-    },
-    {
-      "titulo": "Conscious Efforts in Defence of Voiceless Forests and Wildlife: An Influential Impact on Wildlife Conservation",
-      "anio": 2026,
-      "revista": "Journal of Science Innovations and Nature of Earth",
-      "enlace": "https://doi.org/10.59436/jsiane.480.2583-2093"
-    },
-    {
-      "titulo": "Conserving the World's Specialist Riverine Birds",
-      "anio": 2026,
-      "revista": "Wiley Interdisciplinary Reviews Water",
-      "enlace": "https://doi.org/10.1002/wat2.70082"
-    },
-    {
-      "titulo": "Continental‐wide prioritization of protected areas to address global and habitat‐specific goals for avian biodiversity conservation",
-      "anio": 2026,
-      "revista": "Conservation Biology",
-      "enlace": "https://doi.org/10.1111/cobi.70324"
-    },
-    {
-      "titulo": "Contrasting vulnerability profiles for insular assemblages of birds and mammals facing global change",
-      "anio": 2026,
-      "revista": "Conservation Biology",
-      "enlace": "https://doi.org/10.1111/cobi.70261"
-    },
-    {
-      "titulo": "Delineating Bird Ecological Networks in Coastal Areas Based on Seasonal Variations and Ecological Guilds Differences",
-      "anio": 2026,
-      "revista": "Animals",
-      "enlace": "https://doi.org/10.3390/ani16030380"
-    },
-    {
-      "titulo": "Developing a cost-effective monitoring strategy for coastal cetaceans",
-      "anio": 2026,
-      "revista": "Research Portal (Queen's University Belfast)",
-      "enlace": "https://pure.qub.ac.uk/en/studentTheses/6430f6a0-1a73-4049-bfac-f46b7a1eef20"
-    },
-    {
-      "titulo": "Diet of two threatened migratory shorebirds at a southern hemisphere non-breeding site determined through DNA metabarcoding",
-      "anio": 2026,
-      "revista": "Estuarine Coastal and Shelf Science",
-      "enlace": "https://doi.org/10.1016/j.ecss.2026.110056"
-    },
-    {
-      "titulo": "Discovery of Antarctic moulting sites in satellite imagery reveals new threat to emperor penguins",
-      "anio": 2026,
-      "revista": "Communications Earth & Environment",
-      "enlace": "https://doi.org/10.1038/s43247-026-03231-6"
-    },
-    {
-      "titulo": "Discriminating overwintering origins of a long-distance migratory shorebird staging in the Midcontinent flyway",
-      "anio": 2026,
-      "revista": "Avian Conservation and Ecology",
-      "enlace": "https://doi.org/10.5751/ace-03024-210106"
-    },
-    {
-      "titulo": "Distancia taxonómica y riqueza de especies de las aves de los humedales de la costa peruana",
-      "anio": 2026,
-      "revista": "Ecosistemas",
-      "enlace": "https://doi.org/10.7818/ecos.3129"
-    },
-    {
-      "titulo": "Distinctive terrestrial fauna (vertebrate and invertebrate) associated with supratidal plains vulnerable to sea level rise in Northern Australia",
-      "anio": 2026,
-      "revista": "Wetlands Ecology and Management",
-      "enlace": "https://doi.org/10.1007/s11273-026-10192-2"
-    },
-    {
-      "titulo": "Distribution model objects for tidal wetland birds in the Sacramento-San Joaquin Delta",
-      "anio": 2026,
-      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
-      "enlace": "https://doi.org/10.5281/zenodo.20722832"
-    },
-    {
-      "titulo": "Distribution patterns of aquatic birds in a high-Andean wetland in southeastern Peru: An approach based on environmental factors",
+      "titulo": "Spatial association of seabirds and aquatic birds with highly pathogenic avian influenza (H5N1) outbreaks in Brazil: A nationwide ecological and statistical modelling approach",
       "anio": 2026,
       "revista": "PLoS ONE",
-      "enlace": "https://doi.org/10.1371/journal.pone.0320987"
+      "enlace": "https://doi.org/10.1371/journal.pone.0350505"
     },
     {
-      "titulo": "Diversidad de aves playeras y su relación con la abundancia y biomasa de macrofauna bentónica en una planicie de marea del suroeste de Uruguay",
+      "titulo": "Spatio-temporal dynamics of total mercury contamination in diving birds as bioindicators of tropical wetlands in India",
       "anio": 2026,
-      "revista": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
-      "enlace": "https://hdl.handle.net/20.500.12008/54921"
+      "revista": "Scientific Reports",
+      "enlace": "https://doi.org/10.1038/s41598-026-55158-9"
     },
     {
-      "titulo": "Diversity and behavior of seagulls (Aves Laridae) along the beach between Tajura and Tripoli harbors, Libya",
+      "titulo": "Viviendo al borde: anidación de aves especialistas de llanuras de inundación de los humedales fluviales de San José del Guaviare, Colombia",
       "anio": 2026,
-      "revista": "BIODIVERSITY JOURNAL",
-      "enlace": "https://doi.org/10.31396/biodiv.jour.2026.17.2.153.161"
+      "revista": "Revista Mutis",
+      "enlace": "https://doi.org/10.21789/22561498.2223"
+    },
+    {
+      "titulo": "Aves acuáticas en lagunas altoandinas del sur del Parque Nacional Natural Puracé, Colombia",
+      "anio": 2025,
+      "revista": "Boletín Científico Centro de Museos Museo de Historia Natural",
+      "enlace": "https://doi.org/10.17151/bccm.2025.29.1.5"
+    },
+    {
+      "titulo": "Aves del sistema lagunar y fluvial del bajo río Guayabero y alto río Guaviare - Expedición BIO",
+      "anio": 2025,
+      "revista": "SiB Colombia - GBIF Colombia",
+      "enlace": "https://doi.org/10.15472/iycuwr"
+    },
+    {
+      "titulo": "Avistamiento de oportunidad de fauna marina Santuario de Flora y Fauna Malpelo",
+      "anio": 2025,
+      "revista": "SiB Colombia - GBIF Colombia",
+      "enlace": "https://doi.org/10.15472/xfbkjq"
+    },
+    {
+      "titulo": "Biodiversidad marina encontrada durante la expedición Colombia BIO Juradó-Cupica, departamento del Chocó, Pacífico norte colombiano - Proyecto Colombia BIO",
+      "anio": 2025,
+      "revista": "SiB Colombia - GBIF Colombia",
+      "enlace": "https://doi.org/10.15472/kz6mh8"
+    },
+    {
+      "titulo": "El Turismo Científico en Colombia Insular: estudio de caso en San Andrés y Providencia para la conservación, la educación ambiental y el desarrollo sostenible",
+      "anio": 2025,
+      "revista": "Revista Rosa dos Ventos - Turismo e Hospitalidade",
+      "enlace": "https://doi.org/10.18226/21789061.v17ip170202"
+    },
+    {
+      "titulo": "Marine and Coastal Wetlands of the Colombian Caribbean",
+      "anio": 2025,
+      "revista": "Wiley eBooks",
+      "enlace": "https://doi.org/10.1002/9781394307166.ch02"
+    },
+    {
+      "titulo": "Modeling Trophic Dynamics of a Mangrove System in One of the Most Biodiversity Regions of the World: A Study Case in the Panama Bight",
+      "anio": 2025,
+      "revista": "SSRN Electronic Journal",
+      "enlace": "https://doi.org/10.2139/ssrn.5126346"
+    },
+    {
+      "titulo": "Primeros registros del Playerito de rabadilla blanca (Calidris fuscicollis) y del Toche arrocero (Dolichonyx oryzivorus) en el departamento de Boyacá, Colombia en el marco del Global Big Day",
+      "anio": 2025,
+      "revista": "Revista Mutis",
+      "enlace": "https://doi.org/10.21789/22561498.2129"
+    },
+    {
+      "titulo": "Vulnerability of marine megafauna to global at‐sea anthropogenic threats",
+      "anio": 2025,
+      "revista": "Conservation Biology",
+      "enlace": "https://doi.org/10.1111/cobi.70147"
+    },
+    {
+      "titulo": "¡MARTINES AL AGUA!: Estrategias de partición de nicho en cinco especies de martines pescadores (Alcedinidae) que coexisten en Caño Negro, San José del Guaviare, Colombia",
+      "anio": 2025,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://doi.org/10.59517/oc.e611"
+    },
+    {
+      "titulo": "2024 AOS Ralph W. Schreiber Conservation Award to Jordan Karubian",
+      "anio": 2024,
+      "revista": "The Auk",
+      "enlace": "https://doi.org/10.1093/ornithology/ukae040"
+    },
+    {
+      "titulo": "Aves Playeras del Pacífico Colombiano",
+      "anio": 2024,
+      "revista": null,
+      "enlace": "http://dx.doi.org/10.19121/2024.report.50189"
+    },
+    {
+      "titulo": "Composición y riqueza de la biodiversidad asociada a bosques de manglar (Familias: Acanthaceae, Combretaceae, Rhizophoraceae y Tetrameristaceae)",
+      "anio": 2024,
+      "revista": "Boletín Científico Centro de Museos Museo de Historia Natural",
+      "enlace": "http://dx.doi.org/10.17151/bccm.2024.28.1.5"
+    },
+    {
+      "titulo": "Ecotourism and mangrove conservation in Southeast Asia: Current trends and perspectives",
+      "anio": 2024,
+      "revista": "Journal of Environmental Management",
+      "enlace": "https://doi.org/10.1016/j.jenvman.2024.121529"
+    },
+    {
+      "titulo": "ESTRATEGIA DE CONOCIMIENTO CIENTÍFICO Y COMUNITARIO PARA CONSERVACIÓN DE LA DIVERSIDAD BIOLÓGICA EN EL SISTEMA LAGUNAR DE CARTAGENA DE INDIAS",
+      "anio": 2024,
+      "revista": "REVISTA  AMBIENTAL AGUA, AIRE Y SUELO",
+      "enlace": "https://doi.org/10.24054/raaas.v14i1.3006"
+    },
+    {
+      "titulo": "Islotes Farallones de Carelmapu: sitio de alto valor para la reproducción de aves marinas en el sur de Chile",
+      "anio": 2024,
+      "revista": "Revista de biología marina y oceanografía",
+      "enlace": "https://doi.org/10.22370/rbmo.2024.59.1.4465"
+    },
+    {
+      "titulo": "SINTESIS DE LOS CAMBIOS DE ORIGEN ANTROPICO OCURRIDOS EN LOS ULTIMOS 40 AÑOS EN LA CIENAGA DE SANTA MARTA (COLOMBIA)",
+      "anio": 2024,
+      "revista": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
+      "enlace": "https://doi.org/10.18257/raccefyn.20(78).1996.3055"
+    },
+    {
+      "titulo": "The role of biogeographical barriers on the historical dynamics of passerine birds with a circum‐Amazonian distribution",
+      "anio": 2024,
+      "revista": "Ecology and Evolution",
+      "enlace": "https://doi.org/10.1002/ece3.10860"
+    },
+    {
+      "titulo": "Understanding the animal waste issue on World beaches",
+      "anio": 2024,
+      "revista": "Ocean & Coastal Management",
+      "enlace": "https://doi.org/10.1016/j.ocecoaman.2024.107287"
+    },
+    {
+      "titulo": "Uso de bioindicadores para determinar la presencia de contaminantes en cuerpos de agua",
+      "anio": 2024,
+      "revista": "Revista Ing-Nova",
+      "enlace": "http://dx.doi.org/10.32997/rin-2024-4942"
+    },
+    {
+      "titulo": "2023 AOS Ralph W. Schreiber Conservation Awards to Lisa Sorenson and Stanley Senner",
+      "anio": 2023,
+      "revista": "The Auk",
+      "enlace": "http://dx.doi.org/10.1093/ornithology/ukad041"
+    },
+    {
+      "titulo": "A bioengineer in the city —the Darwinian fitness of fiddler crabs inhabiting plastic pollution hotspots",
+      "anio": 2023,
+      "revista": "Environmental Pollution",
+      "enlace": "https://doi.org/10.1016/j.envpol.2023.122254"
+    },
+    {
+      "titulo": "Age effects on Nazca booby foraging performance are largely constant across variation in the marine environment: Results from a 5‐year study in Galápagos",
+      "anio": 2023,
+      "revista": "Ecology and Evolution",
+      "enlace": "https://doi.org/10.1002/ece3.10138"
+    },
+    {
+      "titulo": "FAUNA ASOCIADA A LOS MANGLARES Y OTROS HUMEDALES EN EL DELTA-ESTUARIO DEL RÍO MAGDALENA, COLOMBIA",
+      "anio": 2023,
+      "revista": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
+      "enlace": "https://doi.org/10.18257/raccefyn.27(105).2003.2089"
+    },
+    {
+      "titulo": "Historical demography of Trichothraupis melanops (Aves: Thraupidae) and the Pleistocene Atlantic Forest biogeography",
+      "anio": 2023,
+      "revista": "El Hornero",
+      "enlace": "https://doi.org/10.56178/eh.v38i2.1431"
+    },
+    {
+      "titulo": "Morphological description of the alimentary canal and adnexal glands in Amazilia tzacatl, Amazilia saucerottei, Amazilia amabilis and Anthrachotorax nigricollis species",
+      "anio": 2023,
+      "revista": "Anatomia Histologia Embryologia",
+      "enlace": "https://doi.org/10.1111/ahe.12989"
+    },
+    {
+      "titulo": "Multiple introductions of highly pathogenic avian influenza H5N1 clade 2.3.4.4b into South America",
+      "anio": 2023,
+      "revista": "Travel Medicine and Infectious Disease",
+      "enlace": "https://doi.org/10.1016/j.tmaid.2023.102591"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2023,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.4uea65"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2023,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.7zdh3n"
+    },
+    {
+      "titulo": "Prácticas de educación ambiental comunitaria en el arrecife de Isla Fuerte, Bolívar",
+      "anio": 2023,
+      "revista": "Tecné Episteme y Didaxis TED",
+      "enlace": "https://doi.org/10.17227/ted.num54-17587"
+    },
+    {
+      "titulo": "Rainy cycles in South America as a driver for the breeding of the Black Skimmer (Rynchops niger) and the Large-billed Tern (Phaetusa simplex) (Aves, Charadriiformes)",
+      "anio": 2023,
+      "revista": "Papéis Avulsos de Zoologia",
+      "enlace": "https://doi.org/10.11606/1807-0205/2023.63.028"
+    },
+    {
+      "titulo": "Sustainability assessment of water coast systems through bird monitoring and water quality indicators. Case study: Juan Angola Channel - Cartagena, Colombia",
+      "anio": 2023,
+      "revista": "Journal of Sustainable Development of Energy Water and Environment Systems",
+      "enlace": "https://doi.org/10.13044/j.sdewes.d11.0452"
+    },
+    {
+      "titulo": "Acoplamiento molecular y modelado tridimensional por homología de flavonoides derivados de amentoflavona con las neuraminidasas H1N1 y H5N1 del virus de gripe aviar",
+      "anio": 2022,
+      "revista": "Revista Colombiana de Química",
+      "enlace": "https://doi.org/10.15446/rev.colomb.quim.v50n3.97430"
+    },
+    {
+      "titulo": "Aves marinas y del litoral del municipio de San Andrés de Tumaco, Nariño",
+      "anio": 2022,
+      "revista": "The Catalogue of Life",
+      "enlace": "https://doi.org/10.48580/d4lbn"
+    },
+    {
+      "titulo": "Cerulean Warblers exhibit parallel migration patterns and multiple migratory stopovers within the Central American Isthmus",
+      "anio": 2022,
+      "revista": "Ornithological Applications",
+      "enlace": "https://doi.org/10.1093/ornithapp/duac031"
+    },
+    {
+      "titulo": "Counting the bodies: Estimating the numbers and spatial variation of Australian reptiles, birds and mammals killed by two invasive mesopredators",
+      "anio": 2022,
+      "revista": "Diversity and Distributions",
+      "enlace": "https://doi.org/10.1111/ddi.13497"
+    },
+    {
+      "titulo": "EL PELICANO PARDO (Pelecanus occidentalis) EN COLOMBIA: REVISION DE SU PRESENCIA AL INTERIOR DEL PAIS",
+      "anio": 2022,
+      "revista": "Boletín SAO",
+      "enlace": null
+    },
+    {
+      "titulo": "Environmental and Ecotoxicological Impact of Alternative Energies: An Improvement Opportunity for Latin America",
+      "anio": 2022,
+      "revista": "Green energy and technology",
+      "enlace": "https://doi.org/10.1007/978-3-030-97862-4_8"
+    },
+    {
+      "titulo": "Evolutionary and Biogeographical History of Penguins (Sphenisciformes): Review of the Dispersal Patterns and Adaptations in a Geologic and Paleoecological Context",
+      "anio": 2022,
+      "revista": "Diversity",
+      "enlace": "https://doi.org/10.3390/d14040255"
+    },
+    {
+      "titulo": "Host phylogeny and elevation predict infection by avian haemosporidians in a diverse New Guinean bird community",
+      "anio": 2022,
+      "revista": "Journal of Biogeography",
+      "enlace": "https://doi.org/10.1111/jbi.14524"
+    },
+    {
+      "titulo": "Lista de la fauna y flora del humedal costero Buenavista, La Guajira, Colombia",
+      "anio": 2022,
+      "revista": "Zenodo (CERN European Organization for Nuclear Research)",
+      "enlace": "https://zenodo.org/record/6721733"
+    },
+    {
+      "titulo": "Lista oficial de las aves de Colombia 2022: Adiciones, cambios taxonómicos y actualizaciones de estado",
+      "anio": 2022,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://doi.org/10.59517/oc.e548"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2022,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.c4ntqe"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2022,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.byyp8q"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2022,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.hywwna"
+    },
+    {
+      "titulo": "Prevalence and genotype of Toxoplasma gondii in stranded Hawaiian cetaceans",
+      "anio": 2022,
+      "revista": "Diseases of Aquatic Organisms",
+      "enlace": "https://doi.org/10.3354/dao03699"
+    },
+    {
+      "titulo": "Aplicación tecnológica para impulsar el turismo de avistamiento de aves",
+      "anio": 2021,
+      "revista": "Mundo FESC",
+      "enlace": "http://dx.doi.org/10.61799/2216-0388.1132"
+    },
+    {
+      "titulo": "Avifauna de los hábitats de la desembocadura del Río Atrato (Turbo, Antioquia)",
+      "anio": 2021,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://doi.org/10.59517/oc.e330"
+    },
+    {
+      "titulo": "Detecting aquatic and terrestrial biodiversity in a tropical estuary using environmental DNA",
+      "anio": 2021,
+      "revista": "Biotropica",
+      "enlace": "https://doi.org/10.1111/btp.13009"
+    },
+    {
+      "titulo": "Estimates of breeding season location for 4 mesic prairie bird species wintering along the Gulf Coast",
+      "anio": 2021,
+      "revista": "The Wilson Journal of Ornithology",
+      "enlace": "https://doi.org/10.1676/19-00151"
+    },
+    {
+      "titulo": "EVIDENCIA REPRODUCTIVA DEL CHORLITO GRITON",
+      "anio": 2021,
+      "revista": "Boletín SAO",
+      "enlace": null
+    },
+    {
+      "titulo": "Lista de chequeo de las aves de Colombia: Una síntesis del estado del conocimiento desde Hilty & Brown (1986)",
+      "anio": 2021,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://doi.org/10.59517/oc.e366"
+    },
+    {
+      "titulo": "Litter impacts on marine birds: The Mediterranean Northern gannet as case study",
+      "anio": 2021,
+      "revista": "Marine Pollution Bulletin",
+      "enlace": "https://doi.org/10.1016/j.marpolbul.2021.112779"
+    },
+    {
+      "titulo": "Molina-Reyes, Yeiner & Gabriel Gómez-Agressott. 2002. Riqueza y organización en gremios de forrajeo para las aves existentes en una formación halohidrofítica de manglar intervenido. Corregimiento de Bocatocino. Juan de Acosta (Departamento del Atlántico Colombia).: Pregrado, Universidad del Atlántico (Rafael Borja Acuña)",
+      "anio": 2021,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://revistas.ornitologiacolombiana.com/index.php/roc/article/view/79"
+    },
+    {
+      "titulo": "Monitoreo de anidación de aves marinas en la Isla de la Plata dentro del Parque Nacional Machalilla, Manabí - Ecuador",
+      "anio": 2021,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/4zpn9j"
+    },
+    {
+      "titulo": "Notas taxonómicas sobre aves colombianas I: el rango taxonómico de Hylocharis humboldtii: Taxonomic notes on Colombian birds I: the taxonomic rank of Hylocharis humboldtii",
+      "anio": 2021,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://revistas.ornitologiacolombiana.com/index.php/roc/article/view/21"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2021,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.jk2gx3"
+    },
+    {
+      "titulo": "Reptiles y aves del Distrito de Manejo Integrado Cabo Manglares Bajo Mira-Frontera, Pacífico colombiano",
+      "anio": 2021,
+      "revista": "Biota Colombiana",
+      "enlace": "https://doi.org/10.21068/c2021.v22n02a12"
+    },
+    {
+      "titulo": "Ruiz-Ovalle, Juan M. 2002. Uso y selección de los sitios de percha por la avifauna que depende de recursos en el agua, departamento de Córdoba, noroeste de Colombia: Pregrado, Pontificia Universidad Javeriana (Sergio Córdoba)",
+      "anio": 2021,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://revistas.ornitologiacolombiana.com/index.php/roc/article/view/108"
+    },
+    {
+      "titulo": "Una lista anotada de las aves de la isla Malpelo",
+      "anio": 2021,
+      "revista": "Ornitología colombiana",
+      "enlace": "https://doi.org/10.59517/oc.e141"
+    },
+    {
+      "titulo": "What does resilience sound like? Coral reef and dry forest acoustic communities respond differently to Hurricane Maria",
+      "anio": 2021,
+      "revista": "Ecological Indicators",
+      "enlace": "https://doi.org/10.1016/j.ecolind.2021.107635"
+    },
+    {
+      "titulo": "250 años del natalicio de la ciencia criolla. El grito de independencia de la ciencia en la Colombia española",
+      "anio": 2020,
+      "revista": "P P D Q Boletín",
+      "enlace": "https://doi.org/10.17227/ppdq.2019.num59.11327"
+    },
+    {
+      "titulo": "AmarAzul: agencia de viajes especializada en el desarrollo del turismo sostenible en Cereté (Córdoba)",
+      "anio": 2020,
+      "revista": "Repositorio Universidad de Córdoba",
+      "enlace": "https://repositorio.unicordoba.edu.co/handle/ucordoba/3646"
+    },
+    {
+      "titulo": "Asociación de la temperatura superficial del mar y la abundancia del Piquero Café (Sula leucogaster) según el estado de desarrollo en el Parque Nacional Natural Gorgona",
+      "anio": 2020,
+      "revista": "Boletín de Investigaciones Marinas y Costeras",
+      "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1046"
+    },
+    {
+      "titulo": "Distribución y abundancia de las aves playeras en planos intermareales del Parque Nacional Natural Sanquianga y la bocana de Iscuandé, Nariño (Colombia), entre 2009 y 2020",
+      "anio": 2020,
+      "revista": "Boletín de Investigaciones Marinas y Costeras",
+      "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1094"
+    },
+    {
+      "titulo": "Diurnal Flying Activity of a Neotropical Bat (Saccopteryx leptura): Effect of Light Intensity, Temperature, and Canopy Cover",
+      "anio": 2020,
+      "revista": "Acta Chiropterologica",
+      "enlace": "https://doi.org/10.3161/15081109acc2020.22.1.008"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2020,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.8w8ecw"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2020,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.28z7t8"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2020,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.3ve4z3"
+    },
+    {
+      "titulo": "Occurrence Download",
+      "anio": 2020,
+      "revista": "Global Biodiversity Information Facility",
+      "enlace": "https://doi.org/10.15468/dl.5jws42"
+    },
+    {
+      "titulo": "Sustainable tourism planning in Bahía Solano, Colombia",
+      "anio": 2020,
+      "revista": "European journal of tourism, hospitality and recreation",
+      "enlace": "https://doi.org/10.2478/ejthr-2020-0014"
+    },
+    {
+      "titulo": "The mid holocene occupation of the Pearl Islands: A case of unusual insular adaptations on the Pacific Coast of Panama",
+      "anio": 2020,
+      "revista": "Quaternary International",
+      "enlace": "https://doi.org/10.1016/j.quaint.2020.07.036"
+    },
+    {
+      "titulo": "Una nueva zoonosis viral de preocupación global",
+      "anio": 2020,
+      "revista": "IATREIA",
+      "enlace": "https://doi.org/10.17533/udea.iatreia.85"
+    },
+    {
+      "titulo": "Venezuelan equine encephalitis virus: the problem is not over for tropical America",
+      "anio": 2020,
+      "revista": "Annals of Clinical Microbiology and Antimicrobials",
+      "enlace": "https://doi.org/10.1186/s12941-020-00360-4"
     }
   ]
 }

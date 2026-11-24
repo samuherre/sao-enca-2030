@@ -391,93 +391,93 @@
     {
       "ofc_id": "OFC-01",
       "nombre": "Aves de hábitats marinos, costeros y de manglar",
-      "conteo": 224,
-      "grado_colaboracion": 0.79,
-      "gc_articulos_contables": 218,
-      "gc_articulos_sin_autoria": 6
+      "conteo": 14,
+      "grado_colaboracion": 0.69,
+      "gc_articulos_contables": 13,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 389,
-      "grado_colaboracion": 0.83,
-      "gc_articulos_contables": 380,
-      "gc_articulos_sin_autoria": 9
+      "conteo": 26,
+      "grado_colaboracion": 0.76,
+      "gc_articulos_contables": 25,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-03",
       "nombre": "Aves de sabanas y pastizales naturales",
-      "conteo": 141,
-      "grado_colaboracion": 0.89,
-      "gc_articulos_contables": 133,
-      "gc_articulos_sin_autoria": 8
+      "conteo": 18,
+      "grado_colaboracion": 0.65,
+      "gc_articulos_contables": 17,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-04",
       "nombre": "Aves de bosques y matorrales secos",
-      "conteo": 56,
-      "grado_colaboracion": 0.8,
-      "gc_articulos_contables": 56,
+      "conteo": 12,
+      "grado_colaboracion": 0.83,
+      "gc_articulos_contables": 12,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-05",
       "nombre": "Aves de bosques húmedos de tierras bajas",
-      "conteo": 49,
-      "grado_colaboracion": 0.8,
-      "gc_articulos_contables": 49,
+      "conteo": 9,
+      "grado_colaboracion": 0.78,
+      "gc_articulos_contables": 9,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-06",
       "nombre": "Aves de bosques premontanos y montanos",
-      "conteo": 54,
-      "grado_colaboracion": 0.91,
-      "gc_articulos_contables": 54,
+      "conteo": 9,
+      "grado_colaboracion": 0.56,
+      "gc_articulos_contables": 9,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-07",
       "nombre": "Aves de alta montaña",
-      "conteo": 32,
-      "grado_colaboracion": 0.71,
-      "gc_articulos_contables": 31,
-      "gc_articulos_sin_autoria": 1
+      "conteo": 15,
+      "grado_colaboracion": 0.13,
+      "gc_articulos_contables": 15,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-08",
       "nombre": "Aves en sistemas urbanos",
-      "conteo": 267,
-      "grado_colaboracion": 0.81,
-      "gc_articulos_contables": 265,
-      "gc_articulos_sin_autoria": 2
+      "conteo": 27,
+      "grado_colaboracion": 0.73,
+      "gc_articulos_contables": 26,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-09",
       "nombre": "Aves en agroecosistemas",
-      "conteo": 149,
-      "grado_colaboracion": 0.88,
-      "gc_articulos_contables": 144,
-      "gc_articulos_sin_autoria": 5
+      "conteo": 16,
+      "grado_colaboracion": 0.93,
+      "gc_articulos_contables": 15,
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-10",
       "nombre": "Sistemas culturales asociados a la apreciación de las aves",
-      "conteo": 21,
-      "grado_colaboracion": 0.81,
-      "gc_articulos_contables": 21,
+      "conteo": 2,
+      "grado_colaboracion": 1.0,
+      "gc_articulos_contables": 2,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-11",
       "nombre": "Aviturismo",
-      "conteo": 66,
-      "grado_colaboracion": 0.62,
-      "gc_articulos_contables": 66,
+      "conteo": 9,
+      "grado_colaboracion": 0.78,
+      "gc_articulos_contables": 9,
       "gc_articulos_sin_autoria": 0
     }
   ],
-  "sin_ofc": 1347,
+  "sin_ofc": 143,
   "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
   "catalogo_ofc": [
     {
