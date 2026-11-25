@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-04",
   "nombre": "Aves de bosques y matorrales secos",
-  "total": 65,
-  "mostrados": 65,
+  "total": 68,
+  "mostrados": 68,
   "items": [
     {
       "titulo": "Characterization of novel Trypanosoma species from birds and amphibians in the Colombian dry forest using an integrative taxonomic approach",
@@ -21,6 +21,12 @@
       "anio": 2026,
       "revista": "DRYAD",
       "enlace": "https://doi.org/10.5061/dryad.1zcrjdg45"
+    },
+    {
+      "titulo": "Defaunación y diversidad de vertebrados terrestres en un bosque seco tropical (valle del Magdalena, Colombia)",
+      "anio": 2026,
+      "revista": "Rev. Fac. Nac. Agron. Medellín",
+      "enlace": "https://doi.org/10.15446/rfnam.v79.122552"
     },
     {
       "titulo": "Defaunation and Diversity of Terrestrial Vertebrates in a Tropical Dry Forest Fragment (Magdalena Valley, Colombia)",
@@ -221,6 +227,12 @@
       "enlace": "https://doi.org/10.15446/caldasia.v44n3.93148"
     },
     {
+      "titulo": "Análisis de la arquitectura de las plantas para las aves insectívoras en un bosque seco neotropical de Colombia",
+      "anio": 2022,
+      "revista": "Caldasia",
+      "enlace": "https://doi.org/10.15446/caldasia.v44n3.93148"
+    },
+    {
       "titulo": "Aves de la Universidad del Magdalena: análisis de la diversidad y actualización de registros",
       "anio": 2022,
       "revista": "Intropica",
@@ -363,6 +375,12 @@
       "anio": 2021,
       "revista": "Ecological Indicators",
       "enlace": "https://doi.org/10.1016/j.ecolind.2021.107635"
+    },
+    {
+      "titulo": "Aves del Cañón del Chicamocha, Colombia: un llamado para su conservación",
+      "anio": 2020,
+      "revista": "Biota colombiana",
+      "enlace": "https://doi.org/10.21068/c2020.v21n01a05"
     },
     {
       "titulo": "Diversidad composicional y funcional de aves en diferentes tipos de vegetación durante el periodo de lluvias en el enclave seco del cañón del río Chicamocha - Santander",

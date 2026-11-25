@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-02",
   "nombre": "Aves de humedales interiores de agua dulce",
-  "total": 203,
+  "total": 224,
   "mostrados": 100,
   "items": [
     {
@@ -33,6 +33,12 @@
       "anio": 2026,
       "revista": "ACTA ZOOLÓGICA MEXICANA (N S )",
       "enlace": "https://doi.org/10.21829/azm.2026.4212838"
+    },
+    {
+      "titulo": "Defaunación y diversidad de vertebrados terrestres en un bosque seco tropical (valle del Magdalena, Colombia)",
+      "anio": 2026,
+      "revista": "Rev. Fac. Nac. Agron. Medellín",
+      "enlace": "https://doi.org/10.15446/rfnam.v79.122552"
     },
     {
       "titulo": "Defaunation and Diversity of Terrestrial Vertebrates in a Tropical Dry Forest Fragment (Magdalena Valley, Colombia)",
@@ -281,6 +287,12 @@
       "enlace": "https://doi.org/10.22541/au.176369414.44388497/v1"
     },
     {
+      "titulo": "Análisis de una comunidad de aves potencialmente dispersoras de semillas en un bosque en restauración ecológica en Bogotá",
+      "anio": 2025,
+      "revista": "rev.udcaactual.divulg.cient.",
+      "enlace": "https://doi.org/10.31910/rudca.v28.n2.2025.2397"
+    },
+    {
       "titulo": "Assessing Biocultural Diversity Across Scales Using Ecological Indicators",
       "anio": 2025,
       "revista": "Ecological Indicators",
@@ -290,6 +302,12 @@
       "titulo": "Aves acuáticas en lagunas altoandinas del sur del Parque Nacional Natural Puracé, Colombia",
       "anio": 2025,
       "revista": "Boletín Científico Centro de Museos Museo de Historia Natural",
+      "enlace": "https://doi.org/10.17151/bccm.2025.29.1.5"
+    },
+    {
+      "titulo": "Aves acuáticas en lagunas altoandinas del sur del Parque Nacional Natural Puracé, Colombia",
+      "anio": 2025,
+      "revista": "Bol. Cient. Mus. Hist. Nat. Univ. Caldas",
       "enlace": "https://doi.org/10.17151/bccm.2025.29.1.5"
     },
     {
@@ -431,6 +449,12 @@
       "enlace": "http://hdl.handle.net/11349/38535"
     },
     {
+      "titulo": "Atropellamiento de fauna sobre vías del ferrocarril en el Parque Nacional Ciervo de los Pantanos, Buenos Aires, Argentina",
+      "anio": 2024,
+      "revista": "Biota colombiana",
+      "enlace": "https://doi.org/10.21068/2539200x.1221"
+    },
+    {
       "titulo": "Aves presentes en la antigua vía al Huila: Parque Turbay hasta la vereda el Limón, municipio de Florencia-Caquetá, Colombia",
       "anio": 2024,
       "revista": "Revista Científica del Amazonas",
@@ -464,6 +488,12 @@
       "titulo": "El efecto del complejo mayor de histocompatibilidad sobre el olfato y la selección sexual en aves",
       "anio": 2024,
       "revista": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
+      "enlace": "https://doi.org/10.18257/raccefyn.2418"
+    },
+    {
+      "titulo": "El efecto del complejo mayor de histocompatibilidad sobre el olfato y la selección sexual en aves",
+      "anio": 2024,
+      "revista": "Rev. acad. colomb. cienc. exact. fis. nat.",
       "enlace": "https://doi.org/10.18257/raccefyn.2418"
     },
     {
@@ -501,6 +531,12 @@
       "anio": 2024,
       "revista": "Ticks and Tick-borne Diseases",
       "enlace": "https://doi.org/10.1016/j.ttbdis.2024.102381"
+    },
+    {
+      "titulo": "Nuevos registros, nombre validado y redefinición en Azolla (Salviniaceae, Pteridophyta) para Costa Rica",
+      "anio": 2024,
+      "revista": "Actu Biol",
+      "enlace": "https://doi.org/10.17533/udea.acbi/v46n120a02"
     },
     {
       "titulo": "Orinoco",
@@ -567,42 +603,6 @@
       "anio": 2024,
       "revista": "Revista Ing-Nova",
       "enlace": "http://dx.doi.org/10.32997/rin-2024-4942"
-    },
-    {
-      "titulo": "2023 AOS Ralph W. Schreiber Conservation Awards to Lisa Sorenson and Stanley Senner",
-      "anio": 2023,
-      "revista": "The Auk",
-      "enlace": "http://dx.doi.org/10.1093/ornithology/ukad041"
-    },
-    {
-      "titulo": "Aves de un Parque Regional en los límites de Bogotá: comparación entre diferentes coberturas urbanas y áreas en proceso de restauración ecológica",
-      "anio": 2023,
-      "revista": "Ornitología colombiana",
-      "enlace": "https://doi.org/10.59517/oc.e558"
-    },
-    {
-      "titulo": "Aves en el área de importancia ecológica Madre de Agua del suroccidente de Bogotá, Colombia",
-      "anio": 2023,
-      "revista": "Intropica",
-      "enlace": "https://doi.org/10.21676/23897864.4895"
-    },
-    {
-      "titulo": "COMPOSICION, RIQUEZA Y ABUNDANCIA DE AVES ACUATICAS DEL LAGO TULIO OSPINA, MUNICIPIO DE BELLO, DEPARTAMENTO DE ANTIOQUIA COMPOSITION, SPECIES RICHNESS, AND ABUNDANCIA OF ACUATIC BIRDS OF TULIO OSPINA LAKE, MUNICIPALITY OF BELLO, ANTIOQUIA DEPARTMENT",
-      "anio": 2023,
-      "revista": "Boletín SAO",
-      "enlace": null
-    },
-    {
-      "titulo": "Composición de la avifauna en la Hacienda Matepantano en periodo de lluvias, Universidad de La Salle (Yopal – Casanare).",
-      "anio": 2023,
-      "revista": "Ciencia Unisalle (Universidad de La Salle)",
-      "enlace": "https://hdl.handle.net/20.500.14625/28725"
-    },
-    {
-      "titulo": "Environmental education strategies for the recognition of birdlife in the Tunjo wetland, Bogotá, D.C., digital resource",
-      "anio": 2023,
-      "revista": "Repositorio Institucional FULL",
-      "enlace": "http://hdl.handle.net/11371/6257"
     }
   ]
 }

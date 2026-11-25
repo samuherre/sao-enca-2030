@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-11",
   "nombre": "Aviturismo",
-  "total": 70,
-  "mostrados": 70,
+  "total": 74,
+  "mostrados": 74,
   "items": [
     {
       "titulo": "Applying Two‐Eyed Seeing to Pair Indigenous Ecological Calendars and Community Science Data for Biodiversity Monitoring in Amazonia",
@@ -119,6 +119,12 @@
       "enlace": "https://doi.org/10.18257/raccefyn.2641"
     },
     {
+      "titulo": "Análisis multitemporal de la frecuencia de observación de Phimosus infuscatus (Threskiornithidae) en Colombia",
+      "anio": 2024,
+      "revista": "Rev. acad. colomb. cienc. exact. fis. nat.",
+      "enlace": "https://doi.org/10.18257/raccefyn.2641"
+    },
+    {
       "titulo": "Assessing Bias in Citizen Science Data through Linear Regression",
       "anio": 2024,
       "revista": "IEEE URUCON",
@@ -191,6 +197,12 @@
       "enlace": "http://dx.doi.org/10.1079/tourism.2023.0038"
     },
     {
+      "titulo": "Caracterización de la avifauna presente en la Orinoquía Colombiana",
+      "anio": 2023,
+      "revista": "Rev.MVZ Cordoba",
+      "enlace": "https://doi.org/10.21897/rmvz.2305"
+    },
+    {
       "titulo": "Caracterización de la avifauna presente en la Orinoquía Colombiana: estudio de caso",
       "anio": 2023,
       "revista": "Revista Mvz Córdoba",
@@ -255,6 +267,12 @@
       "anio": 2022,
       "revista": "Repositorio CES",
       "enlace": "https://hdl.handle.net/10946/7194"
+    },
+    {
+      "titulo": "Reexpedición Colombia: Entender el pasado para empoderar acciones que fortalezcan el conocimiento y conservación de las aves",
+      "anio": 2022,
+      "revista": "Biota colombiana",
+      "enlace": "https://doi.org/10.21068/2539200x.984"
     },
     {
       "titulo": "Relictos de bosque seco tropical, oportunidad para realizar propuestas de emprendimiento y educación ambiental en la isla de Barú",
@@ -368,6 +386,12 @@
       "titulo": "Aves del Cañón del Chicamocha, Colombia: un llamado para su conservación",
       "anio": 2020,
       "revista": "Biota Colombiana",
+      "enlace": "https://doi.org/10.21068/c2020.v21n01a05"
+    },
+    {
+      "titulo": "Aves del Cañón del Chicamocha, Colombia: un llamado para su conservación",
+      "anio": 2020,
+      "revista": "Biota colombiana",
       "enlace": "https://doi.org/10.21068/c2020.v21n01a05"
     },
     {

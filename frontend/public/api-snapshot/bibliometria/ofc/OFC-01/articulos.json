@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-01",
   "nombre": "Aves de hábitats marinos, costeros y de manglar",
-  "total": 97,
-  "mostrados": 97,
+  "total": 107,
+  "mostrados": 100,
   "items": [
     {
       "titulo": "A test of the species-sorting hypothesis in avian communities along temperature and longitudinal gradients across North America",
@@ -221,6 +221,12 @@
       "enlace": "http://dx.doi.org/10.17151/bccm.2024.28.1.5"
     },
     {
+      "titulo": "Composición y riqueza de la biodiversidad asociada a bosques de manglar (Familias: Acanthaceae, Combretaceae, Rhizophoraceae y Tetrameristaceae)",
+      "anio": 2024,
+      "revista": "Bol. Cient. Mus. Hist. Nat. Univ. Caldas",
+      "enlace": "https://doi.org/10.17151/bccm.2024.28.1.5"
+    },
+    {
       "titulo": "Ecotourism and mangrove conservation in Southeast Asia: Current trends and perspectives",
       "anio": 2024,
       "revista": "Journal of Environmental Management",
@@ -347,6 +353,12 @@
       "enlace": "https://doi.org/10.48580/d4lbn"
     },
     {
+      "titulo": "Caracterización de la diversidad de aves en un humedal altamente intervenido del Pacífico suramericano",
+      "anio": 2022,
+      "revista": "Rev. acad. colomb. cienc. exact. fis. nat.",
+      "enlace": "https://doi.org/10.18257/raccefyn.1605"
+    },
+    {
       "titulo": "Cerulean Warblers exhibit parallel migration patterns and multiple migratory stopovers within the Central American Isthmus",
       "anio": 2022,
       "revista": "Ornithological Applications",
@@ -383,6 +395,12 @@
       "enlace": "https://doi.org/10.1111/jbi.14524"
     },
     {
+      "titulo": "Hábitats prioritarios en un humedal costero del Pacífico: propuesta de un índice basado en servicios ecosistémicos",
+      "anio": 2022,
+      "revista": "Rev. acad. colomb. cienc. exact. fis. nat.",
+      "enlace": "https://doi.org/10.18257/raccefyn.1569"
+    },
+    {
       "titulo": "Lista de la fauna y flora del humedal costero Buenavista, La Guajira, Colombia",
       "anio": 2022,
       "revista": "Zenodo (CERN European Organization for Nuclear Research)",
@@ -393,6 +411,12 @@
       "anio": 2022,
       "revista": "Ornitología colombiana",
       "enlace": "https://doi.org/10.59517/oc.e548"
+    },
+    {
+      "titulo": "Mapeo de planos lodosos con imágenes UAV en La Bocana de Iscuandé, costa Pacífica colombiana",
+      "anio": 2022,
+      "revista": "Bol. Invest. Mar. Cost.",
+      "enlace": "https://doi.org/10.25268/bimc.invemar.2022.51.2.1161"
     },
     {
       "titulo": "Occurrence Download",
@@ -425,10 +449,22 @@
       "enlace": "http://dx.doi.org/10.61799/2216-0388.1132"
     },
     {
+      "titulo": "Aves acuáticas de la cuenca baja del río Sinú, Córdoba, Caribe Colombiano",
+      "anio": 2021,
+      "revista": "Biota colombiana",
+      "enlace": "https://doi.org/10.21068/c2021.v22n02a055"
+    },
+    {
       "titulo": "Avifauna de los hábitats de la desembocadura del Río Atrato (Turbo, Antioquia)",
       "anio": 2021,
       "revista": "Ornitología colombiana",
       "enlace": "https://doi.org/10.59517/oc.e330"
+    },
+    {
+      "titulo": "Comparación de la disponibilidad de presas para Setophaga petechia gundlachi (Aves: Parulidae) entre dos manglares con diferente estructura de la vegetación",
+      "anio": 2021,
+      "revista": "Caldasia",
+      "enlace": "https://doi.org/10.15446/caldasia.v43n1.83202"
     },
     {
       "titulo": "Detecting aquatic and terrestrial biodiversity in a tropical estuary using environmental DNA",
@@ -491,10 +527,22 @@
       "enlace": "https://doi.org/10.21068/c2021.v22n02a12"
     },
     {
+      "titulo": "Reptiles y aves del Distrito de Manejo Integrado Cabo Manglares Bajo Mira-Frontera, Pacífico colombiano",
+      "anio": 2021,
+      "revista": "Biota colombiana",
+      "enlace": "https://doi.org/10.21068/c2020.v21n02a12"
+    },
+    {
       "titulo": "Ruiz-Ovalle, Juan M. 2002. Uso y selección de los sitios de percha por la avifauna que depende de recursos en el agua, departamento de Córdoba, noroeste de Colombia: Pregrado, Pontificia Universidad Javeriana (Sergio Córdoba)",
       "anio": 2021,
       "revista": "Ornitología colombiana",
       "enlace": "https://revistas.ornitologiacolombiana.com/index.php/roc/article/view/108"
+    },
+    {
+      "titulo": "Seguimiento al estado de las poblaciones de once peces óseos y cartilaginosos en el Santuario de Fauna y Flora Malpelo, Pacífico colombiano",
+      "anio": 2021,
+      "revista": "Bol. Invest. Mar. Cost.",
+      "enlace": "https://doi.org/10.25268/bimc.invemar.2021.50.1.1084"
     },
     {
       "titulo": "Una lista anotada de las aves de la isla Malpelo",
@@ -527,9 +575,21 @@
       "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1046"
     },
     {
+      "titulo": "Dieta y amplitud del nicho trófico del cormorán neotropical [Nannopterum brasilianus (Gmelin, 1789)] en el Santuario de Flora y Fauna Ciénaga Grande de Santa Marta, Caribe de Colombia",
+      "anio": 2020,
+      "revista": "Bol. Invest. Mar. Cost.",
+      "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1072"
+    },
+    {
       "titulo": "Distribución y abundancia de las aves playeras en planos intermareales del Parque Nacional Natural Sanquianga y la bocana de Iscuandé, Nariño (Colombia), entre 2009 y 2020",
       "anio": 2020,
       "revista": "Boletín de Investigaciones Marinas y Costeras",
+      "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1094"
+    },
+    {
+      "titulo": "Distribución y abundancia de las aves playeras en planos intermareales del Parque Nacional Natural Sanquianga y la bocana de Iscuandé, Nariño (Colombia), entre 2009 y 2020",
+      "anio": 2020,
+      "revista": "Bol. Invest. Mar. Cost.",
       "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1094"
     },
     {
@@ -543,48 +603,6 @@
       "anio": 2020,
       "revista": "Global Biodiversity Information Facility",
       "enlace": "https://doi.org/10.15468/dl.8w8ecw"
-    },
-    {
-      "titulo": "Occurrence Download",
-      "anio": 2020,
-      "revista": "Global Biodiversity Information Facility",
-      "enlace": "https://doi.org/10.15468/dl.28z7t8"
-    },
-    {
-      "titulo": "Occurrence Download",
-      "anio": 2020,
-      "revista": "Global Biodiversity Information Facility",
-      "enlace": "https://doi.org/10.15468/dl.3ve4z3"
-    },
-    {
-      "titulo": "Occurrence Download",
-      "anio": 2020,
-      "revista": "Global Biodiversity Information Facility",
-      "enlace": "https://doi.org/10.15468/dl.5jws42"
-    },
-    {
-      "titulo": "Sustainable tourism planning in Bahía Solano, Colombia",
-      "anio": 2020,
-      "revista": "European journal of tourism, hospitality and recreation",
-      "enlace": "https://doi.org/10.2478/ejthr-2020-0014"
-    },
-    {
-      "titulo": "The mid holocene occupation of the Pearl Islands: A case of unusual insular adaptations on the Pacific Coast of Panama",
-      "anio": 2020,
-      "revista": "Quaternary International",
-      "enlace": "https://doi.org/10.1016/j.quaint.2020.07.036"
-    },
-    {
-      "titulo": "Una nueva zoonosis viral de preocupación global",
-      "anio": 2020,
-      "revista": "IATREIA",
-      "enlace": "https://doi.org/10.17533/udea.iatreia.85"
-    },
-    {
-      "titulo": "Venezuelan equine encephalitis virus: the problem is not over for tropical America",
-      "anio": 2020,
-      "revista": "Annals of Clinical Microbiology and Antimicrobials",
-      "enlace": "https://doi.org/10.1186/s12941-020-00360-4"
     }
   ]
 }

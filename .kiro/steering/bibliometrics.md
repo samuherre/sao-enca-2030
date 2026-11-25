@@ -187,6 +187,41 @@ colombiano). Al incorporarlas, aplicar deduplicación por **DOI** y, cuando el
 registro no tenga DOI (común en estas fuentes), por **título** (+ año). Las demás
 fuentes propuestas quedan descartadas por solapamiento con OpenAlex (§7.2).
 
+**SciELO — IMPLEMENTADO.** Conector por la API ArticleMeta de SciELO
+(`https://articlemeta.scielo.org/api/v1`, pública, sin key):
+
+* **Cosecha, no búsqueda.** ArticleMeta no es un buscador (y el buscador web
+  `search.scielo.org` bloquea el acceso automatizado con HTTP 403), así que se
+  COSECHA: colección Colombia (`col`, 255 revistas) → filtrar a las ÁREAS
+  relevantes por el campo `v441` (Ciencias Biológicas/Agrícolas → 35 revistas de
+  255) → listar códigos de artículo por revista → bajar cada artículo.
+* **Filtro ESTRICTO de aves** (igual de exigente que el `title_and_abstract`
+  de OpenAlex): términos de aves en título+abstract+keywords. CLAVE: los
+  términos cortos/ambiguos (ave, pato, loro, owl…) exigen PALABRA COMPLETA, no
+  prefijo; si no, "pato" encaja en "patógeno" y "ave" en "averrhoa" (bug real
+  de la 1ª cosecha, que metió ~266 falsos positivos de fitopatología/salud).
+  Las raíces largas inequívocas (ornitolog, avifauna, passerin) sí van como
+  prefijo.
+* **Alcance solo-Colombia** cubierto en origen: la colección `col` ya son
+  revistas colombianas (más limpio que el filtro geográfico de OpenAlex).
+* **Período 2020–2030** por `publication_year` real de cada artículo (el `from`
+  de la API es por fecha de PROCESAMIENTO, se usa solo como pre-filtro grueso).
+* **Resultado real (nov-2026): 178 artículos de aves** (de ~7.000 escaneados;
+  4.867 descartados por no-aves, 1.682 por año). 100% con DOI y afiliaciones.
+  Top revistas: Biota Colombiana, Caldasia, Bol. Museo Hist. Natural, Acta
+  Biológica Colombiana. Consolidado total: 2.062 → **2.240**.
+* **Dedup por DOI/título la aplica sola** el servicio consolidado
+  (`_dedup_entre_fuentes`): el `article_id` lleva prefijo propio `scielo-` para
+  trazabilidad, pero un mismo DOI o título+año presente en OpenAlex y SciELO se
+  cuenta una vez.
+* Código: `bibliometrics/ingestion/scielo_api_client.py` (conector + filtro),
+  `bibliometrics/pipelines/process_scielo_api.py` (pipeline/cosecha). Salida en
+  `data/processed/scielo/` y `data/processed/scielo_clasificado/`. La fuente
+  "SciELO" está en `_FUENTES_AUTORIA_FIABLE` del servicio (aporta `authorships`
+  estructurados, igual que OpenAlex, para las gráficas de colaboración).
+
+**Redalyc — PENDIENTE** (siguiente fuente, análoga a SciELO).
+
 ### 7.2 Fuentes nuevas propuestas por Julián (evaluación del equipo)
 
 Priorizar por aporte real (varias solapan con lo que OpenAlex ya agrega):

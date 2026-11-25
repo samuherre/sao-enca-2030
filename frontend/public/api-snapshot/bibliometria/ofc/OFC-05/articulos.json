@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-05",
   "nombre": "Aves de bosques húmedos de tierras bajas",
-  "total": 56,
-  "mostrados": 56,
+  "total": 59,
+  "mostrados": 59,
   "items": [
     {
       "titulo": "Composición taxonómica y riqueza de la avifauna asociada a relictos de bosque seco tropical del departamento de Bolívar, Colombia",
@@ -179,6 +179,12 @@
       "enlace": "https://doi.org/10.1111/jbi.14379"
     },
     {
+      "titulo": "Distribución geográfica actualizada del Ave del sol (Eurypiga helios: Eurypigidae)",
+      "anio": 2022,
+      "revista": "Caldasia",
+      "enlace": "https://doi.org/10.15446/caldasia.v44n3.95211"
+    },
+    {
       "titulo": "Effects of habitat degradation on bird functional diversity: A field test in the Valdivian rainforest",
       "anio": 2022,
       "revista": "Forest Ecology and Management",
@@ -225,6 +231,12 @@
       "anio": 2021,
       "revista": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
       "enlace": "https://doi.org/10.18257/raccefyn.1307"
+    },
+    {
+      "titulo": "Caracterización de la vegetación, aves y paisajes sonoros: un caso de estudio en el Parque Nacional Braulio Carrillo, Costa Rica",
+      "anio": 2021,
+      "revista": "Biota colombiana",
+      "enlace": "https://doi.org/10.21068/c2021.v22n01a04"
     },
     {
       "titulo": "Corridors in heavily fragmented landscapes: reconnecting populations of critically endangered brown spider monkeys ( Ateles hybridus ) and sympatric terrestrial vertebrates in the lowland rainforests of Central Colombia",
@@ -296,6 +308,12 @@
       "titulo": "Avifauna del centro forestal tropical Pedro Antonio Pineda, cuenca baja del río Calima (Buenaventura, Colombia)",
       "anio": 2020,
       "revista": "Colombia Forestal",
+      "enlace": "https://doi.org/10.14483/2256201x.14828"
+    },
+    {
+      "titulo": "Avifauna del centro forestal tropical Pedro Antonio Pineda, cuenca baja del río Calima (Buenaventura, Colombia)",
+      "anio": 2020,
+      "revista": "Colomb. for.",
       "enlace": "https://doi.org/10.14483/2256201x.14828"
     },
     {

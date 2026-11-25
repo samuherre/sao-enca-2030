@@ -1,10 +1,10 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 270,
+  "total_articulos": 278,
   "por_anio": [
     {
       "clave": "2025",
-      "conteo": 270
+      "conteo": 278
     }
   ],
   "por_revista": [
@@ -97,6 +97,10 @@
       "conteo": 3
     },
     {
+      "clave": "Bol. Cient. Mus. Hist. Nat. Univ. Caldas",
+      "conteo": 3
+    },
+    {
       "clave": "Sustainability",
       "conteo": 2
     },
@@ -125,22 +129,18 @@
       "conteo": 2
     },
     {
-      "clave": "Repositorio Fundación Universitaria Agraria de Colombia",
-      "conteo": 2
-    },
-    {
       "clave": "Otros",
-      "conteo": 153
+      "conteo": 160
     }
   ],
   "por_idioma": [
     {
       "clave": "Inglés",
-      "conteo": 156
+      "conteo": 158
     },
     {
       "clave": "Español",
-      "conteo": 92
+      "conteo": 98
     },
     {
       "clave": "Portugués",
@@ -158,37 +158,38 @@
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 270,
-      "total": 270
+      "con_dato": 278,
+      "total": 278
     },
     {
       "campo": "authors",
-      "con_dato": 270,
-      "total": 270
+      "con_dato": 278,
+      "total": 278
     },
     {
       "campo": "abstract",
-      "con_dato": 247,
-      "total": 270
+      "con_dato": 255,
+      "total": 278
     },
     {
       "campo": "keywords",
-      "con_dato": 255,
-      "total": 270
+      "con_dato": 263,
+      "total": 278
     },
     {
       "campo": "doi",
-      "con_dato": 222,
-      "total": 270
+      "con_dato": 230,
+      "total": 278
     }
   ],
-  "pendientes_revision": 270,
-  "posibles_duplicados": 26,
+  "pendientes_revision": 278,
+  "posibles_duplicados": 29,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
     "2026-10-28",
     "2026-10-30",
+    "2026-11-24",
     "2026-11-24"
   ],
   "anios_disponibles": [
@@ -203,21 +204,21 @@
   ],
   "anio_seleccionado": 2025,
   "indicadores": {
-    "total_publicaciones": 270,
-    "publicaciones_individuales": 49,
-    "publicaciones_colaborativas": 206,
-    "total_firmas": 1677,
-    "autores_unicos": 1497,
+    "total_publicaciones": 278,
+    "publicaciones_individuales": 50,
+    "publicaciones_colaborativas": 213,
+    "total_firmas": 1708,
+    "autores_unicos": 1528,
     "articulos_sin_autoria": 15,
-    "publicaciones_internacionales": 111,
-    "publicaciones_interinstitucionales": 142,
+    "publicaciones_internacionales": 112,
+    "publicaciones_interinstitucionales": 146,
     "grado_colaboracion": 0.81,
-    "rcc": 0.617
+    "rcc": 0.619
   },
   "por_tipo_documento": [
     {
       "clave": "Artículo",
-      "conteo": 161
+      "conteo": 169
     },
     {
       "clave": "Conjunto de datos",
@@ -291,7 +292,7 @@
     },
     {
       "clave": "Abierto — revista OA (gold)",
-      "conteo": 47
+      "conteo": 54
     },
     {
       "clave": "Abierto — revista de pago, artículo liberado (hybrid)",
@@ -311,13 +312,13 @@
     },
     {
       "clave": "Sin dato",
-      "conteo": 20
+      "conteo": 21
     }
   ],
   "instituciones_primer_autor": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 29
+      "conteo": 30
     },
     {
       "clave": "Universidad de Antioquia",
@@ -332,12 +333,16 @@
       "conteo": 9
     },
     {
+      "clave": "Universidad del Valle",
+      "conteo": 7
+    },
+    {
       "clave": "Universidad del Rosario",
       "conteo": 6
     },
     {
-      "clave": "Universidad del Valle",
-      "conteo": 6
+      "clave": "Universidad de Córdoba",
+      "conteo": 5
     },
     {
       "clave": "Universidad Distrital Francisco José de Caldas",
@@ -348,18 +353,14 @@
       "conteo": 5
     },
     {
-      "clave": "Universidad Pedagógica y Tecnológica de Colombia",
-      "conteo": 5
-    },
-    {
-      "clave": "Universidad del Tolima",
+      "clave": "Universidad del Cauca",
       "conteo": 5
     }
   ],
   "instituciones_presencia": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 50
+      "conteo": 51
     },
     {
       "clave": "Universidad de Antioquia",
@@ -375,7 +376,7 @@
     },
     {
       "clave": "Universidad del Valle",
-      "conteo": 14
+      "conteo": 15
     },
     {
       "clave": "Pontificia Universidad Javeriana",
@@ -401,9 +402,9 @@
   "colaboracion_por_anio": [
     {
       "anio": 2025,
-      "una_institucion": 98,
-      "nacional": 32,
-      "internacional": 111
+      "una_institucion": 102,
+      "nacional": 35,
+      "internacional": 112
     }
   ],
   "clasificacion_disponible": true,
@@ -419,9 +420,9 @@
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 26,
-      "grado_colaboracion": 0.84,
-      "gc_articulos_contables": 25,
+      "conteo": 28,
+      "grado_colaboracion": 0.81,
+      "gc_articulos_contables": 27,
       "gc_articulos_sin_autoria": 1
     },
     {
@@ -451,25 +452,25 @@
     {
       "ofc_id": "OFC-06",
       "nombre": "Aves de bosques premontanos y montanos",
-      "conteo": 14,
-      "grado_colaboracion": 0.86,
-      "gc_articulos_contables": 14,
+      "conteo": 15,
+      "grado_colaboracion": 0.87,
+      "gc_articulos_contables": 15,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-07",
       "nombre": "Aves de alta montaña",
-      "conteo": 15,
-      "grado_colaboracion": 0.67,
-      "gc_articulos_contables": 15,
+      "conteo": 16,
+      "grado_colaboracion": 0.69,
+      "gc_articulos_contables": 16,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-08",
       "nombre": "Aves en sistemas urbanos",
-      "conteo": 22,
-      "grado_colaboracion": 0.8,
-      "gc_articulos_contables": 20,
+      "conteo": 23,
+      "grado_colaboracion": 0.76,
+      "gc_articulos_contables": 21,
       "gc_articulos_sin_autoria": 2
     },
     {
@@ -497,7 +498,7 @@
       "gc_articulos_sin_autoria": 0
     }
   ],
-  "sin_ofc": 150,
+  "sin_ofc": 155,
   "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
   "catalogo_ofc": [
     {
@@ -658,6 +659,37 @@
           "campo": "doi",
           "con_dato": 220,
           "total": 250
+        }
+      ]
+    },
+    {
+      "fuente": "SciELO",
+      "total_articulos": 8,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 8,
+          "total": 8
+        },
+        {
+          "campo": "authors",
+          "con_dato": 8,
+          "total": 8
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 8,
+          "total": 8
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 8,
+          "total": 8
+        },
+        {
+          "campo": "doi",
+          "con_dato": 8,
+          "total": 8
         }
       ]
     }

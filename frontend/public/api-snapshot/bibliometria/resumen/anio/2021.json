@@ -1,10 +1,10 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 436,
+  "total_articulos": 474,
   "por_anio": [
     {
       "clave": "2021",
-      "conteo": 436
+      "conteo": 474
     }
   ],
   "por_revista": [
@@ -22,6 +22,10 @@
     },
     {
       "clave": "Universidad Nacional Abierta y a Distancia, UNAD eBooks",
+      "conteo": 9
+    },
+    {
+      "clave": "Biota colombiana",
       "conteo": 9
     },
     {
@@ -62,6 +66,18 @@
     },
     {
       "clave": "Vitela (Pontificia Universidad Javeriana Cali)",
+      "conteo": 3
+    },
+    {
+      "clave": "Orinoquia",
+      "conteo": 3
+    },
+    {
+      "clave": "Acta biol.Colomb.",
+      "conteo": 3
+    },
+    {
+      "clave": "Rev.Bio.Agro",
       "conteo": 3
     },
     {
@@ -113,34 +129,18 @@
       "conteo": 2
     },
     {
-      "clave": "Proceedings of the Royal Society B Biological Sciences",
-      "conteo": 2
-    },
-    {
-      "clave": "The Wilson Journal of Ornithology",
-      "conteo": 2
-    },
-    {
-      "clave": "Ecological Indicators",
-      "conteo": 2
-    },
-    {
-      "clave": "Repositorio Digital Universidad ECCI",
-      "conteo": 2
-    },
-    {
       "clave": "Otros",
-      "conteo": 131
+      "conteo": 159
     }
   ],
   "por_idioma": [
     {
       "clave": "Inglés",
-      "conteo": 135
+      "conteo": 147
     },
     {
       "clave": "Español",
-      "conteo": 261
+      "conteo": 287
     },
     {
       "clave": "Otros idiomas",
@@ -154,37 +154,38 @@
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 436,
-      "total": 436
+      "con_dato": 474,
+      "total": 474
     },
     {
       "campo": "authors",
-      "con_dato": 436,
-      "total": 436
+      "con_dato": 474,
+      "total": 474
     },
     {
       "campo": "abstract",
-      "con_dato": 353,
-      "total": 436
+      "con_dato": 391,
+      "total": 474
     },
     {
       "campo": "keywords",
-      "con_dato": 401,
-      "total": 436
+      "con_dato": 439,
+      "total": 474
     },
     {
       "campo": "doi",
-      "con_dato": 260,
-      "total": 436
+      "con_dato": 298,
+      "total": 474
     }
   ],
-  "pendientes_revision": 436,
-  "posibles_duplicados": 48,
+  "pendientes_revision": 474,
+  "posibles_duplicados": 66,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
     "2026-10-28",
     "2026-10-30",
+    "2026-11-24",
     "2026-11-24"
   ],
   "anios_disponibles": [
@@ -199,21 +200,21 @@
   ],
   "anio_seleccionado": 2021,
   "indicadores": {
-    "total_publicaciones": 436,
-    "publicaciones_individuales": 114,
-    "publicaciones_colaborativas": 288,
-    "total_firmas": 1385,
-    "autores_unicos": 1060,
+    "total_publicaciones": 474,
+    "publicaciones_individuales": 117,
+    "publicaciones_colaborativas": 323,
+    "total_firmas": 1534,
+    "autores_unicos": 1204,
     "articulos_sin_autoria": 34,
-    "publicaciones_internacionales": 126,
-    "publicaciones_interinstitucionales": 154,
-    "grado_colaboracion": 0.72,
-    "rcc": 0.51
+    "publicaciones_internacionales": 131,
+    "publicaciones_interinstitucionales": 173,
+    "grado_colaboracion": 0.73,
+    "rcc": 0.522
   },
   "por_tipo_documento": [
     {
       "clave": "Artículo",
-      "conteo": 326
+      "conteo": 364
     },
     {
       "clave": "Conjunto de datos",
@@ -259,7 +260,7 @@
     },
     {
       "clave": "Abierto — revista OA (gold)",
-      "conteo": 22
+      "conteo": 56
     },
     {
       "clave": "Abierto — revista de pago, artículo liberado (hybrid)",
@@ -279,13 +280,13 @@
     },
     {
       "clave": "Sin dato",
-      "conteo": 40
+      "conteo": 44
     }
   ],
   "instituciones_primer_autor": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 34
+      "conteo": 37
     },
     {
       "clave": "Universidad de Los Andes",
@@ -297,23 +298,23 @@
     },
     {
       "clave": "Universidad de Antioquia",
-      "conteo": 24
+      "conteo": 26
     },
     {
       "clave": "Universidad del Valle",
-      "conteo": 22
+      "conteo": 25
+    },
+    {
+      "clave": "Universidad del Tolima",
+      "conteo": 17
     },
     {
       "clave": "Universidad del Quindío",
       "conteo": 15
     },
     {
-      "clave": "Universidad del Tolima",
-      "conteo": 15
-    },
-    {
       "clave": "Universidad Pedagógica y Tecnológica de Colombia",
-      "conteo": 12
+      "conteo": 13
     },
     {
       "clave": "Alexander von Humboldt Biological Resources Research Institute",
@@ -327,11 +328,11 @@
   "instituciones_presencia": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 49
+      "conteo": 52
     },
     {
       "clave": "Pontificia Universidad Javeriana",
-      "conteo": 42
+      "conteo": 43
     },
     {
       "clave": "Universidad de Los Andes",
@@ -339,39 +340,39 @@
     },
     {
       "clave": "Universidad de Antioquia",
-      "conteo": 32
+      "conteo": 35
+    },
+    {
+      "clave": "Universidad del Valle",
+      "conteo": 30
     },
     {
       "clave": "Alexander von Humboldt Biological Resources Research Institute",
       "conteo": 28
     },
     {
-      "clave": "Universidad del Valle",
-      "conteo": 27
+      "clave": "Universidad del Tolima",
+      "conteo": 21
     },
     {
       "clave": "SELVA",
       "conteo": 19
     },
     {
-      "clave": "Universidad del Tolima",
-      "conteo": 19
-    },
-    {
       "clave": "Universidad del Quindío",
-      "conteo": 17
+      "conteo": 18
     },
     {
       "clave": "Universidad Industrial de Santander",
-      "conteo": 14
+      "conteo": 15
     }
   ],
   "colaboracion_por_anio": [
     {
       "anio": 2021,
-      "una_institucion": 207,
-      "nacional": 45,
-      "internacional": 126
+      "una_institucion": 225,
+      "nacional": 60,
+      "internacional": 131
     }
   ],
   "clasificacion_disponible": true,
@@ -379,25 +380,25 @@
     {
       "ofc_id": "OFC-01",
       "nombre": "Aves de hábitats marinos, costeros y de manglar",
-      "conteo": 15,
-      "grado_colaboracion": 0.79,
-      "gc_articulos_contables": 14,
+      "conteo": 19,
+      "grado_colaboracion": 0.83,
+      "gc_articulos_contables": 18,
       "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 42,
-      "grado_colaboracion": 0.71,
-      "gc_articulos_contables": 42,
+      "conteo": 45,
+      "grado_colaboracion": 0.73,
+      "gc_articulos_contables": 45,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-03",
       "nombre": "Aves de sabanas y pastizales naturales",
-      "conteo": 12,
-      "grado_colaboracion": 0.75,
-      "gc_articulos_contables": 12,
+      "conteo": 14,
+      "grado_colaboracion": 0.79,
+      "gc_articulos_contables": 14,
       "gc_articulos_sin_autoria": 0
     },
     {
@@ -411,17 +412,17 @@
     {
       "ofc_id": "OFC-05",
       "nombre": "Aves de bosques húmedos de tierras bajas",
-      "conteo": 10,
-      "grado_colaboracion": 0.9,
-      "gc_articulos_contables": 10,
+      "conteo": 11,
+      "grado_colaboracion": 0.91,
+      "gc_articulos_contables": 11,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-06",
       "nombre": "Aves de bosques premontanos y montanos",
-      "conteo": 32,
+      "conteo": 36,
       "grado_colaboracion": 0.69,
-      "gc_articulos_contables": 32,
+      "gc_articulos_contables": 36,
       "gc_articulos_sin_autoria": 0
     },
     {
@@ -435,17 +436,17 @@
     {
       "ofc_id": "OFC-08",
       "nombre": "Aves en sistemas urbanos",
-      "conteo": 33,
-      "grado_colaboracion": 0.78,
-      "gc_articulos_contables": 32,
+      "conteo": 35,
+      "grado_colaboracion": 0.79,
+      "gc_articulos_contables": 34,
       "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-09",
       "nombre": "Aves en agroecosistemas",
-      "conteo": 28,
-      "grado_colaboracion": 0.82,
-      "gc_articulos_contables": 28,
+      "conteo": 29,
+      "grado_colaboracion": 0.83,
+      "gc_articulos_contables": 29,
       "gc_articulos_sin_autoria": 0
     },
     {
@@ -457,7 +458,7 @@
       "gc_articulos_sin_autoria": 0
     }
   ],
-  "sin_ofc": 227,
+  "sin_ofc": 252,
   "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
   "catalogo_ofc": [
     {
@@ -618,6 +619,37 @@
           "campo": "doi",
           "con_dato": 252,
           "total": 396
+        }
+      ]
+    },
+    {
+      "fuente": "SciELO",
+      "total_articulos": 38,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 38,
+          "total": 38
+        },
+        {
+          "campo": "authors",
+          "con_dato": 38,
+          "total": 38
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 38,
+          "total": 38
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 38,
+          "total": 38
+        },
+        {
+          "campo": "doi",
+          "con_dato": 38,
+          "total": 38
         }
       ]
     }

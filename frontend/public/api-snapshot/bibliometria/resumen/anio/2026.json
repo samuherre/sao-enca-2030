@@ -1,10 +1,10 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 345,
+  "total_articulos": 348,
   "por_anio": [
     {
       "clave": "2026",
-      "conteo": 345
+      "conteo": 348
     }
   ],
   "por_revista": [
@@ -130,13 +130,13 @@
     },
     {
       "clave": "Otros",
-      "conteo": 145
+      "conteo": 148
     }
   ],
   "por_idioma": [
     {
       "clave": "Inglés",
-      "conteo": 194
+      "conteo": 197
     },
     {
       "clave": "Español",
@@ -158,37 +158,38 @@
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 345,
-      "total": 345
+      "con_dato": 348,
+      "total": 348
     },
     {
       "campo": "authors",
-      "con_dato": 343,
-      "total": 345
+      "con_dato": 346,
+      "total": 348
     },
     {
       "campo": "abstract",
-      "con_dato": 325,
-      "total": 345
+      "con_dato": 328,
+      "total": 348
     },
     {
       "campo": "keywords",
-      "con_dato": 318,
-      "total": 345
+      "con_dato": 321,
+      "total": 348
     },
     {
       "campo": "doi",
-      "con_dato": 299,
-      "total": 345
+      "con_dato": 302,
+      "total": 348
     }
   ],
-  "pendientes_revision": 345,
-  "posibles_duplicados": 73,
+  "pendientes_revision": 348,
+  "posibles_duplicados": 75,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
     "2026-10-28",
     "2026-10-30",
+    "2026-11-24",
     "2026-11-24"
   ],
   "anios_disponibles": [
@@ -203,21 +204,21 @@
   ],
   "anio_seleccionado": 2026,
   "indicadores": {
-    "total_publicaciones": 345,
+    "total_publicaciones": 348,
     "publicaciones_individuales": 85,
-    "publicaciones_colaborativas": 231,
-    "total_firmas": 1500,
-    "autores_unicos": 1201,
+    "publicaciones_colaborativas": 234,
+    "total_firmas": 1512,
+    "autores_unicos": 1213,
     "articulos_sin_autoria": 29,
-    "publicaciones_internacionales": 119,
-    "publicaciones_interinstitucionales": 151,
+    "publicaciones_internacionales": 120,
+    "publicaciones_interinstitucionales": 152,
     "grado_colaboracion": 0.73,
-    "rcc": 0.548
+    "rcc": 0.55
   },
   "por_tipo_documento": [
     {
       "clave": "Artículo",
-      "conteo": 157
+      "conteo": 160
     },
     {
       "clave": "Conjunto de datos",
@@ -279,7 +280,7 @@
     },
     {
       "clave": "Abierto — revista OA (gold)",
-      "conteo": 42
+      "conteo": 45
     },
     {
       "clave": "Abierto — revista de pago, artículo liberado (hybrid)",
@@ -305,7 +306,7 @@
   "instituciones_primer_autor": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 23
+      "conteo": 24
     },
     {
       "clave": "Universidad de Antioquia",
@@ -347,7 +348,7 @@
   "instituciones_presencia": [
     {
       "clave": "Universidad Nacional de Colombia",
-      "conteo": 41
+      "conteo": 42
     },
     {
       "clave": "Alexander von Humboldt Biological Resources Research Institute",
@@ -389,9 +390,9 @@
   "colaboracion_por_anio": [
     {
       "anio": 2026,
-      "una_institucion": 105,
+      "una_institucion": 107,
       "nacional": 36,
-      "internacional": 119
+      "internacional": 120
     }
   ],
   "clasificacion_disponible": true,
@@ -407,9 +408,9 @@
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 43,
-      "grado_colaboracion": 0.52,
-      "gc_articulos_contables": 42,
+      "conteo": 44,
+      "grado_colaboracion": 0.53,
+      "gc_articulos_contables": 43,
       "gc_articulos_sin_autoria": 1
     },
     {
@@ -423,9 +424,9 @@
     {
       "ofc_id": "OFC-04",
       "nombre": "Aves de bosques y matorrales secos",
-      "conteo": 16,
+      "conteo": 17,
       "grado_colaboracion": 0.94,
-      "gc_articulos_contables": 16,
+      "gc_articulos_contables": 17,
       "gc_articulos_sin_autoria": 0
     },
     {
@@ -485,7 +486,7 @@
       "gc_articulos_sin_autoria": 0
     }
   ],
-  "sin_ofc": 181,
+  "sin_ofc": 183,
   "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
   "catalogo_ofc": [
     {
@@ -646,6 +647,37 @@
           "campo": "doi",
           "con_dato": 288,
           "total": 313
+        }
+      ]
+    },
+    {
+      "fuente": "SciELO",
+      "total_articulos": 3,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 3,
+          "total": 3
+        },
+        {
+          "campo": "authors",
+          "con_dato": 3,
+          "total": 3
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 3,
+          "total": 3
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 3,
+          "total": 3
+        },
+        {
+          "campo": "doi",
+          "con_dato": 3,
+          "total": 3
         }
       ]
     }

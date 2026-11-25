@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-06",
   "nombre": "Aves de bosques premontanos y montanos",
-  "total": 105,
+  "total": 112,
   "mostrados": 100,
   "items": [
     {
@@ -123,6 +123,12 @@
       "anio": 2025,
       "revista": "Acta Biológica Colombiana",
       "enlace": "https://doi.org/10.15446/abc.v30n2.112659"
+    },
+    {
+      "titulo": "Frecuencia de infección y parasitemia de hemosporidios en aves según cobertura vegetal y altitud en el suroccidente de Colombia",
+      "anio": 2025,
+      "revista": "Bol. Cient. Mus. Hist. Nat. Univ. Caldas",
+      "enlace": "https://doi.org/10.17151/bccm.2025.29.1.4"
     },
     {
       "titulo": "Influence of height and crop size of Geonoma undata on bird frugivory interactions in a sub-Andean forest, Cundinamarca",
@@ -305,6 +311,12 @@
       "enlace": null
     },
     {
+      "titulo": "Primera expedición ornitológica a Coromoro, Santander, Colombia",
+      "anio": 2023,
+      "revista": "Bol. Cient. Mus. Hist. Nat. Univ. Caldas",
+      "enlace": "https://doi.org/10.17151/bccm.2023.27.1.9"
+    },
+    {
       "titulo": "Prioritizing ecological connectivity among protected areas in Colombia using a functional approach for birds",
       "anio": 2023,
       "revista": "Global Ecology and Conservation",
@@ -443,10 +455,28 @@
       "enlace": "https://doi.org/10.59517/oc.e232"
     },
     {
+      "titulo": "Estructura y composición del ensamblaje de aves en el sitio AICA Reserva Natural La Patasola, Andes Centrales de Colombia",
+      "anio": 2021,
+      "revista": "rev. colombiana cienc. anim. Recia",
+      "enlace": "https://doi.org/10.24188/recia.v13.n2.2021.865"
+    },
+    {
       "titulo": "Evaluación de la trayectoria de la restauración en un bosque andino a través de redes mutualistas de dispersión de semillas",
       "anio": 2021,
       "revista": "Colombia Forestal",
       "enlace": "https://doi.org/10.14483/2256201x.15618"
+    },
+    {
+      "titulo": "Evaluación de la trayectoria de la restauración en un bosque andino a través de redes mutualistas de dispersión de semillas",
+      "anio": 2021,
+      "revista": "Colomb. for.",
+      "enlace": "https://doi.org/10.14483/2256201x.15618"
+    },
+    {
+      "titulo": "Flora Farallonensis III: las melastomatáceas del bosque premontano de Pico de Águila (Cali, Valle).",
+      "anio": 2021,
+      "revista": "rev. cienc.",
+      "enlace": "https://doi.org/10.25100/rc.v25i2.12310"
     },
     {
       "titulo": "Gutiérrez-Pinto, Natalia. 2009. Patrones de diversificación en un linaje de aves del Bosque Montano Neotropical (Basileuterus tristriatus:Parulidae): Pregrado, Universidad de los Andes (Andrés M. Cuervo, Carlos Daniel Cadena)",
@@ -573,36 +603,6 @@
       "anio": 2021,
       "revista": "Ornitología colombiana",
       "enlace": "https://doi.org/10.59517/oc.e314"
-    },
-    {
-      "titulo": "Turnover-driven loss of forest-dependent species changes avian species richness, functional diversity, and community composition in Andean forest fragments",
-      "anio": 2021,
-      "revista": "Global Ecology and Conservation",
-      "enlace": "https://doi.org/10.1016/j.gecco.2021.e01922"
-    },
-    {
-      "titulo": "Activity and habitat use by understory birds in a native Andean forest and a eucalypt plantation",
-      "anio": 2020,
-      "revista": "The Wilson Journal of Ornithology",
-      "enlace": "https://doi.org/10.1676/19-54"
-    },
-    {
-      "titulo": "Avifauna del Parque Nacional Natural Selva de Florencia (Samaná, Caldas, Colombia): nuevos registros y ampliaciones de distribución",
-      "anio": 2020,
-      "revista": "Biota Colombiana",
-      "enlace": "https://doi.org/10.21068/c2020.v21n02a03"
-    },
-    {
-      "titulo": "Conservative plumage masks extraordinary phylogenetic diversity in the Grallaria rufula (Rufous Antpitta) complex of the humid Andes",
-      "anio": 2020,
-      "revista": "The Auk",
-      "enlace": "https://doi.org/10.1093/auk/ukaa009"
-    },
-    {
-      "titulo": "Diversidad composicional y funcional de aves en diferentes tipos de vegetación durante el periodo de lluvias en el enclave seco del cañón del río Chicamocha - Santander",
-      "anio": 2020,
-      "revista": "Repositorio Institucional (Pontificia Universidad Javeriana)",
-      "enlace": "https://doi.org/10.11144/javeriana.10554.34188"
     }
   ]
 }

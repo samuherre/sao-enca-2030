@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-08",
   "nombre": "Aves en sistemas urbanos",
-  "total": 161,
+  "total": 176,
   "mostrados": 100,
   "items": [
     {
@@ -135,6 +135,12 @@
       "anio": 2026,
       "revista": "Ecology",
       "enlace": "https://doi.org/10.1002/ecy.70277"
+    },
+    {
+      "titulo": "Análisis de una comunidad de aves potencialmente dispersoras de semillas en un bosque en restauración ecológica en Bogotá",
+      "anio": 2025,
+      "revista": "rev.udcaactual.divulg.cient.",
+      "enlace": "https://doi.org/10.31910/rudca.v28.n2.2025.2397"
     },
     {
       "titulo": "Aves de la Universidad de Sucre, Caribe colombiano.",
@@ -281,6 +287,12 @@
       "enlace": "https://doi.org/10.18257/raccefyn.2641"
     },
     {
+      "titulo": "Análisis multitemporal de la frecuencia de observación de Phimosus infuscatus (Threskiornithidae) en Colombia",
+      "anio": 2024,
+      "revista": "Rev. acad. colomb. cienc. exact. fis. nat.",
+      "enlace": "https://doi.org/10.18257/raccefyn.2641"
+    },
+    {
       "titulo": "Assessing the Influence of Vehicular Traffic-Associated Atmospheric Pollutants on Pulmonary Function Using Spirometry and Impulse Oscillometry in Healthy Participants: Insights from Bogotá, 2020–2021",
       "anio": 2024,
       "revista": "Atmosphere",
@@ -323,6 +335,12 @@
       "enlace": "http://dx.doi.org/10.17533/udea.acbi/v46n121a02"
     },
     {
+      "titulo": "Distribución vertical y coexistencia de seis especies de aves que anidan en&gt;agroecosistemas en el Este de la Península Ibérica",
+      "anio": 2024,
+      "revista": "Actu Biol",
+      "enlace": "https://doi.org/10.17533/udea.acbi/v46n121a02"
+    },
+    {
       "titulo": "Drivers of Seasonal Change of Avian Communities in Urban Parks and Cemeteries of Latin America",
       "anio": 2024,
       "revista": "Animals",
@@ -357,6 +375,12 @@
       "anio": 2024,
       "revista": "Repositorio Fundación Universitaria Agraria de Colombia",
       "enlace": "http://hdl.handle.net/20.500.14489/324"
+    },
+    {
+      "titulo": "Notas sobre distribución, anidación y dieta del Halcón murcielaguero (Falco rufigularis) en el centro-oeste de México",
+      "anio": 2024,
+      "revista": "Caldasia",
+      "enlace": "https://doi.org/10.15446/caldasia.v46n1.100455"
     },
     {
       "titulo": "Número estimado de aves y vertebrados pequeños cazados por gatos domésticos en Cali",
@@ -425,6 +449,12 @@
       "enlace": "http://dx.doi.org/10.37811/cl_rcm.v7i2.5660"
     },
     {
+      "titulo": "Caracterización de microplásticos en agua y sedimentos en los humedales Pantanos De Villa, Chorrillos, Lima, Perú",
+      "anio": 2023,
+      "revista": "Bol. Invest. Mar. Cost.",
+      "enlace": "https://doi.org/10.25268/bimc.invemar.2023.52.1.1155"
+    },
+    {
       "titulo": "COMPOSICION, RIQUEZA Y ABUNDANCIA DE AVES ACUATICAS DEL LAGO TULIO OSPINA, MUNICIPIO DE BELLO, DEPARTAMENTO DE ANTIOQUIA COMPOSITION, SPECIES RICHNESS, AND ABUNDANCIA OF ACUATIC BIRDS OF TULIO OSPINA LAKE, MUNICIPALITY OF BELLO, ANTIOQUIA DEPARTMENT",
       "anio": 2023,
       "revista": "Boletín SAO",
@@ -443,6 +473,12 @@
       "enlace": "https://pure.au.dk/portal/en/publications/a30d257f-849b-418e-8c89-5df7424cdb1d"
     },
     {
+      "titulo": "Diversidad de aves en una ciudad andina: la limitación de los valores de riqueza de especies y la escala de cuenca",
+      "anio": 2023,
+      "revista": "Acta biol.Colomb.",
+      "enlace": "https://doi.org/10.15446/abc.v28n3.101974"
+    },
+    {
       "titulo": "Does learning matter? Birdsong-learning program determines coping strategies for living in urban noisy environments",
       "anio": 2023,
       "revista": "Behavioral Ecology and Sociobiology",
@@ -459,6 +495,12 @@
       "anio": 2023,
       "revista": "Repository Technological University of Pereira (Technological University of Pereira)",
       "enlace": "https://hdl.handle.net/11059/14917"
+    },
+    {
+      "titulo": "Evaluación de la composición de especies, fenología y diversidad de la flora urbana en un gradiente de continentalidad en el sur de España",
+      "anio": 2023,
+      "revista": "Caldasia",
+      "enlace": "https://doi.org/10.15446/caldasia.v45n2.96288"
     },
     {
       "titulo": "Evaluación de la composición de especies, fenología y diversidad de la flora urbana en un gradiente de continentalidad en el sur de España",
@@ -561,48 +603,6 @@
       "anio": 2022,
       "revista": "Revista de Investigaciones Agroempresariales",
       "enlace": "http://dx.doi.org/10.23850/25004468.4807"
-    },
-    {
-      "titulo": "Biodiversidad Urbana en Bogotá (Colombia) : Urban Biodiversity in Bogota (Colombia)",
-      "anio": 2022,
-      "revista": "Tecnología Investigación y Academia",
-      "enlace": "https://revistas.udistrital.edu.co/index.php/tia/article/view/19917"
-    },
-    {
-      "titulo": "Bird diversity-environment relationships in urban parks and cemeteries of the Neotropics during breeding and non-breeding seasons",
-      "anio": 2022,
-      "revista": "PeerJ",
-      "enlace": "https://doi.org/10.7717/peerj.14496"
-    },
-    {
-      "titulo": "Caracterización y tipificación de la avicultura de traspatio en Boyacá, Colombia, y su efecto sobre la seguridad alimentaria",
-      "anio": 2022,
-      "revista": "Revista de Investigaciones Veterinarias del Perú",
-      "enlace": "https://doi.org/10.15381/rivep.v33i6.22753"
-    },
-    {
-      "titulo": "DEPREDACIÓN EN NIDOS ARTIFICIALES DE AVES EN UN GRADIENTE DE INTERVENCIÓN ANTRÓPICA EN LA AMAZONIA COLOMBIANA",
-      "anio": 2022,
-      "revista": "Acta Biológica Colombiana",
-      "enlace": "https://doi.org/10.15446/abc.v27n3.90766"
-    },
-    {
-      "titulo": "Diagnóstico del Gallinazo (Coragyps atratus) como Bioindicador en el Suroccidente de Bogotá–Colombia, Implicaciones Ambientales",
-      "anio": 2022,
-      "revista": "Producción + Limpia",
-      "enlace": "https://doi.org/10.22507/pml.v16n2a1"
-    },
-    {
-      "titulo": "Especies vegetales del arbolado urbano de Bogotá con interacciones de anidación, polinización y visita floral de la avifauna en el año 2020",
-      "anio": 2022,
-      "revista": "The Catalogue of Life",
-      "enlace": "https://doi.org/10.48580/d6mqq"
-    },
-    {
-      "titulo": "Estimated number of birds killed by domestic cats in Colombia",
-      "anio": 2022,
-      "revista": "Avian Conservation and Ecology",
-      "enlace": "https://doi.org/10.5751/ace-02200-170216"
     }
   ]
 }

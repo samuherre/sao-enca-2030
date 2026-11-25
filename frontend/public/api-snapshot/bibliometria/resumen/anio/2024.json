@@ -1,10 +1,10 @@
 {
   "alcance": "consolidado",
-  "total_articulos": 228,
+  "total_articulos": 253,
   "por_anio": [
     {
       "clave": "2024",
-      "conteo": 228
+      "conteo": 253
     }
   ],
   "por_revista": [
@@ -37,6 +37,14 @@
       "conteo": 4
     },
     {
+      "clave": "Acta biol.Colomb.",
+      "conteo": 4
+    },
+    {
+      "clave": "Rev. acad. colomb. cienc. exact. fis. nat.",
+      "conteo": 4
+    },
+    {
       "clave": "Boletín SAO",
       "conteo": 3
     },
@@ -58,6 +66,14 @@
     },
     {
       "clave": "Boletín Científico Centro de Museos Museo de Historia Natural",
+      "conteo": 3
+    },
+    {
+      "clave": "Bol. Cient. Mus. Hist. Nat. Univ. Caldas",
+      "conteo": 3
+    },
+    {
+      "clave": "Rev. Fac. Nac. Agron. Medellín",
       "conteo": 3
     },
     {
@@ -113,34 +129,18 @@
       "conteo": 2
     },
     {
-      "clave": "Frontiers of Biogeography",
-      "conteo": 2
-    },
-    {
-      "clave": "Authorea",
-      "conteo": 2
-    },
-    {
-      "clave": "Elsevier eBooks",
-      "conteo": 2
-    },
-    {
-      "clave": "Revista de Medicina …",
-      "conteo": 1
-    },
-    {
       "clave": "Otros",
-      "conteo": 119
+      "conteo": 137
     }
   ],
   "por_idioma": [
     {
       "clave": "Inglés",
-      "conteo": 126
+      "conteo": 140
     },
     {
       "clave": "Español",
-      "conteo": 85
+      "conteo": 96
     },
     {
       "clave": "Portugués",
@@ -158,37 +158,38 @@
   "completitud": [
     {
       "campo": "title",
-      "con_dato": 228,
-      "total": 228
+      "con_dato": 253,
+      "total": 253
     },
     {
       "campo": "authors",
-      "con_dato": 228,
-      "total": 228
+      "con_dato": 253,
+      "total": 253
     },
     {
       "campo": "abstract",
-      "con_dato": 205,
-      "total": 228
+      "con_dato": 229,
+      "total": 253
     },
     {
       "campo": "keywords",
-      "con_dato": 215,
-      "total": 228
+      "con_dato": 239,
+      "total": 253
     },
     {
       "campo": "doi",
-      "con_dato": 177,
-      "total": 228
+      "con_dato": 202,
+      "total": 253
     }
   ],
-  "pendientes_revision": 228,
-  "posibles_duplicados": 21,
+  "pendientes_revision": 253,
+  "posibles_duplicados": 32,
   "fechas_dataset": [
     "2026-10-07",
     "2026-10-08",
     "2026-10-28",
     "2026-10-30",
+    "2026-11-24",
     "2026-11-24"
   ],
   "anios_disponibles": [
@@ -203,21 +204,21 @@
   ],
   "anio_seleccionado": 2024,
   "indicadores": {
-    "total_publicaciones": 228,
-    "publicaciones_individuales": 62,
-    "publicaciones_colaborativas": 153,
-    "total_firmas": 984,
-    "autores_unicos": 875,
+    "total_publicaciones": 253,
+    "publicaciones_individuales": 65,
+    "publicaciones_colaborativas": 175,
+    "total_firmas": 1066,
+    "autores_unicos": 956,
     "articulos_sin_autoria": 13,
-    "publicaciones_internacionales": 77,
-    "publicaciones_interinstitucionales": 94,
-    "grado_colaboracion": 0.71,
-    "rcc": 0.539
+    "publicaciones_internacionales": 80,
+    "publicaciones_interinstitucionales": 105,
+    "grado_colaboracion": 0.73,
+    "rcc": 0.547
   },
   "por_tipo_documento": [
     {
       "clave": "Artículo",
-      "conteo": 141
+      "conteo": 166
     },
     {
       "clave": "Tesis",
@@ -275,7 +276,7 @@
     },
     {
       "clave": "Abierto — revista OA (gold)",
-      "conteo": 38
+      "conteo": 60
     },
     {
       "clave": "Abierto — revista de pago, artículo liberado (hybrid)",
@@ -295,7 +296,7 @@
     },
     {
       "clave": "Sin dato",
-      "conteo": 16
+      "conteo": 19
     }
   ],
   "instituciones_primer_autor": [
@@ -309,11 +310,11 @@
     },
     {
       "clave": "Universidad de Caldas",
-      "conteo": 7
+      "conteo": 9
     },
     {
       "clave": "Universidad de Antioquia",
-      "conteo": 5
+      "conteo": 6
     },
     {
       "clave": "Universidad del Valle",
@@ -321,6 +322,10 @@
     },
     {
       "clave": "Universidad de Los Andes",
+      "conteo": 5
+    },
+    {
+      "clave": "Universidad de Ibagué",
       "conteo": 5
     },
     {
@@ -334,10 +339,6 @@
     {
       "clave": "Universidad Popular del Cesar",
       "conteo": 4
-    },
-    {
-      "clave": "Universidad del Cauca",
-      "conteo": 4
     }
   ],
   "instituciones_presencia": [
@@ -347,11 +348,15 @@
     },
     {
       "clave": "Universidad de Antioquia",
-      "conteo": 15
+      "conteo": 16
     },
     {
       "clave": "Universidad Industrial de Santander",
-      "conteo": 15
+      "conteo": 16
+    },
+    {
+      "clave": "Universidad de Caldas",
+      "conteo": 12
     },
     {
       "clave": "Universidad del Valle",
@@ -362,8 +367,8 @@
       "conteo": 11
     },
     {
-      "clave": "Universidad de Caldas",
-      "conteo": 10
+      "clave": "Universidad del Tolima",
+      "conteo": 8
     },
     {
       "clave": "Pontificia Universidad Javeriana",
@@ -374,10 +379,6 @@
       "conteo": 8
     },
     {
-      "clave": "Universidad del Tolima",
-      "conteo": 7
-    },
-    {
       "clave": "University of La Salle",
       "conteo": 7
     }
@@ -385,9 +386,9 @@
   "colaboracion_por_anio": [
     {
       "anio": 2024,
-      "una_institucion": 97,
-      "nacional": 22,
-      "internacional": 77
+      "una_institucion": 111,
+      "nacional": 30,
+      "internacional": 80
     }
   ],
   "clasificacion_disponible": true,
@@ -395,17 +396,17 @@
     {
       "ofc_id": "OFC-01",
       "nombre": "Aves de hábitats marinos, costeros y de manglar",
-      "conteo": 10,
+      "conteo": 11,
       "grado_colaboracion": 1.0,
-      "gc_articulos_contables": 10,
+      "gc_articulos_contables": 11,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 25,
-      "grado_colaboracion": 0.84,
-      "gc_articulos_contables": 25,
+      "conteo": 28,
+      "grado_colaboracion": 0.86,
+      "gc_articulos_contables": 28,
       "gc_articulos_sin_autoria": 0
     },
     {
@@ -451,17 +452,17 @@
     {
       "ofc_id": "OFC-08",
       "nombre": "Aves en sistemas urbanos",
-      "conteo": 19,
-      "grado_colaboracion": 0.63,
-      "gc_articulos_contables": 19,
+      "conteo": 22,
+      "grado_colaboracion": 0.68,
+      "gc_articulos_contables": 22,
       "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-09",
       "nombre": "Aves en agroecosistemas",
-      "conteo": 11,
-      "grado_colaboracion": 0.82,
-      "gc_articulos_contables": 11,
+      "conteo": 12,
+      "grado_colaboracion": 0.83,
+      "gc_articulos_contables": 12,
       "gc_articulos_sin_autoria": 0
     },
     {
@@ -475,13 +476,13 @@
     {
       "ofc_id": "OFC-11",
       "nombre": "Aviturismo",
-      "conteo": 9,
-      "grado_colaboracion": 0.88,
-      "gc_articulos_contables": 8,
+      "conteo": 10,
+      "grado_colaboracion": 0.89,
+      "gc_articulos_contables": 9,
       "gc_articulos_sin_autoria": 1
     }
   ],
-  "sin_ofc": 128,
+  "sin_ofc": 146,
   "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
   "catalogo_ofc": [
     {
@@ -642,6 +643,37 @@
           "campo": "doi",
           "con_dato": 173,
           "total": 212
+        }
+      ]
+    },
+    {
+      "fuente": "SciELO",
+      "total_articulos": 25,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 25,
+          "total": 25
+        },
+        {
+          "campo": "authors",
+          "con_dato": 25,
+          "total": 25
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 24,
+          "total": 25
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 24,
+          "total": 25
+        },
+        {
+          "campo": "doi",
+          "con_dato": 25,
+          "total": 25
         }
       ]
     }

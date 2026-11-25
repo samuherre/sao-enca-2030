@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-07",
   "nombre": "Aves de alta montaña",
-  "total": 122,
+  "total": 123,
   "mostrados": 100,
   "items": [
     {
@@ -182,6 +182,12 @@
       "titulo": "Aves acuáticas en lagunas altoandinas del sur del Parque Nacional Natural Puracé, Colombia",
       "anio": 2025,
       "revista": "Boletín Científico Centro de Museos Museo de Historia Natural",
+      "enlace": "https://doi.org/10.17151/bccm.2025.29.1.5"
+    },
+    {
+      "titulo": "Aves acuáticas en lagunas altoandinas del sur del Parque Nacional Natural Puracé, Colombia",
+      "anio": 2025,
+      "revista": "Bol. Cient. Mus. Hist. Nat. Univ. Caldas",
       "enlace": "https://doi.org/10.17151/bccm.2025.29.1.5"
     },
     {
@@ -597,12 +603,6 @@
       "anio": 2021,
       "revista": "Global Biodiversity Information Facility",
       "enlace": "https://doi.org/10.15468/dl.ambr8d"
-    },
-    {
-      "titulo": "Occurrence Download",
-      "anio": 2021,
-      "revista": "Global Biodiversity Information Facility",
-      "enlace": "https://doi.org/10.15468/dl.7k6s72"
     }
   ]
 }

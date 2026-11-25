@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-10",
   "nombre": "Sistemas culturales asociados a la apreciación de las aves",
-  "total": 14,
-  "mostrados": 14,
+  "total": 15,
+  "mostrados": 15,
   "items": [
     {
       "titulo": "Applying Two‐Eyed Seeing to Pair Indigenous Ecological Calendars and Community Science Data for Biodiversity Monitoring in Amazonia",
@@ -74,6 +74,12 @@
       "titulo": "USO DE FAUNA SILVESTRE POR COMUNIDADES CAMPESINAS EN PLATO, MAGDALENA, REGIÓN CARIBE COLOMBIANA",
       "anio": 2023,
       "revista": "Acta Biológica Colombiana",
+      "enlace": "https://doi.org/10.15446/abc.v28n1.94140"
+    },
+    {
+      "titulo": "USO DE FAUNA SILVESTRE POR COMUNIDADES CAMPESINAS EN PLATO, MAGDALENA, REGIÓN CARIBE COLOMBIANA",
+      "anio": 2023,
+      "revista": "Acta biol.Colomb.",
       "enlace": "https://doi.org/10.15446/abc.v28n1.94140"
     },
     {

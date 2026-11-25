@@ -255,10 +255,11 @@ def _es_anio_plausible(valor: object) -> bool:
 
 
 # Fuentes cuyo campo ``authors`` viene como lista de autores separada de forma
-# FIABLE por "; " (p. ej. OpenAlex une ``authorships`` con ese separador). Para
-# otras fuentes (p. ej. Boletín SAO) el texto de autores es libre y separar
-# nombres no es confiable, por lo que no se cuenta (no se inventa un conteo).
-_FUENTES_AUTORIA_FIABLE = {"OpenAlex"}
+# FIABLE por "; " (p. ej. OpenAlex y SciELO unen sus autores con ese separador y
+# aportan ``authorships`` estructurados con institución/país). Para otras fuentes
+# (p. ej. Boletín SAO) el texto de autores es libre y separar nombres no es
+# confiable, por lo que no se cuenta (no se inventa un conteo).
+_FUENTES_AUTORIA_FIABLE = {"OpenAlex", "SciELO"}
 # Separador explícito con el que esas fuentes unen los nombres de autor.
 _SEP_AUTORES_FIABLE = ";"
 

@@ -53,6 +53,7 @@
     "2026-10-08",
     "2026-10-28",
     "2026-10-30",
+    "2026-11-24",
     "2026-11-24"
   ],
   "anios_disponibles": [
@@ -225,6 +226,37 @@
     },
     {
       "fuente": "OpenAlex",
+      "total_articulos": 0,
+      "completitud": [
+        {
+          "campo": "title",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "authors",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "abstract",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "keywords",
+          "con_dato": 0,
+          "total": 0
+        },
+        {
+          "campo": "doi",
+          "con_dato": 0,
+          "total": 0
+        }
+      ]
+    },
+    {
+      "fuente": "SciELO",
       "total_articulos": 0,
       "completitud": [
         {

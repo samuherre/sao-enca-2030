@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-09",
   "nombre": "Aves en agroecosistemas",
-  "total": 100,
+  "total": 105,
   "mostrados": 100,
   "items": [
     {
@@ -209,6 +209,12 @@
       "enlace": "http://dx.doi.org/10.17533/udea.acbi/v46n121a02"
     },
     {
+      "titulo": "Distribución vertical y coexistencia de seis especies de aves que anidan en&gt;agroecosistemas en el Este de la Península Ibérica",
+      "anio": 2024,
+      "revista": "Actu Biol",
+      "enlace": "https://doi.org/10.17533/udea.acbi/v46n121a02"
+    },
+    {
       "titulo": "Effect of local habitat and landscape attributes on bird communities in shade coffee plantations in the Colombian Andes",
       "anio": 2024,
       "revista": "Global Ecology and Conservation",
@@ -263,6 +269,12 @@
       "enlace": "https://doi.org/10.15472/iuts5u"
     },
     {
+      "titulo": "Avifauna asociada a bosques nativos inmersos en agroecosistemas de aguacate Hass en Caldas y Risaralda (Colombia)",
+      "anio": 2023,
+      "revista": "Biota colombiana",
+      "enlace": "https://doi.org/10.21068/2539200x.1070"
+    },
+    {
       "titulo": "Avifauna of the Northern Cordillera Central of the Andes, Colombia.",
       "anio": 2023,
       "revista": "Digital Commons - University of South Florida (University of South Florida)",
@@ -273,6 +285,12 @@
       "anio": 2023,
       "revista": "Ecological Applications",
       "enlace": "https://doi.org/10.1002/eap.2886"
+    },
+    {
+      "titulo": "Caracterización de la avifauna presente en la Orinoquía Colombiana",
+      "anio": 2023,
+      "revista": "Rev.MVZ Cordoba",
+      "enlace": "https://doi.org/10.21897/rmvz.2305"
     },
     {
       "titulo": "Composición de la avifauna en la Hacienda Matepantano en periodo de lluvias, Universidad de La Salle (Yopal – Casanare).",
@@ -351,6 +369,12 @@
       "anio": 2022,
       "revista": "Luna Azul",
       "enlace": "https://doi.org/10.17151/luaz.2022.55.5"
+    },
+    {
+      "titulo": "DETECCIÓN POR PCR DE Haemoproteus archilochus EN Amazilia tzacatl (Trochilidae) EN COLOMBIA.",
+      "anio": 2022,
+      "revista": "Acta biol.Colomb.",
+      "enlace": "https://doi.org/10.15446/abc.v27n1.89162"
     },
     {
       "titulo": "Estudio de línea base sobre la variabilidad espacial de la concentración de nitrógeno en el agua superficial de un agroecosistema de páramo en Colombia",
@@ -467,6 +491,12 @@
       "enlace": "https://doi.org/10.21068/c2021.v22n01a05"
     },
     {
+      "titulo": "Diferencias en paisajes sonoros de sistemas silvopastoriles y potreros tradicionales del piedemonte llanero, Meta, Colombia",
+      "anio": 2021,
+      "revista": "Biota colombiana",
+      "enlace": "https://doi.org/10.21068/c2021.v22n01a05"
+    },
+    {
       "titulo": "El reto de conservar y producir: biodiversidad y sistemas productivos en la cuenca media y baja del río Cravo Sur",
       "anio": 2021,
       "revista": "Universidad Nacional Abierta y a Distancia, UNAD eBooks",
@@ -573,36 +603,6 @@
       "anio": 2021,
       "revista": "Ornitología colombiana",
       "enlace": "https://revistas.ornitologiacolombiana.com/index.php/roc/article/view/444"
-    },
-    {
-      "titulo": "Zanthoxylum rhoifolium Lam como alternativa forrajera en cabras en sistemas silvopastoriles naturales",
-      "anio": 2021,
-      "revista": "Avances en Investigación Agropecuaria",
-      "enlace": "https://doi.org/10.53897/revaia.21.25.37"
-    },
-    {
-      "titulo": "A morphological, reproductive, and molt phenology database for 379 bird species from the Colombian Tropical Andes",
-      "anio": 2020,
-      "revista": "Ecology",
-      "enlace": "https://doi.org/10.1002/ecy.3016"
-    },
-    {
-      "titulo": "CARACTERÍSTICAS MORFOMÉTRICAS DEL HUEVO FÉRTIL Y SU RELACIÓN CON EL SEXO EN AVES DE POSTURA COMERCIAL MARRÓN",
-      "anio": 2020,
-      "revista": "Revista Facultad de Ciencias Agropecuarias -FAGROPEC",
-      "enlace": "https://doi.org/10.47847/fagropec.v11n2a5"
-    },
-    {
-      "titulo": "Diversity and relative abundance of mammals (medium and big) and terrestrial birds in agroforestry systems of the buffer area of Serranía de los Yariguíes Natural National Park, through camera traps *",
-      "anio": 2020,
-      "revista": "Universidad Industrial de Santander",
-      "enlace": "https://noesis.uis.edu.co/handle/20.500.14071/39628"
-    },
-    {
-      "titulo": "Earlier and slower or later and faster: Spring migration pace linked to departure time in a Neotropical migrant songbird",
-      "anio": 2020,
-      "revista": "Journal of Animal Ecology",
-      "enlace": "https://doi.org/10.1111/1365-2656.13359"
     }
   ]
 }

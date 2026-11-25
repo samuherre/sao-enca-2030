@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-03",
   "nombre": "Aves de sabanas y pastizales naturales",
-  "total": 62,
-  "mostrados": 62,
+  "total": 69,
+  "mostrados": 69,
   "items": [
     {
       "titulo": "Data from: Origins and diversification of the Caatinga dry forest endemic avifauna",
@@ -137,6 +137,12 @@
       "enlace": "https://doi.org/10.1016/j.biocon.2023.110298"
     },
     {
+      "titulo": "Caracterización de la avifauna presente en la Orinoquía Colombiana",
+      "anio": 2023,
+      "revista": "Rev.MVZ Cordoba",
+      "enlace": "https://doi.org/10.21897/rmvz.2305"
+    },
+    {
       "titulo": "Caracterización de la avifauna presente en la Orinoquía Colombiana: estudio de caso",
       "anio": 2023,
       "revista": "Revista Mvz Córdoba",
@@ -165,6 +171,12 @@
       "anio": 2023,
       "revista": "Global Biodiversity Information Facility",
       "enlace": "https://doi.org/10.15468/dl.7zdh3n"
+    },
+    {
+      "titulo": "Aplicación del predictor BLUPe en la selección de variedades potenciales de soya para la Orinoquía",
+      "anio": 2022,
+      "revista": "Agron. colomb.",
+      "enlace": "https://doi.org/10.15446/agron.colomb.v40n2.101137"
     },
     {
       "titulo": "Caracterización morfológica, faneróptica y de genes dominantes de la gallina criolla Subespecie nudicollis en la región Sabanas del departamento de Sucre-Colombia",
@@ -209,6 +221,12 @@
       "enlace": "https://doi.org/10.31910/rudca.v25.n2.2022.1824"
     },
     {
+      "titulo": "Los floricultivos de la Sabana de Bogotá y su relación con la avifauna: una mirada desde los municipios de Madrid, El Rosal y Facatativá",
+      "anio": 2022,
+      "revista": "rev.udcaactual.divulg.cient.",
+      "enlace": "https://doi.org/10.31910/rudca.v25.n2.2022.1824"
+    },
+    {
       "titulo": "Noteworthy bird records from the Araracuara area, Amazonas and Caquetá, Colombia",
       "anio": 2022,
       "revista": "Ornitología colombiana",
@@ -248,6 +266,12 @@
       "titulo": "Plant, bird, and mammal diversity of the Tomogrande field station, Vichada, Colombia",
       "anio": 2022,
       "revista": "Biota Colombiana",
+      "enlace": "https://doi.org/10.21068/2539200x.1027"
+    },
+    {
+      "titulo": "Plant, bird, and mammal diversity of the Tomogrande field station, Vichada, Colombia",
+      "anio": 2022,
+      "revista": "Biota colombiana",
       "enlace": "https://doi.org/10.21068/2539200x.1027"
     },
     {
@@ -329,10 +353,22 @@
       "enlace": "https://doi.org/10.59517/oc.e387"
     },
     {
+      "titulo": "Mortalidad de vertebrados silvestres por atropellamiento en el departamento de Casanare, Colombia",
+      "anio": 2021,
+      "revista": "Rev. Med. Vet.",
+      "enlace": "https://doi.org/10.19052/mv.vol1.iss42.4"
+    },
+    {
       "titulo": "Population Status, Habitat Use and Breeding Biology of the Endangered Colombian Horned Lark in an Andean Wetland",
       "anio": 2021,
       "revista": "Ardea",
       "enlace": "https://doi.org/10.5253/arde.v109i1.a6"
+    },
+    {
+      "titulo": "PRIMERAS LOCALIDADES REPORTADAS Y AMPLIACIÓN DEL RANGO DE DISTRIBUCIÓN PARA Agamia agamí (Ardeidae) EN EL DEPARTAMENTO DE VICHADA, COLOMBIA",
+      "anio": 2021,
+      "revista": "Acta biol.Colomb.",
+      "enlace": "https://doi.org/10.15446/abc.v26n3.85312"
     },
     {
       "titulo": "Range extensions of two species of “red-breasted” meadowlarks (Icteridae: Sturnella) in Colombia: Ampliaciones de las distribuciones de dos especies “pechirrojas” de Sturnella (Icteridae) en Colombia",
@@ -351,6 +387,12 @@
       "anio": 2020,
       "revista": "Latin American Antiquity",
       "enlace": "https://doi.org/10.1017/laq.2020.76"
+    },
+    {
+      "titulo": "Biología reproductiva de Porphyriops melanops bogotensis (Gruiformes, Rallidae) subespecie endémica y amenazada del norte de los Andes",
+      "anio": 2020,
+      "revista": "Caldasia",
+      "enlace": "https://doi.org/10.15446/caldasia.v42n1.80853"
     },
     {
       "titulo": "Changes in the avifauna of a forest relict in the peri-urban fringe of Bogotá over fourteen years",
