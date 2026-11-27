@@ -33,10 +33,12 @@ import argparse
 import csv
 import json
 import sys
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -489,21 +491,55 @@ def fetch_department_facet(
         return [], params
 
     counts = facets[0].get("counts") or []
-    acumulado: dict[str, int] = {}
+
+    # Agrupación por GADM GID como clave canónica. ``stateProvince`` es texto
+    # libre y el mismo departamento llega con muchas variantes ("Boyaca",
+    # "Guajira", "Cauca Department"…). GADM conoce esas variantes (campo
+    # ``variantName``), así que resolver el GID y sumar por GID unifica los
+    # duplicados de forma robusta (mejor que un mapa manual) y además da la llave
+    # estable que necesita ArcGIS. Las variantes que NO resuelven GID (ruido real
+    # como "Co" o "Caribbean") se conservan agrupadas por su nombre canonizado,
+    # sin GID y sin inventar nada.
+    por_gid: dict[str, int] = {}
+    sin_gid: dict[str, int] = {}
     for item in counts:
         nombre = item.get("name")
         occ = item.get("count")
         if not isinstance(nombre, str) or not isinstance(occ, int):
             # Entrada malformada o sin departamento: se omite, no se inventa.
             continue
-        canonico = _canonizar_departamento(nombre)
-        acumulado[canonico] = acumulado.get(canonico, 0) + occ
+        gid = gadm_gid_de_departamento(nombre, timeout)
+        if gid is None:
+            # Intento con el nombre canonizado (p. ej. tildes) antes de rendirse.
+            canonico = _canonizar_departamento(nombre)
+            gid = gadm_gid_de_departamento(canonico, timeout)
+            if gid is None:
+                sin_gid[canonico] = sin_gid.get(canonico, 0) + occ
+                continue
+        por_gid[gid] = por_gid.get(gid, 0) + occ
 
-    ranking = [
-        {"departamento": nombre, "occurrence_count": occ}
-        for nombre, occ in sorted(acumulado.items(), key=lambda kv: kv[1], reverse=True)
+    # Nombre oficial a mostrar por GID: se toma del mapa departamento->región
+    # (sus claves son los nombres canónicos oficiales). Si un GID no estuviera
+    # ahí, se usa el nombre que GADM reporte como canónico.
+    nombre_por_gid = _nombres_oficiales_por_gid(timeout)
+
+    filas: list[dict[str, Any]] = [
+        {
+            "departamento": nombre_por_gid.get(gid, gid),
+            "occurrence_count": occ,
+            # GADM GID: llave estable para el portal web y para unir con una capa
+            # de departamentos en ArcGIS.
+            "gadm_gid": gid,
+        }
+        for gid, occ in por_gid.items()
     ]
-    return ranking, params
+    # Variantes de texto libre no resueltas (ruido): se conservan sin GID.
+    filas.extend(
+        {"departamento": nombre, "occurrence_count": occ, "gadm_gid": None}
+        for nombre, occ in sin_gid.items()
+    )
+    filas.sort(key=lambda f: f["occurrence_count"], reverse=True)
+    return filas, params
 
 
 def fetch_species_richness_by_department(
@@ -561,7 +597,12 @@ def fetch_species_richness_by_department(
         especies_por_depto.setdefault(canonico, set()).update(claves)
 
     ranking = [
-        {"departamento": dep, "species_count": len(claves)}
+        {
+            "departamento": dep,
+            "species_count": len(claves),
+            # Misma llave GADM que el ranking de registros (para ArcGIS/portal).
+            "gadm_gid": gadm_gid_de_departamento(dep, timeout),
+        }
         for dep, claves in sorted(
             especies_por_depto.items(), key=lambda kv: len(kv[1]), reverse=True
         )
@@ -571,6 +612,95 @@ def fetch_species_richness_by_department(
 
 # Endpoint de geocodificación GADM de GBIF (resuelve un GID -> nombre/nivel).
 GADM_GEOCODE = f"{GBIF_BASE_URL}/geocode/gadm"
+
+# Subdivisiones de nivel 1 (departamentos) de Colombia en GADM. Da, por cada
+# departamento, su GID estable (p. ej. Cauca = "COL.11_2") con el nombre
+# canónico y sus variantes. Es la fuente oficial para mapear nombre -> GID, la
+# LLAVE con la que el portal web y ArcGIS filtran/union por departamento.
+GADM_SUBDIVISIONS = f"{GADM_GEOCODE}/COL/subdivisions"
+
+# Alias: nombre canónico de NUESTRO ranking (forma DANE) -> nombre con el que
+# GADM lo registra. Solo para los casos que no casan por texto ni por variante.
+# Verificados contra la respuesta de GADM. (Mismos que usa el post-proceso del
+# snapshot; aquí se resuelven en origen para que el gadm_gid llegue al report.)
+_ALIAS_GADM_DEPARTAMENTO = {
+    "Bogotá, D.C.": "Bogotá D.C.",
+    "Archipiélago de San Andrés, Providencia y Santa Catalina": "San Andrés y Providencia",
+}
+
+
+def _norm_departamento(texto: str) -> str:
+    """Normaliza para comparar: sin acentos, sin puntuación suave, minúsculas."""
+    sin_acentos = "".join(
+        c for c in unicodedata.normalize("NFKD", texto) if not unicodedata.combining(c)
+    )
+    limpio = sin_acentos.lower()
+    for ch in ",.":
+        limpio = limpio.replace(ch, " ")
+    return " ".join(limpio.split())
+
+
+@lru_cache(maxsize=1)
+def _mapa_gadm_departamentos(timeout: int) -> dict[str, str]:
+    """Descarga el mapeo {nombre o variante normalizado -> GADM GID} de GADM COL.
+
+    Una sola llamada HTTP (cacheada). Si GADM no responde, devuelve un dict vacío
+    (no se inventa el GID: las filas quedan con ``gadm_gid=None``).
+    """
+    try:
+        data = _get_json(GADM_SUBDIVISIONS, {}, timeout)
+    except GbifError:
+        return {}
+    if not isinstance(data, list):
+        return {}
+    mapa: dict[str, str] = {}
+    for sub in data:
+        if not isinstance(sub, dict):
+            continue
+        gid = sub.get("id")
+        if not isinstance(gid, str):
+            continue
+        nombres = [sub.get("name"), *(sub.get("variantName") or [])]
+        for nombre in nombres:
+            if isinstance(nombre, str) and nombre.strip():
+                mapa[_norm_departamento(nombre)] = gid
+    return mapa
+
+
+def gadm_gid_de_departamento(nombre_canonico: str, timeout: int) -> str | None:
+    """GADM GID del departamento por su nombre canónico, o None si no casa.
+
+    Usa el mapeo oficial de GADM (nombre + variantes) y un par de alias para los
+    nombres DANE que GADM registra distinto. No inventa: si no hay coincidencia,
+    devuelve None.
+    """
+    mapa = _mapa_gadm_departamentos(timeout)
+    if not mapa:
+        return None
+    clave = _norm_departamento(nombre_canonico)
+    if clave in mapa:
+        return mapa[clave]
+    alias = _ALIAS_GADM_DEPARTAMENTO.get(nombre_canonico)
+    if alias is not None:
+        return mapa.get(_norm_departamento(alias))
+    return None
+
+
+@lru_cache(maxsize=1)
+def _nombres_oficiales_por_gid(timeout: int) -> dict[str, str]:
+    """Mapa GADM GID -> nombre canónico oficial del departamento.
+
+    Se construye resolviendo el GID de cada nombre canónico del mapa
+    departamento->región ENCA (``_REGION_POR_DEPARTAMENTO``), cuyas claves son
+    los nombres oficiales que SAO reconoce. Así, al agrupar por GID, la fila se
+    muestra con el nombre oficial (p. ej. "Boyacá", no la variante "Boyaca").
+    """
+    resultado: dict[str, str] = {}
+    for nombre_oficial in _REGION_POR_DEPARTAMENTO:
+        gid = gadm_gid_de_departamento(nombre_oficial, timeout)
+        if gid is not None:
+            resultado[gid] = nombre_oficial
+    return resultado
 
 
 def _es_gid_municipio(gid: str) -> bool:

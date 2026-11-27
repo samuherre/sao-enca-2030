@@ -203,49 +203,45 @@ cifras válidas previas.
 - No publicamos datos reales hasta que el coordinador apruebe (prueba en dry-run).
 - No hay desglose por departamento ni mapas (las cifras son agregados).
 
-## 11. PENDIENTE PRIORITARIO — llaves GADM en el pipeline (clave para ArcGIS)
+## 11. Llaves GADM de departamentos en el pipeline — RESUELTO
 
-> **Prioridad ALTA para la migración a ArcGIS.** No afecta la demo web actual
-> (ahí los enlaces ya funcionan), pero SÍ bloquea el mapa coroplético por
-> departamento en ArcGIS. Resolver antes de montar las capas geográficas.
+> Antes era un pendiente prioritario para ArcGIS. **Ya está implementado:** el
+> pipeline resuelve el `gadm_gid` de departamentos (y de la riqueza por
+> departamento) y lo propaga al report y a los CSV de ArcGIS, igual que ya hacía
+> con municipios.
 
-### Problema
+### Qué se hizo
 
-En ArcGIS, un mapa por departamento se arma uniendo (join) los conteos con una
-capa de polígonos de departamentos **por un código estable** (GADM GID, p. ej.
-Cauca = `COL.11_2`). Hoy ese código:
-
-- **Municipios:** SÍ lo produce el pipeline (`gbif_bird_counts.py`,
-  `fetch_municipality_facet` → `gadm_gid`) y SÍ lo exporta ArcGIS
-  (`export_for_arcgis.py`, `by_municipality.csv`). ✅
-- **Departamentos:** NO. El pipeline solo guarda `{"departamento": <nombre>,
-  "occurrence_count": ...}` sin `gadm_gid` (`fetch_department_facet`), y el
-  export `by_department.csv` sale sin la llave. El `gadm_gid` de departamentos
-  hoy existe **únicamente** en el snapshot de la demo, porque lo inyecta el
-  post-proceso `scripts/data/resolver_gadm_departamentos.py` sobre el JSON del
-  frontend — no llega ni al report del pipeline ni a los CSV de ArcGIS.
-
-Consecuencia: al montar ArcGIS, la capa de departamentos (y la de riqueza por
-departamento) no tendría su llave de unión GADM, a diferencia de municipios.
-
-### Qué hay que hacer (una sola pasada en el pipeline)
-
-1. En `scripts/biodiversity_pilot/gbif_bird_counts.py`, que
-   `fetch_department_facet` resuelva y añada `gadm_gid` a cada departamento
-   (y la riqueza por departamento, `species_by_department_ranking`). La fuente
-   oficial del mapeo nombre→GID es `GET /v1/geocode/gadm/COL/subdivisions`
-   (misma lógica ya probada en `scripts/data/resolver_gadm_departamentos.py`:
-   normalizar acentos/puntuación + alias para "Bogotá D.C." y "San Andrés y
-   Providencia"). Idealmente mover esa lógica a una función reutilizable.
-2. El backend ya propaga `gadm_gid` de departamentos si el report lo trae
+1. `scripts/biodiversity_pilot/gbif_bird_counts.py`:
+   - Nuevas funciones `_mapa_gadm_departamentos` / `gadm_gid_de_departamento`,
+     que descargan el mapeo oficial `GET /v1/geocode/gadm/COL/subdivisions`
+     (nombre + `variantName`) una sola vez (cacheado) y resuelven el GID por
+     nombre, con normalización de acentos/puntuación y alias para "Bogotá D.C."
+     y "San Andrés y Providencia".
+   - `fetch_department_facet` ahora **agrupa por GADM GID** (no por el texto de
+     `stateProvince`): las variantes del mismo departamento ("Boyaca", "Guajira",
+     "Quindio"…) se fusionan en su GID oficial y se muestran con el nombre
+     canónico. Las variantes de texto libre que GADM no reconoce (ruido marginal
+     como "Co", "Caribbean", "Cauca Department") se conservan SIN GID, sin
+     inventar. Cada fila lleva `gadm_gid`.
+   - `fetch_species_richness_by_department` añade `gadm_gid` a cada fila.
+2. El backend ya propagaba `gadm_gid` de departamentos si el report lo trae
    (`biodiversidad_service._departamentos_desde_report` /
-   `_riqueza_departamentos_desde_report`), así que no requiere cambios.
-3. Añadir `gadm_gid` a los campos de `by_department.csv` (y crear el export de
-   riqueza por departamento, hoy inexistente) en
-   `export_for_arcgis.py` → `BREAKDOWN_EXPORTS`.
-4. Una vez el report traiga la llave, el post-proceso
-   `resolver_gadm_departamentos.py` se vuelve redundante y se puede retirar
-   (la demo tomaría el `gadm_gid` directo del backend, igual que municipios).
+   `_riqueza_departamentos_desde_report`): sin cambios.
+3. `export_for_arcgis.py` → `BREAKDOWN_EXPORTS`: `by_department.csv` ahora
+   incluye `gadm_gid`, y se añadió `by_species_by_department.csv` (riqueza por
+   departamento con su GID), antes inexistente.
+
+### Pendiente menor (no bloqueante)
+
+El post-proceso `scripts/data/resolver_gadm_departamentos.py` sigue existiendo
+porque el **corte GBIF en disco actual** (el `bird_record_counts_*.json` que
+sirve la demo) se generó antes de este cambio y no trae `gadm_gid` en
+departamentos. La **próxima regeneración del corte** (mensual o manual con
+`gbif_bird_counts_history.py`) ya lo traerá nativo; a partir de ahí el
+post-proceso se vuelve redundante para departamentos y puede retirarse de
+`regenerar_snapshot_demo.py`. Mientras tanto se mantiene para que la demo
+conserve los GID.
 
 ### Nota sobre los taxones (menor prioridad)
 

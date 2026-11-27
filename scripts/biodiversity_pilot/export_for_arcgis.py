@@ -96,7 +96,8 @@ PUBLISHER_OUT_FIELDS = [
 BREAKDOWN_EXPORTS = {
     # archivo                      (clave en el report,           campos de salida)
     "publishers_latest.csv":       ("publisher_ranking",          ["rank", "org_key", "publisher_name", "occurrence_count"]),
-    "by_department.csv":           ("department_ranking",         ["departamento", "occurrence_count"]),
+    "by_department.csv":           ("department_ranking",         ["gadm_gid", "departamento", "occurrence_count"]),
+    "by_species_by_department.csv": ("species_by_department_ranking", ["gadm_gid", "departamento", "species_count"]),
     "by_region_enca.csv":          ("region_ranking",             ["region", "occurrence_count"]),
     "by_municipality.csv":         ("municipality_ranking",       ["gadm_gid", "name", "occurrence_count"]),
     "by_year.csv":                 ("year_ranking",               ["anio", "occurrence_count"]),

@@ -31,16 +31,17 @@ Idempotente. No inventa: si un departamento no casa con ningún GID de GADM, dej
 ``gadm_gid`` en null y lo reporta; el frontend entonces no muestra enlace para
 esa fila (en vez de un enlace roto).
 
-NOTA — ESTO ES TEMPORAL (ver PENDIENTE PRIORITARIO para ArcGIS)
---------------------------------------------------------------
-Este post-proceso sobre el SNAPSHOT existe porque el pipeline todavía no resuelve
-el ``gadm_gid`` de DEPARTAMENTOS (sí lo hace para municipios). Lo correcto, y
-prioritario para la migración a ArcGIS, es mover esta resolución al pipeline
-(``scripts/biodiversity_pilot/gbif_bird_counts.py`` -> ``fetch_department_facet``)
-para que el ``gadm_gid`` llegue también al report y a los CSV de ArcGIS
-(``by_department.csv``), no solo al snapshot de la demo. Ver
-``docs/biodiversity/arcgis-upload-guide.md`` §11. Cuando eso se haga, este script
-se vuelve redundante y se puede retirar.
+NOTA — PUENTE TEMPORAL (el pipeline ya resuelve el GID de departamentos)
+------------------------------------------------------------------------
+El pipeline (``scripts/biodiversity_pilot/gbif_bird_counts.py`` ->
+``fetch_department_facet``) YA resuelve el ``gadm_gid`` de departamentos y lo
+incluye en el report y en los CSV de ArcGIS (ver
+``docs/biodiversity/arcgis-upload-guide.md`` §11). Sin embargo, el CORTE GBIF que
+sirve la demo hoy se generó ANTES de ese cambio y no trae el ``gadm_gid`` en
+departamentos; por eso este post-proceso sigue siendo necesario para que el
+snapshot de la demo tenga los GID. Cuando se regenere el corte con el pipeline
+actual (``gbif_bird_counts_history.py``), el ``gadm_gid`` llegará nativo desde el
+backend y este script podrá retirarse de ``regenerar_snapshot_demo.py``.
 """
 
 from __future__ import annotations
