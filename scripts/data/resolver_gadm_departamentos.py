@@ -30,6 +30,17 @@ USO
 Idempotente. No inventa: si un departamento no casa con ningún GID de GADM, deja
 ``gadm_gid`` en null y lo reporta; el frontend entonces no muestra enlace para
 esa fila (en vez de un enlace roto).
+
+NOTA — ESTO ES TEMPORAL (ver PENDIENTE PRIORITARIO para ArcGIS)
+--------------------------------------------------------------
+Este post-proceso sobre el SNAPSHOT existe porque el pipeline todavía no resuelve
+el ``gadm_gid`` de DEPARTAMENTOS (sí lo hace para municipios). Lo correcto, y
+prioritario para la migración a ArcGIS, es mover esta resolución al pipeline
+(``scripts/biodiversity_pilot/gbif_bird_counts.py`` -> ``fetch_department_facet``)
+para que el ``gadm_gid`` llegue también al report y a los CSV de ArcGIS
+(``by_department.csv``), no solo al snapshot de la demo. Ver
+``docs/biodiversity/arcgis-upload-guide.md`` §11. Cuando eso se haga, este script
+se vuelve redundante y se puede retirar.
 """
 
 from __future__ import annotations

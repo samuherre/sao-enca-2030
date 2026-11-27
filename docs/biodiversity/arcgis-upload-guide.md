@@ -202,3 +202,55 @@ cifras válidas previas.
 
 - No publicamos datos reales hasta que el coordinador apruebe (prueba en dry-run).
 - No hay desglose por departamento ni mapas (las cifras son agregados).
+
+## 11. PENDIENTE PRIORITARIO — llaves GADM en el pipeline (clave para ArcGIS)
+
+> **Prioridad ALTA para la migración a ArcGIS.** No afecta la demo web actual
+> (ahí los enlaces ya funcionan), pero SÍ bloquea el mapa coroplético por
+> departamento en ArcGIS. Resolver antes de montar las capas geográficas.
+
+### Problema
+
+En ArcGIS, un mapa por departamento se arma uniendo (join) los conteos con una
+capa de polígonos de departamentos **por un código estable** (GADM GID, p. ej.
+Cauca = `COL.11_2`). Hoy ese código:
+
+- **Municipios:** SÍ lo produce el pipeline (`gbif_bird_counts.py`,
+  `fetch_municipality_facet` → `gadm_gid`) y SÍ lo exporta ArcGIS
+  (`export_for_arcgis.py`, `by_municipality.csv`). ✅
+- **Departamentos:** NO. El pipeline solo guarda `{"departamento": <nombre>,
+  "occurrence_count": ...}` sin `gadm_gid` (`fetch_department_facet`), y el
+  export `by_department.csv` sale sin la llave. El `gadm_gid` de departamentos
+  hoy existe **únicamente** en el snapshot de la demo, porque lo inyecta el
+  post-proceso `scripts/data/resolver_gadm_departamentos.py` sobre el JSON del
+  frontend — no llega ni al report del pipeline ni a los CSV de ArcGIS.
+
+Consecuencia: al montar ArcGIS, la capa de departamentos (y la de riqueza por
+departamento) no tendría su llave de unión GADM, a diferencia de municipios.
+
+### Qué hay que hacer (una sola pasada en el pipeline)
+
+1. En `scripts/biodiversity_pilot/gbif_bird_counts.py`, que
+   `fetch_department_facet` resuelva y añada `gadm_gid` a cada departamento
+   (y la riqueza por departamento, `species_by_department_ranking`). La fuente
+   oficial del mapeo nombre→GID es `GET /v1/geocode/gadm/COL/subdivisions`
+   (misma lógica ya probada en `scripts/data/resolver_gadm_departamentos.py`:
+   normalizar acentos/puntuación + alias para "Bogotá D.C." y "San Andrés y
+   Providencia"). Idealmente mover esa lógica a una función reutilizable.
+2. El backend ya propaga `gadm_gid` de departamentos si el report lo trae
+   (`biodiversidad_service._departamentos_desde_report` /
+   `_riqueza_departamentos_desde_report`), así que no requiere cambios.
+3. Añadir `gadm_gid` a los campos de `by_department.csv` (y crear el export de
+   riqueza por departamento, hoy inexistente) en
+   `export_for_arcgis.py` → `BREAKDOWN_EXPORTS`.
+4. Una vez el report traiga la llave, el post-proceso
+   `resolver_gadm_departamentos.py` se vuelve redundante y se puede retirar
+   (la demo tomaría el `gadm_gid` directo del backend, igual que municipios).
+
+### Nota sobre los taxones (menor prioridad)
+
+La clave COL XR del portal (`gbif_portal_key`, p. ej. Thraupidae = `H87`) que
+resuelve `scripts/data/resolver_claves_gbif_portal.py` es **solo para el enlace
+al portal web de GBIF**. ArcGIS mostrará taxones por nombre/geometría, no por esa
+clave, así que NO es necesaria en el pipeline de ArcGIS. Puede quedarse como
+post-proceso del snapshot de la demo.
