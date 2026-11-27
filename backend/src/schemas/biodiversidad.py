@@ -50,6 +50,10 @@ class DepartamentoGBIF(SchemaBase):
     rank: int
     departamento: str
     registros_ocurrencia: int
+    # GADM GID del departamento (área administrativa de GBIF, p. ej. "COL.11_2").
+    # Es la clave con la que el portal web filtra por departamento (gadmGid).
+    # None si no se resolvió (no se inventa); el frontend omite el enlace.
+    gadm_gid: str | None = None
 
 
 class TaxonGBIF(SchemaBase):
@@ -166,6 +170,10 @@ class RiquezaDepartamentoGBIF(SchemaBase):
     rank: int
     departamento: str
     especies: int
+    # GADM GID del departamento (área administrativa de GBIF, p. ej. "COL.11_2").
+    # Es la clave con la que el portal web filtra por departamento (gadmGid).
+    # None si no se resolvió (no se inventa); el frontend omite el enlace.
+    gadm_gid: str | None = None
 
 
 class RegionGBIF(SchemaBase):

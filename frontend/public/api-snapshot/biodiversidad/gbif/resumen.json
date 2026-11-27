@@ -107,334 +107,400 @@
     {
       "rank": 1,
       "departamento": "Antioquia",
-      "registros_ocurrencia": 2753622
+      "registros_ocurrencia": 2753622,
+      "gadm_gid": "COL.2_2"
     },
     {
       "rank": 2,
       "departamento": "Valle del Cauca",
-      "registros_ocurrencia": 2089670
+      "registros_ocurrencia": 2089670,
+      "gadm_gid": "COL.31_2"
     },
     {
       "rank": 3,
       "departamento": "Caldas",
-      "registros_ocurrencia": 1766311
+      "registros_ocurrencia": 1766311,
+      "gadm_gid": "COL.8_2"
     },
     {
       "rank": 4,
       "departamento": "Cundinamarca",
-      "registros_ocurrencia": 1662385
+      "registros_ocurrencia": 1662385,
+      "gadm_gid": "COL.15_2"
     },
     {
       "rank": 5,
       "departamento": "Meta",
-      "registros_ocurrencia": 1254326
+      "registros_ocurrencia": 1254326,
+      "gadm_gid": "COL.21_2"
     },
     {
       "rank": 6,
       "departamento": "Risaralda",
-      "registros_ocurrencia": 1057920
+      "registros_ocurrencia": 1057920,
+      "gadm_gid": "COL.26_2"
     },
     {
       "rank": 7,
       "departamento": "Magdalena",
-      "registros_ocurrencia": 985640
+      "registros_ocurrencia": 985640,
+      "gadm_gid": "COL.20_2"
     },
     {
       "rank": 8,
       "departamento": "Tolima",
-      "registros_ocurrencia": 840911
+      "registros_ocurrencia": 840911,
+      "gadm_gid": "COL.30_2"
     },
     {
       "rank": 9,
       "departamento": "Santander",
-      "registros_ocurrencia": 794189
+      "registros_ocurrencia": 794189,
+      "gadm_gid": "COL.28_2"
     },
     {
       "rank": 10,
       "departamento": "Quindío",
-      "registros_ocurrencia": 650256
+      "registros_ocurrencia": 650256,
+      "gadm_gid": "COL.25_2"
     },
     {
       "rank": 11,
       "departamento": "Bogotá, D.C.",
-      "registros_ocurrencia": 543151
+      "registros_ocurrencia": 543151,
+      "gadm_gid": "COL.5_2"
     },
     {
       "rank": 12,
       "departamento": "Boyacá",
-      "registros_ocurrencia": 439162
+      "registros_ocurrencia": 439162,
+      "gadm_gid": "COL.7_2"
     },
     {
       "rank": 13,
       "departamento": "Huila",
-      "registros_ocurrencia": 433974
+      "registros_ocurrencia": 433974,
+      "gadm_gid": "COL.18_2"
     },
     {
       "rank": 14,
       "departamento": "La Guajira",
-      "registros_ocurrencia": 431775
+      "registros_ocurrencia": 431775,
+      "gadm_gid": "COL.19_2"
     },
     {
       "rank": 15,
       "departamento": "Casanare",
-      "registros_ocurrencia": 426021
+      "registros_ocurrencia": 426021,
+      "gadm_gid": "COL.10_2"
     },
     {
       "rank": 16,
       "departamento": "Bolívar",
-      "registros_ocurrencia": 380288
+      "registros_ocurrencia": 380288,
+      "gadm_gid": "COL.6_2"
     },
     {
       "rank": 17,
       "departamento": "Chocó",
-      "registros_ocurrencia": 373903
+      "registros_ocurrencia": 373903,
+      "gadm_gid": "COL.13_2"
     },
     {
       "rank": 18,
       "departamento": "Putumayo",
-      "registros_ocurrencia": 371445
+      "registros_ocurrencia": 371445,
+      "gadm_gid": "COL.24_2"
     },
     {
       "rank": 19,
       "departamento": "Cauca",
-      "registros_ocurrencia": 365293
+      "registros_ocurrencia": 365293,
+      "gadm_gid": "COL.11_2"
     },
     {
       "rank": 20,
       "departamento": "Nariño",
-      "registros_ocurrencia": 365040
+      "registros_ocurrencia": 365040,
+      "gadm_gid": "COL.22_2"
     },
     {
       "rank": 21,
       "departamento": "Amazonas",
-      "registros_ocurrencia": 255299
+      "registros_ocurrencia": 255299,
+      "gadm_gid": "COL.1_2"
     },
     {
       "rank": 22,
       "departamento": "Cesar",
-      "registros_ocurrencia": 234297
+      "registros_ocurrencia": 234297,
+      "gadm_gid": "COL.12_2"
     },
     {
       "rank": 23,
       "departamento": "Córdoba",
-      "registros_ocurrencia": 224714
+      "registros_ocurrencia": 224714,
+      "gadm_gid": "COL.14_2"
     },
     {
       "rank": 24,
       "departamento": "Caquetá",
-      "registros_ocurrencia": 171441
+      "registros_ocurrencia": 171441,
+      "gadm_gid": "COL.9_2"
     },
     {
       "rank": 25,
       "departamento": "Vaupés",
-      "registros_ocurrencia": 162902
+      "registros_ocurrencia": 162902,
+      "gadm_gid": "COL.32_2"
     },
     {
       "rank": 26,
       "departamento": "Guaviare",
-      "registros_ocurrencia": 158439
+      "registros_ocurrencia": 158439,
+      "gadm_gid": "COL.17_2"
     },
     {
       "rank": 27,
       "departamento": "Atlántico",
-      "registros_ocurrencia": 139376
+      "registros_ocurrencia": 139376,
+      "gadm_gid": "COL.4_2"
     },
     {
       "rank": 28,
       "departamento": "Guainía",
-      "registros_ocurrencia": 139143
+      "registros_ocurrencia": 139143,
+      "gadm_gid": "COL.16_2"
     },
     {
       "rank": 29,
       "departamento": "Sucre",
-      "registros_ocurrencia": 116104
+      "registros_ocurrencia": 116104,
+      "gadm_gid": "COL.29_2"
     },
     {
       "rank": 30,
       "departamento": "Arauca",
-      "registros_ocurrencia": 83257
+      "registros_ocurrencia": 83257,
+      "gadm_gid": "COL.3_2"
     },
     {
       "rank": 31,
       "departamento": "Vichada",
-      "registros_ocurrencia": 79241
+      "registros_ocurrencia": 79241,
+      "gadm_gid": "COL.33_2"
     },
     {
       "rank": 32,
       "departamento": "Norte de Santander",
-      "registros_ocurrencia": 76179
+      "registros_ocurrencia": 76179,
+      "gadm_gid": "COL.23_2"
     },
     {
       "rank": 33,
       "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
-      "registros_ocurrencia": 47436
+      "registros_ocurrencia": 47436,
+      "gadm_gid": "COL.27_1"
     }
   ],
   "riqueza_departamentos": [
     {
       "rank": 1,
       "departamento": "Cauca",
-      "especies": 1465
+      "especies": 1465,
+      "gadm_gid": "COL.11_2"
     },
     {
       "rank": 2,
       "departamento": "Nariño",
-      "especies": 1386
+      "especies": 1386,
+      "gadm_gid": "COL.22_2"
     },
     {
       "rank": 3,
       "departamento": "Antioquia",
-      "especies": 1381
+      "especies": 1381,
+      "gadm_gid": "COL.2_2"
     },
     {
       "rank": 4,
       "departamento": "Meta",
-      "especies": 1329
+      "especies": 1329,
+      "gadm_gid": "COL.21_2"
     },
     {
       "rank": 5,
       "departamento": "Valle del Cauca",
-      "especies": 1249
+      "especies": 1249,
+      "gadm_gid": "COL.31_2"
     },
     {
       "rank": 6,
       "departamento": "Cundinamarca",
-      "especies": 1216
+      "especies": 1216,
+      "gadm_gid": "COL.15_2"
     },
     {
       "rank": 7,
       "departamento": "Chocó",
-      "especies": 1167
+      "especies": 1167,
+      "gadm_gid": "COL.13_2"
     },
     {
       "rank": 8,
       "departamento": "Caquetá",
-      "especies": 1142
+      "especies": 1142,
+      "gadm_gid": "COL.9_2"
     },
     {
       "rank": 9,
       "departamento": "Putumayo",
-      "especies": 1137
+      "especies": 1137,
+      "gadm_gid": "COL.24_2"
     },
     {
       "rank": 10,
       "departamento": "Boyacá",
-      "especies": 1088
+      "especies": 1088,
+      "gadm_gid": "COL.7_2"
     },
     {
       "rank": 11,
       "departamento": "Caldas",
-      "especies": 1073
+      "especies": 1073,
+      "gadm_gid": "COL.8_2"
     },
     {
       "rank": 12,
       "departamento": "Risaralda",
-      "especies": 1059
+      "especies": 1059,
+      "gadm_gid": "COL.26_2"
     },
     {
       "rank": 13,
       "departamento": "Santander",
-      "especies": 1035
+      "especies": 1035,
+      "gadm_gid": "COL.28_2"
     },
     {
       "rank": 14,
       "departamento": "Casanare",
-      "especies": 1024
+      "especies": 1024,
+      "gadm_gid": "COL.10_2"
     },
     {
       "rank": 15,
       "departamento": "Huila",
-      "especies": 948
+      "especies": 948,
+      "gadm_gid": "COL.18_2"
     },
     {
       "rank": 16,
       "departamento": "Tolima",
-      "especies": 946
+      "especies": 946,
+      "gadm_gid": "COL.30_2"
     },
     {
       "rank": 17,
       "departamento": "Norte de Santander",
-      "especies": 907
+      "especies": 907,
+      "gadm_gid": "COL.23_2"
     },
     {
       "rank": 18,
       "departamento": "Magdalena",
-      "especies": 890
+      "especies": 890,
+      "gadm_gid": "COL.20_2"
     },
     {
       "rank": 19,
       "departamento": "Cesar",
-      "especies": 856
+      "especies": 856,
+      "gadm_gid": "COL.12_2"
     },
     {
       "rank": 20,
       "departamento": "Amazonas",
-      "especies": 853
+      "especies": 853,
+      "gadm_gid": "COL.1_2"
     },
     {
       "rank": 21,
       "departamento": "La Guajira",
-      "especies": 828
+      "especies": 828,
+      "gadm_gid": "COL.19_2"
     },
     {
       "rank": 22,
       "departamento": "Vichada",
-      "especies": 814
+      "especies": 814,
+      "gadm_gid": "COL.33_2"
     },
     {
       "rank": 23,
       "departamento": "Bolívar",
-      "especies": 811
+      "especies": 811,
+      "gadm_gid": "COL.6_2"
     },
     {
       "rank": 24,
       "departamento": "Bogotá, D.C.",
-      "especies": 774
+      "especies": 774,
+      "gadm_gid": "COL.5_2"
     },
     {
       "rank": 25,
       "departamento": "Guaviare",
-      "especies": 772
+      "especies": 772,
+      "gadm_gid": "COL.17_2"
     },
     {
       "rank": 26,
       "departamento": "Córdoba",
-      "especies": 759
+      "especies": 759,
+      "gadm_gid": "COL.14_2"
     },
     {
       "rank": 27,
       "departamento": "Quindío",
-      "especies": 715
+      "especies": 715,
+      "gadm_gid": "COL.25_2"
     },
     {
       "rank": 28,
       "departamento": "Arauca",
-      "especies": 708
+      "especies": 708,
+      "gadm_gid": "COL.3_2"
     },
     {
       "rank": 29,
       "departamento": "Vaupés",
-      "especies": 697
+      "especies": 697,
+      "gadm_gid": "COL.32_2"
     },
     {
       "rank": 30,
       "departamento": "Guainía",
-      "especies": 678
+      "especies": 678,
+      "gadm_gid": "COL.16_2"
     },
     {
       "rank": 31,
       "departamento": "Sucre",
-      "especies": 558
+      "especies": 558,
+      "gadm_gid": "COL.29_2"
     },
     {
       "rank": 32,
       "departamento": "Atlántico",
-      "especies": 529
+      "especies": 529,
+      "gadm_gid": "COL.4_2"
     },
     {
       "rank": 33,
       "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
-      "especies": 229
+      "especies": 229,
+      "gadm_gid": "COL.27_1"
     }
   ],
   "regiones": [

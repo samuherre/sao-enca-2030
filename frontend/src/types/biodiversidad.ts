@@ -18,6 +18,12 @@ export interface DepartamentoGBIF {
   readonly rank: number;
   readonly departamento: string;
   readonly registros_ocurrencia: number;
+  /**
+   * GADM GID del departamento (área administrativa de GBIF, p. ej. "COL.11_2").
+   * Es la clave con la que el portal filtra por departamento (gadmGid). null si
+   * no se pudo resolver; en ese caso no se ofrece enlace a GBIF para la fila.
+   */
+  readonly gadm_gid: string | null;
 }
 
 /** Conteo de registros de aves por grupo taxonómico (orden o familia). */
@@ -96,6 +102,12 @@ export interface RiquezaDepartamentoGBIF {
   readonly rank: number;
   readonly departamento: string;
   readonly especies: number;
+  /**
+   * GADM GID del departamento (área administrativa de GBIF, p. ej. "COL.11_2").
+   * Es la clave con la que el portal filtra por departamento (gadmGid). null si
+   * no se pudo resolver; en ese caso no se ofrece enlace a GBIF para la fila.
+   */
+  readonly gadm_gid: string | null;
 }
 
 /** Conteo de registros de aves agrupado por región ENCA (predominante). */

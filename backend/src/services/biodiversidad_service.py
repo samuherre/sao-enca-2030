@@ -213,6 +213,7 @@ def _departamentos_desde_report(report: dict[str, Any]) -> list[DepartamentoGBIF
                 rank=pos,
                 departamento=nombre,
                 registros_ocurrencia=occ,
+                gadm_gid=dep.get("gadm_gid") if isinstance(dep.get("gadm_gid"), str) else None,
             )
         )
     return salida
@@ -348,7 +349,14 @@ def _riqueza_departamentos_desde_report(
         n = item.get("species_count")
         if not isinstance(dep, str) or not isinstance(n, int):
             continue
-        salida.append(RiquezaDepartamentoGBIF(rank=pos, departamento=dep, especies=n))
+        salida.append(
+            RiquezaDepartamentoGBIF(
+                rank=pos,
+                departamento=dep,
+                especies=n,
+                gadm_gid=item.get("gadm_gid") if isinstance(item.get("gadm_gid"), str) else None,
+            )
+        )
     return salida
 
 

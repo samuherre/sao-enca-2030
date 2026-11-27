@@ -186,6 +186,25 @@ function urlGbifMapaTaxon(taxonKey: string): string {
   return `https://www.gbif.org/species/${encodeURIComponent(taxonKey)}`;
 }
 
+/**
+ * Enlace a GBIF con las ocurrencias de aves de UN departamento de Colombia. El
+ * portal filtra el departamento por su área administrativa GADM, con el
+ * parámetro camelCase ``gadmGid`` (p. ej. Cauca = "COL.11_2"); NO por el texto
+ * del campo stateProvince. GADM agrupa el departamento completo con independencia
+ * de cómo esté escrito el nombre, así que el enlace es coherente con el total de
+ * la tabla y se alinea con el destino del producto (ArcGIS, que trabaja con
+ * códigos administrativos y geometría, no con texto libre). ``gadmGid`` viene del
+ * campo ``gadm_gid`` del snapshot; si es null no debe llamarse a esta función.
+ */
+function urlGbifDepartamento(gadmGid: string): string {
+  const params = new URLSearchParams({
+    country: "CO",
+    taxonKey: GBIF_TAXON_AVES,
+    gadmGid: gadmGid,
+  });
+  return `https://www.gbif.org/occurrence/search?${params.toString()}`;
+}
+
 // --- Paleta coherente con el resto del frontend -----------------------------
 
 const VERDE = "#2f8f5b";
@@ -368,6 +387,34 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
   );
 }
 
+/**
+ * Enlace "Ver en GBIF" de una fila de departamento. Si el departamento no tiene
+ * GADM GID resuelto, no se muestra enlace (en vez de uno roto): se indica "—"
+ * para ser honestos sobre que no se pudo construir el filtro de esa fila.
+ */
+function EnlaceDepartamentoGbif({
+  gadmGid,
+  departamento,
+}: {
+  gadmGid: string | null;
+  departamento: string;
+}) {
+  if (!gadmGid) {
+    return <span style={{ color: "#aaa" }}>—</span>;
+  }
+  return (
+    <a
+      href={urlGbifDepartamento(gadmGid)}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`Ver en GBIF los registros de aves de ${departamento} (Colombia)`}
+      style={{ color: VERDE_OSCURO, textDecoration: "underline", fontWeight: 600, whiteSpace: "nowrap" }}
+    >
+      Ver ↗
+    </a>
+  );
+}
+
 /** Gráfico + tabla de registros de aves por departamento de Colombia. */
 function DepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
   const departamentos = resumen.departamentos;
@@ -441,6 +488,9 @@ function DepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
             <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
               Registros de ocurrencia
             </th>
+            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              GBIF
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -450,6 +500,12 @@ function DepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{d.departamento}</td>
               <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
                 {formatoEntero(d.registros_ocurrencia)}
+              </td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                <EnlaceDepartamentoGbif
+                  gadmGid={d.gadm_gid}
+                  departamento={d.departamento}
+                />
               </td>
             </tr>
           ))}
@@ -597,6 +653,9 @@ function RiquezaDepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
             <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
               Especies distintas
             </th>
+            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              GBIF
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -606,6 +665,12 @@ function RiquezaDepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{d.departamento}</td>
               <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
                 {formatoEntero(d.especies)}
+              </td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                <EnlaceDepartamentoGbif
+                  gadmGid={d.gadm_gid}
+                  departamento={d.departamento}
+                />
               </td>
             </tr>
           ))}
