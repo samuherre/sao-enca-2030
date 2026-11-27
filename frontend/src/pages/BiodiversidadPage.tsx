@@ -67,27 +67,30 @@ function formatoFechaHora(iso: string | null | undefined): string {
 
 /**
  * Enlace al portal web de GBIF con las ocurrencias de aves de ESE publicador en
- * Colombia (country=CO + taxon_key=212 + publishing_org=orgKey).
+ * Colombia (country=CO + taxonKey=V2 + publishingOrg=orgKey).
  *
- * IMPORTANTE — nombres de parámetros en snake_case. El portal web de GBIF
- * (gbif.org/occurrence/search) reconstruye sus filtros ("chips") desde los
- * parámetros snake_case que usa en su propia URL: `taxon_key`, `publishing_org`,
- * `basis_of_record`, `iucn_red_list_category`, `species_key`. Con la forma
- * camelCase (`taxonKey=212`) el portal NO resuelve la clave del backbone: trata
- * el valor como texto y muestra el chip "Scientific name : 212" con 0
- * resultados. La forma correcta es `taxon_key=212`, que el portal reconstruye
+ * IMPORTANTE — nombres de parámetros en camelCase y clave de taxón del portal.
+ * El portal web de GBIF (gbif.org/occurrence/search) reconstruye sus filtros
+ * ("chips") desde parámetros camelCase: `taxonKey`, `publishingOrg`,
+ * `basisOfRecord`, `iucnRedListCategory`, `speciesKey`.
+ *
+ * La clase Aves en el portal se filtra con `taxonKey=V2` (clave del backbone
+ * actual de GBIF), NO con `212` (clave del backbone antiguo): con `212` el chip
+ * aparecía como "Scientific name : 212" y devolvía 0 resultados. La forma
+ * correcta, verificada en el portal, es `taxonKey=V2`, que el portal reconstruye
  * como el filtro "Scientific name: Aves".
  */
-// Clave del backbone de GBIF para la clase Aves (taxon_key=212). Se añade a
-// TODOS los enlaces de ocurrencias para que el portal filtre solo aves, igual
-// que nuestras cifras (calculadas con taxonKey=212 en la API REST).
-const GBIF_TAXON_AVES = "212";
+// Clave del taxón Aves en el portal web de GBIF (backbone actual: "V2"). Se
+// añade a TODOS los enlaces de ocurrencias para que el portal filtre solo aves.
+// (Las cifras agregadas del backend se calcularon con la clave legacy 212 de la
+// API REST; aquí solo importa la clave que entiende el PORTAL web.)
+const GBIF_TAXON_AVES = "V2";
 
 function urlGbifPublicador(orgKey: string): string {
   const params = new URLSearchParams({
     country: "CO",
-    taxon_key: GBIF_TAXON_AVES,
-    publishing_org: orgKey,
+    taxonKey: GBIF_TAXON_AVES,
+    publishingOrg: orgKey,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
 }
@@ -101,7 +104,7 @@ function urlGbifPublicador(orgKey: string): string {
  * título del enlace para no dar a entender que filtra solo "los demás".
  */
 function urlGbifColombia(): string {
-  const params = new URLSearchParams({ country: "CO", taxon_key: GBIF_TAXON_AVES });
+  const params = new URLSearchParams({ country: "CO", taxonKey: GBIF_TAXON_AVES });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
 }
 
@@ -110,15 +113,15 @@ const ETIQUETA_OTROS_PUBLICADORES = "Otros publicadores";
 
 /**
  * Enlace a GBIF con las ocurrencias de aves de un TIPO de registro
- * (basis_of_record) en Colombia. El portal reconstruye el filtro desde el
- * parámetro snake_case ``basis_of_record``. ``codigo`` es el propio valor de
+ * (basisOfRecord) en Colombia. El portal reconstruye el filtro desde el
+ * parámetro camelCase ``basisOfRecord``. ``codigo`` es el propio valor de
  * GBIF (p. ej. "HUMAN_OBSERVATION", "PRESERVED_SPECIMEN").
  */
 function urlGbifTipoRegistro(codigo: string): string {
   const params = new URLSearchParams({
     country: "CO",
-    taxon_key: GBIF_TAXON_AVES,
-    basis_of_record: codigo,
+    taxonKey: GBIF_TAXON_AVES,
+    basisOfRecord: codigo,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
 }
@@ -126,29 +129,29 @@ function urlGbifTipoRegistro(codigo: string): string {
 /**
  * Enlace a GBIF con las ocurrencias de aves de Colombia de una categoría de la
  * Lista Roja de la UICN. El portal reconstruye el filtro desde el parámetro
- * snake_case ``iucn_red_list_category`` (más ``taxon_key`` y ``country``), así
+ * camelCase ``iucnRedListCategory`` (más ``taxonKey`` y ``country``), así
  * que el enlace muestra solo aves y su total coincide con el de la tabla.
  * ``codigo`` es el valor de GBIF (LC, NT, VU, EN, CR, DD, EX, EW, NE).
  */
 function urlGbifCategoriaIUCN(codigo: string): string {
   const params = new URLSearchParams({
     country: "CO",
-    taxon_key: GBIF_TAXON_AVES,
-    iucn_red_list_category: codigo,
+    taxonKey: GBIF_TAXON_AVES,
+    iucnRedListCategory: codigo,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
 }
 
 /**
  * Enlace a GBIF con las ocurrencias de UNA especie en Colombia. El portal
- * reconstruye el filtro desde el parámetro snake_case ``species_key`` (clave del
+ * reconstruye el filtro desde el parámetro camelCase ``speciesKey`` (clave del
  * backbone de GBIF), así que el enlace lleva exactamente a los registros de esa
  * especie.
  */
 function urlGbifEspecie(speciesKey: string): string {
   const params = new URLSearchParams({
     country: "CO",
-    species_key: speciesKey,
+    speciesKey: speciesKey,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
 }
@@ -159,13 +162,13 @@ function urlGbifEspecie(speciesKey: string): string {
  * opcionalmente, publicador. La pestaña "MAP" del portal muestra el mapa de
  * calor hexagonal de GBIF.
  *
- * El filtro de aves va como `taxon_key=212` (snake_case, la forma que el portal
- * reconstruye en la UI). Cuando se quiere acotar por un orden/familia concreto
- * se usa `urlGbifMapaTaxon` (página del taxón, que trae su propio mapa).
+ * El filtro de aves va como `taxonKey=V2` (camelCase, la clave del taxón Aves en
+ * el portal actual). Cuando se quiere acotar por un orden/familia concreto se
+ * usa `urlGbifMapaTaxon` (página del taxón, que trae su propio mapa).
  */
 function urlGbifMapaPublicador(orgKey: string | null): string {
-  const params = new URLSearchParams({ country: "CO", taxon_key: GBIF_TAXON_AVES });
-  if (orgKey) params.set("publishing_org", orgKey);
+  const params = new URLSearchParams({ country: "CO", taxonKey: GBIF_TAXON_AVES });
+  if (orgKey) params.set("publishingOrg", orgKey);
   return `https://www.gbif.org/occurrence/map?${params.toString()}`;
 }
 
@@ -1192,8 +1195,13 @@ function TaxonCard({
  */
 function MapaCard({ resumen }: { resumen: ResumenGBIF }) {
   // Opciones taxonómicas: todas las aves + los órdenes y familias disponibles.
+  // "__AVES__" es un centinela interno del selector para "todas las aves": NO es
+  // una clave de taxón que viaje a GBIF (ese caso usa urlGbifMapaPublicador, que
+  // ya añade taxonKey=V2). Los órdenes/familias sí usan su taxon_key del backbone
+  // en la ficha /species/{key} (urlGbifMapaTaxon).
+  const CLAVE_TODAS_AVES = "__AVES__";
   const opcionesTaxon = [
-    { clave: "212", etiqueta: "Todas las aves (Aves)" },
+    { clave: CLAVE_TODAS_AVES, etiqueta: "Todas las aves (Aves)" },
     ...resumen.ordenes.map((o) => ({
       clave: o.taxon_key,
       etiqueta: `Orden: ${o.nombre ?? o.taxon_key}`,
@@ -1204,13 +1212,13 @@ function MapaCard({ resumen }: { resumen: ResumenGBIF }) {
     })),
   ];
 
-  const [taxonKey, setTaxonKey] = useState<string>("212");
+  const [taxonKey, setTaxonKey] = useState<string>(CLAVE_TODAS_AVES);
   const [orgKey, setOrgKey] = useState<string>(""); // "" = todos los publicadores
 
   // Si hay un taxón concreto seleccionado (distinto de "todas las aves"), el
   // enlace fiable es la página del taxón (trae su mapa). Si es "todas las aves",
   // se usa el mapa del portal, que además puede filtrarse por publicador.
-  const esTodasLasAves = taxonKey === "212";
+  const esTodasLasAves = taxonKey === CLAVE_TODAS_AVES;
   const enlace = esTodasLasAves
     ? urlGbifMapaPublicador(orgKey || null)
     : urlGbifMapaTaxon(taxonKey);
