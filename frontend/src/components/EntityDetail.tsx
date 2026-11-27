@@ -50,6 +50,14 @@ function isEmptyValue(value: EntityField["value"]): boolean {
  * atenuado, para distinguirlo claramente de un dato real (Req 7.5).
  */
 export function EntityDetail({ fields }: EntityDetailProps) {
+  // Sin campos que mostrar: no se renderiza un <dl> vacío (evita un margen
+  // suelto). Ocurre, p. ej., en la vista de Seguimiento ENCA, donde el texto del
+  // Excel se muestra una sola vez como título del elemento, sin campos extra que
+  // lo repitan.
+  if (fields.length === 0) {
+    return null;
+  }
+
   return (
     <dl
       style={{

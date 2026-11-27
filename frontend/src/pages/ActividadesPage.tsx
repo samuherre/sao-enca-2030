@@ -42,9 +42,10 @@ export function ActividadesPage({ indicador }: ActividadesPageProps) {
       emptyMessage="Este Indicador no tiene Actividades registradas."
       renderItem={(actividad) => ({
         key: actividad.id,
+        // El texto de la Actividad se muestra UNA sola vez como título; no se
+        // repite en un campo Descripción (evita la duplicación visual).
         title: actividad.descripcion,
-        // Solo campo confirmado: sin atributos PENDING_VALIDATION (Req 5.8).
-        fields: [{ label: "Descripción", value: actividad.descripcion }],
+        fields: [],
         demoValues: [actividad.descripcion],
       })}
       // Nivel hoja: sin drill-down (no se pasa onSelect).

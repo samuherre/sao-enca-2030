@@ -50,12 +50,10 @@ export function IndicadoresPage({ objetivo, onSelectIndicador }: IndicadoresPage
       emptyMessage="Este Objetivo no tiene Indicadores registrados."
       renderItem={(indicador) => ({
         key: indicador.id,
+        // El texto del Indicador se muestra UNA sola vez como título; no se
+        // repite en campos Nombre/Descripción (evita la duplicación visual).
         title: indicador.nombre,
-        // Solo campos confirmados: sin atributos PENDING_VALIDATION (Req 4.7).
-        fields: [
-          { label: "Nombre", value: indicador.nombre },
-          { label: "Descripción", value: indicador.descripcion },
-        ],
+        fields: [],
         demoValues: [indicador.nombre, indicador.descripcion],
       })}
       onSelect={onSelectIndicador}

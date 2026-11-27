@@ -44,11 +44,10 @@ export function EjesPage({ onSelectEje }: EjesPageProps) {
       emptyMessage="No hay Ejes disponibles en este momento."
       renderItem={(eje) => ({
         key: eje.id,
+        // El texto del Eje (nombre) se muestra UNA sola vez como título; no se
+        // repite en campos Nombre/Descripción (evita la duplicación visual).
         title: eje.nombre,
-        fields: [
-          { label: "Nombre", value: eje.nombre },
-          { label: "Descripción", value: eje.descripcion },
-        ],
+        fields: [],
         demoValues: [eje.nombre, eje.descripcion],
       })}
       onSelect={onSelectEje}

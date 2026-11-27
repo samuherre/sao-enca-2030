@@ -39,8 +39,10 @@ export function ObjetivosPage({ meta, onSelectObjetivo }: ObjetivosPageProps) {
       emptyMessage="Esta Meta no tiene Objetivos registrados."
       renderItem={(objetivo) => ({
         key: objetivo.id,
+        // El texto del Objetivo se muestra UNA sola vez como título; no se
+        // repite en un campo Descripción (evita la duplicación visual).
         title: objetivo.descripcion,
-        fields: [{ label: "Descripción", value: objetivo.descripcion }],
+        fields: [],
         demoValues: [objetivo.descripcion],
       })}
       onSelect={onSelectObjetivo}

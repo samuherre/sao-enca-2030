@@ -5,7 +5,8 @@
 //     Actividades.
 //   - Req 4.7 / 9.1: la vista NO muestra atributos PENDING_VALIDATION del
 //     Indicador (unidad de medida, valor objetivo/actual, fecha, fuente,
-//     estado): solo los campos confirmados `nombre` y `descripcion`.
+//     estado). El texto del indicador se muestra UNA sola vez (como título),
+//     sin duplicarlo en campos Nombre/Descripción.
 
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -41,9 +42,9 @@ describe("IndicadoresPage", () => {
 
     render(<IndicadoresPage objetivo={OBJETIVO} onSelectIndicador={vi.fn()} />);
 
-    // "Cobertura" aparece como título y como valor del campo "Nombre".
+    // El texto del indicador se muestra como título (una sola vez, sin
+    // duplicarlo en campos Nombre/Descripción).
     expect((await screen.findAllByText("Cobertura")).length).toBeGreaterThan(0);
-    expect(screen.getByText("Porcentaje de cobertura")).toBeInTheDocument();
 
     // Ningún atributo PENDING_VALIDATION del Indicador se renderiza.
     expect(screen.queryByText(/unidad de medida/i)).not.toBeInTheDocument();

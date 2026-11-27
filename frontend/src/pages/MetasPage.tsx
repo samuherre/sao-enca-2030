@@ -39,8 +39,10 @@ export function MetasPage({ eje, onSelectMeta }: MetasPageProps) {
       emptyMessage="Este Eje no tiene Metas registradas."
       renderItem={(meta) => ({
         key: meta.id,
+        // El texto de la Meta se muestra UNA sola vez como título; no se repite
+        // en un campo Descripción (evita la duplicación visual).
         title: meta.descripcion,
-        fields: [{ label: "Descripción", value: meta.descripcion }],
+        fields: [],
         demoValues: [meta.descripcion],
       })}
       onSelect={onSelectMeta}
