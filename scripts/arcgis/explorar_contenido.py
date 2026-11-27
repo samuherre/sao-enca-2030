@@ -80,25 +80,33 @@ def _listar_contenido(gis, buscar: str | None, limite: int) -> None:
     print(f"Organización:   {gis.properties.get('name', '?')}")
     print("-" * 70)
 
-    # Contenido propio del usuario (carpetas incluidas).
-    propios = usuario.items(max_items=1000)
-    carpetas = usuario.folders or []
-    for carpeta in carpetas:
-        nombre_carpeta = carpeta["title"] if isinstance(carpeta, dict) else str(carpeta)
-        propios += usuario.items(folder=nombre_carpeta, max_items=1000)
-
-    # Búsqueda amplia en la organización (por si hay items de otros usuarios,
-    # como los de jcgomez_dreamgis). query vacío = todo lo accesible.
-    consulta = f"title:{buscar}" if buscar else ""
-    de_org = gis.content.search(query=consulta, max_items=limite) if consulta else []
-
     vistos: dict[str, object] = {}
-    for item in propios + de_org:
+
+    # 1) Contenido propio del usuario. ``items()`` puede devolver un generador en
+    #    algunas versiones del paquete; se normaliza a lista. Las carpetas se
+    #    recorren por nombre.
+    def _a_lista(resultado) -> list:
+        return list(resultado) if resultado is not None else []
+
+    for item in _a_lista(usuario.items(max_items=1000)):
+        vistos[item.id] = item
+    for carpeta in _a_lista(usuario.folders):
+        nombre_carpeta = carpeta.get("title") if isinstance(carpeta, dict) else str(carpeta)
+        if not nombre_carpeta:
+            continue
+        for item in _a_lista(usuario.items(folder=nombre_carpeta, max_items=1000)):
+            vistos[item.id] = item
+
+    # 2) Búsqueda amplia en la organización (incluye items de otros usuarios, p.
+    #    ej. jcgomez_dreamgis). Con filtro de texto usa title; sin filtro trae lo
+    #    accesible mas reciente (acotado por ``limite``).
+    consulta = f"title:{buscar}" if buscar else ""
+    for item in _a_lista(gis.content.search(query=consulta, max_items=limite)):
         vistos[item.id] = item
 
-    filas = sorted(vistos.values(), key=lambda it: (it.type, it.title.lower()))
+    filas = sorted(vistos.values(), key=lambda it: (it.type, (it.title or "").lower()))
     if buscar:
-        filas = [it for it in filas if buscar.lower() in it.title.lower()]
+        filas = [it for it in filas if buscar.lower() in (it.title or "").lower()]
 
     print(f"Items accesibles: {len(filas)}"
           + (f"  (filtro: '{buscar}')" if buscar else ""))
@@ -108,7 +116,6 @@ def _listar_contenido(gis, buscar: str | None, limite: int) -> None:
         if it.type != tipo_actual:
             tipo_actual = it.type
             print(f"\n== {tipo_actual} ==")
-        compartido = getattr(getattr(it, "shared_with", None), "get", lambda *_: None)
         print(f"  • {it.title}")
         print(f"      id={it.id}  owner={it.owner}")
         if it.url:
