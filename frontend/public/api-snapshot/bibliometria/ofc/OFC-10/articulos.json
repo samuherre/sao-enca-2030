@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-10",
   "nombre": "Sistemas culturales asociados a la apreciación de las aves",
-  "total": 15,
-  "mostrados": 15,
+  "total": 16,
+  "mostrados": 16,
   "items": [
     {
       "titulo": "Applying Two‐Eyed Seeing to Pair Indigenous Ecological Calendars and Community Science Data for Biodiversity Monitoring in Amazonia",
@@ -21,6 +21,12 @@
       "anio": 2026,
       "revista": "Global Biodiversity Information Facility",
       "enlace": "https://doi.org/10.15468/dl.ygynxe"
+    },
+    {
+      "titulo": "OO Perfil dos Condutores de Turismo da Área de Proteção Ambiental Delta do Parnaíba: Percepções sobre o Birdwatching ea Conservação",
+      "anio": 2026,
+      "revista": "Anais Brasileiros de Estudos …",
+      "enlace": "https://dialnet.unirioja.es/servlet/articulo?codigo=10792350"
     },
     {
       "titulo": "Registros de mamíferos y aves asociados al monitoreo pasivo del oso andino con cámaras trampa en el complejo de páramos Las Hermosas, Resguardo Indígena Las Mercedes",

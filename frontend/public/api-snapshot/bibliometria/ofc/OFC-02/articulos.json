@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-02",
   "nombre": "Aves de humedales interiores de agua dulce",
-  "total": 224,
+  "total": 241,
   "mostrados": 100,
   "items": [
     {
@@ -263,6 +263,12 @@
       "enlace": "https://doi.org/10.21789/22561498.2223"
     },
     {
+      "titulo": "Waterfowl's presence enhanced N2O emissions from restored coastal wetlands: Trade-offs between biodiversity and climate",
+      "anio": 2026,
+      "revista": "Journal of …",
+      "enlace": "https://www.sciencedirect.com/science/article/pii/S0301479726021778"
+    },
+    {
       "titulo": "Zonas prioritarias para la conectividad de un grupo focal de aves entre dos áreas protegidas de los Andes Centrales de Colombia: PNN Selva de Florencia y DMI Laguna de San Diego",
       "anio": 2026,
       "revista": "Repositorio Institucional (Pontificia Universidad Javeriana)",
@@ -317,6 +323,12 @@
       "enlace": "https://doi.org/10.15472/iycuwr"
     },
     {
+      "titulo": "Aviturismo en conservación: experiencias en Argentina y Chile",
+      "anio": 2025,
+      "revista": null,
+      "enlace": "https://www.researchgate.net/profile/Jaime-Rau/publication/273570646_Aviturismo_en_Conservacion_Experiencias_en_Argentina_y_Chile/links/5505a2030cf231de07778212/Aviturismo-en-Conservacion-Experiencias-en-Argentina-y-Chile.pdf"
+    },
+    {
       "titulo": "Biodiversidad de las lagunas del Parque Nacional Natural Puracé: Composición taxonómica y estados de conservación",
       "anio": 2025,
       "revista": "Acta Biológica Colombiana",
@@ -357,6 +369,12 @@
       "anio": 2025,
       "revista": "Revista Mutis",
       "enlace": "https://doi.org/10.21789/22561498.2175"
+    },
+    {
+      "titulo": "East Atlantic Flyway Assessment 2023. The status of coastal waterbird populations and their sites.",
+      "anio": 2025,
+      "revista": null,
+      "enlace": "https://pure.au.dk/portal/en/publications/east-atlantic-flyway-assessment-2023-the-status-of-coastal-waterb/"
     },
     {
       "titulo": "Ecorregión de Los Llanos: mosaico de vida, más de 11 000 especies de plantas y animales",
@@ -405,6 +423,12 @@
       "anio": 2025,
       "revista": "Wiley eBooks",
       "enlace": "https://doi.org/10.1002/9781394307166.ch02"
+    },
+    {
+      "titulo": "Reserva ProAves El Jaguar: conservación, investigación y equidad de género en defensa de la naturaleza",
+      "anio": 2025,
+      "revista": "Conservación Colombiana",
+      "enlace": "https://proaves.org/wp-content/uploads/2025/07/CC-30_1_Art3_n2.pdf"
     },
     {
       "titulo": "Too Much Terror: A Gigantic Terror Bird (Cariamiformes: Phorusrhacidae) from the Middle Miocene of La Venta, Colombia",
@@ -471,6 +495,12 @@
       "anio": 2024,
       "revista": "Frontiers in Veterinary Science",
       "enlace": "https://doi.org/10.3389/fvets.2023.1307585"
+    },
+    {
+      "titulo": "Comportamiento de aves y visitantes Humedal de Caulín Isla Grande de Chiloé-Chile.",
+      "anio": 2024,
+      "revista": null,
+      "enlace": "https://www.researchgate.net/profile/Jaime-Rau/publication/313559102_Comportamiento_de_aves_y_visitantes_Humedal_de_Caulin_Isla_Grande_de_Chiloe_Chile_Serie_Turismo_y_Conservacion_Editorial_Universidad_Nacional_del_Comahue_Neuquen_Argentina/links/589e1c8b45851598bab4401d/Comportamiento-de-aves-y-visitantes-Humedal-de-Caulin-Isla-Grande-de-Chiloe-Chile-Serie-Turismo-y-Conservacion-Editorial-Universidad-Nacional-del-Comahue-Neuquen-Argentina.pdf"
     },
     {
       "titulo": "Decoding biodiversity patterns and community structure of the lower Magdalena River (Colombia) using environmental DNA",
@@ -573,36 +603,6 @@
       "anio": 2024,
       "revista": "Ornitología colombiana",
       "enlace": "https://doi.org/10.59517/oc.e600"
-    },
-    {
-      "titulo": "Rivers of the Northern Pacific",
-      "anio": 2024,
-      "revista": "Elsevier eBooks",
-      "enlace": "https://doi.org/10.1016/b978-0-12-823429-7.00005-7"
-    },
-    {
-      "titulo": "Serological and molecular detection of dengue virus in animals: A systematic review and meta-analysis",
-      "anio": 2024,
-      "revista": "Infezioni in Medicina",
-      "enlace": "https://doi.org/10.53854/liim-3202-7"
-    },
-    {
-      "titulo": "SINTESIS DE LOS CAMBIOS DE ORIGEN ANTROPICO OCURRIDOS EN LOS ULTIMOS 40 AÑOS EN LA CIENAGA DE SANTA MARTA (COLOMBIA)",
-      "anio": 2024,
-      "revista": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
-      "enlace": "https://doi.org/10.18257/raccefyn.20(78).1996.3055"
-    },
-    {
-      "titulo": "Toward Sustainable Biocultural Ecotourism: An Integrated Spatial Analysis of Cultural and Biodiversity Richness in Colombia",
-      "anio": 2024,
-      "revista": "People and Nature",
-      "enlace": "https://doi.org/10.1002/pan3.10755"
-    },
-    {
-      "titulo": "Uso de bioindicadores para determinar la presencia de contaminantes en cuerpos de agua",
-      "anio": 2024,
-      "revista": "Revista Ing-Nova",
-      "enlace": "http://dx.doi.org/10.32997/rin-2024-4942"
     }
   ]
 }

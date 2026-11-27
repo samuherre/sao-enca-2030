@@ -388,25 +388,25 @@
     {
       "ofc_id": "OFC-01",
       "nombre": "Aves de hábitats marinos, costeros y de manglar",
-      "conteo": 15,
+      "conteo": 17,
       "grado_colaboracion": 0.67,
       "gc_articulos_contables": 15,
-      "gc_articulos_sin_autoria": 0
+      "gc_articulos_sin_autoria": 2
     },
     {
       "ofc_id": "OFC-02",
       "nombre": "Aves de humedales interiores de agua dulce",
-      "conteo": 25,
-      "grado_colaboracion": 0.74,
-      "gc_articulos_contables": 23,
-      "gc_articulos_sin_autoria": 2
+      "conteo": 28,
+      "grado_colaboracion": 0.68,
+      "gc_articulos_contables": 25,
+      "gc_articulos_sin_autoria": 3
     },
     {
       "ofc_id": "OFC-03",
       "nombre": "Aves de sabanas y pastizales naturales",
-      "conteo": 6,
-      "grado_colaboracion": 0.8,
-      "gc_articulos_contables": 5,
+      "conteo": 7,
+      "grado_colaboracion": 0.67,
+      "gc_articulos_contables": 6,
       "gc_articulos_sin_autoria": 1
     },
     {
@@ -428,45 +428,45 @@
     {
       "ofc_id": "OFC-06",
       "nombre": "Aves de bosques premontanos y montanos",
-      "conteo": 10,
+      "conteo": 11,
       "grado_colaboracion": 0.8,
       "gc_articulos_contables": 10,
-      "gc_articulos_sin_autoria": 0
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-07",
       "nombre": "Aves de alta montaña",
       "conteo": 16,
-      "grado_colaboracion": 0.53,
-      "gc_articulos_contables": 15,
-      "gc_articulos_sin_autoria": 1
+      "grado_colaboracion": 0.5,
+      "gc_articulos_contables": 16,
+      "gc_articulos_sin_autoria": 0
     },
     {
       "ofc_id": "OFC-08",
       "nombre": "Aves en sistemas urbanos",
-      "conteo": 15,
+      "conteo": 18,
       "grado_colaboracion": 0.87,
       "gc_articulos_contables": 15,
-      "gc_articulos_sin_autoria": 0
+      "gc_articulos_sin_autoria": 3
     },
     {
       "ofc_id": "OFC-09",
       "nombre": "Aves en agroecosistemas",
-      "conteo": 4,
+      "conteo": 5,
       "grado_colaboracion": 0.75,
       "gc_articulos_contables": 4,
-      "gc_articulos_sin_autoria": 0
+      "gc_articulos_sin_autoria": 1
     },
     {
       "ofc_id": "OFC-11",
       "nombre": "Aviturismo",
-      "conteo": 13,
+      "conteo": 19,
       "grado_colaboracion": 0.85,
       "gc_articulos_contables": 13,
-      "gc_articulos_sin_autoria": 0
+      "gc_articulos_sin_autoria": 6
     }
   ],
-  "sin_ofc": 154,
+  "sin_ofc": 176,
   "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
   "catalogo_ofc": [
     {

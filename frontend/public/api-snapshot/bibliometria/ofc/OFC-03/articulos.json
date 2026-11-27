@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-03",
   "nombre": "Aves de sabanas y pastizales naturales",
-  "total": 69,
-  "mostrados": 69,
+  "total": 75,
+  "mostrados": 75,
   "items": [
     {
       "titulo": "Data from: Origins and diversification of the Caatinga dry forest endemic avifauna",
@@ -15,6 +15,12 @@
       "anio": 2026,
       "revista": "Repositorio Institucional (Pontificia Universidad Javeriana)",
       "enlace": "http://hdl.handle.net/10554/72073"
+    },
+    {
+      "titulo": "Limited capacity of habitat features to buffer grassland bird declines",
+      "anio": 2026,
+      "revista": "Ecological …",
+      "enlace": "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.70298"
     },
     {
       "titulo": "Multi-phase migration models for Nearctic-Neotropical migrant birds can inform conservation planning",
@@ -83,6 +89,12 @@
       "enlace": "https://doi.org/10.1111/jbi.70003"
     },
     {
+      "titulo": "PACSP-Tools: Restoring Grassland Bird Populations using Genomically-Informed, Full Annual Cycle, Integrated Population Models",
+      "anio": 2025,
+      "revista": "NSF Award",
+      "enlace": "https://ui.adsabs.harvard.edu/abs/2025nsf....2430150R/abstract"
+    },
+    {
       "titulo": "Wetlands’ Ecotourism Planning in the Savannas of Colombia. Linking Remote Sensing and Biodiversity",
       "anio": 2025,
       "revista": "Springer eBooks",
@@ -117,6 +129,12 @@
       "anio": 2024,
       "revista": "Ciencia Unisalle (Universidad de La Salle)",
       "enlace": "https://hdl.handle.net/20.500.14625/37653"
+    },
+    {
+      "titulo": "A global review identifies agriculture as the main threat to declining grassland birds",
+      "anio": 2023,
+      "revista": "Ibis",
+      "enlace": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ibi.13223"
     },
     {
       "titulo": "Aves de un Parque Regional en los límites de Bogotá: comparación entre diferentes coberturas urbanas y áreas en proceso de restauración ecológica",
@@ -213,6 +231,12 @@
       "anio": 2022,
       "revista": "Frontiers in Environmental Science",
       "enlace": "https://doi.org/10.3389/fenvs.2021.689745"
+    },
+    {
+      "titulo": "Las aves amenazadas como indicadores de sustentabilidad ambiental de la actividad ganadera y de conservación en pastizales del nordeste argentino",
+      "anio": 2022,
+      "revista": null,
+      "enlace": "https://repositorio.unne.edu.ar/items/adf53b21-9d5d-4a22-8f16-270f50832bf2"
     },
     {
       "titulo": "Los floricultivos de la Sabana de Bogotá y su relación con la avifauna: una mirada desde los municipios de Madrid, El Rosal y Facatativá",
@@ -317,6 +341,12 @@
       "enlace": "https://doi.org/10.59517/oc.e368"
     },
     {
+      "titulo": "Ecología y conservación del carancho austral (Phalcoboenus australis) en Isla de los Estados",
+      "anio": 2021,
+      "revista": null,
+      "enlace": "https://bibliotecadigital.exactas.uba.ar/greenstone3/exa/collection/tesis/document/tesis_n6989_Balza"
+    },
+    {
       "titulo": "Estimates of breeding season location for 4 mesic prairie bird species wintering along the Gulf Coast",
       "anio": 2021,
       "revista": "The Wilson Journal of Ornithology",
@@ -405,6 +435,12 @@
       "anio": 2020,
       "revista": "Boletín SAO",
       "enlace": null
+    },
+    {
+      "titulo": "Los bordes de vías férreas como áreas clave para la conservación de la biodiversidad en la Región Pampeana",
+      "anio": 2020,
+      "revista": null,
+      "enlace": "https://www.lareferencia.info/vufind/Record/AR_d6a5067d5f748e18f252101af5e6e7a4"
     },
     {
       "titulo": "Oso hormiguero",

@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-01",
   "nombre": "Aves de hábitats marinos, costeros y de manglar",
-  "total": 107,
+  "total": 119,
   "mostrados": 100,
   "items": [
     {
@@ -143,6 +143,12 @@
       "enlace": "https://doi.org/10.21789/22561498.2223"
     },
     {
+      "titulo": "Waterfowl's presence enhanced N2O emissions from restored coastal wetlands: Trade-offs between biodiversity and climate",
+      "anio": 2026,
+      "revista": "Journal of …",
+      "enlace": "https://www.sciencedirect.com/science/article/pii/S0301479726021778"
+    },
+    {
       "titulo": "Aves acuáticas en lagunas altoandinas del sur del Parque Nacional Natural Puracé, Colombia",
       "anio": 2025,
       "revista": "Boletín Científico Centro de Museos Museo de Historia Natural",
@@ -167,6 +173,12 @@
       "enlace": "https://doi.org/10.15472/kz6mh8"
     },
     {
+      "titulo": "East Atlantic Flyway Assessment 2023. The status of coastal waterbird populations and their sites.",
+      "anio": 2025,
+      "revista": null,
+      "enlace": "https://pure.au.dk/portal/en/publications/east-atlantic-flyway-assessment-2023-the-status-of-coastal-waterb/"
+    },
+    {
       "titulo": "El Turismo Científico en Colombia Insular: estudio de caso en San Andrés y Providencia para la conservación, la educación ambiental y el desarrollo sostenible",
       "anio": 2025,
       "revista": "Revista Rosa dos Ventos - Turismo e Hospitalidade",
@@ -185,10 +197,22 @@
       "enlace": "https://doi.org/10.2139/ssrn.5126346"
     },
     {
+      "titulo": "Potential of Drones for Avian Ecological Monitoring in West African Mangrove Ecosystems",
+      "anio": 2025,
+      "revista": "Open Journal of …",
+      "enlace": "https://www.scirp.org/journal/paperinformation?paperid=142128"
+    },
+    {
       "titulo": "Primeros registros del Playerito de rabadilla blanca (Calidris fuscicollis) y del Toche arrocero (Dolichonyx oryzivorus) en el departamento de Boyacá, Colombia en el marco del Global Big Day",
       "anio": 2025,
       "revista": "Revista Mutis",
       "enlace": "https://doi.org/10.21789/22561498.2129"
+    },
+    {
+      "titulo": "Turismo de observação de aves (birdwatching) em três cidades do litoral norte do RS",
+      "anio": 2025,
+      "revista": "Seminário Internacional de …",
+      "enlace": "https://anaisonline.uems.br/sider/article/view/11719"
     },
     {
       "titulo": "Vulnerability of marine megafauna to global at‐sea anthropogenic threats",
@@ -245,6 +269,12 @@
       "enlace": "https://doi.org/10.22370/rbmo.2024.59.1.4465"
     },
     {
+      "titulo": "Quantifying the effects of energy infrastructure on bird populations and biodiversity",
+      "anio": 2024,
+      "revista": "Environmental Science &Technology",
+      "enlace": "https://pubs.acs.org/esthag/article-abstract/58/1/323/233223"
+    },
+    {
       "titulo": "SINTESIS DE LOS CAMBIOS DE ORIGEN ANTROPICO OCURRIDOS EN LOS ULTIMOS 40 AÑOS EN LA CIENAGA DE SANTA MARTA (COLOMBIA)",
       "anio": 2024,
       "revista": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
@@ -285,6 +315,12 @@
       "anio": 2023,
       "revista": "Ecology and Evolution",
       "enlace": "https://doi.org/10.1002/ece3.10138"
+    },
+    {
+      "titulo": "Estimated mortality of the highly pathogenic avian influenza pandemic on northern gannets (Morus bassanus) in southwest Ireland",
+      "anio": 2023,
+      "revista": "Biology …",
+      "enlace": "https://royalsocietypublishing.org/rsbl/article-abstract/19/6/20230090/63328"
     },
     {
       "titulo": "FAUNA ASOCIADA A LOS MANGLARES Y OTROS HUMEDALES EN EL DELTA-ESTUARIO DEL RÍO MAGDALENA, COLOMBIA",
@@ -395,6 +431,12 @@
       "enlace": "https://doi.org/10.1111/jbi.14524"
     },
     {
+      "titulo": "Humedales costeros del río Maullín: uno de los lugares con mayor diversidad de aves acuáticas en Chile",
+      "anio": 2022,
+      "revista": "Anales del Instituto de …",
+      "enlace": "https://www.scielo.cl/scielo.php?pid=S0718-686X2022000100201&script=sci_arttext&tlng=en"
+    },
+    {
       "titulo": "Hábitats prioritarios en un humedal costero del Pacífico: propuesta de un índice basado en servicios ecosistémicos",
       "anio": 2022,
       "revista": "Rev. acad. colomb. cienc. exact. fis. nat.",
@@ -443,6 +485,12 @@
       "enlace": "https://doi.org/10.3354/dao03699"
     },
     {
+      "titulo": "Análisis de la diversidad de aves marinas y playeras existentes en tres provincias del Ecuador durante el período 2009-2018",
+      "anio": 2021,
+      "revista": null,
+      "enlace": "https://repositorio.upse.edu.ec/items/910744a2-269c-45ba-8fa7-f53bef22afda"
+    },
+    {
       "titulo": "Aplicación tecnológica para impulsar el turismo de avistamiento de aves",
       "anio": 2021,
       "revista": "Mundo FESC",
@@ -459,6 +507,12 @@
       "anio": 2021,
       "revista": "Ornitología colombiana",
       "enlace": "https://doi.org/10.59517/oc.e330"
+    },
+    {
+      "titulo": "Bird strandings and bright lights at coastal and offshore industrial sites in Atlantic Canada.",
+      "anio": 2021,
+      "revista": "Avian Conservation …",
+      "enlace": "https://pdfs.semanticscholar.org/9683/2b6b39eed81c46e5f6b324e3119a882549a8.pdf"
     },
     {
       "titulo": "Comparación de la disponibilidad de presas para Setophaga petechia gundlachi (Aves: Parulidae) entre dos manglares con diferente estructura de la vegetación",
@@ -483,6 +537,12 @@
       "anio": 2021,
       "revista": "Boletín SAO",
       "enlace": null
+    },
+    {
+      "titulo": "Identification of urban flight corridors for migratory birds in the coastal regions of Shenzhen city based on three-dimensional landscapes",
+      "anio": 2021,
+      "revista": "Landscape Ecology",
+      "enlace": "https://link.springer.com/article/10.1007/s10980-020-01032-6"
     },
     {
       "titulo": "Lista de chequeo de las aves de Colombia: Una síntesis del estado del conocimiento desde Hilty & Brown (1986)",
@@ -543,66 +603,6 @@
       "anio": 2021,
       "revista": "Bol. Invest. Mar. Cost.",
       "enlace": "https://doi.org/10.25268/bimc.invemar.2021.50.1.1084"
-    },
-    {
-      "titulo": "Una lista anotada de las aves de la isla Malpelo",
-      "anio": 2021,
-      "revista": "Ornitología colombiana",
-      "enlace": "https://doi.org/10.59517/oc.e141"
-    },
-    {
-      "titulo": "What does resilience sound like? Coral reef and dry forest acoustic communities respond differently to Hurricane Maria",
-      "anio": 2021,
-      "revista": "Ecological Indicators",
-      "enlace": "https://doi.org/10.1016/j.ecolind.2021.107635"
-    },
-    {
-      "titulo": "250 años del natalicio de la ciencia criolla. El grito de independencia de la ciencia en la Colombia española",
-      "anio": 2020,
-      "revista": "P P D Q Boletín",
-      "enlace": "https://doi.org/10.17227/ppdq.2019.num59.11327"
-    },
-    {
-      "titulo": "AmarAzul: agencia de viajes especializada en el desarrollo del turismo sostenible en Cereté (Córdoba)",
-      "anio": 2020,
-      "revista": "Repositorio Universidad de Córdoba",
-      "enlace": "https://repositorio.unicordoba.edu.co/handle/ucordoba/3646"
-    },
-    {
-      "titulo": "Asociación de la temperatura superficial del mar y la abundancia del Piquero Café (Sula leucogaster) según el estado de desarrollo en el Parque Nacional Natural Gorgona",
-      "anio": 2020,
-      "revista": "Boletín de Investigaciones Marinas y Costeras",
-      "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1046"
-    },
-    {
-      "titulo": "Dieta y amplitud del nicho trófico del cormorán neotropical [Nannopterum brasilianus (Gmelin, 1789)] en el Santuario de Flora y Fauna Ciénaga Grande de Santa Marta, Caribe de Colombia",
-      "anio": 2020,
-      "revista": "Bol. Invest. Mar. Cost.",
-      "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1072"
-    },
-    {
-      "titulo": "Distribución y abundancia de las aves playeras en planos intermareales del Parque Nacional Natural Sanquianga y la bocana de Iscuandé, Nariño (Colombia), entre 2009 y 2020",
-      "anio": 2020,
-      "revista": "Boletín de Investigaciones Marinas y Costeras",
-      "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1094"
-    },
-    {
-      "titulo": "Distribución y abundancia de las aves playeras en planos intermareales del Parque Nacional Natural Sanquianga y la bocana de Iscuandé, Nariño (Colombia), entre 2009 y 2020",
-      "anio": 2020,
-      "revista": "Bol. Invest. Mar. Cost.",
-      "enlace": "https://doi.org/10.25268/bimc.invemar.2020.49.suplesp.1094"
-    },
-    {
-      "titulo": "Diurnal Flying Activity of a Neotropical Bat (Saccopteryx leptura): Effect of Light Intensity, Temperature, and Canopy Cover",
-      "anio": 2020,
-      "revista": "Acta Chiropterologica",
-      "enlace": "https://doi.org/10.3161/15081109acc2020.22.1.008"
-    },
-    {
-      "titulo": "Occurrence Download",
-      "anio": 2020,
-      "revista": "Global Biodiversity Information Facility",
-      "enlace": "https://doi.org/10.15468/dl.8w8ecw"
     }
   ]
 }

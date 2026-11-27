@@ -89,9 +89,9 @@
   "instituciones_primer_autor": [],
   "instituciones_presencia": [],
   "colaboracion_por_anio": [],
-  "clasificacion_disponible": false,
+  "clasificacion_disponible": true,
   "por_ofc": [],
-  "sin_ofc": 0,
+  "sin_ofc": 1,
   "ofc_descripcion": "Los objetos focales son indicadores que nos ayudan a identificar los avances que vayamos logrando cada año en términos de la conservación de especies y ecosistemas. Son comparables con los valores objetos de conservación (VOC) de los planes de manejo de áreas. La ENCA cuenta con 11 objetos focales representativos de la avifauna residente y migratoria y de los distintos hábitats que ellas utilizan.",
   "catalogo_ofc": [
     {

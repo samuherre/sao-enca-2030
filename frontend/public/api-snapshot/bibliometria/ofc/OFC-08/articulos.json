@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-08",
   "nombre": "Aves en sistemas urbanos",
-  "total": 176,
+  "total": 193,
   "mostrados": 100,
   "items": [
     {
@@ -9,6 +9,12 @@
       "anio": 2026,
       "revista": "Ornitología colombiana",
       "enlace": "https://doi.org/10.59517/oc.e642"
+    },
+    {
+      "titulo": "Agricultural and urbanized avian communities diverge via nestedness and turnover in a heterogenous urban agroecosystem",
+      "anio": 2026,
+      "revista": "…",
+      "enlace": "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecs2.70770"
     },
     {
       "titulo": "Análisis de la comunidad de aves en hábitats urbanos y periurbanos: caso de estudio en el Campus de Ciencias del Mar (2022-2023)",
@@ -69,6 +75,12 @@
       "anio": 2026,
       "revista": "Urban Ecosystems",
       "enlace": "https://doi.org/10.1007/s11252-025-01863-8"
+    },
+    {
+      "titulo": "Interactions between urbanization, malaria infection and avian cloacal microbiome",
+      "anio": 2026,
+      "revista": "Environmental …",
+      "enlace": "https://www.sciencedirect.com/science/article/pii/S0013935126004019"
     },
     {
       "titulo": "Knowledge, perceptions, and declared attitudes of rural and urban students toward wild vertebrates in Facatativá, Colombian Andes",
@@ -155,10 +167,22 @@
       "enlace": null
     },
     {
+      "titulo": "Aves del campus central de la Universidad de Antioquia, Medellín, Colombia",
+      "anio": 2025,
+      "revista": "Boletín …",
+      "enlace": "https://www.researchgate.net/profile/Sergio-Chaparro-Herrera/publication/389588450_Aves_del_Campus_Central_de_la_Universidad_de_Antioquia_Medellin_Colombia/links/67c87ea9bab3d32d843f1b55/Aves-del-Campus-Central-de-la-Universidad-de-Antioquia-Medellin-Colombia.pdf"
+    },
+    {
       "titulo": "Biodiversidad de aves en el Distrito Especial de Medellín y la Reserva Forestal Protectora Regional Alto de San Miguel",
       "anio": 2025,
       "revista": "SiB Colombia - GBIF Colombia",
       "enlace": "https://doi.org/10.15472/7raaek"
+    },
+    {
+      "titulo": "Bird-watching and eco-crafting bird feeders as nature-based experiential learning activities for students in urban areas",
+      "anio": 2025,
+      "revista": "Urban Ecosystems",
+      "enlace": "https://link.springer.com/article/10.1007/s11252-024-01611-4"
     },
     {
       "titulo": "Birds of a Feather Resist Together: Sociality and Species Predict the Resilience and Recovery Strategies of Two Neotropical Birds",
@@ -305,6 +329,12 @@
       "enlace": "https://doi.org/10.34069/ra/2024.14.01"
     },
     {
+      "titulo": "Avian Habitat Identification and Network Construction in Nanjing",
+      "anio": 2024,
+      "revista": "Landscape Architecture",
+      "enlace": "https://www.sciengine.com/doi/10.3724/j.fjyl.202405210282"
+    },
+    {
       "titulo": "Categorizing urban avoiders, utilizers, and dwellers for identifying bird conservation priorities in a Northern Andean city",
       "anio": 2024,
       "revista": "Frontiers in Ecology and Evolution",
@@ -345,6 +375,12 @@
       "anio": 2024,
       "revista": "Animals",
       "enlace": "https://doi.org/10.3390/ani14243564"
+    },
+    {
+      "titulo": "Ecological network construction for bird communities in high-density urban areas: A perspective of integrated approaches",
+      "anio": 2024,
+      "revista": "Ecological …",
+      "enlace": "https://www.sciencedirect.com/science/article/pii/S1470160X24000499"
     },
     {
       "titulo": "Estudio observacional descriptivo de la presencia de palomas enespacios urbanos y su impacto en la salud pública en Montería,Colombia",
@@ -551,6 +587,12 @@
       "enlace": "http://hdl.handle.net/11349/41645"
     },
     {
+      "titulo": "Traits shaping urban tolerance in birds differ around the world",
+      "anio": 2023,
+      "revista": "Current Biology",
+      "enlace": "https://www.cell.com/current-biology/fulltext/S0960-9822(23)00312-3"
+    },
+    {
       "titulo": "Transmisión del canto de Zonotrichia capensis en escenarios con distinta intensidad de ruido",
       "anio": 2023,
       "revista": "Ornitología colombiana",
@@ -561,48 +603,6 @@
       "anio": 2023,
       "revista": "Espacio y Desarrollo",
       "enlace": "https://doi.org/10.18800/espacioydesarrollo.202301.001"
-    },
-    {
-      "titulo": "Urbanisation generates multiple trait syndromes for terrestrial animal taxa worldwide",
-      "anio": 2023,
-      "revista": "Nature Communications",
-      "enlace": "https://doi.org/10.1038/s41467-023-39746-1"
-    },
-    {
-      "titulo": "¿ES SAYORNIS NIGRICANS (AVES: TYRANNIDAE) UN BUEN INDICADOR DE CALIDAD AMBIENTAL EN LA ZONA URBANA DE CALI, COLOMBIA?",
-      "anio": 2023,
-      "revista": "Revista de la Academia Colombiana de Ciencias Exactas Físicas y Naturales",
-      "enlace": "http://dx.doi.org/10.18257/raccefyn.34(132).2010.2458"
-    },
-    {
-      "titulo": "Are birds more afraid in urban parks or cemeteries? A Latin American study contrasts with results from Europe",
-      "anio": 2022,
-      "revista": "The Science of The Total Environment",
-      "enlace": "https://doi.org/10.1016/j.scitotenv.2022.160534"
-    },
-    {
-      "titulo": "Aves de la Universidad del Magdalena: análisis de la diversidad y actualización de registros",
-      "anio": 2022,
-      "revista": "Intropica",
-      "enlace": "https://doi.org/10.21676/23897864.4224"
-    },
-    {
-      "titulo": "Aves de los Ecoparques de Manizales, Departamento de Caldas, Andes Centrales de Colombia",
-      "anio": 2022,
-      "revista": "The Catalogue of Life",
-      "enlace": "https://doi.org/10.48580/d82cv"
-    },
-    {
-      "titulo": "Aves en la U",
-      "anio": 2022,
-      "revista": null,
-      "enlace": "http://doi.org/10.30554/978-958-5468-39-9"
-    },
-    {
-      "titulo": "Banco sonoro participativo, construido a partir de la etno ornitología, asociado a las aves presentes en las comunidades indígenas aledañas al casco urbano de Mitú, Vaupés",
-      "anio": 2022,
-      "revista": "Revista de Investigaciones Agroempresariales",
-      "enlace": "http://dx.doi.org/10.23850/25004468.4807"
     }
   ]
 }

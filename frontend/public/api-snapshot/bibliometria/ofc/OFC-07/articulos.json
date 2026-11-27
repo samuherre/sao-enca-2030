@@ -1,7 +1,7 @@
 {
   "ofc_id": "OFC-07",
   "nombre": "Aves de alta montaña",
-  "total": 123,
+  "total": 124,
   "mostrados": 100,
   "items": [
     {
@@ -527,6 +527,12 @@
       "enlace": "https://doi.org/10.3897/neotropical.17.e66096"
     },
     {
+      "titulo": "Applying opportunistic observations to model current and future suitability of the Kopet Dagh Mountains for a Near Threatened avian scavenger",
+      "anio": 2021,
+      "revista": "Avian Biology …",
+      "enlace": "https://journals.sagepub.com/doi/abs/10.1177/1758155920962750"
+    },
+    {
       "titulo": "Diaz, D. 2020. Diversidad funcional de la avifauna en el bosque altoandino del cerro Bochica en Chipaque, Cundinamarca: Resúmenes VI Congreso Colombiano de Ornitología 2019",
       "anio": 2021,
       "revista": "Ornitología colombiana",
@@ -597,12 +603,6 @@
       "anio": 2021,
       "revista": "Global Biodiversity Information Facility",
       "enlace": "https://doi.org/10.15468/dl.hgu9yf"
-    },
-    {
-      "titulo": "Occurrence Download",
-      "anio": 2021,
-      "revista": "Global Biodiversity Information Facility",
-      "enlace": "https://doi.org/10.15468/dl.ambr8d"
     }
   ]
 }

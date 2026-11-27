@@ -1,8 +1,8 @@
 {
   "ofc_id": "OFC-11",
   "nombre": "Aviturismo",
-  "total": 74,
-  "mostrados": 74,
+  "total": 110,
+  "mostrados": 100,
   "items": [
     {
       "titulo": "Applying Two‐Eyed Seeing to Pair Indigenous Ecological Calendars and Community Science Data for Biodiversity Monitoring in Amazonia",
@@ -17,10 +17,40 @@
       "enlace": "https://doi.org/10.54588/cc.2026v31n1a7"
     },
     {
+      "titulo": "Birdwatching intensity and its impacts on mental health, happiness, mindfulness and nature connectedness among birders: a cross-sectional study in Brazil",
+      "anio": 2026,
+      "revista": "Frontiers in Bird …",
+      "enlace": "https://www.frontiersin.org/journals/bird-science/articles/10.3389/fbirs.2026.1879457/full"
+    },
+    {
+      "titulo": "Birdwatching vs. nature walks: a randomized trial to compare mental health outcomes in Iran",
+      "anio": 2026,
+      "revista": "Human Dimensions of …",
+      "enlace": "https://www.tandfonline.com/doi/abs/10.1080/10871209.2025.2589874"
+    },
+    {
+      "titulo": "Characterizing stakeholder perceptions of birdwatching benefits as a cultural ecosystem service: a comparative study of Atlantic and Pacific flyway estuaries",
+      "anio": 2026,
+      "revista": "Frontiers in Bird …",
+      "enlace": "https://www.frontiersin.org/journals/bird-science/articles/10.3389/fbirs.2026.1895040/full"
+    },
+    {
+      "titulo": "Colonial birdwatching",
+      "anio": 2026,
+      "revista": "Journal of Historical Sociolinguistics",
+      "enlace": "https://www.degruyterbrill.com/document/doi/10.1515/jhsl-2025-0006/html"
+    },
+    {
       "titulo": "Design of an Introductory Interactive Experience for Recognizing the Value of Natural Heritage through Birdwatching within the Framework of the Chicamocha Canyon Geopark",
       "anio": 2026,
       "revista": "Universidad Industrial de Santander",
       "enlace": "https://noesis.uis.edu.co/handle/20.500.14071/48288"
+    },
+    {
+      "titulo": "Diversidad de aves y su potencial para el desarrollo del aviturismo en la parroquia el Tingo la Esperanza Cotopaxi-Ecuador",
+      "anio": 2026,
+      "revista": "Arandu UTIC",
+      "enlace": "https://revista.utic.edu.py/revista.ojs/index.php/revistas/article/view/2443"
     },
     {
       "titulo": "El Búho de Santa Marta (Megascops gilesi) : ecología y conservación.",
@@ -29,16 +59,58 @@
       "enlace": "http://hdl.handle.net/10554/72073"
     },
     {
+      "titulo": "Evaluación de la capacidad de carga turística en rutas para el aviturismo en el Magdalena caldense con la participación de actores locales",
+      "anio": 2026,
+      "revista": null,
+      "enlace": "https://riull.ull.es/xmlui/handle/915/47963"
+    },
+    {
+      "titulo": "Evaluación del potencial de aviturismo en el Cantón Otavalo, Ecuador: un enfoque multicriterio basado en el Proceso Analítico Jerárquico",
+      "anio": 2026,
+      "revista": "Siembra",
+      "enlace": "https://revistadigital.uce.edu.ec/index.php/SIEMBRA/article/view/e9776"
+    },
+    {
       "titulo": "Ghostbusting the national bird checklists: integrative evidence shows that Pionus fuscus does not occur in Colombia",
       "anio": 2026,
       "revista": "bioRxiv (Cold Spring Harbor Laboratory)",
       "enlace": "https://doi.org/10.64898/2026.03.23.713821"
     },
     {
+      "titulo": "Hierarchical Meta-regression Analysis of Global Birdwatching Values for Benefit Transfer",
+      "anio": 2026,
+      "revista": "Available at SSRN …",
+      "enlace": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7341278"
+    },
+    {
+      "titulo": "OO Perfil dos Condutores de Turismo da Área de Proteção Ambiental Delta do Parnaíba: Percepções sobre o Birdwatching ea Conservação",
+      "anio": 2026,
+      "revista": "Anais Brasileiros de Estudos …",
+      "enlace": "https://dialnet.unirioja.es/servlet/articulo?codigo=10792350"
+    },
+    {
       "titulo": "Saberes y prácticas infantiles mayas sobre las aves en un contexto de conservación en Yucatán, México",
       "anio": 2026,
       "revista": "Estudios de Cultura Maya",
       "enlace": "https://doi.org/10.19130/iifl.ecm.2026.1/0z100y74810x26"
+    },
+    {
+      "titulo": "Turismo de Observación de Aves: Una Alternativa Ecoturística Sostenible en el Estado Yaracuy, Venezuela",
+      "anio": 2026,
+      "revista": "METANOIA: Revista de Ciencia, Tecnología e …",
+      "enlace": "https://www.researchgate.net/profile/Anderson-Leon-Natera/publication/416411845_Turismo_de_Observacion_de_Aves_Una_Alternativa_Ecoturistica_Sostenible_en_el_Estado_Yaracuy_Venezuela/links/6ad7a05ce8a90924a353af06/Turismo-de-Observacion-de-Aves-Una-Alternativa-Ecoturistica-Sostenible-en-el-Estado-Yaracuy-Venezuela.pdf"
+    },
+    {
+      "titulo": "A observação de aves como promotora da valorização do patrimônio natural e cultural do município de Ouro Preto (MG) em seus espaços marginalizados pelo …",
+      "anio": 2025,
+      "revista": "Revista Brasileira de …",
+      "enlace": "https://periodicos.unifesp.br/ecoturismo/article/view/19313"
+    },
+    {
+      "titulo": "AULA ABIERTA DE NEURORECREACIÓN Y AVIFAUNA: RECORRIDO INTERPRETATIVO VIVENCIAL DE TURISMO AGROECOLÓGICO INTEGRADO EN LOS …",
+      "anio": 2025,
+      "revista": "Revista Escandalar Investigativa",
+      "enlace": "https://revistas.unellez.edu.ve/index.php/resi/article/view/4229"
     },
     {
       "titulo": "Avian inventory through the use of mobile applications to strengthening aviturisming in el magdalena",
@@ -59,10 +131,22 @@
       "enlace": "https://doi.org/10.37811/cl_rcm.v9i3.19079"
     },
     {
+      "titulo": "Aviturismo en conservación: experiencias en Argentina y Chile",
+      "anio": 2025,
+      "revista": null,
+      "enlace": "https://www.researchgate.net/profile/Jaime-Rau/publication/273570646_Aviturismo_en_Conservacion_Experiencias_en_Argentina_y_Chile/links/5505a2030cf231de07778212/Aviturismo-en-Conservacion-Experiencias-en-Argentina-y-Chile.pdf"
+    },
+    {
       "titulo": "El Turismo Científico en Colombia Insular: estudio de caso en San Andrés y Providencia para la conservación, la educación ambiental y el desarrollo sostenible",
       "anio": 2025,
       "revista": "Revista Rosa dos Ventos - Turismo e Hospitalidade",
       "enlace": "https://doi.org/10.18226/21789061.v17ip170202"
+    },
+    {
+      "titulo": "Enchantment by Birds: A History of Birdwatching in 22 Species: By Russell McGregor. Melbourne: Scribe, 2024. Pp. 320. A $39.99 paper.",
+      "anio": 2025,
+      "revista": null,
+      "enlace": "https://www.tandfonline.com/doi/full/10.1080/1031461X.2025.2545959"
     },
     {
       "titulo": "Environmental Strategy for the Conservation and Knowledge of Birds in La Concepción Village, Municipality of Nocaima - Cundinamarca",
@@ -99,6 +183,18 @@
       "anio": 2025,
       "revista": "Biblioteca Digital - Universidad Icesi",
       "enlace": "https://hdl.handle.net/10906/130671"
+    },
+    {
+      "titulo": "The role of birdwatching as a sustainable tourism strategy: A literature review",
+      "anio": 2025,
+      "revista": null,
+      "enlace": "https://riull.ull.es/xmlui/handle/915/42322"
+    },
+    {
+      "titulo": "Turismo de observação de aves (birdwatching) em três cidades do litoral norte do RS",
+      "anio": 2025,
+      "revista": "Seminário Internacional de …",
+      "enlace": "https://anaisonline.uems.br/sider/article/view/11719"
     },
     {
       "titulo": "Using Animation Technologies to Improve the Interrelation Between Bird’s Conservation and Nature Tourism",
@@ -191,6 +287,12 @@
       "enlace": "https://repositorio.itm.edu.co"
     },
     {
+      "titulo": "Aves endémicas de Costa Rica",
+      "anio": 2023,
+      "revista": null,
+      "enlace": "https://books.google.com/books?hl=en&lr=&id=Yt6eEQAAQBAJ&oi=fnd&pg=PT4&dq=aves+conservacion&ots=lIXPn1nRGZ&sig=0-23oN0kallTgKm5rBD6wRW2z0U"
+    },
+    {
       "titulo": "Bird Watching Tourism in Sustainable and Accessible Destinations: The Case of the Entrepreneurial Venture Explora Caloccita in the Mexican Pacific Coast",
       "anio": 2023,
       "revista": "Tourism Cases",
@@ -227,10 +329,34 @@
       "enlace": "https://repositorio.ecci.edu.co/handle/001/3483"
     },
     {
+      "titulo": "Transformative birdwatching tourism experiences in the Peruvian Amazon",
+      "anio": 2023,
+      "revista": "The Routledge Handbook of …",
+      "enlace": "https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9781003230748-21&type=chapterpdf"
+    },
+    {
+      "titulo": "Análisis de la capacidad de carga turística como estrategia para la gestión de un aviturismo sostenible",
+      "anio": 2022,
+      "revista": "Gaceta …",
+      "enlace": "https://revistas.unheval.edu.pe/index.php/gacien/article/view/1347/"
+    },
+    {
       "titulo": "Aves en la U",
       "anio": 2022,
       "revista": null,
       "enlace": "http://doi.org/10.30554/978-958-5468-39-9"
+    },
+    {
+      "titulo": "Aviturismo como alternativa para el desarrollo de turismo científico en la parroquia Río Negro, cantón Baños, provincia de Tungurahua, Ecuador",
+      "anio": 2022,
+      "revista": null,
+      "enlace": "https://repositorio.uea.edu.ec/handle/123456789/1578"
+    },
+    {
+      "titulo": "Del Río Bravo a Tierra del Fuego: perfiles, práctica, motivaciones, preferencias y percepciones de la comunidad de observadores de aves de América Latina",
+      "anio": 2022,
+      "revista": "Sociedad y …",
+      "enlace": "https://www.academia.edu/download/112329150/1902.pdf"
     },
     {
       "titulo": "El Turismo creativo como dinamizador de las economías locales: Estudio de caso en una comunidad afrodescendiente",
@@ -263,6 +389,12 @@
       "enlace": "https://doi.org/10.59517/oc.e518"
     },
     {
+      "titulo": "O potencial do turismo de observação de aves no município de Goiás (GO)",
+      "anio": 2022,
+      "revista": "Revista Brasileira de Ecoturismo …",
+      "enlace": "https://periodicos.unifesp.br/index.php/ecoturismo/article/download/13811/9756"
+    },
+    {
       "titulo": "Propuesta metodológica para la divulgación de aves: experiencia en el Eco Santo Domingo.",
       "anio": 2022,
       "revista": "Repositorio CES",
@@ -287,6 +419,12 @@
       "enlace": "https://hdl.handle.net/20.500.12495/10773"
     },
     {
+      "titulo": "Turismo de observação de aves no PN Lagoa do Peixe: oportunidades ou ameaças?",
+      "anio": 2022,
+      "revista": "Revista Brasileira de …",
+      "enlace": "https://periodicos.unifesp.br/index.php/ecoturismo/article/view/11994"
+    },
+    {
       "titulo": "Andrés Camilo Pérez-Rodríguez, Esperanza Sepúlveda-Rojas, José Rafael Herrera-Herrera & Alejandro Alberto Schaaf. El avistamiento de aves, un escenario pedagógico para la construcción de saberes ambientales en UNIMINUTO Virtual y Distancia, Universidad Autónoma de Tamaulipas y Universidad Nacional de Jujuy: Resúmenes VI Congreso Colombiano de Ornitología 2019",
       "anio": 2021,
       "revista": "Ornitología colombiana",
@@ -305,10 +443,22 @@
       "enlace": "https://doi.org/10.59517/oc.e381"
     },
     {
+      "titulo": "Aviturismo como alternativa de desarrollo para el corredor hídrico Carrizal-Chone",
+      "anio": 2021,
+      "revista": null,
+      "enlace": "https://repositorio.espam.edu.ec/items/fc6725a8-796a-4f81-bb6c-667fa02fe5c7"
+    },
+    {
       "titulo": "Colombia and its resources: economics and conservation strategies directed at strengthen the rural sector of San José del Guaviare, Guaviare. Fifth Phase",
       "anio": 2021,
       "revista": "Repositorio Institucional Universidad El Bosque",
       "enlace": "https://hdl.handle.net/20.500.12495/7535"
+    },
+    {
+      "titulo": "Diseño de una guía de aviturismo de la comunidad centro Kichwa Tamia Yura, provincia de Napo, cantón Tena",
+      "anio": 2021,
+      "revista": null,
+      "enlace": "https://repositorio.uea.edu.ec/handle/123456789/1701"
     },
     {
       "titulo": "Distribution of birds in Colombia",
@@ -335,10 +485,22 @@
       "enlace": "https://doi.org/10.58843/ornneo.v32i2.727"
     },
     {
+      "titulo": "Fortalecimiento del aviturismo en el sector San Antonio de Puntzan, cantón Baños de Agua Santa, provincia de Tungurahua",
+      "anio": 2021,
+      "revista": null,
+      "enlace": "https://repositorio.uea.edu.ec/handle/123456789/1536"
+    },
+    {
       "titulo": "Human Persecution of the Harpy Eagle: A Widespread Threat?",
       "anio": 2021,
       "revista": "Journal of Raptor Research",
       "enlace": "https://doi.org/10.3356/0892-1016-55.2.281"
+    },
+    {
+      "titulo": "Las prácticas sostenibles del aviturismo comunitario en la localidad de Usme",
+      "anio": 2021,
+      "revista": "Objetivos de Desarrollo …",
+      "enlace": "https://www.researchgate.net/profile/Jorge-Mora-7/publication/367862534_LAS_PRACTICAS_SOSTENIBLES_DEL_AVITURISMO_COMUNITARIO_EN_LA_LOCALIDAD_DE_USME/links/66fcc7cfb753fa724d56225a/LAS-PRACTICAS-SOSTENIBLES-DEL-AVITURISMO-COMUNITARIO-EN-LA-LOCALIDAD-DE-USME.pdf"
     },
     {
       "titulo": "Lina María Sánchez-Clavijo, Orlando Acevedo-Charry, Nicholas Bayly, Ana María Castaño, Cristian Flórez-Paí, Miguel Moreno-Palacios, David Ocampo-Rincón, Pedro Camargo, Johana Patricia Reyes & Jeisson Andrés Zamudio. eBird: Una nueva forma de pajarear: Resúmenes VI Congreso Colombiano de Ornitología 2019",
@@ -351,6 +513,12 @@
       "anio": 2021,
       "revista": "Ibis",
       "enlace": "https://doi.org/10.1111/ibi.12988"
+    },
+    {
+      "titulo": "Presa La Juventud: un sitio potencial para la observación de aves",
+      "anio": 2021,
+      "revista": "Revista …",
+      "enlace": "https://cienciauanl.uanl.mx/ojs/index.php/revista/article/view/186"
     },
     {
       "titulo": "Principios básicos de escritura y comunicación digital de un post de aves en el blog de Pajareando.co",
@@ -383,6 +551,12 @@
       "enlace": "https://repositorio.unicordoba.edu.co/handle/ucordoba/3646"
     },
     {
+      "titulo": "Aprendiendo sobre aves: una estrategia para el desarrollo de habilidades de pensamiento crítico y la enseñanza en la escuela rural multigrado",
+      "anio": 2020,
+      "revista": null,
+      "enlace": "https://repositorio.uptc.edu.co/items/84feb540-e016-43fd-b769-082357822888"
+    },
+    {
       "titulo": "Aves del Cañón del Chicamocha, Colombia: un llamado para su conservación",
       "anio": 2020,
       "revista": "Biota Colombiana",
@@ -401,52 +575,34 @@
       "enlace": "https://doi.org/10.47499/revistaaccb.v1i32.218"
     },
     {
+      "titulo": "Aviturismo en el Parque Nacional Yurubi, Municipio San Felipe, Estado Yaracuy.",
+      "anio": 2020,
+      "revista": "Aviturismo en el Parque Nacional Yurubi, Municipio …",
+      "enlace": "https://www.academia.edu/download/131487403/AviturismoenelParqueNacionalYurubi_.pdf"
+    },
+    {
+      "titulo": "Comparing community birdwatching and professional bird monitoring with implications for avian diversity research: a case study of Suzhou, China",
+      "anio": 2020,
+      "revista": "Avian Research",
+      "enlace": "https://link.springer.com/article/10.1186/s40657-020-00205-w"
+    },
+    {
+      "titulo": "Diseño de un producto de aviturismo en la Reserva Ecológica Antisana (REA), provincia de Napo",
+      "anio": 2020,
+      "revista": null,
+      "enlace": "https://repositorio.umet.edu.ec/server/api/core/bitstreams/f30e39ea-ff28-42ca-8eb0-a951f8a48fff/content"
+    },
+    {
       "titulo": "Guía fotográfica de aves de la Universidad de La Salle",
       "anio": 2020,
       "revista": "Repositorio Institucional Universidad de La Salle",
       "enlace": "https://doi.org/10.19052/9789585148550"
     },
     {
-      "titulo": "Influencia de la fotografía como herramienta documental y/o artística en el componente de avistamiento de aves dentro del patrimonio cultural y ambiental del Municipio de Manizales",
+      "titulo": "Identificação e mapeamento dos hostspots para a observação de aves com base em indicadores socioambientais: roteirização turística de Campo Grande …",
       "anio": 2020,
-      "revista": "Repositorio Institucional-Universidad Catolica de Manizales",
-      "enlace": "https://repositorio.ucm.edu.co/handle/10839/3485"
-    },
-    {
-      "titulo": "La observación de aves como propuesta de educación ambiental; herramienta práctica para el fortalecimiento del aviturismo comunitario, Municipio de San Francisco, Cundinamarca.",
-      "anio": 2020,
-      "revista": "Repositorio Institucional FULL",
-      "enlace": "http://hdl.handle.net/11371/3541"
-    },
-    {
-      "titulo": "Red de interacción gastronómica y aviturística. Pajarito Boyacá",
-      "anio": 2020,
-      "revista": "Ciencia Unisalle (Universidad de La Salle)",
-      "enlace": "https://hdl.handle.net/20.500.14625/17368"
-    },
-    {
-      "titulo": "RELEVANCIA DE LOS COLIBRÍES (AVES, TROCHILIDAE) COMO COMPLEJO DE ESPECIES BIOCULTURALES. EL COLIBRÍ Y EL ANDAR DEL TIEMPO NASA – E’Ç A’TE (TIEMPOS DE LA ESMERALDA)",
-      "anio": 2020,
-      "revista": "Ethnoscientia - Brazilian Journal of Ethnobiology and Ethnoecology",
-      "enlace": "https://doi.org/10.18542/ethnoscientia.v5i1.10286"
-    },
-    {
-      "titulo": "REVISIÓN Y VISION PROSPECTIVA DEL AVITURISMO EN ECUADOR",
-      "anio": 2020,
-      "revista": "Gestión Turística",
-      "enlace": "https://doi.org/10.4206/gest.tur.2020.n34-01"
-    },
-    {
-      "titulo": "Sustainable tourism planning in Bahía Solano, Colombia",
-      "anio": 2020,
-      "revista": "European journal of tourism, hospitality and recreation",
-      "enlace": "https://doi.org/10.2478/ejthr-2020-0014"
-    },
-    {
-      "titulo": "Tracking extinction risk trends and patterns in a mega-diverse country: A Red List Index for birds in Colombia",
-      "anio": 2020,
-      "revista": "PLoS ONE",
-      "enlace": "https://doi.org/10.1371/journal.pone.0227381"
+      "revista": "Revista Brasileira de Ecoturismo (RBEcotur)",
+      "enlace": "https://www.academia.edu/download/117042666/7740.pdf"
     }
   ]
 }
