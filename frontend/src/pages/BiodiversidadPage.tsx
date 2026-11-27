@@ -187,14 +187,15 @@ function urlGbifMapaTaxon(taxonKey: string): string {
 }
 
 /**
- * Enlace a GBIF con las ocurrencias de aves de UN departamento de Colombia. El
- * portal filtra el departamento por su área administrativa GADM, con el
- * parámetro camelCase ``gadmGid`` (p. ej. Cauca = "COL.11_2"); NO por el texto
- * del campo stateProvince. GADM agrupa el departamento completo con independencia
- * de cómo esté escrito el nombre, así que el enlace es coherente con el total de
- * la tabla y se alinea con el destino del producto (ArcGIS, que trabaja con
- * códigos administrativos y geometría, no con texto libre). ``gadmGid`` viene del
- * campo ``gadm_gid`` del snapshot; si es null no debe llamarse a esta función.
+ * Enlace a GBIF con las ocurrencias de aves de UN área administrativa de
+ * Colombia (departamento, nivel 1; o municipio, nivel 2). El portal filtra por
+ * el área GADM con el parámetro camelCase ``gadmGid`` (p. ej. Cauca =
+ * "COL.11_2", Manizales = "COL.8.9_2"); NO por el texto del campo stateProvince.
+ * GADM agrupa el área completa con independencia de cómo esté escrito el nombre,
+ * así que el enlace es coherente con el total de la tabla y se alinea con el
+ * destino del producto (ArcGIS, que trabaja con códigos administrativos y
+ * geometría, no con texto libre). ``gadmGid`` viene del campo ``gadm_gid``; si
+ * es null no debe llamarse a esta función.
  */
 function urlGbifDepartamento(gadmGid: string): string {
   const params = new URLSearchParams({
@@ -388,16 +389,17 @@ function PublicadoresCard({ resumen }: { resumen: ResumenGBIF }) {
 }
 
 /**
- * Enlace "Ver en GBIF" de una fila de departamento. Si el departamento no tiene
- * GADM GID resuelto, no se muestra enlace (en vez de uno roto): se indica "—"
- * para ser honestos sobre que no se pudo construir el filtro de esa fila.
+ * Enlace "Ver en GBIF" de una fila con área administrativa GADM (departamento o
+ * municipio). Filtra las ocurrencias de aves de esa área en Colombia por su
+ * ``gadmGid``. Si no hay GID resuelto, muestra "—" (sin enlace roto) para ser
+ * honestos sobre que no se pudo construir el filtro de esa fila.
  */
-function EnlaceDepartamentoGbif({
+function EnlaceGadmGbif({
   gadmGid,
-  departamento,
+  lugar,
 }: {
   gadmGid: string | null;
-  departamento: string;
+  lugar: string;
 }) {
   if (!gadmGid) {
     return <span style={{ color: "#aaa" }}>—</span>;
@@ -407,7 +409,7 @@ function EnlaceDepartamentoGbif({
       href={urlGbifDepartamento(gadmGid)}
       target="_blank"
       rel="noopener noreferrer"
-      title={`Ver en GBIF los registros de aves de ${departamento} (Colombia)`}
+      title={`Ver en GBIF los registros de aves de ${lugar} (Colombia)`}
       style={{ color: VERDE_OSCURO, textDecoration: "underline", fontWeight: 600, whiteSpace: "nowrap" }}
     >
       Ver ↗
@@ -502,10 +504,7 @@ function DepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
                 {formatoEntero(d.registros_ocurrencia)}
               </td>
               <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
-                <EnlaceDepartamentoGbif
-                  gadmGid={d.gadm_gid}
-                  departamento={d.departamento}
-                />
+                <EnlaceGadmGbif gadmGid={d.gadm_gid} lugar={d.departamento} />
               </td>
             </tr>
           ))}
@@ -667,10 +666,7 @@ function RiquezaDepartamentosCard({ resumen }: { resumen: ResumenGBIF }) {
                 {formatoEntero(d.especies)}
               </td>
               <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
-                <EnlaceDepartamentoGbif
-                  gadmGid={d.gadm_gid}
-                  departamento={d.departamento}
-                />
+                <EnlaceGadmGbif gadmGid={d.gadm_gid} lugar={d.departamento} />
               </td>
             </tr>
           ))}
@@ -1043,6 +1039,9 @@ function MunicipiosCard({ resumen }: { resumen: ResumenGBIF }) {
                   <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
                     Registros de ocurrencia
                   </th>
+                  <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                    GBIF
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -1053,6 +1052,12 @@ function MunicipiosCard({ resumen }: { resumen: ResumenGBIF }) {
                     </td>
                     <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
                       {formatoEntero(m.registros_ocurrencia)}
+                    </td>
+                    <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                      <EnlaceGadmGbif
+                        gadmGid={m.gadm_gid}
+                        lugar={m.nombre ?? m.gadm_gid}
+                      />
                     </td>
                   </tr>
                 ))}
