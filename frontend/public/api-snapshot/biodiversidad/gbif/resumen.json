@@ -1,8 +1,8 @@
 {
   "fuente": "GBIF — Global Biodiversity Information Facility",
   "fuente_url": "https://api.gbif.org/v1",
-  "grupo_taxonomico": "Aves (clase Aves, taxonKey=212)",
-  "cobertura_geografica": "Colombia (country=CO)",
+  "grupo_taxonomico": "Aves",
+  "cobertura_geografica": "Colombia",
   "alcance": "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF (limit=0 + facet): representan registros de ocurrencia en la fuente, no un conteo de individuos ni de especies únicas.",
   "origen": "almacenado",
   "extraido_utc": "2026-11-24T02:26:01.509001+00:00",

@@ -55,11 +55,13 @@ from backend.src.schemas.biodiversidad import (
 )
 
 # --- Identificación de la fuente y el alcance (constantes del piloto) --------
-# Coinciden con los parámetros reales del script (country=CO, taxonKey=212).
+# Etiquetas orientadas al público (sin parámetros técnicos de la API). El
+# alcance real son las aves (clase Aves) en Colombia; internamente la consulta
+# usa country=CO y la clave de la clase Aves, pero eso no aporta a quien lee.
 FUENTE = "GBIF — Global Biodiversity Information Facility"
 FUENTE_URL = "https://api.gbif.org/v1"
-GRUPO_TAXONOMICO = "Aves (clase Aves, taxonKey=212)"
-COBERTURA = "Colombia (country=CO)"
+GRUPO_TAXONOMICO = "Aves"
+COBERTURA = "Colombia"
 ALCANCE = (
     "Registros de ocurrencia de aves en Colombia. Son conteos AGREGADOS de GBIF "
     "(limit=0 + facet): representan registros de ocurrencia en la fuente, no un "
