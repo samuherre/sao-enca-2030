@@ -10,6 +10,8 @@ export {
   useIndicadores,
   useActividades,
   useArbol,
+  useTotalesEnca,
+  type TotalesEnca,
 } from "./useEntities";
 
 export { useAsyncData, type AsyncDataState, type Loader } from "./useAsyncData";

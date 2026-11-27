@@ -21,3 +21,4 @@ export type {
 } from "./CreateEntityForm";
 export { EntityList } from "./EntityList";
 export type { EntityListItem } from "./EntityList";
+export { ResumenEnca } from "./ResumenEnca";

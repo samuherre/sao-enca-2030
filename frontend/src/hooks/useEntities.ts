@@ -33,6 +33,15 @@ import type {
 } from "../types";
 import { useAsyncData, type AsyncDataState } from "./useAsyncData";
 
+/** Totales de cada nivel de la jerarquía ENCA (para el resumen de la vista). */
+export interface TotalesEnca {
+  readonly ejes: number;
+  readonly metas: number;
+  readonly objetivos: number;
+  readonly indicadores: number;
+  readonly actividades: number;
+}
+
 /** Id de padre opcional: `null`/`undefined` deshabilita el hook. */
 type ParentId = number | null | undefined;
 
@@ -100,4 +109,48 @@ export function useArbol(ejeId: ParentId): AsyncDataState<EjeArbol> {
     [ejeId],
   );
   return useAsyncData<EjeArbol>(loader, enabled);
+}
+
+/**
+ * Totales de toda la jerarquía ENCA (ejes, metas, objetivos, indicadores,
+ * actividades), para el panel de resumen de la vista. Se calculan a partir de
+ * los árboles anidados de cada Eje (`GET /ejes/{id}/arbol`), que ya contienen
+ * todos los descendientes: primero lista los Ejes y luego pide el árbol de cada
+ * uno en paralelo y suma los nodos. No requiere un endpoint nuevo.
+ *
+ * Mientras falte algún árbol (carga o error parcial) devuelve lo acumulado; es
+ * un resumen informativo, no un dato crítico.
+ */
+export function useTotalesEnca(): AsyncDataState<TotalesEnca> {
+  const loader = useCallback(async ({ signal }: { signal: AbortSignal }) => {
+    const ejes = await listarEjes({ signal });
+    const arboles = await Promise.all(
+      ejes.map((e) => obtenerArbol(e.id, { signal })),
+    );
+    const totales: TotalesEnca = {
+      ejes: ejes.length,
+      metas: 0,
+      objetivos: 0,
+      indicadores: 0,
+      actividades: 0,
+    };
+    let metas = 0;
+    let objetivos = 0;
+    let indicadores = 0;
+    let actividades = 0;
+    for (const arbol of arboles) {
+      for (const meta of arbol.metas) {
+        metas += 1;
+        for (const objetivo of meta.objetivos) {
+          objetivos += 1;
+          for (const indicador of objetivo.indicadores) {
+            indicadores += 1;
+            actividades += indicador.actividades.length;
+          }
+        }
+      }
+    }
+    return { ...totales, metas, objetivos, indicadores, actividades };
+  }, []);
+  return useAsyncData<TotalesEnca>(loader);
 }

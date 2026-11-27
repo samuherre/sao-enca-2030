@@ -24,6 +24,7 @@ import type { CSSProperties } from "react";
 import { useState } from "react";
 
 import { Breadcrumb } from "./layouts";
+import { ResumenEnca } from "./components";
 import {
   ActividadesPage,
   BibliometriaPage,
@@ -205,6 +206,33 @@ export function App() {
           <p>
             Seguimiento de la Estructura ENCA — Eje → Meta → Objetivo → Indicador → Actividad.
           </p>
+          {/* Totales de la estructura (adorno informativo), solo en la vista
+              raíz (Ejes) para no distraer durante el drill-down. */}
+          {stack.length === 1 ? <ResumenEnca /> : null}
+          {/* Botón "Volver": regresa un nivel. Solo aparece cuando no se está en
+              la raíz (Ejes). Es más visible que usar las migas de pan. */}
+          {stack.length > 1 ? (
+            <button
+              type="button"
+              onClick={() => navigateTo(stack.length - 2)}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.35rem",
+                marginBottom: "0.75rem",
+                padding: "0.4rem 0.9rem",
+                border: "1px solid #2a6f4b",
+                borderRadius: "0.375rem",
+                backgroundColor: "#fff",
+                color: "#2a6f4b",
+                cursor: "pointer",
+                fontSize: "0.9rem",
+                fontWeight: 600,
+              }}
+            >
+              ← Volver
+            </button>
+          ) : null}
           <Breadcrumb
             crumbs={stack.map((level) => ({ label: crumbLabel(level) }))}
             onNavigate={navigateTo}
