@@ -32,14 +32,41 @@ Si actualizas los datos y quieres reflejarlos en la demo:
    .\.venv\Scripts\python -m uvicorn backend.src.main:app --port 8000
    ```
 
-2. Regenera el snapshot:
+2. Regenera el snapshot **completo** con el orquestador:
 
    ```powershell
-   .\.venv\Scripts\python scripts\export_static_snapshot.py
+   .\.venv\Scripts\python scripts\regenerar_snapshot_demo.py
    ```
 
 3. Haz commit de los cambios en `frontend/public/api-snapshot/` y súbelos. Si el
    repo está conectado a Vercel, el redeploy es automático.
+
+> **Importante — no uses `export_static_snapshot.py` a secas.** Ese script
+> congela lo que devuelve el backend, pero la vista de biodiversidad tiene dos
+> conjuntos de campos que el backend NO conoce y que se resuelven por API externa
+> (GBIF/GADM) en post-proceso sobre el propio snapshot:
+> `gbif_portal_key` (enlaces a GBIF por especie/familia/orden) y `gadm_gid`
+> (enlaces por departamento). Ejecutar solo el export los deja en `null` y rompe
+> esos enlaces en la demo. El orquestador `regenerar_snapshot_demo.py` hace el
+> export y vuelve a añadir ambos campos en el orden correcto
+> (`export_static_snapshot.py` → `data/resolver_claves_gbif_portal.py` →
+> `data/resolver_gadm_departamentos.py`). Los pasos de GBIF/GADM requieren
+> internet.
+
+### Reflejar una re-ingesta de bibliometría en la demo
+
+La distribución por OFC del dashboard se calcula a partir de los datasets
+`data/processed/<fuente>_clasificado/`. Si re-ingieres una fuente, **antes** de
+regenerar el snapshot hay que (re)clasificarla, o el gráfico de OFC quedará
+desfasado o incompleto:
+
+```powershell
+.\.venv\Scripts\python bibliometrics\pipelines\classify_dataset.py --source <fuente>
+```
+
+(una vez por fuente con dataset nuevo o sin clasificar; p. ej. `openalex`,
+`scielo`, `boletin_sao`, `google_scholar`). Luego ya sí regenera el snapshot con
+el orquestador del paso anterior.
 
 ## Publicar en Vercel
 
