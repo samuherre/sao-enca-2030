@@ -808,6 +808,10 @@ function agruparPorDecada(
 function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
   // Búsqueda por año: el usuario escribe un año y se muestra su conteo exacto.
   const [anioBuscado, setAnioBuscado] = useState("");
+  // Escala del gráfico por décadas: lineal (por defecto) o logarítmica. En
+  // lineal, 2020s (decenas de millones) aplasta las décadas antiguas; en
+  // logarítmica se aprecia la evolución histórica, como pidió la revisión.
+  const [decadasLog, setDecadasLog] = useState(false);
   // Año desde el cual mostrar: GBIF tiene registros desde el s. XVIII, pero con
   // cifras ínfimas; se muestra el periodo con datos significativos (>=1990) para
   // que la tendencia reciente sea legible. Los datos completos quedan en el dato
@@ -833,6 +837,21 @@ function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
   // Vista por DÉCADAS sobre TODA la serie (1770s→2020s): permite ver la historia
   // completa de forma legible (una barra por década) sin recortar desde 1990.
   const decadas = agruparPorDecada(resumen.anios);
+
+  // Datos del gráfico por décadas según la escala elegida. En logarítmica, las
+  // décadas con 0 registros no se representan (el log de 0 no existe) y el eje
+  // usa un dominio en potencias de diez que abarca min y max, igual que el resto
+  // de gráficos logarítmicos de esta página.
+  const decadasChart = decadas
+    .filter((d) => !decadasLog || d.registros > 0)
+    .map((d) => ({ etiqueta: d.etiqueta, registros: d.registros }));
+  const decadasValores = decadasChart.map((d) => d.registros);
+  const decadasMin = decadasValores.length > 0 ? Math.min(...decadasValores) : 1;
+  const decadasMax = decadasValores.length > 0 ? Math.max(...decadasValores) : 1;
+  const decadasDominioLog: [number, number] = [
+    Math.pow(10, Math.floor(Math.log10(decadasMin))),
+    Math.pow(10, Math.ceil(Math.log10(decadasMax))),
+  ];
 
   // Resultado de la búsqueda por año: conteo exacto del año escrito (o null).
   const anioNum = /^\d{4}$/.test(anioBuscado.trim()) ? Number(anioBuscado.trim()) : null;
@@ -873,19 +892,63 @@ function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
       <h4 style={{ margin: "1.25rem 0 0.25rem" }}>Por décadas ({decadas[0].etiqueta}–{decadas[decadas.length - 1].etiqueta})</h4>
       <p style={{ color: "#567", fontSize: "0.85rem", marginTop: 0 }}>
         Los mismos registros agrupados por década, para ver toda la historia disponible en GBIF
-        (desde {primero.anio}) de un vistazo. La escala es lineal: las décadas antiguas tienen cifras
-        muy bajas frente a las recientes.
+        (desde {primero.anio}) de un vistazo.{" "}
+        {decadasLog ? (
+          <>
+            Escala <strong>logarítmica</strong>: cada marca del eje multiplica por diez, de modo que
+            las décadas antiguas (cifras bajas) se aprecian junto a las recientes. Las décadas sin
+            registros no aparecen (el cero no existe en escala logarítmica).
+          </>
+        ) : (
+          <>
+            Escala <strong>lineal</strong>: las décadas antiguas tienen cifras muy bajas frente a las
+            recientes. Cambia a escala logarítmica para ver mejor la evolución histórica.
+          </>
+        )}
       </p>
+
+      {/* Selector de escala (lineal / logarítmica) para la vista por décadas. */}
+      <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", margin: "0.25rem 0 0.5rem" }}>
+        <span style={{ fontSize: "0.8rem", color: "#789" }}>Escala:</span>
+        <label style={{ fontSize: "0.85rem", display: "flex", alignItems: "center", gap: "0.25rem", cursor: "pointer" }}>
+          <input
+            type="radio"
+            name="escala-decadas"
+            checked={!decadasLog}
+            onChange={() => setDecadasLog(false)}
+          />
+          Lineal
+        </label>
+        <label style={{ fontSize: "0.85rem", display: "flex", alignItems: "center", gap: "0.25rem", cursor: "pointer" }}>
+          <input
+            type="radio"
+            name="escala-decadas"
+            checked={decadasLog}
+            onChange={() => setDecadasLog(true)}
+          />
+          Logarítmica
+        </label>
+      </div>
 
       <div style={{ width: "100%", height: 280 }}>
         <ResponsiveContainer>
           <BarChart
-            data={decadas.map((d) => ({ etiqueta: d.etiqueta, registros: d.registros }))}
+            data={decadasChart}
             margin={{ top: 8, right: 16, bottom: 8, left: 8 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#e3e8e5" />
             <XAxis dataKey="etiqueta" tick={{ fontSize: 10 }} interval={0} angle={-45} textAnchor="end" height={50} />
-            <YAxis tickFormatter={(v: number) => formatoCompacto(v)} tick={{ fontSize: 11 }} />
+            {decadasLog ? (
+              <YAxis
+                scale="log"
+                domain={decadasDominioLog}
+                allowDataOverflow
+                tickFormatter={(v: number) => formatoCompacto(v)}
+                tick={{ fontSize: 11 }}
+              />
+            ) : (
+              <YAxis tickFormatter={(v: number) => formatoCompacto(v)} tick={{ fontSize: 11 }} />
+            )}
             <Tooltip
               formatter={(value: number) => [`${formatoEntero(value)} registros`, "Ocurrencias"]}
               labelFormatter={(label: string) => `Década ${label}`}
