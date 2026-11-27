@@ -91,15 +91,44 @@ apunta a una capa. Filtros y "ver detrás de la barra" se configuran sin código
 Los enlaces a GBIF (por especie/departamento, con `taxonKey`/`gadmGid`) se
 replican como campo calculado con la URL o un widget de enlace.
 
-### Dónde ponerlas (decisión con Julián)
+### Dónde ponerlas — RESUELTO por investigación (sin depender de jcgomez)
 
-Julián quiere las 3 vistas en la sección **"Resultados"** de la app pública.
-- **Opción A (ideal):** integrarlas dentro de "Resultados". Viable según con qué
-  esté construida esa app (hay que confirmarlo con jcgomez_dreamgis).
-- **Opción B (plan B honesto):** montar una app ArcGIS propia para las 3 vistas y
-  enlazarla/embeberla desde "Resultados". Para el usuario se ve dentro del mismo
-  sitio; no arriesga la app existente.
-No es camisa de fuerza: se decide tras el inventario (paso 8).
+El sitio público (`moacolombia.org/enca`) es un **sitio web externo** que lee un
+"CMS casero" sobre ArcGIS: la tabla `ContenidoENCA_publico` (servicio PÚBLICO,
+consultable sin credenciales por su REST). Su esquema es genérico:
+`seccion` + `codigo` (jerárquico, 1.1, 1.2.1…) + `tipo_contenido` + `texto`.
+El sitio pinta cada sección filtrando por `seccion` y renderiza según
+`tipo_contenido` (Título, Subtítulo, Contenido, Nombre científico, Link…).
+
+Hallazgos (descubiertos leyendo el servicio público, cero créditos):
+- Secciones actuales: `Home`, `Eje 1`…`Eje 5`. **No existe aún una sección
+  "Resultados"** con contenido → es nuestro hueco.
+- `tipo_contenido = "Link"` guarda una URL en `texto` (ej.
+  `https://runap.parquesnacionales.gov.co/cifras`): el sitio YA sabe renderizar
+  un recurso externo desde una fila de contenido.
+
+Dos caminos, con decisión tomada:
+- **Camino 1 (CMS de texto):** meter las vistas como filas en
+  `seccion="Resultados"`. Sirve SOLO para texto/enlaces; gráficos, mapas y
+  filtros NO caben. DESCARTADO para vistas ricas.
+- **Camino 2 (ELEGIDO): app ArcGIS propia embebida.** Montar un Dashboard /
+  Experience Builder con nuestras tablas (gráficos, mapas, filtros), publicarlo,
+  y que la sección "Resultados" lo embeba con un `Link`/iframe (mecanismo que el
+  sitio ya soporta). Conserva toda la interactividad; es 100% nuestro; lo
+  construimos y validamos end-to-end. **No requiere que jcgomez programe nada:**
+  al final solo hay que añadir UNA fila tipo Link en "Resultados" apuntando a la
+  app (un cambio de 2 minutos, o lo hace el admin RNOA).
+
+Por tanto, podemos avanzar TODA la migración por nuestra cuenta; a jcgomez solo
+se le pedirá, al final, enlazar la app en "Resultados" (o permiso para hacerlo).
+
+### Esquema de la capa de límites (para mapas de biodiversidad)
+
+`muni_depto_runap_v` (capa de municipios, 1122 polígonos) usa **código DANE**:
+`DPTO_CCDGO` (departamento) y `MPIO_CCDGO` (municipio), con `DPTO_CNMBR` /
+`MPIO_CNMBR`. NUESTROS datos usan GADM GID (`COL.11_2`). Para el join del mapa
+coroplético hay que añadir un **puente DANE ↔ GADM** (33 departamentos; mapeo
+pequeño y conocido). Se resuelve en nuestros datos antes de publicar.
 
 ## 7. Qué NO hacer (para no quedar en espejismo)
 

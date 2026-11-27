@@ -188,6 +188,32 @@ def _inspeccionar_item(gis, item_id: str) -> None:
             print(f"      [no se pudo leer el detalle: {error}]")
 
 
+def _volcar_tabla(gis, item_id: str, capa_idx: int, limite: int, campos: str | None) -> None:
+    """Vuelca filas de una capa/tabla de un servicio, por la REST (solo lectura).
+
+    Útil para ENTENDER el contenido real (p. ej. qué secciones/tipos usa
+    ContenidoENCA). No modifica nada. ``campos`` es una lista separada por comas
+    (outFields); por defecto trae todos (*).
+    """
+    item = gis.content.get(item_id)
+    if item is None:
+        raise ExploracionError(f"No se encontró el item con id={item_id}")
+    if not item.url:
+        raise ExploracionError("El item no es un servicio con capas/tablas.")
+
+    out = campos or "*"
+    url = (
+        f"{item.url}/{capa_idx}/query"
+        f"?where=1=1&outFields={out}&returnGeometry=false&f=json&resultRecordCount={limite}"
+    )
+    data = _rest_json(url)
+    rasgos = data.get("features", []) or []
+    print(f"Filas devueltas: {len(rasgos)} (límite {limite})")
+    for r in rasgos:
+        attrs = r.get("attributes", {})
+        print("  " + " | ".join(f"{k}={attrs.get(k)!r}" for k in attrs))
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Inventario de SOLO LECTURA del contenido de ArcGIS Online."
@@ -197,13 +223,21 @@ def main(argv: list[str] | None = None) -> int:
                         help="Usar GIS('home') (dentro de un Notebook de ArcGIS).")
     parser.add_argument("--buscar", help="Filtra los items cuyo título contenga este texto.")
     parser.add_argument("--item", help="Inspecciona un item concreto (capas, tablas, campos).")
+    parser.add_argument("--volcar", metavar="ITEM_ID",
+                        help="Vuelca filas de una capa/tabla del servicio (contenido real).")
+    parser.add_argument("--capa", type=int, default=0,
+                        help="Índice de la capa/tabla a volcar (def. 0; ContenidoENCA usa 1).")
+    parser.add_argument("--campos",
+                        help="Lista de campos (outFields) separada por comas. Def.: todos.")
     parser.add_argument("--limite", type=int, default=200,
-                        help="Máximo de items a traer de la organización (def. 200).")
+                        help="Máximo de filas/items a traer (def. 200).")
     args = parser.parse_args(argv)
 
     try:
         gis = _conectar(args.perfil, args.home)
-        if args.item:
+        if args.volcar:
+            _volcar_tabla(gis, args.volcar, args.capa, args.limite, args.campos)
+        elif args.item:
             _inspeccionar_item(gis, args.item)
         else:
             _listar_contenido(gis, args.buscar, args.limite)
