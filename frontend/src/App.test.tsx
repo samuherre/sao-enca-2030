@@ -3,12 +3,12 @@
 // Cubre el flujo completo de drill-down con regreso entre niveles de la
 // jerarquía (Req 7.3 y 7.6):
 //   Eje → Meta → Objetivo (drill-down), y regreso a un nivel superior mediante
-//   las migas de pan.
+//   el botón "Volver".
 //
 // La capa de servicios se sustituye por dobles deterministas (vi.mock), de modo
 // que la navegación no depende de un backend real.
 
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -49,10 +49,12 @@ describe("App — navegación de la jerarquía", () => {
     listarActividades.mockResolvedValue([]);
   });
 
-  it("hace drill-down Eje → Meta → Objetivo y regresa con las migas de pan (Req 7.3, 7.6)", async () => {
+  it("hace drill-down Eje → Meta → Objetivo y regresa con el botón Volver (Req 7.3, 7.6)", async () => {
     render(<App />);
 
-    // Nivel raíz: lista de Ejes (botón de drill-down a Metas).
+    // Nivel raíz: lista de Ejes (botón de drill-down a Metas). Aquí NO debe
+    // existir el botón "Volver" (se está en la raíz).
+    expect(screen.queryByRole("button", { name: /volver/i })).not.toBeInTheDocument();
     await userEvent.click(await screen.findByRole("button", { name: /ver metas/i }));
 
     // Drill-down a Metas del Eje → botón de drill-down a Objetivos.
@@ -63,19 +65,23 @@ describe("App — navegación de la jerarquía", () => {
     await userEvent.click(await screen.findByRole("button", { name: /ver indicadores/i }));
     expect(listarObjetivos).toHaveBeenCalledWith(10, expect.anything());
 
-    // Las migas de pan reflejan la ruta completa visitada y el nivel actual.
-    const breadcrumb = screen.getByRole("navigation", { name: /ruta de navegación/i });
-    expect(within(breadcrumb).getByText("Ejes")).toBeInTheDocument();
-    expect(within(breadcrumb).getByText("Eje Andino")).toBeInTheDocument();
-    expect(within(breadcrumb).getByText("Meta A")).toBeInTheDocument();
+    // Ahora se está en el nivel de Indicadores (nivel 4). Cada "Volver" sube un
+    // nivel: Indicadores → Objetivos → Metas → Ejes.
 
-    // Regreso al nivel superior "Ejes" pulsando su miga (Req 7.6).
-    await userEvent.click(within(breadcrumb).getByRole("button", { name: "Ejes" }));
+    // Volver 1: de Indicadores a Objetivos (reaparece "Ver indicadores").
+    await userEvent.click(await screen.findByRole("button", { name: /volver/i }));
+    expect(await screen.findByRole("button", { name: /ver indicadores/i })).toBeInTheDocument();
 
-    // Vuelve a mostrarse el nivel raíz de Ejes…
+    // Volver 2: de Objetivos a Metas (reaparece "Ver objetivos").
+    await userEvent.click(await screen.findByRole("button", { name: /volver/i }));
+    expect(await screen.findByRole("button", { name: /ver objetivos/i })).toBeInTheDocument();
+
+    // Volver 3: de Metas a la raíz de Ejes.
+    await userEvent.click(await screen.findByRole("button", { name: /volver/i }));
     expect(await screen.findByText("Ejes estratégicos")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /ver metas/i })).toBeInTheDocument();
-    // …y ya no se ve el nivel de Objetivos (su botón de drill-down desaparece).
-    expect(screen.queryByRole("button", { name: /ver indicadores/i })).not.toBeInTheDocument();
+    // En la raíz ya no hay botón "Volver" ni niveles inferiores.
+    expect(screen.queryByRole("button", { name: /volver/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /ver objetivos/i })).not.toBeInTheDocument();
   });
 });

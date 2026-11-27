@@ -23,7 +23,6 @@
 import type { CSSProperties } from "react";
 import { useState } from "react";
 
-import { Breadcrumb } from "./layouts";
 import { ResumenEnca } from "./components";
 import {
   ActividadesPage,
@@ -47,22 +46,6 @@ type NavLevel =
   | { readonly kind: "objetivos"; readonly meta: Meta }
   | { readonly kind: "indicadores"; readonly objetivo: Objetivo }
   | { readonly kind: "actividades"; readonly indicador: Indicador };
-
-/** Etiqueta de la miga de pan para cada nivel de la pila. */
-function crumbLabel(level: NavLevel): string {
-  switch (level.kind) {
-    case "ejes":
-      return "Ejes";
-    case "metas":
-      return level.eje.nombre;
-    case "objetivos":
-      return level.meta.descripcion;
-    case "indicadores":
-      return level.objetivo.descripcion;
-    case "actividades":
-      return level.indicador.nombre;
-  }
-}
 
 /** Pestañas de nivel superior: Seguimiento ENCA, Bibliometría y Biodiversidad. */
 type Tab = "enca" | "bibliometria" | "biodiversidad";
@@ -233,10 +216,6 @@ export function App() {
               ← Volver
             </button>
           ) : null}
-          <Breadcrumb
-            crumbs={stack.map((level) => ({ label: crumbLabel(level) }))}
-            onNavigate={navigateTo}
-          />
           {renderCurrent(current)}
         </>
       ) : tab === "bibliometria" ? (
