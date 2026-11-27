@@ -143,18 +143,18 @@ function urlGbifCategoriaIUCN(codigo: string): string {
 }
 
 /**
- * Enlace a GBIF con las ocurrencias de UNA especie en Colombia. El portal
- * reconstruye el filtro de taxón desde el parámetro camelCase ``taxonKey``, pero
- * usando la clave del backbone ACTUAL del portal (Catalogue of Life Extended
- * Release), que es alfanumérica y corta (p. ej. "6YJKF"). Las claves numéricas
- * del backbone antiguo (``species_key``, p. ej. "2488675") NO las reconoce el
+ * Enlace a GBIF con las ocurrencias de UN taxón en Colombia (especie, familia u
+ * orden). El portal reconstruye el filtro de taxón desde el parámetro camelCase
+ * ``taxonKey``, pero usando la clave del backbone ACTUAL del portal (Catalogue of
+ * Life Extended Release), alfanumérica y corta (p. ej. especie "6YJKF", familia
+ * Thraupidae "H87"). Las claves numéricas del backbone antiguo NO las reconoce el
  * portal nuevo: las trata como texto y el enlace quedaba solo con el país.
  *
  * ``portalKey`` es esa clave COL XR (campo ``gbif_portal_key`` del snapshot).
  * Si es null (GBIF no resolvió el nombre), se devuelve el enlace solo-país como
  * degradación honesta, en vez de un enlace roto con 0 resultados.
  */
-function urlGbifEspecie(portalKey: string | null): string {
+function urlGbifPorTaxonKey(portalKey: string | null): string {
   const params = new URLSearchParams({ country: "CO" });
   if (portalKey) params.set("taxonKey", portalKey);
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
@@ -410,6 +410,34 @@ function EnlaceGadmGbif({
       target="_blank"
       rel="noopener noreferrer"
       title={`Ver en GBIF los registros de aves de ${lugar} (Colombia)`}
+      style={{ color: VERDE_OSCURO, textDecoration: "underline", fontWeight: 600, whiteSpace: "nowrap" }}
+    >
+      Ver ↗
+    </a>
+  );
+}
+
+/**
+ * Enlace "Ver en GBIF" de un taxón (especie, familia u orden) por su clave del
+ * portal (COL XR). Si no hay clave resuelta, muestra "—" en vez de un enlace
+ * roto. Filtra por el taxón + Colombia.
+ */
+function EnlaceTaxonGbif({
+  portalKey,
+  nombre,
+}: {
+  portalKey: string | null;
+  nombre: string;
+}) {
+  if (!portalKey) {
+    return <span style={{ color: "#aaa" }}>—</span>;
+  }
+  return (
+    <a
+      href={urlGbifPorTaxonKey(portalKey)}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`Ver en GBIF los registros de ${nombre} en Colombia`}
       style={{ color: VERDE_OSCURO, textDecoration: "underline", fontWeight: 600, whiteSpace: "nowrap" }}
     >
       Ver ↗
@@ -1003,6 +1031,8 @@ function AniosCard({ resumen }: { resumen: ResumenGBIF }) {
 
 /** Nº de municipios que se muestran en el gráfico (los demás, vía búsqueda). */
 const MUNICIPIOS_EN_GRAFICO = 25;
+/** Nº de grupos taxonómicos (familias/órdenes) en el gráfico; resto, vía búsqueda. */
+const TAXONES_EN_GRAFICO = 20;
 /** Máximo de resultados que lista la búsqueda, para no volcar cientos. */
 const MAX_RESULTADOS_BUSQUEDA = 50;
 
@@ -1229,14 +1259,18 @@ function TaxonCard({
     );
   }
 
-  // En escala logarítmica un valor <= 0 no es representable; esos se excluyen del
-  // GRÁFICO (siguen en la tabla). En escala lineal se muestran todos.
+  // El gráfico muestra solo los TAXONES_EN_GRAFICO con más registros (los datos
+  // vienen ordenados de mayor a menor desde el pipeline); el resto se consulta
+  // con el buscador. En escala logarítmica un valor <= 0 no es representable, así
+  // que esos se excluyen del gráfico.
   const data = items
+    .slice(0, TAXONES_EN_GRAFICO)
     .filter((t) => !escalaLog || t.registros_ocurrencia > 0)
     .map((t) => ({
       etiqueta: t.nombre ?? t.taxon_key,
       registros: t.registros_ocurrencia,
     }));
+  const hayMas = items.length > TAXONES_EN_GRAFICO;
 
   const valores = data.map((d) => d.registros);
   const minimo = valores.length > 0 ? Math.min(...valores) : 1;
@@ -1288,7 +1322,7 @@ function TaxonCard({
         </ResponsiveContainer>
       </div>
 
-      <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem" }}>
+      <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem", maxWidth: 560 }}>
         <thead>
           <tr>
             <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>#</th>
@@ -1298,10 +1332,13 @@ function TaxonCard({
             <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
               Registros de ocurrencia
             </th>
+            <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+              GBIF
+            </th>
           </tr>
         </thead>
         <tbody>
-          {items.map((t) => (
+          {items.slice(0, TAXONES_EN_GRAFICO).map((t) => (
             <tr key={t.taxon_key}>
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>{t.rank}</td>
               <td style={{ padding: "0.4rem", borderBottom: "1px solid #eee" }}>
@@ -1312,10 +1349,21 @@ function TaxonCard({
               <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
                 {formatoEntero(t.registros_ocurrencia)}
               </td>
+              <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                <EnlaceTaxonGbif portalKey={t.gbif_portal_key} nombre={t.nombre ?? t.taxon_key} />
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+      {hayMas ? (
+        <p style={{ color: "#789", fontSize: "0.8rem", marginTop: "0.25rem" }}>
+          Se muestran {etiquetaColumna === "Orden" ? "los" : "las"} {TAXONES_EN_GRAFICO} con más
+          registros, de {formatoEntero(items.length)} en total. Usa el buscador de abajo para
+          consultar cualquier otr{etiquetaColumna === "Orden" ? "o" : "a"} y abrir sus registros en
+          GBIF.
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -1505,7 +1553,7 @@ function BuscadorTaxon({
             en GBIF.)
           </p>
         ) : (
-          <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem", maxWidth: 520 }}>
+          <table style={{ borderCollapse: "collapse", width: "100%", marginTop: "0.5rem", maxWidth: 560 }}>
             <thead>
               <tr>
                 <th style={{ textAlign: "left", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
@@ -1513,6 +1561,9 @@ function BuscadorTaxon({
                 </th>
                 <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
                   Registros de ocurrencia
+                </th>
+                <th style={{ textAlign: "right", padding: "0.4rem", borderBottom: "2px solid #ccc" }}>
+                  GBIF
                 </th>
               </tr>
             </thead>
@@ -1524,6 +1575,9 @@ function BuscadorTaxon({
                   </td>
                   <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
                     {formatoEntero(t.registros_ocurrencia)}
+                  </td>
+                  <td style={{ padding: "0.4rem", textAlign: "right", borderBottom: "1px solid #eee" }}>
+                    <EnlaceTaxonGbif portalKey={t.gbif_portal_key} nombre={t.nombre ?? t.taxon_key} />
                   </td>
                 </tr>
               ))}
@@ -1612,15 +1666,22 @@ function TaxonomiaCard({ resumen }: { resumen: ResumenGBIF }) {
         grupos con más registros.
       </p>
       <TaxonCard
-        titulo="Órdenes de aves"
-        descripcion="Todos los órdenes de aves con registros de ocurrencia en Colombia, ordenados por número de registros."
+        titulo="Órdenes con más registros"
+        descripcion="Órdenes de aves ordenados por número de registros de ocurrencia. El gráfico muestra los que más registros tienen; usa el buscador para consultar cualquier otro."
         items={resumen.ordenes}
         escalaLog
         etiquetaColumna="Orden"
       />
+      {resumen.ordenes.length > 0 ? (
+        <BuscadorTaxon
+          items={resumen.ordenes}
+          etiqueta="órdenes"
+          placeholder="Buscar orden (p. ej. Apodiformes, Falconiformes…)"
+        />
+      ) : null}
       <TaxonCard
         titulo="Familias con más registros"
-        descripcion="Familias de aves ordenadas por número de registros de ocurrencia. El gráfico muestra las que más registros tienen; usa el buscador para encontrar cualquier familia."
+        descripcion="Familias de aves ordenadas por número de registros de ocurrencia. El gráfico muestra las que más registros tienen; usa el buscador para consultar cualquier otra."
         items={resumen.familias}
         etiquetaColumna="Familia"
       />
@@ -1770,7 +1831,7 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
                   </span>
                 ) : null}{" "}
                 <a
-                  href={urlGbifEspecie(especie.gbif_portal_key)}
+                  href={urlGbifPorTaxonKey(especie.gbif_portal_key)}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Ver en GBIF los registros de ocurrencia de esta especie en Colombia"

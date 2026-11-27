@@ -29,7 +29,14 @@ export interface DepartamentoGBIF {
 /** Conteo de registros de aves por grupo taxonómico (orden o familia). */
 export interface TaxonGBIF {
   readonly rank: number;
+  /** Clave numérica del backbone antiguo de GBIF (API REST v1). */
   readonly taxon_key: string;
+  /**
+   * Clave del taxón en el backbone actual del PORTAL web de GBIF (COL XR),
+   * alfanumérica y corta (p. ej. Thraupidae = "H87"). Es la que entiende el
+   * enlace del portal como `taxonKey`. null si GBIF no resolvió el nombre.
+   */
+  readonly gbif_portal_key: string | null;
   /** Nombre científico resuelto; `null` si GBIF no lo devolvió (no se inventa). */
   readonly nombre: string | null;
   readonly registros_ocurrencia: number;

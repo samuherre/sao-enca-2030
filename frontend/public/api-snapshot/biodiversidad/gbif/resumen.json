@@ -19132,175 +19132,204 @@
       "rank": 1,
       "taxon_key": "729",
       "nombre": "Passeriformes",
-      "registros_ocurrencia": 11866435
+      "registros_ocurrencia": 11866435,
+      "gbif_portal_key": "3RL"
     },
     {
       "rank": 2,
       "taxon_key": "1448",
       "nombre": "Apodiformes",
-      "registros_ocurrencia": 1511644
+      "registros_ocurrencia": 1511644,
+      "gbif_portal_key": "Q9"
     },
     {
       "rank": 3,
       "taxon_key": "7191147",
       "nombre": "Accipitriformes",
-      "registros_ocurrencia": 929960
+      "registros_ocurrencia": 929960,
+      "gbif_portal_key": "MB"
     },
     {
       "rank": 4,
       "taxon_key": "1446",
       "nombre": "Columbiformes",
-      "registros_ocurrencia": 899495
+      "registros_ocurrencia": 899495,
+      "gbif_portal_key": "Z8"
     },
     {
       "rank": 5,
       "taxon_key": "724",
       "nombre": "Piciformes",
-      "registros_ocurrencia": 891879
+      "registros_ocurrencia": 891879,
+      "gbif_portal_key": "3TR"
     },
     {
       "rank": 6,
       "taxon_key": "7190953",
       "nombre": "Pelecaniformes",
-      "registros_ocurrencia": 818470
+      "registros_ocurrencia": 818470,
+      "gbif_portal_key": "3RZ"
     },
     {
       "rank": 7,
       "taxon_key": "1445",
       "nombre": "Psittaciformes",
-      "registros_ocurrencia": 617011
+      "registros_ocurrencia": 617011,
+      "gbif_portal_key": "3X7"
     },
     {
       "rank": 8,
       "taxon_key": "7192402",
       "nombre": "Charadriiformes",
-      "registros_ocurrencia": 473927
+      "registros_ocurrencia": 473927,
+      "gbif_portal_key": "X3"
     },
     {
       "rank": 9,
       "taxon_key": "1492",
       "nombre": "Cuculiformes",
-      "registros_ocurrencia": 357328
+      "registros_ocurrencia": 357328,
+      "gbif_portal_key": "32K"
     },
     {
       "rank": 10,
       "taxon_key": "7191407",
       "nombre": "Falconiformes",
-      "registros_ocurrencia": 344768
+      "registros_ocurrencia": 344768,
+      "gbif_portal_key": "386"
     },
     {
       "rank": 11,
       "taxon_key": "723",
       "nombre": "Galliformes",
-      "registros_ocurrencia": 304807
+      "registros_ocurrencia": 304807,
+      "gbif_portal_key": "38Z"
     },
     {
       "rank": 12,
       "taxon_key": "1447",
       "nombre": "Coraciiformes",
-      "registros_ocurrencia": 223702
+      "registros_ocurrencia": 223702,
+      "gbif_portal_key": "ZL"
     },
     {
       "rank": 13,
       "taxon_key": "1493",
       "nombre": "Gruiformes",
-      "registros_ocurrencia": 186626
+      "registros_ocurrencia": 186626,
+      "gbif_portal_key": "6223K"
     },
     {
       "rank": 14,
       "taxon_key": "1108",
       "nombre": "Anseriformes",
-      "registros_ocurrencia": 145060
+      "registros_ocurrencia": 145060,
+      "gbif_portal_key": "PQ"
     },
     {
       "rank": 15,
       "taxon_key": "7192775",
       "nombre": "Suliformes",
-      "registros_ocurrencia": 97098
+      "registros_ocurrencia": 97098,
+      "gbif_portal_key": "46J"
     },
     {
       "rank": 16,
       "taxon_key": "1449",
       "nombre": "Trogoniformes",
-      "registros_ocurrencia": 90866
+      "registros_ocurrencia": 90866,
+      "gbif_portal_key": "49P"
     },
     {
       "rank": 17,
       "taxon_key": "726",
       "nombre": "Tinamiformes",
-      "registros_ocurrencia": 85651
+      "registros_ocurrencia": 85651,
+      "gbif_portal_key": "48D"
     },
     {
       "rank": 18,
       "taxon_key": "1450",
       "nombre": "Strigiformes",
-      "registros_ocurrencia": 79322
+      "registros_ocurrencia": 79322,
+      "gbif_portal_key": "466"
     },
     {
       "rank": 19,
       "taxon_key": "8510645",
       "nombre": "Caprimulgiformes",
-      "registros_ocurrencia": 59367
+      "registros_ocurrencia": 59367,
+      "gbif_portal_key": "VJ"
     },
     {
       "rank": 20,
       "taxon_key": "10833565",
       "nombre": "Nyctibiiformes",
-      "registros_ocurrencia": 23344
+      "registros_ocurrencia": 23344,
+      "gbif_portal_key": "3P3"
     },
     {
       "rank": 21,
       "taxon_key": "7191588",
       "nombre": "Podicipediformes",
-      "registros_ocurrencia": 22837
+      "registros_ocurrencia": 22837,
+      "gbif_portal_key": "3V6"
     },
     {
       "rank": 22,
       "taxon_key": "839",
       "nombre": "Ciconiiformes",
-      "registros_ocurrencia": 14302
+      "registros_ocurrencia": 14302,
+      "gbif_portal_key": "Y9"
     },
     {
       "rank": 23,
       "taxon_key": "8705315",
       "nombre": "Opisthocomiformes",
-      "registros_ocurrencia": 13957
+      "registros_ocurrencia": 13957,
+      "gbif_portal_key": "3Q3"
     },
     {
       "rank": 24,
       "taxon_key": "10726067",
       "nombre": "Steatornithiformes",
-      "registros_ocurrencia": 7224
+      "registros_ocurrencia": 7224,
+      "gbif_portal_key": "45H"
     },
     {
       "rank": 25,
       "taxon_key": "8481794",
       "nombre": "Eurypygiformes",
-      "registros_ocurrencia": 6906
+      "registros_ocurrencia": 6906,
+      "gbif_portal_key": "6222J"
     },
     {
       "rank": 26,
       "taxon_key": "7191426",
       "nombre": "Phoenicopteriformes",
-      "registros_ocurrencia": 3434
+      "registros_ocurrencia": 3434,
+      "gbif_portal_key": "3T8"
     },
     {
       "rank": 27,
       "taxon_key": "7192755",
       "nombre": "Procellariiformes",
-      "registros_ocurrencia": 956
+      "registros_ocurrencia": 956,
+      "gbif_portal_key": "622V8"
     },
     {
       "rank": 28,
       "taxon_key": "7190987",
       "nombre": "Phaethontiformes",
-      "registros_ocurrencia": 155
+      "registros_ocurrencia": 155,
+      "gbif_portal_key": "3SZ"
     },
     {
       "rank": 29,
       "taxon_key": "7190978",
       "nombre": "Sphenisciformes",
-      "registros_ocurrencia": 10
+      "registros_ocurrencia": 10,
+      "gbif_portal_key": "44K"
     }
   ],
   "familias": [
@@ -19308,547 +19337,638 @@
       "rank": 1,
       "taxon_key": "9352",
       "nombre": "Thraupidae",
-      "registros_ocurrencia": 3157875
+      "registros_ocurrencia": 3157875,
+      "gbif_portal_key": "H87"
     },
     {
       "rank": 2,
       "taxon_key": "5291",
       "nombre": "Tyrannidae",
-      "registros_ocurrencia": 2527102
+      "registros_ocurrencia": 2527102,
+      "gbif_portal_key": "HMW"
     },
     {
       "rank": 3,
       "taxon_key": "5289",
       "nombre": "Trochilidae",
-      "registros_ocurrencia": 1402442
+      "registros_ocurrencia": 1402442,
+      "gbif_portal_key": "HHZ"
     },
     {
       "rank": 4,
       "taxon_key": "5233",
       "nombre": "Columbidae",
-      "registros_ocurrencia": 899459
+      "registros_ocurrencia": 899459,
+      "gbif_portal_key": "8GD"
     },
     {
       "rank": 5,
       "taxon_key": "5263",
       "nombre": "Parulidae",
-      "registros_ocurrencia": 718535
+      "registros_ocurrencia": 718535,
+      "gbif_portal_key": "626BR"
     },
     {
       "rank": 6,
       "taxon_key": "6176",
       "nombre": "Icteridae",
-      "registros_ocurrencia": 693740
+      "registros_ocurrencia": 693740,
+      "gbif_portal_key": "BCZ"
     },
     {
       "rank": 7,
       "taxon_key": "9355",
       "nombre": "Troglodytidae",
-      "registros_ocurrencia": 679257
+      "registros_ocurrencia": 679257,
+      "gbif_portal_key": "626S2"
     },
     {
       "rank": 8,
       "taxon_key": "5290",
       "nombre": "Turdidae",
-      "registros_ocurrencia": 623813
+      "registros_ocurrencia": 623813,
+      "gbif_portal_key": "T4K9X"
     },
     {
       "rank": 9,
       "taxon_key": "9340",
       "nombre": "Psittacidae",
-      "registros_ocurrencia": 616997
+      "registros_ocurrencia": 616997,
+      "gbif_portal_key": "FBD"
     },
     {
       "rank": 10,
       "taxon_key": "5243",
       "nombre": "Furnariidae",
-      "registros_ocurrencia": 582774
+      "registros_ocurrencia": 582774,
+      "gbif_portal_key": "6245S"
     },
     {
       "rank": 11,
       "taxon_key": "3685",
       "nombre": "Ardeidae",
-      "registros_ocurrencia": 558106
+      "registros_ocurrencia": 558106,
+      "gbif_portal_key": "6PB"
     },
     {
       "rank": 12,
       "taxon_key": "9410667",
       "nombre": "Passerellidae",
-      "registros_ocurrencia": 522499
+      "registros_ocurrencia": 522499,
+      "gbif_portal_key": "9G6YK"
     },
     {
       "rank": 13,
       "taxon_key": "9333",
       "nombre": "Picidae",
-      "registros_ocurrencia": 494332
+      "registros_ocurrencia": 494332,
+      "gbif_portal_key": "625L8"
     },
     {
       "rank": 14,
       "taxon_key": "3242141",
       "nombre": "Cathartidae",
-      "registros_ocurrencia": 476878
+      "registros_ocurrencia": 476878,
+      "gbif_portal_key": "7SX"
     },
     {
       "rank": 15,
       "taxon_key": "2877",
       "nombre": "Accipitridae",
-      "registros_ocurrencia": 427514
+      "registros_ocurrencia": 427514,
+      "gbif_portal_key": "5W6"
     },
     {
       "rank": 16,
       "taxon_key": "5286",
       "nombre": "Thamnophilidae",
-      "registros_ocurrencia": 383331
+      "registros_ocurrencia": 383331,
+      "gbif_portal_key": "H5C"
     },
     {
       "rank": 17,
       "taxon_key": "9309",
       "nombre": "Cuculidae",
-      "registros_ocurrencia": 357325
+      "registros_ocurrencia": 357325,
+      "gbif_portal_key": "8S7"
     },
     {
       "rank": 18,
       "taxon_key": "5248",
       "nombre": "Hirundinidae",
-      "registros_ocurrencia": 353931
+      "registros_ocurrencia": 353931,
+      "gbif_portal_key": "B3Y"
     },
     {
       "rank": 19,
       "taxon_key": "5240",
       "nombre": "Falconidae",
-      "registros_ocurrencia": 344760
+      "registros_ocurrencia": 344760,
+      "gbif_portal_key": "623R8"
     },
     {
       "rank": 20,
       "taxon_key": "5242",
       "nombre": "Fringillidae",
-      "registros_ocurrencia": 337814
+      "registros_ocurrencia": 337814,
+      "gbif_portal_key": "6244D"
     },
     {
       "rank": 21,
       "taxon_key": "5237",
       "nombre": "Cracidae",
-      "registros_ocurrencia": 239547
+      "registros_ocurrencia": 239547,
+      "gbif_portal_key": "8MM"
     },
     {
       "rank": 22,
       "taxon_key": "5288",
       "nombre": "Threskiornithidae",
-      "registros_ocurrencia": 234799
+      "registros_ocurrencia": 234799,
+      "gbif_portal_key": "H89"
     },
     {
       "rank": 23,
       "taxon_key": "5236",
       "nombre": "Cotingidae",
-      "registros_ocurrencia": 215011
+      "registros_ocurrencia": 215011,
+      "gbif_portal_key": "8MB"
     },
     {
       "rank": 24,
       "taxon_key": "2480210",
       "nombre": "Charadriidae",
-      "registros_ocurrencia": 201689
+      "registros_ocurrencia": 201689,
+      "gbif_portal_key": "824"
     },
     {
       "rank": 25,
       "taxon_key": "9358",
       "nombre": "Vireonidae",
-      "registros_ocurrencia": 196776
+      "registros_ocurrencia": 196776,
+      "gbif_portal_key": "626RC"
     },
     {
       "rank": 26,
       "taxon_key": "9343",
       "nombre": "Ramphastidae",
-      "registros_ocurrencia": 194192
+      "registros_ocurrencia": 194192,
+      "gbif_portal_key": "FJF"
     },
     {
       "rank": 27,
       "taxon_key": "9285",
       "nombre": "Cardinalidae",
-      "registros_ocurrencia": 180357
+      "registros_ocurrencia": 180357,
+      "gbif_portal_key": "7QR"
     },
     {
       "rank": 28,
       "taxon_key": "9342",
       "nombre": "Rallidae",
-      "registros_ocurrencia": 169284
+      "registros_ocurrencia": 169284,
+      "gbif_portal_key": "FJ9"
     },
     {
       "rank": 29,
       "taxon_key": "5235",
       "nombre": "Corvidae",
-      "registros_ocurrencia": 166156
+      "registros_ocurrencia": 166156,
+      "gbif_portal_key": "8L6"
     },
     {
       "rank": 30,
       "taxon_key": "5282",
       "nombre": "Scolopacidae",
-      "registros_ocurrencia": 128157
+      "registros_ocurrencia": 128157,
+      "gbif_portal_key": "G4X"
     },
     {
       "rank": 31,
       "taxon_key": "2986",
       "nombre": "Anatidae",
-      "registros_ocurrencia": 127859
+      "registros_ocurrencia": 127859,
+      "gbif_portal_key": "9H6K5"
     },
     {
       "rank": 32,
       "taxon_key": "6101110",
       "nombre": "Grallariidae",
-      "registros_ocurrencia": 126691
+      "registros_ocurrencia": 126691,
+      "gbif_portal_key": "623N8"
     },
     {
       "rank": 33,
       "taxon_key": "5255",
       "nombre": "Momotidae",
-      "registros_ocurrencia": 120577
+      "registros_ocurrencia": 120577,
+      "gbif_portal_key": "CVK"
     },
     {
       "rank": 34,
       "taxon_key": "5270",
       "nombre": "Pipridae",
-      "registros_ocurrencia": 116404
+      "registros_ocurrencia": 116404,
+      "gbif_portal_key": "625NN"
     },
     {
       "rank": 35,
       "taxon_key": "2993",
       "nombre": "Apodidae",
-      "registros_ocurrencia": 109164
+      "registros_ocurrencia": 109164,
+      "gbif_portal_key": "N"
     },
     {
       "rank": 36,
       "taxon_key": "9321",
       "nombre": "Mimidae",
-      "registros_ocurrencia": 106953
+      "registros_ocurrencia": 106953,
+      "gbif_portal_key": "CTD"
     },
     {
       "rank": 37,
       "taxon_key": "2984",
       "nombre": "Alcedinidae",
-      "registros_ocurrencia": 103118
+      "registros_ocurrencia": 103118,
+      "gbif_portal_key": "66F"
     },
     {
       "rank": 38,
       "taxon_key": "9356",
       "nombre": "Trogonidae",
-      "registros_ocurrencia": 90866
+      "registros_ocurrencia": 90866,
+      "gbif_portal_key": "HJJ"
     },
     {
       "rank": 39,
       "taxon_key": "5281",
       "nombre": "Rhinocryptidae",
-      "registros_ocurrencia": 87360
+      "registros_ocurrencia": 87360,
+      "gbif_portal_key": "FNY"
     },
     {
       "rank": 40,
       "taxon_key": "9353",
       "nombre": "Tinamidae",
-      "registros_ocurrencia": 85651
+      "registros_ocurrencia": 85651,
+      "gbif_portal_key": "H9S"
     },
     {
       "rank": 41,
       "taxon_key": "5703",
       "nombre": "Bucconidae",
-      "registros_ocurrencia": 77518
+      "registros_ocurrencia": 77518,
+      "gbif_portal_key": "622HW"
     },
     {
       "rank": 42,
       "taxon_key": "9348",
       "nombre": "Strigidae",
-      "registros_ocurrencia": 75667
+      "registros_ocurrencia": 75667,
+      "gbif_portal_key": "GQX"
     },
     {
       "rank": 43,
       "taxon_key": "9316",
       "nombre": "Laridae",
-      "registros_ocurrencia": 70078
+      "registros_ocurrencia": 70078,
+      "gbif_portal_key": "BSK"
     },
     {
       "rank": 44,
       "taxon_key": "3242201",
       "nombre": "Capitonidae",
-      "registros_ocurrencia": 68062
+      "registros_ocurrencia": 68062,
+      "gbif_portal_key": "7NGBY"
     },
     {
       "rank": 45,
       "taxon_key": "5225",
       "nombre": "Caprimulgidae",
-      "registros_ocurrencia": 59359
+      "registros_ocurrencia": 59359,
+      "gbif_portal_key": "7PQ"
     },
     {
       "rank": 46,
       "taxon_key": "5268",
       "nombre": "Phalacrocoracidae",
-      "registros_ocurrencia": 52693
+      "registros_ocurrencia": 52693,
+      "gbif_portal_key": "62694"
     },
     {
       "rank": 47,
       "taxon_key": "5244",
       "nombre": "Galbulidae",
-      "registros_ocurrencia": 49774
+      "registros_ocurrencia": 49774,
+      "gbif_portal_key": "6245F"
     },
     {
       "rank": 48,
       "taxon_key": "9314",
       "nombre": "Jacanidae",
-      "registros_ocurrencia": 46990
+      "registros_ocurrencia": 46990,
+      "gbif_portal_key": "624WS"
     },
     {
       "rank": 49,
       "taxon_key": "9325",
       "nombre": "Odontophoridae",
-      "registros_ocurrencia": 46516
+      "registros_ocurrencia": 46516,
+      "gbif_portal_key": "DJ2"
     },
     {
       "rank": 50,
       "taxon_key": "5789066",
       "nombre": "Polioptilidae",
-      "registros_ocurrencia": 36158
+      "registros_ocurrencia": 36158,
+      "gbif_portal_key": "627GW"
     },
     {
       "rank": 51,
       "taxon_key": "5241",
       "nombre": "Fregatidae",
-      "registros_ocurrencia": 26345
+      "registros_ocurrencia": 26345,
+      "gbif_portal_key": "6244Z"
     },
     {
       "rank": 52,
       "taxon_key": "9329",
       "nombre": "Pelecanidae",
-      "registros_ocurrencia": 25560
+      "registros_ocurrencia": 25560,
+      "gbif_portal_key": "625T5"
     },
     {
       "rank": 53,
       "taxon_key": "4408414",
       "nombre": "Pandionidae",
-      "registros_ocurrencia": 25509
+      "registros_ocurrencia": 25509,
+      "gbif_portal_key": "DWJ"
     },
     {
       "rank": 54,
       "taxon_key": "9324",
       "nombre": "Nyctibiidae",
-      "registros_ocurrencia": 23344
+      "registros_ocurrencia": 23344,
+      "gbif_portal_key": "DG7"
     },
     {
       "rank": 55,
       "taxon_key": "9338",
       "nombre": "Podicipedidae",
-      "registros_ocurrencia": 22837
+      "registros_ocurrencia": 22837,
+      "gbif_portal_key": "627FZ"
     },
     {
       "rank": 56,
       "taxon_key": "2988",
       "nombre": "Anhimidae",
-      "registros_ocurrencia": 17195
+      "registros_ocurrencia": 17195,
+      "gbif_portal_key": "6234R"
     },
     {
       "rank": 57,
       "taxon_key": "4287244",
       "nombre": "Recurvirostridae",
-      "registros_ocurrencia": 16002
+      "registros_ocurrencia": 16002,
+      "gbif_portal_key": "FKR"
     },
     {
       "rank": 58,
       "taxon_key": "7514",
       "nombre": "Aramidae",
-      "registros_ocurrencia": 15196
+      "registros_ocurrencia": 15196,
+      "gbif_portal_key": "6234Z"
     },
     {
       "rank": 59,
       "taxon_key": "9289",
       "nombre": "Ciconiidae",
-      "registros_ocurrencia": 14302
+      "registros_ocurrencia": 14302,
+      "gbif_portal_key": "88T"
     },
     {
       "rank": 60,
       "taxon_key": "5261",
       "nombre": "Opisthocomidae",
-      "registros_ocurrencia": 13957
+      "registros_ocurrencia": 13957,
+      "gbif_portal_key": "626H9"
     },
     {
       "rank": 61,
       "taxon_key": "9290",
       "nombre": "Cinclidae",
-      "registros_ocurrencia": 12027
+      "registros_ocurrencia": 12027,
+      "gbif_portal_key": "896"
     },
     {
       "rank": 62,
       "taxon_key": "2989",
       "nombre": "Anhingidae",
-      "registros_ocurrencia": 10680
+      "registros_ocurrencia": 10680,
+      "gbif_portal_key": "62353"
     },
     {
       "rank": 63,
       "taxon_key": "9311",
       "nombre": "Formicariidae",
-      "registros_ocurrencia": 10407
+      "registros_ocurrencia": 10407,
+      "gbif_portal_key": "623ST"
     },
     {
       "rank": 64,
       "taxon_key": "9697",
       "nombre": "Burhinidae",
-      "registros_ocurrencia": 8597
+      "registros_ocurrencia": 8597,
+      "gbif_portal_key": "7GJ"
     },
     {
       "rank": 65,
       "taxon_key": "6101214",
       "nombre": "Semnornithidae",
-      "registros_ocurrencia": 7997
+      "registros_ocurrencia": 7997,
+      "gbif_portal_key": "7NKZR"
     },
     {
       "rank": 66,
       "taxon_key": "6100869",
       "nombre": "Donacobiidae",
-      "registros_ocurrencia": 7450
+      "registros_ocurrencia": 7450,
+      "gbif_portal_key": "9F3"
     },
     {
       "rank": 67,
       "taxon_key": "9351",
       "nombre": "Sulidae",
-      "registros_ocurrencia": 7380
+      "registros_ocurrencia": 7380,
+      "gbif_portal_key": "626M3"
     },
     {
       "rank": 68,
       "taxon_key": "9346",
       "nombre": "Steatornithidae",
-      "registros_ocurrencia": 7224
+      "registros_ocurrencia": 7224,
+      "gbif_portal_key": "GM5"
     },
     {
       "rank": 69,
       "taxon_key": "9397627",
       "nombre": "Mitrospingidae",
-      "registros_ocurrencia": 7047
+      "registros_ocurrencia": 7047,
+      "gbif_portal_key": "9G883"
     },
     {
       "rank": 70,
       "taxon_key": "5710",
       "nombre": "Eurypygidae",
-      "registros_ocurrencia": 6906
+      "registros_ocurrencia": 6906,
+      "gbif_portal_key": "9ZG"
     },
     {
       "rank": 71,
       "taxon_key": "5709",
       "nombre": "Estrildidae",
-      "registros_ocurrencia": 5327
+      "registros_ocurrencia": 5327,
+      "gbif_portal_key": "623Q5"
     },
     {
       "rank": 72,
       "taxon_key": "9402236",
       "nombre": "Rhodinocichlidae",
-      "registros_ocurrencia": 4723
+      "registros_ocurrencia": 4723,
+      "gbif_portal_key": "9GBGP"
     },
     {
       "rank": 73,
       "taxon_key": "5292",
       "nombre": "Tytonidae",
-      "registros_ocurrencia": 3645
+      "registros_ocurrencia": 3645,
+      "gbif_portal_key": "HMY"
     },
     {
       "rank": 74,
       "taxon_key": "5269",
       "nombre": "Phoenicopteridae",
-      "registros_ocurrencia": 3434
+      "registros_ocurrencia": 3434,
+      "gbif_portal_key": "6269M"
     },
     {
       "rank": 75,
       "taxon_key": "4287243",
       "nombre": "Haematopodidae",
-      "registros_ocurrencia": 2023
+      "registros_ocurrencia": 2023,
+      "gbif_portal_key": "625G4"
     },
     {
       "rank": 76,
       "taxon_key": "9306",
       "nombre": "Conopophagidae",
-      "registros_ocurrencia": 1797
+      "registros_ocurrencia": 1797,
+      "gbif_portal_key": "8HY"
     },
     {
       "rank": 77,
       "taxon_key": "5264",
       "nombre": "Passeridae",
-      "registros_ocurrencia": 1590
+      "registros_ocurrencia": 1590,
+      "gbif_portal_key": "626DC"
     },
     {
       "rank": 78,
       "taxon_key": "5257",
       "nombre": "Motacillidae",
-      "registros_ocurrencia": 1446
+      "registros_ocurrencia": 1446,
+      "gbif_portal_key": "CYC"
     },
     {
       "rank": 79,
       "taxon_key": "9341",
       "nombre": "Psophiidae",
-      "registros_ocurrencia": 1083
+      "registros_ocurrencia": 1083,
+      "gbif_portal_key": "FBG"
     },
     {
       "rank": 80,
       "taxon_key": "5246",
       "nombre": "Heliornithidae",
-      "registros_ocurrencia": 1055
+      "registros_ocurrencia": 1055,
+      "gbif_portal_key": "624RL"
     },
     {
       "rank": 81,
       "taxon_key": "7211",
       "nombre": "Alaudidae",
-      "registros_ocurrencia": 547
+      "registros_ocurrencia": 547,
+      "gbif_portal_key": "667"
     },
     {
       "rank": 82,
       "taxon_key": "5249",
       "nombre": "Hydrobatidae",
-      "registros_ocurrencia": 495
+      "registros_ocurrencia": 495,
+      "gbif_portal_key": "B87"
     },
     {
       "rank": 83,
       "taxon_key": "9339",
       "nombre": "Procellariidae",
-      "registros_ocurrencia": 432
+      "registros_ocurrencia": 432,
+      "gbif_portal_key": "627CQ"
     },
     {
       "rank": 84,
       "taxon_key": "9347",
       "nombre": "Stercorariidae",
-      "registros_ocurrencia": 357
+      "registros_ocurrencia": 357,
+      "gbif_portal_key": "GNX"
     },
     {
       "rank": 85,
       "taxon_key": "5267",
       "nombre": "Phaethontidae",
-      "registros_ocurrencia": 155
+      "registros_ocurrencia": 155,
+      "gbif_portal_key": "625WS"
     },
     {
       "rank": 86,
       "taxon_key": "5238",
       "nombre": "Diomedeidae",
-      "registros_ocurrencia": 24
+      "registros_ocurrencia": 24,
+      "gbif_portal_key": "623Y3"
     },
     {
       "rank": 87,
       "taxon_key": "5215",
       "nombre": "Bombycillidae",
-      "registros_ocurrencia": 19
+      "registros_ocurrencia": 19,
+      "gbif_portal_key": "622GL"
     },
     {
       "rank": 88,
       "taxon_key": "5284",
       "nombre": "Spheniscidae",
-      "registros_ocurrencia": 10
+      "registros_ocurrencia": 10,
+      "gbif_portal_key": "GHC"
     },
     {
       "rank": 89,
       "taxon_key": "5287",
       "nombre": "Thinocoridae",
-      "registros_ocurrencia": 6
+      "registros_ocurrencia": 6,
+      "gbif_portal_key": "H7K"
     },
     {
       "rank": 90,
       "taxon_key": "6101053",
       "nombre": "Tityridae",
-      "registros_ocurrencia": 5
+      "registros_ocurrencia": 5,
+      "gbif_portal_key": "CR449"
     },
     {
       "rank": 91,
       "taxon_key": "9336",
       "nombre": "Ploceidae",
-      "registros_ocurrencia": 4
+      "registros_ocurrencia": 4,
+      "gbif_portal_key": "627GF"
     }
   ],
   "especies": [

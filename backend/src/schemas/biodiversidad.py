@@ -66,6 +66,11 @@ class TaxonGBIF(SchemaBase):
 
     rank: int
     taxon_key: str
+    # Clave del taxón en el backbone ACTUAL del portal web de GBIF (COL XR),
+    # alfanumérica y corta (p. ej. Thraupidae = "H87"). Es la que el enlace del
+    # portal usa como taxonKey; las claves numéricas del backbone antiguo
+    # (taxon_key) el portal nuevo no las reconoce. None si no se resolvió.
+    gbif_portal_key: str | None = None
     nombre: str | None
     registros_ocurrencia: int
 

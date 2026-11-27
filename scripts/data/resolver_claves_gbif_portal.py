@@ -1,5 +1,6 @@
-"""Resuelve la clave COL XR (nuevo backbone de GBIF) de cada especie amenazada
-del snapshot de biodiversidad y la guarda como ``gbif_portal_key``.
+"""Resuelve la clave COL XR (nuevo backbone de GBIF) de cada taxón del snapshot
+de biodiversidad (especies amenazadas, familias y órdenes) y la guarda como
+``gbif_portal_key``.
 
 CONTEXTO DEL BUG
 ----------------
@@ -92,34 +93,52 @@ def main() -> int:
         return 1
 
     datos = json.loads(SNAPSHOT.read_text(encoding="utf-8"))
-    especies = datos.get("especies_amenazadas") or []
-    if not especies:
-        print("No hay especies_amenazadas en el snapshot; nada que resolver.")
-        return 0
 
-    print(f"Resolviendo clave COL XR de {len(especies)} especies...")
+    # Listas del snapshot a enriquecer y el campo del que sale su nombre
+    # científico. Especies amenazadas usan nombre_cientifico; familias y órdenes
+    # usan 'nombre' (canonicalName del backbone). Todos se resuelven igual: por
+    # nombre contra el checklist COL XR, obteniendo su clave de taxón del portal.
+    objetivos = [
+        ("especies_amenazadas", "nombre_cientifico"),
+        ("familias", "nombre"),
+        ("ordenes", "nombre"),
+    ]
+
+    # Cache por nombre para no repetir llamadas (p. ej. si un nombre se repite).
+    cache: dict[str, str | None] = {}
+    total = 0
     resueltas = 0
     sin_match: list[str] = []
-    for esp in especies:
-        nombre = esp.get("nombre_cientifico")
-        if not isinstance(nombre, str) or not nombre.strip():
-            esp["gbif_portal_key"] = None
-            sin_match.append(f"(sin nombre, rank {esp.get('rank')})")
+
+    for clave_lista, campo_nombre in objetivos:
+        items = datos.get(clave_lista) or []
+        if not items:
             continue
-        clave = resolver_clave_col(nombre.strip())
-        esp["gbif_portal_key"] = clave
-        if clave:
-            resueltas += 1
-            print(f"  ok  {nombre} -> {clave}")
-        else:
-            sin_match.append(nombre)
-            print(f"  --  {nombre}: sin coincidencia (gbif_portal_key=null)")
-        time.sleep(0.1)  # cortesía con la API pública
+        print(f"\nResolviendo clave COL XR de {len(items)} '{clave_lista}'...")
+        for item in items:
+            total += 1
+            nombre = item.get(campo_nombre)
+            if not isinstance(nombre, str) or not nombre.strip():
+                item["gbif_portal_key"] = None
+                sin_match.append(f"({clave_lista} sin nombre, rank {item.get('rank')})")
+                continue
+            nombre = nombre.strip()
+            if nombre not in cache:
+                cache[nombre] = resolver_clave_col(nombre)
+                time.sleep(0.1)  # cortesía con la API pública
+            clave = cache[nombre]
+            item["gbif_portal_key"] = clave
+            if clave:
+                resueltas += 1
+                print(f"  ok  {nombre} -> {clave}")
+            else:
+                sin_match.append(nombre)
+                print(f"  --  {nombre}: sin coincidencia (gbif_portal_key=null)")
 
     SNAPSHOT.write_text(
         json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    print(f"\nResueltas {resueltas}/{len(especies)}. Snapshot actualizado.")
+    print(f"\nResueltas {resueltas}/{total} (especies + familias + órdenes). Snapshot actualizado.")
     if sin_match:
         print(f"Sin coincidencia ({len(sin_match)}): {', '.join(sin_match)}")
     return 0

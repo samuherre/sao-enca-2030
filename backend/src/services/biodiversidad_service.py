@@ -410,6 +410,11 @@ def _taxones_desde_report(
             TaxonGBIF(
                 rank=pos,
                 taxon_key=str(taxon_key),
+                gbif_portal_key=(
+                    tax.get("gbif_portal_key")
+                    if isinstance(tax.get("gbif_portal_key"), str)
+                    else None
+                ),
                 nombre=nombre,
                 registros_ocurrencia=occ,
             )
