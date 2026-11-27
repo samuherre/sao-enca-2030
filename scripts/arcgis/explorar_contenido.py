@@ -122,8 +122,27 @@ def _listar_contenido(gis, buscar: str | None, limite: int) -> None:
             print(f"      url={it.url}")
 
 
+def _rest_json(url: str) -> dict:
+    """Pide un JSON a la REST de ArcGIS vía urllib (ligero, sin dependencias).
+
+    Las URLs de servicios de Feature/Map aceptan ``?f=json`` para devolver sus
+    metadatos (capas, tablas, campos). Es SOLO LECTURA y público-friendly.
+    """
+    import urllib.parse
+    import urllib.request
+
+    sep = "&" if "?" in url else "?"
+    full = f"{url}{sep}f=json"
+    with urllib.request.urlopen(full, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
 def _inspeccionar_item(gis, item_id: str) -> None:
-    """Muestra detalle de un item: capas, tablas, campos y URL REST (sin tocar)."""
+    """Muestra detalle de un item: capas, tablas, campos y URL REST (sin tocar).
+
+    Lee el esquema por la REST (``?f=json``) con urllib, para no depender de que
+    todas las dependencias pesadas de ``arcgis`` estén instaladas.
+    """
     item = gis.content.get(item_id)
     if item is None:
         raise ExploracionError(f"No se encontró el item con id={item_id}")
@@ -132,19 +151,41 @@ def _inspeccionar_item(gis, item_id: str) -> None:
     print(f"  owner: {item.owner}")
     print(f"  url:   {item.url}")
 
-    # Si es una capa/tabla alojada, lista sus capas y tablas con sus campos.
-    capas = getattr(item, "layers", None) or []
-    tablas = getattr(item, "tables", None) or []
-    for grupo, elementos in (("CAPA", capas), ("TABLA", tablas)):
-        for elem in elementos:
-            props = elem.properties
-            print(f"\n  [{grupo}] {props.get('name', '?')}  "
-                  f"(url={elem.url})")
-            print(f"      nº de registros: {elem.query(return_count_only=True)}")
-            campos = props.get("fields", []) or []
+    if not item.url:
+        print("  (este item no es un servicio con capas/tablas consultables)")
+        return
+
+    # Metadatos del servicio: lista de capas y tablas (con sus índices).
+    try:
+        servicio = _rest_json(item.url)
+    except Exception as error:  # noqa: BLE001 - inventario, reporta y sigue
+        print(f"  [no se pudo leer el esquema REST: {error}]")
+        return
+
+    elementos = []
+    for capa in servicio.get("layers", []) or []:
+        elementos.append(("CAPA", capa.get("id"), capa.get("name")))
+    for tabla in servicio.get("tables", []) or []:
+        elementos.append(("TABLA", tabla.get("id"), tabla.get("name")))
+
+    if not elementos:
+        print("  (el servicio no reporta capas ni tablas)")
+        return
+
+    for grupo, idx, nombre in elementos:
+        sub_url = f"{item.url}/{idx}"
+        print(f"\n  [{grupo} {idx}] {nombre}")
+        print(f"      url={sub_url}")
+        try:
+            detalle = _rest_json(sub_url)
+            # Conteo de registros (consulta liviana).
+            cnt = _rest_json(f"{sub_url}/query?where=1=1&returnCountOnly=true")
+            print(f"      nº de registros: {cnt.get('count', '?')}")
             print("      campos:")
-            for campo in campos:
+            for campo in detalle.get("fields", []) or []:
                 print(f"        - {campo.get('name')}  ({campo.get('type')})")
+        except Exception as error:  # noqa: BLE001
+            print(f"      [no se pudo leer el detalle: {error}]")
 
 
 def main(argv: list[str] | None = None) -> int:
