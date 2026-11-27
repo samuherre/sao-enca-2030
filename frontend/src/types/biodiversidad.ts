@@ -46,7 +46,15 @@ export interface CategoriaIUCN {
 /** Especie amenazada (UICN) con su serie de registros por año. */
 export interface EspecieAmenazada {
   readonly rank: number;
+  /** Clave numérica del backbone antiguo de GBIF (API REST v1). */
   readonly species_key: string;
+  /**
+   * Clave del taxón en el backbone actual del PORTAL web de GBIF (Catalogue of
+   * Life Extended Release), alfanumérica y corta (p. ej. "6YJKF"). Es la que
+   * entiende el enlace del portal como `taxonKey`. Puede ser null si GBIF no
+   * resolvió el nombre; en ese caso el enlace cae al filtro solo-país.
+   */
+  readonly gbif_portal_key: string | null;
   readonly nombre_cientifico: string | null;
   readonly nombre_comun: string | null;
   readonly iucn_codigo: string;

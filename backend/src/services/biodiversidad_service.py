@@ -256,6 +256,11 @@ def _especies_amenazadas_desde_report(report: dict[str, Any]) -> list[EspecieAme
             EspecieAmenazada(
                 rank=pos,
                 species_key=key,
+                gbif_portal_key=(
+                    esp.get("gbif_portal_key")
+                    if isinstance(esp.get("gbif_portal_key"), str)
+                    else None
+                ),
                 nombre_cientifico=cientifico,
                 nombre_comun=esp.get("vernacular_name"),
                 iucn_codigo=codigo,

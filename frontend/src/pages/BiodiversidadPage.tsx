@@ -144,17 +144,19 @@ function urlGbifCategoriaIUCN(codigo: string): string {
 
 /**
  * Enlace a GBIF con las ocurrencias de UNA especie en Colombia. El portal
- * reconstruye el filtro de taxón desde el parámetro camelCase ``taxonKey`` (es
- * la ÚNICA vía del portal para filtrar un taxón concreto; con ``speciesKey`` no
- * reconstruía el chip y el enlace quedaba solo con el país). ``speciesKey`` es
- * la clave del backbone de GBIF de la especie, que también es un ``taxonKey``
- * válido, así que el enlace lleva exactamente a los registros de esa especie.
+ * reconstruye el filtro de taxón desde el parámetro camelCase ``taxonKey``, pero
+ * usando la clave del backbone ACTUAL del portal (Catalogue of Life Extended
+ * Release), que es alfanumérica y corta (p. ej. "6YJKF"). Las claves numéricas
+ * del backbone antiguo (``species_key``, p. ej. "2488675") NO las reconoce el
+ * portal nuevo: las trata como texto y el enlace quedaba solo con el país.
+ *
+ * ``portalKey`` es esa clave COL XR (campo ``gbif_portal_key`` del snapshot).
+ * Si es null (GBIF no resolvió el nombre), se devuelve el enlace solo-país como
+ * degradación honesta, en vez de un enlace roto con 0 resultados.
  */
-function urlGbifEspecie(speciesKey: string): string {
-  const params = new URLSearchParams({
-    country: "CO",
-    taxonKey: speciesKey,
-  });
+function urlGbifEspecie(portalKey: string | null): string {
+  const params = new URLSearchParams({ country: "CO" });
+  if (portalKey) params.set("taxonKey", portalKey);
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
 }
 
@@ -1635,7 +1637,7 @@ function AmenazadasCard({ resumen }: { resumen: ResumenGBIF }) {
                   </span>
                 ) : null}{" "}
                 <a
-                  href={urlGbifEspecie(especie.species_key)}
+                  href={urlGbifEspecie(especie.gbif_portal_key)}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="Ver en GBIF los registros de ocurrencia de esta especie en Colombia"

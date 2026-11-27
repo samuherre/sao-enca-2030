@@ -95,6 +95,12 @@ class EspecieAmenazada(SchemaBase):
 
     rank: int
     species_key: str
+    # Clave del taxón en el backbone ACTUAL del portal web de GBIF (Catalogue of
+    # Life Extended Release), alfanumérica y corta (p. ej. "6YJKF"). Es la que el
+    # enlace del portal usa como taxonKey; las claves numéricas del backbone
+    # antiguo (species_key) el portal nuevo no las reconoce. None si GBIF no
+    # resolvió el nombre (no se inventa).
+    gbif_portal_key: str | None = None
     nombre_cientifico: str | None
     nombre_comun: str | None
     iucn_codigo: str

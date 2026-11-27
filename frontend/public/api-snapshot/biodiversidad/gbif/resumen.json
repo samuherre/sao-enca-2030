@@ -8306,7 +8306,8 @@
           "registros_ocurrencia": 108
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "3NYCK"
     },
     {
       "rank": 2,
@@ -8598,7 +8599,8 @@
           "registros_ocurrencia": 16
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "58VJ3"
     },
     {
       "rank": 3,
@@ -8790,7 +8792,8 @@
           "registros_ocurrencia": 23
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "G22G"
     },
     {
       "rank": 4,
@@ -8954,7 +8957,8 @@
           "registros_ocurrencia": 37
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "76H2G"
     },
     {
       "rank": 5,
@@ -9162,7 +9166,8 @@
           "registros_ocurrencia": 29
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "48Z89"
     },
     {
       "rank": 6,
@@ -9374,7 +9379,8 @@
           "registros_ocurrencia": 19
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6YJKF"
     },
     {
       "rank": 7,
@@ -9618,7 +9624,8 @@
           "registros_ocurrencia": 13
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "6WRB8"
     },
     {
       "rank": 8,
@@ -9854,7 +9861,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "VLG5"
     },
     {
       "rank": 9,
@@ -10006,7 +10014,8 @@
           "registros_ocurrencia": 13
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "KKD6"
     },
     {
       "rank": 10,
@@ -10170,7 +10179,8 @@
           "registros_ocurrencia": 9
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "3H5NX"
     },
     {
       "rank": 11,
@@ -10390,7 +10400,8 @@
           "registros_ocurrencia": 12
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4KKPY"
     },
     {
       "rank": 12,
@@ -10626,7 +10637,8 @@
           "registros_ocurrencia": 21
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "4QW3K"
     },
     {
       "rank": 13,
@@ -10822,7 +10834,8 @@
           "registros_ocurrencia": 13
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "3H5ND"
     },
     {
       "rank": 14,
@@ -10942,7 +10955,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "6LQ8Z"
     },
     {
       "rank": 15,
@@ -11150,7 +11164,8 @@
           "registros_ocurrencia": 19
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "WQTM"
     },
     {
       "rank": 16,
@@ -11298,7 +11313,8 @@
           "registros_ocurrencia": 15
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "8KQ7Y"
     },
     {
       "rank": 17,
@@ -11382,7 +11398,8 @@
           "registros_ocurrencia": 6
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "56N78"
     },
     {
       "rank": 18,
@@ -11558,7 +11575,8 @@
           "registros_ocurrencia": 20
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "5BSLM"
     },
     {
       "rank": 19,
@@ -11690,7 +11708,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "DD9FD"
     },
     {
       "rank": 20,
@@ -11890,7 +11909,8 @@
           "registros_ocurrencia": 3
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6QDFK"
     },
     {
       "rank": 21,
@@ -12074,7 +12094,8 @@
           "registros_ocurrencia": 14
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "6BBXD"
     },
     {
       "rank": 22,
@@ -12254,7 +12275,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "4QW4B"
     },
     {
       "rank": 23,
@@ -12386,7 +12408,8 @@
           "registros_ocurrencia": 8
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "8K3MD"
     },
     {
       "rank": 24,
@@ -12550,7 +12573,8 @@
           "registros_ocurrencia": 23
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6BC9P"
     },
     {
       "rank": 25,
@@ -12694,7 +12718,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "5VC8L"
     },
     {
       "rank": 26,
@@ -12806,7 +12831,8 @@
           "registros_ocurrencia": 6
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "CP47Y"
     },
     {
       "rank": 27,
@@ -12930,7 +12956,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "56N75"
     },
     {
       "rank": 28,
@@ -13114,7 +13141,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "76GQG"
     },
     {
       "rank": 29,
@@ -13242,7 +13270,8 @@
           "registros_ocurrencia": 195
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6KRSV"
     },
     {
       "rank": 30,
@@ -13402,7 +13431,8 @@
           "registros_ocurrencia": 6
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "MBNV"
     },
     {
       "rank": 31,
@@ -13514,7 +13544,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "3G647"
     },
     {
       "rank": 32,
@@ -13690,7 +13721,8 @@
           "registros_ocurrencia": 3
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "4532Z"
     },
     {
       "rank": 33,
@@ -13854,7 +13886,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "5BJKH"
     },
     {
       "rank": 34,
@@ -13962,7 +13995,8 @@
           "registros_ocurrencia": 3
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "8KQP7"
     },
     {
       "rank": 35,
@@ -14078,7 +14112,8 @@
           "registros_ocurrencia": 9
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "3JKGJ"
     },
     {
       "rank": 36,
@@ -14250,7 +14285,8 @@
           "registros_ocurrencia": 3
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "3X2KB"
     },
     {
       "rank": 37,
@@ -14370,7 +14406,8 @@
           "registros_ocurrencia": 5
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "6WC6F"
     },
     {
       "rank": 38,
@@ -14486,7 +14523,8 @@
           "registros_ocurrencia": 6
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "3H5NW"
     },
     {
       "rank": 39,
@@ -14614,7 +14652,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "72GXX"
     },
     {
       "rank": 40,
@@ -14718,7 +14757,8 @@
           "registros_ocurrencia": 67
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "4W5TL"
     },
     {
       "rank": 41,
@@ -14826,7 +14866,8 @@
           "registros_ocurrencia": 20
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "8HWF8"
     },
     {
       "rank": 42,
@@ -14882,7 +14923,8 @@
           "registros_ocurrencia": 6
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "JH5W"
     },
     {
       "rank": 43,
@@ -15022,7 +15064,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "PK48"
     },
     {
       "rank": 44,
@@ -15130,7 +15173,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "V844"
     },
     {
       "rank": 45,
@@ -15266,7 +15310,8 @@
           "registros_ocurrencia": 107
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "7CB5L"
     },
     {
       "rank": 46,
@@ -15386,7 +15431,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "72FD6"
     },
     {
       "rank": 47,
@@ -15510,7 +15556,8 @@
           "registros_ocurrencia": 62
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "WF2K"
     },
     {
       "rank": 48,
@@ -15646,7 +15693,8 @@
           "registros_ocurrencia": 49
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "6SH8G"
     },
     {
       "rank": 49,
@@ -15722,7 +15770,8 @@
           "registros_ocurrencia": 70
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "DD9G8"
     },
     {
       "rank": 50,
@@ -15854,7 +15903,8 @@
           "registros_ocurrencia": 7
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6LF7D"
     },
     {
       "rank": 51,
@@ -15982,7 +16032,8 @@
           "registros_ocurrencia": 26
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "3FTM9"
     },
     {
       "rank": 52,
@@ -16126,7 +16177,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "TF38"
     },
     {
       "rank": 53,
@@ -16198,7 +16250,8 @@
           "registros_ocurrencia": 74
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "56M5M"
     },
     {
       "rank": 54,
@@ -16354,7 +16407,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "69J4W"
     },
     {
       "rank": 55,
@@ -16414,7 +16468,8 @@
           "registros_ocurrencia": 34
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "759H2"
     },
     {
       "rank": 56,
@@ -16606,7 +16661,8 @@
           "registros_ocurrencia": 18
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6ZCKG"
     },
     {
       "rank": 57,
@@ -16742,7 +16798,8 @@
           "registros_ocurrencia": 29
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "9GCXT"
     },
     {
       "rank": 58,
@@ -16826,7 +16883,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "7CB5B"
     },
     {
       "rank": 59,
@@ -16918,7 +16976,8 @@
           "registros_ocurrencia": 35
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "9GCSQ"
     },
     {
       "rank": 60,
@@ -17030,7 +17089,8 @@
           "registros_ocurrencia": 34
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "9HCHR"
     },
     {
       "rank": 61,
@@ -17090,7 +17150,8 @@
           "registros_ocurrencia": 42
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4QW3J"
     },
     {
       "rank": 62,
@@ -17170,7 +17231,8 @@
           "registros_ocurrencia": 20
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "7CVQ9"
     },
     {
       "rank": 63,
@@ -17234,7 +17296,8 @@
           "registros_ocurrencia": 27
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "N5L3P"
     },
     {
       "rank": 64,
@@ -17310,7 +17373,8 @@
           "registros_ocurrencia": 17
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "8K3N5"
     },
     {
       "rank": 65,
@@ -17354,7 +17418,8 @@
           "registros_ocurrencia": 38
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "XP4F"
     },
     {
       "rank": 66,
@@ -17434,7 +17499,8 @@
           "registros_ocurrencia": 48
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6BBXQ"
     },
     {
       "rank": 67,
@@ -17526,7 +17592,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "46N5J"
     },
     {
       "rank": 68,
@@ -17542,7 +17609,8 @@
           "registros_ocurrencia": 78
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "3HK2J"
     },
     {
       "rank": 69,
@@ -17646,7 +17714,8 @@
           "registros_ocurrencia": 5
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6RFXB"
     },
     {
       "rank": 70,
@@ -17666,7 +17735,8 @@
           "registros_ocurrencia": 25
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "76GQC"
     },
     {
       "rank": 71,
@@ -17742,7 +17812,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "76739"
     },
     {
       "rank": 72,
@@ -17834,7 +17905,8 @@
           "registros_ocurrencia": 29
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "3H5NP"
     },
     {
       "rank": 73,
@@ -17910,7 +17982,8 @@
           "registros_ocurrencia": 7
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6QFCR"
     },
     {
       "rank": 74,
@@ -17990,7 +18063,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "46N5G"
     },
     {
       "rank": 75,
@@ -18078,7 +18152,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "G226"
     },
     {
       "rank": 76,
@@ -18138,7 +18213,8 @@
           "registros_ocurrencia": 3
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "5WY27"
     },
     {
       "rank": 77,
@@ -18218,7 +18294,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "3B3RQ"
     },
     {
       "rank": 78,
@@ -18266,7 +18343,8 @@
           "registros_ocurrencia": 6
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4MR2Y"
     },
     {
       "rank": 79,
@@ -18310,7 +18388,8 @@
           "registros_ocurrencia": 7
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6BWH4"
     },
     {
       "rank": 80,
@@ -18338,7 +18417,8 @@
           "registros_ocurrencia": 4
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4GK9L"
     },
     {
       "rank": 81,
@@ -18378,7 +18458,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4PWL2"
     },
     {
       "rank": 82,
@@ -18410,7 +18491,8 @@
           "registros_ocurrencia": 3
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4MMQ8"
     },
     {
       "rank": 83,
@@ -18434,7 +18516,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4YV8F"
     },
     {
       "rank": 84,
@@ -18462,7 +18545,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "389GY"
     },
     {
       "rank": 85,
@@ -18473,7 +18557,8 @@
       "iucn_etiqueta": "En peligro (EN)",
       "registros_ocurrencia": 5,
       "por_anio": [],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "54CBC"
     },
     {
       "rank": 86,
@@ -18489,7 +18574,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "5VHY3"
     },
     {
       "rank": 87,
@@ -18513,7 +18599,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "3B3RM"
     },
     {
       "rank": 88,
@@ -18533,7 +18620,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": true
+      "endemica": true,
+      "gbif_portal_key": "8K3MZ"
     },
     {
       "rank": 89,
@@ -18549,7 +18637,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "3SHXZ"
     },
     {
       "rank": 90,
@@ -18573,7 +18662,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4PWKK"
     },
     {
       "rank": 91,
@@ -18593,7 +18683,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4Z65N"
     },
     {
       "rank": 92,
@@ -18641,7 +18732,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "9G8BJ"
     },
     {
       "rank": 93,
@@ -18661,7 +18753,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "3H5NR"
     },
     {
       "rank": 94,
@@ -18681,7 +18774,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "T4V5"
     },
     {
       "rank": 95,
@@ -18697,7 +18791,8 @@
           "registros_ocurrencia": 3
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "8HVW5"
     },
     {
       "rank": 96,
@@ -18713,7 +18808,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "CKF3"
     },
     {
       "rank": 97,
@@ -18729,7 +18825,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "KGTN"
     },
     {
       "rank": 98,
@@ -18749,7 +18846,8 @@
           "registros_ocurrencia": 7
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4J6HW"
     },
     {
       "rank": 99,
@@ -18765,7 +18863,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4B729"
     },
     {
       "rank": 100,
@@ -18776,7 +18875,8 @@
       "iucn_etiqueta": "En peligro (EN)",
       "registros_ocurrencia": 1,
       "por_anio": [],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "78VPS"
     },
     {
       "rank": 101,
@@ -18792,7 +18892,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "78JXM"
     },
     {
       "rank": 102,
@@ -18808,7 +18909,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4H7XD"
     },
     {
       "rank": 103,
@@ -18824,7 +18926,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "542SH"
     },
     {
       "rank": 104,
@@ -18840,7 +18943,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "CKDL"
     },
     {
       "rank": 105,
@@ -18856,7 +18960,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "323MF"
     },
     {
       "rank": 106,
@@ -18872,7 +18977,8 @@
           "registros_ocurrencia": 2
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "4J2RS"
     },
     {
       "rank": 107,
@@ -18883,7 +18989,8 @@
       "iucn_etiqueta": "Vulnerable (VU)",
       "registros_ocurrencia": 1,
       "por_anio": [],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "NXGC"
     },
     {
       "rank": 108,
@@ -18899,7 +19006,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "6ZXPY"
     },
     {
       "rank": 109,
@@ -18915,7 +19023,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "3TYGC"
     },
     {
       "rank": 110,
@@ -18931,7 +19040,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "55ZCG"
     },
     {
       "rank": 111,
@@ -18947,7 +19057,8 @@
           "registros_ocurrencia": 1
         }
       ],
-      "endemica": false
+      "endemica": false,
+      "gbif_portal_key": "TB2C"
     }
   ],
   "ordenes": [
