@@ -1,0 +1,26 @@
+[
+  {
+    "id": 13,
+    "nombre": "# de actores abordados que implementan o apoyan acciones de conservación",
+    "descripcion": "# de actores abordados que implementan o apoyan acciones de conservación",
+    "objetivo_id": 10
+  },
+  {
+    "id": 14,
+    "nombre": "# de iniciativas por sector",
+    "descripcion": "# de iniciativas por sector",
+    "objetivo_id": 10
+  },
+  {
+    "id": 15,
+    "nombre": "# de sectores involucrados",
+    "descripcion": "# de sectores involucrados",
+    "objetivo_id": 10
+  },
+  {
+    "id": 16,
+    "nombre": "#$ de recursos invertidos",
+    "descripcion": "#$ de recursos invertidos",
+    "objetivo_id": 10
+  }
+]

@@ -41,7 +41,7 @@ export function EjesPage({ onSelectEje }: EjesPageProps) {
       title="Ejes estratégicos"
       subtitle="Nivel superior de la estructura de seguimiento ENCA."
       state={state}
-      emptyMessage="No hay Ejes disponibles. Crea el primero con el formulario."
+      emptyMessage="No hay Ejes disponibles en este momento."
       renderItem={(eje) => ({
         key: eje.id,
         title: eje.nombre,

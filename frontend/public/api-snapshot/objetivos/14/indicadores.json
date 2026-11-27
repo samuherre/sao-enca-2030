@@ -1,0 +1,20 @@
+[
+  {
+    "id": 24,
+    "nombre": "% de crecimiento de la red",
+    "descripcion": "% de crecimiento de la red",
+    "objetivo_id": 14
+  },
+  {
+    "id": 25,
+    "nombre": "# de organizaciones fortalecidas (definir criterios)",
+    "descripcion": "# de organizaciones fortalecidas (definir criterios)",
+    "objetivo_id": 14
+  },
+  {
+    "id": 26,
+    "nombre": "# de organizaciones implementando la ENCA",
+    "descripcion": "# de organizaciones implementando la ENCA",
+    "objetivo_id": 14
+  }
+]

@@ -39,7 +39,7 @@ export function ActividadesPage({ indicador }: ActividadesPageProps) {
       title="Actividades"
       subtitle={`Actividades del Indicador: ${indicador.nombre}`}
       state={state}
-      emptyMessage="Este Indicador no tiene Actividades. Crea la primera con el formulario."
+      emptyMessage="Este Indicador no tiene Actividades registradas."
       renderItem={(actividad) => ({
         key: actividad.id,
         title: actividad.descripcion,

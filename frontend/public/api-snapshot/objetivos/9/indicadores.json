@@ -1,0 +1,20 @@
+[
+  {
+    "id": 10,
+    "nombre": "# y % de sectores que tienen empresas implementando buenas prácticas",
+    "descripcion": "# y % de sectores que tienen empresas implementando buenas prácticas",
+    "objetivo_id": 9
+  },
+  {
+    "id": 11,
+    "nombre": "% regiones que tienen productores implementando buenas prácticas",
+    "descripcion": "% regiones que tienen productores implementando buenas prácticas",
+    "objetivo_id": 9
+  },
+  {
+    "id": 12,
+    "nombre": "# empresas y asociaciones que implementan buenas prácticas",
+    "descripcion": "# empresas y asociaciones que implementan buenas prácticas",
+    "objetivo_id": 9
+  }
+]

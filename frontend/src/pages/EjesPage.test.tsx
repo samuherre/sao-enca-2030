@@ -6,13 +6,14 @@
 //   - Req 7.2: colección vacía → mensaje contextual (no lista en blanco).
 //   - Req 7.9: ante un error de la API, muestra un mensaje comprensible sin
 //     exponer detalles técnicos.
-//   - Req 7.6 (crear): el formulario de creación llama al cliente API y recarga.
+//
+// La vista es de SOLO VISUALIZACIÓN (decisión de SAO): ya no hay formulario de
+// creación, por lo que no se prueba ese flujo.
 //
 // La capa de servicios se sustituye por dobles deterministas (vi.mock), de modo
 // que las pruebas no dependen de un backend real.
 
 import { render, screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { EjesPage } from "./EjesPage";
@@ -25,12 +26,10 @@ vi.mock("../services", async () => {
   return {
     ...actual,
     listarEjes: vi.fn(),
-    crearEje: vi.fn(),
   };
 });
 
 const listarEjes = vi.mocked(api.listarEjes);
-const crearEje = vi.mocked(api.crearEje);
 
 describe("EjesPage", () => {
   beforeEach(() => {
@@ -95,22 +94,13 @@ describe("EjesPage", () => {
     expect(alert).not.toHaveTextContent(/boom_internal/i);
   });
 
-  it("crea un Eje a través del formulario y recarga la lista (Req 7.6)", async () => {
+  it("no muestra formulario de creación (vista de solo lectura)", async () => {
     listarEjes.mockResolvedValue([]);
-    crearEje.mockResolvedValue({ id: 10, nombre: "Nuevo Eje", descripcion: null });
 
     render(<EjesPage onSelectEje={vi.fn()} />);
     await screen.findByText(/no hay ejes disponibles/i);
 
-    // Con la colección vacía no hay botones de drill-down: el único botón es
-    // "Crear" del formulario de creación.
-    await userEvent.type(screen.getByLabelText(/nombre/i), "Nuevo Eje");
-    await userEvent.click(screen.getByRole("button", { name: /^crear$/i }));
-
-    await waitFor(() =>
-      expect(crearEje).toHaveBeenCalledWith({ nombre: "Nuevo Eje" }),
-    );
-    // Tras crear, se recarga la colección (segunda llamada a listarEjes).
-    await waitFor(() => expect(listarEjes).toHaveBeenCalledTimes(2));
+    // La vista es de solo visualización: no hay botón "Crear" ni campos de edición.
+    expect(screen.queryByRole("button", { name: /^crear$/i })).not.toBeInTheDocument();
   });
 });

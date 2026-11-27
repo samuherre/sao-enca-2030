@@ -36,7 +36,7 @@ export function MetasPage({ eje, onSelectMeta }: MetasPageProps) {
       title="Metas"
       subtitle={`Metas del Eje: ${eje.nombre}`}
       state={state}
-      emptyMessage="Este Eje no tiene Metas. Crea la primera con el formulario."
+      emptyMessage="Este Eje no tiene Metas registradas."
       renderItem={(meta) => ({
         key: meta.id,
         title: meta.descripcion,

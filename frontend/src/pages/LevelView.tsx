@@ -2,19 +2,25 @@
 //
 // Las cinco vistas por nivel (Ejes, Metas, Objetivos, Indicadores, Actividades)
 // comparten exactamente la misma estructura: título del nivel, estado de carga,
-// estado de error (con reintento), lista de hijos (o mensaje contextual si está
-// vacía) y un formulario de creación. `LevelView` encapsula ese patrón para
-// implementar las cinco páginas de forma CONSISTENTE sin duplicar la lógica de
-// estados (Req 7.2, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9).
+// estado de error (con reintento) y lista de hijos (o mensaje contextual si
+// está vacía). `LevelView` encapsula ese patrón para implementar las cinco
+// páginas de forma CONSISTENTE sin duplicar la lógica de estados (Req 7.2,
+// 7.4, 7.5, 7.7, 7.8, 7.9).
 //
-// `LevelView` NO carga datos ni crea entidades: recibe el estado del hook
-// (`loading`/`data`/`error`/`reload`) y la configuración de lista y formulario,
-// y delega la navegación de regreso en quien la usa (el App shell).
+// SOLO VISUALIZACIÓN (decisión de SAO): la vista de Seguimiento ENCA muestra la
+// estructura oficial de la ENCA para el público; NO se edita desde la web. Por
+// eso este componente ya NO renderiza formulario de creación. Los datos se
+// cargan desde el Excel oficial de SAO con el script
+// `scripts/data/importar_enca_excel.py`. Las props de creación se conservan como
+// OPCIONALES y OBSOLETAS solo para no romper las páginas que todavía las pasan;
+// se ignoran y pueden retirarse cuando se limpien las 5 páginas.
+//
+// `LevelView` NO carga datos: recibe el estado del hook
+// (`loading`/`data`/`error`/`reload`) y la configuración de lista, y delega la
+// navegación de regreso en quien la usa (el App shell).
 
-import { STATIC_MODE } from "../config";
 import type { AsyncDataState } from "../hooks";
 import {
-  CreateEntityForm,
   EntityList,
   LoadingIndicator,
   ErrorBanner,
@@ -41,20 +47,17 @@ interface LevelViewProps<T> {
   readonly onSelect?: (item: T) => void;
   /** Etiqueta del botón de drill-down (por defecto definido por `EntityList`). */
   readonly selectLabel?: string;
-  /** Título del formulario de creación (p. ej. "Crear Eje"). */
-  readonly createTitle: string;
-  /** Campos del formulario de creación. */
-  readonly createFields: readonly CreateFormField[];
-  /**
-   * Acción de creación: llama al cliente API. Al resolverse, se recarga la
-   * colección para reflejar el nuevo elemento.
-   */
-  readonly onCreate: (values: CreateFormValues) => Promise<void>;
+  /** @deprecated Solo visualización: ya no se usa. Se conserva por compatibilidad. */
+  readonly createTitle?: string;
+  /** @deprecated Solo visualización: ya no se usa. Se conserva por compatibilidad. */
+  readonly createFields?: readonly CreateFormField[];
+  /** @deprecated Solo visualización: ya no se usa. Se conserva por compatibilidad. */
+  readonly onCreate?: (values: CreateFormValues) => Promise<void>;
 }
 
 /**
- * Renderiza un nivel completo: encabezado, estados (carga/error), lista de hijos
- * y formulario de creación.
+ * Renderiza un nivel completo de SOLO LECTURA: encabezado, estados (carga/error)
+ * y lista de hijos (con drill-down).
  *
  * El error NO reemplaza la última vista válida: si ya hay datos cargados, se
  * siguen mostrando y el banner de error aparece encima (coherente con Req 7.8,
@@ -68,17 +71,8 @@ export function LevelView<T>({
   renderItem,
   onSelect,
   selectLabel,
-  createTitle,
-  createFields,
-  onCreate,
 }: LevelViewProps<T>) {
   const { loading, data, error, reload } = state;
-
-  // Tras crear una entidad con éxito, recarga la colección del nivel.
-  async function handleCreate(values: CreateFormValues) {
-    await onCreate(values);
-    reload();
-  }
 
   return (
     <section>
@@ -104,16 +98,6 @@ export function LevelView<T>({
           selectLabel={selectLabel}
         />
       ) : null}
-
-      {/* En la demo estática (solo lectura) no se muestra el formulario de
-          creación: no hay backend que persista los datos (STATIC_MODE). */}
-      {STATIC_MODE ? null : (
-        <CreateEntityForm
-          title={createTitle}
-          fields={createFields}
-          onSubmit={handleCreate}
-        />
-      )}
     </section>
   );
 }

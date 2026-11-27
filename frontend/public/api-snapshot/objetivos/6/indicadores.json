@@ -1,0 +1,14 @@
+[
+  {
+    "id": 6,
+    "nombre": "# número de sectores estratégicos con una iniciativa en marcha",
+    "descripcion": "# número de sectores estratégicos con una iniciativa en marcha",
+    "objetivo_id": 6
+  },
+  {
+    "id": 7,
+    "nombre": "# y % de personas interesadas/participantes por cada iniciativa",
+    "descripcion": "# y % de personas interesadas/participantes por cada iniciativa",
+    "objetivo_id": 6
+  }
+]

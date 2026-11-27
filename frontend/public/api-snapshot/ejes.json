@@ -1,22 +1,27 @@
 [
   {
-    "id": 1,
-    "nombre": "[DEMO_DATA] Eje estratégico de ejemplo",
-    "descripcion": "[DEMO_DATA] Descripción de ejemplo del Eje para desarrollo."
+    "id": 5,
+    "nombre": "EJE 1: CONSOLIDAR EL MENSAJE COLOMBIA PAÍS DE LAS AVES",
+    "descripcion": null
   },
   {
-    "id": 2,
-    "nombre": "[DEMO_DATA] Eje 2 — Incidencia en sectores productivos",
-    "descripcion": "[DEMO_DATA] Promover buenas prácticas de conservación de aves en sectores productivos y de servicios (estructura de ejemplo)."
+    "id": 6,
+    "nombre": "EJE 2: INCIDIR EN SECTORES PRODUCTIVOS Y DE SERVICIOS ESTRATEGICOS",
+    "descripcion": null
   },
   {
-    "id": 3,
-    "nombre": "[DEMO_DATA] Eje 5 — Generación y gestión del conocimiento",
-    "descripcion": "[DEMO_DATA] Fortalecer la investigación y la gestión del conocimiento sobre las aves y sus hábitats (estructura de ejemplo)."
+    "id": 7,
+    "nombre": "EJE 3: FORTALECER LOS MECANISMOS DE INCIDENCIA A NIVEL LOCAL",
+    "descripcion": null
   },
   {
-    "id": 4,
-    "nombre": "Eje Prueba",
-    "descripcion": "Este eje se crea con la intención de hacer una prueba de funcionalidad."
+    "id": 8,
+    "nombre": "EJE 4: CONTRIBUIR AL ORDENAMIENTO TERRITORIAL",
+    "descripcion": null
+  },
+  {
+    "id": 9,
+    "nombre": "EJE 5: GENERAR, GESTIONAR Y DIFUNDIR EL CONOCIMIENTO PARA LA CONSERVACIÓN DE LAS AVES",
+    "descripcion": null
   }
 ]

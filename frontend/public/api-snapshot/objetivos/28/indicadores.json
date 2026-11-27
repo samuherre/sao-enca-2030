@@ -1,0 +1,20 @@
+[
+  {
+    "id": 54,
+    "nombre": "# de proyectos con sectores productivos y otros sectores estratégicos (turismo, ambientales, de conservación)",
+    "descripcion": "# de proyectos con sectores productivos y otros sectores estratégicos (turismo, ambientales, de conservación)",
+    "objetivo_id": 28
+  },
+  {
+    "id": 55,
+    "nombre": "% de vacíos de información y prioridades de investigación alta incluidas en los proyectos",
+    "descripcion": "% de vacíos de información y prioridades de investigación alta incluidas en los proyectos",
+    "objetivo_id": 28
+  },
+  {
+    "id": 56,
+    "nombre": "# de sectores involucrados",
+    "descripcion": "# de sectores involucrados",
+    "objetivo_id": 28
+  }
+]

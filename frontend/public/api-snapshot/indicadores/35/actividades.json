@@ -1,0 +1,27 @@
+[
+  {
+    "id": 37,
+    "descripcion": "4.2.3 Promover la conservación de las aves con organizaciones o iniciativas vinculantes a la planificación territorial (PROCEDAS, autoridades ambientales locales)",
+    "indicador_id": 35
+  },
+  {
+    "id": 38,
+    "descripcion": "4.3.4 Acompañar a los ejercicios de planificación territorial priorizados selectos con otras instituciones y personas que aporten saber científico al proceso",
+    "indicador_id": 35
+  },
+  {
+    "id": 39,
+    "descripcion": "4.2.5 Documentar, dar seguimiento al proceso y generar recomendaciones que retroalimenten y promuevan su implementación en otros instrumentos de planificación",
+    "indicador_id": 35
+  },
+  {
+    "id": 40,
+    "descripcion": "4.2.6 Difundir el proceso y lecciones aprendidas",
+    "indicador_id": 35
+  },
+  {
+    "id": 41,
+    "descripcion": "4.2.7 Replicar el proceso",
+    "indicador_id": 35
+  }
+]

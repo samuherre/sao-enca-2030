@@ -1,0 +1,114 @@
+{
+  "id": 7,
+  "nombre": "EJE 3: FORTALECER LOS MECANISMOS DE INCIDENCIA A NIVEL LOCAL",
+  "descripcion": null,
+  "metas": [
+    {
+      "id": 9,
+      "descripcion": "Fortalecimiento de la Red Nacional de Observadores de Aves (RNOA) y otras organizaciones no-gubernamentales y comunitarias* que trabajan con aves en el país. (*Incluyendo comunidades indígenas, afrodescendientes y campesinas y otras redes de Reservas Naturales de la Sociedad Civil y grupos juveniles e infantiles de observación de aves.)",
+      "objetivos": [
+        {
+          "id": 14,
+          "descripcion": "3.1. Para el 2024, el número de las organizaciones miembros de la RNOA ha crecido en al menos 10% y las capacidades institucionales y de incidencia de estas organizaciones se habrán fortalecido",
+          "indicadores": [
+            {
+              "id": 24,
+              "nombre": "% de crecimiento de la red",
+              "descripcion": "% de crecimiento de la red",
+              "actividades": [
+                {
+                  "id": 26,
+                  "descripcion": "3.1.1 Desarrollar un diagnóstico de las organizaciones de la RNOA para identificar fortalezas y debilidades"
+                }
+              ]
+            },
+            {
+              "id": 25,
+              "nombre": "# de organizaciones fortalecidas (definir criterios)",
+              "descripcion": "# de organizaciones fortalecidas (definir criterios)",
+              "actividades": [
+                {
+                  "id": 27,
+                  "descripcion": "3.1.2 Mapear capacidades de organizaciones socias de la red"
+                }
+              ]
+            },
+            {
+              "id": 26,
+              "nombre": "# de organizaciones implementando la ENCA",
+              "descripcion": "# de organizaciones implementando la ENCA",
+              "actividades": [
+                {
+                  "id": 28,
+                  "descripcion": "3.1.3 Desarrollar hoja de ruta para el fortalecimiento institucional de cara a la implementación de la ENCA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "descripcion": "3.2. A 2026, existen al menos 5 nuevas iniciativas locales* que se enfoquen en la conservación la avifauna en cada una de las regiones y a partir del 2027 se incrementan en por lo menos 2 nuevas iniciativas por año/región",
+          "indicadores": [
+            {
+              "id": 27,
+              "nombre": "#iniciativas locales de conservación de la avifauna",
+              "descripcion": "#iniciativas locales de conservación de la avifauna",
+              "actividades": [
+                {
+                  "id": 29,
+                  "descripcion": "3.2.1 Fortalecer las capacidades para la planificación y manejo de iniciativas de conservación de la avifauna"
+                }
+              ]
+            },
+            {
+              "id": 28,
+              "nombre": "#regiones con proyectos locales de conservación de la avifauna",
+              "descripcion": "#regiones con proyectos locales de conservación de la avifauna",
+              "actividades": [
+                {
+                  "id": 30,
+                  "descripcion": "3.2.2 Diseñar e implementar las iniciativas de conservación de forma colaborativa"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "descripcion": "3.3. Para el 2027, todas las organizaciones de la RNOA y las organizaciones no gubernamentales y comunitarias con las cuales la ENCA ha trabajado, se encuentran activamente participando en la formulación de instrumentos de planificación local (Planes de desarrollo, manejo del territorio, ordenamiento territorial, planes de vida, planes de etnodesarrollo u otros que apliquen a sus jurisdicciones respectivas)",
+          "indicadores": [
+            {
+              "id": 29,
+              "nombre": "#planes con incidencia de las organizaciones de la RNOA para la conservación de aves",
+              "descripcion": "#planes con incidencia de las organizaciones de la RNOA para la conservación de aves",
+              "actividades": [
+                {
+                  "id": 31,
+                  "descripcion": "3.3.1 Fortalecer a las organizaciones en incidencia en la planificación del desarrollo y territorial"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "descripcion": "3.4. A 2028 todos los instrumentos de planificación local en las jurisdicciones de las organizaciones de la RNOA y otras organizaciones no gubernamentales y comunitarias con las cuales ha trabajado la ENCA, han contado con la incidencia de estas y han incluido acciones para la conservación de la avifauna",
+          "indicadores": [
+            {
+              "id": 30,
+              "nombre": "# de planes de desarrollo, ordenamiento y gubernamentales, que incluyen estrategias de conservación de avifauna",
+              "descripcion": "# de planes de desarrollo, ordenamiento y gubernamentales, que incluyen estrategias de conservación de avifauna",
+              "actividades": [
+                {
+                  "id": 32,
+                  "descripcion": "3.4.1 Dar a conocer/capacitar a los tomadores de decisión la importancia de la conservación de las aves"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

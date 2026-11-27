@@ -4,11 +4,13 @@
 //   - Req 7.3: lista las Metas del Eje (drill-down desde Ejes) y permite
 //     profundizar al nivel inferior (Objetivos) con `onSelectMeta`.
 //   - Req 7.4: si el Eje no tiene Metas, muestra un mensaje contextual.
-//   - Req 7.6 (crear): el formulario crea una Meta bajo el Eje.
+//
+// La vista es de SOLO VISUALIZACIÓN (decisión de SAO): ya no hay formulario de
+// creación, por lo que no se prueba ese flujo.
 //
 // La capa de servicios se sustituye por dobles deterministas (vi.mock).
 
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -21,12 +23,10 @@ vi.mock("../services", async () => {
   return {
     ...actual,
     listarMetas: vi.fn(),
-    crearMeta: vi.fn(),
   };
 });
 
 const listarMetas = vi.mocked(api.listarMetas);
-const crearMeta = vi.mocked(api.crearMeta);
 
 const EJE: Eje = { id: 3, nombre: "Eje Andino", descripcion: null };
 
@@ -70,19 +70,12 @@ describe("MetasPage", () => {
     expect(onSelectMeta).toHaveBeenCalledWith(meta);
   });
 
-  it("crea una Meta bajo el Eje y recarga la colección (Req 7.6)", async () => {
+  it("no muestra formulario de creación (vista de solo lectura)", async () => {
     listarMetas.mockResolvedValue([]);
-    crearMeta.mockResolvedValue({ id: 9, descripcion: "Nueva Meta", eje_id: 3 });
 
     render(<MetasPage eje={EJE} onSelectMeta={vi.fn()} />);
     await screen.findByText(/este eje no tiene metas/i);
 
-    await userEvent.type(screen.getByLabelText(/descripción/i), "Nueva Meta");
-    await userEvent.click(screen.getByRole("button", { name: /^crear$/i }));
-
-    await waitFor(() =>
-      expect(crearMeta).toHaveBeenCalledWith(3, { descripcion: "Nueva Meta" }),
-    );
-    await waitFor(() => expect(listarMetas).toHaveBeenCalledTimes(2));
+    expect(screen.queryByRole("button", { name: /^crear$/i })).not.toBeInTheDocument();
   });
 });

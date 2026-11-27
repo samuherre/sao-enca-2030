@@ -1,0 +1,198 @@
+{
+  "id": 6,
+  "nombre": "EJE 2: INCIDIR EN SECTORES PRODUCTIVOS Y DE SERVICIOS ESTRATEGICOS",
+  "descripcion": null,
+  "metas": [
+    {
+      "id": 7,
+      "descripcion": "Incidir en al menos tres (3) sectores productivos o de servicios estratégicos para la adopción de mejores prácticas y fomentar la conservación de las aves y sus hábitats.",
+      "objetivos": [
+        {
+          "id": 9,
+          "descripcion": "2.1. Al 2025, al menos 15 empresas y/o asociaciones de productores y prestadores de servicios representando los sectores estratégicos adoptan, implementan y promueven buenas prácticas que benefician la conservación de las aves y sus hábitats.",
+          "indicadores": [
+            {
+              "id": 10,
+              "nombre": "# y % de sectores que tienen empresas implementando buenas prácticas",
+              "descripcion": "# y % de sectores que tienen empresas implementando buenas prácticas",
+              "actividades": [
+                {
+                  "id": 13,
+                  "descripcion": "2.1.1 Construcción de línea base (identificación y caracterización) de las empresas y/o productores de los sectores"
+                }
+              ]
+            },
+            {
+              "id": 11,
+              "nombre": "% regiones que tienen productores implementando buenas prácticas",
+              "descripcion": "% regiones que tienen productores implementando buenas prácticas",
+              "actividades": [
+                {
+                  "id": 14,
+                  "descripcion": "2.1.2 Fortalecimiento a los productores sobre el diseño e implementación de buenas prácticas sostenibles en la producción."
+                }
+              ]
+            },
+            {
+              "id": 12,
+              "nombre": "# empresas y asociaciones que implementan buenas prácticas",
+              "descripcion": "# empresas y asociaciones que implementan buenas prácticas",
+              "actividades": [
+                {
+                  "id": 15,
+                  "descripcion": "2.1.3 Monitorear los beneficios de las buenas prácticas sobre la avifauna"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "descripcion": "2.2 Para 2026, los cinco sectores económicos identificados como estratégicos emprenden y/o invierten en al menos una iniciativa de conservación de las aves y sus hábitats",
+          "indicadores": [
+            {
+              "id": 13,
+              "nombre": "# de actores abordados que implementan o apoyan acciones de conservación",
+              "descripcion": "# de actores abordados que implementan o apoyan acciones de conservación",
+              "actividades": [
+                {
+                  "id": 16,
+                  "descripcion": "2.2.1 Identificar y abordar a los actores relevantes en cada sector económico estratégico con interés, voluntad y potencial de participar en iniciativas de conservación"
+                }
+              ]
+            },
+            {
+              "id": 14,
+              "nombre": "# de iniciativas por sector",
+              "descripcion": "# de iniciativas por sector",
+              "actividades": [
+                {
+                  "id": 17,
+                  "descripcion": "2.2.2 Diagnóstico de costo/beneficio económico y ambiental de la implementación de mejores prácticas"
+                }
+              ]
+            },
+            {
+              "id": 15,
+              "nombre": "# de sectores involucrados",
+              "descripcion": "# de sectores involucrados",
+              "actividades": [
+                {
+                  "id": 18,
+                  "descripcion": "2.2.3 Acompañar a dichos actores a diseñar y difundir intervenciones de conservación relevantes para la avifauna en su región"
+                }
+              ]
+            },
+            {
+              "id": 16,
+              "nombre": "#$ de recursos invertidos",
+              "descripcion": "#$ de recursos invertidos",
+              "actividades": [
+                {
+                  "id": 19,
+                  "descripcion": "2.2.4 Monitorear los beneficios de las buenas prácticas sobre la avifauna"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "descripcion": "Fortalecer las actuales cuatro (4) rutas de aviturismo y crear tres (3) nuevas rutas nacionales, para contar con un total de siete (7) rutas consolidadas en los mercados nacionales e internacionales que fomenten el desarrollo local inclusivo.",
+      "objetivos": [
+        {
+          "id": 11,
+          "descripcion": "2.3. Al 2027, Al menos un gremio de cada uno de los sectores Agricultura, Ganadería y Turismo fomentan el fortalecimiento de las capacidades en buenas prácticas a sus agremiados en la conservación de las aves y sus hábitats",
+          "indicadores": [
+            {
+              "id": 17,
+              "nombre": "# gremios comprometidos con una plan de formación de buenas prácticas para sus agremiados",
+              "descripcion": "# gremios comprometidos con una plan de formación de buenas prácticas para sus agremiados",
+              "actividades": [
+                {
+                  "id": 20,
+                  "descripcion": "2.3.1 Diseño programa de formación para implementar y fortalecer buenas prácticas para la conservación de las aves en los sectores Agricultura, Ganadería y Turismo"
+                }
+              ]
+            },
+            {
+              "id": 18,
+              "nombre": "# de agreamiados participando en los programas de formación de buenas prácticas",
+              "descripcion": "# de agreamiados participando en los programas de formación de buenas prácticas",
+              "actividades": [
+                {
+                  "id": 21,
+                  "descripcion": "2.3.2 Implementar programa y asegurar seguimiento"
+                }
+              ]
+            },
+            {
+              "id": 19,
+              "nombre": "# de agremiados capacitados implementando satisfactoriamente buenas prácticas",
+              "descripcion": "# de agremiados capacitados implementando satisfactoriamente buenas prácticas",
+              "actividades": [
+                {
+                  "id": 22,
+                  "descripcion": "2.3.3 Acompañar y monitorear la implementación de las buenas prácticas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "descripcion": "2.4. Al 2029, los sectores Agricultura, Ganadería y Turismo están implementando el uso de buenas prácticas en todas las regiones de Colombia para la conservación de las aves",
+          "indicadores": [
+            {
+              "id": 20,
+              "nombre": "# regiones con implementación de buenas prácticas en los 3 sectores",
+              "descripcion": "# regiones con implementación de buenas prácticas en los 3 sectores",
+              "actividades": [
+                {
+                  "id": 23,
+                  "descripcion": "2.4.1 Implementar programa de formación y asegurar seguimiento (ver actividad 2.1.2)"
+                }
+              ]
+            },
+            {
+              "id": 21,
+              "nombre": "# de empresas implementando buenas prácticas",
+              "descripcion": "# de empresas implementando buenas prácticas",
+              "actividades": [
+                {
+                  "id": 24,
+                  "descripcion": "2.4.2 Desarrollar programa de incentivos en conjunción con los gremios y sectores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "descripcion": "2.5. Al 2030, se han reconvertido sistemas productivos tradicionales a sistemas sostenibles bajo buenas prácticas",
+          "indicadores": [
+            {
+              "id": 22,
+              "nombre": "# de sectores productivos y de servicios involucrados",
+              "descripcion": "# de sectores productivos y de servicios involucrados",
+              "actividades": [
+                {
+                  "id": 25,
+                  "descripcion": "2.5.1 Establecer línea base de área cubierta por buenas prácticas para las aves y empresas vinculadas"
+                }
+              ]
+            },
+            {
+              "id": 23,
+              "nombre": "# de ha cubiertas por las buenas prácticas",
+              "descripcion": "# de ha cubiertas por las buenas prácticas",
+              "actividades": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

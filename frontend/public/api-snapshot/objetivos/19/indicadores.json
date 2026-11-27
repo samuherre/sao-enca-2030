@@ -1,0 +1,20 @@
+[
+  {
+    "id": 33,
+    "nombre": "# de iniciativas piloto",
+    "descripcion": "# de iniciativas piloto",
+    "objetivo_id": 19
+  },
+  {
+    "id": 34,
+    "nombre": "# de municipios por región",
+    "descripcion": "# de municipios por región",
+    "objetivo_id": 19
+  },
+  {
+    "id": 35,
+    "nombre": "# de regiones representadas",
+    "descripcion": "# de regiones representadas",
+    "objetivo_id": 19
+  }
+]

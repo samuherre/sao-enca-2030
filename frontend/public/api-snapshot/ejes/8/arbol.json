@@ -1,0 +1,338 @@
+{
+  "id": 8,
+  "nombre": "EJE 4: CONTRIBUIR AL ORDENAMIENTO TERRITORIAL",
+  "descripcion": null,
+  "metas": [
+    {
+      "id": 10,
+      "descripcion": "Incremento de al menos 10 % de áreas protegidas y OMEC en áreas estratégicas para las aves",
+      "objetivos": [
+        {
+          "id": 18,
+          "descripcion": "4.1 Para el 2023 la ENCA habrá sido socializada y divulgada con todas las 33 Corporaciones Autónomas Regionales del país y utilizada como herramienta para la actualización de sus planes cuatrianuales 2024-2028",
+          "indicadores": [
+            {
+              "id": 31,
+              "nombre": "# CAR que conocen y respaldan la ENCA",
+              "descripcion": "# CAR que conocen y respaldan la ENCA",
+              "actividades": [
+                {
+                  "id": 33,
+                  "descripcion": "4.1.1 Realizar talleres regionales y nacionales de difusión y discusión de la ENCA"
+                }
+              ]
+            },
+            {
+              "id": 32,
+              "nombre": "# de planes cuatrianuales que articulan su trabajo con la ENCA",
+              "descripcion": "# de planes cuatrianuales que articulan su trabajo con la ENCA",
+              "actividades": [
+                {
+                  "id": 34,
+                  "descripcion": "4.1.2. Participar en los espacios de actualización de los planes cuatrienales"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "descripcion": "4.2. Para el 2025, se ha establecido al menos una iniciativa piloto para acompañar a al menos un municipio por región en el conocimiento científico sobre las aves para la actualización y/o actualización de sus POTs",
+          "indicadores": [
+            {
+              "id": 33,
+              "nombre": "# de iniciativas piloto",
+              "descripcion": "# de iniciativas piloto",
+              "actividades": [
+                {
+                  "id": 35,
+                  "descripcion": "4.2.1 Identificar municipios, departamentos, resguardos indígenas o consejos comunitarios que necesitan actualizar sus POTs y/o mejorar su implementación, y priorizar los más relevantes para articular con la ENCA (Nota: criterios a definir)"
+                }
+              ]
+            },
+            {
+              "id": 34,
+              "nombre": "# de municipios por región",
+              "descripcion": "# de municipios por región",
+              "actividades": [
+                {
+                  "id": 36,
+                  "descripcion": "4.2.2 Acordar con alcaldías, gobernaciones, resguardos indígenas y consejos comunitarios selectos la participación de la ENCA en los nuevos ejercicios de planificación territorial"
+                }
+              ]
+            },
+            {
+              "id": 35,
+              "nombre": "# de regiones representadas",
+              "descripcion": "# de regiones representadas",
+              "actividades": [
+                {
+                  "id": 37,
+                  "descripcion": "4.2.3 Promover la conservación de las aves con organizaciones o iniciativas vinculantes a la planificación territorial (PROCEDAS, autoridades ambientales locales)"
+                },
+                {
+                  "id": 38,
+                  "descripcion": "4.3.4 Acompañar a los ejercicios de planificación territorial priorizados selectos con otras instituciones y personas que aporten saber científico al proceso"
+                },
+                {
+                  "id": 39,
+                  "descripcion": "4.2.5 Documentar, dar seguimiento al proceso y generar recomendaciones que retroalimenten y promuevan su implementación en otros instrumentos de planificación"
+                },
+                {
+                  "id": 40,
+                  "descripcion": "4.2.6 Difundir el proceso y lecciones aprendidas"
+                },
+                {
+                  "id": 41,
+                  "descripcion": "4.2.7 Replicar el proceso"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "descripcion": "Mejora de la representatividad de aves en el sistema nacional de áreas protegidas",
+      "objetivos": [
+        {
+          "id": 20,
+          "descripcion": "4.3. Para el final del 2026, se encuentran en marcha al menos dos nuevas iniciativas por región de protección y/o restauración de áreas estratégicas para las aves",
+          "indicadores": [
+            {
+              "id": 36,
+              "nombre": "# de iniciativas de protección o restauración por región",
+              "descripcion": "# de iniciativas de protección o restauración por región",
+              "actividades": [
+                {
+                  "id": 42,
+                  "descripcion": "4.3.1 Mapear actores interesados en participar, promover o ejecutar acciones de protección y restauración de áreas estratégicas para la aves (incluyendo actores no involucrados tradicionalmente en actividades de conservación)"
+                },
+                {
+                  "id": 43,
+                  "descripcion": "4.3.2 Articular la ENCA con los SIRAP, principalmente en la identificación áreas susceptibles de ser usadas en proyectos de compensación por pérdida de biodiversidad"
+                },
+                {
+                  "id": 44,
+                  "descripcion": "4.3.3 Formular iniciativas por región enfocadas a la protección y/o restauración de áreas estratégicas para las aves"
+                },
+                {
+                  "id": 45,
+                  "descripcion": "4.3.4 Fortalecer las capacidades de gestión de la conservación de los actores"
+                },
+                {
+                  "id": 46,
+                  "descripcion": "4.3.5 Articular al sector privado (empresas, gremios) en conservación mediante las regulaciones de compensaciones ambientales, principalmente en bancos de hábitat (Resolución 1051 del 2017)"
+                },
+                {
+                  "id": 47,
+                  "descripcion": "4.3.6 Vincular la ENCA con otras iniciativas de conservación (ej.: propuesta Amazónica; Conserva Aves)"
+                },
+                {
+                  "id": 48,
+                  "descripcion": "4.3.7 Comunicar con actores de la sociedad civil, conseguir adeptos"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "descripcion": "Al menos 300 000 ha nuevas con áreas estratégicas de conservación para las aves, lideradas por comunidades y entidades locales.",
+      "objetivos": [
+        {
+          "id": 21,
+          "descripcion": "4.4. Para el 2027, al menos dos regiones incluyen en su ordenamiento territorial nuevas áreas protegidas, ampliaciones a las áreas protegidas existentes o áreas bajo otras medidas de conservación (OMECs) enfocadas a la protección de las aves y sus hábitats",
+          "indicadores": [
+            {
+              "id": 37,
+              "nombre": "# de regiones que incluyen nuevas áreas protegidas y/u OMECs en sus PGAR (donde al menos uno de los objetivos de conservación sean las aves)",
+              "descripcion": "# de regiones que incluyen nuevas áreas protegidas y/u OMECs en sus PGAR (donde al menos uno de los objetivos de conservación sean las aves)",
+              "actividades": [
+                {
+                  "id": 49,
+                  "descripcion": "4.4.1 Identificar y priorizar las áreas estratégicas de interés para la conservación de las aves"
+                }
+              ]
+            },
+            {
+              "id": 38,
+              "nombre": "# de nuevas áreas protegidas u OMECs resultantes de las actualizaciones de los PGAR (donde al menos uno de los objetivos de conservación sean las aves)",
+              "descripcion": "# de nuevas áreas protegidas u OMECs resultantes de las actualizaciones de los PGAR (donde al menos uno de los objetivos de conservación sean las aves)",
+              "actividades": [
+                {
+                  "id": 50,
+                  "descripcion": "4.4.2 Identificar regiones cuyos Planes de Gestión Ambiental Regional (PGAR) deben actualizarse con en fin de incidir para la incorporación de áreas prioritarias para la conservación de las aves"
+                }
+              ]
+            },
+            {
+              "id": 39,
+              "nombre": "# de especies endémicas o amenazadas que cuentan con al menos 100 km2 de área bajo manejo y protección",
+              "descripcion": "# de especies endémicas o amenazadas que cuentan con al menos 100 km2 de área bajo manejo y protección",
+              "actividades": [
+                {
+                  "id": 51,
+                  "descripcion": "4.4.3 Facilitar la incorporación de nuevas áreas protegidas u OMECs en dichos planes (ej. apoyo técnico/científico, apoyo jurídico, etc)"
+                },
+                {
+                  "id": 52,
+                  "descripcion": "4.4.4 Fortalecer sistemas de gestión y monitoreo de las áreas de conservación involucrando diferentes aproximaciones como la ciencia participativa."
+                },
+                {
+                  "id": 53,
+                  "descripcion": "4.4.5 Fortalecer sistemas de gestión y monitoreo de las áreas de conservación involucrando diferentes aproximaciones como la ciencia participativa."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "descripcion": "Incremento del 25 % en fondos invertidos en fomentar la conservación de las aves.",
+      "objetivos": [
+        {
+          "id": 22,
+          "descripcion": "4.5 Para el 2027, se ha creado al menos una red ciudadana por región que participa en el seguimiento y veeduría de la protección de las aves en determinantes ambientales",
+          "indicadores": [
+            {
+              "id": 40,
+              "nombre": "# de redes ciudadanas participando en el seguimiento y veeduría de determinantes ambientales relacionadas con las aves",
+              "descripcion": "# de redes ciudadanas participando en el seguimiento y veeduría de determinantes ambientales relacionadas con las aves",
+              "actividades": [
+                {
+                  "id": 54,
+                  "descripcion": "4.5.1. Iniciar mapeo e inventario de redes ciudadanos trabajando en acciones de conservación de las aves"
+                }
+              ]
+            },
+            {
+              "id": 41,
+              "nombre": "# de redes ciudadanas capacitadas en seguimiento y veeduría",
+              "descripcion": "# de redes ciudadanas capacitadas en seguimiento y veeduría",
+              "actividades": [
+                {
+                  "id": 55,
+                  "descripcion": "4.5.2. Fortalecer las capacidades en temas de veeduría ciudadana"
+                }
+              ]
+            },
+            {
+              "id": 42,
+              "nombre": "# regiones",
+              "descripcion": "# regiones",
+              "actividades": [
+                {
+                  "id": 56,
+                  "descripcion": "4.5.3. Fortalecer las capacidades de las organizaciones para ganar adeptos y promover las acciones de conservación de la ENCA"
+                },
+                {
+                  "id": 57,
+                  "descripcion": "4.5.4. Fortalecer las capacidades de las organizaciones para ganar adeptos y promover las acciones de conservación de la ENCA"
+                },
+                {
+                  "id": 58,
+                  "descripcion": "4.5.5. Promover, a través de la estrategia de comunicación, la conformación y fortalecimiento de redes de participación y veeduría ciudadana"
+                },
+                {
+                  "id": 59,
+                  "descripcion": "4.5.6. Vincular los procesos de veeduría y seguimiento con la ciencia ciudadana participativa (ver estrategia de gestión del conocimiento)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "descripcion": "4.6. Para el 2030, al menos 25% de los entes territoriales (departamentos, municipios, distritos y territorios indígenas) se encuentran implementando satisfactoriamente planes de ordenamiento territorial con acciones explícitas de conservación de aves",
+          "indicadores": [
+            {
+              "id": 43,
+              "nombre": "# de entes territoriales implementando POTs con acciones de conservación de aves",
+              "descripcion": "# de entes territoriales implementando POTs con acciones de conservación de aves",
+              "actividades": [
+                {
+                  "id": 60,
+                  "descripcion": "4.6.1. Aportar a las CAR lineamientos para incluir acciones explicitas de conservación de aves de acuerdo información científica y local en los planes de ordenamiento territorial (a nivel de alcaldías o gobernaciones), incluyendo la modificación o inclusión de nuevas determinantes ambientales, de acuerdo a las lecciones aprendidas en el objetivo 4.2"
+                }
+              ]
+            },
+            {
+              "id": 44,
+              "nombre": "# de planes de ordenamiento que se han implementado satisfactoriamente.",
+              "descripcion": "# de planes de ordenamiento que se han implementado satisfactoriamente.",
+              "actividades": [
+                {
+                  "id": 61,
+                  "descripcion": "4.6.2. Realizar el seguimiento por parte de las CARs a las acciones explicitas de conservación de aves incluidas en los planes de ordenamiento del ente territorial (alcaldías o gobernación)"
+                }
+              ]
+            },
+            {
+              "id": 45,
+              "nombre": "# de CONPES que integren la protección y conservación de aves y sus hábitats",
+              "descripcion": "# de CONPES que integren la protección y conservación de aves y sus hábitats",
+              "actividades": [
+                {
+                  "id": 62,
+                  "descripcion": "4.6.3. Promover la articulación de las acciones de CONPES estratégicos (Ej. Deforestación 4021, SINAP 4050, 3915 Macizo colombiano y 3886 Pagos servicios ambientales) con la conservación de las aves"
+                },
+                {
+                  "id": 63,
+                  "descripcion": "4.6.1 Iniciar mapeo e inventario de redes ciudadanos trabajando en acciones de conservación de las aves"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "descripcion": "CAR implementando herramientas y presupuestos específicos para fomentar la conservación de las aves en los sistemas de áreas protegidas y sistemas productivos de sus regiones.",
+      "objetivos": [
+        {
+          "id": 24,
+          "descripcion": "4.7. Para el 2030, la actualización de la próxima ENCA responderá a la política pública en la materia",
+          "indicadores": [
+            {
+              "id": 46,
+              "nombre": "Política pública de la conservación de aves y sus hábitats",
+              "descripcion": "Política pública de la conservación de aves y sus hábitats",
+              "actividades": [
+                {
+                  "id": 64,
+                  "descripcion": "4.7.1 Elevar las acciones de conservación de aves en la planificación nacional territorial a nivel de política pública"
+                }
+              ]
+            },
+            {
+              "id": 47,
+              "nombre": "Nueva ENCA 2030-2040",
+              "descripcion": "Nueva ENCA 2030-2040",
+              "actividades": [
+                {
+                  "id": 65,
+                  "descripcion": "4.7.2 Desarrollar el diagnóstico que justifique la creación de una política nacional para la conservación de aves"
+                },
+                {
+                  "id": 66,
+                  "descripcion": "4.7.3 Desarrollar alianzas estratégicas con entes gubernamentales que apoyen la iniciativa de política pública"
+                },
+                {
+                  "id": 67,
+                  "descripcion": "4.7.4 Socializar la ENCA en escenarios políticos"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

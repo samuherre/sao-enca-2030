@@ -1,0 +1,27 @@
+[
+  {
+    "id": 75,
+    "descripcion": "5.3.2. Identificar e inventariar las iniciativas de recopilación del conocimiento tradicional existentes",
+    "indicador_id": 53
+  },
+  {
+    "id": 76,
+    "descripcion": "5.3.4. Apoyar iniciativas de recopilación de conocimiento tradicional en marcha",
+    "indicador_id": 53
+  },
+  {
+    "id": 77,
+    "descripcion": "5.3.5. Desarrollar nuevas iniciativas de recopilación de conocimiento tradicional, haciendo énfasis en las regiones en las que estas aún no existen",
+    "indicador_id": 53
+  },
+  {
+    "id": 78,
+    "descripcion": "5.3.6. Crear y fortalecer las capacidades de las organizaciones a cargo de cada iniciativa para documentar, almacenar, procesar y difundir la información recabada",
+    "indicador_id": 53
+  },
+  {
+    "id": 79,
+    "descripcion": "5.3.7. Garantizar que las iniciativas tengan carácter permanente y una difusión adecuada",
+    "indicador_id": 53
+  }
+]

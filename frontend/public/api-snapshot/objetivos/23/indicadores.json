@@ -1,0 +1,20 @@
+[
+  {
+    "id": 43,
+    "nombre": "# de entes territoriales implementando POTs con acciones de conservación de aves",
+    "descripcion": "# de entes territoriales implementando POTs con acciones de conservación de aves",
+    "objetivo_id": 23
+  },
+  {
+    "id": 44,
+    "nombre": "# de planes de ordenamiento que se han implementado satisfactoriamente.",
+    "descripcion": "# de planes de ordenamiento que se han implementado satisfactoriamente.",
+    "objetivo_id": 23
+  },
+  {
+    "id": 45,
+    "nombre": "# de CONPES que integren la protección y conservación de aves y sus hábitats",
+    "descripcion": "# de CONPES que integren la protección y conservación de aves y sus hábitats",
+    "objetivo_id": 23
+  }
+]

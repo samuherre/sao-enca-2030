@@ -32847,49 +32847,49 @@
       "nombre": "by_basis_of_record.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/by_basis_of_record.csv",
       "filas": 7,
-      "modificado_utc": "2026-11-17T01:25:27.740471+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.075248+00:00"
     },
     {
       "nombre": "by_department.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/by_department.csv",
       "filas": 33,
-      "modificado_utc": "2026-11-17T01:25:27.729475+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.077289+00:00"
     },
     {
       "nombre": "by_family.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/by_family.csv",
       "filas": 15,
-      "modificado_utc": "2026-11-17T01:25:27.738504+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.079248+00:00"
     },
     {
       "nombre": "by_iucn_category.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/by_iucn_category.csv",
       "filas": 9,
-      "modificado_utc": "2026-11-17T01:25:27.742485+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.082285+00:00"
     },
     {
       "nombre": "by_municipality.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/by_municipality.csv",
       "filas": 25,
-      "modificado_utc": "2026-11-17T01:25:27.732511+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.084284+00:00"
     },
     {
       "nombre": "by_order.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/by_order.csv",
       "filas": 15,
-      "modificado_utc": "2026-11-17T01:25:27.736471+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.087286+00:00"
     },
     {
       "nombre": "by_region_enca.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/by_region_enca.csv",
       "filas": 6,
-      "modificado_utc": "2026-11-17T01:25:27.731470+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.089283+00:00"
     },
     {
       "nombre": "by_year.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/by_year.csv",
       "filas": 196,
-      "modificado_utc": "2026-11-17T01:25:27.734470+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.091249+00:00"
     },
     {
       "nombre": "national_total_arcgis.csv",
@@ -32907,7 +32907,7 @@
       "nombre": "publishers_latest.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/publishers_latest.csv",
       "filas": 15,
-      "modificado_utc": "2026-11-17T01:25:27.727505+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.093249+00:00"
     },
     {
       "nombre": "run_log.csv",
@@ -32919,13 +32919,13 @@
       "nombre": "threatened_species.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/threatened_species.csv",
       "filas": 111,
-      "modificado_utc": "2026-11-17T01:25:27.744507+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.096286+00:00"
     },
     {
       "nombre": "threatened_species_by_year.csv",
       "ruta_relativa": "outputs/biodiversity_pilot/gbif/arcgis/threatened_species_by_year.csv",
       "filas": 2392,
-      "modificado_utc": "2026-11-17T01:25:27.754470+00:00"
+      "modificado_utc": "2026-11-27T05:04:13.099252+00:00"
     }
   ]
 }

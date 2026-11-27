@@ -1,0 +1,20 @@
+[
+  {
+    "id": 17,
+    "nombre": "# gremios comprometidos con una plan de formación de buenas prácticas para sus agremiados",
+    "descripcion": "# gremios comprometidos con una plan de formación de buenas prácticas para sus agremiados",
+    "objetivo_id": 11
+  },
+  {
+    "id": 18,
+    "nombre": "# de agreamiados participando en los programas de formación de buenas prácticas",
+    "descripcion": "# de agreamiados participando en los programas de formación de buenas prácticas",
+    "objetivo_id": 11
+  },
+  {
+    "id": 19,
+    "nombre": "# de agremiados capacitados implementando satisfactoriamente buenas prácticas",
+    "descripcion": "# de agremiados capacitados implementando satisfactoriamente buenas prácticas",
+    "objetivo_id": 11
+  }
+]

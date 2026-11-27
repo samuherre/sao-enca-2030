@@ -1,0 +1,37 @@
+[
+  {
+    "id": 42,
+    "descripcion": "4.3.1 Mapear actores interesados en participar, promover o ejecutar acciones de protección y restauración de áreas estratégicas para la aves (incluyendo actores no involucrados tradicionalmente en actividades de conservación)",
+    "indicador_id": 36
+  },
+  {
+    "id": 43,
+    "descripcion": "4.3.2 Articular la ENCA con los SIRAP, principalmente en la identificación áreas susceptibles de ser usadas en proyectos de compensación por pérdida de biodiversidad",
+    "indicador_id": 36
+  },
+  {
+    "id": 44,
+    "descripcion": "4.3.3 Formular iniciativas por región enfocadas a la protección y/o restauración de áreas estratégicas para las aves",
+    "indicador_id": 36
+  },
+  {
+    "id": 45,
+    "descripcion": "4.3.4 Fortalecer las capacidades de gestión de la conservación de los actores",
+    "indicador_id": 36
+  },
+  {
+    "id": 46,
+    "descripcion": "4.3.5 Articular al sector privado (empresas, gremios) en conservación mediante las regulaciones de compensaciones ambientales, principalmente en bancos de hábitat (Resolución 1051 del 2017)",
+    "indicador_id": 36
+  },
+  {
+    "id": 47,
+    "descripcion": "4.3.6 Vincular la ENCA con otras iniciativas de conservación (ej.: propuesta Amazónica; Conserva Aves)",
+    "indicador_id": 36
+  },
+  {
+    "id": 48,
+    "descripcion": "4.3.7 Comunicar con actores de la sociedad civil, conseguir adeptos",
+    "indicador_id": 36
+  }
+]

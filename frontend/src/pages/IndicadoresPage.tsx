@@ -47,7 +47,7 @@ export function IndicadoresPage({ objetivo, onSelectIndicador }: IndicadoresPage
       title="Indicadores"
       subtitle={`Indicadores del Objetivo: ${objetivo.descripcion}`}
       state={state}
-      emptyMessage="Este Objetivo no tiene Indicadores. Crea el primero con el formulario."
+      emptyMessage="Este Objetivo no tiene Indicadores registrados."
       renderItem={(indicador) => ({
         key: indicador.id,
         title: indicador.nombre,

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 10,
+    "descripcion": "Incremento de al menos 10 % de áreas protegidas y OMEC en áreas estratégicas para las aves",
+    "eje_id": 8
+  },
+  {
+    "id": 11,
+    "descripcion": "Mejora de la representatividad de aves en el sistema nacional de áreas protegidas",
+    "eje_id": 8
+  },
+  {
+    "id": 12,
+    "descripcion": "Al menos 300 000 ha nuevas con áreas estratégicas de conservación para las aves, lideradas por comunidades y entidades locales.",
+    "eje_id": 8
+  },
+  {
+    "id": 13,
+    "descripcion": "Incremento del 25 % en fondos invertidos en fomentar la conservación de las aves.",
+    "eje_id": 8
+  },
+  {
+    "id": 14,
+    "descripcion": "CAR implementando herramientas y presupuestos específicos para fomentar la conservación de las aves en los sistemas de áreas protegidas y sistemas productivos de sus regiones.",
+    "eje_id": 8
+  }
+]

@@ -36,7 +36,7 @@ export function ObjetivosPage({ meta, onSelectObjetivo }: ObjetivosPageProps) {
       title="Objetivos SMART"
       subtitle={`Objetivos de la Meta: ${meta.descripcion}`}
       state={state}
-      emptyMessage="Esta Meta no tiene Objetivos. Crea el primero con el formulario."
+      emptyMessage="Esta Meta no tiene Objetivos registrados."
       renderItem={(objetivo) => ({
         key: objetivo.id,
         title: objetivo.descripcion,

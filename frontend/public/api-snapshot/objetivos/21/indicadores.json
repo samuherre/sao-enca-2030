@@ -1,0 +1,20 @@
+[
+  {
+    "id": 37,
+    "nombre": "# de regiones que incluyen nuevas áreas protegidas y/u OMECs en sus PGAR (donde al menos uno de los objetivos de conservación sean las aves)",
+    "descripcion": "# de regiones que incluyen nuevas áreas protegidas y/u OMECs en sus PGAR (donde al menos uno de los objetivos de conservación sean las aves)",
+    "objetivo_id": 21
+  },
+  {
+    "id": 38,
+    "nombre": "# de nuevas áreas protegidas u OMECs resultantes de las actualizaciones de los PGAR (donde al menos uno de los objetivos de conservación sean las aves)",
+    "descripcion": "# de nuevas áreas protegidas u OMECs resultantes de las actualizaciones de los PGAR (donde al menos uno de los objetivos de conservación sean las aves)",
+    "objetivo_id": 21
+  },
+  {
+    "id": 39,
+    "nombre": "# de especies endémicas o amenazadas que cuentan con al menos 100 km2 de área bajo manejo y protección",
+    "descripcion": "# de especies endémicas o amenazadas que cuentan con al menos 100 km2 de área bajo manejo y protección",
+    "objetivo_id": 21
+  }
+]
