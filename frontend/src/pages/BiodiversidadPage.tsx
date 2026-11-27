@@ -144,14 +144,16 @@ function urlGbifCategoriaIUCN(codigo: string): string {
 
 /**
  * Enlace a GBIF con las ocurrencias de UNA especie en Colombia. El portal
- * reconstruye el filtro desde el parámetro camelCase ``speciesKey`` (clave del
- * backbone de GBIF), así que el enlace lleva exactamente a los registros de esa
- * especie.
+ * reconstruye el filtro de taxón desde el parámetro camelCase ``taxonKey`` (es
+ * la ÚNICA vía del portal para filtrar un taxón concreto; con ``speciesKey`` no
+ * reconstruía el chip y el enlace quedaba solo con el país). ``speciesKey`` es
+ * la clave del backbone de GBIF de la especie, que también es un ``taxonKey``
+ * válido, así que el enlace lleva exactamente a los registros de esa especie.
  */
 function urlGbifEspecie(speciesKey: string): string {
   const params = new URLSearchParams({
     country: "CO",
-    speciesKey: speciesKey,
+    taxonKey: speciesKey,
   });
   return `https://www.gbif.org/occurrence/search?${params.toString()}`;
 }
