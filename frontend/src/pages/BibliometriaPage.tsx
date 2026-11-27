@@ -168,6 +168,34 @@ function IndicadoresTable({ ind }: { ind: IndicadoresColaboracion }) {
           ))}
         </tbody>
       </table>
+
+      {/* Advertencia metodológica sobre el RCC (decisión de SAO/Julián): el
+          índice se mantiene FIEL al dato, sin acotar el nº máximo de autores,
+          pero se explica que unos pocos artículos con autoría masiva lo
+          distorsionan hacia arriba, para que el lector interprete el valor con
+          ese contexto. */}
+      {ind.rcc != null ? (
+        <p
+          style={{
+            marginTop: "0.6rem",
+            padding: "0.6rem 0.9rem",
+            maxWidth: 520,
+            backgroundColor: "#faf3df",
+            border: "1px solid #ecdcae",
+            borderRadius: "0.375rem",
+            color: "#5a4a1f",
+            fontSize: "0.8rem",
+          }}
+        >
+          <strong>Nota sobre el RCC.</strong> El índice de Egghe usa como
+          parámetro el número máximo de autores en un artículo de la colección.
+          El corpus incluye unos pocos artículos de autoría masiva (del orden de
+          100 autores, p. ej. bases de datos globales como AVONET), que elevan
+          ese máximo y <strong>distorsionan el valor del RCC</strong>. Se mantiene
+          el cálculo fiel al dato (sin recortar ese máximo); conviene leer el
+          índice teniendo en cuenta esa salvedad.
+        </p>
+      ) : null}
     </section>
   );
 }
