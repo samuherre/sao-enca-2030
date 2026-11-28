@@ -53,6 +53,38 @@ Hosted Feature Layers / Tablas en ArcGIS Online
 App en Experience Builder / Dashboard (sección "Resultados" de la app pública)
 ```
 
+## 3-bis. Lo que REALMENTE consume el sitio de Resultados (hallazgo decisivo)
+
+Las llamadas reales de la página de Resultados revelan que el sitio NO lee datos
+crudos ricos: lee **tablas resumidas simples** (cifra por fila), que HOY están
+pobladas a mano. Servicios que consume:
+
+| Servicio / capa | Contenido | Nota |
+| --- | --- | --- |
+| `indicadores_ENCA_publico/5` | 49 indicadores (`nombre`, `meta`, `valor_actual`, `eje`) | incluye Eje 5 |
+| `indicadores_ENCA_publico/0` | 6 regiones (`numero_especies`, `proyecto_region`, `buenas_practicas`) | mapa por región |
+| `indicadores_ENCA_publico/4` | 5 sectores (`participantes`, `recursos_invertidos`…) | Eje 2 |
+| `muni_depto_runap_publico/2` | departamentos (`nombre_depto`, `especies_aves`) | requiere token; mapa por depto |
+
+Clave: los indicadores 36–42 del Eje 5 son EXACTAMENTE las cifras que calcula el
+pipeline de Biodiversidad, hoy puestas a mano:
+`Número especies aves Colombia=1969`, `…endémicas=84`, `…amenazadas=72`,
+`…por región`, `…por departamento`. **Nuestros pipelines pueden alimentar esas
+mismas tablas con datos reales y actualizables.**
+
+### Reencuadre de la migración (dos niveles)
+
+- **Nivel 1 — Alimentar lo que el sitio YA muestra (prioridad, bajo riesgo):**
+  actualizar con datos reales de los pipelines las tablas que el sitio ya lee
+  (especies por región/departamento, amenazadas, endémicas…). El sitio pasa de
+  cifras tecleadas a datos reproducibles, sin crear nada nuevo ni depender de
+  jcgomez. La "actualización periódica" se vuelve: pipeline → sobrescribe estas
+  tablas → el sitio se actualiza solo.
+- **Nivel 2 — Vistas ricas nuevas (después):** gráficos por año, distribución
+  por OFC, top familias, enlaces a GBIF, serie por especie… no caben en el
+  modelo tabular actual del sitio; requieren ampliar el sitio (jcgomez) o una
+  app ArcGIS embebida. Se aborda tras validar el Nivel 1.
+
 ## 4. Qué capa/tabla crear por vista
 
 - **Seguimiento ENCA:** 1 tabla `enca_jerarquia` (fila por elemento: `nivel`,
