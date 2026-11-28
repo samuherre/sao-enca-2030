@@ -153,7 +153,8 @@ def _es_float(v: str) -> bool:
         return False
 
 
-def _publicar_una(gis, ruta_csv: Path, publicar: bool) -> None:
+def _publicar_una(gis, ruta_csv: Path, publicar: bool,
+                  carpeta_nombre: str | None = None) -> None:
     nombre = ruta_csv.stem
     titulo = f"{_PREFIJO}{nombre}"
     columnas, filas = _leer_csv(ruta_csv)
@@ -177,11 +178,20 @@ def _publicar_una(gis, ruta_csv: Path, publicar: bool) -> None:
         return
 
     # Crear: subir el CSV como item y publicarlo como TABLA (locationType none).
-    item_csv = gis.content.add(
-        {"title": titulo, "type": "CSV",
-         "tags": "SAO,ENCA,migracion", "typeKeywords": "CSV"},
-        data=str(ruta_csv),
+    # API moderna (arcgis >= 2.x): Folder.add() con ItemProperties. El viejo
+    # gis.content.add() está obsoleto y además dispara un bug interno
+    # (_is_geoenabled) al intentar detectar datos espaciales en el CSV.
+    from arcgis.gis import ItemProperties, ItemTypeEnum
+
+    carpeta = gis.content.folders.get(folder=carpeta_nombre) if carpeta_nombre \
+        else gis.content.folders.get()
+    props = ItemProperties(
+        title=titulo,
+        item_type=ItemTypeEnum.CSV,
+        tags=["SAO", "ENCA", "migracion"],
     )
+    item_csv = carpeta.add(item_properties=props, file=str(ruta_csv)).result()
+    # locationType="none": ArcGIS trata el CSV como TABLA y NO geocodifica.
     publicado = item_csv.publish(publish_parameters={"locationType": "none"})
     print(f"  creada: tabla alojada '{publicado.title}' (item {publicado.id})")
 
@@ -196,6 +206,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--todas", action="store_true", help="Procesa todos los CSV del directorio.")
     parser.add_argument("--publicar", action="store_true",
                         help="Ejecuta de verdad (por defecto es dry-run).")
+    parser.add_argument("--carpeta",
+                        help="Carpeta ArcGIS donde crear las tablas nuevas "
+                             "(p. ej. 'SAO - Biodiversidad'). Debe existir. "
+                             "Por defecto, la raíz del usuario.")
     args = parser.parse_args(argv)
 
     if not _CSV_DIR.exists():
@@ -222,7 +236,7 @@ def main(argv: list[str] | None = None) -> int:
         if not args.publicar:
             print("MODO DRY-RUN: no se tocará ArcGIS. Añade --publicar para actuar.")
         for ruta in rutas:
-            _publicar_una(gis, ruta, args.publicar)
+            _publicar_una(gis, ruta, args.publicar, args.carpeta)
     except PublicacionError as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
