@@ -80,14 +80,30 @@ def _leer_csv(ruta: Path) -> tuple[list[str], list[dict]]:
 
 
 def _buscar_item(gis, titulo: str):
-    """Devuelve el item (Feature Service) con ese título exacto, o None."""
+    """Devuelve NUESTRA tabla alojada con ese título EXACTO, o None.
+
+    Coincidencia estricta para no tocar nunca contenido ajeno (p. ej. los web
+    maps / capas de la carpeta ENCA): exige (1) título idéntico, (2) que seamos
+    el dueño y (3) que el item contenga una tabla (``.tables``), es decir, que
+    sea una de las tablas que publica este mismo script. Un Feature Layer con
+    geometría (como los de límites) no tiene ``.tables`` y queda descartado.
+    """
+    usuario = gis.users.me.username
     resultados = gis.content.search(
-        query=f'title:"{titulo}" owner:{gis.users.me.username}',
+        query=f'title:"{titulo}" owner:{usuario}',
         item_type="Feature Service",
         max_items=50,
     )
     for it in resultados or []:
-        if it.title == titulo:
+        if it.title != titulo:
+            continue  # ArcGIS puede traer coincidencias parciales: exigir exacto.
+        if getattr(it, "owner", None) != usuario:
+            continue  # nunca tocar items de otro propietario.
+        try:
+            tiene_tabla = bool(it.tables)
+        except Exception:  # pragma: no cover - item sin tablas/no accesible
+            tiene_tabla = False
+        if tiene_tabla:
             return it
     return None
 
