@@ -122,13 +122,33 @@ Dos caminos, con decisión tomada:
 Por tanto, podemos avanzar TODA la migración por nuestra cuenta; a jcgomez solo
 se le pedirá, al final, enlazar la app en "Resultados" (o permiso para hacerlo).
 
+### "Resultados" = sección "Eje 5" del sitio — y YA tiene los huecos de nuestras vistas
+
+La pestaña "Resultados" del menú apunta a `moacolombia.org/enca/eje5`: es la
+sección `Eje 5` de la tabla de contenido. Leyendo su contenido (público), el
+sitio YA tiene escrita la narrativa que espera nuestras vistas:
+
+| código | texto existente | vista que lo completa |
+| --- | --- | --- |
+| 6.4.1 / 6.4.2 | "Explora el mapa… número de especies **por región y por departamento**" | Biodiversidad (mapa por depto/región) |
+| 6.8 / 6.9 | "Nuestro trabajo en **investigación y difusión**… publicaciones" | Bibliometría |
+
+Es decir, el diseño del sitio ya anticipaba estos datos. Nuestra app
+(Dashboard/Experience) se embebe donde esa narrativa lo pide. Queda por confirmar
+(mirando el sitio o con un favor mínimo a jcgomez) con qué mecanismo exacto
+embebe el sitio un recurso en esa zona (iframe directo, o una fila de contenido
+tipo Link/embed).
+
 ### Esquema de la capa de límites (para mapas de biodiversidad)
 
-`muni_depto_runap_v` (capa de municipios, 1122 polígonos) usa **código DANE**:
-`DPTO_CCDGO` (departamento) y `MPIO_CCDGO` (municipio), con `DPTO_CNMBR` /
-`MPIO_CNMBR`. NUESTROS datos usan GADM GID (`COL.11_2`). Para el join del mapa
+`muni_depto_runap_v` (capa de municipios, 1122 polígonos) usa **código DANE**,
+no GADM: `DPTO_CCDGO` (2 dígitos, p. ej. "25" Cundinamarca), `MPIO_CCDGO`
+(5 dígitos), con nombres `DPTO_CNMBR` / `MPIO_CNMBR` en MAYÚSCULAS. NUESTROS
+datos de biodiversidad usan GADM GID (`COL.11_2`). Para el join del mapa
 coroplético hay que añadir un **puente DANE ↔ GADM** (33 departamentos; mapeo
-pequeño y conocido). Se resuelve en nuestros datos antes de publicar.
+pequeño y conocido). Se resuelve en nuestros datos antes de publicar. Nota: esta
+capa es de departamento+municipio; para el mapa por departamento basta con el
+`DPTO_CCDGO`.
 
 ## 7. Qué NO hacer (para no quedar en espejismo)
 
