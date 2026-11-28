@@ -269,3 +269,64 @@ capa es de departamento+municipio; para el mapa por departamento basta con el
 
 Es de SOLO LECTURA: lista items y, con `--item <id>`, muestra las capas/tablas y
 campos de uno concreto. No crea ni modifica nada.
+
+---
+
+## Registro de publicación — tablas alojadas (nov-2026)
+
+Las 28 tablas de las 3 vistas quedaron publicadas en ArcGIS Online como
+**tablas alojadas sin geometría** (owner `RNOA_admin`, carpeta raíz), mediante
+`scripts/arcgis/publicar_tablas.py --todas --perfil sao_rnoa --publicar`.
+
+**Verificación de cierre** (script de conteo contra los CSV de
+`outputs/arcgis_migracion/`):
+
+- 28/28 tablas presentes; conteo de filas AGOL == conteo de filas CSV en todas.
+- **0 capas con geometría** en total → confirmado que NINGUNA geocodificó
+  (publicadas con `publish_parameters={"name": titulo, "locationType": "none"}`).
+- Costo de geocodificación del lote: **0 créditos**. Único costo es
+  almacenamiento prorrateado (~1 crédito/mes para las 3 vistas juntas).
+
+### IDs de los items (para construir Dashboards / joins)
+
+| Tabla (título) | Item id | Filas |
+| --- | --- | --- |
+| AU_biblio_aporte_por_fuente | 4fe627474bac466db86f298268639e54 | 4 |
+| AU_biblio_catalogo_ofc | 64a6dcb4ccf647588af1876a5a3ab2f4 | 11 |
+| AU_biblio_colaboracion_por_anio | d7abb4aba0054d8ab0048dd1983a8444 | 7 |
+| AU_biblio_completitud | c0d4e6b9947d4b46a1f4d6baca521de1 | 5 |
+| AU_biblio_instituciones_presencia | 9093bb90b6764816a321cdf7a69bf2ba | 10 |
+| AU_biblio_instituciones_primer_autor | ed9a3dd2bcc34162bb9453ded2972d6f | 10 |
+| AU_biblio_por_acceso_abierto | 860619b2f349475e962c191eee6c6842 | 7 |
+| AU_biblio_por_anio | 08853f888c94471d87f9d8bd03599949 | 8 |
+| AU_biblio_por_idioma | 4707053343d740a8ae72ae91284291f3 | 6 |
+| AU_biblio_por_ofc | 070e9f57ec9a4c6ea8a770e2790b86fd | 11 |
+| AU_biblio_por_revista | f85cbeae40714bd894c58598727b83bc | 31 |
+| AU_biblio_por_tipo_documento | 6d3d7bb298c34cbaaa365571b5dcb002 | 18 |
+| AU_biblio_resumen | dda37da05cd044c6994d68b81c11ae8b | 1 |
+| AU_biodiv_anios | 01063d54647d4ad58cd273df899f6309 | 196 |
+| AU_biodiv_departamentos | 1c21bd1434f744718a9744e6f75b7cdf | 33 |
+| AU_biodiv_especies | bf1ebafae36d4b4386a98a8e1905b3be | 1835 |
+| AU_biodiv_especies_amenazadas | 935cedf30c914b43abab2c793cb8ce16 | 111 |
+| AU_biodiv_especies_amenazadas_por_anio | 0ce6f511a8184940a1d8b6a7c5e8ed98 | 2390 |
+| AU_biodiv_familias | d9e346aa3bf949b3a1283a0c26b449e2 | 91 |
+| AU_biodiv_iucn_categorias | 0f46b88ca3cd4fc0806ddb662f38091a | 9 |
+| AU_biodiv_municipios | 3c798a8f0f23457c81a5c9f41c2fc796 | 1117 |
+| AU_biodiv_ordenes | 0e68ab323a63402ba5131da84d0abb64 | 29 |
+| AU_biodiv_publicadores | b401232e5e7e49c7a6db2e97da0f0695 | 15 |
+| AU_biodiv_regiones | 0fd76fe266cd4f338e15118889d653a1 | 6 |
+| AU_biodiv_resumen | b9fc5fe619f14d38a4c41fecbae03126 | 1 |
+| AU_biodiv_riqueza_departamentos | fa4a567e58464f6b83e42328fbf8a644 | 33 |
+| AU_biodiv_tipos_registro | 55a50a906d4342c6a2cbf9f43c55ddd4 | 7 |
+| AU_enca_jerarquia | dd4f224f92904892b1f84b7db4bdb040 | 180 |
+
+### Actualización periódica (anual)
+
+Regenerar los CSV y re-ejecutar publica los cambios sin recrear los items
+(truncate + append), por lo que los Dashboards que apunten a estos ids NO se
+rompen:
+
+```powershell
+.venv\Scripts\python scripts\arcgis\generar_csv_arcgis.py
+.venv\Scripts\python scripts\arcgis\publicar_tablas.py --todas --perfil sao_rnoa --publicar
+```
