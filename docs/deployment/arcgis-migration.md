@@ -85,6 +85,41 @@ mismas tablas con datos reales y actualizables.**
   modelo tabular actual del sitio; requieren ampliar el sitio (jcgomez) o una
   app ArcGIS embebida. Se aborda tras validar el Nivel 1.
 
+## 3-ter. Inventario COMPLETO a migrar (checklist anti-espejismo)
+
+Fuente de verdad: los datos de los pipelines (snapshot actual). Las cifras del
+sitio están DESACTUALIZADAS y se reemplazan por estas. Todo lo de abajo debe
+quedar visible en ArcGIS; marcar cada tabla al publicarla.
+
+### Biodiversidad (de `biodiversidad/gbif/resumen.json`)
+- [ ] `biodiv_resumen` — totales/fuente/fecha (1 fila): total_registros, nº especies, endémicas, amenazadas…
+- [ ] `biodiv_publicadores` — 15 filas
+- [ ] `biodiv_departamentos` — 33 (registros por depto; + gadm_gid y DANE)
+- [ ] `biodiv_riqueza_departamentos` — 33 (especies por depto)
+- [ ] `biodiv_regiones` — 6
+- [ ] `biodiv_municipios` — 1117 (+ gadm_gid)
+- [ ] `biodiv_anios` — serie por año
+- [ ] `biodiv_tipos_registro` — 7
+- [ ] `biodiv_iucn_categorias` — 9
+- [ ] `biodiv_especies_amenazadas` — 111 (con serie por año + enlace GBIF)
+- [ ] `biodiv_ordenes` — 29 · `biodiv_familias` — 91 · `biodiv_especies` — 1835
+- [ ] `biodiv_historico` — 3 cortes
+
+### Bibliometría (de `bibliometria/resumen.json`)
+- [ ] `biblio_resumen` — totales + indicadores de colaboración (1 fila)
+- [ ] `biblio_por_anio` (8) · `por_revista` (31) · `por_idioma` (6)
+- [ ] `biblio_por_ofc` (11) + `catalogo_ofc` (11) + `sin_ofc`
+- [ ] `biblio_por_tipo_documento` (18) · `por_acceso_abierto` (7)
+- [ ] `biblio_instituciones_primer_autor` (10) · `instituciones_presencia` (10)
+- [ ] `biblio_colaboracion_por_anio` (7) · `completitud` (5) · `aporte_por_fuente` (4)
+
+### Seguimiento ENCA (de `ejes.json` + árboles)
+- [ ] `enca_jerarquia` — 5 ejes / 12 metas / 26 objetivos / 54 indicadores / 83 actividades (una fila por elemento con nivel, codigo, texto, padre)
+
+> Las tablas "ricas" (series, distribuciones, top-N, jerarquía) exceden lo que el
+> sitio muestra hoy: por eso la app ArcGIS propia (Camino 2) es la vía para que
+> TODO se vea sin depender de que el sitio se reprograme.
+
 ## 4. Qué capa/tabla crear por vista
 
 - **Seguimiento ENCA:** 1 tabla `enca_jerarquia` (fila por elemento: `nivel`,

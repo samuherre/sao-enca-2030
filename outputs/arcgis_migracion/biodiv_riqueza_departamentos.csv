@@ -1,0 +1,34 @@
+﻿rank,departamento,dane_depto,gadm_gid,especies
+1,Cauca,19,COL.11_2,1465
+2,Nariño,52,COL.22_2,1386
+3,Antioquia,05,COL.2_2,1381
+4,Meta,50,COL.21_2,1329
+5,Valle del Cauca,76,COL.31_2,1249
+6,Cundinamarca,25,COL.15_2,1216
+7,Chocó,27,COL.13_2,1167
+8,Caquetá,18,COL.9_2,1142
+9,Putumayo,86,COL.24_2,1137
+10,Boyacá,15,COL.7_2,1088
+11,Caldas,17,COL.8_2,1073
+12,Risaralda,66,COL.26_2,1059
+13,Santander,68,COL.28_2,1035
+14,Casanare,85,COL.10_2,1024
+15,Huila,41,COL.18_2,948
+16,Tolima,73,COL.30_2,946
+17,Norte de Santander,54,COL.23_2,907
+18,Magdalena,47,COL.20_2,890
+19,Cesar,20,COL.12_2,856
+20,Amazonas,91,COL.1_2,853
+21,La Guajira,44,COL.19_2,828
+22,Vichada,99,COL.33_2,814
+23,Bolívar,13,COL.6_2,811
+24,"Bogotá, D.C.",11,COL.5_2,774
+25,Guaviare,95,COL.17_2,772
+26,Córdoba,23,COL.14_2,759
+27,Quindío,63,COL.25_2,715
+28,Arauca,81,COL.3_2,708
+29,Vaupés,97,COL.32_2,697
+30,Guainía,94,COL.16_2,678
+31,Sucre,70,COL.29_2,558
+32,Atlántico,08,COL.4_2,529
+33,"Archipiélago de San Andrés, Providencia y Santa Catalina",88,COL.27_1,229

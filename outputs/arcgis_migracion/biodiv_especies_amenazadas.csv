@@ -1,0 +1,112 @@
+﻿rank,species_key,gbif_portal_key,nombre_cientifico,nombre_comun,iucn_codigo,iucn_etiqueta,registros_ocurrencia,endemica
+1,2484281,3NYCK,Hypopyrrhus pyrohypogaster,Red-bellied Grackle,VU,Vulnerable (VU),16142,True
+2,2481721,58VJ3,Tringa flavipes,Lesser Yellowlegs,VU,Vulnerable (VU),10705,False
+3,5959230,G22G,Ara militaris,Military Macaw,VU,Vulnerable (VU),7915,False
+4,2482224,76H2G,Penelope perspicax,Cauca Guan,VU,Vulnerable (VU),6344,True
+5,2480100,48Z89,Ognorhynchus icterotis,Yellow-eared Parrot,VU,Vulnerable (VU),6076,False
+6,2488675,6YJKF,Sericossypha albocristata,White-capped Tanager,VU,Vulnerable (VU),5716,False
+7,2474837,6WRB8,Rallus semiplumbeus,Bogota Rail,VU,Vulnerable (VU),5247,True
+8,2493862,VLG5,Cistothorus apolinari,Apolinar's Wren,EN,En peligro (EN),5175,True
+9,2488331,KKD6,Bangsia aureocincta,Gold-ringed Tanager,VU,Vulnerable (VU),4863,True
+10,2490519,3H5NX,Grallaria milleri,Brown-banded Antpitta,VU,Vulnerable (VU),4682,True
+11,2480327,4KKPY,Pluvialis squatarola,Black-bellied Plover,VU,Vulnerable (VU),4102,False
+12,2479816,4QW3K,Pyrrhura calliptera,Brown-breasted Parakeet,VU,Vulnerable (VU),3593,True
+13,2490522,3H5ND,Grallaria bangsi,Santa Marta Antpitta,VU,Vulnerable (VU),3411,True
+14,5789241,6LQ8Z,Henicorhina negreti,Munchique Wood-Wren,VU,Vulnerable (VU),3364,True
+15,2477039,WQTM,Coeligena prunellei,Black Inca,VU,Vulnerable (VU),3304,True
+16,8847274,8KQ7Y,Oxypogon stuebelii,Buffy Helmetcrest,VU,Vulnerable (VU),3258,True
+17,7652738,56N78,Thryophilus sernai,Antioquia Wren,VU,Vulnerable (VU),2755,True
+18,2481907,5BSLM,Vultur gryphus,Andean Condor,VU,Vulnerable (VU),2696,False
+19,7604570,DD9FD,Clibanornis rufipectus,Santa Marta Foliage-gleaner,VU,Vulnerable (VU),2456,True
+20,2481672,6QDFK,Limnodromus griseus,Short-billed Dowitcher,VU,Vulnerable (VU),2252,False
+21,2482178,6BBXD,Crax alberti,Blue-billed Curassow,CR,En peligro crítico (CR),2220,True
+22,2479854,4QW4B,Pyrrhura viridicata,Santa Marta Parakeet,EN,En peligro (EN),2198,True
+23,7516718,8K3MD,Anthocephala berlepschi,Tolima Blossomcrown,VU,Vulnerable (VU),2124,True
+24,2482168,6BC9P,Crax rubra,Great Curassow,VU,Vulnerable (VU),2108,False
+25,5228486,5VC8L,Anthocephala floriceps,Santa Marta Blossomcrown,VU,Vulnerable (VU),1990,True
+26,10784281,CP47Y,Megascops gilesi,Santa Marta Screech Owl,VU,Vulnerable (VU),1890,True
+27,6089798,56N75,Thryophilus nicefori,Niceforo's Wren,CR,En peligro crítico (CR),1546,True
+28,2482216,76GQG,Penelope ortoni,Baudo Guan,EN,En peligro (EN),1437,False
+29,2490520,6KRSV,Grallaria alleni,Moustached Antpitta,VU,Vulnerable (VU),1413,False
+30,5229120,MBNV,Bolborhynchus ferrugineifrons,Rufous-fronted Parakeet,VU,Vulnerable (VU),1381,True
+31,5232136,3G647,Glaucidium nubicola,Cloud-forest Pygmy-Owl,VU,Vulnerable (VU),1381,False
+32,2483334,4532Z,Myiotheretes pernix,Santa Marta Bush-Tyrant,EN,En peligro (EN),1353,True
+33,2487431,5BJKH,Vireo caribaeus,San Andres Vireo,VU,Vulnerable (VU),1349,True
+34,10983511,8KQP7,Chrysuronia lilliae,Sapphire-bellied Hummingbird,EN,En peligro (EN),1264,True
+35,2479477,3JKGJ,Hapalopsittaca fuertesi,Indigo-winged Parrot,EN,En peligro (EN),1234,True
+36,2484179,3X2KB,Macroagelaius subalaris,Mountain Grackle,EN,En peligro (EN),1102,True
+37,2484244,6WC6F,Psarocolius cassini,Baudo Oropendola,VU,Vulnerable (VU),1071,True
+38,2490530,3H5NW,Grallaria kaestneri,Cundinamarca Antpitta,EN,En peligro (EN),1060,True
+39,2486504,72GXX,Lipaugus weberi,Chestnut-capped Piha,CR,En peligro crítico (CR),1038,True
+40,5789077,4W5TL,Scytalopus rodriguezi,Magdalena Tapaculo,EN,En peligro (EN),817,True
+41,2477035,8HWF8,Coeligena orina,Dusky Starfrontlet,EN,En peligro (EN),804,True
+42,5788834,JH5W,Atlapetes blancae,Antioquia Brushfinch,CR,En peligro crítico (CR),786,True
+43,2481756,PK48,Calidris fuscicollis,White-rumped Sandpiper,VU,Vulnerable (VU),725,False
+44,2490933,V844,Cichlopsis leucogenys,Rufous-brown Solitaire,VU,Vulnerable (VU),693,False
+45,2477622,7CB5L,Tinamus tao,Gray Tinamou,VU,Vulnerable (VU),633,False
+46,2481684,72FD6,Limosa fedoa,Marbled Godwit,VU,Vulnerable (VU),606,False
+47,2490227,WF2K,Clytoctantes alixii,Recurve-billed Bushbird,EN,En peligro (EN),562,False
+48,5228041,6SH8G,Odontophorus strophium,Gorgeted Wood-Quail,VU,Vulnerable (VU),540,True
+49,6088359,DD9G8,Asthenes perijana,Perija Thistletail,EN,En peligro (EN),507,False
+50,2480516,6LF7D,Harpia harpyja,Harpy Eagle,VU,Vulnerable (VU),500,False
+51,5843937,3FTM9,Geotrygon purpurata,Purple Quail-Dove,EN,En peligro (EN),492,False
+52,4409023,TF38,Chaetura pelagica,Chimney Swift,VU,Vulnerable (VU),439,False
+53,2486008,56M5M,Thripophaga cherriei,Orinoco Softtail,VU,Vulnerable (VU),438,False
+54,5959195,69J4W,Cephalopterus penduliger,Long-wattled Umbrellabird,VU,Vulnerable (VU),433,False
+55,5229435,759H2,Ortalis erythroptera,Rufous-headed Chachalaca,VU,Vulnerable (VU),323,False
+56,5788512,6ZCKG,Spizaetus isidori,Black-and-chestnut Eagle,EN,En peligro (EN),283,False
+57,9697915,9GCXT,Bangsia flavovirens,Yellow-green Tanager,VU,Vulnerable (VU),282,False
+58,2477618,7CB5B,Tinamus osgoodi,Black Tinamou,VU,Vulnerable (VU),276,False
+59,10728818,9GCSQ,Tephrophilus wetmorei,Masked Mountain Tanager,VU,Vulnerable (VU),221,False
+60,8292425,9HCHR,Calidris subruficollis,Buff-breasted Sandpiper,VU,Vulnerable (VU),208,False
+61,2479830,4QW3J,Pyrrhura caeruleiceps,Perija Parakeet,EN,En peligro (EN),176,False
+62,5231458,7CVQ9,Troglodytes monticola,Santa Marta Wren,CR,En peligro crítico (CR),148,True
+63,10707191,N5L3P,Coeligena consita,Perija Starfrontlet,EN,En peligro (EN),131,False
+64,7858664,8K3N5,Oxypogon cyanolaemus,Blue-bearded Helmetcrest,EN,En peligro (EN),127,True
+65,5230625,XP4F,Conirostrum margaritae,Pearly-breasted Conebill,VU,Vulnerable (VU),125,False
+66,2482171,6BBXQ,Crax globulosa,Wattled Curassow,EN,En peligro (EN),119,False
+67,5232019,46N5J,Neomorphus radiolosus,Banded Ground-Cuckoo,VU,Vulnerable (VU),84,False
+68,2491899,3HK2J,Gubernatrix cristata,Yellow Cardinal,EN,En peligro (EN),78,False
+69,2481086,6RFXB,Micrastur plumbeus,Plumbeous Forest-Falcon,VU,Vulnerable (VU),77,False
+70,2482211,76GQC,Penelope jacucaca,White-browed Guan,VU,Vulnerable (VU),69,False
+71,2482271,76739,Pauxi pauxi,Helmeted Curassow,VU,Vulnerable (VU),69,False
+72,8032918,3H5NP,Grallaria fenwickorum,Fenwick's Antpitta,CR,En peligro crítico (CR),61,False
+73,2481680,6QFCR,Limosa haemastica,Hudsonian Godwit,VU,Vulnerable (VU),61,False
+74,5232020,46N5G,Neomorphus geoffroyi,Rufous-vented Ground-Cuckoo,VU,Vulnerable (VU),59,False
+75,5959233,G226,Ara ambiguus,Great Green Macaw,CR,En peligro crítico (CR),49,False
+76,2476132,5WY27,Campylopterus phainopeplus,Santa Marta Sabrewing,CR,En peligro crítico (CR),48,True
+77,5228536,3B3RQ,Eriocnemis mirabilis,Colorful Puffleg,EN,En peligro (EN),47,True
+78,2489138,4MR2Y,Progne modesta,Galapagos Martin,EN,En peligro (EN),45,False
+79,2477282,6BWH4,Cypseloides niger,Black Swift,VU,Vulnerable (VU),24,False
+80,2481379,4GK9L,Phoebastria irrorata,Waved Albatross,CR,En peligro crítico (CR),21,False
+81,2481460,4PWL2,Pterodroma phaeopygia,Galapagos Petrel,CR,En peligro crítico (CR),12,False
+82,2481499,4MMQ8,Procellaria parkinsoni,Parkinson's Petrel,VU,Vulnerable (VU),10,False
+83,5229386,4YV8F,Spheniscus humboldti,Humboldt Penguin,VU,Vulnerable (VU),9,False
+84,2490032,389GY,Dysithamnus plumbeus,Plumbeous Antvireo,VU,Vulnerable (VU),7,False
+85,5230758,54CBC,Tachycineta cyaneoviridis,Bahama Swallow,EN,En peligro (EN),5,False
+86,2474937,5VHY3,Anthropoides paradiseus,Blue Crane,VU,Vulnerable (VU),4,False
+87,5228535,3B3RM,Eriocnemis godini,Turquoise-throated Puffleg,CR,En peligro crítico (CR),3,False
+88,5788552,8K3MZ,Eriocnemis isabellae,Gorgeted Puffleg,CR,En peligro crítico (CR),3,True
+89,2474590,3SHXZ,Laterallus jamaicensis,Black Rail,EN,En peligro (EN),3,False
+90,2481477,4PWKK,Pterodroma hasitata,Black-capped Petrel,EN,En peligro (EN),3,False
+91,5845578,4Z65N,Spinus cucullatus,Red Siskin,EN,En peligro (EN),3,False
+92,7350166,9G8BJ,Sporophila maximiliani,Great-billed Seed-Finch,EN,En peligro (EN),3,False
+93,2490517,3H5NR,Grallaria gigantea,Giant Antpitta,VU,Vulnerable (VU),3,False
+94,2491689,T4V5,Certhidea olivacea,Green Warbler-Finch,VU,Vulnerable (VU),3,False
+95,5228617,8HVW5,Chaetura andrei,Ashy-tailed Swift,VU,Vulnerable (VU),3,False
+96,2479646,CKF3,Amazona oratrix,Yellow-headed Parrot,EN,En peligro (EN),2,False
+97,5228229,KGTN,Balearica regulorum,Gray Crowned-Crane,EN,En peligro (EN),2,False
+98,2482300,4J6HW,Pipile pipile,Trinidad Piping-Guan,CR,En peligro crítico (CR),1,False
+99,2474921,4B729,Otis tarda,Great Bustard,EN,En peligro (EN),1,False
+100,2480013,78VPS,Rhynchopsitta pachyrhyncha,Thick-billed Parrot,EN,En peligro (EN),1,False
+101,2480181,78JXM,Psittacus erithacus,Gray Parrot,EN,En peligro (EN),1,False
+102,2484063,4H7XD,Phyllomyias urichi,Urich's Tyrannulet,EN,En peligro (EN),1,False
+103,2473477,542SH,Syrmaticus reevesii,Reeves's Pheasant,VU,Vulnerable (VU),1,False
+104,2476456,CKDL,Amazilia luciae,Honduran Emerald,VU,Vulnerable (VU),1,False
+105,2477567,323MF,Crypturellus boucardi,Slaty-breasted Tinamou,VU,Vulnerable (VU),1,False
+106,2479441,4J2RS,Pionites leucogaster,White-bellied Parrot,VU,Vulnerable (VU),1,False
+107,2482096,NXGC,Burhinus superciliaris,Peruvian Thick-knee,VU,Vulnerable (VU),1,False
+108,2495708,6ZXPY,Streptopelia turtur,European Turtle-Dove,VU,Vulnerable (VU),1,False
+109,2496094,3TYGC,Leptotila battyi,Azuero Dove,VU,Vulnerable (VU),1,False
+110,4847291,55ZCG,Thalassarche salvini,Salvin's Albatross,VU,Vulnerable (VU),1,False
+111,5228578,TB2C,Chaetocercus berlepschi,Esmeraldas Woodstar,VU,Vulnerable (VU),1,False

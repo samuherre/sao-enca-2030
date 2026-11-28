@@ -1,0 +1,8 @@
+﻿rank,codigo,etiqueta,registros_ocurrencia
+1,HUMAN_OBSERVATION,Observación humana,19516750
+2,MACHINE_OBSERVATION,Observación automática (sensor/cámara),340073
+3,PRESERVED_SPECIMEN,Espécimen preservado,226877
+4,MATERIAL_SAMPLE,Muestra de material,8109
+5,MATERIAL_CITATION,Cita de material,386
+6,OCCURRENCE,Ocurrencia (sin especificar),182
+7,FOSSIL_SPECIMEN,Espécimen fósil,7
