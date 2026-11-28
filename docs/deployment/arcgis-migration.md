@@ -24,17 +24,38 @@ este modelo: su texto NO está escrito a mano, lo lee de una tabla alojada
 "Polombia"→"Colombia" fue editar una fila de esa tabla. Nuestro trabajo es poblar
 capas equivalentes con los datos de las 3 vistas.
 
-## 2. Consumo de créditos (importante)
+## 2. Consumo de créditos (confirmado con doc. oficial de Esri)
 
 Saldo de referencia (nov-2026): ~2.584 créditos; ~73 consumidos en 30 días
 (casi todo almacenamiento base ya existente).
 
-- **Alojar tablas de datos:** consume créditos de ALMACENAMIENTO, pero es mínimo
-  para datos tabulares (cifras/texto, pocas miles de filas). Céntimos.
-- **Ver la app / hacer queries a las capas:** NO consume créditos. El uso público
-  es gratis.
-- **Lo que SÍ gastaría (y NO usamos):** análisis espacial pesado, geocodificación
-  masiva, teselas, o Notebooks corriendo mucho tiempo.
+Tarifa oficial de Esri: **almacenamiento de features = 2,4 créditos por 10 MB al
+mes** (cobro prorrateado por hora). Nuestras tablas son texto/cifras (pocas miles
+de filas): TODA la biodiversidad pesa ~1-2 MB → **menos de 1 crédito/mes**; las
+3 vistas juntas, del orden de 1 crédito/mes. Con 2.584 disponibles, se puede
+alojar años sin preocupación.
+
+- **Crear Dashboards / Experience Builder / apps: GRATIS** (no consume créditos;
+  es configuración guardada, no cómputo).
+- **Ver la app / hacer queries a las capas: GRATIS.** El uso público no gasta.
+- **Alojar tablas de datos:** céntimos de crédito/mes (ver arriba).
+- **Lo que SÍ gastaría (y NO usamos):** análisis espacial, geocodificación
+  masiva, teselas (tile caching), o Notebooks corriendo mucho tiempo.
+
+Conclusión: el riesgo de "gastar los créditos" no aplica a este tipo de datos ni
+a este uso.
+
+### "Crear aplicación" en ArcGIS Online = la vía nativa (no depende de nadie)
+
+El menú **Contenido → Crear aplicación** ofrece los constructores no-code:
+- **Dashboards** — cuadros de mando con gráficos, indicadores, listas, tablas,
+  mapas y filtros. Es el equivalente directo de las vistas de Bibliometría y
+  Biodiversidad. **La opción principal para este proyecto.**
+- **Experience Builder** — máxima flexibilidad de diseño (combinar varias cosas).
+- **Instant Apps / StoryMaps** — plantillas simples/narrativas.
+El admin de SAO (RNOA_admin) tiene acceso a todo esto; NO se requiere a un
+tercero. (El sitio `moacolombia.org` es externo; esta es la vía nativa ArcGIS,
+alternativa e independiente.)
 
 Conclusión: mostrar las 3 vistas (tablas + gráficos + un mapa por join) consume
 poco y predecible. Para el mapa por departamento NO se suben geometrías: se unen

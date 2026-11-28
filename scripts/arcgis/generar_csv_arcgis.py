@@ -156,18 +156,113 @@ def generar_biodiversidad() -> None:
                   d.get("publicadores", []))
 
 
+# --- BIBLIOMETRÍA ------------------------------------------------------------
+
+def generar_bibliometria() -> None:
+    d = _leer("bibliometria/resumen.json")
+    print("Bibliometría:")
+
+    ind = d.get("indicadores") or {}
+    _escribir_csv("biblio_resumen", [
+        "total_articulos", "pendientes_revision", "posibles_duplicados",
+        "total_publicaciones", "publicaciones_individuales",
+        "publicaciones_colaborativas", "total_firmas", "autores_unicos",
+        "articulos_sin_autoria", "publicaciones_internacionales",
+        "publicaciones_interinstitucionales", "grado_colaboracion", "rcc",
+        "sin_ofc",
+    ], [{
+        "total_articulos": d.get("total_articulos"),
+        "pendientes_revision": d.get("pendientes_revision"),
+        "posibles_duplicados": d.get("posibles_duplicados"),
+        **{k: ind.get(k) for k in (
+            "total_publicaciones", "publicaciones_individuales",
+            "publicaciones_colaborativas", "total_firmas", "autores_unicos",
+            "articulos_sin_autoria", "publicaciones_internacionales",
+            "publicaciones_interinstitucionales", "grado_colaboracion", "rcc",
+        )},
+        "sin_ofc": d.get("sin_ofc"),
+    }])
+
+    # Distribuciones clave→conteo (mismo esquema reutilizable).
+    for nombre, clave in (
+        ("biblio_por_anio", "por_anio"),
+        ("biblio_por_revista", "por_revista"),
+        ("biblio_por_idioma", "por_idioma"),
+        ("biblio_por_tipo_documento", "por_tipo_documento"),
+        ("biblio_por_acceso_abierto", "por_acceso_abierto"),
+        ("biblio_instituciones_primer_autor", "instituciones_primer_autor"),
+        ("biblio_instituciones_presencia", "instituciones_presencia"),
+    ):
+        _escribir_csv(nombre, ["clave", "conteo"], d.get(clave, []))
+
+    # OFC con su grado de colaboración.
+    _escribir_csv("biblio_por_ofc", [
+        "ofc_id", "nombre", "conteo", "grado_colaboracion",
+        "gc_articulos_contables", "gc_articulos_sin_autoria",
+    ], d.get("por_ofc", []))
+    _escribir_csv("biblio_catalogo_ofc", ["ofc_id", "numero", "nombre", "definicion"],
+                  d.get("catalogo_ofc", []))
+
+    _escribir_csv("biblio_colaboracion_por_anio",
+                  ["anio", "una_institucion", "nacional", "internacional"],
+                  d.get("colaboracion_por_anio", []))
+    _escribir_csv("biblio_completitud", ["campo", "con_dato", "total"],
+                  d.get("completitud", []))
+
+    # Aporte por fuente (la completitud anidada se aplana a nº de campos con dato).
+    aporte = []
+    for f in d.get("aporte_por_fuente", []):
+        aporte.append({"fuente": f.get("fuente"),
+                       "total_articulos": f.get("total_articulos")})
+    _escribir_csv("biblio_aporte_por_fuente", ["fuente", "total_articulos"], aporte)
+
+
+# --- SEGUIMIENTO ENCA (jerarquía aplanada) -----------------------------------
+
+def generar_enca() -> None:
+    ejes = _leer("ejes.json")
+    print("Seguimiento ENCA:")
+    filas: list[dict] = []
+
+    def add(nivel, codigo, texto, padre_codigo):
+        filas.append({"nivel": nivel, "codigo": codigo, "texto": texto,
+                      "padre_codigo": padre_codigo})
+
+    for i_eje, eje in enumerate(ejes, start=1):
+        arbol = _leer(f"ejes/{eje['id']}/arbol.json")
+        cod_eje = f"E{i_eje}"
+        add("eje", cod_eje, arbol.get("nombre"), "")
+        for i_m, meta in enumerate(arbol.get("metas", []), start=1):
+            cod_meta = f"{cod_eje}.M{i_m}"
+            add("meta", cod_meta, meta.get("descripcion"), cod_eje)
+            for i_o, obj in enumerate(meta.get("objetivos", []), start=1):
+                cod_obj = f"{cod_meta}.O{i_o}"
+                add("objetivo", cod_obj, obj.get("descripcion"), cod_meta)
+                for i_i, indic in enumerate(obj.get("indicadores", []), start=1):
+                    cod_ind = f"{cod_obj}.I{i_i}"
+                    add("indicador", cod_ind, indic.get("nombre"), cod_obj)
+                    for i_a, act in enumerate(indic.get("actividades", []), start=1):
+                        cod_act = f"{cod_ind}.A{i_a}"
+                        add("actividad", cod_act, act.get("descripcion"), cod_ind)
+
+    _escribir_csv("enca_jerarquia", ["nivel", "codigo", "texto", "padre_codigo"], filas)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description="Genera CSV listos para ArcGIS desde los datos de los pipelines."
     )
-    parser.add_argument("--solo", choices=["biodiversidad"],
-                        help="Genera solo un bloque (por defecto: todo lo disponible).")
+    parser.add_argument("--solo", choices=["biodiversidad", "bibliometria", "enca"],
+                        help="Genera solo un bloque (por defecto: todo).")
     args = parser.parse_args(argv)
 
     print(f"Generando CSV en: {_OUT}")
     if args.solo in (None, "biodiversidad"):
         generar_biodiversidad()
-    # (bibliometría y ENCA se añadirán en los siguientes pasos de la migración.)
+    if args.solo in (None, "bibliometria"):
+        generar_bibliometria()
+    if args.solo in (None, "enca"):
+        generar_enca()
     print("Listo. Revisa los CSV antes de publicarlos en ArcGIS.")
     return 0
 

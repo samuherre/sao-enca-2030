@@ -1,0 +1,181 @@
+﻿nivel,codigo,texto,padre_codigo
+eje,E1,EJE 1: CONSOLIDAR EL MENSAJE COLOMBIA PAÍS DE LAS AVES,
+meta,E1.M1,Incrementar la valoración de las aves como elemento de orgullo nacional en al menos 50 % de la población colombiana,E1
+objetivo,E1.M1.O1,"1.1. Para junio 2025 los cinco sectores (agrícola, ganadero, turismo, infraestructura y energía/minería) identificados como estratégicos para la comunicación participan en la promoción de Colombia, país de las aves a través de al menos una iniciativa o programa por sector",E1.M1
+indicador,E1.M1.O1.I1,# número de sectores estratégicos con una iniciativa en marcha,E1.M1.O1
+actividad,E1.M1.O1.I1.A1,1.1.1 Identificar las aves-símbolo regionales y sus atributos para implementar campañas específicas,E1.M1.O1.I1
+indicador,E1.M1.O1.I2,# y % de personas interesadas/participantes por cada iniciativa,E1.M1.O1
+actividad,E1.M1.O1.I2.A1,"1.1.2 Promover espacios con los sectores estratégicos para divulgar la ENCA y promocionar el lema Colombia, país de las aves",E1.M1.O1.I2
+objetivo,E1.M1.O2,"1.2. Para 2025, cada una de las seis regiones (Caribe, Pacífico, Andina, Orinoquía, Amazonía e Insular) adoptado un lema o marca propia que la identifique como región de las aves.",E1.M1
+indicador,E1.M1.O2.I1,# de regiones con marca/slogan/símbolo relacionado a las aves (participantes/interesadas),E1.M1.O2
+actividad,E1.M1.O2.I1.A1,1.2.1 Promover los espacios de construcción conjunta del lema o marca propia de región que identifica como región de las aves,E1.M1.O2.I1
+objetivo,E1.M1.O3,"1.3. Para 2026, al menos 50% de los colombianos reconocen y se identifican con el lema Colombia país de las aves",E1.M1
+indicador,E1.M1.O3.I1,# y % de colombianos que reconocen y se identifican con Colombia,E1.M1.O3
+actividad,E1.M1.O3.I1.A1,"1.3.1 Diseñar e implementar una estrategia de comunicación de escala nacional que difunda el lema ""Colombia, país de las aves""",E1.M1.O3.I1
+actividad,E1.M1.O3.I1.A2,"1.3.2 Incidir en que al menos las 10 festividades culturales regionales y locales (ej. Carnaval de Negros y Blancos en Nariño, Feria de las Flores en Medellín, etc.) vinculen sus temáticas con las aves",E1.M1.O3.I1
+eje,E2,EJE 2: INCIDIR EN SECTORES PRODUCTIVOS Y DE SERVICIOS ESTRATEGICOS,
+meta,E2.M1,Incidir en al menos tres (3) sectores productivos o de servicios estratégicos para la adopción de mejores prácticas y fomentar la conservación de las aves y sus hábitats.,E2
+objetivo,E2.M1.O1,"2.1. Al 2025, al menos 15 empresas y/o asociaciones de productores y prestadores de servicios representando los sectores estratégicos adoptan, implementan y promueven buenas prácticas que benefician la conservación de las aves y sus hábitats.",E2.M1
+indicador,E2.M1.O1.I1,# y % de sectores que tienen empresas implementando buenas prácticas,E2.M1.O1
+actividad,E2.M1.O1.I1.A1,2.1.1 Construcción de línea base (identificación y caracterización) de las empresas y/o productores de los sectores,E2.M1.O1.I1
+indicador,E2.M1.O1.I2,% regiones que tienen productores implementando buenas prácticas,E2.M1.O1
+actividad,E2.M1.O1.I2.A1,2.1.2 Fortalecimiento a los productores sobre el diseño e implementación de buenas prácticas sostenibles en la producción.,E2.M1.O1.I2
+indicador,E2.M1.O1.I3,# empresas y asociaciones que implementan buenas prácticas,E2.M1.O1
+actividad,E2.M1.O1.I3.A1,2.1.3 Monitorear los beneficios de las buenas prácticas sobre la avifauna,E2.M1.O1.I3
+objetivo,E2.M1.O2,"2.2 Para 2026, los cinco sectores económicos identificados como estratégicos emprenden y/o invierten en al menos una iniciativa de conservación de las aves y sus hábitats",E2.M1
+indicador,E2.M1.O2.I1,# de actores abordados que implementan o apoyan acciones de conservación,E2.M1.O2
+actividad,E2.M1.O2.I1.A1,"2.2.1 Identificar y abordar a los actores relevantes en cada sector económico estratégico con interés, voluntad y potencial de participar en iniciativas de conservación",E2.M1.O2.I1
+indicador,E2.M1.O2.I2,# de iniciativas por sector,E2.M1.O2
+actividad,E2.M1.O2.I2.A1,2.2.2 Diagnóstico de costo/beneficio económico y ambiental de la implementación de mejores prácticas,E2.M1.O2.I2
+indicador,E2.M1.O2.I3,# de sectores involucrados,E2.M1.O2
+actividad,E2.M1.O2.I3.A1,2.2.3 Acompañar a dichos actores a diseñar y difundir intervenciones de conservación relevantes para la avifauna en su región,E2.M1.O2.I3
+indicador,E2.M1.O2.I4,#$ de recursos invertidos,E2.M1.O2
+actividad,E2.M1.O2.I4.A1,2.2.4 Monitorear los beneficios de las buenas prácticas sobre la avifauna,E2.M1.O2.I4
+meta,E2.M2,"Fortalecer las actuales cuatro (4) rutas de aviturismo y crear tres (3) nuevas rutas nacionales, para contar con un total de siete (7) rutas consolidadas en los mercados nacionales e internacionales que fomenten el desarrollo local inclusivo.",E2
+objetivo,E2.M2.O1,"2.3. Al 2027, Al menos un gremio de cada uno de los sectores Agricultura, Ganadería y Turismo fomentan el fortalecimiento de las capacidades en buenas prácticas a sus agremiados en la conservación de las aves y sus hábitats",E2.M2
+indicador,E2.M2.O1.I1,# gremios comprometidos con una plan de formación de buenas prácticas para sus agremiados,E2.M2.O1
+actividad,E2.M2.O1.I1.A1,"2.3.1 Diseño programa de formación para implementar y fortalecer buenas prácticas para la conservación de las aves en los sectores Agricultura, Ganadería y Turismo",E2.M2.O1.I1
+indicador,E2.M2.O1.I2,# de agreamiados participando en los programas de formación de buenas prácticas,E2.M2.O1
+actividad,E2.M2.O1.I2.A1,2.3.2 Implementar programa y asegurar seguimiento,E2.M2.O1.I2
+indicador,E2.M2.O1.I3,# de agremiados capacitados implementando satisfactoriamente buenas prácticas,E2.M2.O1
+actividad,E2.M2.O1.I3.A1,2.3.3 Acompañar y monitorear la implementación de las buenas prácticas,E2.M2.O1.I3
+objetivo,E2.M2.O2,"2.4. Al 2029, los sectores Agricultura, Ganadería y Turismo están implementando el uso de buenas prácticas en todas las regiones de Colombia para la conservación de las aves",E2.M2
+indicador,E2.M2.O2.I1,# regiones con implementación de buenas prácticas en los 3 sectores,E2.M2.O2
+actividad,E2.M2.O2.I1.A1,2.4.1 Implementar programa de formación y asegurar seguimiento (ver actividad 2.1.2),E2.M2.O2.I1
+indicador,E2.M2.O2.I2,# de empresas implementando buenas prácticas,E2.M2.O2
+actividad,E2.M2.O2.I2.A1,2.4.2 Desarrollar programa de incentivos en conjunción con los gremios y sectores,E2.M2.O2.I2
+objetivo,E2.M2.O3,"2.5. Al 2030, se han reconvertido sistemas productivos tradicionales a sistemas sostenibles bajo buenas prácticas",E2.M2
+indicador,E2.M2.O3.I1,# de sectores productivos y de servicios involucrados,E2.M2.O3
+actividad,E2.M2.O3.I1.A1,2.5.1 Establecer línea base de área cubierta por buenas prácticas para las aves y empresas vinculadas,E2.M2.O3.I1
+indicador,E2.M2.O3.I2,# de ha cubiertas por las buenas prácticas,E2.M2.O3
+eje,E3,EJE 3: FORTALECER LOS MECANISMOS DE INCIDENCIA A NIVEL LOCAL,
+meta,E3.M1,"Fortalecimiento de la Red Nacional de Observadores de Aves (RNOA) y otras organizaciones no-gubernamentales y comunitarias* que trabajan con aves en el país. (*Incluyendo comunidades indígenas, afrodescendientes y campesinas y otras redes de Reservas Naturales de la Sociedad Civil y grupos juveniles e infantiles de observación de aves.)",E3
+objetivo,E3.M1.O1,"3.1. Para el 2024, el número de las organizaciones miembros de la RNOA ha crecido en al menos 10% y las capacidades institucionales y de incidencia de estas organizaciones se habrán fortalecido",E3.M1
+indicador,E3.M1.O1.I1,% de crecimiento de la red,E3.M1.O1
+actividad,E3.M1.O1.I1.A1,3.1.1 Desarrollar un diagnóstico de las organizaciones de la RNOA para identificar fortalezas y debilidades,E3.M1.O1.I1
+indicador,E3.M1.O1.I2,# de organizaciones fortalecidas (definir criterios),E3.M1.O1
+actividad,E3.M1.O1.I2.A1,3.1.2 Mapear capacidades de organizaciones socias de la red,E3.M1.O1.I2
+indicador,E3.M1.O1.I3,# de organizaciones implementando la ENCA,E3.M1.O1
+actividad,E3.M1.O1.I3.A1,3.1.3 Desarrollar hoja de ruta para el fortalecimiento institucional de cara a la implementación de la ENCA,E3.M1.O1.I3
+objetivo,E3.M1.O2,"3.2. A 2026, existen al menos 5 nuevas iniciativas locales* que se enfoquen en la conservación la avifauna en cada una de las regiones y a partir del 2027 se incrementan en por lo menos 2 nuevas iniciativas por año/región",E3.M1
+indicador,E3.M1.O2.I1,#iniciativas locales de conservación de la avifauna,E3.M1.O2
+actividad,E3.M1.O2.I1.A1,3.2.1 Fortalecer las capacidades para la planificación y manejo de iniciativas de conservación de la avifauna,E3.M1.O2.I1
+indicador,E3.M1.O2.I2,#regiones con proyectos locales de conservación de la avifauna,E3.M1.O2
+actividad,E3.M1.O2.I2.A1,3.2.2 Diseñar e implementar las iniciativas de conservación de forma colaborativa,E3.M1.O2.I2
+objetivo,E3.M1.O3,"3.3. Para el 2027, todas las organizaciones de la RNOA y las organizaciones no gubernamentales y comunitarias con las cuales la ENCA ha trabajado, se encuentran activamente participando en la formulación de instrumentos de planificación local (Planes de desarrollo, manejo del territorio, ordenamiento territorial, planes de vida, planes de etnodesarrollo u otros que apliquen a sus jurisdicciones respectivas)",E3.M1
+indicador,E3.M1.O3.I1,#planes con incidencia de las organizaciones de la RNOA para la conservación de aves,E3.M1.O3
+actividad,E3.M1.O3.I1.A1,3.3.1 Fortalecer a las organizaciones en incidencia en la planificación del desarrollo y territorial,E3.M1.O3.I1
+objetivo,E3.M1.O4,"3.4. A 2028 todos los instrumentos de planificación local en las jurisdicciones de las organizaciones de la RNOA y otras organizaciones no gubernamentales y comunitarias con las cuales ha trabajado la ENCA, han contado con la incidencia de estas y han incluido acciones para la conservación de la avifauna",E3.M1
+indicador,E3.M1.O4.I1,"# de planes de desarrollo, ordenamiento y gubernamentales, que incluyen estrategias de conservación de avifauna",E3.M1.O4
+actividad,E3.M1.O4.I1.A1,3.4.1 Dar a conocer/capacitar a los tomadores de decisión la importancia de la conservación de las aves,E3.M1.O4.I1
+eje,E4,EJE 4: CONTRIBUIR AL ORDENAMIENTO TERRITORIAL,
+meta,E4.M1,Incremento de al menos 10 % de áreas protegidas y OMEC en áreas estratégicas para las aves,E4
+objetivo,E4.M1.O1,4.1 Para el 2023 la ENCA habrá sido socializada y divulgada con todas las 33 Corporaciones Autónomas Regionales del país y utilizada como herramienta para la actualización de sus planes cuatrianuales 2024-2028,E4.M1
+indicador,E4.M1.O1.I1,# CAR que conocen y respaldan la ENCA,E4.M1.O1
+actividad,E4.M1.O1.I1.A1,4.1.1 Realizar talleres regionales y nacionales de difusión y discusión de la ENCA,E4.M1.O1.I1
+indicador,E4.M1.O1.I2,# de planes cuatrianuales que articulan su trabajo con la ENCA,E4.M1.O1
+actividad,E4.M1.O1.I2.A1,4.1.2. Participar en los espacios de actualización de los planes cuatrienales,E4.M1.O1.I2
+objetivo,E4.M1.O2,"4.2. Para el 2025, se ha establecido al menos una iniciativa piloto para acompañar a al menos un municipio por región en el conocimiento científico sobre las aves para la actualización y/o actualización de sus POTs",E4.M1
+indicador,E4.M1.O2.I1,# de iniciativas piloto,E4.M1.O2
+actividad,E4.M1.O2.I1.A1,"4.2.1 Identificar municipios, departamentos, resguardos indígenas o consejos comunitarios que necesitan actualizar sus POTs y/o mejorar su implementación, y priorizar los más relevantes para articular con la ENCA (Nota: criterios a definir)",E4.M1.O2.I1
+indicador,E4.M1.O2.I2,# de municipios por región,E4.M1.O2
+actividad,E4.M1.O2.I2.A1,"4.2.2 Acordar con alcaldías, gobernaciones, resguardos indígenas y consejos comunitarios selectos la participación de la ENCA en los nuevos ejercicios de planificación territorial",E4.M1.O2.I2
+indicador,E4.M1.O2.I3,# de regiones representadas,E4.M1.O2
+actividad,E4.M1.O2.I3.A1,"4.2.3 Promover la conservación de las aves con organizaciones o iniciativas vinculantes a la planificación territorial (PROCEDAS, autoridades ambientales locales)",E4.M1.O2.I3
+actividad,E4.M1.O2.I3.A2,4.3.4 Acompañar a los ejercicios de planificación territorial priorizados selectos con otras instituciones y personas que aporten saber científico al proceso,E4.M1.O2.I3
+actividad,E4.M1.O2.I3.A3,"4.2.5 Documentar, dar seguimiento al proceso y generar recomendaciones que retroalimenten y promuevan su implementación en otros instrumentos de planificación",E4.M1.O2.I3
+actividad,E4.M1.O2.I3.A4,4.2.6 Difundir el proceso y lecciones aprendidas,E4.M1.O2.I3
+actividad,E4.M1.O2.I3.A5,4.2.7 Replicar el proceso,E4.M1.O2.I3
+meta,E4.M2,Mejora de la representatividad de aves en el sistema nacional de áreas protegidas,E4
+objetivo,E4.M2.O1,"4.3. Para el final del 2026, se encuentran en marcha al menos dos nuevas iniciativas por región de protección y/o restauración de áreas estratégicas para las aves",E4.M2
+indicador,E4.M2.O1.I1,# de iniciativas de protección o restauración por región,E4.M2.O1
+actividad,E4.M2.O1.I1.A1,"4.3.1 Mapear actores interesados en participar, promover o ejecutar acciones de protección y restauración de áreas estratégicas para la aves (incluyendo actores no involucrados tradicionalmente en actividades de conservación)",E4.M2.O1.I1
+actividad,E4.M2.O1.I1.A2,"4.3.2 Articular la ENCA con los SIRAP, principalmente en la identificación áreas susceptibles de ser usadas en proyectos de compensación por pérdida de biodiversidad",E4.M2.O1.I1
+actividad,E4.M2.O1.I1.A3,4.3.3 Formular iniciativas por región enfocadas a la protección y/o restauración de áreas estratégicas para las aves,E4.M2.O1.I1
+actividad,E4.M2.O1.I1.A4,4.3.4 Fortalecer las capacidades de gestión de la conservación de los actores,E4.M2.O1.I1
+actividad,E4.M2.O1.I1.A5,"4.3.5 Articular al sector privado (empresas, gremios) en conservación mediante las regulaciones de compensaciones ambientales, principalmente en bancos de hábitat (Resolución 1051 del 2017)",E4.M2.O1.I1
+actividad,E4.M2.O1.I1.A6,4.3.6 Vincular la ENCA con otras iniciativas de conservación (ej.: propuesta Amazónica; Conserva Aves),E4.M2.O1.I1
+actividad,E4.M2.O1.I1.A7,"4.3.7 Comunicar con actores de la sociedad civil, conseguir adeptos",E4.M2.O1.I1
+meta,E4.M3,"Al menos 300 000 ha nuevas con áreas estratégicas de conservación para las aves, lideradas por comunidades y entidades locales.",E4
+objetivo,E4.M3.O1,"4.4. Para el 2027, al menos dos regiones incluyen en su ordenamiento territorial nuevas áreas protegidas, ampliaciones a las áreas protegidas existentes o áreas bajo otras medidas de conservación (OMECs) enfocadas a la protección de las aves y sus hábitats",E4.M3
+indicador,E4.M3.O1.I1,# de regiones que incluyen nuevas áreas protegidas y/u OMECs en sus PGAR (donde al menos uno de los objetivos de conservación sean las aves),E4.M3.O1
+actividad,E4.M3.O1.I1.A1,4.4.1 Identificar y priorizar las áreas estratégicas de interés para la conservación de las aves,E4.M3.O1.I1
+indicador,E4.M3.O1.I2,# de nuevas áreas protegidas u OMECs resultantes de las actualizaciones de los PGAR (donde al menos uno de los objetivos de conservación sean las aves),E4.M3.O1
+actividad,E4.M3.O1.I2.A1,4.4.2 Identificar regiones cuyos Planes de Gestión Ambiental Regional (PGAR) deben actualizarse con en fin de incidir para la incorporación de áreas prioritarias para la conservación de las aves,E4.M3.O1.I2
+indicador,E4.M3.O1.I3,# de especies endémicas o amenazadas que cuentan con al menos 100 km2 de área bajo manejo y protección,E4.M3.O1
+actividad,E4.M3.O1.I3.A1,"4.4.3 Facilitar la incorporación de nuevas áreas protegidas u OMECs en dichos planes (ej. apoyo técnico/científico, apoyo jurídico, etc)",E4.M3.O1.I3
+actividad,E4.M3.O1.I3.A2,4.4.4 Fortalecer sistemas de gestión y monitoreo de las áreas de conservación involucrando diferentes aproximaciones como la ciencia participativa.,E4.M3.O1.I3
+actividad,E4.M3.O1.I3.A3,4.4.5 Fortalecer sistemas de gestión y monitoreo de las áreas de conservación involucrando diferentes aproximaciones como la ciencia participativa.,E4.M3.O1.I3
+meta,E4.M4,Incremento del 25 % en fondos invertidos en fomentar la conservación de las aves.,E4
+objetivo,E4.M4.O1,"4.5 Para el 2027, se ha creado al menos una red ciudadana por región que participa en el seguimiento y veeduría de la protección de las aves en determinantes ambientales",E4.M4
+indicador,E4.M4.O1.I1,# de redes ciudadanas participando en el seguimiento y veeduría de determinantes ambientales relacionadas con las aves,E4.M4.O1
+actividad,E4.M4.O1.I1.A1,4.5.1. Iniciar mapeo e inventario de redes ciudadanos trabajando en acciones de conservación de las aves,E4.M4.O1.I1
+indicador,E4.M4.O1.I2,# de redes ciudadanas capacitadas en seguimiento y veeduría,E4.M4.O1
+actividad,E4.M4.O1.I2.A1,4.5.2. Fortalecer las capacidades en temas de veeduría ciudadana,E4.M4.O1.I2
+indicador,E4.M4.O1.I3,# regiones,E4.M4.O1
+actividad,E4.M4.O1.I3.A1,4.5.3. Fortalecer las capacidades de las organizaciones para ganar adeptos y promover las acciones de conservación de la ENCA,E4.M4.O1.I3
+actividad,E4.M4.O1.I3.A2,4.5.4. Fortalecer las capacidades de las organizaciones para ganar adeptos y promover las acciones de conservación de la ENCA,E4.M4.O1.I3
+actividad,E4.M4.O1.I3.A3,"4.5.5. Promover, a través de la estrategia de comunicación, la conformación y fortalecimiento de redes de participación y veeduría ciudadana",E4.M4.O1.I3
+actividad,E4.M4.O1.I3.A4,4.5.6. Vincular los procesos de veeduría y seguimiento con la ciencia ciudadana participativa (ver estrategia de gestión del conocimiento),E4.M4.O1.I3
+objetivo,E4.M4.O2,"4.6. Para el 2030, al menos 25% de los entes territoriales (departamentos, municipios, distritos y territorios indígenas) se encuentran implementando satisfactoriamente planes de ordenamiento territorial con acciones explícitas de conservación de aves",E4.M4
+indicador,E4.M4.O2.I1,# de entes territoriales implementando POTs con acciones de conservación de aves,E4.M4.O2
+actividad,E4.M4.O2.I1.A1,"4.6.1. Aportar a las CAR lineamientos para incluir acciones explicitas de conservación de aves de acuerdo información científica y local en los planes de ordenamiento territorial (a nivel de alcaldías o gobernaciones), incluyendo la modificación o inclusión de nuevas determinantes ambientales, de acuerdo a las lecciones aprendidas en el objetivo 4.2",E4.M4.O2.I1
+indicador,E4.M4.O2.I2,# de planes de ordenamiento que se han implementado satisfactoriamente.,E4.M4.O2
+actividad,E4.M4.O2.I2.A1,4.6.2. Realizar el seguimiento por parte de las CARs a las acciones explicitas de conservación de aves incluidas en los planes de ordenamiento del ente territorial (alcaldías o gobernación),E4.M4.O2.I2
+indicador,E4.M4.O2.I3,# de CONPES que integren la protección y conservación de aves y sus hábitats,E4.M4.O2
+actividad,E4.M4.O2.I3.A1,"4.6.3. Promover la articulación de las acciones de CONPES estratégicos (Ej. Deforestación 4021, SINAP 4050, 3915 Macizo colombiano y 3886 Pagos servicios ambientales) con la conservación de las aves",E4.M4.O2.I3
+actividad,E4.M4.O2.I3.A2,4.6.1 Iniciar mapeo e inventario de redes ciudadanos trabajando en acciones de conservación de las aves,E4.M4.O2.I3
+meta,E4.M5,CAR implementando herramientas y presupuestos específicos para fomentar la conservación de las aves en los sistemas de áreas protegidas y sistemas productivos de sus regiones.,E4
+objetivo,E4.M5.O1,"4.7. Para el 2030, la actualización de la próxima ENCA responderá a la política pública en la materia",E4.M5
+indicador,E4.M5.O1.I1,Política pública de la conservación de aves y sus hábitats,E4.M5.O1
+actividad,E4.M5.O1.I1.A1,4.7.1 Elevar las acciones de conservación de aves en la planificación nacional territorial a nivel de política pública,E4.M5.O1.I1
+indicador,E4.M5.O1.I2,Nueva ENCA 2030-2040,E4.M5.O1
+actividad,E4.M5.O1.I2.A1,4.7.2 Desarrollar el diagnóstico que justifique la creación de una política nacional para la conservación de aves,E4.M5.O1.I2
+actividad,E4.M5.O1.I2.A2,4.7.3 Desarrollar alianzas estratégicas con entes gubernamentales que apoyen la iniciativa de política pública,E4.M5.O1.I2
+actividad,E4.M5.O1.I2.A3,4.7.4 Socializar la ENCA en escenarios políticos,E4.M5.O1.I2
+eje,E5,"EJE 5: GENERAR, GESTIONAR Y DIFUNDIR EL CONOCIMIENTO PARA LA CONSERVACIÓN DE LAS AVES",
+meta,E5.M1,Aumento de las publicaciones científicas y conocimiento tradicional.,E5
+objetivo,E5.M1.O1,"5.1 A finales de 2022 se ha desarrollado participativamente una lista de prioridades de investigación y vacíos de conocimiento con comunidades, academia y sectores productivos",E5.M1
+indicador,E5.M1.O1.I1,Lista de prioridades nacional,E5.M1.O1
+actividad,E5.M1.O1.I1.A1,"5.1.1 Desarrollar talleres nacionales y regionales con las personas e instituciones que han liderado investigaciones sobre las aves y sus hábitats, para validar la lista de prioridades de investigación basadas en las necesidades de la ENCA",E5.M1.O1.I1
+indicador,E5.M1.O1.I2,Lista de prioridades por región,E5.M1.O1
+actividad,E5.M1.O1.I2.A1,5.1.2 Clasificar por nivel de importancia y urgencia las prioridades de investigación y vacíos de conocimiento a nivel nacional y regional.,E5.M1.O1.I2
+actividad,E5.M1.O1.I2.A2,5.1.3 Comunicar o divulgar las prioridades de investigación y vacíos de conocimiento a los actores relacionados con la conservación de las aves y sus hábitats,E5.M1.O1.I2
+actividad,E5.M1.O1.I2.A3,"5.1.4 Involucrar a actores clave (academia, comunidades, sectores productivos/servicios) para desarrollar iniciativas de investigación basadas en la lista de prioridades (ver objetivo siguientes)",E5.M1.O1.I2
+objetivo,E5.M1.O2,"5.2. A finales de 2023 se han iniciado al menos nuevas 5 iniciativas de investigación con comunidades locales y 5 con sectores productivos/servicios sobre al menos el 20% de los vacíos de conocimiento en biodiversidad, las aves y sus hábitats definidos en la lista de prioridades de investigación",E5.M1
+indicador,E5.M1.O2.I1,# de proyectos de investigación con comunidades.,E5.M1.O2
+actividad,E5.M1.O2.I1.A1,5.2.1. Identificar e inventariar las iniciativas de investigación existentes a nivel comunitario y de sector productivo/servicios,E5.M1.O2.I1
+indicador,E5.M1.O2.I2,"# de proyectos con sectores productivos y otros sectores estratégicos (turismo, ambientales, de conservación)",E5.M1.O2
+actividad,E5.M1.O2.I2.A1,"5.2.2. Identificar e involucrar socios (entidades, ONGs, instituciones) que trabajan o están interesados en liderar iniciativas de investigación sobre las aves y sus hábitats",E5.M1.O2.I2
+objetivo,E5.M1.O3,5.3a A finales del 2024 existe al menos 1 iniciativa de recopilación del conocimiento tradicional asociado a las aves en cada región.,E5.M1
+indicador,E5.M1.O3.I1,# de iniciativas sobre conocimiento tradicional que se encuentren en marcha,E5.M1.O3
+actividad,E5.M1.O3.I1.A1,"5.3.1. Identificar socios potenciales en las iniciativas de recopilación del conocimiento tradicional (Ej: trabajan sobre conocimiento tradicional, las aves o tengan este interés)",E5.M1.O3.I1
+indicador,E5.M1.O3.I2,# de iniciativas sobre conocimiento tradicional que tienen programas de difusión de lo recopilado,E5.M1.O3
+actividad,E5.M1.O3.I2.A1,5.3.2. Identificar e inventariar las iniciativas de recopilación del conocimiento tradicional existentes,E5.M1.O3.I2
+actividad,E5.M1.O3.I2.A2,5.3.4. Apoyar iniciativas de recopilación de conocimiento tradicional en marcha,E5.M1.O3.I2
+actividad,E5.M1.O3.I2.A3,"5.3.5. Desarrollar nuevas iniciativas de recopilación de conocimiento tradicional, haciendo énfasis en las regiones en las que estas aún no existen",E5.M1.O3.I2
+actividad,E5.M1.O3.I2.A4,"5.3.6. Crear y fortalecer las capacidades de las organizaciones a cargo de cada iniciativa para documentar, almacenar, procesar y difundir la información recabada",E5.M1.O3.I2
+actividad,E5.M1.O3.I2.A5,5.3.7. Garantizar que las iniciativas tengan carácter permanente y una difusión adecuada,E5.M1.O3.I2
+meta,E5.M2,Crecimiento en el número de registros en bases de datos abiertas.,E5
+objetivo,E5.M2.O1,5.3b A partir del 2025 se generan bi-anualmente 5 nuevas iniciativas de investigación con comunidades locales y con sectores productivos,E5.M2
+indicador,E5.M2.O1.I1,"# de proyectos con sectores productivos y otros sectores estratégicos (turismo, ambientales, de conservación)",E5.M2.O1
+actividad,E5.M2.O1.I1.A1,"5.3.8. Identificar e involucrar socios (entidades, ONGs, instituciones) que trabajan o están interesados en liderar iniciativas de investigación sobre las aves y sus hábitats",E5.M2.O1.I1
+indicador,E5.M2.O1.I2,% de vacíos de información y prioridades de investigación alta incluidas en los proyectos,E5.M2.O1
+indicador,E5.M2.O1.I3,# de sectores involucrados,E5.M2.O1
+actividad,E5.M2.O1.I3.A1,"5.3.10. Crear y fortalecer las capacidades de las organizaciones a cargo de cada iniciativa para documentar, almacenar, procesar y difundir la información recabada (ver objetivo 2)",E5.M2.O1.I3
+actividad,E5.M2.O1.I3.A2,5.3.11. Garantizar que las iniciativas tengan carácter permanente y una difusión adecuada (ver objetivo 2),E5.M2.O1.I3
+meta,E5.M3,4. Aumento de participantes y sectores en la generación de conocimiento sobre las aves.,E5
+objetivo,E5.M3.O1,"5.4. A finales de 2027 estarán disponibles públicamente los primeros avances y resultados de los proyectos sobre las prioridades de investigación y los vacíos de conocimiento, y posteriormente cada año se estarán divulgando nuevos resultados.",E5.M3
+indicador,E5.M3.O1.I1,"# reportes provenientes de academia, comunidades y sectores publicados o difundidos por otros medios",E5.M3.O1
+actividad,E5.M3.O1.I1.A1,5.4.1 Crear una plataforma/nodo de intercambio y difusión entre todas las iniciativas (Ej.: IAvH),E5.M3.O1.I1
+actividad,E5.M3.O1.I1.A2,5.4.2 Diseñar estrategias (diferentes a las bases de datos) de divulgación de los resultados de las iniciativas de monitoreo participativo (en especial comunidades rurales),E5.M3.O1.I1
+objetivo,E5.M3.O2,5.5. Al 2027 están en marcha al menos 30 iniciativas de monitoreo participativo permanente en el país,E5.M3
+indicador,E5.M3.O2.I1,# iniciativas de monitoreo participativas,E5.M3.O2
+actividad,E5.M3.O2.I1.A1,"5.5.1 Diagnosticar y apoyar iniciativas de monitoreo participativo que se encuentren en marcha a nivel regional y nacional (ej.: Censo Navideño, Global Big Day, Censo Neotroplical de Aves Acuáticas, Censo de Aves Migratorias, Censo de Aves Urbanas)",E5.M3.O2.I1
+actividad,E5.M3.O2.I1.A2,"5.5.2 Identificar comunidades, organizaciones e instituciones académicas que estén interesadas en establecer iniciativas de monitoreo participativo",E5.M3.O2.I1
+actividad,E5.M3.O2.I1.A3,5.5.3 Integrar y fortalecer los procesos de capacitación sobre herramientas de monitoreo participativo de aves que ya están desarrollando diferentes instituciones,E5.M3.O2.I1
+actividad,E5.M3.O2.I1.A4,"5.5.4 Apoyar iniciativas en registrar, sistematizar y difundir los resultados (Ej. Conserva Aves)",E5.M3.O2.I1
+objetivo,E5.M3.O3,"5.6. Para el 2027, los nuevos datos generados informan la revisión de medio término de la ENCA",E5.M3
+indicador,E5.M3.O3.I1,# de reuniones periódicas de revisión de la implementción de la ENCA,E5.M3.O3
+actividad,E5.M3.O3.I1.A1,5.6.1 Mantener un registro periódico de los resultados de las iniciativas investigación y monitoreo desarrolladas en el marco la ENCA,E5.M3.O3.I1
+actividad,E5.M3.O3.I1.A2,"5.6.2 Desarrollar un informe conjunto de los resultados obtenidos por todas las iniciativas que informen la revisión de la ENCA (Ej. viabilidad de los objetos de conservación, estado de las amenazas, temas emergentes de interés, resultados de actividades desarrolladas en el marco de las estrategias)",E5.M3.O3.I1

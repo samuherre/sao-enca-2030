@@ -1,0 +1,12 @@
+﻿ofc_id,nombre,conteo,grado_colaboracion,gc_articulos_contables,gc_articulos_sin_autoria
+OFC-01,"Aves de hábitats marinos, costeros y de manglar",119,0.73,107,12
+OFC-02,Aves de humedales interiores de agua dulce,241,0.72,224,17
+OFC-03,Aves de sabanas y pastizales naturales,75,0.75,69,6
+OFC-04,Aves de bosques y matorrales secos,68,0.85,68,0
+OFC-05,Aves de bosques húmedos de tierras bajas,59,0.88,59,0
+OFC-06,Aves de bosques premontanos y montanos,113,0.75,112,1
+OFC-07,Aves de alta montaña,124,0.34,123,1
+OFC-08,Aves en sistemas urbanos,193,0.8,176,17
+OFC-09,Aves en agroecosistemas,109,0.87,105,4
+OFC-10,Sistemas culturales asociados a la apreciación de las aves,16,0.8,15,1
+OFC-11,Aviturismo,110,0.82,74,36
