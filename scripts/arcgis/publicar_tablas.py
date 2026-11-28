@@ -191,8 +191,14 @@ def _publicar_una(gis, ruta_csv: Path, publicar: bool,
         tags=["SAO", "ENCA", "migracion"],
     )
     item_csv = carpeta.add(item_properties=props, file=str(ruta_csv)).result()
-    # locationType="none": ArcGIS trata el CSV como TABLA y NO geocodifica.
-    publicado = item_csv.publish(publish_parameters={"locationType": "none"})
+    # publish_parameters:
+    #   - locationType="none": ArcGIS trata el CSV como TABLA y NO geocodifica.
+    #   - name=titulo: nombre ÚNICO del servicio. Sin esto, el servicio toma el
+    #     nombre interno del archivo subido ("data") y la 2a tabla en adelante
+    #     choca con "Service name already exists in your org".
+    publicado = item_csv.publish(
+        publish_parameters={"name": titulo, "locationType": "none"}
+    )
     print(f"  creada: tabla alojada '{publicado.title}' (item {publicado.id})")
 
 
